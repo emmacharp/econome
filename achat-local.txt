@@ -1,0 +1,147 @@
+Achat local
+
+Poussé à l'extrême, on va plus manger d'oranges ou de bananes.
+
+C'est quoi la différence entre GAP et Frank & OAk ? Le volume.
+Si on retire les barrières à la croissance, Frank & Oak va devenir GAP... et se délocaliser, internationaliser la production.
+
+Un achat local ça veut dire quoi ?
+
+Achat vs. approvisionnement local.
+
+Est-ce que si je commande sur Amazon.ca vs. Amazom.com... ça change quoi ?
+
+amazon.ca : livraion & entreposage... c'est tout. est-ce ça que l'on veut promoouvoir ?
+
+C'est pas à nous de dire si c'est bien. Il faut poser les bonnes questions..!
+
+Agriculture locale, Lufa... qui alimente Montréal et donc diminue le transport. Mais le coût de transport pour l'agent privé est insignifiant... mais pas pour la société. Il y a des externalités. GES, par exemple.
+
+On veut maintenir les PME et artisans. Chiffres d'affaires plus grand. Elles devront s'approvisionner ailleurs... changer la chaîne de production. Pas assez de ressources pour atteindre la croissance... travailleurs, par exemple.
+
+Impact de l'achat local sur la capacité de production.
+
+Raisons à l'importation : 
+- tu peux pas produire des bananes
+- contraintes de ressources, n'a pas la masse nécessaire...
+
+Les pages bleues... (le panier bleu)
+
+
+Deux facettes
+
+## facette mécanique... 
+comment ça fonctionne..
+portrait actuel. différentes industries
+
+Mettre devant la réalité de l'achat vs. l'approvisionnement.
+
+100% de tomates au Québec... ça prendrait quoi ? 
+Va nécessiter 300 000 emplois supplémentaires ! 10% de travailleurs en plus pour acheter des tomates locales.
+
+On importe des travailleurs. On génère des revenus dépenses au Mexique...
+
+Poser des questions à l'usager.
+
+## facette (?)...
+les artisans sont des artisans parce que l'achat local n'est pas instauré...
+
+
+Remonter la chaîne.
+Les pâtes Catelli c'est tu un achat local..? le blé vient pas d'ici.
+
+
+Finir par un genre de p'tit test..? Refaire le cheminement par eux-mêmes... évaluer le degré de « localisation » d'un achat.
+
+
+Éclairer le débat public en permettant aux gens de maîtriser les concepts... pas en donnant des recommandations à tous vents.
+
+
+https://www.lapresse.ca/debats/opinions/202004/10/01-5268893-les-limites-du-panier-bleu.php
+
+https://ici.radio-canada.ca/info/2020/03/budget-quebec-2020-visualisation-3d/
+
+https://plotly.com/dash/
+
+https://www.cpq.qc.ca/workspace/uploads/files/achat-et-approvisionnement-local-au-quebec.pdf
+
+quitter la recommandation et le charme politique.
+Donner des éléments de réflexion.
+Dégager du débat public les 
+
+
+Ceteri in paribus
+
+
+C'est quoi 
+
+Messages de comm à la con... remballe moi ça, c'est quoi la valeur ajoutée ?
+
+Poser les bonnes questions / éveiller la conscience économique.
+
+C'est quoi les intrants dans ton produit ?
+C'est quoi la valeur ajoutée de ces intrants-là ?
+D'où viennent ces intrants-là ?
+
+
+---
+
+Décortiquer les intrants d'une bouteille de bière. Bien exposer chacun d'entre eux dans une inforgraphie.
+
+Une bouteille de bière à partir de laquelle on sort chacun d'entre eux (avec un travailleur à côté ?) Ou bien une écographie ? Avec tous les intrants autour de la bouteille dans le milieu ?
+
+Pourrait-on jouer avec l'écographie ? Ajouter modifier la quantité de bière ? modifier la quantité d'intrant produit à l'interne ?
+
+Bien faire comprendre que ce qu'on veut c'est de la valeur ajoutée. Toujours faire ressortir ces dimensions des intrants.
+
+Faire une recette parfaite ? impossible...
+
+Communiquer l'impact que la modification de la production d'intrants aura sur le reste de l'économie... seulement en termes de valeur ajoutée peut-être ? Devrait on réduire l'économie tierce (autre que bières) à une notion de valeur ajoutée ?
+
+--- 
+
+Construire l'écosphère, poser les concepts de manière linéraire, à l'aide du défilement de la souris ?
+
+---
+
+Economia : parce que l'économie, c'est nous tous. 
+Parce que derrière les questions économiques, se cache toujours plus qu'il n'y paraît.
+
+
+Séquence de communication
+
+1. Le contexte de l'achat local  
+    1.1 La montée en popularité de l'achat local  
+    1.1 Pourquoi faudrait-il acheter localement ?  
+    1.2 C'est quoi (actuellement) Qu'est-ce qui constitue un achat local ? Quand un achat devient-il local ?  
+        1.2.1 Acheter une télévision coréenne dans une chaîne de magasin américaine installée près de chez vous est-il un achat local ?  
+        1.2.2 Acheter du jus d'orange de la Floride transformé au Québec est-il un achat local ?  
+        1.2.3 Acheter une bière québécoise dans un dépanneur  
+    1.3 Est-ce que n'importe quel achat local va nécessairement nous enrichir ?  
+    1.4 Est-ce que tous les achats locaux sont comparables en termes de bénéfices ?  
+    1.5 Qu'est-ce qui fait qu'un achat local est bénéfique ? En quoi l'un pourrait-il l'être plus qu'un autre ?  
+    1.6   
+2. La constitution d'un produit  
+    2.1 Pour acheter localement... il faut produire localement. L'un ne va pas sans l'autre.  
+    2.2 Intrants  
+    2.3 Valeur ajoutée  
+    2.4 La provenance  
+    2.5 L'achat local, c'est une question de valeur ajoutée.  
+3. Le cas des brasseries québécoises  
+    3.1 Décortiquons ce qui constitue une bière  
+    3.2 Comparer à la moyenne des industries  
+    3.3 Que se passe-t-il si on achète plus de bières québécoises ?  
+4. Quand on parle d'achat local...  
+    4.1 Les questions à se poser quand on parle d'achat local.
+
+Quand on parle d'achat local, on doit parler d'approvisionnement et de valeur ajoutée. Quelle valeur est produite par notre achat ? Pourrait-on générer une plus grande valeur ajoutée en produisant autre chose ? Quelle est la plus grande valeur ajoutée à laquelle nous renonçons en produisant une plus grande quantité d'un certain produit ?
+
+L’achat local gagne en popularité. Les résultats du baromètre de la
+consommation responsable des dernières années montrent en effet que
+l’origine des produits est un critère de plus en plus important de la décision d’achat : 64,2 % des répondants disent privilégier l’achat local2
+
+Questions à Henri
+
+- Quels éléments sont de la valeur ajoutée ? exécédent, impôts, cotisations...? ou juste les salaires ?
+- On fait quoi avec les revenus ?
+- Est-ce que tu exclurais des produits ? À partir de quel proportion du total..?

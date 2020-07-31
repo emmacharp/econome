@@ -1,0 +1,303 @@
+html {
+	background-color: darkgrey;
+	min-height: 100%;
+	font-family: "InputMonoNarrow", Courrier, monospace;
+}
+
+path, span {
+	transition-property: all;
+	transition-duration: 120ms;
+	transition-timing-function: linear;
+	transition-delay: 40ms;
+}
+
+body {
+	margin: 0;
+	background-color: hsl(274, 12%, 25%);
+	padding: 10px;
+	min-height: 100%;
+	box-sizing: border-box;
+	color: white;
+}
+
+main {
+	flex-basis: 100%;
+	display: flex;
+	flex-direction: column;
+	/*min-height: 100%;*/
+	align-items: center;
+}
+
+main>section {
+	display: flex;
+	align-self: stretch;
+	justify-content: space-evenly;
+	min-height: 100vh;
+	align-items: center;
+}
+
+main>section:first-of-type>div {
+	width: max-content;
+	display: grid;
+	grid-gap: 2px;
+	grid-template-columns: repeat(10, 1fr);
+	margin-left: 10%;
+}
+
+main>section:first-of-type>div p {
+	display: contents;
+}
+
+main>section:first-of-type>div p em {
+	font-style: normal;
+	/*width: 0;*/
+	display: inline-flex;
+	width: max-content;
+	max-width: 21em;
+	z-index: 1;
+	position: absolute;
+	left: 100%;
+	top: 10px;
+	margin-left: 12px;
+	padding: 6px 12px;
+	background-color: hsl(266, 8%, 10%);
+	background-color: inherit;
+	color: hsl(266, 8%, 10%);
+	border-radius: 6px;
+	pointer-events: none;
+	border-bottom: 2px solid hsl(266, 8%, 10%);
+	font-size: 14px;
+	font-weight: 500;
+	/*color: white;*/
+	/*box-shadow: 0 0 2px hsl(266, 8%, 35%)*/
+	/*height: 0;*/
+
+}
+
+main>section:first-of-type>div p:not(:hover) em {
+	opacity: 0
+}
+
+/*
+main>section:first-of-type>div p:last-of-type span {
+	background-color: mauve;
+}*/
+
+main>section:first-of-type>div p:hover {
+	filter: drop-shadow(0px 0px 20px hsl(266, 8%, 40%));
+}
+
+main>section:first-of-type>div p:hover span {
+	background-color: hsla(var(--hue), calc(100% * var(--hue)), 76%, 1);
+	/*background-color: rgba(0,0,0,.2);*/
+	/*background-color: hsl(266, 8%, 10%);*/
+	border-radius: 1px;
+	/*box-shadow: 0 0 0 5px hsl(266, 8%, 10%);*/
+	box-shadow: 0 0 0 5px hsla(var(--hue), calc(100% * var(--hue)), 76%, 1), 0 10px 0 0 hsl(266, 8%, 10%);
+	padding: 4px;
+	z-index: 1;
+}
+
+div:hover p:not(:hover) span {
+	fill: hsl(266, 8%, 35%);
+}
+
+main>section:first-of-type>div p:hover span {
+	/*mix-blend-mode: multiply;*/
+	fill: hsl(266, 8%, 35%);
+	/*fill: hsla(var(--hue), calc(100% * var(--hue)), 76%, 1);*/
+}
+
+main>section:first-of-type>div p:not(:hover) {
+	transition-delay: 20ms;
+}
+
+main>section:first-of-type>div p * {
+	transition-delay: inherit;
+}
+
+
+main>section:first-of-type>div span {
+	/*display: flex;*/
+	/*align-items: center;*/
+	width: 60px;
+	height: 60px;
+	color: hsl(var(--hue), 100%, 70%);
+	background-color: rgba(0,0,0,.2);
+	position: relative;
+	border-radius: 2px;
+	box-sizing: border-box;
+	box-shadow: 0 0 0 0 rgba(0,0,0,.2);
+	padding: 12px;
+	fill: hsl(266, 8%, 35%);
+	fill: hsla(var(--hue), calc(100% * var(--hue)), 76%, 1);
+
+}
+
+main>section:first-of-type>div span svg {
+	/*mix-blend-mode: overlay;*/
+	/*opacity: 1;*/
+}
+
+svg {
+}
+
+svg, path, use {
+	fill: inherit;
+}
+
+main>section:first-of-type>div span:first-child {
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+}
+
+main>section:first-of-type>div span:last-child {
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+
+main>section:first-of-type>ul {
+	padding: 0;
+	margin: 40px;
+	clip-path: url('#picture-clip-path');
+	/*flex-grow: 1;*/
+	width: 40rem;
+	height: 32.3rem;
+
+	box-sizing: border-box;
+}
+
+html, body {
+	min-height: 100%;
+}
+
+main>section:first-of-type>ul li {
+	display: flex;
+	width: 100%;
+	/*justify-content: space-between;*/
+	height: var(--percent);
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	background-color: hsl(var(--hue), calc(100% * var(--hue)), 80%);
+}
+
+main>section:first-of-type>ul li span {
+	display: none;
+	background-color: inherit;
+	font-size: 12px;
+	line-height: 1em;
+	margin-top: auto;
+	margin-bottom: auto;
+	padding: 10px;
+}
+
+main>section:first-of-type>ul li span:first-of-type {
+	width: 20%;
+}
+
+
+li:not(:hover) span {
+	display: none;
+}
+
+main>section:first-of-type+section {
+	margin-top: 20px;
+}
+
+aside {
+	--b: 5em; /*base size*/
+	--c: calc(1 / var(--m)); /* coefficient */
+	--d: calc(var(--b) * (1 + var(--c) * 2)); /* image size */
+	--rel: 2; /* how much extra space we want between images, 1 = one image size */
+	--r: calc(.5*(1 + var(--rel))*var(--d)/var(--tan)); /* circle radius */
+	--s: calc(2*var(--r) + var(--d)); /* container size */
+	position: relative;
+	border-radius: 50%;
+	background-color: rgba(0,0,0,.2);
+	/*background-color: aqua;*/
+	width: var(--s); height: var(--s);
+	flex-shrink: 0;
+
+}
+
+aside>header {
+	width: var(--d); 
+	height: var(--d);
+	padding: 10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: calc(-.5 * var(--d));
+	box-sizing: border-box;
+}
+
+aside>section header {
+	--d: calc(var(--b) * (1 + var(--c) * 2)); /* image size */
+	border-radius: 50%;
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%; left: 50%;
+	fill: hsla(var(--hue), calc(100% * var(--hue)), 76%, 1);
+	background-color: hsl(274, 12%, 15%);
+
+	margin: calc(-.5 * var(--d));
+	width: var(--d); 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: var(--d);
+	--az: calc(var(--i) * 1turn / var(--m));
+	transform: rotate(var(--az)) translate(calc(var(--r) + var(--d) / 2 / (1 + var(--c)))) rotate(calc(-1 * var(--az)));
+}
+
+aside>section:hover header {
+	background-color: hsla(var(--hue), calc(100% * var(--hue)), 76%, 1);
+	fill: hsl(274, 12%, 15%);
+}
+
+aside>section header div {
+	padding: calc(10px + 20%);
+	box-sizing: border-box;
+}
+
+aside>section header span {
+	display: none;
+}
+
+ol {
+	--tan:0.06;
+	--b: .5rem; /*base size*/
+	--c: .5; /* coefficient */
+	--d: calc(var(--b) * (1 + var(--c) * 2)); /* image size */
+	--rel: 2; /* how much extra space we want between images, 1 = one image size */
+	--r: calc(.5*(1 + var(--rel))*var(--d)/var(--tan)); /* circle radius */
+	--s: calc(2*var(--r) + var(--d)); /* container size */
+	
+	display: contents;
+}
+
+aside>section:not(:hover) ol {
+	display: none;
+}
+
+ol li {
+	border-radius: 50%;
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%; left: 50%;
+	fill: hsla(var(--hue), calc(100% * var(--hue)), 76%, 1);
+	background-color: hsl(274, 12%, 15%);
+
+	margin: calc(-.5 * var(--d));
+	width: var(--d); 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: var(--d);
+	--az: calc(var(--i) * 1turn / var(--m));
+	transform: rotate(var(--az)) translate(calc(var(--r) + var(--d) / 2 / (1 + var(--c)))) rotate(calc(-1 * var(--az)));
+	font-size: 0;
+}

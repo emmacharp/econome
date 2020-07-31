@@ -1,0 +1,1010 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type="text/xsl" href="index.ui" ?>
+
+<industrie>
+	<nom>Brasseries</nom>
+	<produit>
+		<code>MPG111A11</code>
+		<nom>Autres produits végétaux divers</nom>
+		<depense>10713</depense>
+	</produit>
+	<produit>
+		<code>ENE211102</code>
+		<nom>Gaz naturel</nom>
+		<depense>6469</depense>
+	</produit>
+	<produit>
+		<code>ENE211103</code>
+		<nom>Liquides de gaz naturel et produits connexes</nom>
+		<depense>503</depense>
+	</produit>
+	<produit>
+		<code>MPG21239C</code>
+		<nom>Minéraux non métalliques (sauf les diamants)</nom>
+		<depense>82</depense>
+	</produit>
+	<produit>
+		<code>ENE221100</code>
+		<nom>Électricité</nom>
+		<depense>8385</depense>
+	</produit>
+	<produit>
+		<code>MPS221200</code>
+		<nom>Distribution de gaz naturel</nom>
+		<depense>1315</depense>
+	</produit>
+	<produit>
+		<code>MPS221301</code>
+		<nom>Distribution d'eau par des systèmes d'aqueduc et d'irrigation</nom>
+		<depense>2960</depense>
+	</produit>
+	<produit>
+		<code>MPS221302</code>
+		<nom>Services d'évacuation et d'épuration des eaux d'égouts et des eaux usées</nom>
+		<depense>18</depense>
+	</produit>
+	<produit>
+		<code>MPS23D000</code>
+		<nom>Services de réparations liés à la construction</nom>
+		<depense>2329</depense>
+	</produit>
+
+	<produit>
+		<code>MPG311204</code>
+		<nom>Farine et autres produits de mouture des grains</nom>
+		<depense>12810</depense>
+	</produit>
+	<produit>
+		<code>MPG311202</code>
+		<nom>Margarine et huiles de cuisson</nom>
+		<depense>5</depense>
+	</produit>
+	<produit>
+		<code>MPG311208</code>
+		<nom>Produits de céréales et d'oléagineux, n.c.a.</nom>
+		<revenu>52</revenu>
+		<depense>47036</depense>
+	</produit>
+	<produit>
+		<code>MPG311301</code>
+		<nom>Sucre et sous-produits de raffinerie du sucre</nom>
+		<depense>17359</depense>
+	</produit>
+	<produit>
+		<code>MPG311401</code>
+		<nom>Jus de fruits et de légumes, frais, congelés et en conserve</nom>
+		<depense>237</depense>
+	</produit>
+	<produit>
+		<code>MPG311801</code>
+		<nom>Pain, pains mollets et pains plats</nom>
+		<depense>4</depense>
+	</produit>
+	<produit>
+		<code>MPG311802</code>
+		<nom>Biscuits, craquelins et pâtisseries sucrées cuites au four</nom>
+		<depense>5</depense>
+	</produit>
+	<produit>
+		<code>MPG311901</code>
+		<nom>Aliments à grignoter</nom>
+		<depense>6</depense>
+	</produit>
+	<produit>
+		<code>MPG311903</code>
+		<nom>Sirops aromatisants, assaisonnements et vinaigrettes</nom>
+		<depense>116</depense>
+	</produit>
+	<produit>
+		<code>MPG312110</code>
+		<nom>Eau en bouteilles, boissons gazeuses et plates et glace</nom>
+		<depense>5677</depense>
+	</produit>
+	<produit>
+		<code>MPG312120</code>
+		<nom>Bière</nom>
+		<revenu>1578522</revenu>
+		<depense>13214</depense>
+	</produit>
+	<produit>
+		<code>MPG3121A1</code>
+		<nom>Vin et brandy</nom>
+		<revenu>3835</revenu>
+		<depense>418</depense>
+	</produit>
+	<produit>
+		<code>MPG3121A2</code>
+		<nom>Boisson alcoolisée de distillerie</nom>
+		<depense>110</depense>
+	</produit>
+	<produit>
+		<code>MPG31A003</code>
+		<nom>Tapis, carpettes et paillassons</nom>
+		<depense>10</depense>
+	</produit>
+	<produit>
+		<code>MPS31A006</code>
+		<nom>Services d'apprêtage de textile et de tissus et de revêtement de tissus</nom>
+		<depense>142</depense>
+	</produit>
+	<produit>
+		<code>MPG31B005</code>
+		<nom>Chaussures</nom>
+		<depense>9</depense>
+	</produit>
+	<produit>
+		<code>MPG31B006</code>
+		<nom>Valises, sacs à main, et autres produits de cuir et analogues</nom>
+		<depense>507</depense>
+	</produit>
+	<produit>
+		<code>MPG321104</code>
+		<nom>Autres produits de sciage et produits de bois traité</nom>
+		<depense>48</depense>
+	</produit>
+	<produit>
+		<code>MPG321201</code>
+		<nom>Placages et contreplaqués</nom>
+		<depense>41</depense>
+	</produit>
+	<produit>
+		<code>MPG321901</code>
+		<nom>Portes et fenêtres en bois</nom>
+		<depense>42</depense>
+	</produit>
+	<produit>
+		<code>MPG321903</code>
+		<nom>Contenants et palettes en bois</nom>
+		<depense>2336</depense>
+	</produit>
+	<produit>
+		<code>MPG322102</code>
+		<nom>Papier (sauf le papier journal)</nom>
+		<depense>7</depense>
+	</produit>
+	<produit>
+		<code>MPG322201</code>
+		<nom>Contenants en carton</nom>
+		<depense>72345</depense>
+	</produit>
+	<produit>
+		<code>MPG322202</code>
+		<nom>Produits de papeterie</nom>
+		<depense>126</depense>
+	</produit>
+	<produit>
+		<code>MPG322204</code>
+		<nom>Produits hygiéniques en papier</nom>
+		<depense>14</depense>
+	</produit>
+	<produit>
+		<code>MPG322209</code>
+		<nom>Autres produits en papier transformés</nom>
+		<depense>8354</depense>
+	</produit>
+	<produit>
+		<code>MPG323001</code>
+		<nom>Produits imprimés</nom>
+		<depense>10036</depense>
+	</produit>
+	<produit>
+		<code>ENE324111</code>
+		<nom>Essence</nom>
+		<depense>1172</depense>
+	</produit>
+	<produit>
+		<code>ENE324112</code>
+		<nom>Carburants diesels et biodiesels</nom>
+		<depense>2082</depense>
+	</produit>
+	<produit>
+		<code>ENE324113</code>
+		<nom>Mazout léger</nom>
+		<depense>425</depense>
+	</produit>
+	<produit>
+		<code>ENE324115</code>
+		<nom>Mazout lourd</nom>
+		<depense>7</depense>
+	</produit>
+	<produit>
+		<code>MPG3241A8</code>
+		<nom>Lubrifiants et autres produits pétroliers de raffinerie</nom>
+		<depense>536</depense>
+	</produit>
+	<produit>
+		<code>MPG325102</code>
+		<nom>Gaz industriels</nom>
+		<depense>7655</depense>
+	</produit>
+	<produit>
+		<code>MPG325105</code>
+		<nom>Produits chimiques organiques de base, n.c.a.</nom>
+		<depense>1669</depense>
+	</produit>
+	<produit>
+		<code>MPG325500</code>
+		<nom>Peintures, revêtements et produits adhésifs</nom>
+		<depense>8325</depense>
+	</produit>
+	<produit>
+		<code>MPG325601</code>
+		<nom>Savons et détachants</nom>
+		<depense>160</depense>
+	</produit>
+	<produit>
+		<code>MPG325900</code>
+		<nom>Produits chimiques, n.c.a.</nom>
+		<depense>633</depense>
+	</produit>
+	<produit>
+		<code>MPG326102</code>
+		<nom>Pellicules et feuilles de plastique souples</nom>
+		<depense>32</depense>
+	</produit>
+	<produit>
+		<code>MPG326103</code>
+		<nom>Matériaux pour bâtiments et pour la construction en plastique et en mousse</nom>
+		<depense>4606</depense>
+	</produit>
+	<produit>
+		<code>MPG326106</code>
+		<nom>Bouteilles en plastique</nom>
+		<depense>1198</depense>
+	</produit>
+	<produit>
+		<code>MPG326107</code>
+		<nom>Pièces en plastique pour les véhicules automobiles</nom>
+		<depense>1237</depense>
+	</produit>
+	<produit>
+		<code>MPG326109</code>
+		<nom>Produits en plastique, n.c.a.</nom>
+		<depense>1588</depense>
+	</produit>
+	<produit>
+		<code>MPG326201</code>
+		<nom>Pneus</nom>
+		<depense>2559</depense>
+	</produit>
+	<produit>
+		<code>MPG326202</code>
+		<nom>Tuyaux d'arrosage et courroies en caoutchouc et en plastique</nom>
+		<depense>1280</depense>
+	</produit>
+	<produit>
+		<code>MPG326209</code>
+		<nom>Produits en caoutchouc, n.c.a.</nom>
+		<depense>162</depense>
+	</produit>
+	<produit>
+		<code>MPG327A02</code>
+		<nom>Verre (incluant pour les automobiles), produits en verre et contenants en verre</nom>
+		<depense>18947</depense>
+	</produit>
+	<produit>
+		<code>MPG332303</code>
+		<nom>Portes et fenêtres en métal</nom>
+		<depense>363</depense>
+	</produit>
+	<produit>
+		<code>MPG332A05</code>
+		<nom>Autres produits architecturaux en métal</nom>
+		<depense>172</depense>
+	</produit>
+	<produit>
+		<code>MPG332401</code>
+		<nom>Bouchons-couronnes, fermetures et contenants en métal mince</nom>
+		<depense>65343</depense>
+	</produit>
+	<produit>
+		<code>MPG332402</code>
+		<nom>Chaudières, réservoirs et contenants en métal épais</nom>
+		<depense>281</depense>
+	</produit>
+	<produit>
+		<code>MPG332500</code>
+		<nom>Quincaillerie pour le bâtiment, les véhicules automobiles et autres articles de quincaillerie</nom>
+		<depense>356</depense>
+	</produit>
+	<produit>
+		<code>MPG332600</code>
+		<nom>Ressorts et produits en fil métallique</nom>
+		<depense>283</depense>
+	</produit>
+	<produit>
+		<code>MPG332700</code>
+		<nom>Attaches en métal fileté et autres produits en métal tourné incluant pour les automobiles</nom>
+		<depense>291</depense>
+	</produit>
+	<produit>
+		<code>MPG332A01</code>
+		<nom>Outils à main, ustensiles de cuisine et coutellerie (sauf en métal précieux)</nom>
+		<depense>273</depense>
+	</produit>
+	<produit>
+		<code>MPG332A02</code>
+		<nom>Valves et raccords métalliques pour tuyauterie</nom>
+		<depense>401</depense>
+	</produit>
+	<produit>
+		<code>MPG332A08</code>
+		<nom>Produits en métal ouvrés, n.c.a.</nom>
+		<depense>465</depense>
+	</produit>
+	<produit>
+		<code>MPG333101</code>
+		<nom>Machines et matériel pour l'agriculture, entretien de pelouses et de jardins</nom>
+		<depense>384</depense>
+	</produit>
+	<produit>
+		<code>MPG333200</code>
+		<nom>Autres machines propres à une industrie</nom>
+		<depense>2370</depense>
+	</produit>
+	<produit>
+		<code>MPG333401</code>
+		<nom>Ventilateurs et purificateurs d'air industriels et commerciaux</nom>
+		<depense>260</depense>
+	</produit>
+	<produit>
+		<code>MPG333402</code>
+		<nom>Appareils de chauffage et de refroidissement (sauf les réfrigérateurs et les congélateurs domestiques)</nom>
+		<depense>295</depense>
+	</produit>
+	<produit>
+		<code>MPG333500</code>
+		<nom>Machines à travailler les métaux et moules d'usage industriel</nom>
+		<depense>2475</depense>
+	</produit>
+	<produit>
+		<code>MPG333601</code>
+		<nom>Turbines, turbogénérateurs et groupes générateurs de turbine</nom>
+		<depense>1095</depense>
+	</produit>
+	<produit>
+		<code>MPG333609</code>
+		<nom>Autres moteurs et matériel de transmission de puissance</nom>
+		<depense>815</depense>
+	</produit>
+	<produit>
+		<code>MPG333901</code>
+		<nom>Pompes et compresseurs (sauf hydrauliques)</nom>
+		<depense>2617</depense>
+	</produit>
+
+	<produit>
+		<code>MPG333909</code>
+		<nom>Autres machines diverses d'usage général</nom>
+		<depense>157</depense>
+	</produit>
+	<produit>
+		<code>MPG334100</code>
+		<nom>Ordinateurs, périphériques et pièces</nom>
+		<depense>142</depense>
+	</produit>
+	<produit>
+		<code>MPG334201</code>
+		<nom>Matériel téléphonique</nom>
+		<depense>142</depense>
+	</produit>
+	<produit>
+		<code>MPG334A06</code>
+		<nom>Instruments de mesure, de commande et scientifiques</nom>
+		<depense>67</depense>
+	</produit>
+	<produit>
+		<code>MPG334409</code>
+		<nom>Autres composants électroniques</nom>
+		<depense>31</depense>
+	</produit>
+	<produit>
+		<code>MPG335101</code>
+		<nom>Ampoules électriques et tubes fluorescents</nom>
+		<depense>4</depense>
+	</produit>
+	<produit>
+		<code>MPG335102</code>
+		<nom>Appareils d'éclairage</nom>
+		<depense>69</depense>
+	</produit>
+	<produit>
+		<code>MPG335203</code>
+		<nom>Petits appareils électriques</nom>
+		<depense>66</depense>
+	</produit>
+	<produit>
+		<code>MPG335204</code>
+		<nom>Gros appareils électroménagers</nom>
+		<depense>65</depense>
+	</produit>
+	<produit>
+		<code>MPG335301</code>
+		<nom>Transformateurs de puissance, de distribution et autres transformateurs</nom>
+		<depense>829</depense>
+	</produit>
+	<produit>
+		<code>MPG335302</code>
+		<nom>Moteurs et génératrices électriques</nom>
+		<depense>413</depense>
+	</produit>
+	<produit>
+		<code>MPG335303</code>
+		<nom>Appareillage de connexion, de commutation, de relais et de commandes d'usage industriel</nom>
+		<depense>1871</depense>
+	</produit>
+	<produit>
+		<code>MPG335901</code>
+		<nom>Batteries et piles</nom>
+		<depense>189</depense>
+	</produit>
+	<produit>
+		<code>MPG335902</code>
+		<nom>Fils et câbles électriques et de communication</nom>
+		<depense>35</depense>
+	</produit>
+	<produit>
+		<code>MPG335903</code>
+		<nom>Dispositifs de câblage</nom>
+		<depense>206</depense>
+	</produit>
+	<produit>
+		<code>MPG335909</code>
+		<nom>Autres matériel et composants électriques</nom>
+		<depense>340</depense>
+	</produit>
+	<produit>
+		<code>MPG339904</code>
+		<nom>Fournitures de bureau (sauf le papier)</nom>
+		<depense>82</depense>
+	</produit>
+	<produit>
+		<code>MPG339905</code>
+		<nom>Enseignes</nom>
+		<depense>3200</depense>
+	</produit>
+	<produit>
+		<code>MPG339909</code>
+		<nom>Autres divers produits fabriqués</nom>
+		<depense>173</depense>
+	</produit>
+	<produit>
+		<code>MPS3X0000</code>
+		<nom>Services de travaux à forfait en fabrication (sauf l'impression, l'apprêtage de textile et de métaux)</nom>
+		<revenu>48</revenu>
+		<depense>4507</depense>
+	</produit>
+	<produit>
+		<code>MPS411000</code>
+		<nom>Marges de gros - produits agricoles</nom>
+		<depense>369</depense>
+	</produit>
+	<produit>
+		<code>MPS412000</code>
+		<nom>Marges de gros - pétrole et produits pétroliers</nom>
+		<depense>437</depense>
+	</produit>
+	<produit>
+		<code>MPS413000</code>
+		<nom>Marges de gros - produits alimentaires, de boissons et de tabac</nom>
+		<revenu>-231</revenu>
+		<depense>14564</depense>
+	</produit>
+	<produit>
+		<code>MPS414000</code>
+		<nom>Marges de gros - articles personnels et ménagers</nom>
+		<depense>2502</depense>
+	</produit>
+	<produit>
+		<code>MPS415000</code>
+		<nom>Marges de gros - véhicules automobiles et pièces et accessoires de véhicules automobiles</nom>
+		<depense>874</depense>
+	</produit>
+	<produit>
+		<code>MPS416000</code>
+		<nom>Marges de gros - matériaux et fournitures de construction</nom>
+		<depense>2740</depense>
+	</produit>
+	<produit>
+		<code>MPS417000</code>
+		<nom>Marges de gros - machines, de matériel et de fournitures</nom>
+		<depense>4922</depense>
+	</produit>
+	<produit>
+		<code>MPS418000</code>
+		<nom>Marges de gros - produits divers</nom>
+		<depense>4041</depense>
+	</produit>
+	<produit>
+		<code>MPS410002</code>
+		<nom>Commissions sur le commerce de gros</nom>
+		<revenu>7583</revenu>
+		<depense>197</depense>
+	</produit>
+	<produit>
+		<code>MPS441000</code>
+		<nom>Marges de détail - véhicules automobiles et de leurs pièces</nom>
+		<depense>750</depense>
+	</produit>
+	<produit>
+		<code>MPS442000</code>
+		<nom>Marges de détail - meubles et d'accessoires de maison</nom>
+		<depense>46</depense>
+	</produit>
+	<produit>
+		<code>MPS443000</code>
+		<nom>Marges de détail - appareils électroniques et ménagers</nom>
+		<depense>42</depense>
+	</produit>
+	<produit>
+		<code>MPS444000</code>
+		<nom>Marges de détail - matériaux de construction et de matériel et fournitures de jardinage</nom>
+		<depense>3448</depense>
+	</produit>
+	<produit>
+		<code>MPS445000</code>
+		<nom>Marges de détail - alimentation</nom>
+		<depense>3481</depense>
+	</produit>
+	<produit>
+		<code>MPS446000</code>
+		<nom>Marges de détail - produits de santé et de soins personnels</nom>
+		<depense>2467</depense>
+	</produit>
+	<produit>
+		<code>MPS447000</code>
+		<nom>Marges de détail - carburants pour les véhicules automobiles</nom>
+		<depense>131</depense>
+	</produit>
+	<produit>
+		<code>MPS448000</code>
+		<nom>Marges de détail - vêtements et d'accessoires vestimentaires</nom>
+		<depense>47</depense>
+	</produit>
+	<produit>
+		<code>MPS451000</code>
+		<nom>Marges de détail - articles de sport et de loisirs</nom>
+		<depense>25</depense>
+	</produit>
+	<produit>
+		<code>MPS453A00</code>
+		<nom>Marges de détail - produits divers (sauf cannabis)</nom>
+		<depense>1741</depense>
+	</produit>
+	<produit>
+		<code>MPS454310</code>
+		<nom>Marges de détail - combustibles résidentiels</nom>
+		<depense>22</depense>
+	</produit>
+	<produit>
+		<code>MPS481001</code>
+		<nom>Services de transport de voyageurs par air</nom>
+		<depense>1407</depense>
+	</produit>
+	<produit>
+		<code>MPS482001</code>
+		<nom>Services de transport de voyageurs par rail</nom>
+		<depense>9</depense>
+	</produit>
+	<produit>
+		<code>MPS482002</code>
+		<nom>Services de transport de marchandises par rail</nom>
+		<depense>2179</depense>
+	</produit>
+	<produit>
+		<code>MPS483001</code>
+		<nom>Services de transport de voyageurs par voie d'eau</nom>
+		<depense>35</depense>
+	</produit>
+	<produit>
+		<code>MPS483002</code>
+		<nom>Services de transport de marchandises par voie d'eau</nom>
+		<depense>25</depense>
+	</produit>
+	<produit>
+		<code>MPS484001</code>
+		<nom>Services de déménagement</nom>
+		<depense>6</depense>
+	</produit>
+	<produit>
+		<code>MPS484004</code>
+		<nom>Services de transport de marchandises générales par camion</nom>
+		<depense>8067</depense>
+	</produit>
+	<produit>
+		<code>MPS484005</code>
+		<nom>Services de transport de marchandises spéciales par camion</nom>
+		<depense>4917</depense>
+	</produit>
+	<produit>
+		<code>MPS48A001</code>
+		<nom>Services de transport interurbain et rural de voyageurs par autobus</nom>
+		<depense>7</depense>
+	</produit>
+	<produit>
+		<code>MPS48A003</code>
+		<nom>Autres services de transport en commun et de voyageurs par route</nom>
+		<depense>23</depense>
+	</produit>
+	<produit>
+		<code>MPS485300</code>
+		<nom>Services de taxis et de limousines</nom>
+		<depense>315</depense>
+	</produit>
+	<produit>
+		<code>MPS486200</code>
+		<nom>Transport de gaz naturel par gazoduc</nom>
+		<depense>1518</depense>
+	</produit>
+	<produit>
+		<code>MPS486A00</code>
+		<nom>Transport de pétrole brut et d'autres produits par pipeline</nom>
+		<depense>38</depense>
+	</produit>
+	<produit>
+		<code>MPS488004</code>
+		<nom>Services de soutien, d'entretien et de réparation au transport par voie d'eau</nom>
+		<depense>16</depense>
+	</produit>
+	<produit>
+		<code>MPS488005</code>
+		<nom>Services de soutien au transport routier</nom>
+		<depense>123</depense>
+	</produit>
+	<produit>
+		<code>MPS488006</code>
+		<nom>Services d'intermédiaire en transport de marchandises et de courtage en douanes</nom>
+		<depense>12538</depense>
+	</produit>
+	<produit>
+		<code>MPS488009</code>
+		<nom>Autres services de soutien au transport</nom>
+		<depense>224</depense>
+	</produit>
+	<produit>
+		<code>MPS491000</code>
+		<nom>Services postaux</nom>
+		<depense>350</depense>
+	</produit>
+	<produit>
+		<code>MPS492000</code>
+		<nom>Services de messageries et de messagers, de livraison de colis et de livraison locale</nom>
+		<depense>2292</depense>
+	</produit>
+	<produit>
+		<code>MPS493002</code>
+		<nom>Services d'entreposage (sauf l'entreposage de grains)</nom>
+		<depense>8364</depense>
+	</produit>
+	<produit>
+		<code>MPS511112</code>
+		<nom>Espace publicitaire dans les journaux imprimés</nom>
+		<depense>7261</depense>
+	</produit>
+	<produit>
+		<code>MPG5111A2</code>
+		<nom>Livres</nom>
+		<depense>231</depense>
+	</produit>
+	<produit>
+		<code>MPG5111A3</code>
+		<nom>Autres produits publiés</nom>
+		<depense>78</depense>
+	</produit>
+	<produit>
+		<code>MPS5111A4</code>
+		<nom>Espace publicitaire dans les périodiques imprimés et dans les autres publications imprimées</nom>
+		<depense>4471</depense>
+	</produit>
+	<produit>
+		<code>MPS511200</code>
+		<nom>Logiciels d'usage général</nom>
+		<depense>306</depense>
+	</produit>
+	<produit>
+		<code>MPS5121A1</code>
+		<nom>Films, émissions de télévision et vidéos, enregistrés</nom>
+		<depense>67</depense>
+	</produit>
+	<produit>
+		<code>MPS512130</code>
+		<nom>Entrées aux projections de films</nom>
+		<depense>71</depense>
+	</produit>
+	<produit>
+		<code>MPS512201</code>
+		<nom>Musique enregistrée et autres enregistrements sonores</nom>
+		<depense>116</depense>
+	</produit>
+	<produit>
+		<code>MPS512203</code>
+		<nom>Octroi sous licence de droits d'utilisation d'oeuvres musicales et d'enregistrements sonores</nom>
+		<depense>41</depense>
+	</produit>
+	<produit>
+		<code>MPS517001</code>
+		<nom>Services de télécommunications fixes (sauf l'accès à Internet)</nom>
+		<depense>346</depense>
+	</produit>
+	<produit>
+		<code>MPS517002</code>
+		<nom>Services de télécommunications mobiles</nom>
+		<depense>594</depense>
+	</produit>
+	<produit>
+		<code>MPS517004</code>
+		<nom>Services d'accès à Internet fixes</nom>
+		<depense>111</depense>
+	</produit>
+	<produit>
+		<code>MPS518000</code>
+		<nom>Traitement de données, hébergement de données et services connexes</nom>
+		<depense>97</depense>
+	</produit>
+	<produit>
+		<code>MPS519002</code>
+		<nom>Publicité sur Internet</nom>
+		<depense>12983</depense>
+	</produit>
+	<produit>
+		<code>MPS5221A0</code>
+		<nom>Services bancaires et services d'autres activités d'intermédiation financière par le biais de dépôt - frais explicites</nom>
+		<depense>2871</depense>
+	</produit>
+	<produit>
+		<code>MPS522200</code>
+		<nom>Services d'intermédiation financière non faite par le biais de dépôts - frais explicites</nom>
+		<depense>1597</depense>
+	</produit>
+	<produit>
+		<code>MPS523001</code>
+		<nom>Services bancaires d'investissement</nom>
+		<depense>412</depense>
+	</produit>
+	<produit>
+		<code>MPS523002</code>
+		<nom>Services de courtage et de commerce de valeurs mobilières</nom>
+		<depense>1490</depense>
+	</produit>
+	<produit>
+		<code>MPS523003</code>
+		<nom>Services de gestion de portefeuille</nom>
+		<depense>185</depense>
+	</produit>
+	<produit>
+		<code>MPS523009</code>
+		<nom>Services des sociétés de portefeuille et autres services d'investissement financier et services connexes</nom>
+		<depense>11898</depense>
+	</produit>
+	<produit>
+		<code>MPS524102</code>
+		<nom>Assurance contre la maladie et les accidents</nom>
+		<depense>55</depense>
+	</produit>
+	<produit>
+		<code>MPS524103</code>
+		<nom>Services d'assurance-auto</nom>
+		<depense>785</depense>
+	</produit>
+	<produit>
+		<code>MPS524104</code>
+		<nom>Services d'assurance-habitation</nom>
+		<depense>204</depense>
+	</produit>
+	<produit>
+		<code>MPS524105</code>
+		<nom>Services d'assurance-responsabilité et d'autres assurances de biens et de risques divers</nom>
+		<depense>572</depense>
+	</produit>
+	<produit>
+		<code>MPS52X001</code>
+		<nom>Services d'intermédiation financière sur les dépôts indirectement mesurés (SIFIM)</nom>
+		<depense>6777</depense>
+	</produit>
+	<produit>
+		<code>MPS52X003</code>
+		<nom>Services d'intermédiation financière sur d'autres prêts indirectement mesurés (SIFIM)</nom>
+		<depense>1703</depense>
+	</produit>
+	<produit>
+		<code>MPS531102</code>
+		<nom>Location de biens immobiliers à usage non résidentiel</nom>
+		<depense>6398</depense>
+	</produit>
+	<produit>
+		<code>MPS531A00</code>
+		<nom>Courtage immobilier et autres services connexes à l'immobilier</nom>
+		<depense>10</depense>
+	</produit>
+	<produit>
+		<code>MPS532100</code>
+		<nom>Services de location et de location à bail de véhicules automobiles</nom>
+		<depense>2570</depense>
+	</produit>
+	<produit>
+		<code>MPS532A03</code>
+		<nom>Services de location et de location à bail de machines et matériel d'usage commercial et industriel (sauf le matériel de bureau)</nom>
+		<depense>997</depense>
+	</produit>
+	<produit>
+		<code>MPS533000</code>
+		<nom>Octroi sous licence de droits sur des actifs non financiers produits incorporels (sauf les droits sur les logiciels et les autres droits d'auteur)</nom>
+		<depense>79262</depense>
+	</produit>
+	<produit>
+		<code>MPS541100</code>
+		<nom>Services juridiques</nom>
+		<depense>292</depense>
+	</produit>
+	<produit>
+		<code>MPS541200</code>
+		<nom>Services de comptabilité, de préparation des déclarations de revenus, de tenue de livres, et de paye</nom>
+		<depense>95</depense>
+	</produit>
+	<produit>
+		<code>MPS541300</code>
+		<nom>Services d'architecture et d'ingénierie et autres services connexes</nom>
+		<revenu>93</revenu>
+		<depense>457</depense>
+	</produit>
+	<produit>
+		<code>MPS541400</code>
+		<nom>Services spécialisés de design</nom>
+		<depense>20</depense>
+	</produit>
+	<produit>
+		<code>IMS541502</code>
+		<nom>Services de conception et de développement de logiciel pour propre compte</nom>
+		<revenu>563</revenu>
+		</produit>
+	<produit>
+		<code>MPS541503</code>
+		<nom>Conception de systèmes informatiques et services connexes (sauf le développement de logiciels)</nom>
+		<depense>478</depense>
+	</produit>
+	<produit>
+		<code>MPS541600</code>
+		<nom>Services de conseils en gestion et de conseils scientifiques et techniques</nom>
+		<revenu>1302</revenu>
+		<depense>10</depense>
+	</produit>
+	<produit>
+		<code>IMS541702</code>
+		<nom>Recherche et développement pour propre compte (sauf développement de logiciels)</nom>
+		<revenu>1267</revenu>
+		</produit>
+	<produit>
+		<code>MPS541800</code>
+		<nom>Services de publicité, de relations publiques et autres services connexes</nom>
+		<depense>39542</depense>
+	</produit>
+	<produit>
+		<code>MPS541901</code>
+		<nom>Services de photographie</nom>
+		<depense>425</depense>
+	</produit>
+	<produit>
+		<code>MPS541909</code>
+		<nom>Autres services professionnels, scientifiques et techniques</nom>
+		<depense>6</depense>
+	</produit>
+	<produit>
+		<code>IMS551001</code>
+		<nom>Services des sociétés de portefeuille (imputés)</nom>
+		<depense>8053</depense>
+	</produit>
+	<produit>
+		<code>IMS551002</code>
+		<nom>Services - sièges sociaux (imputés)</nom>
+		<depense>128988</depense>
+	</produit>
+	<produit>
+		<code>MPS561100</code>
+		<nom>Services administratifs de bureau</nom>
+		<revenu>3994</revenu>
+		<depense>134</depense>
+	</produit>
+	<produit>
+		<code>MPS561400</code>
+		<nom>Services de soutien aux entreprises</nom>
+		<depense>168</depense>
+	</produit>
+	<produit>
+		<code>MPS561500</code>
+		<nom>Services de planification, de réservation et d'organisation de voyages</nom>
+		<depense>295</depense>
+	</produit>
+	<produit>
+		<code>MPS561700</code>
+		<nom>Services relatifs aux bâtiments et aux logements</nom>
+		<depense>3814</depense>
+	</produit>
+	<produit>
+		<code>MPS561A00</code>
+		<nom>Services de soutien d'installations et autres services de soutien</nom>
+		<depense>88</depense>
+	</produit>
+	<produit>
+		<code>MPS562000</code>
+		<nom>Services de gestion des déchets et d'assainissement</nom>
+		<depense>309</depense>
+	</produit>
+	<produit>
+		<code>MPS721100</code>
+		<nom>Services d'hébergement pour voyageurs dans une chambre ou une autre unité</nom>
+		<depense>1358</depense>
+	</produit>
+	<produit>
+		<code>MPS722001</code>
+		<nom>Repas préparés</nom>
+		<depense>25486</depense>
+	</produit>
+	<produit>
+		<code>MPS722002</code>
+		<nom>Boissons alcoolisées pour consommation immédiate</nom>
+		<depense>4921</depense>
+	</produit>
+	<produit>
+		<code>MPS811100</code>
+		<nom>Services d'entretien et de réparation de véhicules motorisés</nom>
+		<depense>434</depense>
+	</produit>
+	<produit>
+		<code>MPS811A00</code>
+		<nom>Services de réparation et d'entretien (sauf pour les bâtiments et les véhicules automobiles)</nom>
+		<revenu>12</revenu>
+		<depense>2636</depense>
+	</produit>
+	<produit>
+		<code>MPS812A02</code>
+		<nom>Services de stationnement</nom>
+		<depense>431</depense>
+	</produit>
+	<produit>
+		<code>MPS813000</code>
+		<nom>Autres services aux membres</nom>
+		<depense>103</depense>
+	</produit>
+	<produit>
+		<code>PRM100000</code>
+		<nom>Impôts sur les produits</nom>
+		<depense>4743</depense>
+	</produit>
+	
+	<produit>
+		<code>PRM400000</code>
+		<nom>Impôts sur la production</nom>
+		<depense>36555</depense>
+	</produit>
+	<produit>
+		<code>PRM500000</code>
+		<nom>Salaires et traitements</nom>
+		<depense>224871</depense>
+	</produit>
+	<produit>
+		<code>PRM600000</code>
+		<nom>Cotisations sociales à la charge des employeurs</nom>
+		<depense>105851</depense>
+	</produit>
+	<produit>
+		<code>PRM700000</code>
+		<nom>Revenu mixte brut</nom>
+		<depense>432</depense>
+	</produit>
+	<produit>
+		<code>PRM800000</code>
+		<nom>Excédent d'exploitation brut</nom>
+		<depense>406999</depense>
+	</produit>
+	<valeur-ajoutee>
+		<code>GVA</code>
+		<nom>Valeur ajoutée brute aux prix de base</nom>
+		<depense>774708</depense>
+	</valeur-ajoutee>
+	<total>
+		<code>TOTAL</code>
+		<nom>Total</nom>
+		<revenu>1597040</revenu>
+		<depense>1597040</depense>
+	</total>
+</industrie>
