@@ -129,7 +129,7 @@ Séquence de communication
     2.5 L'achat local, c'est une question de valeur ajoutée.  
 3. Le cas des brasseries québécoises  
     3.1 Décortiquons ce qui constitue une bière  
-    3.2 Comparer à la moyenne des industries  
+    ~~3.2 Comparer à la moyenne des industries~~  
     3.3 Que se passe-t-il si on achète plus de bières québécoises ?  
 4. Quand on parle d'achat local...  
     4.1 Les questions à se poser quand on parle d'achat local.
@@ -145,3 +145,22 @@ Questions à Henri
 - Quels éléments sont de la valeur ajoutée ? exécédent, impôts, cotisations...? ou juste les salaires ?
 - On fait quoi avec les revenus ?
 - Est-ce que tu exclurais des produits ? À partir de quel proportion du total..?
+
+### Notes
+
+Quelles seraient vos motivations pour acheter localement ?
+
+Environnement ?
+Enrichissement ?
+Emploi ?
+
+Importance de la distribution de la valeur ajoutée. Capital ou travail ? Actionnaires Québecois ou étrangers ?
+
+Niveau de prix qui augmente avec les salaires à cause de l'inflation (manque de travailleurs = ).
+
+Deux trois scénarios de choc sur la bière plus locale. Avec scénario de référence.
+4-5 options qui peuvent toutes être cochées
+
+### Outils & méthode
+- Contenu wikipedia
+- Google Sheets (stocker réponses aux questions, fournir les stats de réponses)

@@ -1,0 +1,109 @@
+# Economia — Les dessous économiques de l'achat local
+
+## Structure / Séquence communicationnelle
+
+0. Introduction
+    1. Economia : parce que derrière les questions économiques, se cache toujours plus qu'il n'y paraît.
+    2. Nous allons aujourd'hui fouiller/éplucher/éclaircir __(?)__ la notion « d'achat local ».
+    3. Vous apprendrez à poser les questions nécessaires à la bonne compréhension, au cas par cas.
+    4. Développons ensemble notre raisonnement économique... (pour ainsi exiger plus que des phrases creuses !)
+        1. Exemples de phrases creuses ?
+            1. « L'achat local fait rouler notre économie ! »
+            2. « L'achat local crée des emplois ! »
+            3. « L'achat local nous enrichit tous ! »
+            4. « L'achat local est bon pour l'environnement ! »
+            5. etc.
+    5. Parce que oui, c'est plus compliqué que ça... mais pas tant quand même ! En fait... nous allons tout faire pour simplifier. Humhum.
+    6. Allez, suivez-nous et prenez part à l'exercice ! Mais pour commencer présentons-nous...
+        1. Nous sommes 
+            1. Henri (économiste aguerri) et Marc-André (concepteur éclectique) !
+            2. Nous avons 33 et 37 ans.
+        2. Et Vous ?
+            1. __(Question à l'usager)__ Quel est votre nom ?
+                - « Eh, ben ! trois autres usagers s'appellent « Pierre » !
+            2. __(Question à l'usager)__ Quel est votre âge ?
+                - La moyenne d'âge est « 28 ans ».
+            3. __(Question à l'usager)__ Vous avez des préférences esthétiques ? (c'est pour rendre votre expérience plus agréable !)
+                - Couleurs
+                - Taille de caractères
+                - Animations
+1. Quoi ? — Les prémisses de l'achat local
+    - Une popularité grandissante
+        + Articles de journaux, initiatives citoyennes, études, etc.
+    - Mais... c'est quoi un achat « local » ?
+        + __(?)__ Différentes définitions
+        + __(Questions à l'usager)__ Et... selon vous ?
+            * Acheter une télévision coréenne dans une chaîne de magasin américaine installée au Québec... est-ce un achat local ?
+            * Acheter du jus d'orange de la Floride transformé au Québec... est-ce un achat local ?
+            * Acheter dans un supermarché une bière québécoise produite à l'aide de houblons belges... est-ce un achat local ?
+    - La question se pose, donc : « Mais quand est-ce qu'un achat devient-il local !!??!?!?1 »
+        + Et à cette question, nous répondons : « Ben, c'est une question de degré... c'est rarement noir ou blanc en économie ! (Parce que c'est toujours plus compliqué ça en a l'air de prime abord, t'sais. Et puis, si c'était simple, vous ne seriez pas en train de lire ça. Et Henri n'aurait pas de travail.) »
+        + Une question de degré donc... mais des degrés de quoi ? Celsius ? Farenheit ?
+        + En gros, le degré de « localité » d'un achat dépend lui-même de la provenance de deux facteurs fondamentaux, facteurs qui varient en fonction du [bien de consommation](https://fr.wikipedia.org/wiki/Bien_de_consommation) que l'on achète !
+        + Parmi ces facteurs on retrouve :
+            * [L'approvisionnement](https://fr.wikipedia.org/wiki/Approvisionnement)
+                - Bien sûr ! Ce qui constitue le bien en question, la nature des intrants dans sa production : l'orange floridienne dans le jus d'orange québécois ou la main d'œuvre guatémaltèque dans les champs de fraises de l'Île d'Orléans.
+                - Il faut donc se demander : « Quelle part de cet approvisionnement est locale ? Quelle part est importée ? ».
+                - (Gardons en tête ici qu'il s'agit d'une [chaîne de production](https://fr.wikipedia.org/wiki/Cha%C3%AEne_de_production)... et que nous pourrions suivre ladite chaîne looooooongtemps, dans les intrants des intrants des intrants des intrants... l'arbre est dans ses feuilles.
+            * [La valeur ajoutée](https://fr.wikipedia.org/wiki/Valeur_ajout%C3%A9e)
+                - ...
+        + Un achat sera donc _plus ou moins_ « local » en fonction de la provenance de ses intrants et de sa valeur ajoutée !
+        + Et si on voulait pousser la réflexion un peu plus loin (ce que nous voulons) on irait jusqu'à dire que la _destination_ de la valeur ajoutée, le profit quoi, est toute aussi importante à l'évaluation du degré de « localité » d'un achat. Parce que oui, là où est dépensé ou investit le profit d'une action économique importe grandement dans l'évaluation de ses bénéfices !
+2. Pourquoi ? — Les motivations d'un achat local
+    1. En fait, comme n'importe quelle action en économie, ce qui importe, c'est l'objectif qu'on se donne, notre intention. Parce qu'au final, l'économie est une science des moyens _(ajouter la référence ?)_. 
+    2. L'analyse économique nous permet d'évaluer l'action considérée en fonction de sa capacité probable à remplir nos objectifs préalables. Ces objectifs, l'analyse économique ne s'en préocuppe pas !
+    3. Dans le cas qui nous intéresse, l'action considérée est « l'achat local ». Mais quel est notre objectif ?
+    4. __Qu'est-ce qui vous motiverait, vous, à augmenter votre consommation de biens locaux ?__ (Vous pouvez cocher plusieurs de ces réponses !)
+        1. Faire rouler l'économie d'ici.
+        2. Enrichir nos concitoyens.
+        3. Créer des emplois.
+        4. Transiger avec des entreprises québécoises.
+        5. Protéger l'environnement.
+        6. Autre ?
+    5. Bien, bien. Mais bon, c'est bien abstrait tout ça. Et si on concrétisait la notion de « bien »..? Et si on parlait de « bière »..?
+    6. Aimez-vous la bière ?
+        1. oui :-> ouf ! on l'a échappé belle.
+        2. non :-> bon. Ben c'est ça, l'exemple qu'on a choisi... pouvez-vous faire comme si... vous aimiez ça la bière ? Nous vous en serions reconnaissant.
+        3. Merci !
+    7. Donc, et si on reprenait notre dernière question... mais avec la bière !? __Qu'est-ce qui vous motiverait, vous, à augmenter votre consommation de bières locales ?__ (Vous pouvez cocher plusieurs de ces réponses !)
+        1. Faire rouler l'économie d'ici.
+        2. Enrichir nos concitoyens.
+        3. Créer des emplois.
+        4. Transiger avec des entreprises québécoises.
+        5. Protéger l'environnement.
+        6. Autre ?
+3. Comment ? — Les déterminants de l'efficacité
+    1. Le portrait actuel.
+        1. La bière c'est un secteur industriel de plus de
+            1. (emplois)
+            2. (revenus & dépenses)
+            3. (proportion du PIB)
+        2. Amusons-nous à décortiquer ensemble ce qui constitue une bière ! (Soit, les biens intermédiaires nécessaires à la production de la bière, en moyenne)
+            1. D'après vous qu'est-ce qui constitue le plus ~~grand~~ intrant en proportion du total ?
+                1. Le houblon
+                2. Le verre
+                3. Le métal
+                4. Les salaires
+                5. L'eau
+            2. Les salaires !
+            3. [ON CONSTRUIT ICI LA MATRICE DE PRODUCTION AU FUR ET À MESURE... peut-être pourrait-on permettre de passer rapidement ?]
+        3. [Survol des aspects importants en lien avec les motivations. Mise en évidence de ceux ayant trait aux choix de l'usager. Possibilité d'interagir avec la visualisation]
+        4. Et si on augmentait tous notre consommation de bière ?
+            1. Grâce à « Hercule » (super [modèle économique](https://fr.wikipedia.org/wiki/Mod%C3%A8le_(%C3%A9conomie)) mi-homme, mi-dieu) nous pouvons projeter quels seraient les impacts d'un [choc de demande](https://fr.wikipedia.org/wiki/Choc_de_demande) causé par l'augmentation de l'achat de bière locale.
+            2. En gros, ça veut dire : « Qu'est-ce qui se passerait en termes d'emploi, de richesse, d'environnement, d'activité si on buvait tous un peu ou pas mal plus de bière locale ?)
+        5. Scénario 1
+            1. Les modifications apportées aux variables considérées.
+        6. Scénario 2
+            1. Les modifications apportées aux variables considérées.
+        7. Comparons et évaluons !
+            1. Est-ce que l'augmentation de l'achat de bières locales est bénéfique ? Sur quelles variables ? Jusqu'à quel point ?
+            2. Est-ce que l'augmentation de l'achat de bières locales est [efficace](https://fr.wikipedia.org/wiki/Efficacit%C3%A9), considérant _vos_ motivations de départ ?
+                1. Portrait de la situation à terme, en lien avec les motivations exprimées de l'usager
+4. Quand ? - Les questions à poser pour savoir quand acheter localement.
+    - Quels sont les intrants du bien considéré ?
+        + D'où proviennent les intrants ?
+    - Quelle est la valeur ajoutée du bien (et de ses intrants) ?
+        + D'où provient-elle ?
+        + Où s'en va-t-elle ?
+    - Quelles sont nos motivations ?
+    - ...

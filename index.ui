@@ -5,14 +5,15 @@
 	xmlns:xlink="http://www.w3.org/1999/xlink"
 	xmlns:msxsl="urn:schemas-microsoft-com:xslt"
 	xmlns:ext="http://exslt.org/common"
+	xmlns:math="http://exslt.org/math"
 	exclude-result-prefixes="ext msxsl">
 	<xsl:output indent="yes" media-type="text/html" method="html" encoding="UTF-8" />
 	<xsl:variable name="special-characters" select="'/ áàâäéèêëíìîïóòôöúùûüçÁÀÂÄÉÈÊËÍÌÎÏÓÒÔÖÚÙÛÜÇABCDEFGHIJKLMNOPQRSTUVWXYZ&amp;’?.()!:,'"/>
 	<xsl:variable name="normalized-special-characters" select="'--aaaaeeeeiiiioooouuuuçaaaaeeeeiiiioooouuuuçabcdefghijklmnopqrstuvwxyz_'"/>
 
 	<xsl:key name="class-aggregate" match="produit[depense]" use="substring(code, 1, 3)"/>
-	<xsl:key name="previous-class-aggregates" match="preceding-sibling::produit[depense]" use="substring(code, 1, 3)"/>
-
+	<xsl:key name="previous-class-aggregates" match="preceding-sibling::produit[depense][generate-id() = generate-id(key('class-aggregate', substring(code, 1, 3)))]" use="substring(code, 1, 3)"/>
+	
 	<xsl:template match="/industrie">
 		<html>
 			<head>
@@ -38,7 +39,8 @@
 						</ul>
 					</section>
 					<section>
-						<aside>
+					<xsl:variable name="total-classes" select="count(produit[depense][generate-id() = generate-id(key('class-aggregate', substring(code, 1, 3))[1])])" />
+						<aside style="--tan:{math:tan(math:constant('PI', 4) div $total-classes)}; --m: {$total-classes};">
 							<header>
 								<svg width="100%" height="100%">
 									<use xlink:href="#svg-beer-symbol"></use>
@@ -300,7 +302,7 @@
 	</xsl:template>
 
 	<xsl:template match="produit[depense]" mode="class-item">
-		<xsl:param name="total-preceding" select="0" />
+		<xsl:param name="total-preceding" select="count(key('class-aggregate', substring(code, 1, 3)))" />
 		<xsl:variable name="percentage">
 			<xsl:value-of select="format-number(depense div //total/depense * 100, '#.#####')"/>
 		</xsl:variable>
@@ -339,10 +341,10 @@
 						<xsl:call-template name="svg-symbol-creator"/>
 					</div>
 				</header>
-				<ol style="--m: {count(key('class-aggregate', substring(code, 1, 3)))}">
+				<ol style="--m: {$total-elements};">
 					<xsl:apply-templates select="key('class-aggregate', $subcode)" mode="class-item">
 						<xsl:sort select="depense" order="descending" data-type="number" />
-						<xsl:with-param name="total-preceding" select="$total-preceding"/>
+						<!-- <xsl:with-param name="total-preceding" select="$total-preceding"/> -->
 					</xsl:apply-templates>
 				</ol>
 			</section>
