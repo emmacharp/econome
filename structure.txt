@@ -106,4 +106,5 @@
         + D'où provient-elle ?
         + Où s'en va-t-elle ?
     - Quelles sont nos motivations ?
+    - Où iront nous chercher les ressources supplémentaires impliquées dans une plus grande production locale ?
     - ...

@@ -164,3 +164,80 @@ Deux trois scénarios de choc sur la bière plus locale. Avec scénario de réf�
 ### Outils & méthode
 - Contenu wikipedia
 - Google Sheets (stocker réponses aux questions, fournir les stats de réponses)
+
+###  18 septembre avec Henri
+
+La chaîne de l'achat
+(Clavier -> Best Buy (Marché Central) -> Grossiste ->)
+
+Tu l'achetes chez Best Buy, est-ce un achat local ? À ce niveau là, oui. Mais où Best Buy s'est-il approvisionné ? Est-ce local ?
+À chaque niveau de la chaîne, on peu décider si c'est local.
+
+Un agrégat dans un gros carré qui contient tous les composants qui distingue entre des producteurs locaux ou étrangers.
+
+Processus d'achat avec toute la chaîne économique. On parle de tous les composantes et on peut évaluer le _degré_ d'achat local de la consommation.
+
+Degré de localité des bières aujourd'hui achetées par les québécois.
+
+En tant que consommateur tout ce que je peux faire c'est...
+
+Après avoir fait le portrait agrégé on peut poser des questions « ET SI ? »
+
+- Et si on achetait plus de bières ?
+- Et si les gens achetaient des bières dont le houblon est 100% québécois (Soviet Supreme) ?
+    - Voici comment on aurait besoin de travailleurs... mais on a pas autant de travailleurs.
+
+1. Le consommateur achète sa bière au dépanneur.
+2. Le détaillant l'achète au grossiste.
+3. Le grossiste l'achète au dernier transformateur.
+4. Le transformateur l'achète au fournisseur.
+
+Degré de localité de chaque étape.
+
+Un intrant à la fois on présente l'impact d'acheter plus québécois.
+
+On explique plus achat local versus approvisionnement local seulement.
+
+On propose des scénarios qui vont être des chevaux de troie... On les utilise pour présenter des concepts qui touchent (peut-être de manière contre-intuitive ?) ledit scénario. Qu'est-ce ça fait si on achète juste du houblon local ? Là, en termes d'emplois, ça peut être contre-intuitif et on pourra présenter possiblement en écosphère.
+
+
+1. Degré d'achat local
+2. Si on veut produire plus localement, on va avoir besoin de plus de ressources.
+3. On sélectionne un scénario pis on présente le choc dans la visualisation.
+4. Pis après on présente les impacts du choc pour certaines variables choisies.
+
+Comprendre les nuances et complexités de l'achat local.
+
+Nouvelle structure communicationnelle avec :
+Objectifs
+Moyens
+Données nécessaires
+
+
+## Exemples de questions à poser avant et après pour évaluer la question de recherche
+Quelle est votre perception de l'économie ? Vous y intéressez-vous ?
+Maintenant y voyez vous un peu plus clair ? Avez-vous une autre vision de l'Achat local ? Vous sentez-vous plus à même de poser des actions informées ?
+Avons-nous, Henri et Marc-André, stimulé votre intérêt pour l'économique ?
+
+## Henri 9 octobre
+
+On commence par expliquer l'achat local par le degré de localité (mais avec quelque chose de plus sexy)
+
+Transformateur = brasseur
+
+Au-delà de l'achat local on décompose un produit depuis la pierre... jusqu'au consommateur. C'est déjà pédagogique.
+
+Consommateur achète 1000$
+Détaillant reçoit 1000$ et il en donne 800$ au grossiste;
+Grossiste reçoit 800$ et donne 600$ au transformateur;
+Le transformateur reçoit 600$ et en donne 400$ au fournisseur.
+
+Chez un brasseur. Il te vend pour 1000$ de bières. Il a acheté pour 800$ d'intrants (houblons, etc.). 200$ de rémunération qu'il a versé (dividendes, salaires et traitements, investissement, etc.)
+
+Le brasseur, à partir de 800$ de biens et services divers, il a réussi à vendre mille dollars. Il a créé une valeur ajoutée de 200$, création de richesse (brassage, etc.).
+
+Le fournisseur se retourne et il a donné 500$ de biens et services et a généré 300$ de valeur ajoutée.
+
+Si tout tout tout a été produit au Québec, c'est 1000$ de valeur ajoutée.
+
+Même truc, mais avec un partenaire ontarien. On fait l'hypothèse que l'argent qui part en Ontario ne reviendra pas. Le 1000$ de chiffre d'affaires se décompose en 400$ de valeur ajoutée extérieure, _qu'on a importée_ et en 600$ de valeur ajoutée (un paiement fait) au Québec.
