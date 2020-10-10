@@ -1,0 +1,189 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Esquisse chaîne</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+
+			:root {
+				font-family: 'InputMonoNarrow', Consolas, 'Courier New', monospace;
+				font-family: 'Avenir Next', Didot, 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+				font-family: 'Avenir Next', Didot, 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+				font-weight: 500;
+			}
+
+			h1, h2, h3, h4, h5, h6 {
+				font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			}
+
+			body {
+				padding: 50px;
+			}
+			body>*+* {
+				margin-top: 50px;
+			}
+			h1 {
+				margin-bottom: 2rem;
+				color: blue;
+			}
+			header {
+			}
+
+			header>span+* {
+				margin-left: 50px;
+			}
+			main {
+				display: flex;
+				justify-content: space-between;
+				/*align-items: center;*/
+				position: relative;
+			}
+			main p {
+				width: 28ch;
+				background-color: white;
+				position: relative;
+				line-height: 1.5;
+				/*margin: 0;*/
+			}
+			main:before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 25px;
+				left: 0;
+				right: 0;
+				border-bottom: 2px grey solid;
+				margin-top: -1px;
+			}
+			article[id] {
+				--width: 80px;
+				--height: 80px;
+				position: relative;
+				width: var(--width);
+				height: var(--height);
+				background-color: white;
+			}
+
+			article[id]>.option {
+				width: var(--width);
+				height: var(--height);
+				background-clip: content-box;
+			}
+
+			article[id]>*+* {
+				padding-top: 30px;
+			}
+
+			article[id]:before {
+				content: attr(id);
+				position: absolute;
+				bottom: 100%;
+				margin-bottom: .5em;
+				background-color: white;
+				padding: .25em;
+				/*color: red;*/
+				font-size: 12px;
+			}
+			article[id]:not(:hover):before {
+				/*opacity: 0;*/
+			}
+			article[id="consommateur"] {
+				--width: 40px;
+				--height: 40px;
+				background-color: red;
+				border-radius: 50%;
+			}
+
+			article {
+				--grid-gradient: linear-gradient(to right, white, white 3px, transparent 3px), linear-gradient(to bottom, white, white 3px, transparent 3px);
+				/*background-size: 30px 100%, 100% 30px, 100% 100%;*/
+				background-repeat: repeat-x, repeat-y, no-repeat;
+				/*border: 6px black double;*/
+			}
+
+			article[id="detaillant"]>.option:nth-child(1) {
+				background-image: var(--grid-gradient), linear-gradient(to right, blue 90%, red);
+			}
+			article[id="detaillant"]>.option:nth-child(2) {
+				background-image: var(--grid-gradient), linear-gradient(to right, blue 50%, red);
+			}
+			article[id="detaillant"]>.option:nth-child(3) {
+				background-image: var(--grid-gradient), linear-gradient(to right, blue 10%, red);
+			}
+
+			article[id]:not(:hover)>.option+.option {
+				opacity: 0;
+			}
+
+			article[id="grossiste"] {
+/*				--width: 120px;
+				--height: 120px;*/
+				background-image: var(--grid-gradient), linear-gradient(to right, blue 70%, red);
+			}
+			article[id="transformateur"] {
+			/*	--width: 200px;
+				--height: 200px;*/
+			}
+
+			article[id="transformateur"]:hover~article[id="fournisseur"]>.option {
+				opacity: 1;
+			}
+
+			article[id="transformateur"]>.option:nth-child(1) {
+				background-image: var(--grid-gradient), linear-gradient(to right, blue 50%, red);
+			}
+			article[id="transformateur"]>.option:nth-child(2) {
+				background-image: var(--grid-gradient), linear-gradient(to right, blue 90%, red);
+			}
+			article[id="transformateur"]>.option:nth-child(3) {
+				background-image: var(--grid-gradient), linear-gradient(to right, blue 10%, red);
+			}
+
+			article[id="fournisseur"] {
+			/*	--width: 300px;
+				--height: 300px;*/
+			}
+
+			article[id="fournisseur"]>.option:nth-child(1) {
+				background-image: var(--grid-gradient), linear-gradient(to right, blue 20%, red);
+			}
+			article[id="fournisseur"]>.option:nth-child(2) {
+				background-image: var(--grid-gradient), linear-gradient(to right, blue 70%, red);
+			}
+			article[id="fournisseur"]>.option:nth-child(3) {
+				background-image: var(--grid-gradient), linear-gradient(to right, blue 0%, red);
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1><small>Économia présente :</small><br>les dessous économiques du principe d'achat local</h1>
+			<span>Bleu : local</span>
+			<span>Rouge : étranger</span>
+			<span>Dimensions : proportion des intrants de la chaîne</span>
+		</header>
+		<main>
+			<p>Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Est, voluptate? Ab quisquam, inventore praesentium minus recusandae vitae, tempora velit ea ullam voluptates sequi, in optio neque atque modi est quasi?</p>
+			<article id="consommateur"></article>
+			<article id="detaillant">
+				<div class="option"></div>
+				<div class="option"></div>
+				<div class="option"></div>
+			</article>
+			<article id="grossiste"></article>
+			<article id="transformateur">
+				<div class="option"></div>
+				<div class="option"></div>
+				<div class="option"></div>
+			</article>
+			<article id="fournisseur">
+				<div class="option"></div>
+				<div class="option"></div>
+				<div class="option"></div>
+			</article>
+		</main>
+	</body>
+</html>

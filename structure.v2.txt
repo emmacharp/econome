@@ -1,0 +1,55 @@
+# Economia — Les dessous économiques de l'achat local
+
+## Stratégie
+
+### Objectif
+__Éveiller la conscience économique.__ Amener l'usager à se poser les bonnes questions devant des enjeux économiques.
+
+### Moyen
+Présentation interactive d'un dilemme économique concret et démonstration du raisonnement nécessaire à sa bonne appréhension. Formulation « et si ? » de réalités contrefactuelles.
+
+### Données
+Scénarios de chocs pour projeter les implications contrefactuelles.
+
+## Structure / Séquence communicationnelle
+
+0. Introduction
+    1. Economia : parce que derrière les questions économiques, se cache toujours plus qu'il n'y paraît.
+    2. Nous allons aujourd'hui fouiller/éplucher/éclaircir __(?)__ la notion « d'achat local ».
+    3. Vous apprendrez à poser les questions nécessaires à la bonne compréhension, au cas par cas.
+    4. Développons ensemble notre raisonnement économique... (pour ainsi exiger plus que des phrases creuses !)
+        1. Exemples de phrases creuses ?
+            1. « L'achat local fait rouler notre économie ! »
+            2. « L'achat local crée des emplois ! »
+            3. « L'achat local nous enrichit tous ! »
+            4. « L'achat local est bon pour l'environnement ! »
+            5. etc.
+    5. Parce que oui, c'est plus compliqué que ça... mais pas tant quand même ! En fait... nous allons tout faire pour simplifier. Humhum.
+    6. Allez, suivez-nous et prenez part à l'exercice ! Mais pour commencer présentons-nous...
+        1. Nous sommes 
+            1. Henri (économiste aguerri) et Marc-André (concepteur éclectique) !
+            2. Nous avons 33 et 37 ans.
+        2. Et Vous ?
+            1. __(Question à l'usager)__ Quel est votre nom ?
+                - « Eh, ben ! trois autres usagers s'appellent « Pierre » !
+            2. __(Question à l'usager)__ Quel est votre âge ?
+                - La moyenne d'âge est « 28 ans ».
+            3. __(Question à l'usager)__ Vous avez des préférences esthétiques ? (c'est pour rendre votre expérience plus agréable !)
+                - Couleurs
+                - Taille de caractères
+                - Animations
+1. Voyons maintenant ce qu'il en est grâce à un exemple !
+    1. Aimez-vous la bière ?
+        1. oui :-> ouf ! on l'a échappé belle.
+        2. non :-> bon. Ben c'est ça, l'exemple qu'on a choisi... pouvez-vous faire comme si... vous aimiez ça la bière ? Nous vous en serions reconnaissant.
+        3. Merci !
+    2. Les chaîne économique de votre achat de bière
+        1. __Vous__ achetez votre bière chez un détaillant.
+        2. Le détaillant l'achète au grossiste.
+        3. Le grossiste l'achète au dernier transformateur.
+        4. Le transformateur l'achète au fournisseur.
+    3. Que pouvez-vous modifier dans cette chaîne ?
+        1. Vous pouvez aller chez un autre détaillant.
+            1. Que se passe-t-il alors ?
+        2. Vous pouvez acheter un autre bière.
+            1. Que se passe-t-il alors ?
