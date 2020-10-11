@@ -88,10 +88,10 @@
 				--cumul-import: 0px;
 				--cumul-local: 0px;
 				--value-added: 0px;
-				background-size: var(--cumul-import) var(--cumul-import), var(--cumul-local) var(--cumul-local), var(--value-added) var(--value-added), 8px 8px, 8px 8px;
-				background-image: linear-gradient(to right, red 0, red var(--cumul-import)), linear-gradient(to right, blue 0, blue var(--cumul-local)), linear-gradient(to right, var(--master-color) 0, var(--master-color) var(--value-added)), linear-gradient(to right, transparent 0, transparent 6px, var(--master-background-color) 6px), linear-gradient(to top, transparent 0, transparent 6px, var(--master-background-color) 6px);
+				background-size: calc(var(--cumul-import) + 1px) calc(var(--cumul-import) + 1px), calc(var(--cumul-local) + 2px) calc(var(--cumul-local) + 2px), var(--value-added) var(--value-added), 8px 8px, 8px 8px;
+				background-image: linear-gradient(to top, red 0, red var(--cumul-import), var(--master-background-color) var(--cumul-import)), linear-gradient(to top, blue 0, blue var(--cumul-local)), linear-gradient(to right, var(--master-color) 0, var(--master-color) var(--value-added)), linear-gradient(to right, transparent 0, transparent 6px, var(--master-background-color) 6px), linear-gradient(to top, transparent 0, transparent 6px, var(--master-background-color) 6px);
 				background-repeat: repeat-x, repeat-x, repeat-x, repeat, repeat;
-				background-position: bottom left, bottom left, bottom left, 1px 1px, -2px -2px;
+				background-position: bottom left, bottom left, bottom left, 1px 1px, -1px -1px;
 				/*background-color: var(--master-color);*/
 			}
 
