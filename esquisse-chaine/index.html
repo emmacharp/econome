@@ -2,317 +2,343 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Esquisse chaîne</title>
-		<style>
-			* {
-				padding: 0;
-				margin: 0;
-			}
-
-			:root {
-				font-family: 'InputMonoNarrow', Consolas, 'Courier New', monospace;
-				font-family: 'Avenir Next', Didot, 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
-				font-family: 'Avenir Next', Didot, 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
-				font-weight: 500;
-				--agent-width: 80px;
-				--agent-height: 80px;
-			}
-
-			h1, h2, h3, h4, h5, h6 {
-				font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-			}
-
-			html {
-				--master-background-color: #F8F3E9;
-				background-color: var(--master-background-color);
-/*				background-image: url(assets/img/papier.jpg);
-				background-blend-mode: luminosity;*/
-				/*background-color: #F1EAE4;*/
-			}
-
-			body {
-				padding: 50px;
-			}
-			body>*+* {
-				margin-top: 50px;
-			}
-			h1 {
-				margin-top: 1rem;
-				margin-bottom: 2rem;
-				font-size: 2.8em;
-
-			}
-			h1 strong {
-				color: blue;
-			}
-			header {
-			}
-
-			header>span+* {
-				margin-left: 50px;
-			}
-			main {
-				display: flex;
-				justify-content: space-between;
-				position: relative;
-			}
-			main>* {
-				flex-grow: 1;
-			}
-			main p {
-				width: 28ch;
-				flex-grow: 0;
-				background-color: var(--master-background-color);
-				position: relative;
-				line-height: 1.5;
-				/*margin: 0;*/
-			}
-			
-			.agent {
-				position: relative;
-				width: var(--agent-width);
-				height: var(--agent-height);
-				background-color: lightgrey;
-				border-left: 4px solid var(--master-background-color);
-				border-right: 4px solid var(--master-background-color);
-			}
-
-			.agent.local {
-				--master-color: blue;
-			}
-
-			.agent.import {
-				--master-color: red;
-			}
-
-			.agent {
-				--cumul-import: 0px;
-				--cumul-local: 0px;
-				--value-added: 0px;
-				background-size: calc(var(--cumul-import) + 1px) calc(var(--cumul-import) + 1px), calc(var(--cumul-local) + 2px) calc(var(--cumul-local) + 2px), var(--value-added) var(--value-added), 8px 8px, 8px 8px;
-				background-image: linear-gradient(to top, red 0, red var(--cumul-import), var(--master-background-color) var(--cumul-import)), linear-gradient(to top, blue 0, blue var(--cumul-local)), linear-gradient(to right, var(--master-color) 0, var(--master-color) var(--value-added)), linear-gradient(to right, transparent 0, transparent 6px, var(--master-background-color) 6px), linear-gradient(to top, transparent 0, transparent 6px, var(--master-background-color) 6px);
-				background-repeat: repeat-x, repeat-x, repeat-x, repeat, repeat;
-				background-position: bottom left, bottom left, bottom left, 1px 1px, -1px -1px;
-				/*background-color: var(--master-color);*/
-			}
-
-			/*section[id]:before {
-				content: attr(id);
-				position: absolute;
-				bottom: 100%;
-				margin-bottom: .5em;
-				background-color: var(--master-background-color);
-				padding: .25em;
-				font-size: 12px;
-			}*/
-
-			section[id] {
-				display: grid;
-				grid-template-areas: 
-					"nom . ."
-					"agent-local reste transaction-local"
-					"agent-import . transaction-import";
-				grid-template-rows: min-content min-content auto;
-				grid-template-columns: min-content min-content auto;
-				position: relative;
-			}
-
-			section[id] h3 {
-				grid-area: nom;
-				justify-self: center;
-			}
-
-			section[id]>* {
-				align-self: start;
-				margin-top: .5em;
-				justify-self: center;
-				position: relative;
-				color: var(--master-color);
-			}
-			section[id]>*+* {
-				/*margin-left: 20px;*/
-			}
-
-			[id="consommateur"] .agent {
-/*				--agent-width: 40px;
-				--agent-height: 40px;*/
-				background-color: black;
-				border-radius: 50%;
-				grid-area: agent-local;
-			}
-
-			.agent.local {
-				grid-area: agent-local;
-			}
-
-			section[id] .import {
-				margin-top: 40px;
-			}
-
-			section[id] .transaction {
-				justify-self: stretch;
-				text-align: center;
-			}
-
-			section[id] .transaction:before,
-			section[id] .reste:before {
-				content: "";
-				display: block;
-				position: absolute;
-				top: auto;
-				left: 0;
-				right: 0;
-				border-bottom: 2px black solid;
-				margin-top: .5em;
-				z-index: -1;
-			}
-			section[id] .reste span {
-				position: relative;
-			}
-			section[id] .reste span:before {
-				content: "";
-				display: block;
-				position: absolute;
-				left: calc(50% - 2px);
-				width: 50%;
-				height: calc(var(--agent-height) + 40px + .5em);
-				top: auto;
-				/*margin-top: calc(var(--agent-height) + 40px - .5em);*/
-				border-bottom: 2px black solid;
-				border-left: 2px black solid;
-				z-index: -1;
-			}
-
-			section[id] span {
-				background-color: var(--master-background-color);
-				position: static;
-				padding: 0 .5em;
-				color: inherit;
-				font-weight: 600;
-				display: inline-block;
-				/*font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
-			}
-
-			section[id] .agent span {
-				padding-left: 0;
-			}
-
-			.agent.import {
-				grid-area: agent-import;
-			}
-
-			section[id] .reste {
-				grid-area: reste;
-				margin-left: 20px;
-				position: static;
-			}
-
-			section[id] .reste,
-			section[id] .transaction {
-				align-self: center;
-			}
-
-			section[id] .transaction.local {
-				grid-area: transaction-local;
-			}
-
-			section[id] .transaction.import {
-				grid-area: transaction-import;
-			}
-
-		</style>
+		<link rel="stylesheet" href="assets/css/main.css">
 	</head>
 	<body>
-		<header>
-			<small>Économia présente</small>
-			<h1>Les dessous économiques du principe d'<strong>achat local</strong></h1>
-			<span style="color: blue;">Bleu : local</span>
-			<span style="color: red;">Rouge : étranger</span>
-			<!-- <span>Dimensions : proportion des intrants de la chaîne</span> -->
-		</header>
+		
 		<main>
-			<p>Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Est, voluptate? Ab quisquam, inventore praesentium minus recusandae vitae, tempora velit ea ullam voluptates sequi, in optio neque atque modi est quasi?</p>
-			<section id="consommateur">
-				<h3>Consommateur</h3>
-				<div class="agent"></div>
-				<div class="transaction local">
-					<span>1000 $</span>
+			<section>
+				<div>
+					<img src="../assets/img/panier-local.svg" alt="quebec">
+					<img src="../assets/img/panier-exterieur.svg" alt="canada">
+				</div>
+				<header>
+					<small>Économia présente</small>
+					<h1>Les dessous économiques du principe d'<strong>achat local</strong></h1>
+					<p>Parce que derrière les questions économiques, se cache toujours plus qu'il n'y paraît.</p>
+				</header>
+				<aside>
+					<h2>Quelques exemples de « phrases creuses »</h2>
+					<ol>
+						<li>« L'achat local fait rouler notre économie ! »</li>
+						<li>« L'achat local crée des emplois ! »</li>
+						<li>« L'achat local nous enrichit tous ! »</li>
+						<li>« L'achat local est bon pour l'environnement ! »</li>
+					</ol>
+				</aside>
+				<div>
+					<p>Nous allons aujourd'hui lever le voile (mystère !) sur la notion « d'achat local ».</p>
+					<p>Vous apprendrez à poser les questions nécessaires à la bonne compréhension, au cas par cas. Développons ensemble notre <strong>raisonnement économique</strong>... (pour ainsi exiger plus que des phrases creuses !)</p>
 				</div>
 			</section>
-			<section id="detaillant">
-				<h3>Détaillant</h3>
-				<div class="agent local" style="--cumul-import: 36px;--cumul-local: 64px;--value-added: 16px;">
-					<div class="value">
-						<span>200 $</span>
-					</div>
-				</div>
-				<div class="reste">
-					<span>800 $</span>
-				</div>
-				<div class="transaction import">
-					<span>300 $</span>
-				</div>
-				<div class="transaction local">
-					<span>500 $</span>
+			<section>
+				<header>
+					<small>Économia présente</small>
+					<h1>Les dessous économiques du principe d'<strong>achat local</strong></h1>
+					<span style="color: blue;">Bleu : local</span>
+					<span style="color: red;">Rouge : étranger</span>
+					<!-- <span>Dimensions : proportion des intrants de la chaîne</span> -->
+				</header>
+				<svg id="icone-consommateur" fill="#000000" xmlns:x="http://ns.adobe.com/Extensibility/1.0/" xmlns:i="http://ns.adobe.com/AdobeIllustrator/10.0/" xmlns:graph="http://ns.adobe.com/Graphs/1.0/" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+					<path d="M74,60.4c-6,1.4-16.7,2.7-20.4,1.5c-1.5-0.7-5.4-5-7.5-7.3c-2-2.2-3.8-4.2-5.6-5.8c-3-3-5.4-5.1-9.8-6.2     c-5.3-1.4-18.8-2.9-22.6,6c-4,9.4-3.4,29.1-3.3,46.4c0,1.5,1,2.7,2.5,2.7c3.7,0,26.9,0,28.6,0c1.7,0,2.4-1,2.6-2.3     c0.1-0.9,1.2-12.9,1.8-24.6c2.7,2.7,5.5,4.8,8.5,5.8c2.8,0.9,6.2,1.2,9.7,1.2c8.2,0,16.8-1.8,19-2.3c4.1-0.9,6.7-5,5.8-9.1     C82.2,62,78.1,59.4,74,60.4z"/>
+					<ellipse cx="24.5" cy="19.9" rx="17.4" ry="17.4"/>
+					<path d="M93.3,27.6h-3.4l-7.7-9.4c-0.7-0.9-2.1-1.1-3-0.3c-0.9,0.7-1.1,2.1-0.3,3l5.5,6.7H60.6l5.5-6.7c0.7-0.9,0.6-2.3-0.3-3     c-0.9-0.7-2.3-0.6-3,0.3l-7.7,9.4h-3.4c-1.2,0-2.1,1-2.1,2.1s1,2.1,2.1,2.1h2l3.1,19.2c0.2,1,1.1,1.8,2.1,1.8H86     c1.1,0,1.9-0.8,2.1-1.8l3.1-19.2h2c1.2,0,2.1-1,2.1-2.1S94.4,27.6,93.3,27.6z M65.7,44.2c0,1.2-1,2.1-2.1,2.1s-2.1-1-2.1-2.1     v-7.9c0-1.2,1-2.1,2.1-2.1s2.1,1,2.1,2.1V44.2z M74.6,44.2c0,1.2-1,2.1-2.1,2.1s-2.1-1-2.1-2.1v-7.9c0-1.2,1-2.1,2.1-2.1     s2.1,1,2.1,2.1V44.2z M83.5,44.2c0,1.2-1,2.1-2.1,2.1c-1.2,0-2.1-1-2.1-2.1v-7.9c0-1.2,1-2.1,2.1-2.1c1.2,0,2.1,1,2.1,2.1V44.2z"/>
+				</svg>
+				<div>
+					<p>Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Est, voluptate? Ab quisquam, inventore praesentium minus recusandae vitae, tempora velit ea ullam voluptates sequi, in optio neque atque modi est quasi?</p>
+					<p>Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Est, voluptate? Ab quisquam, inventore praesentium minus recusandae vitae, tempora velit ea ullam voluptates sequi, in optio neque atque modi est quasi?</p>
+					<p>Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Est, voluptate? Ab quisquam, inventore praesentium minus recusandae vitae, tempora velit ea ullam voluptates sequi, in optio neque atque modi est quasi?</p>
 				</div>
 			</section>
-			<section id="grossiste">
-				<h3>Grossiste</h3>
-				<div class="agent local" style="--cumul-import: 12px;--cumul-local: 28px;--value-added: 16px;">
+			<section>
+				<header>
+					<small>Économia présente</small>
+					<h1>Les dessous économiques du principe d'<strong>achat local</strong></h1>
+					<span style="color: blue;">Bleu : local</span>
+					<span style="color: red;">Rouge : étranger</span>
+					<!-- <span>Dimensions : proportion des intrants de la chaîne</span> -->
+				</header>
+				<div>
+					<p>Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Est, voluptate? Ab quisquam, inventore praesentium minus recusandae vitae, tempora velit ea ullam voluptates sequi, in optio neque atque modi est quasi?</p>
+					<p>Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Est, voluptate? Ab quisquam, inventore praesentium minus recusandae vitae, tempora velit ea ullam voluptates sequi, in optio neque atque modi est quasi?</p>
+					<p>Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Est, voluptate? Ab quisquam, inventore praesentium minus recusandae vitae, tempora velit ea ullam voluptates sequi, in optio neque atque modi est quasi?</p>
+				</div>
+				<article id="chaine">
+					<section id="consommateur">
+						<h3>Consommateur</h3>
+						<div class="agent"></div>
+						<div class="transaction local">
+							<span>1000 $</span>
+						</div>
+					</section>
+					<section id="detaillant" style="opacity: 0;">
+						<h3>Détaillant</h3>
+						<div class="agent local" style="--cumul-import: 36px;--cumul-local: 64px;--value-added: 16px;">
+							<div class="value">
+								<span>200 $</span>
+							</div>
+						</div>
+						<div class="reste">
+							<span>800 $</span>
+						</div>
+						<div class="transaction import">
+							<span>300 $</span>
+						</div>
+						<div class="transaction local">
+							<span>500 $</span>
+						</div>
+					</section>
+					<section id="grossiste" style="opacity: 0;">
+						<h3>Grossiste</h3>
+						<div class="agent local" style="--cumul-import: 12px;--cumul-local: 28px;--value-added: 16px;">
 
-					<div class="value">
-						<span>200 $</span>
-					</div>
+							<div class="value">
+								<span>200 $</span>
+							</div>
+						</div>
+						<div class="agent import" style="--value-added: 24px;">
+							<div>
+								<span>300 $</span>
+							</div>
+						</div>
+						<div class="reste">
+							<span>300 $</span>
+						</div>
+						<div class="transaction local">
+							<span>200 $</span>
+						</div>
+						<div class="transaction import">
+							<span>100 $</span>
+						</div>
+					</section>
+					<section id="transformateur" style="opacity: 0;">
+						<h3>Transformateur</h3>
+						<div class="agent local" style="--cumul-import: 4px;--cumul-local: 8px;--value-added: 8px;">
+							<div class="value">
+								<span>100 $</span>
+							</div>
+						</div>
+						<div class="agent import" style="--value-added: 8px;">
+							<div class="value">
+								<span>100 $</span>
+							</div>
+						</div>
+						<div class="reste">
+							<span>100 $</span>
+						</div>
+						<div class="transaction local">
+							<span>50 $</span>
+						</div>
+						<div class="transaction import">
+							<span>50 $</span>
+						</div>
+					</section>
+					<section id="fournisseur" style="opacity: 0;">
+						<h3>Fournisseur</h3>
+						<div class="agent local" style="--cumul-import: 0px;--cumul-local: 0px;--value-added: 4px;">
+							<div class="value">
+								<span>50 $</span>
+							</div>
+						</div>
+						<div class="agent import" style="--value-added: 4px;">
+							<div class="value">
+								<span>50 $</span>
+							</div>
+						</div>
+					</section>
+				</article>
+			</section>
+			<section>
+				<header>
+					<small>Économia présente</small>
+					<h1>Les dessous économiques du principe d'<strong>achat local</strong></h1>
+					<span style="color: blue;">Bleu : local</span>
+					<span style="color: red;">Rouge : étranger</span>
+					<!-- <span>Dimensions : proportion des intrants de la chaîne</span> -->
+				</header>
+				<div>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sunt atque necessitatibus tenetur, deserunt vero repellat, placeat. Quaerat perferendis et nam maxime, incidunt nisi ab non perspiciatis culpa reiciendis dolore.</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum sunt dolorum, delectus sed, consectetur eligendi. Nesciunt tempore quidem adipisci ratione sint, iure atque magni, placeat, corporis possimus nisi ipsa, pariatur!</p>
 				</div>
-				<div class="agent import" style="--value-added: 24px;">
-					<div>
-						<span>300 $</span>
-					</div>
-				</div>
-				<div class="reste">
-					<span>300 $</span>
-				</div>
-				<div class="transaction local">
-					<span>200 $</span>
-				</div>
-				<div class="transaction import">
-					<span>100 $</span>
+				<article id="chaine">
+					<section id="consommateur">
+						<h3>Consommateur</h3>
+						<div class="agent"></div>
+						<div class="transaction local">
+							<span>1000 $</span>
+						</div>
+					</section>
+					<section id="detaillant">
+						<h3>Détaillant</h3>
+						<div class="agent local" style="--cumul-import: 36px;--cumul-local: 64px;--value-added: 16px;">
+							<div class="value">
+								<span>200 $</span>
+							</div>
+						</div>
+						<div class="reste">
+							<span>800 $</span>
+						</div>
+						<div class="transaction import">
+							<span>300 $</span>
+						</div>
+						<div class="transaction local">
+							<span>500 $</span>
+						</div>
+					</section>
+					<section id="grossiste">
+						<h3>Grossiste</h3>
+						<div class="agent local" style="--cumul-import: 12px;--cumul-local: 28px;--value-added: 16px;">
+
+							<div class="value">
+								<span>200 $</span>
+							</div>
+						</div>
+						<div class="agent import" style="--value-added: 24px;">
+							<div>
+								<span>300 $</span>
+							</div>
+						</div>
+						<div class="reste">
+							<span>300 $</span>
+						</div>
+						<div class="transaction local">
+							<span>200 $</span>
+						</div>
+						<div class="transaction import">
+							<span>100 $</span>
+						</div>
+					</section>
+					<section id="transformateur">
+						<h3>Transformateur</h3>
+						<div class="agent local" style="--cumul-import: 4px;--cumul-local: 8px;--value-added: 8px;">
+							<div class="value">
+								<span>100 $</span>
+							</div>
+						</div>
+						<div class="agent import" style="--value-added: 8px;">
+							<div class="value">
+								<span>100 $</span>
+							</div>
+						</div>
+						<div class="reste">
+							<span>100 $</span>
+						</div>
+						<div class="transaction local">
+							<span>50 $</span>
+						</div>
+						<div class="transaction import">
+							<span>50 $</span>
+						</div>
+					</section>
+					<section id="fournisseur">
+						<h3>Fournisseur</h3>
+						<div class="agent local" style="--cumul-import: 0px;--cumul-local: 0px;--value-added: 4px;">
+							<div class="value">
+								<span>50 $</span>
+							</div>
+						</div>
+						<div class="agent import" style="--value-added: 4px;">
+							<div class="value">
+								<span>50 $</span>
+							</div>
+						</div>
+					</section>
+				</article>
+			</section>
+			<section>
+				<header>
+					<small>Économia présente</small>
+					<h1>Les dessous économiques du principe d'<strong>achat local</strong></h1>
+					<span style="color: blue;">Bleu : local</span>
+					<span style="color: red;">Rouge : étranger</span>
+					<!-- <span>Dimensions : proportion des intrants de la chaîne</span> -->
+				</header>
+				<div>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sunt atque necessitatibus tenetur, deserunt vero repellat, placeat. Quaerat perferendis et nam maxime, incidunt nisi ab non perspiciatis culpa reiciendis dolore.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aspernatur, est ducimus eaque officiis accusantium doloribus sunt, eveniet suscipit necessitatibus atque sit soluta quam vel? Sint, nihil voluptatem incidunt vel?</p>
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci neque quo, consequatur animi quia fugit rem ipsam esse saepe maiores laboriosam, ipsum voluptate ex doloremque ab recusandae mollitia blanditiis dolores?</p>
 				</div>
 			</section>
-			<section id="transformateur">
-				<h3>Transformateur</h3>
-				<div class="agent local" style="--cumul-import: 4px;--cumul-local: 8px;--value-added: 8px;">
-					<div class="value">
-						<span>100 $</span>
-					</div>
-				</div>
-				<div class="agent import" style="--value-added: 8px;">
-					<div class="value">
-						<span>100 $</span>
-					</div>
-				</div>
-				<div class="reste">
-					<span>100 $</span>
-				</div>
-				<div class="transaction local">
-					<span>50 $</span>
-				</div>
-				<div class="transaction import">
-					<span>50 $</span>
-				</div>
-			</section>
-			<section id="fournisseur">
-				<h3>Fournisseur</h3>
-				<div class="agent local" style="--cumul-import: 0px;--cumul-local: 0px;--value-added: 4px;">
-					<div class="value">
-						<span>50 $</span>
-					</div>
-				</div>
-				<div class="agent import" style="--value-added: 4px;">
-					<div class="value">
-						<span>50 $</span>
-					</div>
-				</div>
-			</section>
+			
 		</main>
+		<div id="cartoon_emma" class="animated">
+		  <svg viewBox="0 0 377 480" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+		     <g id="emma_color">
+		         <circle id="background" cx="188.451" cy="258.95" r="188.451" style="fill:#c77785;"/>
+		         <path id="face_complete" d="M331.51,234.305c-5.258,0.7 -9.598,4.285 -12.878,8.233c0.024,-0.698 0.049,-1.396 0.074,-2.097c0.98,-2.718 1.804,-5.093 1.804,-5.093c0,0 3.968,-76.108 3,-82c-0.969,-5.891 1.46,-55.202 -44,-79c-9.149,-4.329 -4.711,-11.901 -1,-16c0.219,-0.243 0.456,-0.488 0.703,-0.732c0.089,-0.088 0.185,-0.176 0.277,-0.263c0.162,-0.155 0.324,-0.309 0.495,-0.463c0.124,-0.11 0.253,-0.219 0.381,-0.328c0.147,-0.126 0.296,-0.253 0.448,-0.377c0.153,-0.124 0.31,-0.245 0.467,-0.367c0.135,-0.103 0.27,-0.207 0.407,-0.308c0.181,-0.133 0.365,-0.265 0.552,-0.394c0.116,-0.08 0.233,-0.159 0.351,-0.238c0.212,-0.141 0.426,-0.28 0.644,-0.414c0.09,-0.056 0.181,-0.109 0.272,-0.163c0.248,-0.149 0.499,-0.295 0.753,-0.433c0.045,-0.024 0.091,-0.047 0.136,-0.072c2.878,-1.53 6.046,-2.314 8.627,-1.28l0.001,0l-0.001,-0.001c-5.921,-2.89 -12.156,-0.463 -16.179,2.509c-0.014,0.01 -0.028,0.02 -0.041,0.029c-0.19,0.142 -0.375,0.284 -0.555,0.427c-0.027,0.021 -0.054,0.043 -0.08,0.064c-0.166,0.133 -0.327,0.267 -0.485,0.401c-0.037,0.032 -0.074,0.064 -0.111,0.096c-0.144,0.125 -0.283,0.249 -0.419,0.374c-0.045,0.041 -0.089,0.083 -0.133,0.124c-0.123,0.116 -0.243,0.231 -0.358,0.345c-0.051,0.051 -0.1,0.1 -0.149,0.15c-0.103,0.106 -0.204,0.211 -0.3,0.315c-0.054,0.058 -0.105,0.115 -0.157,0.173c-0.085,0.095 -0.169,0.19 -0.248,0.284c-0.054,0.064 -0.104,0.126 -0.155,0.189c-0.069,0.085 -0.138,0.171 -0.201,0.254c-0.052,0.068 -0.099,0.134 -0.147,0.201c-0.054,0.075 -0.109,0.151 -0.158,0.224c-0.048,0.07 -0.089,0.138 -0.131,0.206c-0.041,0.065 -0.083,0.132 -0.119,0.196c-0.04,0.071 -0.073,0.137 -0.107,0.204c-0.028,0.057 -0.061,0.115 -0.085,0.169c-0.031,0.07 -0.054,0.135 -0.078,0.2c-0.017,0.047 -0.038,0.096 -0.052,0.14c-0.022,0.07 -0.032,0.134 -0.045,0.198c-0.006,0.034 -0.018,0.071 -0.021,0.103c-0.011,0.094 -0.011,0.18 0.001,0.258c-3.565,-6.307 -54.286,-19.846 -43,-39c6.814,-11.565 12.419,-7.747 16,-7l3.58,0.747c-15.916,-7.359 -19.438,1.512 -24.58,8.253c-7.727,-14.723 -32.733,-33.317 -90,-17c-57.268,16.318 -43.415,23.072 -68,25c-24.586,1.928 -30.561,-4.72 -31,-5c-0.44,-0.281 14.169,32.052 38,38c-32.586,-1.976 -12.817,11.552 -27,6c-0.469,-0.183 -0.911,-0.353 -1.332,-0.512c-0.142,-0.054 -0.269,-0.1 -0.405,-0.151c-0.271,-0.101 -0.542,-0.203 -0.793,-0.294c-0.144,-0.052 -0.276,-0.098 -0.413,-0.147c-0.225,-0.081 -0.448,-0.16 -0.657,-0.233c-0.127,-0.045 -0.248,-0.085 -0.369,-0.127c-0.2,-0.068 -0.396,-0.133 -0.579,-0.194c-0.108,-0.035 -0.211,-0.069 -0.313,-0.102c-0.182,-0.058 -0.357,-0.113 -0.523,-0.164c-0.084,-0.026 -0.166,-0.051 -0.245,-0.075c-0.174,-0.052 -0.337,-0.099 -0.492,-0.143c-0.056,-0.016 -0.114,-0.033 -0.169,-0.047c-0.169,-0.047 -0.325,-0.088 -0.471,-0.124c-0.029,-0.008 -0.06,-0.016 -0.088,-0.023c-0.171,-0.042 -0.328,-0.078 -0.469,-0.107c0.148,-0.102 0.268,-0.262 0.334,-0.499c0.005,-0.015 0.009,-0.028 0.013,-0.043c0.027,-0.113 0.041,-0.245 0.041,-0.394c0,-0.027 -0.003,-0.055 -0.004,-0.083c-0.006,-0.16 -0.023,-0.334 -0.066,-0.538c-0.163,0.269 -0.302,0.526 -0.42,0.772c-0.04,0.085 0.041,0.161 0.005,0.243c-0.068,0.158 -0.085,0.318 -0.085,0.466l0,0.002c0,-0.025 -0.375,-0.037 -0.477,-0.045c-0.019,-0.001 -0.089,-0.145 -0.106,-0.146c-0.092,-0.005 -0.222,-0.14 -0.275,-0.14l-0.005,0c-0.05,0 -0.08,0.164 -0.098,0.179c-0.004,0.003 -0.008,0.077 -0.011,0.081c-0.013,0.016 -0.014,0.071 0,0.092c0.001,0.001 0.003,-0.209 0.004,-0.207c0.016,0.021 0.047,-0.145 0.088,-0.145l0.001,0c0.131,1 0.364,0.353 0.61,0.331c-1.251,4.491 6.068,4.863 12.214,6.67c0.003,0.001 0.005,0.058 0.007,0.059c0.276,0.081 0.549,0.194 0.819,0.282c0.052,0.017 0.104,0.05 0.156,0.067c0.222,0.074 0.442,0.157 0.659,0.237c0.077,0.027 0.152,0.06 0.228,0.089c0.191,0.072 0.38,0.149 0.567,0.227c0.088,0.036 0.175,0.074 0.261,0.112c0.171,0.074 0.339,0.152 0.504,0.231c0.093,0.045 0.186,0.09 0.276,0.135c0.155,0.079 0.306,0.161 0.455,0.244c0.092,0.051 0.185,0.102 0.274,0.155c0.143,0.085 0.28,0.174 0.416,0.264c0.088,0.057 0.177,0.113 0.261,0.172c0.134,0.095 0.261,0.195 0.387,0.294c0.078,0.062 0.159,0.121 0.233,0.184c0.132,0.112 0.255,0.231 0.377,0.35c0.06,0.058 0.125,0.113 0.182,0.173c0.175,0.183 0.34,0.373 0.493,0.572c5.039,6.616 19.205,2.968 19,3c-0.206,0.032 -13.295,12.454 -15,16c-1.706,3.546 -8.491,7.538 -12,4l-3.51,-3.538c4.687,8.423 11.637,9.152 15.51,8.538c-5.682,4.122 -10.719,10.058 -12,17c-1.282,6.943 5.947,29.995 7,41c1.052,11.005 1.509,33.767 1,38c-0.51,4.234 2.884,26.177 3,27c0.115,0.823 4.871,10.628 5,11c0.009,0.029 0.057,0.107 0.12,0.206c0.14,1.857 0.281,3.709 0.423,5.554c-4.553,-5.79 -11.566,-12.399 -19.543,-11.76c-13.972,1.118 -6.433,5.671 -5,20c1.432,14.329 -7.482,28.192 0,50c7.481,21.808 19.168,39.489 30,40c1.89,0.089 3.192,0.088 4.078,-0.015c7.122,30.568 22.635,50.26 45.922,80.015c30.067,38.421 50.636,50 75.281,50c24.645,0 45.677,-10.269 74.719,-50c22.293,-30.497 36.225,-58.656 41.994,-90.228c3.326,-0.573 10.398,-2.601 18.006,-9.772c7.875,-7.423 3.934,-37.816 6,-40c2.065,-2.184 2.607,-21.741 4,-30c1.719,-10.197 0.573,-21.45 -10,-20.043" style="fill:#ecc7b6;fill-rule:nonzero;"/>
+		         <clipPath id="_clip1">
+		             <path id="visage" d="M191,64.499c-109.805,0 -129.763,65.744 -130,100c-0.237,34.256 9.265,136.94 10,150c2.813,49.952 19.932,71.58 50,110c30.068,38.421 50.636,50 75.282,50c24.645,0 45.676,-10.269 74.718,-50c29.042,-39.73 43.913,-75.484 45,-120c0.181,-7.424 3.953,-114.771 5,-140c1.047,-25.228 -20.195,-100 -130,-100Z"/>
+		         </clipPath>
+		         <g clip-path="url(#_clip1)">
+		             <path id="barbe" d="M309,222.499c0,0 11.91,88.683 -6,107c-17.91,18.317 -45,35 -45,35l-122,-1c0,0 -25.313,4.787 -45,-26c-19.687,-30.786 -20,-99 -20,-99c0,0 -2.773,-5.375 -5.691,-5.846c-1.316,29.579 2.422,114.219 17.691,142.846c26.723,50.103 65.875,105.246 106,103c40.125,-2.245 69.285,-10.096 114,-90c17.779,-31.769 18.368,-67.518 17.446,-95.445c-0.626,-18.966 2.009,-53.105 -0.409,-65.141c-5.736,-2.831 -11.037,-5.414 -11.037,-5.414Z" style="fill:#c7b1a8;"/>
+		         </g>
+		         <path id="levres" d="M147,367.499c0,0 0.795,24.211 42,25c12.406,0.238 61.081,5.375 62,-30c-64.157,-20.593 -105.211,4.053 -105,4" style="fill:#cd8a90;"/>
+		         <path id="levre_inferieure" d="M153,378.499c0,0 6.281,12.611 28,13c21.719,0.39 13.305,-0.504 35,-1c21.695,-0.495 29.537,-9.264 30,-13" style="fill:none;stroke-width:3px;stroke:#c77785;"/>
+		         <path id="bouche" d="M150,370.499c0,0 21.501,-2.163 36,-1c14.499,1.164 17.397,0.962 25,-1c7.603,-1.961 45.254,-0.23 45,0" style="fill:none;stroke-width:3px;stroke:#a3545b;"/>
+		         <g id="sourcils">
+		             <g id="eleves">
+		                 <path id="sourcil_droit" d="M169.151,212.499c0,0 -30.173,-16.808 -44.528,-15c-14.356,1.809 -25.02,8.023 -26.717,15c-1.698,6.978 -4.453,10 -4.453,10l-4.453,-10c0,0 8.509,-29.461 35.623,-30c27.113,-0.538 41.761,17.679 44.528,20c2.767,2.322 0,10 0,10Z" style="fill:#3b2e29;"/>
+		                 <path id="sourcil_gauche" d="M218.199,212.499c0,0 29.432,-16.808 43.435,-15c14.002,1.809 24.404,8.023 26.06,15c1.656,6.978 4.343,10 4.343,10l4.344,-10c0,0 -8.3,-29.461 -34.747,-30c-26.448,-0.538 -40.736,17.679 -43.435,20c-2.698,2.322 0,10 0,10Z" style="fill:#3b2e29;"/>
+		             </g>
+		         </g>
+		         <g id="oeil_gauche">
+		             <path id="oeil_ferme" d="M225,242.37c0,0 5.295,5.081 32,5.129c13.177,0.024 19.233,-14.527 23,-5.129c-4.965,7.955 -29.378,18.841 -55,0Z" style="fill:#000;"/>
+		             <path id="oeil_ouvert" d="M225,242.37c0,0 3.295,-23.919 30,-23.871c13.177,0.024 21.233,14.473 25,23.871c-4.965,7.955 -29.378,18.841 -55,0Z" style="fill:#fff;"/>
+		             <clipPath id="_clip2">
+		                 <path d="M225,242.37c0,0 3.295,-23.919 30,-23.871c13.177,0.024 21.233,14.473 25,23.871c-4.965,7.955 -29.378,18.841 -55,0Z"/>
+		             </clipPath>
+		             <g clip-path="url(#_clip2)">
+		                 <circle id="pupille" cx="252.812" cy="238.15" r="12.65" style="fill:#672f16;"/>
+		                 <circle id="iris" cx="252.658" cy="238.157" r="6.658" style="fill:#000;"/>
+		                 <circle id="reflection" cx="254.18" cy="238.103" r="1.983" style="fill:#fff;"/>
+		             </g>
+		         </g>
+		         <g id="oeil_droit">
+		             <path id="oeil_ferme1" d="M163,242.37c0,0 -4.295,5.081 -31,5.129c-13.177,0.024 -20.233,-14.527 -24,-5.129c4.965,7.955 29.378,18.841 55,0Z" style="fill:#000;"/>
+		             <path id="oeil_ouvert1" d="M163,242.37c0,0 -3.295,-23.919 -30,-23.871c-13.177,0.024 -21.233,14.473 -25,23.871c4.965,7.955 29.378,18.841 55,0Z" style="fill:#fff;"/>
+		             <clipPath id="_clip3">
+		                 <path d="M163,242.37c0,0 -3.295,-23.919 -30,-23.871c-13.177,0.024 -21.233,14.473 -25,23.871c4.965,7.955 29.378,18.841 55,0Z"/>
+		             </clipPath>
+		             <g clip-path="url(#_clip3)">
+		                 <circle id="pupille1" cx="136.812" cy="237.15" r="12.65" style="fill:#672f16;"/>
+		                 <circle id="iris1" cx="136.658" cy="237.157" r="6.658" style="fill:#000;"/>
+		                 <circle id="reflection1" cx="134.983" cy="236.482" r="1.983" style="fill:#fff;"/>
+		             </g>
+		         </g>
+		         <path id="nez" d="M195.937,323.098l-0.135,-0.002l-0.137,-0.004l-0.142,-0.006l-0.143,-0.009l-0.147,-0.011l-0.15,-0.014l-0.152,-0.016l-0.155,-0.02l-0.158,-0.022l-0.159,-0.026l-0.163,-0.03l-0.164,-0.033l-0.167,-0.037l-0.169,-0.042l-0.17,-0.046l-0.173,-0.05l-0.166,-0.054l-0.095,-0.032l-0.087,-0.031l-0.088,-0.032l-0.089,-0.034l-0.088,-0.035l-0.089,-0.037l-0.09,-0.039l-0.088,-0.039l-0.09,-0.042l-0.09,-0.043l-0.089,-0.045l-0.09,-0.046l-0.089,-0.049l-0.089,-0.049l-0.089,-0.052l-0.09,-0.054l-0.09,-0.056l-0.088,-0.058l-0.089,-0.06l-0.088,-0.061l-0.087,-0.063l-0.087,-0.066l-0.087,-0.068l-0.086,-0.07l-0.086,-0.073l-0.084,-0.074l-0.084,-0.076l-0.083,-0.079l-0.081,-0.08l-0.081,-0.084l-0.08,-0.085l-0.078,-0.088l-0.077,-0.089l-0.076,-0.092l-0.073,-0.094l-0.073,-0.096l-0.071,-0.098l-0.069,-0.1l-0.068,-0.102l-0.064,-0.103l-0.031,0.023l-0.124,0.09l-0.125,0.086l-0.128,0.083l-0.129,0.08l-0.129,0.077l-0.132,0.074l-0.133,0.072l-0.133,0.069l-0.136,0.067l-0.138,0.065l-0.138,0.063l-0.14,0.061l-0.143,0.059l-0.143,0.058l-0.144,0.055l-0.148,0.055l-0.148,0.053l-0.15,0.051l-0.152,0.05l-0.154,0.049l-0.155,0.047l-0.157,0.046l-0.159,0.044l-0.161,0.044l-0.162,0.042l-0.165,0.041l-0.166,0.039l-0.167,0.039l-0.17,0.037l-0.171,0.036l-0.173,0.035l-0.175,0.033l-0.177,0.033l-0.178,0.031l-0.18,0.031l-0.182,0.029l-0.183,0.027l-0.185,0.027l-0.187,0.026l-0.188,0.024l-0.19,0.023l-0.192,0.022l-0.193,0.021l-0.195,0.02l-0.196,0.018l-0.198,0.018l-0.2,0.016l-0.2,0.014l-0.203,0.014l-0.204,0.013l-0.205,0.011l-0.207,0.01l-0.208,0.008l-0.209,0.008l-0.211,0.006l-0.212,0.005l-0.214,0.004l-0.214,0.002l-0.216,0.001l-0.217,0l-0.219,-0.002l-0.219,-0.003l-0.221,-0.004l-0.222,-0.006l-0.222,-0.007l-0.224,-0.008l-0.225,-0.01l-0.226,-0.011l-0.227,-0.012l-0.228,-0.014l-0.229,-0.016l-0.23,-0.017l-0.231,-0.018l-0.231,-0.02l-0.233,-0.021l-0.233,-0.023l-0.234,-0.024l-0.235,-0.026l-0.235,-0.027l-0.236,-0.029l-0.237,-0.03l-0.237,-0.032l-0.238,-0.033l-0.239,-0.036l-0.239,-0.036l-0.24,-0.039l-0.24,-0.039l-0.241,-0.042l-0.241,-0.043l-0.242,-0.045l-0.242,-0.047l-0.242,-0.048l-0.242,-0.05l-0.243,-0.051l-0.244,-0.054l-0.243,-0.055l-0.244,-0.057l-0.244,-0.059l-0.244,-0.06l-0.244,-0.062l-0.244,-0.064l-0.245,-0.066l-0.244,-0.068l-0.244,-0.07l-0.245,-0.071l-0.244,-0.074l-0.245,-0.075l-0.244,-0.077l-0.244,-0.079l-0.244,-0.081l-0.243,-0.083l-0.244,-0.085l-0.243,-0.087l-0.243,-0.089l-0.243,-0.092l-0.242,-0.093l-0.243,-0.096l-0.135,-0.054l-0.135,-0.056l-0.134,-0.058l-0.133,-0.059l-0.131,-0.06l-0.131,-0.062l-0.129,-0.062l-0.128,-0.064l-0.126,-0.065l-0.125,-0.066l-0.125,-0.068l-0.123,-0.069l-0.121,-0.069l-0.12,-0.071l-0.12,-0.073l-0.118,-0.073l-0.116,-0.075l-0.115,-0.075l-0.114,-0.077l-0.112,-0.078l-0.112,-0.079l-0.11,-0.08l-0.108,-0.081l-0.107,-0.082l-0.106,-0.084l-0.105,-0.084l-0.103,-0.085l-0.102,-0.087l-0.101,-0.088l-0.099,-0.088l-0.097,-0.089l-0.097,-0.091l-0.095,-0.091l-0.093,-0.092l-0.092,-0.093l-0.091,-0.094l-0.09,-0.095l-0.088,-0.096l-0.086,-0.096l-0.085,-0.097l-0.084,-0.099l-0.083,-0.099l-0.081,-0.099l-0.079,-0.101l-0.078,-0.101l-0.077,-0.102l-0.076,-0.103l-0.073,-0.102l-0.073,-0.105l-0.071,-0.104l-0.07,-0.105l-0.068,-0.106l-0.067,-0.106l-0.066,-0.107l-0.064,-0.107l-0.063,-0.108l-0.062,-0.108l-0.06,-0.109l-0.059,-0.11l-0.057,-0.109l-0.056,-0.11l-0.055,-0.111l-0.053,-0.111l-0.053,-0.112l-0.05,-0.111l-0.05,-0.112l-0.049,-0.113l-0.047,-0.113l-0.045,-0.113l-0.045,-0.113l-0.043,-0.114l-0.042,-0.114l-0.041,-0.114l-0.04,-0.114l-0.038,-0.115l-0.037,-0.115l-0.036,-0.115l-0.035,-0.116l-0.033,-0.114l-0.033,-0.117l-0.031,-0.115l-0.031,-0.116l-0.029,-0.116l-0.028,-0.117l-0.027,-0.116l-0.026,-0.117l-0.024,-0.116l-0.024,-0.116l-0.022,-0.117l-0.022,-0.117l-0.02,-0.117l-0.02,-0.117l-0.018,-0.117l-0.018,-0.116l-0.016,-0.118l-0.016,-0.117l-0.014,-0.117l-0.014,-0.117l-0.012,-0.117l-0.012,-0.117l-0.01,-0.118l-0.01,-0.116l-0.009,-0.117l-0.008,-0.122l-0.013,-0.229l-0.009,-0.233l-0.007,-0.234l-0.002,-0.233l0,-0.233l0.004,-0.232l0.007,-0.232l0.011,-0.231l0.013,-0.231l0.016,-0.23l0.019,-0.23l0.023,-0.228l0.025,-0.229l0.027,-0.227l0.031,-0.227l0.033,-0.226l0.036,-0.225l0.038,-0.223l0.041,-0.224l0.043,-0.222l0.046,-0.22l0.048,-0.221l0.05,-0.218l0.053,-0.218l0.055,-0.216l0.057,-0.215l0.059,-0.214l0.062,-0.212l0.063,-0.211l0.066,-0.21l0.067,-0.208l0.07,-0.207l0.071,-0.205l0.073,-0.203l0.075,-0.202l0.077,-0.2l0.079,-0.199l0.081,-0.197l0.082,-0.195l0.084,-0.193l0.085,-0.191l0.087,-0.189l0.089,-0.188l0.09,-0.185l0.092,-0.183l0.094,-0.182l0.095,-0.179l0.097,-0.177l0.098,-0.175l0.1,-0.173l0.101,-0.171l0.102,-0.167l0.105,-0.167l0.105,-0.163l0.108,-0.162l0.109,-0.159l0.11,-0.156l0.112,-0.154l0.114,-0.152l0.115,-0.148l0.117,-0.147l0.119,-0.143l0.121,-0.142l0.122,-0.138l0.125,-0.136l0.127,-0.134l0.128,-0.13l0.131,-0.127l0.135,-0.125l0.136,-0.122l0.139,-0.119l0.137,-0.111l0.078,-0.061l0.072,-0.055l0.075,-0.055l0.075,-0.054l0.074,-0.052l0.078,-0.053l0.078,-0.052l0.065,-0.041l0.185,-0.118l0.176,-0.114l0.18,-0.118l0.182,-0.122l0.186,-0.127l0.189,-0.13l0.192,-0.134l0.193,-0.137l0.196,-0.141l0.197,-0.143l0.2,-0.147l0.2,-0.148l0.202,-0.151l0.202,-0.153l0.203,-0.155l0.204,-0.156l0.204,-0.158l0.204,-0.159l0.204,-0.16l0.204,-0.161l0.203,-0.162l0.202,-0.162l0.202,-0.162l0.199,-0.162l0.398,-0.325l0.389,-0.321l0.382,-0.318l0.371,-0.312l0.361,-0.305l0.347,-0.297l0.333,-0.286l0.318,-0.275l0.3,-0.261l0.282,-0.247l0.261,-0.23l0.238,-0.211l0.41,-0.365l0.305,-0.274l0.189,-0.172l0.064,-0.059l0.202,-0.166l0.219,-0.144l0.232,-0.12l0.244,-0.096l0.252,-0.069l0.258,-0.043l0.261,-0.016l0.262,0.012l0.259,0.039l0.253,0.066l0.245,0.092l0.234,0.118l0.22,0.141l0.205,0.163l0.186,0.183l0.166,0.203l0.144,0.218l0.121,0.232l0.095,0.244l0.07,0.252l0.042,0.259l0.016,0.261l-0.012,0.261l-0.039,0.259l-0.066,0.253l-0.092,0.245l-0.117,0.234l-0.141,0.221l-0.163,0.204l-0.184,0.186l-0.071,0.065l-0.203,0.184l-0.32,0.288l-0.425,0.379l-0.25,0.221l-0.271,0.239l-0.292,0.256l-0.312,0.271l-0.329,0.285l-0.346,0.298l-0.362,0.308l-0.375,0.318l-0.387,0.325l-0.399,0.332l-0.408,0.337l-0.415,0.339l-0.212,0.172l-0.213,0.171l-0.214,0.172l-0.215,0.171l-0.216,0.171l-0.217,0.17l-0.218,0.17l-0.219,0.169l-0.219,0.169l-0.219,0.167l-0.22,0.166l-0.219,0.164l-0.22,0.163l-0.219,0.16l-0.219,0.159l-0.218,0.157l-0.218,0.154l-0.216,0.152l-0.216,0.149l-0.215,0.146l-0.214,0.144l-0.213,0.14l-0.212,0.137l-0.197,0.125l-0.03,0.019l-0.017,0.011l-0.017,0.012l-0.021,0.014l-0.02,0.015l-0.021,0.015l-0.022,0.018l-0.018,0.013l-0.053,0.044l-0.051,0.043l-0.054,0.048l-0.056,0.052l-0.058,0.057l-0.06,0.061l-0.062,0.065l-0.063,0.069l-0.065,0.073l-0.065,0.077l-0.067,0.08l-0.068,0.085l-0.068,0.089l-0.069,0.091l-0.069,0.095l-0.07,0.1l-0.07,0.102l-0.07,0.105l-0.07,0.108l-0.07,0.112l-0.07,0.114l-0.07,0.118l-0.069,0.12l-0.069,0.123l-0.069,0.126l-0.068,0.127l-0.067,0.13l-0.067,0.133l-0.066,0.136l-0.065,0.137l-0.064,0.139l-0.063,0.142l-0.062,0.143l-0.062,0.146l-0.06,0.147l-0.059,0.148l-0.058,0.151l-0.056,0.152l-0.055,0.153l-0.054,0.155l-0.053,0.156l-0.051,0.158l-0.049,0.158l-0.048,0.16l-0.047,0.16l-0.044,0.162l-0.043,0.162l-0.042,0.163l-0.04,0.164l-0.038,0.165l-0.036,0.164l-0.034,0.166l-0.032,0.165l-0.03,0.166l-0.029,0.167l-0.026,0.166l-0.025,0.166l-0.022,0.167l-0.02,0.166l-0.019,0.166l-0.016,0.166l-0.014,0.166l-0.011,0.165l-0.01,0.164l-0.007,0.164l-0.005,0.163l-0.003,0.163l0,0.162l0.002,0.161l0.004,0.16l0.006,0.16l0.009,0.162l0.005,0.074l0.006,0.078l0.007,0.079l0.007,0.077l0.008,0.077l0.008,0.077l0.009,0.077l0.009,0.077l0.01,0.076l0.011,0.075l0.011,0.075l0.012,0.075l0.012,0.075l0.013,0.074l0.014,0.074l0.014,0.073l0.015,0.073l0.015,0.073l0.016,0.072l0.017,0.071l0.017,0.072l0.017,0.07l0.019,0.07l0.019,0.071l0.019,0.069l0.021,0.069l0.02,0.069l0.021,0.068l0.022,0.068l0.023,0.067l0.023,0.066l0.024,0.067l0.024,0.065l0.025,0.066l0.025,0.065l0.026,0.064l0.027,0.064l0.027,0.063l0.028,0.063l0.029,0.063l0.028,0.062l0.03,0.061l0.03,0.061l0.031,0.061l0.032,0.06l0.032,0.06l0.033,0.059l0.033,0.058l0.034,0.059l0.034,0.057l0.035,0.057l0.036,0.057l0.037,0.057l0.037,0.056l0.038,0.055l0.038,0.055l0.04,0.055l0.039,0.054l0.04,0.053l0.042,0.054l0.042,0.053l0.043,0.053l0.043,0.051l0.043,0.051l0.045,0.052l0.046,0.051l0.046,0.05l0.047,0.05l0.048,0.05l0.049,0.049l0.05,0.049l0.05,0.048l0.051,0.048l0.052,0.048l0.053,0.047l0.054,0.047l0.054,0.046l0.056,0.046l0.057,0.046l0.057,0.045l0.059,0.045l0.06,0.045l0.06,0.044l0.061,0.043l0.063,0.044l0.063,0.042l0.065,0.043l0.066,0.042l0.067,0.042l0.068,0.041l0.069,0.041l0.071,0.041l0.071,0.039l0.072,0.04l0.075,0.039l0.075,0.039l0.077,0.038l0.077,0.037l0.078,0.037l0.081,0.037l0.081,0.036l0.083,0.036l0.084,0.035l0.087,0.035l0.204,0.08l0.205,0.079l0.206,0.078l0.207,0.075l0.207,0.075l0.207,0.072l0.209,0.071l0.208,0.069l0.209,0.068l0.21,0.066l0.209,0.065l0.21,0.063l0.21,0.061l0.211,0.06l0.21,0.059l0.211,0.057l0.211,0.055l0.211,0.054l0.211,0.052l0.211,0.051l0.212,0.049l0.21,0.048l0.211,0.046l0.211,0.045l0.211,0.043l0.211,0.042l0.21,0.041l0.21,0.039l0.21,0.038l0.21,0.036l0.209,0.034l0.209,0.034l0.208,0.032l0.208,0.03l0.208,0.03l0.207,0.027l0.206,0.027l0.206,0.025l0.206,0.024l0.204,0.022l0.204,0.021l0.203,0.02l0.203,0.019l0.201,0.017l0.201,0.016l0.2,0.014l0.199,0.014l0.199,0.012l0.197,0.011l0.196,0.01l0.195,0.008l0.194,0.007l0.193,0.006l0.192,0.005l0.191,0.004l0.189,0.002l0.188,0.002l0.187,0l0.185,-0.001l0.185,-0.002l0.182,-0.003l0.182,-0.004l0.179,-0.005l0.178,-0.007l0.177,-0.007l0.175,-0.009l0.174,-0.009l0.172,-0.011l0.169,-0.011l0.169,-0.013l0.167,-0.013l0.164,-0.014l0.163,-0.016l0.161,-0.016l0.159,-0.017l0.156,-0.018l0.154,-0.019l0.154,-0.02l0.15,-0.02l0.148,-0.022l0.146,-0.022l0.144,-0.023l0.141,-0.024l0.139,-0.024l0.137,-0.025l0.134,-0.026l0.131,-0.026l0.129,-0.028l0.126,-0.027l0.124,-0.029l0.121,-0.028l0.118,-0.03l0.115,-0.029l0.111,-0.031l0.11,-0.03l0.106,-0.031l0.102,-0.031l0.1,-0.032l0.096,-0.031l0.093,-0.032l0.089,-0.032l0.086,-0.032l0.082,-0.031l0.079,-0.032l0.074,-0.031l0.071,-0.031l0.068,-0.031l0.062,-0.029l0.058,-0.029l0.055,-0.028l0.05,-0.027l0.045,-0.026l0.041,-0.024l0.036,-0.022l0.032,-0.021l0.028,-0.019l0.022,-0.016l0.007,-0.006l0.036,-0.057l0.1,-0.154l0.102,-0.15l0.104,-0.145l0.107,-0.142l0.105,-0.131l0.062,-0.075l0.057,-0.066l0.058,-0.065l0.059,-0.066l0.061,-0.063l0.061,-0.063l0.063,-0.062l0.064,-0.062l0.065,-0.06l0.066,-0.058l0.069,-0.059l0.07,-0.057l0.071,-0.056l0.073,-0.055l0.074,-0.054l0.075,-0.051l0.078,-0.051l0.079,-0.049l0.082,-0.048l0.083,-0.047l0.085,-0.044l0.086,-0.042l0.087,-0.04l0.091,-0.039l0.093,-0.037l0.091,-0.033l0.093,-0.031l0.097,-0.03l0.096,-0.025l0.096,-0.024l0.101,-0.021l0.097,-0.017l0.101,-0.015l0.102,-0.012l0.095,-0.008l0.119,-0.007l0.183,-0.002l0.194,0.009l0.191,0.02l0.188,0.031l0.179,0.04l0.171,0.048l0.163,0.056l0.156,0.061l0.145,0.065l0.138,0.07l0.131,0.073l0.12,0.074l0.114,0.077l0.107,0.077l0.097,0.076l0.095,0.078l0.086,0.076l0.08,0.075l0.075,0.074l0.071,0.072l0.066,0.072l0.061,0.071l0.057,0.067l0.06,0.074l0.089,0.116l0.082,0.116l0.071,0.107l0.061,0.096l0.051,0.086l0.043,0.077l0.272,0.511l0.044,0.592l0.004,0.046l0.005,0.043l0.005,0.04l0.006,0.039l0.006,0.038l0.007,0.035l0.007,0.033l0.007,0.031l0.007,0.03l0.008,0.028l0.008,0.027l0.008,0.025l0.008,0.023l0.008,0.023l0.008,0.021l0.008,0.019l0.009,0.02l0.008,0.018l0.008,0.016l0.008,0.015l0.008,0.016l0.009,0.015l0.008,0.013l0.008,0.014l0.009,0.012l0.008,0.013l0.009,0.012l0.009,0.012l0.009,0.012l0.009,0.011l0.01,0.011l0.01,0.011l0.01,0.011l0.01,0.01l0.012,0.012l0.011,0.011l0.012,0.01l0.013,0.012l0.012,0.01l0.014,0.011l0.014,0.011l0.015,0.012l0.016,0.011l0.016,0.011l0.016,0.012l0.018,0.011l0.018,0.011l0.018,0.011l0.02,0.012l0.021,0.011l0.021,0.012l0.021,0.011l0.023,0.011l0.023,0.011l0.024,0.011l0.025,0.012l0.024,0.01l0.026,0.011l0.027,0.01l0.027,0.011l0.027,0.01l0.029,0.01l0.022,0.007l0.066,0.022l0.061,0.018l0.064,0.017l0.064,0.015l0.066,0.015l0.067,0.014l0.067,0.012l0.069,0.011l0.069,0.01l0.068,0.009l0.068,0.007l0.068,0.006l0.067,0.005l0.067,0.004l0.064,0.003l0.063,0.002l0.062,0.001l0.058,0l0.056,-0.001l0.053,-0.002l0.051,-0.002l0.046,-0.003l0.041,-0.003l0.038,-0.003l0.032,-0.003l0.025,-0.003l0.016,-0.002l0.072,-0.019l0.128,-0.029l0.117,-0.023l0.108,-0.018l0.101,-0.016l0.102,-0.015l0.185,-0.024l0.373,-0.045l0.192,-0.024l0.198,-0.026l0.096,-0.013l0.1,-0.014l0.099,-0.015l0.101,-0.016l0.101,-0.017l0.101,-0.018l0.103,-0.02l0.102,-0.02l0.101,-0.021l0.102,-0.023l0.101,-0.024l0.101,-0.025l0.1,-0.027l0.099,-0.028l0.099,-0.029l0.097,-0.031l0.096,-0.032l0.095,-0.033l0.093,-0.035l0.097,-0.039l0.039,-0.016l0.043,-0.019l0.045,-0.019l0.043,-0.02l0.043,-0.02l0.043,-0.02l0.041,-0.021l0.041,-0.021l0.041,-0.021l0.04,-0.022l0.04,-0.022l0.038,-0.022l0.038,-0.022l0.037,-0.023l0.038,-0.023l0.036,-0.024l0.036,-0.023l0.036,-0.025l0.034,-0.023l0.034,-0.025l0.034,-0.025l0.032,-0.025l0.032,-0.026l0.032,-0.026l0.031,-0.026l0.03,-0.027l0.03,-0.026l0.029,-0.028l0.029,-0.027l0.029,-0.029l0.028,-0.028l0.027,-0.029l0.027,-0.03l0.026,-0.03l0.026,-0.03l0.026,-0.031l0.025,-0.032l0.025,-0.032l0.024,-0.033l0.024,-0.033l0.024,-0.035l0.023,-0.035l0.023,-0.036l0.023,-0.037l0.022,-0.037l0.022,-0.039l0.022,-0.041l0.021,-0.04l0.021,-0.042l0.021,-0.043l0.02,-0.045l0.02,-0.046l0.019,-0.046l0.02,-0.049l0.019,-0.05l0.027,-0.077l0.033,-0.09l0.047,-0.119l0.052,-0.119l0.057,-0.118l0.064,-0.121l0.07,-0.121l0.077,-0.121l0.085,-0.121l0.091,-0.119l0.099,-0.118l0.108,-0.116l0.114,-0.111l0.123,-0.108l0.131,-0.103l0.136,-0.096l0.142,-0.089l0.148,-0.082l0.15,-0.072l0.154,-0.064l0.155,-0.055l0.153,-0.046l0.155,-0.037l0.153,-0.029l0.147,-0.02l0.148,-0.014l0.142,-0.006l0.137,-0.001l0.135,0.006l0.126,0.009l0.124,0.015l0.121,0.018l0.113,0.021l0.11,0.024l0.107,0.027l0.102,0.029l0.098,0.03l0.096,0.033l0.091,0.033l0.088,0.034l0.085,0.036l0.083,0.036l0.091,0.043l0.143,0.07l0.145,0.079l0.139,0.08l0.134,0.082l0.128,0.083l0.123,0.083l0.119,0.085l0.116,0.085l0.112,0.086l0.11,0.086l0.107,0.087l0.103,0.086l0.102,0.087l0.1,0.087l0.097,0.087l0.095,0.085l0.093,0.086l0.091,0.085l0.091,0.087l0.168,0.162l0.161,0.159l0.151,0.152l0.141,0.143l0.243,0.249l0.077,0.078l0.042,0.014l0.062,0.02l0.068,0.022l0.07,0.021l0.166,0.049l0.181,0.051l0.199,0.054l0.216,0.055l0.232,0.057l0.246,0.059l0.261,0.059l0.274,0.06l0.287,0.061l0.299,0.06l0.311,0.061l0.322,0.06l0.332,0.059l0.342,0.059l0.352,0.058l0.36,0.056l0.369,0.055l0.379,0.054l0.189,0.026l0.192,0.025l0.195,0.025l0.195,0.025l0.198,0.023l0.199,0.024l0.201,0.022l0.202,0.022l0.203,0.021l0.204,0.021l0.206,0.02l0.206,0.019l0.208,0.018l0.208,0.018l0.21,0.016l0.211,0.016l0.21,0.015l0.212,0.014l0.213,0.013l0.213,0.012l0.213,0.011l0.214,0.01l0.215,0.009l0.214,0.008l0.215,0.007l0.215,0.006l0.215,0.005l0.215,0.003l0.216,0.003l0.215,0.001l0.215,0l0.214,-0.001l0.215,-0.003l0.214,-0.003l0.213,-0.005l0.213,-0.007l0.213,-0.007l0.212,-0.009l0.211,-0.011l0.211,-0.012l0.209,-0.013l0.208,-0.014l0.208,-0.016l0.207,-0.018l0.205,-0.019l0.204,-0.02l0.203,-0.022l0.201,-0.024l0.201,-0.025l0.198,-0.026l0.197,-0.028l0.196,-0.03l0.193,-0.031l0.192,-0.033l0.19,-0.034l0.188,-0.036l0.186,-0.038l0.184,-0.039l0.182,-0.041l0.179,-0.042l0.177,-0.044l0.175,-0.046l0.172,-0.047l0.17,-0.048l0.167,-0.05l0.165,-0.052l0.161,-0.053l0.159,-0.055l0.156,-0.056l0.158,-0.059l0.071,-0.028l0.075,-0.03l0.073,-0.03l0.073,-0.03l0.073,-0.031l0.072,-0.032l0.07,-0.031l0.069,-0.031l0.07,-0.033l0.069,-0.032l0.068,-0.033l0.066,-0.033l0.065,-0.033l0.066,-0.034l0.064,-0.034l0.058,-0.032l0.036,-0.02l0.029,-0.017l0.029,-0.018l0.028,-0.018l0.029,-0.019l0.027,-0.018l0.027,-0.019l0.026,-0.02l0.026,-0.02l0.026,-0.021l0.026,-0.021l0.025,-0.022l0.025,-0.022l0.024,-0.023l0.025,-0.023l0.024,-0.024l0.024,-0.025l0.024,-0.026l0.023,-0.026l0.024,-0.026l0.024,-0.028l0.023,-0.029l0.023,-0.029l0.023,-0.03l0.023,-0.031l0.023,-0.032l0.022,-0.033l0.023,-0.033l0.022,-0.034l0.022,-0.036l0.022,-0.037l0.022,-0.037l0.022,-0.039l0.021,-0.039l0.022,-0.041l0.021,-0.042l0.021,-0.042l0.02,-0.043l0.021,-0.044l0.02,-0.046l0.02,-0.048l0.02,-0.047l0.019,-0.048l0.019,-0.05l0.019,-0.051l0.019,-0.052l0.018,-0.052l0.017,-0.054l0.018,-0.055l0.017,-0.056l0.016,-0.057l0.016,-0.057l0.017,-0.059l0.015,-0.06l0.015,-0.06l0.015,-0.062l0.014,-0.062l0.013,-0.063l0.013,-0.065l0.013,-0.066l0.013,-0.065l0.011,-0.067l0.012,-0.068l0.01,-0.068l0.011,-0.071l0.01,-0.069l0.009,-0.071l0.009,-0.073l0.008,-0.072l0.008,-0.073l0.007,-0.075l0.006,-0.07l0.013,-0.156l0.009,-0.155l0.008,-0.157l0.005,-0.16l0.004,-0.162l0.001,-0.164l-0.001,-0.167l-0.003,-0.168l-0.006,-0.171l-0.007,-0.172l-0.01,-0.174l-0.012,-0.176l-0.014,-0.177l-0.016,-0.179l-0.018,-0.179l-0.02,-0.181l-0.023,-0.182l-0.024,-0.183l-0.026,-0.185l-0.028,-0.184l-0.03,-0.185l-0.032,-0.186l-0.034,-0.187l-0.036,-0.186l-0.037,-0.187l-0.039,-0.188l-0.041,-0.186l-0.043,-0.188l-0.044,-0.187l-0.046,-0.186l-0.048,-0.187l-0.049,-0.186l-0.051,-0.186l-0.052,-0.184l-0.053,-0.184l-0.056,-0.184l-0.056,-0.183l-0.057,-0.181l-0.059,-0.18l-0.061,-0.179l-0.061,-0.178l-0.062,-0.177l-0.064,-0.175l-0.065,-0.174l-0.065,-0.172l-0.067,-0.169l-0.068,-0.169l-0.068,-0.167l-0.069,-0.163l-0.07,-0.163l-0.071,-0.16l-0.071,-0.157l-0.072,-0.155l-0.072,-0.152l-0.073,-0.15l-0.073,-0.147l-0.074,-0.145l-0.074,-0.141l-0.074,-0.138l-0.074,-0.135l-0.074,-0.131l-0.075,-0.129l-0.074,-0.125l-0.073,-0.121l-0.074,-0.117l-0.073,-0.113l-0.072,-0.11l-0.072,-0.105l-0.071,-0.101l-0.07,-0.097l-0.068,-0.092l-0.068,-0.087l-0.066,-0.083l-0.064,-0.077l-0.063,-0.073l-0.06,-0.068l-0.057,-0.062l-0.056,-0.057l-0.057,-0.057l-0.019,-0.019l-0.024,-0.022l-0.024,-0.021l-0.021,-0.019l-0.021,-0.018l-0.02,-0.017l-0.018,-0.015l-0.017,-0.014l-0.017,-0.012l-0.014,-0.011l-0.013,-0.009l-0.012,-0.009l-0.011,-0.007l-0.008,-0.005l-0.122,-0.039l-0.175,-0.058l-0.175,-0.061l-0.172,-0.062l-0.171,-0.064l-0.171,-0.065l-0.169,-0.068l-0.169,-0.069l-0.167,-0.072l-0.167,-0.072l-0.165,-0.075l-0.164,-0.076l-0.163,-0.077l-0.162,-0.079l-0.161,-0.08l-0.16,-0.082l-0.159,-0.083l-0.157,-0.084l-0.157,-0.085l-0.155,-0.087l-0.155,-0.088l-0.153,-0.089l-0.152,-0.09l-0.152,-0.091l-0.15,-0.093l-0.149,-0.092l-0.148,-0.094l-0.147,-0.096l-0.145,-0.095l-0.145,-0.097l-0.143,-0.097l-0.143,-0.098l-0.141,-0.098l-0.14,-0.1l-0.14,-0.1l-0.137,-0.101l-0.137,-0.101l-0.135,-0.102l-0.135,-0.102l-0.134,-0.102l-0.131,-0.103l-0.131,-0.104l-0.13,-0.103l-0.129,-0.104l-0.127,-0.105l-0.127,-0.104l-0.125,-0.105l-0.124,-0.105l-0.122,-0.104l-0.122,-0.106l-0.12,-0.105l-0.121,-0.107l-0.232,-0.208l-0.229,-0.21l-0.225,-0.209l-0.219,-0.208l-0.213,-0.208l-0.209,-0.206l-0.203,-0.204l-0.198,-0.202l-0.192,-0.2l-0.187,-0.198l-0.181,-0.195l-0.175,-0.192l-0.17,-0.189l-0.164,-0.185l-0.158,-0.182l-0.152,-0.178l-0.146,-0.174l-0.14,-0.169l-0.134,-0.165l-0.128,-0.16l-0.122,-0.156l-0.115,-0.151l-0.11,-0.145l-0.104,-0.141l-0.098,-0.137l-0.093,-0.132l-0.087,-0.128l-0.083,-0.126l-0.08,-0.126l-0.076,-0.127l-0.077,-0.134l-0.071,-0.137l-0.046,-0.097l-0.045,-0.101l-0.048,-0.122l-0.052,-0.15l-0.054,-0.2l-0.053,-0.289l-0.018,-0.434l0.107,-0.669l0.387,-0.731l0.515,-0.491l0.618,-0.355l0.788,-0.158l0.397,0.044l0.258,0.042l0.253,0.069l0.243,0.096l0.233,0.12l0.218,0.144l0.203,0.165l0.184,0.187l0.163,0.204l0.141,0.22l0.118,0.234l0.078,0.208l0.055,0.079l0.064,0.089l0.072,0.097l0.08,0.106l0.086,0.113l0.094,0.119l0.1,0.126l0.107,0.131l0.113,0.137l0.119,0.142l0.126,0.147l0.13,0.15l0.137,0.155l0.142,0.158l0.148,0.162l0.153,0.164l0.157,0.167l0.163,0.169l0.167,0.171l0.172,0.173l0.177,0.174l0.18,0.175l0.185,0.176l0.189,0.177l0.193,0.176l0.199,0.179l0.097,0.086l0.1,0.088l0.102,0.087l0.102,0.088l0.103,0.087l0.104,0.087l0.104,0.086l0.106,0.086l0.106,0.086l0.106,0.085l0.108,0.085l0.108,0.085l0.109,0.083l0.109,0.083l0.11,0.083l0.111,0.082l0.112,0.081l0.111,0.08l0.112,0.08l0.113,0.079l0.113,0.078l0.114,0.077l0.115,0.076l0.114,0.076l0.115,0.074l0.115,0.073l0.117,0.073l0.116,0.071l0.115,0.07l0.117,0.069l0.117,0.068l0.117,0.066l0.118,0.066l0.117,0.064l0.118,0.063l0.117,0.061l0.118,0.06l0.118,0.059l0.118,0.057l0.118,0.057l0.118,0.054l0.118,0.053l0.118,0.052l0.118,0.05l0.117,0.048l0.118,0.047l0.118,0.046l0.117,0.043l0.117,0.043l0.117,0.04l0.116,0.039l0.14,0.044l0.083,0.027l0.102,0.037l0.102,0.038l0.099,0.041l0.097,0.043l0.096,0.044l0.092,0.046l0.091,0.047l0.09,0.048l0.088,0.05l0.086,0.052l0.084,0.052l0.082,0.053l0.082,0.055l0.079,0.055l0.079,0.057l0.077,0.057l0.076,0.059l0.075,0.059l0.073,0.06l0.073,0.061l0.071,0.062l0.071,0.062l0.069,0.063l0.068,0.064l0.074,0.07l0.127,0.126l0.13,0.135l0.128,0.137l0.125,0.14l0.122,0.143l0.121,0.146l0.118,0.148l0.116,0.151l0.115,0.154l0.114,0.157l0.111,0.159l0.11,0.161l0.109,0.164l0.107,0.167l0.106,0.169l0.105,0.172l0.103,0.174l0.102,0.176l0.101,0.179l0.099,0.182l0.099,0.184l0.097,0.185l0.096,0.188l0.095,0.19l0.093,0.192l0.092,0.195l0.092,0.196l0.089,0.199l0.089,0.2l0.087,0.202l0.086,0.204l0.085,0.206l0.083,0.207l0.082,0.209l0.08,0.211l0.079,0.212l0.078,0.214l0.076,0.215l0.075,0.217l0.073,0.218l0.072,0.219l0.07,0.22l0.068,0.222l0.067,0.222l0.065,0.224l0.063,0.225l0.062,0.225l0.06,0.226l0.058,0.228l0.056,0.228l0.054,0.228l0.052,0.23l0.051,0.23l0.048,0.23l0.046,0.231l0.044,0.232l0.042,0.231l0.04,0.232l0.038,0.233l0.036,0.233l0.033,0.232l0.031,0.233l0.028,0.233l0.026,0.233l0.024,0.233l0.02,0.233l0.019,0.233l0.015,0.232l0.013,0.233l0.011,0.232l0.007,0.232l0.004,0.232l0.002,0.231l-0.002,0.231l-0.004,0.231l-0.008,0.229l-0.011,0.23l-0.014,0.229l-0.018,0.223l-0.011,0.119l-0.011,0.114l-0.012,0.113l-0.013,0.114l-0.014,0.113l-0.015,0.113l-0.015,0.114l-0.017,0.112l-0.018,0.112l-0.019,0.113l-0.019,0.112l-0.021,0.112l-0.022,0.111l-0.023,0.112l-0.024,0.112l-0.025,0.111l-0.026,0.11l-0.028,0.111l-0.028,0.11l-0.03,0.11l-0.031,0.11l-0.032,0.11l-0.033,0.108l-0.035,0.109l-0.035,0.109l-0.038,0.108l-0.038,0.108l-0.04,0.107l-0.041,0.107l-0.043,0.107l-0.044,0.107l-0.045,0.105l-0.046,0.105l-0.049,0.106l-0.049,0.105l-0.052,0.104l-0.052,0.103l-0.055,0.103l-0.055,0.102l-0.058,0.101l-0.059,0.102l-0.06,0.1l-0.062,0.099l-0.065,0.1l-0.066,0.098l-0.067,0.097l-0.068,0.097l-0.071,0.095l-0.073,0.095l-0.074,0.094l-0.076,0.093l-0.077,0.091l-0.08,0.091l-0.081,0.09l-0.083,0.089l-0.085,0.086l-0.086,0.086l-0.088,0.085l-0.09,0.083l-0.092,0.082l-0.093,0.08l-0.095,0.079l-0.096,0.077l-0.098,0.076l-0.1,0.074l-0.101,0.073l-0.104,0.071l-0.104,0.069l-0.105,0.067l-0.108,0.066l-0.109,0.063l-0.105,0.059l-0.109,0.059l-0.105,0.055l-0.104,0.054l-0.106,0.054l-0.107,0.053l-0.105,0.052l-0.107,0.05l-0.107,0.05l-0.108,0.049l-0.109,0.049l-0.108,0.047l-0.108,0.046l-0.109,0.045l-0.111,0.045l-0.11,0.044l-0.114,0.045l-0.218,0.082l-0.224,0.08l-0.224,0.078l-0.227,0.074l-0.227,0.071l-0.228,0.069l-0.231,0.066l-0.231,0.063l-0.231,0.06l-0.233,0.058l-0.234,0.055l-0.235,0.053l-0.236,0.05l-0.237,0.048l-0.237,0.045l-0.239,0.043l-0.239,0.041l-0.239,0.039l-0.241,0.036l-0.241,0.035l-0.241,0.032l-0.242,0.03l-0.242,0.028l-0.243,0.027l-0.244,0.024l-0.243,0.023l-0.244,0.02l-0.244,0.019l-0.244,0.017l-0.245,0.016l-0.244,0.013l-0.245,0.012l-0.245,0.011l-0.244,0.009l-0.245,0.007l-0.244,0.006l-0.244,0.004l-0.244,0.003l-0.244,0.001l-0.243,0l-0.243,-0.001l-0.242,-0.003l-0.242,-0.004l-0.242,-0.005l-0.241,-0.007l-0.24,-0.008l-0.24,-0.009l-0.238,-0.01l-0.239,-0.011l-0.237,-0.012l-0.236,-0.014l-0.236,-0.014l-0.234,-0.016l-0.234,-0.016l-0.232,-0.018l-0.231,-0.018l-0.23,-0.019l-0.228,-0.02l-0.228,-0.021l-0.226,-0.022l-0.224,-0.023l-0.224,-0.023l-0.221,-0.024l-0.22,-0.025l-0.219,-0.025l-0.216,-0.026l-0.216,-0.027l-0.213,-0.028l-0.211,-0.028l-0.212,-0.028l-0.411,-0.059l-0.405,-0.06l-0.397,-0.062l-0.387,-0.064l-0.378,-0.065l-0.369,-0.066l-0.358,-0.067l-0.348,-0.068l-0.337,-0.068l-0.325,-0.068l-0.314,-0.069l-0.303,-0.069l-0.29,-0.069l-0.278,-0.068l-0.265,-0.069l-0.254,-0.068l-0.241,-0.067l-0.224,-0.067l-0.115,-0.035l-0.107,-0.034l-0.105,-0.034l-0.104,-0.035l-0.101,-0.035l-0.1,-0.036l-0.097,-0.037l-0.098,-0.038l-0.099,-0.041l-0.1,-0.043l-0.101,-0.046l-0.108,-0.053l-0.117,-0.062l-0.145,-0.084l-0.153,-0.102l-0.125,-0.096l-0.098,-0.08l-0.082,-0.072l-0.071,-0.064l-0.069,-0.065l-0.115,-0.113l-0.117,-0.117l-0.117,-0.119l-0.243,-0.248l-0.124,-0.126l-0.065,-0.065l-0.057,0.077l-0.078,0.1l-0.078,0.099l-0.08,0.096l-0.081,0.096l-0.082,0.093l-0.083,0.091l-0.085,0.089l-0.085,0.087l-0.085,0.085l-0.087,0.083l-0.088,0.082l-0.088,0.079l-0.09,0.078l-0.089,0.076l-0.09,0.074l-0.091,0.072l-0.092,0.071l-0.091,0.068l-0.092,0.067l-0.093,0.065l-0.093,0.063l-0.093,0.062l-0.093,0.06l-0.092,0.058l-0.094,0.057l-0.094,0.055l-0.094,0.054l-0.093,0.052l-0.094,0.05l-0.093,0.049l-0.094,0.048l-0.094,0.046l-0.092,0.044l-0.094,0.044l-0.093,0.042l-0.092,0.041l-0.093,0.039l-0.098,0.041l-0.177,0.071l-0.182,0.068l-0.18,0.064l-0.179,0.06l-0.176,0.055l-0.175,0.052l-0.172,0.049l-0.17,0.045l-0.167,0.042l-0.165,0.039l-0.161,0.036l-0.159,0.033l-0.155,0.031l-0.152,0.028l-0.148,0.027l-0.145,0.024l-0.14,0.022l-0.137,0.021l-0.131,0.019l-0.13,0.018l-0.235,0.031l-0.215,0.026l-0.353,0.043l-0.129,0.017l-0.042,0.006l-0.034,0.005l-0.002,0.001l-0.06,0.015l-0.116,0.027l-0.109,0.022l-0.107,0.019l-0.106,0.017l-0.107,0.014l-0.109,0.014l-0.112,0.011l-0.112,0.01l-0.117,0.009l-0.12,0.007l-0.121,0.005l-0.126,0.004l-0.128,0.002l-0.133,0ZM218.378,291.581l0.109,-0.062l0.077,-0.074l-0.107,0.086l-0.079,0.05Z" style="fill:#d89f85;"/>
+		         <path id="moustache" d="M177,324.499c0,0 -7.469,12.884 -13,15c-5.531,2.117 -31.201,1.203 -36,12c-4.799,10.798 -6.478,26.162 4,36c6.865,6.447 10,0 10,0c0,0 -2.223,-10.536 5,-13c7.223,-2.464 24.09,-13.676 34,-13c9.91,0.677 6.174,2.787 17,3c10.826,0.214 16.336,-5.352 21,-5c4.664,0.353 15.736,7.753 26,13c10.264,5.247 7.391,13.742 9,14c1.609,0.259 7.031,3.714 10,-5c2.969,-8.714 4.082,-20.055 -1,-30c-5.082,-9.944 -32.979,-6.268 -38,-12c-5.021,-5.731 -9,-14 -9,-14c0,0 -7.588,-0.062 -9,-2c-1.412,-1.937 -4.132,3.45 -9,3c-4.613,-0.425 -7.912,-1.533 -8,-3c-0.088,-1.466 -3.921,4.072 -13,1Z" style="fill:#4b1c08;"/>
+		         <path id="cheveux" d="M130,87.499c0,0 33.816,12.746 57,11c23.184,-1.745 52.969,-18.442 59,-21c6.031,-2.557 27.496,6.044 32,11c4.504,4.956 29.934,35.023 33,55c3.066,19.978 -1.816,75.816 -2,76c-0.184,0.185 5.586,28.775 6,29c0.414,0.226 5,-13 5,-13c0,0 3.969,-76.108 3,-82c-0.969,-5.891 1.461,-55.202 -44,-79c-9.148,-4.329 -4.711,-11.901 -1,-16c3.711,-4.098 11.385,-8.614 16,-5c-10.359,-6.766 -22.393,4.447 -22,7c-3.564,-6.307 -54.285,-19.846 -43,-39c6.815,-11.565 12.42,-7.747 16,-7l3.58,0.747c-15.916,-7.359 -19.437,1.512 -24.58,8.253c-7.727,-14.723 -32.732,-33.317 -90,-17c-57.268,16.318 -43.414,23.072 -68,25c-24.586,1.929 -30.561,-4.719 -31,-5c-0.439,-0.28 14.17,32.052 38,38c-32.586,-1.975 -12.816,11.552 -27,6c-14.184,-5.551 -6.088,0.308 -7,-4c-5.189,8.589 12.961,5.384 18,12c5.039,6.617 19.205,2.968 19,3c-0.205,0.033 -13.295,12.455 -15,16c-1.705,3.546 -8.49,7.539 -12,4l-3.51,-3.538c4.688,8.424 11.637,9.153 15.51,8.538c-5.682,4.122 -10.719,10.058 -12,17c-1.281,6.943 5.947,29.996 7,41c1.053,11.005 1.51,33.767 1,38c-0.51,4.234 2.885,26.177 3,27c0.115,0.824 4.871,10.628 5,11c0.129,0.372 5,7 5,7c0,0 1.955,-19.907 3,-25c1.045,-5.092 -8.17,-58.594 4,-76c12.17,-17.405 27.934,-67.719 53,-59Z" style="fill:#332d2d;"/>
+		         <clipPath id="_clip4">
+		             <path id="cheveux1" d="M130,87.499c0,0 33.816,12.746 57,11c23.184,-1.745 52.969,-18.442 59,-21c6.031,-2.557 27.496,6.044 32,11c4.504,4.956 29.934,35.023 33,55c3.066,19.978 -1.816,75.816 -2,76c-0.184,0.185 5.586,28.775 6,29c0.414,0.226 5,-13 5,-13c0,0 3.969,-76.108 3,-82c-0.969,-5.891 1.461,-55.202 -44,-79c-9.148,-4.329 -4.711,-11.901 -1,-16c3.711,-4.098 11.385,-8.614 16,-5c-10.359,-6.766 -22.393,4.447 -22,7c-3.564,-6.307 -54.285,-19.846 -43,-39c6.815,-11.565 12.42,-7.747 16,-7l3.58,0.747c-15.916,-7.359 -19.437,1.512 -24.58,8.253c-7.727,-14.723 -32.732,-33.317 -90,-17c-57.268,16.318 -43.414,23.072 -68,25c-24.586,1.929 -30.561,-4.719 -31,-5c-0.439,-0.28 14.17,32.052 38,38c-32.586,-1.975 -12.816,11.552 -27,6c-14.184,-5.551 -6.088,0.308 -7,-4c-5.189,8.589 12.961,5.384 18,12c5.039,6.617 19.205,2.968 19,3c-0.205,0.033 -13.295,12.455 -15,16c-1.705,3.546 -8.49,7.539 -12,4l-3.51,-3.538c4.688,8.424 11.637,9.153 15.51,8.538c-5.682,4.122 -10.719,10.058 -12,17c-1.281,6.943 5.947,29.996 7,41c1.053,11.005 1.51,33.767 1,38c-0.51,4.234 2.885,26.177 3,27c0.115,0.824 4.871,10.628 5,11c0.129,0.372 5,7 5,7c0,0 1.955,-19.907 3,-25c1.045,-5.092 -8.17,-58.594 4,-76c12.17,-17.405 27.934,-67.719 53,-59Z"/>
+		         </clipPath>
+		         <g clip-path="url(#_clip4)">
+		             <rect x="20" y="101.499" width="315" height="171" style="fill:url(#_Linear5);"/>
+		         </g>
+		     </g>
+		     <defs>
+		         <linearGradient id="_Linear5" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-2.04102,-145.654,145.654,-2.04102,189.389,256.934)"><stop offset="0%" style="stop-color:#d4d4d4;stop-opacity:1"/><stop offset="60%" style="stop-color:#d9d9d9;stop-opacity:0.827451"/><stop offset="81%" style="stop-color:#e6e6e6;stop-opacity:0.423529"/><stop offset="100%" style="stop-color:#f3f3f3;stop-opacity:0"/><stop offset="100%" style="stop-color:#f3f3f3;stop-opacity:0"/></linearGradient>
+		     </defs>
+		 </svg>
+		</div>
 	</body>
+	<script>
+		// const slides = document.querySelectorAll('main>section');
+		// let curIndex = 0;
+		
+		// window.addEventListener('scroll', function(){
+		// 	const index = Math.floor(window.scrollY / window.innerHeight);
+
+		// 	if (curIndex !== index) {
+		// 		curIndex = index;
+
+		// 		slides.forEach(el => {
+		// 			if ([...slides].indexOf(el) !== index) {
+		// 				el.classList.remove('active');
+		// 			} else {
+		// 				el.classList.add('active');
+		// 			}
+		// 		});
+		// 	}
+		// });
+	</script>
 </html>
