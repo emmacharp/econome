@@ -44,12 +44,80 @@ Scénarios de chocs pour projeter les implications contrefactuelles.
         2. non :-> bon. Ben c'est ça, l'exemple qu'on a choisi... pouvez-vous faire comme si... vous aimiez ça la bière ? Nous vous en serions reconnaissant.
         3. Merci !
     2. Les chaîne économique de votre achat de bière
+        - _(Rôle de chacun, Henri ? T'en penses quoi ?)_
         1. __Vous__ achetez votre bière chez un détaillant.
         2. Le détaillant l'achète au grossiste.
         3. Le grossiste l'achète au dernier transformateur.
         4. Le transformateur l'achète au fournisseur.
-    3. Que pouvez-vous modifier dans cette chaîne ?
+    3. Chacun des agents de cette chaîne génère une « valeur ajoutée ». Celle-ci joue un rôle fondamental dans l'analyse économique.
+        1. Laissez Henri vous expliquer ce qu'est la valeur ajoutée.
+2. Les prémisses de l'achat local
+    - Une popularité grandissante
+        + Articles de journaux, initiatives citoyennes, études, etc.
+    - Mais... c'est quoi un achat « local » ?
+        + __(?)__ Différentes définitions
+        + __(Questions à l'usager)__ Et... selon vous ?
+            * Acheter une télévision coréenne dans une chaîne de magasin américaine installée au Québec... est-ce un achat local ?
+            * Acheter du jus d'orange de la Floride transformé au Québec... est-ce un achat local ?
+            * Acheter dans un supermarché une bière québécoise produite à l'aide de houblons belges... est-ce un achat local ?
+    - La question se pose, donc : « Mais quand est-ce qu'un achat devient-il local !!??!?!?1 »
+        + Et à cette question, nous répondons : « Ben, c'est une question de degré... c'est rarement noir ou blanc en économie ! (Parce que c'est toujours plus compliqué ça en a l'air de prime abord, t'sais. Et puis, si c'était simple, vous ne seriez pas en train de lire ça. Et Henri n'aurait pas de travail.) »
+        + Une question de degré donc... mais des degrés de quoi ? Celsius ? Farenheit ?
+        + En gros, le degré de « localité » d'un achat dépend lui-même de la provenance de deux facteurs fondamentaux, facteurs qui varient en fonction du [bien de consommation](https://fr.wikipedia.org/wiki/Bien_de_consommation) que l'on achète !
+    - Retournons à votre achat de bière et à sa chaîne économique
+        + Premier facteur de localité d'un achat : L'approvisonnement.
+            * Bien sûr ! Ce qui constitue le bien en question, la nature des intrants dans sa production : l'orange floridienne dans le jus d'orange québécois ou la main d'œuvre guatémaltèque dans les champs de fraises de l'Île d'Orléans.
+            - Il faut donc se demander : « Quelle part de cet approvisionnement est locale ? Quelle part est importée ? ».
+            - (Gardons en tête ici qu'il s'agit d'une [chaîne de production](https://fr.wikipedia.org/wiki/Cha%C3%AEne_de_production)... et que nous pourrions suivre ladite chaîne looooooongtemps, dans les intrants des intrants des intrants des intrants... l'arbre est dans ses feuilles.
+        + Regardons l'approvisionnement au sein de la chaîne économique derrière notre achat de bière.
+            * (Constitution du diagramme)
+                -  La bière c'est un secteur industriel de plus de
+                    1. (emplois)
+                    2. (revenus & dépenses)
+                    3. (proportion du PIB)
+            * Pour produire la bière moyenne que nous achetons chez notre détaillant favori, la chaîne économique s'est approvisionnée à l'étranger à plusieurs reprises.
+            * Décortiquons ensemble cet approvisionnement.
+                - D'après vous qu'est-ce qui constitue le plus ~~grand~~ intrant en proportion du total ?
+                    1. Le houblon
+                    2. Le verre
+                    3. Le métal
+                    4. Les salaires
+                    5. L'eau
+                - _(Survol de l'approvisionnement de chacun, Henri ? T'en penses quoi ?)_
+                - Le détaillant
+                - Le grossiste
+                - Le transformateur
+                - Le fournisseur
+            * Parlons maintenant des dollars présentés ici et de leur répartition.
+                - Ces dollars représentent la valeur ajoutée au sein de chaque maillon de la chaîne.
+                - Comme vous pouvez vous en doutez, la quantité de valeur ajoutée est importante dans l'évaluation de la localité d'un achat ! Plus grande est la proportion locale de la valeur totale du bien que vous achetez, plus élevé est son degré de localité.
+                - Un achat sera donc _plus ou moins_ « local » en fonction de la provenance de ses intrants et de sa valeur ajoutée !
+                - Et si on voulait pousser la réflexion un peu plus loin (ce que nous voulons) on irait jusqu'à dire que la _destination_ de la valeur ajoutée, le profit quoi, est toute aussi importante à l'évaluation du degré de « localité » d'un achat. Parce que oui, là où est dépensé ou investit le profit d'une action économique importe grandement dans l'évaluation de ses bénéfices !
+            * La valeur ajoutée n'est donc pas tout !
+                - En fait, comme n'importe quelle action en économie, ce qui importe, c'est l'objectif qu'on se donne, notre intention. Parce qu'au final, l'économie est une science des moyens _(ajouter la référence ?)_. 
+                - L'analyse économique nous permet d'évaluer l'action considérée, l'achat local ici, en fonction de sa capacité probable à remplir nos objectifs préalables. Mais de ces objectifs, l'analyse économique ne s'en préocuppe pas !
+                - D'autres objectifs que la valeur ajoutée pourraient donc nous inciter à augmenter le degré de localité de nos achats de bière !
+                    + Les emplois créés.
+                    + La destination des profits.
+                    + Les gaz à effets de serre.
+                    + _(Y en aurait-il d'autres, Henri ?)_
+3. Et si on changeait nos actions économiques ?
+    4. En tant que consommateur, que pouvez-vous modifier dans cette chaîne ?
         1. Vous pouvez aller chez un autre détaillant.
             1. Que se passe-t-il alors ?
         2. Vous pouvez acheter un autre bière.
             1. Que se passe-t-il alors ?
+        3. Vous pouvez aller directement chez le transformateur.
+    5. Et si l'État s'en mêlait ?
+        1. Subvention de la production de houblon.
+            1. Que se passe-t-il alors ?
+        2. _(Autres scénarios ? Qu'en penses-tu Henri ?)_
+4. Les questions à poser pour savoir quand acheter localement.
+    - Quels sont les intrants du bien considéré ?
+        + D'où proviennent les intrants ?
+    - Quelle est la valeur ajoutée du bien (et de ses intrants) ?
+        + D'où provient-elle ?
+        + Où s'en va-t-elle ?
+    - Quelles sont nos motivations ?
+    - Où iront nous chercher les ressources supplémentaires impliquées dans une plus grande production locale ?
+    - ...
