@@ -241,3 +241,17 @@ Le fournisseur se retourne et il a donné 500$ de biens et services et a génér
 Si tout tout tout a été produit au Québec, c'est 1000$ de valeur ajoutée.
 
 Même truc, mais avec un partenaire ontarien. On fait l'hypothèse que l'argent qui part en Ontario ne reviendra pas. Le 1000$ de chiffre d'affaires se décompose en 400$ de valeur ajoutée extérieure, _qu'on a importée_ et en 600$ de valeur ajoutée (un paiement fait) au Québec.
+
+Quand tu mets 100$ dans la chaîne, c'est 1000$ de valeur ajoutée qui se créee. Concept fondamental à faire comprendre.
+
+Donc, cette valeur ajoutée peut être locale ou extérieure.
+
+On construit la chaîne en partant du consommateur... le détaillant... garde 200$ pis il en balance 200$ à l'ontario et 600$ au Québec. Faire un arbre qui envoie l'étranger d'un côté le Québec de l'autre.
+
+Avec la bière peut aller direct au transformateur (brasseur) et contourner le détaillant.
+
+Présenter trois niveaux de fournisseurs max.
+
+T'achète de la bière chez Wal-Mart. ou au dépanneur du coin. Mais il reste encore beaucoup qui s'en va à l'étranger... tout ce qui est avant dans la chaîne. Le détaillant peut s'approvisionner chez un grossiste ontarien.
+
+Évitre de dédoubler les transferts... C'est le premier concept à faire comprendre... le 1000$ du départ, ne va que créer 1000$ à la fin. Ça se dédouble pas.
