@@ -1,0 +1,274 @@
+/* NOTES -----------------------
+	- Dans Chrome, du moins, la valeur de row n'est pas toujours constante.
+	  Une base précise semble être nécessaire. La seule testée présentement est :
+	  (multiple de 4) * 1.5625 = 6.25px, 12.5px, 18.75px, 25px, 31.25px, etc.
+	  La raison de cette inconstance est présentement inconnue.
+*/
+
+/* Échelles typographiques typiques ----------------------- */
+	
+	:root {
+		--MinorSecond: 1.067;
+		--MajorSecond: 1.125;
+		--MinorThird: 1.200;
+		--MajorThird: 1.250;
+		--PerfectFourth: 1.333;
+		--AugmentedFourth: 1.414;
+		--PerfectFifth: 1.500;
+		--GoldenRatio: 1.618;
+	}
+
+
+/* Niveaux de l'échelle typographique ----------------------- */
+	
+	:root {
+		--Miniature: calc(var(--Base) / var(--Scale) / var(--Scale));
+		--Shortest: calc(var(--Base) / var(--Scale) / var(--Scale));
+		--Short: calc(var(--Base) / var(--Scale));
+		--Base: 1;
+		--Tall: calc(var(--Base) * var(--Scale));
+		--Taller: calc(var(--Base) * var(--Scale) * var(--Scale));
+		--Tallest: calc(var(--Base) * var(--Scale) * var(--Scale) * var(--Scale));
+		--Huge: calc(var(--Base) * var(--Scale) * var(--Scale) * var(--Scale) * var(--Scale));
+		--Huger: calc(var(--Base) * var(--Scale) * var(--Scale) * var(--Scale) * var(--Scale) * var(--Scale));
+		--Hugest: calc(var(--Base) * var(--Scale) * var(--Scale) * var(--Scale) * var(--Scale) * var(--Scale) * var(--Scale));
+	}
+
+
+/* Configuration maîtresse ----------------------- */
+	
+	:root {
+		--Grid: 3;
+		--Row: 1.5625rem; /* Ratio pour des facteurs de 4 seulement */
+		--Gutter: calc(var(--Row) * .5);
+		--Size: 1;
+		--Scale: var(--MajorSecond);
+		--MaxBodyWidth: 100em;
+		--Amplitude: .375;
+		--FontFactor: 1;
+	}
+
+
+/* Adaptation de la typographie ----------------------- */
+	
+	@media (min-width: 40em) { :root { --Scale: var(--MajorThird); --Amplitude: .675; } }
+	@media (min-width: 60em) { :root { --Scale: var(--PerfectFourth); --Amplitude: .75; } }
+	@media (min-width: 80em) { :root { --Scale: var(--AugmentedFourth); --Amplitude: 1; } }
+
+
+/* Adaptation de la grille ----------------------- */
+	
+	@media (min-width: 40em) { :root { --Grid: 6; --Gutter: var(--Row); } }
+	@media (min-width: 60em) { :root { --Grid: 10; } }
+	@media (min-width: 80em) { :root { --Grid: 11; } }
+	@media (min-width: 100em) { :root { --Grid: 12; --Gutter: calc(var(--Row) * 1.5); } }
+
+
+/* Distribution de l'échelle typographique ----------------------- */
+	
+	:root { 
+		font-family: -apple-system, "Helvetica Neue", "Avenir Next"; }
+	
+	* { 
+		--ScaleLevel: var(--Base);
+		--RowFactor: 1; }
+	h1 { 
+		--ScaleLevel: var(--Huge);  
+		--RowFactor: max(1, calc(3 * var(--Amplitude))); }
+	h2 { 
+		--ScaleLevel: var(--Tallest);
+		--RowFactor: max(1, calc(2 * var(--Amplitude))); }
+	h3 { 
+		--ScaleLevel: var(--Taller);
+		--RowFactor: max(1, calc(1.5 * var(--Amplitude))); }
+	h4 { 
+		--ScaleLevel: var(--Tall);
+		--RowFactor: max(1, calc(1 * var(--Amplitude))); }
+	h5 { 
+		--ScaleLevel: var(--Base);
+		--RowFactor: max(1, calc(1 * var(--Amplitude))); }
+	h6 { 
+		--ScaleLevel: var(--Short);
+		--RowFactor: max(1, calc(1 * var(--Amplitude))); }
+
+
+/* Rythme des contenus ----------------------- */
+	
+	*+p, *+img, *+hr, *+ul,
+	*+h1, *+h2, *+h3, *+h4, *+h5, *+h6 {
+		margin-top: var(--Row); }
+	
+	*+li { margin-top: calc(var(--Row) / 2); }
+
+
+/* Styles génériques de base ----------------------- */
+	
+	/* Établir le document entier comme
+		contexte de positionnement absolu */
+	html { position: relative; }
+	
+	/* Enlever toutes marges */
+	* { padding: 0; margin: 0; }
+	
+	/* Tailles typographiques et 
+		interlignage de base */
+	p, ul, li,
+	h1, h2, h3, h4, h5, h6 {
+		line-height: calc(var(--Row) * var(--RowFactor) * var(--Size));
+		font-size: calc(var(--Size) * var(--ScaleLevel) * var(--FontFactor) * 1em); }
+	
+	/* Restreindre les images aux dimensions
+		de leur parent. Éviter l'espace de 
+		la hauteur de ligne (inline vs. block) */
+	img {
+		max-width: 100%;
+		display: block;
+		object-fit: cover; }
+	
+	/* Garder la puce à l'intérieur 
+		de la colonne de texte */
+	ul { padding-left: 1.1em; }
+
+
+/* Utilitaires ----------------------- */
+	
+	/* Conteneur de grille générique
+		accueillant un nombre indéfini d'éléments */
+	div {
+		display: flex;
+		margin-left: calc(-1 * var(--Gutter));
+		margin-top: calc(-1 * var(--Row));
+		flex-wrap: wrap; }
+	
+	/* Donner un rythme dans le cas où
+		la grille n'est pas seule à son niveau. */
+	*+div {
+		margin-top: 0; }
+	
+	/* Éléments de la grille séparés
+		par un rythme général sur les deux axes */
+	div>* {
+		box-sizing: border-box;
+		margin-left: var(--Gutter);
+		margin-top: var(--Row);
+		max-width: 100%; }
+
+
+/* Composition ----------------------- */
+	/* Corps de la page */
+	body {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	/* conforme à la grille maîtresse commençant
+		par des *gouttières* (voir ci-bas) */
+	body {
+		width: calc(100% - (var(--Gutter) * 2));
+		max-width: calc(var(--MaxBodyWidth) - (var(--Gutter) * 2));
+	}
+
+	/* Entête principale */
+	body>header {
+		margin-top: var(--Row);
+	}
+
+	/* Section principale */
+	body>div>main {
+		width: calc(100% / (var(--Grid) / 7) - var(--Gutter));
+		flex-grow: 1;
+		margin-right: calc(100% / (var(--Grid) / (max(0, var(--Grid) - 11))));
+	}
+
+		/* Rythme interne */
+		body>div>main>*+* {
+			margin-top: var(--Row);
+		}
+
+	/* Barre latérale */
+	body>div>aside {
+		width: calc(100% / (var(--Grid) / 3) - var(--Gutter));
+		flex-grow: 1;
+	}
+	@media (min-width: 30em) and (max-width: 60em) { 
+		body>div>aside { columns: 2; column-gap: var(--Gutter); } 
+	}
+
+	/* Pied de page */
+	body>footer {
+		margin-top: var(--Row);
+		margin-bottom: var(--Row);
+	}
+
+	/* Grille d'articles */
+	div>article {
+		width: clamp(calc(10em - var(--Gutter)), calc(100% / 4 - var(--Gutter)), calc(50% - var(--Gutter)));
+		flex-grow: 1;
+	}
+
+
+/* Composantes ----------------------- */
+	main>header img {
+		width: 100%;
+		height: calc(var(--Row) * 12);
+	}
+
+	div>article img {
+		width: 100%;
+		height: calc(var(--Row) * 6);
+	}
+
+
+/* Utilitaires de développement ----------------------- */
+	/* Affichage des guides de la grille maîtresse */
+	:root {
+		--GutterColor: #ff000010;
+		--BaselineColor: #00000030;
+	}
+
+	.dev-grid:after {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: block;
+		max-width: var(--MaxBodyWidth);
+		margin: inherit;
+		pointer-events: none;
+		background-image:
+		/* grille commençant par les *gouttières* */
+		 	linear-gradient(to right, #ff000010 var(--Gutter), transparent 0),
+		/* grille commençant par les *colonnes* */
+			/*linear-gradient(to right, transparent calc(100% - var(--Gutter)), var(--GutterColor) 0),*/
+		/* grille de ligne de base typographique */
+			linear-gradient(to bottom, transparent calc(100% - 1px), var(--BaselineColor) 0);
+		background-size: 
+		/* dimensions de la grille commençant par les *gouttières* */
+			calc(100% / var(--Grid) - var(--Gutter) / var(--Grid)) 100%,
+		/* dimensions de la grille commençant par les *colonnes* */
+			/*calc(100% / var(--Grid) + var(--Gutter) / var(--Grid)) 100%,*/
+		/* dimensions de la grille de ligne de base typographique */
+			100% var(--Row);
+	}
+	/* Affichage des bornes des balises */
+	.dev-outline * {
+		outline: 1px dashed red; 
+	}
+
+	/* Donner un arrière-plan composable 
+		aux blocs sémantiques vides */
+	/*header,footer, main, aside, article {
+		min-height: var(--Row);
+		background-color: #a0daff80;
+		padding: var(--Gutter); }*/
+
+	/* conforme à la grille maîtresse commençant
+		par des *colonnes* (voir ci-bas) */
+	/*body {
+		width: calc(100% / (var(--Grid) / 10));
+		max-width: min(100%, calc(var(--MaxBodyWidth) / (var(--Grid) / 10)));
+	}*/
+		/* Contexte de grille interne */
+		/*body>* { --Grid: 10; }*/
