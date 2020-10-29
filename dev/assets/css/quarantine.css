@@ -1,0 +1,98 @@
+:root {
+	--lt-primary: #A4A391;
+	--ltr-primary: #D5D5D2;
+}
+
+body {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.arrow {
+	line-height: 0;
+	border: none;
+	border-top: 2px solid currentColor;ck;
+	overflow: visible;
+	/*max-width: max-content;*/
+	/*box-shadow: 0px 1px 0px 1px grey;*/
+	/*outline: 1px solid grey;*/
+}
+
+.arrow.right {
+	text-align: right;
+	justify-content: flex-end;
+}
+
+.arrow.left {
+	text-align: left;
+	justify-content: flex-start;
+}
+
+.arrow::after {
+	font-weight: 300;
+	font-size: 24px;
+	position: relative;
+	top: -2px;
+}
+
+.arrow.left::after {
+	content: "🡐";
+	left: -5px;
+}
+
+.arrow.right::after {
+	content: "🡒";
+	left: 5px;
+}
+
+.chain {
+	color: var(--lt-primary);
+	font-weight: 500;
+}
+
+.chain hr {
+	margin-bottom: -1px;
+}
+
+.chain>div {
+	display: flex;
+}
+
+.chain .product {
+	width: calc(100% / (var(--Grid) / 2) - var(--Gutter));
+	align-self: stretch;
+	position: relative;
+}
+
+.chain .product .arrow {
+	width: calc(100% / 3 - var(--Gutter));
+	margin: calc(var(--Gutter) / 2);
+}
+
+.chain * {
+	margin: 0;
+	display: inherit;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
+
+}
+
+.chain section>div {
+	flex-direction: column;
+}
+
+.chain section>div>*+* {
+	margin-top: calc(var(--Row) / 2);
+}
+
+.chain svg {
+	height: calc(var(--Row) * 4);
+	flex-grow: 0;
+	fill: currentColor;
+	color: var(--ltr-primary);
+}
+
+.chain .consumer svg {
+	height: calc(var(--Row) * 2.5);
+}

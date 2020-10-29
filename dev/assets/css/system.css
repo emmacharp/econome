@@ -1,0 +1,28 @@
+/* Échelles typographiques typiques ----------------------- */
+	
+	:root {
+		--MinorSecond: 1.067;
+		--MajorSecond: 1.125;
+		--MinorThird: 1.200;
+		--MajorThird: 1.250;
+		--PerfectFourth: 1.333;
+		--AugmentedFourth: 1.414;
+		--PerfectFifth: 1.500;
+		--GoldenRatio: 1.618;
+	}
+
+
+/* Niveaux de l'échelle typographique ----------------------- */
+	
+	:root {
+		--Miniature: calc(var(--Base) / var(--Scale) / var(--Scale));
+		--Shortest: calc(var(--Base) / var(--Scale) / var(--Scale));
+		--Short: calc(var(--Base) / var(--Scale));
+		--Base: 1;
+		--Tall: calc(var(--Base) * var(--Scale));
+		--Taller: calc(var(--Base) * var(--Scale) * var(--Scale));
+		--Tallest: calc(var(--Base) * var(--Scale) * var(--Scale) * var(--Scale));
+		--Huge: calc(var(--Base) * var(--Scale) * var(--Scale) * var(--Scale) * var(--Scale));
+		--Huger: calc(var(--Base) * var(--Scale) * var(--Scale) * var(--Scale) * var(--Scale) * var(--Scale));
+		--Hugest: calc(var(--Base) * var(--Scale) * var(--Scale) * var(--Scale) * var(--Scale) * var(--Scale) * var(--Scale));
+	}

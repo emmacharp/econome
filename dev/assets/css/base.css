@@ -1,0 +1,46 @@
+/* Contexte du corps de la page ----------------------- */
+
+	body {
+		width: calc(100% - (var(--Gutter) * 2));
+		max-width: calc(var(--MaxBodyWidth) - (var(--Gutter) * 2)); }
+
+
+/* Rythme des contenus ----------------------- */
+	
+	*+p, *+img, *+hr, *+ul,
+	*+h1, *+h2, *+h3, *+h4, *+h5, *+h6 {
+		margin-top: var(--Row); }
+	
+	*+li { margin-top: calc(var(--Row) / 2); }
+
+
+/* Styles génériques de base ----------------------- */
+	
+	/* Établir le document entier comme
+		contexte de positionnement absolu */
+	html { position: relative; }
+	
+	/* Enlever toutes marges */
+	* { padding: 0; margin: 0; }
+
+	/* Laisser les graisses être héritées */
+	* { font-weight: inherit; }
+	
+	/* Tailles typographiques et 
+		interlignage de base */
+	p, ul, li, span,
+	h1, h2, h3, h4, h5, h6 {
+		line-height: calc(var(--Row) * var(--RowFactor) * var(--Size));
+		font-size: calc(var(--Size) * var(--ScaleLevel) * var(--FontFactor) * 1em); }
+	
+	/* Restreindre les images aux dimensions
+		de leur parent. Éviter l'espace de 
+		la hauteur de ligne (inline vs. block) */
+	img {
+		max-width: 100%;
+		display: block;
+		object-fit: cover; }
+	
+	/* Garder la puce à l'intérieur 
+		de la colonne de texte */
+	ul { padding-left: 1.1em; }

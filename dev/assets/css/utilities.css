@@ -1,0 +1,22 @@
+/* Utilitaires ----------------------- */
+	
+	/* Conteneur de grille générique
+		accueillant un nombre indéfini d'éléments */
+	div {
+		display: flex;
+		margin-left: calc(-1 * var(--Gutter));
+		margin-top: calc(-1 * var(--Row));
+		flex-wrap: wrap; }
+	
+	/* Donner un rythme dans le cas où
+		la grille n'est pas seule à son niveau. */
+	*+div {
+		margin-top: 0; }
+	
+	/* Éléments de la grille séparés
+		par un rythme général sur les deux axes */
+	div>* {
+		box-sizing: border-box;
+		margin-left: var(--Gutter);
+		margin-top: var(--Row);
+		max-width: 100%; }

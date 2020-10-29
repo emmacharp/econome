@@ -1,0 +1,34 @@
+/* Utilitaires de développement ----------------------- */
+	/* Affichage des guides de la grille maîtresse */
+	:root {
+		--GutterColor: #ff000010;
+		--BaselineColor: #00000030;
+	}
+
+	body:after {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: block;
+		max-width: var(--MaxBodyWidth);
+		margin: inherit;
+		pointer-events: none;
+		background-image:
+		/* grille commençant par les *gouttières* */
+		 	linear-gradient(to right, #ff000010 var(--Gutter), transparent 0),
+		/* grille de ligne de base typographique */
+			linear-gradient(to bottom, transparent calc(100% - 1px), var(--BaselineColor) 0);
+		background-size: 
+		/* dimensions de la grille commençant par les *gouttières* */
+			calc(100% / var(--Grid) - var(--Gutter) / var(--Grid)) 100%,
+		/* dimensions de la grille de ligne de base typographique */
+			100% var(--Row);
+	}
+	
+	/* Affichage des bornes des balises */
+	/*body * {
+		outline: 1px dashed red; 
+	}*/

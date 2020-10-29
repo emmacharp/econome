@@ -1,0 +1,70 @@
+/* NOTES -----------------------
+	- Dans Chrome, du moins, la valeur de row n'est pas toujours constante.
+	  Une base précise semble être nécessaire. La seule testée présentement est :
+	  (multiple de 4) * 1.5625 = 6.25px, 12.5px, 18.75px, 25px, 31.25px, etc.
+	  La raison de cette inconstance est présentement inconnue.
+*/
+
+/* Configuration maîtresse ----------------------- */
+	
+	:root {
+		--Grid: 3;
+		--Row: 1.5625rem; /* Ratio pour des facteurs de 4 seulement */
+		--Gutter: calc(var(--Row) * .5);
+		--Size: 1;
+		--Scale: var(--MajorSecond);
+		--MaxBodyWidth: 100%;
+		--Amplitude: .375;
+		--FontFactor: 1;
+		--BaseFontStack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+		--TitleFontStack: "Avenir Next";
+	}
+
+
+/* Adaptation de la typographie ----------------------- */
+	
+	@media (min-width: 40em) { :root { --Scale: var(--MajorThird); --Amplitude: .675; } }
+	@media (min-width: 60em) { :root { --Scale: var(--PerfectFourth); --Amplitude: .75; } }
+	@media (min-width: 80em) { :root { --Scale: var(--AugmentedFourth); --Amplitude: 1; } }
+
+
+/* Adaptation de la grille ----------------------- */
+	
+	@media (min-width: 40em) { :root { --Grid: 6; --Gutter: var(--Row); } }
+	@media (min-width: 60em) { :root { --Grid: 10; } }
+	@media (min-width: 80em) { :root { --Grid: 11; } }
+	@media (min-width: 100em) { :root { --Grid: 12; --Gutter: calc(var(--Row) * 1.5); } }
+
+
+/* Typographie basée sur les polices système ----------------------- */
+
+	:root { 
+		font-family: var(--BaseFontStack); }
+	h1 {
+		font-family: var(--TitleFontStack);
+		font-weight: 600; }
+
+
+/* Distribution de l'échelle typographique ----------------------- */
+
+	* { 
+		--ScaleLevel: var(--Base);
+		--RowFactor: 1; }
+	h1 { 
+		--ScaleLevel: var(--Huge);  
+		--RowFactor: max(1, calc(3 * var(--Amplitude))); }
+	h2 { 
+		--ScaleLevel: var(--Tallest);
+		--RowFactor: max(1, calc(2 * var(--Amplitude))); }
+	h3 { 
+		--ScaleLevel: var(--Taller);
+		--RowFactor: max(1, calc(1.5 * var(--Amplitude))); }
+	h4 { 
+		--ScaleLevel: var(--Tall);
+		--RowFactor: max(1, calc(1 * var(--Amplitude))); }
+	h5 { 
+		--ScaleLevel: var(--Base);
+		--RowFactor: max(1, calc(1 * var(--Amplitude))); }
+	h6 { 
+		--ScaleLevel: var(--Short);
+		--RowFactor: max(1, calc(1 * var(--Amplitude))); }
