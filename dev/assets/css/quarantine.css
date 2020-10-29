@@ -1,6 +1,10 @@
 :root {
 	--lt-primary: #A4A391;
 	--ltr-primary: #D5D5D2;
+	--blue: #2B46BD;
+	--red: #FF0003;
+	--Local: var(--blue);
+	--Foreign: var(--red);
 }
 
 body {
@@ -8,14 +12,17 @@ body {
 	margin-right: auto;
 }
 
-.arrow {
+h1 {
+	margin-bottom: calc(var(--Row) * 4);
+}
+
+hr, .arrow {
 	line-height: 0;
+	height: 0;
+	max-height: 0;
 	border: none;
-	border-top: 2px solid currentColor;ck;
+	border-top: 2px solid currentColor;
 	overflow: visible;
-	/*max-width: max-content;*/
-	/*box-shadow: 0px 1px 0px 1px grey;*/
-	/*outline: 1px solid grey;*/
 }
 
 .arrow.right {
@@ -48,20 +55,43 @@ body {
 .chain {
 	color: var(--lt-primary);
 	font-weight: 500;
+	font-family: 'Helvetica Neue';
+	font-size: clamp(12px, 1vw, 16px);
 }
 
-.chain hr {
+.chain .arrow {
 	margin-bottom: -1px;
+	margin-top: -1px;
 }
 
 .chain>div {
 	display: flex;
+	margin-top: calc(var(--Row) * 1.75);
+	margin-bottom: calc(var(--Row) * 1.75);
+}
+
+.chain>div>div>hr {
+	align-self: stretch;
+}
+
+.chain>div>div>hr:first-of-type {
+	margin-top: calc(var(--Row) / 2);
+}
+
+.chain>div>div>hr:last-of-type {
+	margin-bottom: calc(var(--Row) / 2);
+	position: relative;
+	top: calc(var(--Row) / 6);
 }
 
 .chain .product {
-	width: calc(100% / (var(--Grid) / 2) - var(--Gutter));
-	align-self: stretch;
+	margin: auto;
+	flex-grow: 1;
+}
+
+.chain .product .icon+* {
 	position: relative;
+	left: 11px;
 }
 
 .chain .product .arrow {
@@ -69,26 +99,111 @@ body {
 	margin: calc(var(--Gutter) / 2);
 }
 
+.chain .partial.product .icon+* {
+	opacity: 0;
+}
+
 .chain * {
 	margin: 0;
 	display: inherit;
 	justify-content: center;
 	align-items: center;
-	flex-grow: 1;
-
+	max-width: 100%;
 }
 
-.chain section>div {
+.chain>div>* {
+	flex-grow: 1;
+	width: calc(100% / (var(--Grid) / 3) - var(--Gutter));
+}
+
+.chain .local {
+	color: var(--Local);
+}
+
+.chain>hr {
+	margin-left: calc(100% / (var(--Grid) / 3));
+}
+
+.chain .total {
+	margin: auto;
+	width: max-content;
+	left: calc(100% / (var(--Grid) / 3) / 2);
+	position: relative;
+	text-align: center;
+	display: flex;
 	flex-direction: column;
+}
+
+.chain .total:first-child {
+	flex-direction: column-reverse;
+	margin-bottom: calc(-1 * var(--Row) * .75);
+}
+
+.chain .total:first-child .amount {
+	margin-bottom: calc(var(--Row) / 2);
+}
+
+.chain .total:last-child {
+	margin-top: calc(-1 * var(--Row) * .75);
+}
+
+.chain .total:last-child .amount {
+	margin-top: calc(var(--Row) / 2);
+}
+
+.chain .total>:first-child {
+	color: white;
+	padding: calc(var(--Row) / 8) calc(var(--Row) / 2);
+	border-radius: 6px;
+	font-size: 18px;
+	line-height: var(--Row);
+	font-weight: 600;
+}
+
+.chain .total.local>:first-child {
+	background-color: var(--Local);
+}
+
+.chain .total.foreign>:first-child {
+	background-color: var(--Foreign);
+}
+
+.chain .foreign {
+	color: var(--Foreign);
+}
+
+.chain .amount {
+	font-weight: 700;
+	--ScaleLevel: var(--Taller);
+}
+
+.chain section>div,
+.chain div>div {
+	flex-direction: column;
+	align-self: stretch;
 }
 
 .chain section>div>*+* {
 	margin-top: calc(var(--Row) / 2);
 }
 
-.chain svg {
-	height: calc(var(--Row) * 4);
-	flex-grow: 0;
+.chain .product .icon {
+	--TotalAddedValue: calc(var(--LocalAddedValue) + var(--ForeignAddedValue));
+	width: calc(var(--Row) * 4 * .75);
+	background-color: var(--ltr-primary);
+	background-image: 
+		linear-gradient(to top, 
+			var(--Foreign) 0, 
+			var(--Foreign) var(--ForeignAddedValue), 
+			var(--Local)  var(--ForeignAddedValue), 
+			var(--Local) var(--TotalAddedValue), 
+			transparent var(--TotalAddedValue), transparent 100%);
+	clip-path: url(#beer-clip-path);
+}
+
+.chain .icon {
+	max-height: calc(var(--Row) * 4);
+	flex-grow: 1;
 	fill: currentColor;
 	color: var(--ltr-primary);
 }
