@@ -25,6 +25,9 @@
 
 	/* Laisser les graisses être héritées */
 	* { font-weight: inherit; }
+
+	/* Appliquer la taille de caractère de base choisie */
+	html { font-size: var(--BaseFontSize, 16px); }
 	
 	/* Tailles typographiques et 
 		interlignage de base */

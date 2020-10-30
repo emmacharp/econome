@@ -11,11 +11,12 @@
 		--Grid: 3;
 		--Row: 1.5625rem; /* Ratio pour des facteurs de 4 seulement */
 		--Gutter: calc(var(--Row) * .5);
-		--Size: 1;
+		--BaseFontSize: clamp(12px, 1vw, 16px);
+		--Size: 1; /* Facteur de modification de la typographie pouvant être appliquer à même les composants */
 		--Scale: var(--MajorSecond);
 		--MaxBodyWidth: 100%;
-		--Amplitude: .375;
-		--FontFactor: 1;
+		--Amplitude: .375; /* Envergure générale de l'échelle typographique choisie. Influence le calcul de la hauteur de ligne. */
+		--FontFactor: 1; /* Facteur de modification en fonction de la taille relative d'une police choisie */
 		--BaseFontStack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 		--TitleFontStack: "Avenir Next";
 	}
