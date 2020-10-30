@@ -26,37 +26,35 @@ hr, .arrow {
 }
 
 .arrow.right {
-	text-align: right;
 	justify-content: flex-end;
 }
 
 .arrow.left {
-	text-align: left;
 	justify-content: flex-start;
 }
 
 .arrow::after {
-	font-weight: 300;
-	font-size: 24px;
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:serif='http://www.serif.com/' width='100%25' height='100%25' viewBox='0 0 56 33' version='1.1' xml:space='preserve' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:1.5;'%3E%3Cpath d='M3.756,26.664l22.908,-22.908l24.9,24.899' style='fill:none;stroke:%23A4A391;stroke-width:3px;'/%3E%3C/svg%3E");	
 	position: relative;
-	top: -2px;
+	top: -1px;
+
+	width: 24px;
 }
 
 .arrow.left::after {
-	content: "🡐";
-	left: -5px;
+	transform: rotate(-90deg);
+	left: -6px;
 }
 
 .arrow.right::after {
-	content: "🡒";
-	left: 5px;
+	transform: rotate(90deg);
+	left: 6px;
 }
 
 .chain {
 	color: var(--lt-primary);
 	font-weight: 500;
 	font-family: 'Helvetica Neue';
-	font-size: clamp(12px, 1vw, 16px);
 }
 
 .chain .arrow {
@@ -85,8 +83,8 @@ hr, .arrow {
 }
 
 .chain .product {
-	margin: auto;
 	flex-grow: 1;
+	align-self: stretch;
 }
 
 .chain .product .icon+* {
@@ -95,6 +93,7 @@ hr, .arrow {
 }
 
 .chain .product .arrow {
+	flex-grow: 1;
 	width: calc(100% / 3 - var(--Gutter));
 	margin: calc(var(--Gutter) / 2);
 }
@@ -112,8 +111,11 @@ hr, .arrow {
 }
 
 .chain>div>* {
+	/*width: calc(100% / (var(--Grid) / 3) - var(--Gutter));*/
+}
+
+.chain>div>div {
 	flex-grow: 1;
-	width: calc(100% / (var(--Grid) / 3) - var(--Gutter));
 }
 
 .chain .local {
