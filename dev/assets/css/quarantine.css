@@ -16,37 +16,43 @@ h1 {
 	margin-bottom: calc(var(--Row) * 4);
 }
 
-hr, .arrow {
+hr {
 	line-height: 0;
 	height: 0;
 	max-height: 0;
 	border: none;
-	border-top: 2px solid currentColor;
+	border-top:  2px solid currentColor;
 	overflow: visible;
 }
 
-.arrow.right {
+hr.arrow {
+	--ArrowLine:  2px solid currentColor;
+}
+
+hr.arrow.right {
 	justify-content: flex-end;
 }
 
-.arrow.left {
+hr.arrow.left {
 	justify-content: flex-start;
 }
 
-.arrow::after {
+hr.arrow::after {
 	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:serif='http://www.serif.com/' width='100%25' height='100%25' viewBox='0 0 56 33' version='1.1' xml:space='preserve' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:1.5;'%3E%3Cpath d='M3.756,26.664l22.908,-22.908l24.9,24.899' style='fill:none;stroke:%23A4A391;stroke-width:3px;'/%3E%3C/svg%3E");	
 	position: relative;
-	top: -1px;
+}
 
+hr.arrow.horizontal:after {
+	top: -1px;
 	width: 24px;
 }
 
-.arrow.left::after {
+hr.arrow.left::after {
 	transform: rotate(-90deg);
 	left: -6px;
 }
 
-.arrow.right::after {
+hr.arrow.right::after {
 	transform: rotate(90deg);
 	left: 6px;
 }
@@ -55,47 +61,39 @@ hr, .arrow {
 	color: var(--lt-primary);
 	font-weight: 500;
 	font-family: 'Helvetica Neue';
-}
-
-.chain .arrow {
-	margin-bottom: -1px;
-	margin-top: -1px;
+	display: inline-flex;
 }
 
 .chain>div {
 	display: flex;
-	margin-top: calc(var(--Row) * 1.75);
-	margin-bottom: calc(var(--Row) * 1.75);
 }
 
-.chain>div>div>hr {
+.chain>div>* {
+	flex-direction: column;
+}
+
+
+.chain .arrow.from {
+	justify-content: flex-end;
+}
+
+.chain .arrow.to {
+	justify-content: flex-start;
+}
+
+.chain .variable.arrow {
 	align-self: stretch;
-}
-
-.chain>div>div>hr:first-of-type {
-	margin-top: calc(var(--Row) / 2);
-}
-
-.chain>div>div>hr:last-of-type {
-	margin-bottom: calc(var(--Row) / 2);
 	position: relative;
-	top: calc(var(--Row) / 6);
 }
 
 .chain .product {
-	flex-grow: 1;
 	align-self: stretch;
 }
 
-.chain .product .icon+* {
-	position: relative;
-	left: 11px;
-}
 
-.chain .product .arrow {
+.chain .good.arrow {
 	flex-grow: 1;
-	width: calc(100% / 3 - var(--Gutter));
-	margin: calc(var(--Gutter) / 2);
+	margin: calc(var(--Gutter));
 }
 
 .chain .partial.product .icon+* {
@@ -107,7 +105,10 @@ hr, .arrow {
 	display: inherit;
 	justify-content: center;
 	align-items: center;
-	max-width: 100%;
+}
+
+.chain article {
+	flex-direction: column;
 }
 
 .chain>div>* {
@@ -122,52 +123,12 @@ hr, .arrow {
 	color: var(--Local);
 }
 
-.chain>hr {
-	margin-left: calc(100% / (var(--Grid) / 3));
-}
-
 .chain .total {
 	margin: auto;
-	width: max-content;
-	left: calc(100% / (var(--Grid) / 3) / 2);
 	position: relative;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
-}
-
-.chain .total:first-child {
-	flex-direction: column-reverse;
-	margin-bottom: calc(-1 * var(--Row) * .75);
-}
-
-.chain .total:first-child .amount {
-	margin-bottom: calc(var(--Row) / 2);
-}
-
-.chain .total:last-child {
-	margin-top: calc(-1 * var(--Row) * .75);
-}
-
-.chain .total:last-child .amount {
-	margin-top: calc(var(--Row) / 2);
-}
-
-.chain .total>:first-child {
-	color: white;
-	padding: calc(var(--Row) / 8) calc(var(--Row) / 2);
-	border-radius: 6px;
-	font-size: 18px;
-	line-height: var(--Row);
-	font-weight: 600;
-}
-
-.chain .total.local>:first-child {
-	background-color: var(--Local);
-}
-
-.chain .total.foreign>:first-child {
-	background-color: var(--Foreign);
 }
 
 .chain .foreign {
@@ -179,13 +140,7 @@ hr, .arrow {
 	--ScaleLevel: var(--Taller);
 }
 
-.chain section>div,
-.chain div>div {
-	flex-direction: column;
-	align-self: stretch;
-}
-
-.chain section>div>*+* {
+.chain section>div *+* {
 	margin-top: calc(var(--Row) / 2);
 }
 
@@ -204,12 +159,239 @@ hr, .arrow {
 }
 
 .chain .icon {
-	max-height: calc(var(--Row) * 4);
-	flex-grow: 1;
+	height: calc(var(--Row) * 4);
 	fill: currentColor;
 	color: var(--ltr-primary);
 }
 
 .chain .consumer svg {
 	height: calc(var(--Row) * 2.5);
+}
+
+
+/* Diagramme Horizontal */
+@media (orientation: landscape) {
+	.chain {
+		flex-direction: column;
+	}
+
+	.chain>hr {
+		margin-left: calc(100% / (var(--Grid) / 3));
+	}
+
+	.chain>div {
+		flex-direction: row;
+		margin-top: calc(var(--Row) * 1.75);
+		margin-bottom: calc(var(--Row) * 1.75);
+	}
+
+	.chain section>div,
+	.chain div>div {
+		flex-direction: column;
+		align-self: stretch;
+	}
+
+	.chain .total {
+		left: calc(100% / (var(--Grid) / 3) / 2);
+	}
+
+	.chain .total:first-child {
+		flex-direction: column-reverse;
+		margin-bottom: calc(-1 * var(--Row) * .5);
+	}
+
+	.chain .total:first-child .amount {
+		margin-bottom: calc(var(--Row) / 2);
+	}
+
+	.chain .total:last-child {
+		margin-top: calc(-1 * var(--Row) * .5);
+	}
+
+	.chain .total:last-child .amount {
+		margin-top: calc(var(--Row) / 2);
+	}
+
+	.chain .total>:first-child {
+		color: white;
+		padding: 0 calc(var(--Row) / 2);
+		border-radius: 8px;
+	}
+
+	.chain .total.local>:first-child {
+		background-color: var(--Local);
+	}
+
+	.chain .total.foreign>:first-child {
+		background-color: var(--Foreign);
+	}
+
+	.chain .link .amount {
+		margin-left: var(--Gutter);
+		margin-right: var(--Gutter);
+	}
+
+	.chain .arrow {
+		border-top:  var(--ArrowLine);
+		margin-bottom: -1px;
+		margin-top: -1px;
+	}
+
+	.chain .arrow:after {
+		top: -1px;
+		width: 24px;
+	}
+
+	.chain .arrow.to::after {
+		transform: rotate(-90deg);
+		left: -6px;
+	}
+
+	.chain .arrow.from::after {
+		transform: rotate(90deg);
+		left: 6px;
+	}
+
+	.chain .good.arrow {
+		flex-basis: calc(100% / 3 - var(--Gutter));
+	}
+
+	.chain .variable.arrow:first-of-type {
+		margin-top: calc(var(--Row) / 2);
+	}
+
+	.chain .variable.arrow:last-of-type {
+		margin-bottom: calc(var(--Row) / 2);
+		top: calc(var(--Row) / 6);
+	}
+
+	.chain .product {
+		flex-grow: 1;
+	}
+
+	.chain .icon.beer+* {
+		position: relative;
+		left: 11px;
+	}
+
+	.chain .icon+* {
+		margin-left: calc(-1 * var(--Gutter));
+		margin-right: calc(-1 * var(--Gutter));
+	}
+}
+
+
+/* Diagramme Vertical */
+
+@media (orientation: portrait) {
+	.chain {
+		flex-direction: row;
+		font-size: 16px;
+		justify-content: center;
+		position: relative;
+	}
+
+	.chain hr {
+		height: auto;
+		max-height: initial;
+	}
+
+	.chain>hr {
+		margin-top: calc(var(--Row) * 4);
+	}
+
+	.chain>div {
+		flex-direction: column;
+	}
+
+	.chain article {
+		min-width: calc(var(--Row) * 9);
+	}
+
+	.chain section>div,
+	.chain div>div {
+		flex-direction: row;
+		flex-shrink: 0;
+	}
+
+	.chain .total {
+		position: absolute;
+		bottom: 0;
+		flex-direction: column-reverse;
+	}
+
+	.chain .total:last-child {
+		right: 0;
+	}
+
+	.chain .total:first-child {
+		left: 0;
+	}
+
+	.chain .total .amount {
+		margin-top: calc(var(--Row) / 2);
+	}
+
+	.chain .link .amount {
+		margin-top: var(--Gutter);
+		margin-bottom: var(--Gutter);
+	}
+
+	.chain .arrow {
+		border-top: 0;
+		border-left:  var(--ArrowLine);
+		margin-left: -1px;
+		margin-right: -1px;
+		flex-direction: column;
+		align-items: center;
+		width: 0;
+	}
+
+	.chain .variable.arrow {
+		align-self: stretch;
+	}
+
+	.chain .good.arrow {
+		height: var(--Row);
+		flex-shrink: 0;
+	}
+
+	.chain .arrow:after {
+		left: -1px;
+		width: 24px;
+	}
+
+	.chain .arrow.to::after {
+		top: -4px;
+	}
+
+	.chain .arrow.from::after {
+		transform: rotate(180deg);
+		top: 2px;
+	}
+
+	.chain .product {
+		flex-direction: column;
+	}
+
+	.chain .icon.beer {
+		left: -10px;
+		position: relative;
+	}
+
+	.chain .product article {
+		margin-left: calc(var(--Gutter) * 2);
+		margin-right: calc(var(--Gutter) * 2);
+	}
+
+	.chain .variable.arrow {
+		min-height: 100%;
+		position: relative;
+		margin-top: calc(-1 * var(--Row) * 1.5);
+		margin-bottom: calc(-1 * var(--Row) * 1.5);
+	}
+
+	.chain .partial.product .icon+* {
+		display: none;
+	}
 }

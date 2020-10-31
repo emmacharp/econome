@@ -10,7 +10,7 @@
 	:root {
 		--Grid: 3;
 		--Row: 1.5625rem; /* Ratio pour des facteurs de 4 seulement */
-		--Gutter: calc(var(--Row) * .5);
+		--Gutter: calc(var(--Row));
 		--BaseFontSize: clamp(12px, 1vw, 16px);
 		--Size: 1; /* Facteur de modification de la typographie pouvant être appliquer à même les composants */
 		--Scale: var(--MajorSecond);
