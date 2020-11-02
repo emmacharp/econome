@@ -2,6 +2,9 @@
 <html lang="fr" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <head>
 	<meta charset="UTF-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#ff0000">
+	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 <!-- 	<link rel="stylesheet" href="assets/css/system.css">
@@ -16,131 +19,272 @@
 </head>
 <body>
 
-	<h1>Les dessous économiques de l'achat local</h1>
+	<main>
+		<section>
+			<h1>Les dessous économiques de l'achat local</h1>
 
-	<article class="buying chain diagram">
-		<section class="total local amount">
-			<h4>valeur locale</h4>
-			<span class="amount local">5.50 $</span>
+			<section>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quisquam quibusdam ab consectetur, unde, velit porro rem possimus minus dolores, eligendi architecto magnam modi, eaque rerum! Architecto aspernatur eaque, doloribus?</p>
+				<p>Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Debitis aspernatur totam, commodi culpa voluptatem tempore necessitatibus, temporibus tenetur obcaecati incidunt id magni autem sint rem ab accusantium, quisquam velit quos.</p>
+			</section>
+
+			<article class="buying chain diagram">
+				<section class="total local amount">
+					<h4>valeur locale</h4>
+					<span class="amount local">5.50 $</span>
+				</section>
+				<hr class="local">
+				<div>
+					<section class="link consumer">
+						<span class="paid amount">- 10 $</span>
+						<div>
+							<article>
+								<svg viewBox="0 0 280 244"><use xlink:href="#svg-consommateur"></use></svg>
+								<h4>Toé</h4>
+							</article>
+						</div>
+					</section>
+					<div>
+						<hr class="variable arrow from">
+						<section class="complete product" style="--LocalAddedValue: 55%; --ForeignAddedValue: 45%;">
+							<hr class="good arrow from">
+							<div>
+								<!-- <svg viewBox="0 0 311 425"><use xlink:href="#svg-biere"></use></svg> -->
+								<article>
+									<i class="icon beer"></i>
+									<h4>Bière</h4>
+								</article>
+							</div>
+							<hr class="good arrow to">
+						</section>
+						<hr class="variable arrow from">
+					</div>
+					<section class="link retailer">
+						<div>
+							<span class="added amount local">+ 2 $</span>
+							<article>
+								<svg class="icon" viewBox="0 0 351 351"><use xlink:href="#svg-detaillant"></use></svg>
+								<h4>Détaillant</h4>
+							</article>
+							<span class="added amount foreign">+ 0 $</span>
+						</div>
+					</section>
+					<div>
+						<hr class="variable arrow from">
+						<section class="partial product" style="--LocalAddedValue: 35%; --ForeignAddedValue: 45%;">
+							<hr class="good arrow to">
+							<div>
+								<!-- <svg viewBox="0 0 311 425"><use xlink:href="#svg-biere"></use></svg> -->
+								<article>
+									<i class="icon beer"></i>
+									<h4>Bière</h4>
+								</article>
+							</div>
+							<hr class="good arrow to">
+						</section>
+						<hr class="variable arrow from">
+					</div>
+					<section class="link manufacturer">
+						<div>
+							<span class="added amount local">+ 2 $</span>
+							<article>
+								<svg class="icon" viewBox="0 0 352 352"><use xlink:href="#svg-grossiste"></use></svg>
+								<h4>Grossiste</h4>
+							</article>
+							<span class="added amount foreign">+ 3 $</span>
+						</div>
+					</section>
+					<div>
+						<hr class="variable arrow from">
+						<section class="partial product" style="--LocalAddedValue: 15%; --ForeignAddedValue: 15%;">
+							<hr class="good arrow to">
+							<div>
+								<!-- <svg viewBox="0 0 311 425"><use xlink:href="#svg-biere"></use></svg> -->
+								<article>
+									<i class="icon beer"></i>
+									<h4>Bière</h4>
+								</article>
+							</div>
+							<hr class="good arrow to">
+						</section>
+						<hr class="variable arrow from">
+					</div>
+					<section class="link transformer">
+						<div>
+							<span class="added amount local">+ 1 $</span>
+							<article>
+								<svg class="icon" viewBox="0 0 368 368"><use xlink:href="#svg-transformateur"></use></svg>
+								<h4>Transformateur</h4>
+							</article>
+							<span class="added amount foreign">+ 1 $</span>
+						</div>
+					</section>
+					<div>
+						<hr class="variable arrow from">
+						<section class="partial product" style="--LocalAddedValue: 5%; --ForeignAddedValue: 5%;">
+							<hr class="good arrow to">
+							<div>
+								<!-- <svg viewBox="0 0 311 425"><use xlink:href="#svg-biere"></use></svg> -->
+								<article>
+									<i class="icon beer"></i>
+									<h4>Bière</h4>
+								</article>
+							</div>
+							<hr class="good arrow to">
+						</section>
+						<hr class="variable arrow from">
+					</div>
+					<section class="link provider">
+						<div>
+							<span class="added amount local">+ .50 $</span>
+							<article>
+								<svg class="icon" viewBox="0 0 352 352"><use xlink:href="#svg-fournisseur"></use></svg>
+								<h4>Fournisseur</h4>
+							</article>
+							<span class="added amount foreign">+ .50 $</span>
+						</div>
+					</section>
+				</div>
+				<hr class="foreign">
+				<section class="total foreign amount">
+					<h4>valeur étrangère</h4>
+					<span class="amount foreign">4.50 $</span>
+				</section>
+			</article>
 		</section>
-		<hr class="local">
-		<div>
-			<section class="link consumer">
-				<span class="paid amount">- 10 $</span>
-				<div>
-					<article>
-						<svg viewBox="0 0 280 244"><use xlink:href="#svg-consommateur"></use></svg>
-						<h4>Toé</h4>
-					</article>
-				</div>
+		<section>
+			<h1>Les dessous économiques de l'achat local</h1>
+
+			<section>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quisquam quibusdam ab consectetur, unde, velit porro rem possimus minus dolores, eligendi architecto magnam modi, eaque rerum! Architecto aspernatur eaque, doloribus?</p>
+				<p>Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Debitis aspernatur totam, commodi culpa voluptatem tempore necessitatibus, temporibus tenetur obcaecati incidunt id magni autem sint rem ab accusantium, quisquam velit quos.</p>
 			</section>
-			<div>
-				<hr class="variable arrow from">
-				<section class="complete product" style="--LocalAddedValue: 55%; --ForeignAddedValue: 45%;">
-					<hr class="good arrow from">
-					<div>
-						<!-- <svg viewBox="0 0 311 425"><use xlink:href="#svg-biere"></use></svg> -->
-						<article>
-							<i class="icon beer"></i>
-							<h4>Bière</h4>
-						</article>
-					</div>
-					<hr class="good arrow to">
+
+			<article class="buying chain diagram">
+				<section class="total local amount">
+					<h4>valeur locale</h4>
+					<span class="amount local">5.50 $</span>
 				</section>
-				<hr class="variable arrow from">
-			</div>
-			<section class="link retailer">
+				<hr class="local">
 				<div>
-					<span class="added amount local">+ 2 $</span>
-					<article>
-						<svg class="icon" viewBox="0 0 351 351"><use xlink:href="#svg-detaillant"></use></svg>
-						<h4>Détaillant</h4>
-					</article>
-					<span class="added amount foreign">+ 0 $</span>
-				</div>
-			</section>
-			<div>
-				<hr class="variable arrow from">
-				<section class="partial product" style="--LocalAddedValue: 35%; --ForeignAddedValue: 45%;">
-					<hr class="good arrow to">
+					<section class="link consumer">
+						<span class="paid amount">- 10 $</span>
+						<div>
+							<article>
+								<svg viewBox="0 0 280 244"><use xlink:href="#svg-consommateur"></use></svg>
+								<h4>Toé</h4>
+							</article>
+						</div>
+					</section>
 					<div>
-						<!-- <svg viewBox="0 0 311 425"><use xlink:href="#svg-biere"></use></svg> -->
-						<article>
-							<i class="icon beer"></i>
-							<h4>Bière</h4>
-						</article>
+						<hr class="variable arrow from">
+						<section class="complete product" style="--LocalAddedValue: 55%; --ForeignAddedValue: 45%;">
+							<hr class="good arrow from">
+							<div>
+								<!-- <svg viewBox="0 0 311 425"><use xlink:href="#svg-biere"></use></svg> -->
+								<article>
+									<i class="icon beer"></i>
+									<h4>Bière</h4>
+								</article>
+							</div>
+							<hr class="good arrow to">
+						</section>
+						<hr class="variable arrow from">
 					</div>
-					<hr class="good arrow to">
-				</section>
-				<hr class="variable arrow from">
-			</div>
-			<section class="link manufacturer">
-				<div>
-					<span class="added amount local">+ 2 $</span>
-					<article>
-						<svg class="icon" viewBox="0 0 352 352"><use xlink:href="#svg-grossiste"></use></svg>
-						<h4>Grossiste</h4>
-					</article>
-					<span class="added amount foreign">+ 3 $</span>
-				</div>
-			</section>
-			<div>
-				<hr class="variable arrow from">
-				<section class="partial product" style="--LocalAddedValue: 15%; --ForeignAddedValue: 15%;">
-					<hr class="good arrow to">
+					<section class="link retailer">
+						<div>
+							<span class="added amount local">+ 2 $</span>
+							<article>
+								<svg class="icon" viewBox="0 0 351 351"><use xlink:href="#svg-detaillant"></use></svg>
+								<h4>Détaillant</h4>
+							</article>
+							<span class="added amount foreign">+ 0 $</span>
+						</div>
+					</section>
 					<div>
-						<!-- <svg viewBox="0 0 311 425"><use xlink:href="#svg-biere"></use></svg> -->
-						<article>
-							<i class="icon beer"></i>
-							<h4>Bière</h4>
-						</article>
+						<hr class="variable arrow from">
+						<section class="partial product" style="--LocalAddedValue: 35%; --ForeignAddedValue: 45%;">
+							<hr class="good arrow to">
+							<div>
+								<!-- <svg viewBox="0 0 311 425"><use xlink:href="#svg-biere"></use></svg> -->
+								<article>
+									<i class="icon beer"></i>
+									<h4>Bière</h4>
+								</article>
+							</div>
+							<hr class="good arrow to">
+						</section>
+						<hr class="variable arrow from">
 					</div>
-					<hr class="good arrow to">
-				</section>
-				<hr class="variable arrow from">
-			</div>
-			<section class="link transformer">
-				<div>
-					<span class="added amount local">+ 1 $</span>
-					<article>
-						<svg class="icon" viewBox="0 0 368 368"><use xlink:href="#svg-transformateur"></use></svg>
-						<h4>Transformateur</h4>
-					</article>
-					<span class="added amount foreign">+ 1 $</span>
-				</div>
-			</section>
-			<div>
-				<hr class="variable arrow from">
-				<section class="partial product" style="--LocalAddedValue: 5%; --ForeignAddedValue: 5%;">
-					<hr class="good arrow to">
+					<section class="link manufacturer">
+						<div>
+							<span class="added amount local">+ 2 $</span>
+							<article>
+								<svg class="icon" viewBox="0 0 352 352"><use xlink:href="#svg-grossiste"></use></svg>
+								<h4>Grossiste</h4>
+							</article>
+							<span class="added amount foreign">+ 3 $</span>
+						</div>
+					</section>
 					<div>
-						<!-- <svg viewBox="0 0 311 425"><use xlink:href="#svg-biere"></use></svg> -->
-						<article>
-							<i class="icon beer"></i>
-							<h4>Bière</h4>
-						</article>
+						<hr class="variable arrow from">
+						<section class="partial product" style="--LocalAddedValue: 15%; --ForeignAddedValue: 15%;">
+							<hr class="good arrow to">
+							<div>
+								<!-- <svg viewBox="0 0 311 425"><use xlink:href="#svg-biere"></use></svg> -->
+								<article>
+									<i class="icon beer"></i>
+									<h4>Bière</h4>
+								</article>
+							</div>
+							<hr class="good arrow to">
+						</section>
+						<hr class="variable arrow from">
 					</div>
-					<hr class="good arrow to">
-				</section>
-				<hr class="variable arrow from">
-			</div>
-			<section class="link provider">
-				<div>
-					<span class="added amount local">+ .50 $</span>
-					<article>
-						<svg class="icon" viewBox="0 0 352 352"><use xlink:href="#svg-fournisseur"></use></svg>
-						<h4>Fournisseur</h4>
-					</article>
-					<span class="added amount foreign">+ .50 $</span>
+					<section class="link transformer">
+						<div>
+							<span class="added amount local">+ 1 $</span>
+							<article>
+								<svg class="icon" viewBox="0 0 368 368"><use xlink:href="#svg-transformateur"></use></svg>
+								<h4>Transformateur</h4>
+							</article>
+							<span class="added amount foreign">+ 1 $</span>
+						</div>
+					</section>
+					<div>
+						<hr class="variable arrow from">
+						<section class="partial product" style="--LocalAddedValue: 5%; --ForeignAddedValue: 5%;">
+							<hr class="good arrow to">
+							<div>
+								<!-- <svg viewBox="0 0 311 425"><use xlink:href="#svg-biere"></use></svg> -->
+								<article>
+									<i class="icon beer"></i>
+									<h4>Bière</h4>
+								</article>
+							</div>
+							<hr class="good arrow to">
+						</section>
+						<hr class="variable arrow from">
+					</div>
+					<section class="link provider">
+						<div>
+							<span class="added amount local">+ .50 $</span>
+							<article>
+								<svg class="icon" viewBox="0 0 352 352"><use xlink:href="#svg-fournisseur"></use></svg>
+								<h4>Fournisseur</h4>
+							</article>
+							<span class="added amount foreign">+ .50 $</span>
+						</div>
+					</section>
 				</div>
-			</section>
-		</div>
-		<hr class="foreign">
-		<section class="total foreign amount">
-			<h4>valeur étrangère</h4>
-			<span class="amount foreign">4.50 $</span>
+				<hr class="foreign">
+				<section class="total foreign amount">
+					<h4>valeur étrangère</h4>
+					<span class="amount foreign">4.50 $</span>
+				</section>
+			</article>
 		</section>
-	</article>
+	</main>
 	
 
 
@@ -149,12 +293,12 @@
 
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 
-	<svg class="svg">
+	<svg class="svg" style="position:absolute; width:0; height:0; overflow: hidden;">
 		<clipPath id="beer-clip-path" clipPathUnits="objectBoundingBox">
 	 		<path d="M0.121,0.791 c-0.033,0,-0.06,-0.02,-0.06,-0.044 l0,-0.277 c0,-0.024,0.027,-0.044,0.06,-0.044 l0.152,0 l0,-0.05 l-0.241,0 c-0.018,0,-0.032,0.01,-0.032,0.023 l0,0.418 c0,0.013,0.014,0.023,0.032,0.023 l0.241,0 l0,-0.05 l-0.152,0 m0.203,-0.642 l0.662,0 c-0.022,-0.04,-0.061,-0.053,-0.119,-0.052 c-0.03,-0.061,-0.094,-0.098,-0.184,-0.098 c-0.091,0,-0.15,0.035,-0.183,0.095 c-0.075,-0.017,-0.15,-0.004,-0.176,0.054 m-0.005,0.089 l0.681,0 l0,-0.049 l-0.681,0 l0,0.049 m0,0.076 l0.681,0 l0,-0.042 l-0.681,0 l0,0.042 m0.573,0.034 l0,0.493 l0.108,0 l0,-0.493 l-0.108,0 m-0.119,0.493 l0.073,0 l0,-0.493 l-0.073,0 l0,0.493 m0.227,0.11 l-0.681,0 l0,0.049 l0.681,0 l0,-0.049 m0,-0.076 l-0.681,0 l0,0.042 l0.681,0 l0,-0.042 m-0.407,-0.527 l0,0.493 l0.134,0 l0,-0.493 l-0.134,0 m-0.119,0 l0,0.493 l0.073,0 l0,-0.493 l-0.073,0 m-0.154,0 l0,0.493 l0.108,0 l0,-0.493 l-0.108,0"/>
 		</clipPath>
 	</svg>
-	<div id="icon-symbols">
+	<div id="icon-symbols" style="position:absolute; width:0; height:0; overflow: hidden;">
 		<svg xmlns="http://www.w3.org/2000/svg">
 			<symbol viewBox="0 0 280 244" id="svg-consommateur">
 			  <g>
