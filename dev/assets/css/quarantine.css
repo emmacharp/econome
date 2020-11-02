@@ -7,13 +7,27 @@
 	--Foreign: var(--red);
 }
 
-body {
+/*body {
 	margin-left: auto;
 	margin-right: auto;
-}
+}*/
 
 h1 {
 	margin-bottom: calc(var(--Row) * 4);
+}
+
+main>section>section {
+	color: blue;
+	column-width: calc(var(--Row) * 12);
+	column-gap: var(--Gutter);
+	column-count: 8;
+	max-width: calc(var(--Row) * 32);
+	margin-left: auto;
+	margin-bottom: var(--Row);
+}
+
+main>section>section>* {
+	margin-top: 0;
 }
 
 hr {
@@ -25,373 +39,61 @@ hr {
 	overflow: visible;
 }
 
-hr.arrow {
-	--ArrowLine:  2px solid currentColor;
+main>section {
+	background-image:
+	 	linear-gradient(to right, transparent calc(100% - 1px), rgba(0,0,0,.1) 0),
+	/* grille de ligne de base typographique */
+		linear-gradient(to bottom, transparent calc(100% - 1px), rgba(0,0,0,.1) 0);
+	background-size: 
+	/* dimensions de la grille de ligne de base typographique */
+		var(--Row) 100%, 100% var(--Row);
+		/*background-position: center center;*/
 }
 
-hr.arrow.right {
-	justify-content: flex-end;
-}
-
-hr.arrow.left {
-	justify-content: flex-start;
-}
-
-hr.arrow::after {
-	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:serif='http://www.serif.com/' width='100%25' height='100%25' viewBox='0 0 56 33' version='1.1' xml:space='preserve' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:1.5;'%3E%3Cpath d='M3.756,26.664l22.908,-22.908l24.9,24.899' style='fill:none;stroke:%23A4A391;stroke-width:3px;'/%3E%3C/svg%3E");	
+h1, h2, h3, h4, h5, h6, p, span, strong {
 	position: relative;
 }
 
-hr.arrow.horizontal:after {
-	top: -1px;
-	width: 24px;
-}
-
-hr.arrow.left::after {
-	transform: rotate(-90deg);
-	left: -6px;
-}
-
-hr.arrow.right::after {
-	transform: rotate(90deg);
-	left: 6px;
+h1:before,
+h2:before,
+h3:before,
+h4:before,
+h5:before,
+h6:before,
+p:before,
+span:before,
+strong:before {
+	content: "";
+	background-color: white;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	display: block;
+	margin: calc(-1 * var(--Row) * (1 - var(--Amplitude)) + 1px);
+	z-index: -1;
 }
 
 .chain {
-	color: var(--lt-primary);
-	font-weight: 500;
-	font-family: 'Helvetica Neue';
-	display: inline-flex;
-}
-
-.chain>div {
-	display: flex;
-}
-
-.chain>div>* {
-	flex-direction: column;
+	background-color: white;
 }
 
 
-.chain .arrow.from {
-	justify-content: flex-end;
-}
 
-.chain .arrow.to {
-	justify-content: flex-start;
-}
+/*main>section .clip-container {
+	position: sticky;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	clip: rect(0, auto, auto, 0);
+}*/
 
-.chain .variable.arrow {
-	align-self: stretch;
-	position: relative;
-}
-
-.chain .product {
-	align-self: stretch;
-}
-
-
-.chain .good.arrow {
-	flex-grow: 1;
-	margin: calc(var(--Gutter));
-}
-
-.chain .partial.product .icon+* {
-	opacity: 0;
-}
-
-.chain * {
-	margin: 0;
-	display: inherit;
-	justify-content: center;
-	align-items: center;
-}
-
-.chain article {
-	flex-direction: column;
-}
-
-.chain>div>* {
-	/*width: calc(100% / (var(--Grid) / 3) - var(--Gutter));*/
-}
-
-.chain>div>div {
-	flex-grow: 1;
-}
-
-.chain .local {
-	color: var(--Local);
-}
-
-.chain .total {
-	margin: auto;
-	position: relative;
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-}
-
-.chain .foreign {
-	color: var(--Foreign);
-}
-
-.chain .amount {
-	font-weight: 700;
-	--ScaleLevel: var(--Taller);
-}
-
-.chain section>div *+* {
-	margin-top: calc(var(--Row) / 2);
-}
-
-.chain .product .icon {
-	--TotalAddedValue: calc(var(--LocalAddedValue) + var(--ForeignAddedValue));
-	width: calc(var(--Row) * 4 * .75);
-	background-color: var(--ltr-primary);
-	background-image: 
-		linear-gradient(to top, 
-			var(--Foreign) 0, 
-			var(--Foreign) var(--ForeignAddedValue), 
-			var(--Local)  var(--ForeignAddedValue), 
-			var(--Local) var(--TotalAddedValue), 
-			transparent var(--TotalAddedValue), transparent 100%);
-	clip-path: url(#beer-clip-path);
-}
-
-.chain .icon {
-	height: calc(var(--Row) * 4);
-	fill: currentColor;
-	color: var(--ltr-primary);
-}
-
-.chain .consumer svg {
-	height: calc(var(--Row) * 2.5);
+main>section .chain {
+	/*position: fixed;*/
+	/*bottom: 0;
+	left:0;*/
 }
 
 
-/* Diagramme Horizontal */
-@media (orientation: landscape) {
-	.chain {
-		flex-direction: column;
-	}
-
-	.chain>hr {
-		margin-left: calc(100% / (var(--Grid) / 3));
-	}
-
-	.chain>div {
-		flex-direction: row;
-		margin-top: calc(var(--Row) * 1.75);
-		margin-bottom: calc(var(--Row) * 1.75);
-	}
-
-	.chain section>div,
-	.chain div>div {
-		flex-direction: column;
-		align-self: stretch;
-	}
-
-	.chain .total {
-		left: calc(100% / (var(--Grid) / 3) / 2);
-	}
-
-	.chain .total:first-child {
-		flex-direction: column-reverse;
-		margin-bottom: calc(-1 * var(--Row) * .5);
-	}
-
-	.chain .total:first-child .amount {
-		margin-bottom: calc(var(--Row) / 2);
-	}
-
-	.chain .total:last-child {
-		margin-top: calc(-1 * var(--Row) * .5);
-	}
-
-	.chain .total:last-child .amount {
-		margin-top: calc(var(--Row) / 2);
-	}
-
-	.chain .total>:first-child {
-		color: white;
-		padding: 0 calc(var(--Row) / 2);
-		border-radius: 8px;
-	}
-
-	.chain .total.local>:first-child {
-		background-color: var(--Local);
-	}
-
-	.chain .total.foreign>:first-child {
-		background-color: var(--Foreign);
-	}
-
-	.chain .link .amount {
-		margin-left: var(--Gutter);
-		margin-right: var(--Gutter);
-	}
-
-	.chain .arrow {
-		border-top:  var(--ArrowLine);
-		margin-bottom: -1px;
-		margin-top: -1px;
-	}
-
-	.chain .arrow:after {
-		top: -1px;
-		width: 24px;
-	}
-
-	.chain .arrow.to::after {
-		transform: rotate(-90deg);
-		left: -6px;
-	}
-
-	.chain .arrow.from::after {
-		transform: rotate(90deg);
-		left: 6px;
-	}
-
-	.chain .good.arrow {
-		flex-basis: calc(100% / 3 - var(--Gutter));
-	}
-
-	.chain .variable.arrow:first-of-type {
-		margin-top: calc(var(--Row) / 2);
-	}
-
-	.chain .variable.arrow:last-of-type {
-		margin-bottom: calc(var(--Row) / 2);
-		top: calc(var(--Row) / 6);
-	}
-
-	.chain .product {
-		flex-grow: 1;
-	}
-
-	.chain .icon.beer+* {
-		position: relative;
-		left: 11px;
-	}
-
-	.chain .icon+* {
-		margin-left: calc(-1 * var(--Gutter));
-		margin-right: calc(-1 * var(--Gutter));
-	}
-}
-
-
-/* Diagramme Vertical */
-
-@media (orientation: portrait) {
-	.chain {
-		flex-direction: row;
-		font-size: 16px;
-		justify-content: center;
-		position: relative;
-	}
-
-	.chain hr {
-		height: auto;
-		max-height: initial;
-	}
-
-	.chain>hr {
-		margin-top: calc(var(--Row) * 4);
-	}
-
-	.chain>div {
-		flex-direction: column;
-	}
-
-	.chain article {
-		min-width: calc(var(--Row) * 9);
-	}
-
-	.chain section>div,
-	.chain div>div {
-		flex-direction: row;
-		flex-shrink: 0;
-	}
-
-	.chain .total {
-		position: absolute;
-		bottom: 0;
-		flex-direction: column-reverse;
-	}
-
-	.chain .total:last-child {
-		right: 0;
-	}
-
-	.chain .total:first-child {
-		left: 0;
-	}
-
-	.chain .total .amount {
-		margin-top: calc(var(--Row) / 2);
-	}
-
-	.chain .link .amount {
-		margin-top: var(--Gutter);
-		margin-bottom: var(--Gutter);
-	}
-
-	.chain .arrow {
-		border-top: 0;
-		border-left:  var(--ArrowLine);
-		margin-left: -1px;
-		margin-right: -1px;
-		flex-direction: column;
-		align-items: center;
-		width: 0;
-	}
-
-	.chain .variable.arrow {
-		align-self: stretch;
-	}
-
-	.chain .good.arrow {
-		height: var(--Row);
-		flex-shrink: 0;
-	}
-
-	.chain .arrow:after {
-		left: -1px;
-		width: 24px;
-	}
-
-	.chain .arrow.to::after {
-		top: -4px;
-	}
-
-	.chain .arrow.from::after {
-		transform: rotate(180deg);
-		top: 2px;
-	}
-
-	.chain .product {
-		flex-direction: column;
-	}
-
-	.chain .icon.beer {
-		left: -10px;
-		position: relative;
-	}
-
-	.chain .product article {
-		margin-left: calc(var(--Gutter) * 2);
-		margin-right: calc(var(--Gutter) * 2);
-	}
-
-	.chain .variable.arrow {
-		min-height: 100%;
-		position: relative;
-		margin-top: calc(-1 * var(--Row) * 1.5);
-		margin-bottom: calc(-1 * var(--Row) * 1.5);
-	}
-
-	.chain .partial.product .icon+* {
-		display: none;
-	}
-}
