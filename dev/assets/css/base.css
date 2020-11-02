@@ -1,8 +1,8 @@
 /* Contexte du corps de la page ----------------------- */
 
 	body {
-		width: calc(100% - (var(--Gutter) * 2));
-		max-width: calc(var(--MaxBodyWidth) - (var(--Gutter) * 2)); }
+		width: var(--BodyWidth, auto);
+		max-width: var(--MaxBodyWidth, initial); }
 
 
 /* Rythme des contenus ----------------------- */
@@ -15,6 +15,10 @@
 
 
 /* Styles génériques de base ----------------------- */
+
+	/* Assurer que les balises racines occupent
+		au minimum la hauteur complète de la fenêtre */
+	html, body { height: 100%; }
 	
 	/* Établir le document entier comme
 		contexte de positionnement absolu */
@@ -27,7 +31,7 @@
 	* { font-weight: inherit; }
 
 	/* Appliquer la taille de caractère de base choisie */
-	html { font-size: var(--BaseFontSize, 16px); }
+	* { font-size: var(--BaseFontSize, 16px); }
 	
 	/* Tailles typographiques et 
 		interlignage de base */
