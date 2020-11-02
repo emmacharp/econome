@@ -1,0 +1,31 @@
+hr.arrow {
+	--ArrowLine:  2px solid currentColor;
+}
+
+hr.arrow.right {
+	justify-content: flex-end;
+}
+
+hr.arrow.left {
+	justify-content: flex-start;
+}
+
+hr.arrow::after {
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:serif='http://www.serif.com/' width='100%25' height='100%25' viewBox='0 0 56 33' version='1.1' xml:space='preserve' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:1.5;'%3E%3Cpath d='M3.756,26.664l22.908,-22.908l24.9,24.899' style='fill:none;stroke:%23A4A391;stroke-width:4px;'/%3E%3C/svg%3E");	
+	position: relative;
+}
+
+hr.arrow.horizontal:after {
+	top: -1px;
+	width: 24px;
+}
+
+hr.arrow.left::after {
+	transform: rotate(-90deg);
+	left: -6px;
+}
+
+hr.arrow.right::after {
+	transform: rotate(90deg);
+	left: 6px;
+}
