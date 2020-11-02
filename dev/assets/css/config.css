@@ -8,13 +8,17 @@
 /* Configuration maîtresse ----------------------- */
 	
 	:root {
+		--BodyWidth: auto;
+		--MaxBodyWidth: initial;
 		--Grid: 3;
 		--Row: 1.5625rem; /* Ratio pour des facteurs de 4 seulement */
 		--Gutter: calc(var(--Row));
-		--BaseFontSize: clamp(12px, 1vw, 16px);
+		--MinFontSize: 12px;
+		--MidFontSize: .8vw;
+		--MaxFontSize: 16px;
+		--BaseFontSize: clamp(var(--MinFontSize), var(--MidFontSize), var(--MaxFontSize));
 		--Size: 1; /* Facteur de modification de la typographie pouvant être appliquer à même les composants */
 		--Scale: var(--MajorSecond);
-		--MaxBodyWidth: 100%;
 		--Amplitude: .375; /* Envergure générale de l'échelle typographique choisie. Influence le calcul de la hauteur de ligne. */
 		--FontFactor: 1; /* Facteur de modification en fonction de la taille relative d'une police choisie */
 		--BaseFontStack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -34,7 +38,7 @@
 	@media (min-width: 40em) { :root { --Grid: 6; --Gutter: var(--Row); } }
 	@media (min-width: 60em) { :root { --Grid: 10; } }
 	@media (min-width: 80em) { :root { --Grid: 11; } }
-	@media (min-width: 100em) { :root { --Grid: 12; --Gutter: calc(var(--Row) * 1.5); } }
+	@media (min-width: 100em) { :root { --Grid: 12; } }
 
 
 /* Typographie basée sur les polices système ----------------------- */
