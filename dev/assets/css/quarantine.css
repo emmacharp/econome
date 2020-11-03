@@ -12,6 +12,35 @@
 	margin-right: auto;
 }*/
 
+body {
+	display: flex;
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+	width: var(--Row);
+	padding: var(--Row);
+	border-right: 1px solid rgba(0,0,0,.1);
+	justify-content: center;
+	align-items: center;
+	background-color: grey;
+	background-clip: content-box;
+}
+
+nav a {
+	font-size: 0;
+	width: calc(var(--Row) * 1);
+	height: calc(var(--Row) * 1);
+	border: calc(var(--Row) * .25) solid grey;
+	background-color: grey;
+	border-radius: 50%;
+}
+
+nav a.is-visible {
+	background-color: yellow;
+}
+
 h1 {
 	margin-bottom: calc(var(--Row) * 4);
 }
