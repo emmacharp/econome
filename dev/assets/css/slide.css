@@ -1,13 +1,28 @@
-html, body {
-	scroll-behavior: smooth;
-}
+/* Patron de composition somme toute glitchy.
+	Plusieurs incongruités internavigateurs.
+	Chromium se comporte le mieux.
+	Firefox présente des difficultés de support
+	du défilement avec la barre d'espacement,
+	notamment au défilement vers le haut.
+	Safari est le pire. */
 
+
+body {
+
+	/* <body> ne peut pas être « flex »
+		pour que Safari accepte le sticky
+		dans <main> */
+	display: block;
+	/* Previent le glitchy bouncing
+		dans Safari */
+	overflow: hidden;
+}
 
 main {
 	height: 100%;
 	display: flex;
-	width: 100vw;
 	overflow: auto;
+	scroll-behavior: smooth;
 }
 
 main>section {
@@ -16,11 +31,53 @@ main>section {
 	flex-shrink: 0;
 	scroll-snap-align: start;
 	box-sizing: border-box;
-	position: sticky;
 	padding: var(--Gutter);
 	background-color: white;
-
 	overflow: auto;
+}
+
+/* Un bug Safari empêche le bon défilement
+	scroll-snap avec sticky. Sticky seulement
+	sur les ordinateurs donc. */
+@media (hover: hover) {
+	main>section {
+		position: sticky;
+	}
+}
+
+@media (hover: hover) and (orientation: landscape) {
+	main>section {
+		top: 0;
+		box-shadow: -10px 0px 14px rgba(0,0,0,.2);
+	}
+}
+
+@media (hover: hover) and (orientation: portrait) {
+	main>section {
+		left: 0;
+		box-shadow: 0px -10px 14px rgba(0,0,0,.2);
+	}
+}
+
+@media (orientation: landscape) {
+	/* Alternative au « flex ». 
+		Voir ci-haut sur <body>. */
+	nav { float: left; }
+}
+
+@media (orientation: portrait) {
+	/* On oublie le sticky sur Safari
+		ici. Peu de cas d'usage où
+		il fonctionnerait de toute façon. */
+	body { 
+		display: flex;
+		flex-direction: column;
+	}
+	
+	main { 
+		order: -1;
+		flex-grow: 1;
+	}
 }
 
 @media (hover: none) {
@@ -32,12 +89,7 @@ main>section {
 @media (orientation: portrait) {
 	main {
 		flex-direction: row;
-		scroll-snap-type: x mandatory;
-	}
-
-	main>section {
-		box-shadow: 0px -10px 14px rgba(0,0,0,.2);
-		left: 0;
+		scroll-snap-type: x proximity;
 	}
 }
 
@@ -45,10 +97,5 @@ main>section {
 	main {
 		flex-direction: column;
 		scroll-snap-type: y proximity;
-	}
-
-	main>section {
-		box-shadow: -10px 0px 14px rgba(0,0,0,.2);
-		top: 0;
 	}
 }
