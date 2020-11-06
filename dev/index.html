@@ -7,11 +7,15 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-<!-- 	<link rel="stylesheet" href="assets/css/system.css">
+	<link rel="stylesheet" href="assets/css/system.css">
 	<link rel="stylesheet" href="assets/css/config.css">
 	<link rel="stylesheet" href="assets/css/base.css">
-	<link rel="stylesheet" href="assets/css/utilities.css">
-	<link rel="stylesheet" href="assets/css/quarantine.css"> -->
+	<!-- <link rel="stylesheet" href="assets/css/utilities.css"> -->
+	<link rel="stylesheet" href="assets/css/quarantine.css">
+	<link rel="stylesheet" href="assets/css/chain.css">
+	<link rel="stylesheet" href="assets/css/arrows.css">
+	<!-- <link rel="stylesheet" href="assets/css/p-stacking_slides.css"> -->
+
 
 	<link rel="stylesheet" href="assets/css/main.css">
 
@@ -746,48 +750,49 @@
 		</svg>
 	</div>
 	<script>
-		const sections = [...document.querySelectorAll("main>section")];
-		const anchors = [...document.querySelectorAll("nav>a")];
+		const onAnchorClick = (e) => {
+			const index = [...anchors].indexOf(e.target);
 
-		let options = {
-		  rootMargin: "0px",
-		  threshold: 0.25
-		};
+			document.querySelector("main").scrollTo({
+				left: index * window.innerWidth,
+				top: index * window.innerHeight
+			});
+		}
 
-		const callback = (entries, observer) => {
-		  entries.forEach(entry => {
+		// Set Elements
+		const sections = document.querySelectorAll("main>section");
+		const anchors = document.querySelectorAll("nav>a");
+
+		// Init Observer
+		const threshold = 0.25;
+		const observer = new IntersectionObserver((entries, observer) => {
+			entries.forEach((entry) => {
 				const { intersectionRatio, target } = entry;
-				const slideIndex = sections.indexOf(target);
+				const sectionIndex = [...sections].indexOf(target);
 
-				if (intersectionRatio >= 0.25) {
-					target.classList.add("is-visible");
-					anchors[slideIndex].classList.add("is-visible");
+				if (
+					intersectionRatio >= threshold
+					|| (intersectionRatio < threshold && target.classList.contains("is-visible"))
+				) {
+					target.classList.toggle("is-visible");
+					if (anchors.length) anchors[sectionIndex].classList.toggle("is-visible");
 
 					if(target.previousElementSibling !== null) {
-						const previousSlide = target.previousElementSibling;
-
-						previousSlide.classList.remove("is-visible");
-						anchors[slideIndex - 1].classList.remove("is-visible");
-					}
-				} else {
-					if(target.classList.contains("is-visible")){
-						target.classList.remove("is-visible");
-						anchors[slideIndex].classList.remove("is-visible");
-
-						if(target.previousElementSibling !== null) {
-							const previousSlide = target.previousElementSibling;
-
-							previousSlide.classList.add("is-visible");
-							anchors[slideIndex - 1].classList.add("is-visible");
-						}
+						target.previousElementSibling.classList.toggle("is-visible");
+						if (anchors.length) anchors[sectionIndex - 1].classList.toggle("is-visible");
 					}
 				}
-		  });
-		};
+			});
+		}, {
+			threshold
+		});
+		sections.forEach((el, index) => {
+			observer.observe(el);
+		});
 
-		const observer = new IntersectionObserver(callback, options);
-		sections.forEach((section, index) => {
-		  observer.observe(section);
+		// Nav Events
+		anchors.forEach((el) => {
+			el.addEventListener("click", onAnchorClick);
 		});
 	</script>
 	<!-- <link rel="stylesheet" href="assets/css/dev.css"> -->
