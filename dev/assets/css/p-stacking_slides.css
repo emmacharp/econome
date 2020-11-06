@@ -6,8 +6,11 @@
 	notamment au défilement vers le haut.
 	Safari est le pire. */
 
-
 body {
+	/* Contexte vertical nécessaire
+		pour assurer une hauteur de fenêtre
+		pour toute « slide ». */
+	height: 100%;
 
 	/* <body> ne peut pas être « flex »
 		pour que Safari accepte le sticky
