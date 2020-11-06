@@ -14,18 +14,51 @@
 
 body {
 	display: flex;
+	align-items: flex-start;
+}
+
+main>section {
+	padding: var(--Gutter);
+}
+
+main {
+	flex-grow: 1;
 }
 
 nav {
-	display: flex;
+	display: inline-flex;
 	flex-direction: column;
 	width: var(--Row);
+	height: calc(100vh - var(--Row) * 2);
 	padding: var(--Row);
 	border-right: 1px solid rgba(0,0,0,.1);
 	justify-content: center;
 	align-items: center;
 	background-color: grey;
 	background-clip: content-box;
+	position: sticky;
+	top: 0;
+
+}
+
+@media (orientation: portrait) {
+	body {
+		flex-direction: column;
+	}
+	nav {
+		order: 1;
+		flex-shrink: 0;
+		flex-direction: row;
+		width: auto;
+		height: var(--Row);
+	}
+	main {
+		flex-basis: 0;
+		flex-grow: 1;
+	}
+	nav a {
+		flex-shrink: 0;
+	}
 }
 
 nav a {
