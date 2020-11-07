@@ -749,52 +749,7 @@
 			</symbol>
 		</svg>
 	</div>
-	<script>
-		const onAnchorClick = (e) => {
-			const index = [...anchors].indexOf(e.target);
-
-			document.querySelector("main").scrollTo({
-				left: index * window.innerWidth,
-				top: index * window.innerHeight
-			});
-		}
-
-		// Set Elements
-		const sections = document.querySelectorAll("main>section");
-		const anchors = document.querySelectorAll("nav>a");
-
-		// Init Observer
-		const threshold = 0.25;
-		const observer = new IntersectionObserver((entries, observer) => {
-			entries.forEach((entry) => {
-				const { intersectionRatio, target } = entry;
-				const sectionIndex = [...sections].indexOf(target);
-
-				if (
-					intersectionRatio >= threshold
-					|| (intersectionRatio < threshold && target.classList.contains("is-visible"))
-				) {
-					target.classList.toggle("is-visible");
-					if (anchors.length) anchors[sectionIndex].classList.toggle("is-visible");
-
-					if(target.previousElementSibling !== null) {
-						target.previousElementSibling.classList.toggle("is-visible");
-						if (anchors.length) anchors[sectionIndex - 1].classList.toggle("is-visible");
-					}
-				}
-			});
-		}, {
-			threshold
-		});
-		sections.forEach((el, index) => {
-			observer.observe(el);
-		});
-
-		// Nav Events
-		anchors.forEach((el) => {
-			el.addEventListener("click", onAnchorClick);
-		});
-	</script>
+	<script src="assets/js/main.js"></script>
 	<!-- <link rel="stylesheet" href="assets/css/dev.css"> -->
 </body>
 </html>
