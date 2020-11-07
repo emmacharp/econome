@@ -3,6 +3,8 @@
 	font-weight: 500;
 	font-family: 'Helvetica Neue';
 	display: inline-flex;
+	padding: var(--Row);
+
 }
 
 .chain>div {
@@ -87,7 +89,7 @@
 
 .chain .product .icon {
 	--TotalAddedValue: calc(var(--LocalAddedValue) + var(--ForeignAddedValue));
-	width: calc(var(--Row) * 4 * .75);
+	width: calc(var(--IconHeight) * .75);
 	background-color: var(--ltr-primary);
 	background-image: 
 		linear-gradient(to top, 
@@ -100,9 +102,11 @@
 }
 
 .chain .icon {
-	height: calc(var(--Row) * 4);
+	--IconHeight: calc(var(--Row) * 3);
+	height: var(--IconHeight);
 	fill: currentColor;
 	color: var(--ltr-primary);
+	padding: calc(var(--Row) * .25);
 }
 
 .chain .consumer svg {
@@ -114,17 +118,17 @@
 @media (orientation: landscape) {
 	.chain {
 		flex-direction: column;
-		width: 100%;
 	}
 
 	.chain>hr {
 		margin-left: calc(100% / (var(--Grid) / 3));
+		margin-bottom: -2px;
 	}
 
 	.chain>div {
 		flex-direction: row;
-		margin-top: calc(var(--Row) * 1.75);
-		margin-bottom: calc(var(--Row) * 1.75);
+		margin-top: calc(var(--Row) * 1.5);
+		margin-bottom: calc(var(--Row) * 1.5);
 	}
 
 	.chain section>div,
@@ -156,7 +160,7 @@
 
 	.chain .total>:first-child {
 		color: white;
-		padding: calc(var(--Row) / 8) calc(var(--Row) / 2) calc(var(--Row) / 4);
+		padding: calc(var(--Row) / 4) calc(var(--Row) / 2) calc(var(--Row) / 4);
 		border-radius: 8px;
 	}
 
@@ -175,8 +179,8 @@
 
 	.chain .arrow {
 		border-top:  var(--ArrowLine);
-		margin-bottom: -1px;
-		margin-top: -1px;
+		margin-bottom: calc(-1 * var(--ArrowLine));
+		margin-top: calc(-1 * var(--ArrowLine));
 	}
 
 	.chain .arrow:after {
