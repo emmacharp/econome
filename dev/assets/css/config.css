@@ -10,17 +10,17 @@
 	:root {
 		--BodyWidth: auto;
 		--MaxBodyWidth: initial;
-		--Grid: 3;
-		--Row: 1.5625rem; /* Ratio pour des facteurs de 4 seulement */
+
 		--Gutter: calc(var(--Row));
+		
+		--RowFactor: 1.5625; /* Ratio pour des facteurs de 4 seulement */
+		--RowUnit: 1rem;
+
 		--MinFontSize: 12px;
 		--MidFontSize: .8vw;
 		--MaxFontSize: 16px;
-		--BaseFontSize: clamp(var(--MinFontSize), var(--MidFontSize), var(--MaxFontSize));
-		--Size: 1; /* Facteur de modification de la typographie pouvant être appliquer à même les composants */
-		--Scale: var(--MajorSecond);
-		--Amplitude: .375; /* Envergure générale de l'échelle typographique choisie. Influence le calcul de la hauteur de ligne. */
-		--FontFactor: 1; /* Facteur de modification en fonction de la taille relative d'une police choisie */
+		--FontUnit: 1em;
+
 		--BaseFontStack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 		--TitleFontStack: "Avenir Next";
 	}
@@ -28,6 +28,7 @@
 
 /* Adaptation de la typographie ----------------------- */
 	
+	@media all { :root { --Scale: var(--MajorSecond); --Amplitude: .375; } }
 	@media (min-width: 40em) { :root { --Scale: var(--MajorThird); --Amplitude: .675; } }
 	@media (min-width: 60em) { :root { --Scale: var(--PerfectFourth); --Amplitude: .75; } }
 	@media (min-width: 80em) { :root { --Scale: var(--AugmentedFourth); --Amplitude: 1; } }
@@ -35,7 +36,8 @@
 
 /* Adaptation de la grille ----------------------- */
 	
-	@media (min-width: 40em) { :root { --Grid: 6; --Gutter: var(--Row); } }
+	@media all { :root { --Grid: 3; } }
+	@media (min-width: 40em) { :root { --Grid: 6; } }
 	@media (min-width: 60em) { :root { --Grid: 10; } }
 	@media (min-width: 80em) { :root { --Grid: 11; } }
 	@media (min-width: 100em) { :root { --Grid: 12; } }
@@ -54,22 +56,22 @@
 
 	* { 
 		--ScaleLevel: var(--Base);
-		--RowFactor: 1; }
+		--RowSpan: 1; }
 	h1 { 
 		--ScaleLevel: var(--Huge);  
-		--RowFactor: max(1, calc(3 * var(--Amplitude))); }
+		--RowSpan: max(1, calc(3 * var(--Amplitude))); }
 	h2 { 
 		--ScaleLevel: var(--Tallest);
-		--RowFactor: max(1, calc(2 * var(--Amplitude))); }
+		--RowSpan: max(1, calc(2 * var(--Amplitude))); }
 	h3 { 
 		--ScaleLevel: var(--Taller);
-		--RowFactor: max(1, calc(1.5 * var(--Amplitude))); }
+		--RowSpan: max(1, calc(1.5 * var(--Amplitude))); }
 	h4 { 
 		--ScaleLevel: var(--Tall);
-		--RowFactor: max(1, calc(1 * var(--Amplitude))); }
+		--RowSpan: max(1, calc(1 * var(--Amplitude))); }
 	h5 { 
 		--ScaleLevel: var(--Base);
-		--RowFactor: max(1, calc(1 * var(--Amplitude))); }
+		--RowSpan: max(1, calc(1 * var(--Amplitude))); }
 	h6 { 
 		--ScaleLevel: var(--Short);
-		--RowFactor: max(1, calc(1 * var(--Amplitude))); }
+		--RowSpan: max(1, calc(1 * var(--Amplitude))); }

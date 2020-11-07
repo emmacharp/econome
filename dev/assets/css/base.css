@@ -1,19 +1,3 @@
-/* Contexte du corps de la page ----------------------- */
-
-	body {
-		width: var(--BodyWidth, auto);
-		max-width: var(--MaxBodyWidth, initial); }
-
-
-/* Rythme des contenus ----------------------- */
-	
-	*+p, *+img, *+hr, *+ul,
-	*+h1, *+h2, *+h3, *+h4, *+h5, *+h6 {
-		margin-top: var(--Row); }
-	
-	*+li { margin-top: calc(var(--Row) / 2); }
-
-
 /* Styles génériques de base ----------------------- */
 
 	/* Assurer que les balises racines occupent
@@ -30,16 +14,6 @@
 
 	/* Laisser les graisses être héritées */
 	* { font-weight: inherit; }
-
-	/* Appliquer la taille de caractère de base choisie */
-	* { font-size: var(--BaseFontSize, 16px); }
-	
-	/* Tailles typographiques et 
-		interlignage de base */
-	p, ul, li, span,
-	h1, h2, h3, h4, h5, h6 {
-		line-height: calc(var(--Row) * var(--RowFactor) * var(--Size));
-		font-size: calc(var(--Size) * var(--ScaleLevel) * var(--FontFactor) * 1em); }
 	
 	/* Restreindre les images aux dimensions
 		de leur parent. Éviter l'espace de 
