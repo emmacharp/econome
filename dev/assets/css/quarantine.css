@@ -7,18 +7,27 @@
 	--Foreign: var(--red);
 }
 
-/*body {
-	margin-left: auto;
-	margin-right: auto;
-}*/
+html {
+	background-color: white;
+}
+
+body {
+	background-color: white;
+	animation-name: fadeIn;
+	animation-duration: 200ms;
+}
 
 body {
 	display: flex;
-	align-items: flex-start;
 }
 
 main>section {
 	padding: var(--Gutter);
+	min-height: calc(100vh - var(--V_RowRest));
+	box-sizing: border-box;
+	justify-content: space-between;
+	display: flex;
+	flex-direction: column;
 }
 
 main {
@@ -34,13 +43,16 @@ nav {
 	border-right: 1px solid rgba(0,0,0,.1);
 	justify-content: center;
 	align-items: center;
-	background-color: grey;
-	background-clip: content-box;
 	position: sticky;
 	top: 0;
+	background-color: white;
 
 }
-
+@media (orientation: landscape) {
+	body {
+		align-items: flex-start;
+	}
+}
 @media (orientation: portrait) {
 	body {
 		flex-direction: column;
@@ -101,7 +113,16 @@ hr {
 	overflow: visible;
 }
 
+h1 i {
+	font-style: normal;
+	font-size: 1.3em;
+	line-height: 0;
+	position: relative;
+	top: .1625em;
+}
+
 main>section {
+	border-right: var(--H_RowRest) solid grey;
 	background-image:
 	 	linear-gradient(to right, transparent calc(100% - 1px), rgba(0,0,0,.1) 0),
 	/* grille de ligne de base typographique */
@@ -112,50 +133,24 @@ main>section {
 		/*background-position: center center;*/
 }
 
-h1, h2, h3, h4, h5, h6, p, span, strong {
+main>section {
 	position: relative;
+	z-index: 1;
 }
 
-h1:before,
-h2:before,
-h3:before,
-h4:before,
-h5:before,
-h6:before,
-p:before,
-span:before,
-strong:before {
-	content: "";
-	background-color: white;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	position: absolute;
-	display: block;
-	margin: calc(-1 * var(--Row) * (1 - var(--Amplitude)) + 1px);
-	z-index: -1;
-}
-
-.chain {
+main>section>* {
+	position: relative;
+	padding: calc(var(--Row) - 1px);
 	background-color: white;
 }
 
 
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
 
-/*main>section .clip-container {
-	position: sticky;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	clip: rect(0, auto, auto, 0);
-}*/
-
-main>section .chain {
-	/*position: fixed;*/
-	/*bottom: 0;
-	left:0;*/
+	to {
+		opacity: 1;
+	}
 }
-
-
