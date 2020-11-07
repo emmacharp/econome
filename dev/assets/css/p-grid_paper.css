@@ -1,0 +1,17 @@
+main>section {
+	border-right: var(--H_RowRest) solid grey;
+	background-image:
+	 	linear-gradient(to right, transparent calc(100% - 1px), rgba(0,0,0,.1) 0),
+	/* grille de ligne de base typographique */
+		linear-gradient(to bottom, transparent calc(100% - 1px), rgba(0,0,0,.1) 0);
+	background-size: 
+	/* dimensions de la grille de ligne de base typographique */
+		var(--Row) 100%, 100% var(--Row);
+		/*background-position: center center;*/
+}
+
+main>section>* {
+	position: relative;
+	padding: calc(var(--Row) - 1px);
+	background-color: var(--ColorBg);
+}
