@@ -63,7 +63,7 @@
 }
 
 .chain .local {
-	color: var(--Local);
+	color: var(--ColorLocal);
 }
 
 .chain .total {
@@ -75,7 +75,7 @@
 }
 
 .chain .foreign {
-	color: var(--Foreign);
+	color: var(--ColorForeign);
 }
 
 .chain .amount {
@@ -93,10 +93,10 @@
 	background-color: var(--ltr-primary);
 	background-image: 
 		linear-gradient(to top, 
-			var(--Foreign) 0, 
-			var(--Foreign) var(--ForeignAddedValue), 
-			var(--Local)  var(--ForeignAddedValue), 
-			var(--Local) var(--TotalAddedValue), 
+			var(--ColorForeign) 0, 
+			var(--ColorForeign) var(--ForeignAddedValue), 
+			var(--ColorLocal)  var(--ForeignAddedValue), 
+			var(--ColorLocal) var(--TotalAddedValue), 
 			transparent var(--TotalAddedValue), transparent 100%);
 	clip-path: url(#beer-clip-path);
 }
@@ -165,11 +165,11 @@
 	}
 
 	.chain .total.local>:first-child {
-		background-color: var(--Local);
+		background-color: var(--ColorLocal);
 	}
 
 	.chain .total.foreign>:first-child {
-		background-color: var(--Foreign);
+		background-color: var(--ColorForeign);
 	}
 
 	.chain .link .amount {

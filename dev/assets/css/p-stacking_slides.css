@@ -35,7 +35,7 @@ main>section {
 	scroll-snap-align: start;
 	box-sizing: border-box;
 	padding: var(--Gutter);
-	background-color: white;
+	background-color: var(--ColorBg);
 	overflow: auto;
 }
 
