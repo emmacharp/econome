@@ -3,19 +3,20 @@
 	--ltr-primary: #D5D5D2;
 	--blue: #2B46BD;
 	--red: #FF0003;
-	--Local: var(--blue);
-	--Foreign: var(--red);
-}
+	--yellow: #FCFF9B;
 
-html {
-	background-color: white;
+	--ColorBg: white;
+	--ColorLocal: var(--blue);
+	--ColorForeign: var(--red);
 }
 
 body {
-	background-color: white;
 	animation-name: fadeIn;
-	animation-duration: 200ms;
+	animation-fill-mode: both;
+	animation-delay: 200ms;
+	animation-duration: 1000ms;
 }
+
 
 body {
 	display: flex;
@@ -28,6 +29,26 @@ main>section {
 	justify-content: space-between;
 	display: flex;
 	flex-direction: column;
+	position: relative;
+}
+
+.circle {
+	--diameter: calc(var(--Row) * 15);
+	position: absolute;
+	width: var(--diameter);
+	height: var(--diameter);
+	border-radius: 50%;
+	background-color: var(--yellow);
+	mix-blend-mode: multiply;
+	top: 0;
+	left: 0;
+	margin-left: calc(-1 * var(--diameter) / 2);
+	margin-top: calc(-1 * var(--diameter) / 2);
+}
+
+[data-parallax] {
+	transform: translateY( calc( var(--scrollParallax) * 1px ) );
+	will-change: transform;
 }
 
 main {
@@ -45,7 +66,7 @@ nav {
 	align-items: center;
 	position: sticky;
 	top: 0;
-	background-color: white;
+	background-color: var(--colorBg);
 
 }
 @media (orientation: landscape) {
@@ -119,29 +140,6 @@ h1 i {
 	line-height: 0;
 	position: relative;
 	top: .1625em;
-}
-
-main>section {
-	border-right: var(--H_RowRest) solid grey;
-	background-image:
-	 	linear-gradient(to right, transparent calc(100% - 1px), rgba(0,0,0,.1) 0),
-	/* grille de ligne de base typographique */
-		linear-gradient(to bottom, transparent calc(100% - 1px), rgba(0,0,0,.1) 0);
-	background-size: 
-	/* dimensions de la grille de ligne de base typographique */
-		var(--Row) 100%, 100% var(--Row);
-		/*background-position: center center;*/
-}
-
-main>section {
-	position: relative;
-	z-index: 1;
-}
-
-main>section>* {
-	position: relative;
-	padding: calc(var(--Row) - 1px);
-	background-color: white;
 }
 
 
