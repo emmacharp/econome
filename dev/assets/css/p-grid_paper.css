@@ -12,6 +12,14 @@ main {
 
 main>section>* {
 	position: relative;
-	padding: calc(var(--Row) - 1px);
+	padding: var(--Row);
+	padding-bottom: calc(var(--Row) - 1px);
+	padding-right: calc(var(--Row) - 1px);
 	background-color: var(--ColorBg);
+	width: max-content;
+}
+
+
+main>section>*+* {
+	margin-top: calc(var(--Row) + 1px);
 }
