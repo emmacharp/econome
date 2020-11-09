@@ -41,7 +41,6 @@
 		items.forEach((entry) => {
 			const { intersectionRatio, target } = entry;
 			const sectionIndex = [...sections].indexOf(target);
-			console.log(target, items, observer);
 			if (intersectionRatio >= observer.thresholds[0]) {
 				target.classList.add('is-visible');
 				if (anchors.length) anchors[sectionIndex].classList.add('is-visible');
@@ -117,10 +116,8 @@
 		});
 
 		// Parallax Event Handler
-		setParallaxData();
 		const parallaxEventHandler = () => requestAnimationFrame(setParallaxData);
-		window.addEventListener('resize', parallaxEventHandler);
-		window.addEventListener('scroll', parallaxEventHandler);
+		const scrollInterval = setInterval(parallaxEventHandler, 10);
 	});
 
 })();
