@@ -55,7 +55,7 @@
 	const setParallaxData = () => {
 		[...parallaxItems].filter(el => el.classList.contains('is-visible')).forEach((el) => {
 			const e = el;
-			const eH = e.offsetHeight;
+			const eH = e.offsetHeight || e.getBBox().height;
 			const wH = window.innerHeight;
 			const curScroll = (e.getBoundingClientRect().top - wH) * -1;
 			const toScroll = eH + wH;
