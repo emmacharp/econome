@@ -1,13 +1,34 @@
 :root {
 	--lt-primary: #A4A391;
 	--ltr-primary: #D5D5D2;
+	--brown: #59551D;
 	--blue: #2B46BD;
+	--lt-blue: #EAEEFD;
 	--red: #FF0003;
 	--yellow: #FCFF9B;
+	--purple: #5F006C;
 
 	--ColorBg: white;
+	--ColorText: var(--brown);
 	--ColorLocal: var(--blue);
 	--ColorForeign: var(--red);
+	--ColorSupport: var(--purple);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+@media (orientation: portrait) {
+	html {
+		scroll-snap-type: x proximity;
+	}
+}
+
+@media (orientation: landscape) {
+	html {
+		scroll-snap-type: y proximity;
+	}
 }
 
 body {
@@ -16,25 +37,36 @@ body {
 
 main>section {
 	padding: var(--Gutter);
-	min-height: calc(100vh - var(--V_RowRest));
+	min-height: calc(100vh + var(--Row) - var(--V_RowRest));
 	box-sizing: border-box;
-	justify-content: space-between;
+	/*justify-content: space-between;*/
 	display: flex;
 	flex-direction: column;
 	position: relative;
 	overflow: hidden;
+	scroll-snap-align: start;
+}
+
+main>section>section {
+	color: blue;
+	column-width: calc(var(--Row) * 12);
+	column-gap: var(--Gutter);
+	column-count: 8;
+	max-width: calc(var(--Row) * 32);
+	margin-bottom: var(--Row);
+}
+
+main>section>section>* {
+	margin-top: 0;
 }
 
 .circle {
 	--diameter: calc(var(--Row) * 15);
-	position: absolute;
 	width: var(--diameter);
 	height: var(--diameter);
 	border-radius: 50%;
 	background-color: var(--yellow);
-	mix-blend-mode: multiply; /* ATTENTION ! performance */
-	top: 0;
-	left: 0;
+
 	margin-left: calc(-1 * var(--diameter) / 2);
 	margin-top: calc(-1 * var(--diameter) / 2);
 }
@@ -43,6 +75,12 @@ main>section {
 	transform: translate3d(0, calc( var(--scrollParallax) * 1px ), 0);
 	will-change: transform;
 	z-index: -1;
+	position: absolute;
+	top: var(--Top, auto);
+	left: var(--Left, auto);
+	right: var(--Right, auto);
+	bottom: var(--Bottom, auto);
+	mix-blend-mode: multiply; /* ATTENTION ! performance */
 }
 
 main {
@@ -60,7 +98,7 @@ nav {
 	align-items: center;
 	position: sticky;
 	top: 0;
-	background-color: var(--colorBg);
+	background-color: var(--ColorBg);
 
 }
 @media (orientation: landscape) {
@@ -105,19 +143,6 @@ h1 {
 	margin-bottom: calc(var(--Row) * 4);
 }
 
-main>section>section {
-	color: blue;
-	column-width: calc(var(--Row) * 12);
-	column-gap: var(--Gutter);
-	column-count: 8;
-	max-width: calc(var(--Row) * 32);
-	margin-left: auto;
-	margin-bottom: var(--Row);
-}
-
-main>section>section>* {
-	margin-top: 0;
-}
 
 hr {
 	line-height: 0;
@@ -136,13 +161,115 @@ h1 i {
 	top: .1625em;
 }
 
+section[id]>* {
+	/*max-width: max-content;*/
+}
 
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
+.local {
+	--Color: var(--ColorLocal);
+}
 
-	to {
-		opacity: 1;
-	}
+.foreign {
+	--Color: var(--ColorForeign);
+}
+
+form fieldset {
+	display: flex;
+	border: none;
+	align-items: center;
+}
+
+form>*+* {
+	margin-top: calc(var(--Row) * 2);
+}
+
+fieldset>*+* {
+	margin-left: calc(var(--Row) * 4);
+}
+
+fieldset label+label {
+	margin-left: var(--Row);
+}
+
+fieldset label {
+	position: relative;
+	display: inline-block;
+	box-sizing: border-box;
+	line-height: 0;
+	color: var(--brown);
+	flex-shrink: 0;
+	text-transform: lowercase;
+}
+
+fieldset label span {
+	border: 3px solid currentColor;
+	box-shadow: 0 2px 0 0 currentColor;
+	padding: calc(var(--Row) / 4) var(--Row);
+	border-radius: 8px;
+	display: inline-block;
+	background-color: var(--ColorBg);
+	position: relative;
+}
+
+fieldset span {
+	--FontWeight: 600;
+	--ScaleLevel: var(--Tall);
+}
+
+fieldset label:not(:hover) input[type=radio]:not(:checked)~span {
+	--Color: inherit;
+}
+
+fieldset input[type=radio] {
+	appearance: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+fieldset div {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+fieldset div:before {
+	content: "";
+	width: 100%;
+	position: absolute;
+	border-top: 3px solid var(--brown);
+	margin-top: 5px;
+}
+
+fieldset input[type=radio]:checked~span,
+fieldset span:hover {
+	box-shadow: inset 0 -1px 0 1px currentColor;
+	top: 2px;
+}
+
+fieldset input[type=radio]:checked~span {
+	background-color: currentColor;
+	background-image: linear-gradient(#ffffffa0 0, #ffffffa0 100%);
+	background-blend-mode: hard-light;
+	filter: contrast(2);
+}
+
+.basket {
+	color: var(--Color);
+	width: calc(var(--Row) * 50);
+	height: calc(var(--Row) * 50);
+}
+
+.basket.local {
+	--Top: calc(-1 * var(--Row) * 40); 
+	--Right: calc(-1 * var(--Row) * 20);
+}
+
+.basket.foreign {
+	--Top: calc(-1 * var(--Row) * 30); 
+	--Right: calc(-1 * var(--Row) * 20);
 }
