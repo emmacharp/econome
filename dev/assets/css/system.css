@@ -45,25 +45,33 @@
 	
 /* Variables dynamiques (Modifiables sur une base d'éléments) */
 	* {
-		--LineHeight: calc(var(--Row) * var(--RowSpan) * var(--Size));
+		--LineHeight: calc(var(--Row) * max(1, calc(var(--RowSpan) * var(--Amplitude))) * var(--Size));
 		--FontSize: calc(var(--Size) * var(--ScaleLevel) * var(--FontFactor) * var(--FontUnit)); }
 
 
 /* Règles initiales du système ----------------------- */
 
 /* Appliquer la taille de caractère de base choisie */
-	html { font-size: var(--BaseFontSize, 16px); }
+	html { 
+		line-height: var(--LineHeight, 1.5625em);
+		font-size: var(--BaseFontSize, 16px); }
 
 /* Contexte du corps de la page */
 	body {
 		width: var(--BodyWidth, auto);
-		max-width: var(--MaxBodyWidth, initial); }
+		max-width: var(--MaxBodyWidth, initial);
+		line-height: var(--LineHeight, 1.5625em);
+		font-size: var(--FontSize, 1em); }
 
 /* Tailles typographiques et interlignage de base */
 	body, p, ul, li, span,
 	h1, h2, h3, h4, h5, h6 {
 		line-height: var(--LineHeight, 1.5625em);
-		font-size: var(--FontSize, 1em); }
+		font-size: var(--FontSize, 1em);
+		font-style: var(--FontStyle, inherit);
+		font-weight: var(--FontWeight, inherit);
+		max-width: var(--MaxWidth, inherit);
+		color: var(--Color, inherit); }
 
 /* Rythme des contenus */
 	*+p, *+img, *+hr, *+ul,
