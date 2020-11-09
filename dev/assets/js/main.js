@@ -3,24 +3,9 @@
 
 // Necessary DOM Elements
 
-	const body = document.querySelector('body');
-	const doc = document.documentElement;
 	const sections = document.querySelectorAll('main>section');
 	const anchors = document.querySelectorAll('nav>a');
 	const parallaxItems = document.querySelectorAll('[data-parallax]');
-
-
-// Snap to CSS Grid Paper Pattern Function
-
-	const setRowRest = () => {
-		let Row = parseFloat(window.getComputedStyle(body).getPropertyValue('line-height'));
-		let ViewportWidth = doc.clientWidth;
-		let ViewportHeight = doc.clientHeight;
-		let H_RowRest = ViewportWidth - (Math.floor(ViewportWidth / Row) * Row);
-		let V_RowRest = ViewportHeight - (Math.floor(ViewportHeight / Row) * Row);
-
-		document.body.style.cssText = `--H_RowRest: ${H_RowRest}px; --V_RowRest:${V_RowRest}px;`;
-	}
 
 
 // Internal Navigation Behavior Function
@@ -92,9 +77,6 @@
 // Init All
 
 	window.addEventListener('DOMContentLoaded', function() {
-		// Set RowRest
-		setRowRest();
-		window.addEventListener('resize', setRowRest);
 
 		// Sections Observer
 		const sectionObserver = new IntersectionObserver(onSectionObserved, {

@@ -6,7 +6,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="#ff0000">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+
 	<link rel="stylesheet" href="assets/css/system.css">
 	<link rel="stylesheet" href="assets/css/config.css">
 	<link rel="stylesheet" href="assets/css/base.css">
@@ -23,6 +23,22 @@
 	<title>Economia présente : L'achat local</title>
 </head>
 <body>
+	<script>
+		const doc = document.documentElement;
+		const body = document.querySelector('body');
+		body.style.setProperty('overflow-y', 'scroll');
+		// Snap to CSS Grid Paper Pattern Function
+		const setRowRest = () => {
+			let Row = parseFloat(window.getComputedStyle(body).getPropertyValue('line-height'));
+			let ViewportWidth = doc.clientWidth;
+			let ViewportHeight = doc.clientHeight;
+			let H_RowRest = ViewportWidth - (Math.floor(ViewportWidth / Row) * Row);
+			let V_RowRest = ViewportHeight - (Math.floor(ViewportHeight / Row) * Row);
+			document.body.style.cssText = `--H_RowRest: ${H_RowRest}px; --V_RowRest:${V_RowRest}px;`;
+		}
+		setRowRest();
+		window.addEventListener('resize', setRowRest);
+	</script>
 	<nav>
 		<a href="#test1">Test 1</a>
 		<a href="#test2">Test 2</a>
@@ -752,7 +768,7 @@
 			</symbol>
 		</svg>
 	</div>
-	<script src="assets/js/main.js"></script>
+	<script src="assets/js/main.js" defer></script>
 	<!-- <link rel="stylesheet" href="assets/css/dev.css"> -->
 </body>
 </html>
