@@ -1,13 +1,4 @@
 /* Styles génériques de base ----------------------- */
-
-	/* Assurer que les balises racines occupent
-		au minimum la hauteur complète de la fenêtre */
-	html { height: 100%; }
-	body { min-height: 100%; }
-	
-	/* Établir le document entier comme
-		contexte de positionnement absolu */
-	html { position: relative; }
 	
 	/* Enlever toutes marges */
 	* { padding: 0; margin: 0; }
