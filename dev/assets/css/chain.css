@@ -1,5 +1,5 @@
 .chain {
-	color: var(--lt-primary);
+	color: var(--brown);
 	font-weight: 500;
 	font-family: 'Helvetica Neue';
 	display: inline-flex;
@@ -123,6 +123,7 @@
 	.chain>hr {
 		margin-left: calc(100% / (var(--Grid) / 3));
 		margin-bottom: -2px;
+		margin-top: -1px;
 	}
 
 	.chain>div {
