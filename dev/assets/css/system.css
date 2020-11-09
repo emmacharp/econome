@@ -51,22 +51,19 @@
 
 /* Règles initiales du système ----------------------- */
 
+/* Appliquer la taille de caractère de base choisie */
+	html { font-size: var(--BaseFontSize, 16px); }
+
 /* Contexte du corps de la page */
 	body {
-		width: 500px;
-		width: var(--BodyWidth, 500px);
+		width: var(--BodyWidth, auto);
 		max-width: var(--MaxBodyWidth, initial); }
 
-/* Appliquer la taille de caractère de base choisie */
-	html { 
-		line-height: var(--Row);
-		font-size: var(--BaseFontSize, 16px); }
-
 /* Tailles typographiques et interlignage de base */
-	p, ul, li, span,
+	body, p, ul, li, span,
 	h1, h2, h3, h4, h5, h6 {
-		line-height: var(--LineHeight, 1.5em);
-		font-size: var(--FontSize, 16px); }
+		line-height: var(--LineHeight, 1.5625em);
+		font-size: var(--FontSize, 1em); }
 
 /* Rythme des contenus */
 	*+p, *+img, *+hr, *+ul,

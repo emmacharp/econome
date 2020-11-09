@@ -3,7 +3,7 @@
 
 // Necessary DOM Elements
 
-	const html = document.querySelector('html');
+	const body = document.querySelector('body');
 	const doc = document.documentElement;
 	const sections = document.querySelectorAll('main>section');
 	const anchors = document.querySelectorAll('nav>a');
@@ -13,7 +13,7 @@
 // Snap to CSS Grid Paper Pattern Function
 
 	const setRowRest = () => {
-		let Row = parseFloat(window.getComputedStyle(html).getPropertyValue('line-height'));
+		let Row = parseFloat(window.getComputedStyle(body).getPropertyValue('line-height'));
 		let ViewportWidth = doc.clientWidth;
 		let ViewportHeight = doc.clientHeight;
 		let H_RowRest = ViewportWidth - (Math.floor(ViewportWidth / Row) * Row);
