@@ -32,7 +32,7 @@ main>section {
 	height: var(--diameter);
 	border-radius: 50%;
 	background-color: var(--yellow);
-	mix-blend-mode: multiply;
+	mix-blend-mode: multiply; /* ATTENTION ! performance */
 	top: 0;
 	left: 0;
 	margin-left: calc(-1 * var(--diameter) / 2);
