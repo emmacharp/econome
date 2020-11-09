@@ -1,7 +1,7 @@
 /* Définition de variables de système ----------------------- */
 
 	:root {
-		--Size: 1; /* Facteur de modification de la typographie pouvant être appliquer à même les composants */
+		--Size: 1; /* Facteur de modification de la typographie pouvant être appliqué à même les composants */
 		--Amplitude: 1; /* Envergure générale de l'échelle typographique choisie. Influence le calcul de la hauteur de ligne. */
 		--FontFactor: 1; /* Facteur de modification en fonction de la taille relative d'une police choisie */
 	}
