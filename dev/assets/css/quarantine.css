@@ -11,14 +11,6 @@
 }
 
 body {
-	animation-name: fadeIn;
-	animation-fill-mode: both;
-	animation-delay: 200ms;
-	animation-duration: 1000ms;
-}
-
-
-body {
 	display: flex;
 }
 
