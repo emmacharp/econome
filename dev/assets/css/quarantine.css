@@ -30,6 +30,7 @@ main>section {
 	display: flex;
 	flex-direction: column;
 	position: relative;
+	overflow: hidden;
 }
 
 .circle {
@@ -47,8 +48,9 @@ main>section {
 }
 
 [data-parallax] {
-	transform: translateY( calc( var(--scrollParallax) * 1px ) );
+	transform: translate3d(0, calc( var(--scrollParallax) * 1px ), 0);
 	will-change: transform;
+	z-index: -1;
 }
 
 main {
