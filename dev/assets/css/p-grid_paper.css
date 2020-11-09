@@ -1,4 +1,4 @@
-main>section {
+main {
 	border-right: var(--H_RowRest) solid grey;
 	background-image:
 	 	linear-gradient(to right, transparent calc(100% - 1px), rgba(0,0,0,.1) 0),
