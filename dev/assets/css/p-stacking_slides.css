@@ -6,6 +6,7 @@
 	notamment au défilement vers le haut.
 	Safari est le pire. */
 
+html { height: 100%;  }
 body {
 	/* Contexte vertical nécessaire
 		pour assurer une hauteur de fenêtre
