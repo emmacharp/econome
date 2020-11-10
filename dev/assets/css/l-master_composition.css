@@ -1,0 +1,101 @@
+@media all {
+	body {
+		display: flex;
+	}
+	main>section {
+		padding: var(--Gutter);
+		box-sizing: border-box;
+		position: relative;
+		scroll-snap-align: start;
+	}
+
+	nav {
+		padding: var(--Row);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: sticky;
+		background-color: var(--ColorBg);
+
+	}
+
+	main {
+		flex-grow: 1;
+	}
+}
+
+@media (orientation: portrait) {
+	html, body, main { 
+	/* Contexte vertical nécessaire
+		pour assurer une hauteur de fenêtre
+		pour toute « slide ». */
+		height: 100%;  }
+	
+	body {
+	/* Previent le glitchy bouncing
+		dans Safari */
+		overflow: hidden;
+		flex-direction: column;
+	}
+
+	main { 
+		display: inherit;
+		order: -1;
+		overflow-x: auto;
+		flex-basis: 0;
+		flex-direction: row;
+		scroll-snap-type: x mandatory;
+	}
+
+	main>section {
+		height: 100%;
+		width: 100vw;
+		scroll-behavior: smooth;
+		flex-shrink: 0;
+		scroll-snap-align: start;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+
+	nav {
+		flex-shrink: 0;
+		flex-direction: row;
+		width: auto;
+		height: var(--Row);
+	}
+
+	nav a {
+		flex-shrink: 0;
+	}
+}
+
+@media (orientation: landscape) {
+	html {
+		scroll-snap-type: y proximity;
+		scroll-behavior: smooth;
+	}
+	
+	body {
+		align-items: flex-start;
+	}
+	
+	main>section {
+		min-height: calc(100vh + var(--Row) - var(--V_RowRest));
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+	}
+
+	main {
+		overflow-x: hidden;
+	}
+
+	nav {
+		flex-direction: column;
+		width: var(--Row);
+		height: calc(100vh - var(--Row) * 2);
+		border-right: 1px solid rgba(0,0,0,.1);
+		position: sticky;
+		top: 0;
+	}
+}

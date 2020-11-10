@@ -15,37 +15,8 @@
 	--ColorSupport: var(--purple);
 }
 
-html {
-	scroll-behavior: smooth;
-}
 
-@media (orientation: portrait) {
-	html {
-		scroll-snap-type: x proximity;
-	}
-}
 
-@media (orientation: landscape) {
-	html {
-		scroll-snap-type: y proximity;
-	}
-}
-
-body {
-	display: flex;
-}
-
-main>section {
-	padding: var(--Gutter);
-	min-height: calc(100vh + var(--Row) - var(--V_RowRest));
-	box-sizing: border-box;
-	/*justify-content: space-between;*/
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	overflow: hidden;
-	scroll-snap-align: start;
-}
 
 main>section>section {
 	color: blue;
@@ -81,49 +52,6 @@ main>section>section>* {
 	right: var(--Right, auto);
 	bottom: var(--Bottom, auto);
 	mix-blend-mode: multiply; /* ATTENTION ! performance */
-}
-
-main {
-	flex-grow: 1;
-}
-
-nav {
-	display: inline-flex;
-	flex-direction: column;
-	width: var(--Row);
-	height: calc(100vh - var(--Row) * 2);
-	padding: var(--Row);
-	border-right: 1px solid rgba(0,0,0,.1);
-	justify-content: center;
-	align-items: center;
-	position: sticky;
-	top: 0;
-	background-color: var(--ColorBg);
-
-}
-@media (orientation: landscape) {
-	body {
-		align-items: flex-start;
-	}
-}
-@media (orientation: portrait) {
-	body {
-		flex-direction: column;
-	}
-	nav {
-		order: 1;
-		flex-shrink: 0;
-		flex-direction: row;
-		width: auto;
-		height: var(--Row);
-	}
-	main {
-		flex-basis: 0;
-		flex-grow: 1;
-	}
-	nav a {
-		flex-shrink: 0;
-	}
 }
 
 nav a {
