@@ -14,8 +14,9 @@
 	<link rel="stylesheet" href="assets/css/quarantine.css">
 	<link rel="stylesheet" href="assets/css/chain.css">
 	<link rel="stylesheet" href="assets/css/arrows.css">
-	<link rel="stylesheet" href="assets/css/p-grid_paper.css">
 	<!-- <link rel="stylesheet" href="assets/css/p-stacking_slides.css"> -->
+	<link rel="stylesheet" href="assets/css/p-grid_paper.css">
+	<link rel="stylesheet" href="assets/css/l-master_composition.css">
 
 
 	<link rel="stylesheet" href="assets/css/main.css">
@@ -37,13 +38,13 @@
 			// Snap to CSS Grid Paper Pattern Function
 			const setRowRest = () => {
 				let Row = Math.round(parseFloat(window.getComputedStyle(body).getPropertyValue('line-height')));
+				let FontSize = Math.round(parseFloat(window.getComputedStyle(body).getPropertyValue('font-size')));
 				let ViewportWidth = doc.clientWidth;
 				let ViewportHeight = doc.clientHeight;
 				let H_RowRest = ViewportWidth - (Math.floor(ViewportWidth / Row) * Row);
 				let V_RowRest = ViewportHeight - (Math.floor(ViewportHeight / Row) * Row);
 				body.style.cssText = `--H_RowRest: ${H_RowRest}px; --V_RowRest:${V_RowRest}px;`;
-				main.style.cssText = `--Row: ${Row}px`;
-				console.log(Row);
+				main.style.cssText = `--Row: ${Row}px; --BaseFontSize: ${FontSize};`;
 			}
 			setRowRest();
 			window.addEventListener('resize', setRowRest);
