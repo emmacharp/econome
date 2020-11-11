@@ -10,8 +10,6 @@
 	:root {
 		--BodyWidth: auto;
 		--MaxBodyWidth: initial;
-
-		--Gutter: calc(var(--Row));
 		
 		--RowFactor: 1.5625; /* Ratio pour des facteurs de 4 seulement */
 		--RowUnit: 1rem;

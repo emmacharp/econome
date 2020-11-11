@@ -4,7 +4,7 @@
 		accueillant un nombre indéfini d'éléments */
 	div {
 		display: flex;
-		margin-left: calc(-1 * var(--Gutter));
+		margin-left: calc(-1 * var(--Row));
 		margin-top: calc(-1 * var(--Row));
 		flex-wrap: wrap; }
 	
@@ -17,6 +17,6 @@
 		par un rythme général sur les deux axes */
 	div>* {
 		box-sizing: border-box;
-		margin-left: var(--Gutter);
+		margin-left: var(--Row);
 		margin-top: var(--Row);
 		max-width: 100%; }

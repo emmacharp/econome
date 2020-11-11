@@ -3,7 +3,7 @@
 		display: flex;
 	}
 	main>section {
-		padding: var(--Gutter);
+		padding: var(--Row);
 		box-sizing: border-box;
 		position: relative;
 		scroll-snap-align: start;

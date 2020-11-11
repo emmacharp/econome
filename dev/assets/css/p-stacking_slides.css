@@ -35,7 +35,7 @@ main>section {
 	flex-shrink: 0;
 	scroll-snap-align: start;
 	box-sizing: border-box;
-	padding: var(--Gutter);
+	padding: var(--Row);
 	background-color: var(--ColorBg);
 	overflow: auto;
 }

@@ -22,7 +22,7 @@
 main>section>section {
 	color: blue;
 	column-width: calc(var(--Row) * 12);
-	column-gap: var(--Gutter);
+	column-gap: var(--Row);
 	column-count: 8;
 	max-width: calc(var(--Row) * 32);
 	margin-bottom: var(--Row);
