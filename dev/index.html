@@ -33,18 +33,18 @@
 		<script>
 			const doc = document.documentElement;
 			const body = document.querySelector('body');
+			const html = document.querySelector('html');
 			const main = document.querySelector('main');
 			body.style.setProperty('overflow-y', 'scroll');
 			// Snap to CSS Grid Paper Pattern Function
 			const setRowRest = () => {
-				let Row = Math.round(parseFloat(window.getComputedStyle(body).getPropertyValue('line-height')));
-				let FontSize = Math.round(parseFloat(window.getComputedStyle(body).getPropertyValue('font-size')));
+				let Row = Math.floor(parseFloat(window.getComputedStyle(html).getPropertyValue('line-height')));
+				let FontSize = Math.floor(parseFloat(window.getComputedStyle(html).getPropertyValue('font-size')));
 				let ViewportWidth = doc.clientWidth;
 				let ViewportHeight = doc.clientHeight;
 				let H_RowRest = ViewportWidth - (Math.floor(ViewportWidth / Row) * Row);
 				let V_RowRest = ViewportHeight - (Math.floor(ViewportHeight / Row) * Row);
-				body.style.cssText = `--H_RowRest: ${H_RowRest}px; --V_RowRest:${V_RowRest}px;`;
-				main.style.cssText = `--Row: ${Row}px; --BaseFontSize: ${FontSize};`;
+				body.style.cssText = `--H_RowRest: ${H_RowRest}px; --V_RowRest:${V_RowRest}px; --Row: ${Row}px; --BaseFontSize: ${FontSize};`;
 			}
 			setRowRest();
 			window.addEventListener('resize', setRowRest);

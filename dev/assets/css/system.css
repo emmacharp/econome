@@ -45,7 +45,7 @@
 	
 /* Variables dynamiques (Modifiables sur une base d'éléments) */
 	* {
-		--LineHeight: calc(var(--Row) * max(1, calc(var(--RowSpan) * var(--Amplitude))) * var(--Size));
+		--LineHeight: calc(var(--RowFactor) * max(1, calc(var(--RowSpan) * var(--Amplitude))) * var(--Size) * var(--RowUnit));
 		--FontSize: calc(var(--Size) * var(--ScaleLevel) * var(--FontFactor) * var(--FontUnit)); }
 
 
