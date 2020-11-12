@@ -3,7 +3,7 @@
 	:root {
 		--Size: 1; /* Facteur de modification de la typographie pouvant être appliqué à même les composants */
 		--FontFactor: 1; /* Facteur de modification en fonction de la taille relative d'une police choisie */
-		/* DÉPRÉCIÉ (en utilisant La hauteur de ligne automatique) ! */ 
+		/* DÉPRÉCIÉ ! (en utilisant La hauteur de ligne automatique) */ 
 			/*--Amplitude: 1;*/ /* Envergure générale de l'échelle typographique choisie. Influence le calcul de la hauteur de ligne. */
 			/*--RowSpan: 1;*/ /* Quantité de rangée occupées par la hauteur de ligne d'un élément donné. */
 	}
@@ -41,13 +41,13 @@
 
 /* Variables statiques (Config seulement) */
 	:root {
-		--FluidFontSize: clamp(var(--MinFontSize), var(--MidFontSize), var(--MaxFontSize));
+		--FluidFontSize: clamp(var(--MinFontSize), var(--BaseFontSize), var(--MaxFontSize));
 		--Row: calc(var(--RowFactor, 1.5625) * var(--RowUnit, 1rem));
-		--BaseFontSize: var(--FluidFontSize, 16px); }
+		--RootFontSize: var(--FluidFontSize, var(--BaseFontSize)); }
 	
 /* Variables dynamiques (Modifiables sur une base d'éléments) */
 	* {
-		/* DÉPRÉCIÉ (en utilisant La hauteur de ligne automatique) */
+		/* DÉPRÉCIÉ ! (en utilisant La hauteur de ligne automatique) */
 			/*--LineHeight: calc(var(--RowFactor) * max(1, calc(var(--RowSpan) * var(--Amplitude))) * var(--Size) * var(--RowUnit));*/
 		--FontSize: calc(var(--Size) * var(--ScaleLevel) * var(--FontFactor) * var(--FontUnit));
 		--FontSizeWithRowUnit: calc(var(--Size) * var(--ScaleLevel) * var(--FontFactor) * var(--RowUnit)); }
@@ -55,8 +55,8 @@
 /* Système de hauteur de ligne automatisée — ATTENTION ! Radioactif */
 	* {
 		--is-4-rows: clamp(0px, calc((var(--FontSizeWithRowUnit) - var(--Row) * 2.75) * 9999999), var(--Row));
-		--is-3-rows: calc(clamp(0px, calc((var(--FontSizeWithRowUnit) - var(--Row) * 1.75) * 9999999), var(--Row)) - var(--is-4-rows));
-		--is-2-rows: calc(clamp(0px, calc((var(--FontSizeWithRowUnit) - var(--Row) * 1.25) * 9999999), var(--Row)) - (var(--is-3-rows) + var(--is-4-rows)));
+		--is-3-rows: calc(clamp(0px, calc((var(--FontSizeWithRowUnit) - var(--Row) * 1.825) * 9999999), var(--Row)) - var(--is-4-rows));
+		--is-2-rows: calc(clamp(0px, calc((var(--FontSizeWithRowUnit) - var(--Row) * 1.125) * 9999999), var(--Row)) - (var(--is-3-rows) + var(--is-4-rows)));
 		--is-1-row: calc(var(--Row) - (var(--is-2-rows) + var(--is-3-rows) + var(--is-4-rows)));
 		--LineHeightAuto: calc((var(--is-1-row) * 1) + (var(--is-2-rows) * 2) + (var(--is-3-rows) * 3) + (var(--is-4-rows) * 4)); }
 
@@ -66,7 +66,7 @@
 /* Appliquer la taille de caractère de base choisie */
 	html { 
 		line-height: var(--RowFactor, 1.5625);
-		font-size: var(--BaseFontSize, 16px); }
+		font-size: var(--RootFontSize, 16px); }
 
 /* Contexte du corps de la page */
 	body {
@@ -74,7 +74,7 @@
 		max-width: var(--MaxBodyWidth, initial); }
 
 /* Tailles typographiques et interlignage de base */
-	body, p, ul, li, span,
+	p, ul, li, span,
 	h1, h2, h3, h4, h5, h6 {
 		line-height: var(--LineHeightAuto, inherit);
 		font-size: var(--FontSize, 1em);
@@ -82,6 +82,14 @@
 		font-weight: var(--FontWeight, inherit);
 		max-width: var(--MaxWidth, inherit);
 		color: var(--Color, inherit); }
+
+/* Héritage en place pour les éléments « en-ligne » intérieurs */
+	p *, li *,
+	h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
+		line-height: inherit;
+		font-size: inherit;
+		font-style: inherit;
+		font-weight: inherit; }
 
 /* Rythme des contenus */
 	*+p, *+img, *+hr, *+ul,

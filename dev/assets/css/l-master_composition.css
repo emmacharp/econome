@@ -3,10 +3,10 @@
 		display: flex;
 	}
 	main>section {
-		padding: var(--Row);
 		box-sizing: border-box;
 		position: relative;
 		scroll-snap-align: start;
+		padding: var(--Row) 0;
 	}
 
 	nav {
@@ -21,6 +21,12 @@
 
 	main {
 		flex-grow: 1;
+	}
+}
+
+@media (min-width: 80em) {
+	main>section {
+		padding: var(--Row);
 	}
 }
 

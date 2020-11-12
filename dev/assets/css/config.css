@@ -11,11 +11,11 @@
 		--BodyWidth: auto;
 		--MaxBodyWidth: initial;
 		
-		--RowFactor: 1.5625; /* Ratio pour des facteurs de 4 seulement */
+		--RowFactor: 1.56125; /* Ratio pour des facteurs de 4 seulement */
 		--RowUnit: 1rem;
 
-		--MinFontSize: 12px;
-		--MidFontSize: .8vw;
+		--MinFontSize: 13px;
+		--BaseFontSize: .8vw;
 		--MaxFontSize: 16px;
 		--FontUnit: 1em;
 
@@ -26,8 +26,8 @@
 
 /* Adaptation de la typographie ----------------------- */
 	
-	@media all { :root { --Scale: var(--MajorSecond); } }
-	@media (min-width: 40em) { :root { --Scale: var(--MajorThird); } }
+	@media all { :root { --Scale: var(--MinorSecond); } }
+	@media (min-width: 40em) { :root { --Scale: var(--MajorSecond); } }
 	@media (min-width: 60em) { :root { --Scale: var(--PerfectFourth); } }
 	@media (min-width: 80em) { :root { --Scale: var(--AugmentedFourth); } }
 

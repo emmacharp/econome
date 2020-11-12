@@ -108,6 +108,8 @@ form fieldset {
 	display: flex;
 	border: none;
 	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 form>*+* {
@@ -115,7 +117,7 @@ form>*+* {
 }
 
 fieldset>*+* {
-	margin-left: calc(var(--Row) * 4);
+	/*margin-left: calc(var(--Row) * 4);*/
 }
 
 fieldset label+label {
@@ -168,6 +170,12 @@ fieldset div {
 	align-items: center;
 }
 
+fieldset p {
+	min-width: 30ch;
+	flex-basis: 0;
+	flex-grow: 1;
+}
+
 fieldset div:before {
 	content: "";
 	width: 100%;
@@ -178,11 +186,13 @@ fieldset div:before {
 
 fieldset input[type=radio]:checked~span,
 fieldset span:hover {
-	box-shadow: inset 0 -1px 0 1px currentColor;
-	top: 2px;
+	box-shadow: inset 0 -1px 0 0 currentColor;
+	top: 1px;
 }
 
 fieldset input[type=radio]:checked~span {
+	box-shadow: inset 0 -1px 0 1px currentColor;
+	top: 2px;
 	background-color: currentColor;
 	background-image: linear-gradient(#ffffffa0 0, #ffffffa0 100%);
 	background-blend-mode: hard-light;
