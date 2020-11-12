@@ -16,7 +16,9 @@
 	--ColorSupport: var(--purple);
 }
 
-
+main>section>:not(svg) {
+	max-width: max-content;
+}
 
 
 main>section>section {
