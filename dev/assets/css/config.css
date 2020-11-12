@@ -26,10 +26,10 @@
 
 /* Adaptation de la typographie ----------------------- */
 	
-	@media all { :root { --Scale: var(--MajorSecond); --Amplitude: .375; } }
-	@media (min-width: 40em) { :root { --Scale: var(--MajorThird); --Amplitude: .675; } }
-	@media (min-width: 60em) { :root { --Scale: var(--PerfectFourth); --Amplitude: .75; } }
-	@media (min-width: 80em) { :root { --Scale: var(--AugmentedFourth); --Amplitude: 1; } }
+	@media all { :root { --Scale: var(--MajorSecond); } }
+	@media (min-width: 40em) { :root { --Scale: var(--MajorThird); } }
+	@media (min-width: 60em) { :root { --Scale: var(--PerfectFourth); } }
+	@media (min-width: 80em) { :root { --Scale: var(--AugmentedFourth); } }
 
 
 /* Adaptation de la grille ----------------------- */
@@ -49,35 +49,17 @@
 
 /* Distribution de l'échelle typographique ----------------------- */
 
-	* { 
-		--ScaleLevel: var(--Base);
-		--RowSpan: 1; }
-	h1 { 
-		--ScaleLevel: var(--Huge);  
-		--RowSpan: 3;
-		--FontWeight: 600; }
-	h2 { 
-		--ScaleLevel: var(--Tallest);
-		--RowSpan: 2; }
-	h3 { 
-		--ScaleLevel: var(--Taller);
-		--RowSpan: 1; }
-	h4 { 
-		--ScaleLevel: var(--Tall);
-		--RowSpan: 1; }
-	h5 { 
-		--ScaleLevel: var(--Base);
-		--RowSpan: 1; }
-	h6 { 
-		--ScaleLevel: var(--Short);
-		--RowSpan: 1; }
-	p {
-		--Color: var(--ColorText);
-		--MaxWidth: calc(var(--Row) * 40); }
+	* { --ScaleLevel: var(--Base);}
+	h1 { --ScaleLevel: var(--Huge); --FontWeight: 600; }
+	h2 { --ScaleLevel: var(--Tallest); }
+	h3 { --ScaleLevel: var(--Taller); }
+	h4 { --ScaleLevel: var(--Tall); }
+	h5 { --ScaleLevel: var(--Base); }
+	h6 { --ScaleLevel: var(--Short); }
+	p { --Color: var(--ColorText); --MaxWidth: calc(var(--Row) * 40); }
 
 	section[id]>header p {
 		--ScaleLevel: var(--Huge);
-		--RowSpan: 3;
 		--FontWeight: 600;
 		--Color: var(--ColorSupport);
 		--MaxWidth: calc(var(--Row) * 45);
@@ -85,7 +67,6 @@
 
 	fieldset p {
 		--ScaleLevel: var(--Taller);
-		--RowSpan: 2;
 		--MaxWidth: calc(var(--Row) * 22);
 		--FontWeight: 300;
 	}
