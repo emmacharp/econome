@@ -6,7 +6,6 @@ main {
 	background-size: 
 	/* dimensions de la grille de ligne de base typographique */
 		var(--Row) 100%, 100% var(--Row);
-		/*background-position: center center;*/
 }
 
 main>section>* {
@@ -15,7 +14,6 @@ main>section>* {
 	padding-bottom: calc(var(--Row) - 1px);
 	padding-right: calc(var(--Row) - 1px);
 	background-color: var(--ColorBg);
-	max-width: max-content;
 }
 
 
