@@ -11,11 +11,6 @@
 	display: flex;
 }
 
-.chain>div>* {
-	/*flex-direction: column;*/
-}
-
-
 .chain .arrow.from {
 	justify-content: flex-end;
 }
@@ -52,10 +47,6 @@
 
 .chain article {
 	flex-direction: column;
-}
-
-.chain>div>* {
-	/*width: calc(100% / (var(--Grid) / 3) - var(--Row));*/
 }
 
 .chain>div>div {
