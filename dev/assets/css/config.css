@@ -26,10 +26,10 @@
 
 /* Adaptation de la typographie ----------------------- */
 	
-	@media all { :root { --Scale: var(--MinorSecond); } }
-	@media (min-width: 40em) { :root { --Scale: var(--MajorSecond); } }
-	@media (min-width: 60em) { :root { --Scale: var(--PerfectFourth); } }
-	@media (min-width: 80em) { :root { --Scale: var(--AugmentedFourth); } }
+	@media all { :root { --Scale: var(--MajorSecond); } }
+	@media (min-width: 40em) { :root { --Scale: var(--MajorThird); } }
+	@media (min-width: 80em) { :root { --Scale: var(--PerfectFourth); } }
+	@media (min-width: 100em) { :root { --Scale: var(--AugmentedFourth); } }
 
 
 /* Adaptation de la grille ----------------------- */
