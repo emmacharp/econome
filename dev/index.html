@@ -8,15 +8,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="stylesheet" href="assets/css/system.css">
+	<link rel="stylesheet" href="assets/css/s-auto_line-height.css">
 	<link rel="stylesheet" href="assets/css/config.css">
 	<link rel="stylesheet" href="assets/css/base.css">
-	<!-- <link rel="stylesheet" href="assets/css/utilities.css"> -->
 	<link rel="stylesheet" href="assets/css/quarantine.css">
 	<link rel="stylesheet" href="assets/css/chain.css">
 	<link rel="stylesheet" href="assets/css/arrows.css">
-	<!-- <link rel="stylesheet" href="assets/css/p-stacking_slides.css"> -->
 	<link rel="stylesheet" href="assets/css/p-grid_paper.css">
 	<link rel="stylesheet" href="assets/css/l-master_composition.css">
+	<!-- <link rel="stylesheet" href="assets/css/p-stacking_slides.css"> -->
+	<!-- <link rel="stylesheet" href="assets/css/utilities.css"> -->
 
 
 	<link rel="stylesheet" href="assets/css/main.css">
@@ -38,13 +39,14 @@
 			body.style.setProperty('overflow-y', 'scroll');
 			// Snap to CSS Grid Paper Pattern Function
 			const setRowRest = () => {
-				let Row = Math.ceil(parseFloat(window.getComputedStyle(html).getPropertyValue('line-height')));
+				let GridUnit = Math.ceil(parseFloat(window.getComputedStyle(html).getPropertyValue('line-height')) / 2);
 				let FontSize = Math.floor(parseFloat(window.getComputedStyle(html).getPropertyValue('font-size')));
+				let Row = GridUnit * 2;
 				let ViewportWidth = doc.clientWidth;
 				let ViewportHeight = doc.clientHeight;
-				let H_RowRest = ViewportWidth - (Math.floor(ViewportWidth / Row) * Row);
-				let V_RowRest = ViewportHeight - (Math.floor(ViewportHeight / Row) * Row);
-				body.style.cssText = `--H_RowRest: ${H_RowRest}px; --V_RowRest:${V_RowRest}px; --Row: ${Row}px; --RootFontSize: ${FontSize};`;
+				let H_GridUnitRest = ViewportWidth - (Math.floor(ViewportWidth / GridUnit) * GridUnit);
+				let V_GridUnitRest = ViewportHeight - (Math.floor(ViewportHeight / GridUnit) * GridUnit);
+				body.style.cssText = `--H_GridUnitRest: ${H_GridUnitRest}px; --V_GridUnitRest:${V_GridUnitRest}px; --GridUnit: ${GridUnit}px; --Row: ${Row}px;`;
 			}
 			setRowRest();
 			window.addEventListener('resize', setRowRest);

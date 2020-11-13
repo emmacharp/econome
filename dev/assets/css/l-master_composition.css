@@ -86,7 +86,7 @@
 	}
 	
 	main>section {
-		min-height: calc(100vh + var(--Row) - var(--V_RowRest));
+		min-height: calc(100vh + var(--Row) - var(--V_GridUnitRest));
 		overflow: hidden;
 		display: flex;
 		flex-direction: column;
