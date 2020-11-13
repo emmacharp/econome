@@ -1,0 +1,37 @@
+/* Système de hauteur de ligne automatisée — ATTENTION ! Radioactif */
+/* Extrêmement intensif en puissance de calcul. En ce sens, on doit l'optimiser au maximum, 
+	en choisissant manuellement les éléments qui seront touchés par les différents calculs. */
+
+	:root {
+		--GridUnit: calc(var(--Row) / 2); /* Valeur qui sera arrondie en JS */
+		--Row: calc(var(--GridUnit) * 2); /* Nouvelle valeur découlant de l'unité arrondie en JS */
+	}
+
+	p, li, span,
+	h1, h2, h3, h4, h5, h6 {
+		--FontSizeWithRowUnit: calc(var(--Size) * var(--ScaleLevel) * var(--FontFactor) * var(--RowUnit));
+	}
+
+	p, li, span,
+	h1, h2, h3, h4, h5, h6 {
+		--is-2-rows: calc(clamp(
+						0px, calc(
+							(var(--FontSizeWithRowUnit) - var(--Row) * 1.325) * 9999999), var(--Row)) - (var(--is-3-rows, 0px) + var(--is-2-rows-and-half, 0px)));
+		--is-1-row-and-half: calc(clamp(
+						0px, calc(
+							(var(--FontSizeWithRowUnit) - var(--Row) * .825) * 9999999), var(--Row)) - (var(--is-3-rows, 0px) + var(--is-2-rows-and-half, 0px) + var(--is-2-rows)));
+		--is-1-row: calc(var(--Row) - (var(--is-3-rows, 0px) + var(--is-2-rows-and-half, 0px) + var(--is-2-rows) + var(--is-1-row-and-half)));
+		--LineHeightAuto: calc(var(--is-1-row, var(--Row)) + (var(--is-1-row-and-half, 0px) * 1.5) + (var(--is-2-rows, 0px) * 2) + (var(--is-2-rows-and-half, 0px) * 2.5) + (var(--is-3-rows, 0px) * 3)); }
+
+	h1, h2, p {
+		--is-3-rows: clamp(
+						0px, calc(
+							(var(--FontSizeWithRowUnit) - var(--Row) * 2.25) * 9999999), var(--Row));
+		--is-2-rows-and-half: calc(clamp(
+						0px, calc(
+							(var(--FontSizeWithRowUnit) - var(--Row) * 1.825) * 9999999), var(--Row)) - (var(--is-3-rows)));
+	}
+
+	p, li, span,
+	h1, h2, h3, h4, h5, h6 {
+		line-height: var(--LineHeightAuto, 1.5625); }
