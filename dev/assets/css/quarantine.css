@@ -54,7 +54,7 @@ main>section>section>* {
 	left: var(--Left, auto);
 	right: var(--Right, auto);
 	bottom: var(--Bottom, auto);
-	mix-blend-mode: multiply; /* ATTENTION ! performance */
+	/*mix-blend-mode: multiply;*/ /* ATTENTION ! performance */
 }
 
 nav a {
