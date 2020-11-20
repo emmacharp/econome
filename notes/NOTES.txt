@@ -255,3 +255,39 @@ Présenter trois niveaux de fournisseurs max.
 T'achète de la bière chez Wal-Mart. ou au dépanneur du coin. Mais il reste encore beaucoup qui s'en va à l'étranger... tout ce qui est avant dans la chaîne. Le détaillant peut s'approvisionner chez un grossiste ontarien.
 
 Évitre de dédoubler les transferts... C'est le premier concept à faire comprendre... le 1000$ du départ, ne va que créer 1000$ à la fin. Ça se dédouble pas.
+
+## Meeting Henri — 30/10/20
+
+
+Rôle de chacun des agents.
+Le consommateur consomme... mais on doit rendre le produit disponible.
+Producteurs de marge.
+    Amène le produit d'un point A à un point B. Rend disponible.
+    Transport. Produit jamais transformé. Amène au point B.
+    Représente la valeur de rendre disponible le bien. Ex : pourquoi acheter une bouteille de d'eau versus boire de l'eau du robinet..?
+Producteurs (de biens et services).
+    Il y a transformation.
+Rémunération des facteurs de production = valeur ajoutée.
+
+Bière Shelton
+    Soit tu l'achètes au dépanneur. Soit tu l'achètes directement à la microbrasserie. Ou alors tu l'achètes en ligne (Détaillant & Grossiste remplacés par un transporteur... alors les microbrasseries peuvent s'accaparer la valeur ajoutée).
+    Si la bière est achetée sur Amazon, il y a bien des chances qu'il n'y ait pas le deux dollars de détaillant... Ils te font pas payer la marge de détail et / ou le transport. Et c'est pas nécessairement moins local... Tu as juste changé ta manière de consommer. Si tu achètes direct au transformateur, tu libères les ressources qui travail chez le détaillant... LE transformateur, va déjà avoir un grosseur qui lui permettrait de consommer moins de ressources pour vendre le même nombre de bières. Les PME... c'est bien si on manque pas de travailleurs.
+
+Maintenant, quand on parle d'achat local, on parle toujours du détaillant, des p'tits détaillants locaux... mais c'est inefficace au possible... Plein de p'tits entrepôts partout dans une ville... LA valeur n'est pas là... Il ya peu de valeur ajoutée.
+
+On pourrait faire basculer de la valeur ajoutée (qui demeure la même) aux emplois (qui diminuent) et on libère de la main d'œuvre. Si y a de quoi, c'est peut-être mieux de consommer chez Amazon au final...
+
+On présente les types d'agents (rôles nécessaires) après dans les scénarios.
+
+Le détaillant peut être le barman qui baisse le levier...
+
+On parle de rôles... un même agent peut assumer plusieurs rôles !
+
+Intéressant de démontrer comment un acteur peut multiplier les rôles et ainsi garder la valeur en local
+
+Donner au public la capacité de comparer et évaluer les différents scénarios qui leur sont donnés... En fonction de leur objectifs. On vote avec notre portefeuille...
+
+Ça va dépendre de qui regarde...
+Ou va l'argent est important.
+
+Essayer de raconter une p'tite histoire à partir du simulateur.
