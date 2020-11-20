@@ -93,7 +93,7 @@
 	}
 
 	main {
-		overflow-x: hidden;
+		/*overflow-x: hidden; */ /* EMPÊCHE LE SCROLL-SNAP DE FONCTIONNER ! */
 	}
 
 	nav {
