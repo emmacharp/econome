@@ -14,6 +14,7 @@
 	--ColorLocal: var(--blue);
 	--ColorForeign: var(--red);
 	--ColorSupport: var(--purple);
+	--ColorAccent: var(--yellow);
 }
 
 main>section>:not(svg) {
@@ -54,7 +55,7 @@ main>section>section>* {
 	left: var(--Left, auto);
 	right: var(--Right, auto);
 	bottom: var(--Bottom, auto);
-	/*mix-blend-mode: multiply;*/ /* ATTENTION ! performance */
+	/*mix-blend-mode: multiply;*/ /* ATTENTION ! performance : utiliser avec conteneur parent « isolation » */
 }
 
 nav a {
@@ -214,3 +215,98 @@ fieldset input[type=radio]:checked~span {
 	--Top: calc(-1 * var(--Row) * 30); 
 	--Right: calc(-1 * var(--Row) * 20);
 }
+
+[id=svg-emma] [id=background] {
+	display: none;
+}
+
+aside svg {
+	float: left;
+	width: calc(var(--Row) * 5);
+	margin-left: calc(-1 * var(--Row) * 3.5);
+}
+
+.cartoon_emma *, .cartoon_henri * {
+  transition: all 0.1s ease-in; }
+
+.cartoon_emma.animated [id*='oeil_ouvert'], .cartoon_henri.animated [id*='oeil_ouvert'] {
+  animation-name: clignement;
+  animation-duration: 5s;
+  animation-iteration-count: infinite; }
+
+.cartoon_emma.animated [id*='pupille'],
+.cartoon_emma.animated [id*='reflection'],
+.cartoon_emma.animated [id*='iris'], .cartoon_henri.animated [id*='pupille'],
+.cartoon_henri.animated [id*='reflection'],
+.cartoon_henri.animated [id*='iris'] {
+  animation-name: regarde_gauche, clignement;
+  animation-duration: 13s, 5s;
+  animation-iteration-count: infinite, infinite;
+  animation-timing-function: ease-out, linear; }
+
+.cartoon_emma.animated [id*="moustache"], .cartoon_henri.animated [id*="moustache"] {
+  transform-origin: center center;
+  animation-name: moustache;
+  animation-duration: 6s;
+  animation-iteration-count: infinite; }
+
+.cartoon_emma.animated [id*="sourcils"], .cartoon_henri.animated [id*="sourcils"] {
+  transform-origin: center center;
+  animation-name: hausse_sourcils;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out; }
+
+@keyframes clignement {
+ 0% {
+   opacity: 1; }
+ 2% {
+   opacity: 1; }
+ 2.2% {
+   opacity: 0; }
+ 7.8% {
+   opacity: 0; }
+ 8% {
+   opacity: 1; }
+ 100% {
+   opacity: 1; } }
+
+@keyframes hausse_sourcils {
+ 29% {
+   transform: translateY(0em); }
+ 30% {
+   transform: translateY(-0.62em); }
+ 47% {
+   transform: translateY(-0.62em); }
+ 48% {
+   transform: translateY(0em); }
+ 100% {
+   transform: translateY(0em); } }
+
+@keyframes moustache {
+ 94% {
+   transform: rotate(0deg); }
+ 96% {
+   transform: rotate(3deg); }
+ 98% {
+   transform: rotate(-3deg); }
+ 100% {
+   transform: rotate(0deg); } }
+
+@keyframes regarde_gauche {
+ 38% {
+   transform: translate(0em, 0em); }
+ 38.5% {
+   transform: translate(-0.48em, -0.28em); }
+ 49.5% {
+   transform: translate(-0.48em, -0.28em); }
+ 50% {
+   transform: translate(0em); }
+ 88% {
+   transform: translateX(0em); }
+ 88.5% {
+   transform: translateX(0.68em); }
+ 99.5% {
+   transform: translateX(0.68em); }
+ 100% {
+   transform: translateX(0em); } }

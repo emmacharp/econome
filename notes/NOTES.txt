@@ -291,3 +291,8 @@ Donner au public la capacité de comparer et évaluer les différents scénarios
 Ou va l'argent est important.
 
 Essayer de raconter une p'tite histoire à partir du simulateur.
+
+---
+
+La méthode ADEPT de démonstration d'un concept complexe.
+https://betterexplained.com/articles/adept-method/
