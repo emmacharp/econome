@@ -1,0 +1,73 @@
+# Contenu
+
+[Préalablement avoir demandé le nom]
+## Vous, Joey Joe Joe. — Rôle : consommateur
+
+Vous êtes le premier (ou dernier, c'est selon !) maillon de la châine. Votre rôle, est celui du consommateur.
+Vous avez envie d'une bonne bière québécoise. Toute une chaîne d'_agents économiques_ doit vous rendre disponible cette bonne bière québécoise. La façon dont vous allez acheter & consommer cette bière détermine la nature des agents et conditionne la distribution de leurs rôles au sein de la chaîne. Votre action d'achat provoque un effet d'entraînement. Il est important de comprendre cet effet pour bien comprendre les répercussions de votre achat (local ou non) !
+
+Imaginons un scénario où vous, le consommateur, achetez une bonne bière québécoise au dépanneur.
+
+## Le dépanneur — Rôle : détaillant
+
+Le dépanneur en tant que détaillant, fait partie de ce qu'on appelle « les producteurs de marge ». C'est-à-dire que le rôle du détaillant au sein de la chaîne est d'amener _le bien de consommation_ (votre bonne bière québécoise !) d'un point A à un point B. Il s'agit là de la _valeur ajoutée_ (concept fondamental ! nous y reviendrons...) par le rôle du détaillant. Sans lui, la bière ne vous serait pas disponible ! Mais... le dépanneur, en tant que détaillant doit lui aussi acheter la bière pour la rendre disponible. C'est là où entre en scène le rôle du grossiste !
+
+## Le grossiste (manufacturier ?) — Rôle : grossiste et transporteur
+
+Le grossiste permet d'entreposer de vastes quantités de biens de consommation et ainsi permettre une production élargie du bien tout en permettant aussi au détaillant de ne pas stocker ledit bien en d'aussi grandes quantités pour lesquelles il n'aurait pas l'espace disponible. En tant que maillon intermédiaire de la chaîne économique, le grossiste, comme le détaillant avant lui, s'inscrit dans la catégorie des « producteurs de marge ». Son rôle est donc lui aussi d'assurer que votre bonne bière québécoise se rende du point A au point B. Sans lui, le dépanneur serait innondé de bonne bière québécoise... Et l'espace lui manquerait pour nous procurer les bonnes pinottes accompagnant notre bonne bière. Huuummmm... des pinoooottes. Euh, bon, s'cusez. Mais donc, si le détaillant et le grossiste ne font que rendre disponible notre bonne bière québécoise, qui la produit ?
+
+## La (micro-)brasserie — Rôle : transformateur
+
+La où la magie (lire : fermentation) s'opère ! Il s'agit là d'un agent fondamental de la chaîne, celui qui se procure les _biens intermédiaires_ (p. ex. les ingrédients) et les transforme en biens de consommation. Sans brasserie, pas de bonne bière ! Tout dépendant de ses moyens et, surtout, de __vos habitudes à vous, Joey joe Joe le consommateur__, la brasserie peut endosser d'autres rôles que celui-ci de la « simple » transformation et ainsi modifier la composition de notre chaîne économique. Ceci dit, bien que la brasserie soit fondamentale à notre chaîne (et à votre dégustation de bière), elle aussi repose sur un autre maillon, un maillon où beaucoup du « degré de localité » de notre achat se joue : celui du fournisseur.
+
+## Le(s) fournisseur(s) — Rôle : producteur
+
+Que l'on parle du verre de la bouteille, du houblon ou de l'eau dans laquelle les céréales trempent (miam !), il aura fallu que ces biens intermédiaires, transformés par la brasserie, soient eux aussi produits. La brasserie n'est pas (généralement du moins) aussi productrice de céréales ou de verre, elle se retourne donc vers le dernier maillon de notre chaîne, les fournisseurs. Ce sont eux qui produisent les matières premières nécessaires à la confection d'une bonne bière québécoise. La brasserie, grâce à son savoir-faire (et ses recettes secrètes) transforme en bonne bière québécoise les « intrants » fournis. À ce titre, les fournisseurs deviennent en pratique tout aussi vitaux que la brasserie dans notre dégustation de bière. Tout comme le sont les fournisseurs des fournisseurs... et leurs fournisseurs à eux aussi. Ce dernier maillon de la chaîne peut ainsi se dérouler looooongtemps. L'arbre est dans ses feuilles. « Toute est dans toute ».
+
+## La chaîne économique complète de la bière dans notre main
+
+Chacun des agents de cette chaîne génère une « valeur ajoutée ». Celle-ci joue un rôle fondamental dans l'analyse économique. Laissez Henri vous expliquer ce qu'est la valeur ajoutée.
+
+Voici comment est répartie la valeur ajoutée de notre consommation de bière dans la chaîne.
+
+[Diagramme avec la valeur ajoutée]
+
+Et c'est ici que la notion d'achat local en devient une de « degré de localité ». __Chaque maillon de la chaîne aura proportion plus ou moins grande de valeur ajoutée qui sera générée localement ou à l'étranger !__
+
+## Voici comment se décortique la valeur ajoutée dans la chaîne.
+
+[Diagramme avec la valeur ajoutée et sa répartition]
+
+## Voici comment vous, en tant que consommateur pouvez modifier la chaîne.
+
+[Arguments à passer]
+
+- C'est pas parce qu'on achète chez Amazon que ma bonne bière québécoise est moins locale. Tu as seulement changé ta façon de consommer.
+
+En achetant directement chez le microbrasseur on va libérer de la main-d'œuvre. Tout comme nous le ferions en achetant directement sur Internet ou à partir d'un détaillant centralisé (qui emploie moins de ressources humaines grâce aux _économies d'échelle_).
+
+C'est l'envers de la médaille d'un économie de PME : pour produire la même valeur ajoutée, sans les économies d'échelle propres aux grandes entreprises, la PME emploiera plus de travailleurs, le travailleur étant, lui/elle aussi, une ressource rare que doit être économisée. Beaucoup d'avantages écnomiques émergent du modèle de la PME. Mais comme toute chose en économie, ces avantages présentent aussi leurs inconvénients reflets. Un arbitrage est donc à faire : les avantages sont-ils plus valorisés que les inévitables inconvients qui en découlent tout autant ?
+
+## Conclusions
+
+- C'est pour ça qu'il est inopportun de toujours parler des petits magasins quand on parle d'achat local... Ce n'est pas là que la majorité de la valeur ajoutée est créée ! Les « producteurs de marge » n'ajoutent que très peu de valeur. Il faut plutôt regarder chez les transformateurs et les fournisseurs. D'un point de vue économique, l'idée de valoriser l'achat local chez les détaillants locaux est complètement inefficace. Pourquoi créé de minisucules entrepôts un peu partout alors qu'on pourrait centraliser la distribution... et éventuellerment distribuer les biens de consommation par drone, par exemple ? Pourquoi utiliser des ressources rares telles que l'espace, les infrastructrues et le capital humain dans des activités à aussi basse valeur ajoutée ?
+
+Une grande partie des problématiques économiques actuelles se situent au niveau de la main d'œuvre, et a fortiori, dans le commerce de détail. Les salaires y sont bas (généralement sous la barre proposée par plusieurs des 15$ de l'heure minimum) et vous et moi, chacun dans notre rôle de travailleur, ne voulons plus y travailler... Alors pourquoi pas travailler à se départir de ce maillon faible de la chaîne _macroéconomique_ plutôt que de tenter, à fort coût, d'allonger artificiellement durée de vie utile ? Chaque commis ainsi économisé pourra produire plus de valeur ailleurs — en tant que brasseur, par exemple ! — et, par ce fait même, gagner un salaire allant au-delà d'un minimum toujours moins ~~susceptible~~ de procurer une existence confortable.
+
+----
+
+On peut acheter la bière chez le microbrasseur et on va la payer à peu près le même prix que chez le détaillant... Parce qu'il s'accapare la valeur ajoutée... ils ont de l'électricité et des serveurs à payer.
+
+Image de fin de démonstration... expliquer l'achat local n'a de sens que si à la fin on peut comprarer différents comportements. ou différentes morales reçues. (p. ex. ne pas acheter sur Amazon, acheter chez le p'tit détaillant du coin, etc.).
+
+Démontrer comment à la fin, si on achète la bière chez le microbrasseur, on garde plus de valeur locale. pour moins de travailleurs, mieux payés.
+
+Afficher les informations économiques liées à chacun des rôles.
+- Valeur ajoutée
+- Emplois
+- Distribution de la rémunération
+- Les biens intermédiaires intégrés (p. ex. houblon, verre, metal, etc.)
+
+On a ainsi le portrait complet... et on parle de chacune l'une à l'une pour arriver portrait complet par étapes.
+
+On focus sur les biens et non les indutries... LEs industries c'Est plate, les biens, c'est tangible.
