@@ -23,7 +23,8 @@
 	position: relative;
 }
 
-.chain .product {
+.chain .product,
+.chain .agent {
 	align-self: stretch;
 }
 
@@ -46,6 +47,7 @@
 
 .chain article {
 	flex-direction: column;
+	height: 100%;
 }
 
 .chain>div>div {
@@ -95,8 +97,10 @@
 	--IconHeight: calc(var(--Row) * 3);
 	height: var(--IconHeight);
 	fill: currentColor;
-	color: var(--ltr-primary);
-	padding: calc(var(--Row) * .25);
+}
+
+.chain .icon:not(:last-child) {
+	margin-top: auto;
 }
 
 .chain .consumer svg {
@@ -118,6 +122,9 @@
 
 	.chain>div {
 		flex-direction: row;
+	}
+
+	.chain>div:not(:only-child) {
 		margin-top: calc(var(--Row) * 1.5);
 		margin-bottom: calc(var(--Row) * 1.5);
 	}
