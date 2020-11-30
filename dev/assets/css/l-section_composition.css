@@ -1,0 +1,67 @@
+
+main>section [data-parallax] {
+	transform: translate3d(0, calc( var(--scrollParallax) * 1px ), 0);
+	position: absolute;
+	top: 0;
+	right: 0;
+	/*bottom: 0;
+	left: 0;*/
+/*	top: var(--Top, auto);
+	left: var(--Left, auto);
+	right: var(--Right, auto);
+	bottom: var(--Bottom, auto);*/
+}
+
+main>section>div:last-of-type {
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	/*overflow: hidden;*/
+}
+
+.basket {
+	color: var(--Color);
+	/*--Width: calc(var(--Row) * 50);
+	--Height: calc(var(--Row) * 50);
+	*/height: var(--Height);
+	width: var(--Width);
+}
+
+.basket {
+	--Height: clamp(500px, 200vh, 1400px); 
+	--Width: clamp(200px, 50vw, 800px);
+}
+
+main>section [data-parallax] {
+	mix-blend-mode: multiply; /* ATTENTION ! performance : utiliser avec conteneur parent « isolation » */
+}
+
+main>section>div:last-of-type {
+	isolation: isolate;
+}
+
+
+
+
+section[id=role-consommateur]{
+	/*align-items: center;*/
+}
+
+section[id=role-consommateur]>* {
+	/*max-width: calc(var(--Row) * 30);*/
+}
+
+section[id=role-consommateur]>p {
+	--ScaleLevel: var(--Taller);
+}
+
+section[id=role-consommateur]>section {
+	/*max-width: calc(var(--Row) * 30);*/
+}
+
+section[id=role-consommateur]>header {
+	align-self: flex-start;
+}
