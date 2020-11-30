@@ -1,3 +1,7 @@
+:root {
+	--grid-paper-lines: -1px 0px var(--ltst-primary), 0px -1px var(--ltst-primary), -1px 0px var(--ltst-primary) inset, 0px -1px var(--ltst-primary) inset;
+}
+
 main {
 	background-image:
 	 	linear-gradient(to right, transparent calc(100% - 1px), rgba(0,0,0,.1) 0),
@@ -8,17 +12,16 @@ main {
 		var(--GridUnit) 100%, 100% var(--GridUnit);
 }
 
-main>section>* {
+main>section>section {
 	position: relative;
 	padding: var(--Row);
-	padding-bottom: calc(var(--Row) - 1px);
-	padding-right: calc(var(--Row) - 1px);
+	box-shadow: var(--grid-paper-lines);
 	background-color: var(--ColorBg);
 }
 
 
 main>section>*+* {
-	margin-top: calc(var(--Row) + 1px);
+	margin-top: calc(var(--Row));
 }
 
 @media (orientation: portrait) and (min-width: 40em) {
