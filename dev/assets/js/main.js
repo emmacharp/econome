@@ -28,9 +28,11 @@
 			const sectionIndex = [...sections].indexOf(target);
 			if (intersectionRatio >= observer.thresholds[0]) {
 				target.classList.add('is-visible');
+				target.classList.remove('is-invisible');
 				if (anchors.length) anchors[sectionIndex].classList.add('is-visible');
 			} else {
 				target.classList.remove('is-visible');
+				target.classList.add('is-invisible');
 				if (anchors.length) anchors[sectionIndex].classList.remove('is-visible');
 			}
 		});
@@ -69,7 +71,7 @@
 				progress = 1 - progress;
 			}
 
-			e.style.setProperty('--scrollParallax', progress * (eH * factor));
+			e.style.cssText = `--scrollParallax: ${progress * (eH * factor)}; --scrollFactor: ${progress};`;
 		});
 	 }
 
