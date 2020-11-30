@@ -2,7 +2,7 @@
 	body {
 		display: flex;
 	}
-	main>section {
+	main>* {
 		box-sizing: border-box;
 		position: relative;
 		scroll-snap-align: start;
@@ -87,7 +87,6 @@
 	
 	main>section {
 		min-height: calc(100vh + var(--Row) - var(--V_GridUnitRest));
-		overflow: hidden;
 		display: flex;
 		flex-direction: column;
 	}
