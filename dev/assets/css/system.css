@@ -46,7 +46,7 @@
 		--RootFontSize: var(--FluidFontSize, var(--BaseFontSize)); }
 	
 /* Variables dynamiques (Modifiables sur une base d'éléments) */
-	p, li, span,
+	p, li, span, small,
 	h1, h2, h3, h4, h5, h6 {
 		/* DÉPRÉCIÉ ! (en utilisant La hauteur de ligne automatique) */
 		--LineHeight: calc(var(--RowFactor) * max(1, calc(var(--RowSpan) * var(--Amplitude))) * var(--Size) * var(--FontUnit));
@@ -66,7 +66,7 @@
 		max-width: var(--MaxBodyWidth, initial); }
 
 /* Tailles typographiques et interlignage de base */
-	p, li, span,
+	p, li, span, small,
 	h1, h2, h3, h4, h5, h6 {
 		line-height: var(--LineHeight, 1.5625);
 		font-size: var(--FontSize, 1em);
@@ -75,6 +75,7 @@
 		max-width: var(--MaxWidth, inherit);
 		color: var(--Color, inherit); }
 
+
 /* Héritage en place pour les éléments « en-ligne » intérieurs */
 	p *, li *,
 	h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
@@ -82,6 +83,10 @@
 		font-size: inherit;
 		font-style: inherit;
 		font-weight: inherit; }
+
+	strong, b {
+		font-weight: 700;
+	}
 
 /* Rythme des contenus */
 	*+p, *+img, *+hr, *+ul,
