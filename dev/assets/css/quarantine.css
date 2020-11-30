@@ -1,8 +1,10 @@
 :root {
 	--lt-primary: #A4A391;
 	--ltr-primary: #D5D5D2;
+	--ltst-primary: #eaeae6;
 	--brown: #59551D;
-	--lt-brown: #A4A391;
+	--lt-brown: #686100;
+	--ltr-brown: #A4A391;
 	--blue: #2B46BD;
 	--lt-blue: #EAEEFD;
 	--red: #FF0003;
@@ -17,22 +19,26 @@
 	--ColorAccent: var(--yellow);
 }
 
-main>section>:not(svg) {
-	max-width: max-content;
+body {
+	overscroll-behavior-y: none;
 }
+
+/*main>section>:not(svg) {
+	max-width: max-content;
+}*/
 
 
 main>section>section {
 	color: blue;
-	column-width: calc(var(--Row) * 12);
+	column-width: calc(var(--Row) * 16);
 	column-gap: var(--Row);
 	column-count: 8;
-	max-width: calc(var(--Row) * 32);
+	max-width: calc(var(--Row) * 37);
 	margin-bottom: var(--Row);
 }
 
-main>section>section>* {
-	margin-top: 0;
+main>section>section>*+* {
+	margin-top: calc(var(--Row) * .5);
 }
 
 .circle {
@@ -44,18 +50,6 @@ main>section>section>* {
 
 	margin-left: calc(-1 * var(--diameter) / 2);
 	margin-top: calc(-1 * var(--diameter) / 2);
-}
-
-[data-parallax] {
-	transform: translate3d(0, calc( var(--scrollParallax) * 1px ), 0);
-	will-change: transform;
-	z-index: -1;
-	position: absolute;
-	top: var(--Top, auto);
-	left: var(--Left, auto);
-	right: var(--Right, auto);
-	bottom: var(--Bottom, auto);
-	/*mix-blend-mode: multiply;*/ /* ATTENTION ! performance : utiliser avec conteneur parent « isolation » */
 }
 
 nav a {
@@ -200,113 +194,109 @@ fieldset input[type=radio]:checked~span {
 	filter: contrast(2);
 }
 
-.basket {
-	color: var(--Color);
-	width: calc(var(--Row) * 50);
-	height: calc(var(--Row) * 50);
+main>section>h3 {
+	--ScaleLevel: var(--Tall);
+	--Color: var(--ltr-brown);
+	box-sizing: border-box;
+	margin-right: auto;
+	background-color: var(--ColorBg);
+	max-width: calc(var(--Row) * 39);
+	box-shadow: var(--grid-paper-lines);
+	padding-left: var(--Row);
+	padding-right: var(--Row);
 }
 
-.basket.local {
-	--Top: calc(-1 * var(--Row) * 40); 
-	--Right: calc(-1 * var(--Row) * 20);
+main>section>div>header+aside {
+	width: calc(var(--Row) * 20);
 }
 
-.basket.foreign {
-	--Top: calc(-1 * var(--Row) * 30); 
-	--Right: calc(-1 * var(--Row) * 20);
+main>section>div:first-child {
+	display: flex;
+	align-items: center;
+	background-color: transparent;
 }
 
-[id=svg-emma] [id=background] {
-	display: none;
+main>section>div:first-child>*+* {
+	margin-left: calc(var(--Row) * 2);
 }
 
-aside svg {
-	float: left;
-	width: calc(var(--Row) * 5);
-	margin-left: calc(-1 * var(--Row) * 3.5);
+main>section>div:first-child>header {
+	box-shadow: var(--grid-paper-lines);
+	padding: calc(var(--Row));
+	width: calc(var(--Row) * 18);
 }
 
-.cartoon_emma *, .cartoon_henri * {
-  transition: all 0.1s ease-in; }
+main>section aside {
+	display: flex;
+	align-items: center;
+}
 
-.cartoon_emma.animated [id*='oeil_ouvert'], .cartoon_henri.animated [id*='oeil_ouvert'] {
-  animation-name: clignement;
-  animation-duration: 5s;
-  animation-iteration-count: infinite; }
+main>section aside>div {
+	background-color: var(--ColorAccent);
+	box-shadow: var(--grid-paper-lines);
+	padding: calc(var(--Row) * .75);
+}
 
-.cartoon_emma.animated [id*='pupille'],
-.cartoon_emma.animated [id*='reflection'],
-.cartoon_emma.animated [id*='iris'], .cartoon_henri.animated [id*='pupille'],
-.cartoon_henri.animated [id*='reflection'],
-.cartoon_henri.animated [id*='iris'] {
-  animation-name: regarde_gauche, clignement;
-  animation-duration: 13s, 5s;
-  animation-iteration-count: infinite, infinite;
-  animation-timing-function: ease-out, linear; }
+main>section header {
+	background-color: var(--ColorBg);
+}
 
-.cartoon_emma.animated [id*="moustache"], .cartoon_henri.animated [id*="moustache"] {
-  transform-origin: center center;
-  animation-name: moustache;
-  animation-duration: 6s;
-  animation-iteration-count: infinite; }
+main>section header small {
+	--ScaleLevel: var(--Tall);
+	display: block;
+	font-weight: 500;
+	--Color: var(--lt-brown);
 
-.cartoon_emma.animated [id*="sourcils"], .cartoon_henri.animated [id*="sourcils"] {
-  transform-origin: center center;
-  animation-name: hausse_sourcils;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out; }
+}
 
-@keyframes clignement {
- 0% {
-   opacity: 1; }
- 2% {
-   opacity: 1; }
- 2.2% {
-   opacity: 0; }
- 7.8% {
-   opacity: 0; }
- 8% {
-   opacity: 1; }
- 100% {
-   opacity: 1; } }
+main>section aside svg {
+	position: relative;
+	height: calc(var(--Row) * 4);
+	margin-right: calc(-1 * var(--Row) * 2);
+}
 
-@keyframes hausse_sourcils {
- 29% {
-   transform: translateY(0em); }
- 30% {
-   transform: translateY(-0.62em); }
- 47% {
-   transform: translateY(-0.62em); }
- 48% {
-   transform: translateY(0em); }
- 100% {
-   transform: translateY(0em); } }
+main>section aside svg+* {
+	overflow: hidden;
+	padding-left: calc(var(--Row) * 2);
+}
 
-@keyframes moustache {
- 94% {
-   transform: rotate(0deg); }
- 96% {
-   transform: rotate(3deg); }
- 98% {
-   transform: rotate(-3deg); }
- 100% {
-   transform: rotate(0deg); } }
+.chain .unknown-link {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
 
-@keyframes regarde_gauche {
- 38% {
-   transform: translate(0em, 0em); }
- 38.5% {
-   transform: translate(-0.48em, -0.28em); }
- 49.5% {
-   transform: translate(-0.48em, -0.28em); }
- 50% {
-   transform: translate(0em); }
- 88% {
-   transform: translateX(0em); }
- 88.5% {
-   transform: translateX(0.68em); }
- 99.5% {
-   transform: translateX(0.68em); }
- 100% {
-   transform: translateX(0em); } }
+
+.chain .unknown-link span {
+	--ScaleLevel: var(--Tallest);
+	border-radius: 50%;
+	--Color: white;
+	height: calc(var(--Row) * 4);
+	width: calc(var(--Row) * 4);
+	border: .25vw solid var(--ltst-primary);
+	box-sizing: border-box;
+	flex-shrink: 0;
+	text-shadow: 0px 1px 0px var(--ltr-brown);
+	background-color: var(--ltr-primary);
+}
+
+.chain .unknown-link+.unknown-link {
+	margin-left: auto;
+}
+
+.chain div:not([class])+.unknown-link {
+	flex-grow: 0;
+}
+
+.chain div:not([class])+.unknown-link hr {
+	display: none; /* SALE — Faudrait l'enlever dans le XSLT */
+}
+
+.chain .agent.active {
+	color: var(--ColorSupport);
+}
+
+use {
+	color: inherit;
+	fill: currentColor;
+}
