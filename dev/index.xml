@@ -1,28 +1,45 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?xml-stylesheet type="text/xsl" href="index.ui" ?>
 <root>
+	<title>Les dessous économiques du principe <span class="local">d'achat local</span> —  II : LA CHAÎNE ÉCONOMIQUE</title>
 	<section id="role-consommateur">
-		<small>Les dessous économiques du principe d'achat local —  II : LA CHAÎNE ÉCONOMIQUE</small>
-		<header>
-			<h2>Vous, Joey Joe Joe.</h2>
-			<small>Rôle: consommateur</small>
-		</header>
-		<aside>
-			<symbol type="emma" class="cartoon_emma animated" />
-			<p><strong>Vous</strong> êtes le premier (ou dernier, c'est selon !) maillon de la chaîne. Votre rôle, est celui du consommateur.</p>
-		</aside>
+		<div>
+			<header>
+				<h2>Vous, Joey Joe Joe.</h2>
+				<small>Rôle: consommateur</small>
+			</header>
+			<aside>
+				<symbol type="emma" class="cartoon_emma animated" />
+				<div>
+					<p><strong>Vous</strong> êtes le premier (ou dernier, c'est selon !) maillon de la chaîne. <br /><b>Votre rôle économique, est celui du consommateur.</b></p>
+				</div>
+			</aside>
+		</div>
 		<section>
-			<p>Vous avez envie d'une bonne bière québécoise. Toute une chaîne d'<i>agents économiques</i> doit vous rendre disponible cette bonne bière québécoise. La façon dont vous allez acheter &amp; consommer cette bière détermine la nature des agents et conditionne la distribution de leurs rôles au sein de la chaîne. Votre action d'achat provoque un effet d'entraînement. Il est important de comprendre cet effet pour bien comprendre les répercussions de votre achat (local ou non) !</p>
+			<p><b>Vous avez envie d'une <span class="local">bonne bière québécoise</span>.</b></p>
+			<p>Toute une chaîne d'<i>agents économiques</i> doit vous rendre disponible cette bonne bière québécoise. La façon dont vous allez acheter &amp; consommer cette bière détermine la nature des agents et conditionne la distribution de leurs rôles au sein de la chaîne. Votre action d'achat provoque un effet d'entraînement.</p>
+			<p>Il est important de comprendre cet effet pour bien comprendre les répercussions de votre achat (local ou non) !</p>
 		</section>
 
+		<h3>La chaîne économique de votre achat de bière</h3>
+
 		<diagram type="chain" links="5">
-			<agent type="consumer" name="Toé" />
+			<agent type="consumer" name="Joey Joe Joe" class="active" />
+			<product type="beer" name="Bière" complete="" />
 		</diagram>
 
-		<p>Imaginons un scénario où vous, le consommateur, achetez une bonne bière québécoise au <strong>dépanneur</strong>.</p>
+		<aside>
+			<symbol type="emma" class="cartoon_emma animated" />
+			<div>
+				<p>Imaginons un scénario où vous, le consommateur, achetez une bonne bière québécoise au <strong>dépanneur</strong>.</p>
+			</div>
+		</aside>
+		
 
-			<svg class="basket local" data-parallax="" data-factor=".1"><use xlink:href="#svg-panier"></use></svg>
-			<svg class="basket foreign" data-parallax="" data-factor=".4"><use xlink:href="#svg-panier"></use></svg>
+		<div>
+			<symbol type="basket" preserveAspectRatio="xMinYMid slice" class="basket local" data-parallax="" data-factor=".25" />
+			<symbol type="basket" preserveAspectRatio="xMinYMax slice" class="basket foreign" data-parallax="" data-factor=".125" />
+		</div>
 	</section>
 	<section>
 		<h2>Le dépanneur — Rôle : détaillant</h2>
@@ -30,9 +47,9 @@
 		<p>Le dépanneur en tant que détaillant, fait partie de ce qu'on appelle « les producteurs de marge ». C'est-à-dire que le rôle du détaillant au sein de la chaîne est d'amener <i>le bien de consommation</i> (votre bonne bière québécoise !) d'un point A à un point B. Il s'agit là de la <i>valeur ajoutée</i> (concept fondamental ! nous y reviendrons...) par le rôle du détaillant. Sans lui, la bière ne vous serait pas disponible ! Mais... le dépanneur, en tant que détaillant doit lui aussi acheter la bière pour la rendre disponible. C'est là où entre en scène le rôle du grossiste !</p>
 
 		<diagram type="chain" links="5">
-			<agent type="consumer" name="Toé" paid="10" />
+			<agent type="consumer" name="Joey Joe Joe" paid="10" />
 			<product type="beer" name="Bière" complete="" />
-			<agent type="retailer" name="Détaillant" />
+			<agent type="retailer" name="Dépanneur" class="active" />
 		</diagram>
 	</section>
 </root>
