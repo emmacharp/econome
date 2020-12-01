@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?xml-stylesheet type="text/xsl" href="index.ui" ?>
 <root>
-	<title>Les dessous économiques du principe <span class="local">d'achat local</span> —  II : LA CHAÎNE ÉCONOMIQUE</title>
+	<!-- <title>Les dessous économiques du principe <span class="local">d'achat local</span> —  II : LA CHAÎNE ÉCONOMIQUE</title> -->
 	<section id="role-consommateur">
 		<div>
 			<header>
@@ -16,7 +16,7 @@
 			</aside>
 		</div>
 		<section>
-			<p><b>Vous avez envie d'une <span class="local">bonne bière québécoise</span>.</b></p>
+			<p><b>🍺 — Vous avez envie d'une <span class="local">bonne bière québécoise</span>.</b></p>
 			<p>Toute une chaîne d'<i>agents économiques</i> doit vous rendre disponible cette bonne bière québécoise. La façon dont vous allez acheter &amp; consommer cette bière détermine la nature des agents et conditionne la distribution de leurs rôles au sein de la chaîne. Votre action d'achat provoque un effet d'entraînement.</p>
 			<p>Il est important de comprendre cet effet pour bien comprendre les répercussions de votre achat (local ou non) !</p>
 		</section>
@@ -41,15 +41,72 @@
 			<symbol type="basket" preserveAspectRatio="xMinYMax slice" class="basket foreign" data-parallax="" data-factor=".125" />
 		</div>
 	</section>
-	<section>
-		<h2>Le dépanneur — Rôle : détaillant</h2>
+	<section id="role-detaillant">
+		<div>
+			<header>
+				<h2>Le dépanneur</h2>
+				<small>Rôle : détaillant</small>
+			</header>
+			<aside>
+				<symbol type="emma" class="cartoon_emma animated" />
+				<div>
+					<p><strong>Votre dépanneur du coin</strong> est le deuxième maillon de la chaîne. <br/> <b>Son rôle économique est celui du détaillant</b>.</p>
+				</div>
+			</aside>
+		</div>
 		
-		<p>Le dépanneur en tant que détaillant, fait partie de ce qu'on appelle « les producteurs de marge ». C'est-à-dire que le rôle du détaillant au sein de la chaîne est d'amener <i>le bien de consommation</i> (votre bonne bière québécoise !) d'un point A à un point B. Il s'agit là de la <i>valeur ajoutée</i> (concept fondamental ! nous y reviendrons...) par le rôle du détaillant. Sans lui, la bière ne vous serait pas disponible ! Mais... le dépanneur, en tant que détaillant doit lui aussi acheter la bière pour la rendre disponible. C'est là où entre en scène le rôle du grossiste !</p>
+		<section>
+			<p><b>Le dépanneur en tant que détaillant, fait partie de ce qu'on appelle « les producteurs de marge ».</b></p>
+			<p>C'est-à-dire que le rôle du détaillant au sein de la chaîne est d'amener <i>le bien de consommation</i>—votre bonne bière québécoise !—d'un point A à un point B. Il s'agit là de la <i>valeur ajoutée</i> (concept fondamental ! nous y reviendrons...) par le rôle du détaillant.</p>
+			<p><b>Sans lui, la bière ne vous serait pas disponible !</b> Mais... le dépanneur, en tant que détaillant doit lui aussi acheter la bière pour la rendre disponible.</p>
+		</section>
 
 		<diagram type="chain" links="5">
 			<agent type="consumer" name="Joey Joe Joe" paid="10" />
 			<product type="beer" name="Bière" complete="" />
 			<agent type="retailer" name="Dépanneur" class="active" />
 		</diagram>
+
+		<aside>
+			<symbol type="emma" class="cartoon_emma animated" />
+			<div>
+				<p>C'est là où entre en scène le rôle du <strong>grossiste</strong> !</p>
+			</div>
+		</aside>
+	</section>
+
+	<section id="role-grossiste">
+		<div>
+			<header>
+				<h2>L'entrepôt</h2>
+				<small>Rôle : Grossiste</small>
+			</header>
+			<aside>
+				<symbol type="emma" class="cartoon_emma animated" />
+				<div>
+					<p>L'entrepôt combine les rôles à la fois de grossiste mais aussi du transporteur !</p>
+				</div>
+			</aside>
+		</div>
+		<section>
+			<p>Le grossiste permet d'entreposer de vastes quantités de biens de consommation et ainsi permettre une production élargie du bien tout en permettant aussi au détaillant de ne pas stocker ledit bien en d'aussi grandes quantités pour lesquelles il n'aurait pas l'espace disponible.</p>
+			<p>En tant que maillon intermédiaire de la chaîne économique, le grossiste, comme le détaillant avant lui, s'inscrit dans la catégorie des « producteurs de marge ». Son rôle est donc lui aussi d'assurer que votre bonne bière québécoise se rende du point A au point B. Sans lui, le dépanneur serait innondé de bonne bière québécoise...</p>
+			<p>Et l'espace lui manquerait pour nous procurer les bonnes pinottes accompagnant notre bonne bière. Huuummmm... des pinoooottes. Euh, bon, s'cusez.</p>
+		</section>
+
+		<diagram type="chain" links="5">
+			<agent type="consumer" name="Joey Joe Joe" paid="10" />
+			<product type="beer" name="Bière" complete="" />
+			<agent type="retailer" name="Dépanneur" />
+			<product type="beer" name="Bière" />
+			<agent type="manufacturer" name="L'entrepôt" class="active" />
+		</diagram>
+
+		<aside>
+			<symbol type="emma" class="cartoon_emma animated" />
+			<div>
+				<p>Mais donc, si le détaillant et le grossiste ne font que rendre disponible notre bonne bière québécoise, <strong>qui la produit</strong> ?</p>
+			</div>
+		</aside>
 	</section>
 </root>
