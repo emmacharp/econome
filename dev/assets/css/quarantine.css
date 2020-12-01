@@ -9,6 +9,7 @@
 	--lt-blue: #EAEEFD;
 	--red: #FF0003;
 	--yellow: #FCFF9B;
+	--dk-yellow: #FFF91C;
 	--purple: #5F006C;
 
 	--ColorBg: white;
@@ -17,6 +18,7 @@
 	--ColorForeign: var(--red);
 	--ColorSupport: var(--purple);
 	--ColorAccent: var(--yellow);
+	--ColorDkAccent: var(--dk-yellow);
 }
 
 html {
@@ -30,7 +32,6 @@ body {
 /*main>section>:not(svg) {
 	max-width: max-content;
 }*/
-
 
 main>section>section {
 	color: blue;
@@ -54,19 +55,6 @@ main>section>section>*+* {
 
 	margin-left: calc(-1 * var(--diameter) / 2);
 	margin-top: calc(-1 * var(--diameter) / 2);
-}
-
-nav a {
-	font-size: 0;
-	width: calc(var(--Row) * 1);
-	height: calc(var(--Row) * 1);
-	border: calc(var(--Row) * .25) solid grey;
-	background-color: grey;
-	border-radius: 50%;
-}
-
-nav a.is-visible {
-	background-color: yellow;
 }
 
 h1 {
