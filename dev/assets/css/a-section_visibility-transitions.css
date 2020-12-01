@@ -1,167 +1,236 @@
 main>section [data-parallax] {
-	opacity: calc(0 - var(--scrollFactor));
+	/*opacity: calc(0 - var(--scrollFactor));*/
 }
 
-main>section {
-	transition: opacity calc(120ms * var(--DurationFactor)) ease-out;
+/* Facteur de durée universel ----------------------- */
+	
+	main>section {
+		--DurationFactor: 1; }
+
+
+/* Propriétés de transition partagées -----------------------
+	(calculées & génériques) */
+
+	main>section,
+	main>section * {
+		--TotalDuration: calc(var(--SelfDuration, 0ms) * var(--DurationFactor, 1));
+		--TotalDelay: calc(var(--LoadingDelay, 0ms) + var(--StructuralDelay, 0ms) + var(--ChainLinkDelay, 0ms) + var(--AfterChainDelay, 0ms) + var(--SelfDelay, 0ms));
+		--TransitionProperties: none;
+		--TimingFunction: linear; }
+
+
+/* Application générale des transitions.  ----------------------- */
+/* (Les éléments non transitionnés héritent 
+	 des valeurs par défaut ci-haut) */
+	
+	main>section,
+	main>section.is-visible * {
+		transition-property: var(--TransitionProperties);
+		transition-duration: var(--TotalDuration);
+		transition-timing-function: var(--TimingFunction);
+		transition-delay: var(--TotalDelay); }
+
+/* Animation d'apparition au chargement ----------------------- */
+/* (Les éléments non transitionnés héritent 
+	 des valeurs par défaut ci-haut) */
+
+	main>section,
+	main>section * {
+		animation-name: var(--Keyframes);
+		animation-fill-mode: backwards;
+		animation-timing-function: var(--TimingFunction);
+		animation-duration: var(--TotalDuration);
+		animation-delay: var(--TotalDelay);  }
+
+
+/* Application « opt-in » 
+	des propriétés transitionnées  ----------------------- */
+
+	main>section>section,
+	main>section aside svg,
+	main>section aside div,
+	main>section .chain .icon,
+	main>section .chain .arrow {
+		transform: var(--TransformVisible); }
+	main>section,
+	main>section>section,
+	main>section aside div *,
+	main>section .chain .icon+* {
+		opacity: var(--OpacityVisible); }
+
+	main>section.is-invisible>section,
+	main>section.is-invisible aside svg,
+	main>section.is-invisible aside div,
+	main>section.is-invisible .chain .icon,
+	main>section.is-invisible .chain .arrow {
+		transform: var(--TransformInvisible); }
+	main>section.is-invisible,
+	main>section.is-invisible>section,
+	main>section.is-invisible aside div *,
+	main>section.is-invisible .chain .icon+* {
+		opacity: var(--OpacityInvisible); }
+
+/* Propriétés supplémentaires 
+	nécessaires au bon fonctionnement  ----------------------- */
+	
+	/* Empêche le contenu de passer 
+		par-dessus dans la transition */
+	main>section aside svg {
+		z-index: 1; }
+	/* Origines de transformation particulières */
+	main>section aside div {
+		transform-origin: left center; }
+	main>section .chain .arrow {
+		transform-origin: right center; }
+	main>section .chain .arrow.from {
+		transform-origin: left center; }
+
+/* Valeurs de transition spécifiques ----------------------- */
+	
+	/* Sections — Valeurs d'apparition & disparition */
+	main>section {
+		--TransitionProperties: opacity;
+		--TimingFunction: ease-out;
+		--SelfDuration: 120ms;
+		--LoadingDelay: 100ms; }
+	main>section.is-invisible {
+		--SelfDuration: 600ms;
+		--TransitionProperties: opacity;
+		--TimingFunction: ease-out;
+		--SelfDelay: 300ms;
+		--LoadingDelay: 0ms; }
+	main.is-visible {
+		--LoadingDelay: 0ms; }
+
+	/* Éléments — Valeurs de base initiales */
+	main>section aside svg {
+		--TransitionProperties: transform;
+		--SelfDuration: 120ms; }
+	main>section aside div {
+		--TransitionProperties: transform;
+		--SelfDuration: 320ms; }
+	main>section aside div * {
+		--TransitionProperties: opacity;
+		--TimingFunction: var(--ease-out-quad);
+		--SelfDuration: 320ms; }
+	main>section>section {
+		--TimingFunction: var(--ease-out-back);
+		--TransitionProperties: transform, opacity;
+		--SelfDuration: 180ms; }
+	main>section .chain .icon {
+		--TransitionProperties: transform;
+		--TimingFunction: var(--ease-out-back);
+		--SelfDuration: 180ms; }
+	main>section .chain .icon+* {
+		--TransitionProperties: opacity;
+		--TimingFunction: var(--ease-out-quad);
+		--SelfDuration: 180ms; }
+	main>section .chain .arrow {
+		--TransitionProperties: transform;
+		--TimingFunction: var(--ease-out-quad);
+		--SelfDuration: 200ms; }
+
+	/* Éléments — Valeurs spécifiques à l'apparition */
+	main>section.is-visible aside svg {
+		--TimingFunction: var(--ease-bounce-light);
+		--SelfDelay: 400ms; }
+	main>section.is-visible aside div {
+		--TimingFunction: var(--ease-out-back);
+		--SelfDelay: 600ms; }
+	main>section.is-visible aside div * {
+		--SelfDelay: 800ms; }
+	main>section.is-visible .chain .arrow.from {
+		--SelfDelay: 200ms; }
+	main>section.is-visible .chain .arrow {
+		--SelfDelay: -200ms; }
+	main>section.is-visible .chain .icon+* {
+		--SelfDelay: 100ms; }
+
+	/* Éléments — Valeurs transitionnées à la disparition */
+	main>section>section {
+		--TransformInvisible: scale(.85); }
+	main>section aside svg {
+		--TransformInvisible: scale(0); }
+	main>section aside div {
+		--TransformInvisible: scale(0, 1); }
+	main>section .chain .icon {
+		--TransformInvisible: scale(0); }
+	main>section .chain .arrow {
+		--TransformInvisible: scale(0, 1); }
+	main>section,
+	main>section>section,
+	main>section aside div *,
+	main>section .chain .icon+* {
+		--OpacityInvisible: 0; }
+
+	/* Éléments — Valeurs transitionnées à l'apparition */
+	main>section>section,
+	main>section aside svg,
+	main>section aside div,
+	main>section .chain .icon,
+	main>section .chain .arrow {
+		--TransformVisible: scale(1); }
+	main>section,
+	main>section>section,
+	main>section aside div *,
+	main>section .chain .icon+* {
+		--OpacityVisible: 1; }
+
+/* Cascade d'apparition générale en cascade ----------------------- */
+	
+	main>section>:nth-child(1) {
+		--StructuralDelay: 0ms; }
+	main>section>:nth-child(2) {
+		--StructuralDelay: 200ms; }
+	main>section>:nth-child(3) {
+		--StructuralDelay: 400ms; }
+	main>section>:nth-child(4) {
+		--StructuralDelay: 600ms; }
+	main>section>:nth-child(5) {
+		--StructuralDelay: 800ms; }
+
+
+/* Cascade d'apparition des maillons de la chaîne ----------------------- */
+
+	.chain>div>:nth-last-child(1) {
+		--ChainLinkDelay: 200ms; }
+	.chain>div>:nth-last-child(2) {
+		--ChainLinkDelay: 400ms; }
+	.chain>div>:nth-last-child(3) {
+		--ChainLinkDelay: 600ms; }
+	.chain>div>:nth-last-child(4) {
+		--ChainLinkDelay: 800ms; }
+	.chain>div>:nth-last-child(5) {
+		--ChainLinkDelay: 1000ms; }
+
+/* Délai supplémentaire pour tout ce qui suit la chaîne ----------------------- */
+	
+	main>section>.chain~* {
+		--AfterChainDelay: 800ms; }
+
+/* Choix d'animation au chargement de la page ----------------------- */
+
+		main>section>section,
+		main>section aside svg,
+		main>section aside div,
+		main>section .chain .icon,
+		main>section .chain .arrow {
+			--Keyframes: scale; }
+		main>section,
+		main>section>section,
+		main>section aside div *,
+		main>section .chain .icon+* {
+			--Keyframes: opacity; }
+
+/* Animations réflétant les transitions ----------------------- */
+
+@keyframes opacity {
+	from { opacity: var(--OpacityInvisible); } 
+	to { opacity: var(--OpacityVisible); }
 }
 
-main>section.is-invisible {
-	opacity: 0;
-	will-change: opacity;
-	transition: opacity calc(600ms * var(--DurationFactor)) ease-out 300ms;
+@keyframes scale {
+	from { transform: var(--TransformInvisible); } 
+	to { transform: var(--TransformVisible); }
 }
 
-main>section aside svg {
-	transition: transform calc(120ms * var(--DurationFactor));
-	z-index: 1;
-}
-
-main>section aside div {
-	transition: transform calc(320ms * var(--DurationFactor));
-	transform-origin: left center;
-}
-
-main>section aside div * {
-	transition: opacity calc(320ms * var(--DurationFactor)) var(--ease-out-quad);
-}
-
-main>section>section {
-	transition: calc(180ms * var(--DurationFactor)) var(--ease-out-back);
-	transition-property: transform, opacity;
-}
-
-main>section.is-invisible>section {
-	transform: scale(.85);
-	opacity: 0;
-}
-
-main>section.is-invisible aside svg,
-main>section.is-invisible aside div {
-	transform: scale(0);
-}
-
-main>section.is-visible aside svg {
-	transition-delay: calc(var(--Delay) + 400ms);
-	transition-timing-function: var(--ease-bounce-light);
-}
-
-main>section.is-visible aside div {
-	transition-delay: calc(var(--Delay) + 600ms);
-	transition-timing-function: var(--ease-out-back);
-}
-
-main>section.is-visible aside div * {
-	transition-delay: calc(var(--Delay) + 800ms);
-}
-
-main>section.is-invisible aside div *,
-main>section.is-invisible .chain .icon+* {
-	opacity: 0;
-}
-
-main>section.is-visible>* {
-	transition-delay: var(--Delay);
-}
-
-main>section .chain .icon {
-	transition: transform calc(180ms * var(--DurationFactor)) var(--ease-out-back);
-}
-
-main>section.is-visible .chain .icon {
-	transition-delay: var(--Delay, inherit);
-}
-
-main>section .chain .icon+* {
-	transition: opacity calc(180ms * var(--DurationFactor)) var(--ease-out-quad);
-}
-
-main>section.is-visible .chain .icon+* {
-	transition-delay: calc(var(--Delay, inherit) + 100ms);
-}
-
-main>section.is-invisible .chain .icon {
-	transform: scale(0);
-}
-
-main>section .chain .arrow {
-	transition: transform calc(200ms * var(--DurationFactor)) var(--ease-out-quad);
-	transform-origin: right center;
-}
-
-main>section.is-visible .chain .arrow {
-	transition-delay: calc(var(--Delay, inherit) - 200ms);
-}
-
-main>section .chain .arrow.from {
-	transition: transform calc(200ms * var(--DurationFactor)) var(--ease-out-quad);
-	transform-origin: left center;
-}
-
-main>section.is-visible .chain .arrow.from {
-	transition-delay: calc(var(--Delay, inherit) + 200ms);
-}
-
-main>section.is-invisible .chain .arrow {
-	transform: scaleX(0);
-}
-
-main>section {
-	--DurationFactor: 1;
-}
-
-main>section>* {
-	--Delay: var(--StructuralDelay);
-}
-
-main>section>:nth-child(1) {
-	--StructuralDelay: 0ms;
-}
-
-main>section>:nth-child(2) {
-	--StructuralDelay: 200ms;
-}
-
-main>section>:nth-child(3) {
-	--StructuralDelay: 400ms;
-}
-
-main>section>:nth-child(4) {
-	--StructuralDelay: 600ms;
-}
-
-main>section>:nth-child(5) {
-	--StructuralDelay: 800ms;
-}
-
-main>section>.chain~* {
-	--Delay: calc(var(--StructuralDelay) + (800ms * var(--DurationFactor)));
-}
-
-.chain>div>* {
-	--Delay: var(--ChainLinkDelay);
-}
-
-.chain>div>:nth-child(1) {
-	--ChainLinkDelay: calc(var(--StructuralDelay));
-}
-
-.chain>div>:nth-last-child(1) {
-	--ChainLinkDelay: calc(var(--StructuralDelay) + 200ms);
-}
-
-.chain>div>:nth-last-child(2) {
-	--ChainLinkDelay: calc(var(--StructuralDelay) + 400ms);
-}
-
-.chain>div>:nth-last-child(3) {
-	--ChainLinkDelay: calc(var(--StructuralDelay) + 600ms);
-}
-
-.chain>div>:nth-last-child(4) {
-	--ChainLinkDelay: calc(var(--StructuralDelay) + 800ms);
-}
-
-.chain>div>:nth-last-child(5) {
-	--ChainLinkDelay: calc(var(--StructuralDelay) + 1000ms);
-}
