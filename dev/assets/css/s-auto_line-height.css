@@ -2,11 +2,6 @@
 /* Extrêmement intensif en puissance de calcul. En ce sens, on doit l'optimiser au maximum, 
 	en choisissant manuellement les éléments qui seront touchés par les différents calculs. */
 
-	:root {
-		--GridUnit: calc(var(--Row) / 2); /* Valeur qui sera arrondie en JS */
-		--Row: calc(var(--GridUnit) * 2); /* Nouvelle valeur découlant de l'unité arrondie en JS */
-	}
-
 	p, li, span,
 	h1, h2, h3, h4, h5, h6 {
 		--FontSizeWithRowUnit: calc(var(--Size) * var(--ScaleLevel) * var(--FontFactor) * var(--RowUnit));

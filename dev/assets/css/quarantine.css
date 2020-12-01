@@ -204,8 +204,7 @@ main>section>h3 {
 	--Color: var(--ltr-brown);
 	box-sizing: border-box;
 	max-width: max-content;
-	/*background-color: var(--ColorBg);*/	
-	box-shadow: inset 0px -1px 0px var(--ltst-primary);
+	box-shadow: inset 0px var(--JS-activated-line) 0px var(--ltst-primary);
 	padding-left: var(--Row);
 	background-image: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0) 80em);
 }

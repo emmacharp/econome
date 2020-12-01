@@ -1,5 +1,16 @@
+/* IMPORTANT ! 
+	Patron de composition « papier quadrillé » nécessitant
+	l'apport de Javascript  pour arrondir les valeurs au pixel près.
+	En l'absence de JS, le patron est désactivé à l'aide de calculs nuls. */
+
+	/* --GridUnit : valeur (px) générée à partir du « line-height » html arrondie */
+	/* --Row : valeur (px) initiale recalculée en JS à partir de --GridUnit */
+	/* --GridValue : valeur servant à annuler le patron de papier quadrillé */
+
 :root {
-	--grid-paper-lines: -1px 0px var(--ltst-primary), 0px -1px var(--ltst-primary), -1px 0px var(--ltst-primary) inset, 0px -1px var(--ltst-primary) inset;
+	--GridValue: 0; /* Valeur modifiée en JS pour activer le patron */
+	--JS-activated-line: calc(-1px * (var(--GridValue) / var(--GridValue)));
+	--grid-paper-lines: var(--JS-activated-line) 0px var(--ltst-primary), 0px var(--JS-activated-line) var(--ltst-primary), var(--JS-activated-line) 0px var(--ltst-primary) inset, 0px var(--JS-activated-line) var(--ltst-primary) inset;
 }
 
 main {
