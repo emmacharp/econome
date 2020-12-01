@@ -29,6 +29,7 @@
 				<link rel="stylesheet" href="assets/css/s-auto_line-height.css"/>
 				<link rel="stylesheet" href="assets/css/config.css"/>
 				<link rel="stylesheet" href="assets/css/base.css"/>
+				<link rel="stylesheet" href="assets/css/c-internal_nav.css"/>
 				<link rel="stylesheet" href="assets/css/quarantine.css"/>
 				<link rel="stylesheet" href="assets/css/chain.css"/>
 				<link rel="stylesheet" href="assets/css/arrows.css"/>
@@ -339,7 +340,7 @@
 				let H_GridUnitRest = ViewportWidth - (Math.floor(ViewportWidth / GridUnit) * GridUnit);
 				let V_GridUnitRest = ViewportHeight - (Math.floor(ViewportHeight / GridUnit) * GridUnit);
 				html.style.cssText = `--GridValue: ${GridUnit};`;
-				body.style.cssText = `--H_GridUnitRest: ${H_GridUnitRest}px; --V_GridUnitRest:${V_GridUnitRest}px; --GridValue: ${GridUnit};  --GridUnit: ${GridUnit}px; --Row: ${Row}px;`;
+				body.style.cssText = `--H_GridUnitRest: ${H_GridUnitRest}px; --V_GridUnitRest:${V_GridUnitRest}px; --GridUnit: ${GridUnit}px; --Row: ${Row}px;`;
 			}
 			setRowRest();
 			window.addEventListener('resize', setRowRest);
