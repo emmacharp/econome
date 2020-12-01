@@ -13,7 +13,7 @@ main>section [data-parallax] {
 	bottom: var(--Bottom, auto);*/
 }
 
-main>section>div:last-of-type {
+main>section>div:last-child {
 	z-index: -1;
 	position: absolute;
 	top: 0;
@@ -40,7 +40,7 @@ main>section [data-parallax] {
 	mix-blend-mode: multiply; /* ATTENTION ! performance : utiliser avec conteneur parent « isolation » */
 }
 
-main>section>div:last-of-type {
+main>section>div:last-child {
 	isolation: isolate;
 }
 
