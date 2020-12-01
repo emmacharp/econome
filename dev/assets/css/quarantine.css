@@ -195,15 +195,19 @@ fieldset input[type=radio]:checked~span {
 }
 
 main>section>h3 {
-	--ScaleLevel: var(--Tall);
+	--ScaleLevel: var(--Base);
+	font-weight: 700;
 	--Color: var(--ltr-brown);
 	box-sizing: border-box;
-	margin-right: auto;
-	background-color: var(--ColorBg);
-	max-width: calc(var(--Row) * 39);
-	box-shadow: var(--grid-paper-lines);
+	max-width: max-content;
+	/*background-color: var(--ColorBg);*/	
+	box-shadow: inset 0px -1px 0px var(--ltst-primary);
 	padding-left: var(--Row);
-	padding-right: var(--Row);
+	background-image: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0) 80em);
+}
+
+main>section>h3+.chain {
+	margin-top: 0;
 }
 
 main>section>div>header+aside {
@@ -278,6 +282,7 @@ main>section aside svg+* {
 	flex-shrink: 0;
 	text-shadow: 0px 1px 0px var(--ltr-brown);
 	background-color: var(--ltr-primary);
+	box-shadow: inset 0px 1px 0px var(--lt-primary), 0px 1px 0px var(--ltr-primary);
 }
 
 .chain .unknown-link+.unknown-link {
