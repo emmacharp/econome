@@ -24,7 +24,8 @@
 				<meta name="apple-mobile-web-app-status-bar-style" content="#ff0000"/>
 
 				<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+				
+				<link rel="stylesheet" href="assets/css/a-section_visibility-transitions.css" />
 				<link rel="stylesheet" href="assets/css/system.css"/>
 				<link rel="stylesheet" href="assets/css/s-auto_line-height.css"/>
 				<link rel="stylesheet" href="assets/css/config.css"/>
@@ -53,7 +54,6 @@
 				<xsl:call-template name="svg-elements" />
 				<script src="assets/js/main.js" defer="defer"></script>
 				<link rel="stylesheet" href="assets/css/c-cartoon_characters.css" />
-				<link rel="stylesheet" href="assets/css/a-section_visibility-transitions.css" />
 				<link rel="stylesheet" href="assets/css/s-easings.css"/>
 				<!-- <link rel="stylesheet" href="assets/css/dev.css"> -->
 			</body>
