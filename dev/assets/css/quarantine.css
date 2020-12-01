@@ -19,6 +19,10 @@
 	--ColorAccent: var(--yellow);
 }
 
+html {
+	text-rendering: geometricPrecision;
+}
+
 body {
 	overscroll-behavior-y: none;
 }
