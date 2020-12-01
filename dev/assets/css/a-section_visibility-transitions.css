@@ -65,11 +65,19 @@ main>section.is-visible>* {
 }
 
 main>section .chain .icon {
-	transition: transform calc(180ms * var(--DurationFactor)) var(--ease-out-back) var(--Delay, inherit);
+	transition: transform calc(180ms * var(--DurationFactor)) var(--ease-out-back);
+}
+
+main>section.is-visible .chain .icon {
+	transition-delay: var(--Delay, inherit);
 }
 
 main>section .chain .icon+* {
-	transition: opacity calc(180ms * var(--DurationFactor)) var(--ease-out-quad) calc(var(--Delay, inherit) + 100ms);
+	transition: opacity calc(180ms * var(--DurationFactor)) var(--ease-out-quad);
+}
+
+main>section.is-visible .chain .icon+* {
+	transition-delay: calc(var(--Delay, inherit) + 100ms);
 }
 
 main>section.is-invisible .chain .icon {
@@ -77,13 +85,21 @@ main>section.is-invisible .chain .icon {
 }
 
 main>section .chain .arrow {
-	transition: transform calc(200ms * var(--DurationFactor)) var(--ease-out-quad) calc(var(--Delay, inherit) - 200ms);
+	transition: transform calc(200ms * var(--DurationFactor)) var(--ease-out-quad);
 	transform-origin: right center;
 }
 
+main>section.is-visible .chain .arrow {
+	transition-delay: calc(var(--Delay, inherit) - 200ms);
+}
+
 main>section .chain .arrow.from {
-	transition: transform calc(200ms * var(--DurationFactor)) var(--ease-out-quad) calc(var(--Delay, inherit) + 200ms);
+	transition: transform calc(200ms * var(--DurationFactor)) var(--ease-out-quad);
 	transform-origin: left center;
+}
+
+main>section.is-visible .chain .arrow.from {
+	transition-delay: calc(var(--Delay, inherit) + 200ms);
 }
 
 main>section.is-invisible .chain .arrow {
@@ -91,7 +107,7 @@ main>section.is-invisible .chain .arrow {
 }
 
 main>section {
-	--DurationFactor: 1.5;
+	--DurationFactor: 1;
 }
 
 main>section>* {
