@@ -1,6 +1,7 @@
 
 main>section [data-parallax] {
 	transform: translate3d(0, calc( var(--scrollParallax) * 1px ), 0);
+	transition: none;
 	position: absolute;
 	top: 0;
 	right: 0;
