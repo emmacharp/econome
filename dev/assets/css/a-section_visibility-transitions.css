@@ -2,6 +2,7 @@ main>section [data-parallax] {
 	/*opacity: calc(0 - var(--scrollFactor));*/
 }
 
+
 /* Facteur de durée universel ----------------------- */
 	
 	main>section {
@@ -92,7 +93,7 @@ main>section [data-parallax] {
 		--TransitionProperties: opacity;
 		--TimingFunction: ease-out;
 		--SelfDuration: 120ms;
-		--LoadingDelay: 100ms; }
+		--LoadingDelay: 200ms; }
 	main>section.is-invisible {
 		--SelfDuration: 600ms;
 		--TransitionProperties: opacity;
@@ -142,7 +143,7 @@ main>section [data-parallax] {
 	main>section.is-visible .chain .arrow.from {
 		--SelfDelay: 200ms; }
 	main>section.is-visible .chain .arrow {
-		--SelfDelay: -200ms; }
+		--SelfDelay: 200ms; }
 	main>section.is-visible .chain .icon+* {
 		--SelfDelay: 100ms; }
 
@@ -203,10 +204,12 @@ main>section [data-parallax] {
 	.chain>div>:nth-last-child(5) {
 		--ChainLinkDelay: 1000ms; }
 
+
 /* Délai supplémentaire pour tout ce qui suit la chaîne ----------------------- */
 	
 	main>section>.chain~* {
 		--AfterChainDelay: 800ms; }
+
 
 /* Choix d'animation au chargement de la page ----------------------- */
 
@@ -221,6 +224,11 @@ main>section [data-parallax] {
 		main>section aside div *,
 		main>section .chain .icon+* {
 			--Keyframes: opacity; }
+		/* Annuler l'héritage des animations */
+		main>section * {
+			--Keyframes: none; }
+
+
 
 /* Animations réflétant les transitions ----------------------- */
 
