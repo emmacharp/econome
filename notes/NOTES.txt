@@ -296,3 +296,80 @@ Essayer de raconter une p'tite histoire à partir du simulateur.
 
 La méthode ADEPT de démonstration d'un concept complexe.
 https://betterexplained.com/articles/adept-method/
+
+---
+
+### Meeting Henri — 3 décembre 2020
+
+On passe dans ce qu'il y a dans la bière. Les produits et services qui se retrouvent dans la bière (houblon, verre, etc.).
+
+Les ingrédients. Une part locale ou pas.
+
+C'est là (produits) où on engage la réflexion sur l'achat local et don qu'on intorduit les concepts (p. ex. valeur ajoutée).
+
+Bière moyenne au Québec (mettons, moitié rouge / bleue)
+et on compare
+Bière irlandaise, brassée en Irlande (95% de rouge & 5% de bleu)
+Bière de microbrasserie (mettons juste disponible à la microbrasserie) Il y aura beaucoup de bleu, mais quand même du rouge.
+
+Les intrants sont les plus grandes différences. Même tout fait au Québec y aura du rouge.
+
+(Si y en a pour nous contredire, allez-y * wink wink * )
+
+C'est bon l'achat local. Pourquoi dit-on c'est bon l'acaht local ?
+
+Bière moyenne composée comme ça. __Le principe de l'achat local c'est augmenter la quantité de bleu dans la chaîne.__
+
+C'est quoi les implications économiques d'avoir plus de bleu dans le diagramme ? La valeur ajoutée. C'est ça qui est important. On l'introduit à ce moment parce que pertinent. __Une importation, c'est une valeur ajoutée, que tu délègues à un acteur économique étranger.__ Avoir un intrant local, ça veut dire que que j'ai créé la valeur ajoutée localement, l'inverse c'est acheter une valeur ajoutée produite à l'extérieur.
+
+Le détaillant prend ton mille et en donne 800$ au grossiste. C'est sa valeur ajoutée.
+
+C'est un bon moment pour l'introduire. Ça rend ça super simple avec la chaîne. Utiliser cette « parenthèse » valeur ajoutée pour présenter toutes les informations qui vont être présentées. Intermède conceptuel.
+
+La différence enttre les deux flèches qui entourent un acteur c'est la valeur ajoutée ! On introduit les interprétations.
+
+Ça veut dire quoi 200$ de valeur ajoutée ? Richesse produite au Québec. Dividendes, Fiscalité, salaires, profits. Emplois.
+
+Ça représente quoi comme valeur ajoutée 100$ de houblon ? J'ai rapatrié 20 $ de valeur ajoutée en produisant le houblon localement. TRADUCTION. pas des impact... on dit 5 fois la même chose. Salaires, emplois, Fiscalité.
+
+C'est 300 emplois à 15$ — 35 000$ par année
+C'est 10 000 000 $ en taxation.
+
+Indicateurs... pour présenter l'ampleur seulement
+
+__Productivité marginale__... égale pas la productivité moyenne. L'acteur va décider de comment il produit sa nouvelle valeur ajoutée.
+
+Qu'est-ce ça coûte de demander au conducteur de tracteur de faire 5 mètres de plus alors qu'il est déjà dans le tracteur ? Pas la même chose que pour les 5 premiers mètres... où il doit se lever, démarrer le tracteur, etc.
+
+Bon c'est bon la valeur ajoutée, mais si c'est si bon, pourquoi la heineken est-elle encore vendue ?
+
+Parce qu'on peut pas tout produire ! Des choses qui ne poussent pas ici. Contraintes physiques... naturelles. Pas assez de travailleurs. Pour certaines choses on est mieux de laisser les acteurs efficaces, bien qu'étrangers faire le truc !
+
+Ultimmeent, on peut certaines produire des serres, des bananes... mais y a quand même une limite à la quantité de travailleurs que nous avons ! Une ressource rare qu'on se doit d'économiser. Quel serait donc la meilleure allocation de cette ressource. Coût d'opportunité ! Arbitrage !
+
+Soyons fou ! Et si tous les maillons de la chaîne étaient québécois ?
+
+Voici la valeur ajoutée qu'on a rapatriée et la quantité d'emplois qui ont été ajoutés.
+
+Tel maillon permet de rapatrié 1M de valeur ajoutée et l'autre 2M de valeur ajoutée...
+
+1M de valeur ajoutée = 1000  en détail
+2M de valeur ajoutée = 500 emplois en houblon.
+
+__Différence entre manufacture et la finance !__ Salaires qui restent à l'intérieur vs. dividendes qui sortent du pays.
+
+Alors que voulons-nous faire avec ça !? Comment est générée la valeur ? Par des travailleurs ou du capital ? Augmenter la productivité c'est modifier la composition de la valeur ajoutée ! Plus de capital, moins de travailleurs.
+
+Caractériser la valeur ajoutée. Fiscalité. Salaires. Dividendes.
+
+La simulation complète ? EXPLOSION. ÇA se peut pas.
+
+Avec les capacités actuelles de l'économie québécoise, voici ce qui est possible. Le modèle a dit que les contraintes étaient satisfaites (en termes plus cool).
+
+Voici les implications... Pas tout est positif. Les travailleurs ne sont pas disponibles pour d'autres chaînes ! Pression à la hausse des salaires qui s'applique sur toutes les industries. Conséquences importantes sur l'économie entière ! Indicateur ultime : pouvoir d'achat. Effet prix par manque de travailleur. Concurrence sur les travailleurs.
+
+On termine sur note ultra provocatrice : il y a une manière d'arriver à ça sans la hausse de prix... TRAVAILLEUR MEXICAIN. On produit localement avec des travailleurs étrangers.
+
+Les restaurateurs ont demandé d'avoir les mêmes facilités d'immigration de travailleurs que les agriculteurs.
+
+Nous on est neutre... on veut que les gens se posent les bonnes questions en ayant les implicationss concrètes en tête.
