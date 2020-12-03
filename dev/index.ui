@@ -2,6 +2,7 @@
 <xsl:stylesheet version="1.0" 
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:svg="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
 	xmlns:msxsl="urn:schemas-microsoft-com:xslt"
 	xmlns:ext="http://exslt.org/common"
 	xmlns:math="http://exslt.org/math"
@@ -100,7 +101,7 @@
 			<xsl:param name="attr" select="@*[not(name() = 'id')]" />
 			<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="{@viewBox}">
 				<xsl:apply-templates select="$attr" />
-				<use href="#{@id}"></use>
+				<use xlink:href="#{@id}"></use>
 			</svg>
 	</xsl:template>
 
@@ -208,7 +209,7 @@
 					<span class="paid amount">- 10 $</span>
 					<div>
 						<article>
-							<svg viewBox="0 0 280 244"><use href="#svg-consumer"></use></svg>
+							<svg viewBox="0 0 280 244"><use xlink:href="#svg-consumer"></use></svg>
 							<h4>Toé</h4>
 						</article>
 					</div>
@@ -231,7 +232,7 @@
 					<div>
 						<span class="added amount local">+ 2 $</span>
 						<article>
-							<svg class="icon" viewBox="0 0 351 351"><use href="#svg-retailer"></use></svg>
+							<svg class="icon" viewBox="0 0 351 351"><use xlink:href="#svg-retailer"></use></svg>
 							<h4>Détaillant</h4>
 						</article>
 						<span class="added amount foreign">+ 0 $</span>
@@ -255,7 +256,7 @@
 					<div>
 						<span class="added amount local">+ 2 $</span>
 						<article>
-							<svg class="icon" viewBox="0 0 352 352"><use href="#svg-manufacturer"></use></svg>
+							<svg class="icon" viewBox="0 0 352 352"><use xlink:href="#svg-manufacturer"></use></svg>
 							<h4>Grossiste</h4>
 						</article>
 						<span class="added amount foreign">+ 3 $</span>
@@ -279,7 +280,7 @@
 					<div>
 						<span class="added amount local">+ 1 $</span>
 						<article>
-							<svg class="icon" viewBox="0 0 368 368"><use href="#svg-transformer"></use></svg>
+							<svg class="icon" viewBox="0 0 368 368"><use xlink:href="#svg-transformer"></use></svg>
 							<h4>Transformateur</h4>
 						</article>
 						<span class="added amount foreign">+ 1 $</span>
@@ -303,7 +304,7 @@
 					<div>
 						<span class="added amount local">+ .50 $</span>
 						<article>
-							<svg class="icon" viewBox="0 0 352 352"><use href="#svg-provider"></use></svg>
+							<svg class="icon" viewBox="0 0 352 352"><use xlink:href="#svg-provider"></use></svg>
 							<h4>Fournisseur</h4>
 						</article>
 						<span class="added amount foreign">+ .50 $</span>
