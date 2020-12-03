@@ -5,7 +5,7 @@
 	xmlns:msxsl="urn:schemas-microsoft-com:xslt"
 	xmlns:ext="http://exslt.org/common"
 	xmlns:math="http://exslt.org/math"
-	exclude-result-prefixes="ext msxsl">
+	exclude-result-prefixes="ext msxsl svg math">
 	<xsl:output method="html" doctype-system="about:legacy-compat" />
 
 	<xsl:variable name="special-characters" select="'/ áàâäéèêëíìîïóòôöúùûüçÁÀÂÄÉÈÊËÍÌÎÏÓÒÔÖÚÙÛÜÇABCDEFGHIJKLMNOPQRSTUVWXYZ&amp;’?.()!:,'"/>
@@ -16,8 +16,8 @@
 	<xsl:key name="agent-type" match="agent" use="@type"/>
 	<xsl:key name="symbol-type" match="svg:symbol" use="substring-after(@id, 'svg-')"/>
 
-	<xsl:template match="/root">
-		<html lang="fr" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<xsl:template match="/">
+		<html lang="fr">
 			<head>
 				<meta charset="UTF-8"/>
 				<meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -47,7 +47,7 @@
 			<body>
 				<xsl:call-template name="display-script" />
 				<nav>
-					<xsl:apply-templates select="section" mode="internal-navigation" />
+					<xsl:apply-templates mode="internal-navigation" />
 				</nav>
 				<main>
 					<xsl:apply-templates mode="main-content" />
