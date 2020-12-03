@@ -11,7 +11,7 @@
 		--BodyWidth: auto;
 		--MaxBodyWidth: initial;
 		
-		--RowFactor: 1.6125; /* Ratio pour des facteurs de 4 seulement */
+		--RowFactor: 1.6125;
 		--RowUnit: 1rem;
 
 		--MinFontSize: 13px;
