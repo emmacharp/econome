@@ -35,6 +35,8 @@
 				<link rel="stylesheet" href="assets/css/quarantine.css"/>
 				<link rel="stylesheet" href="assets/css/chain.css"/>
 				<link rel="stylesheet" href="assets/css/arrows.css"/>
+				<link rel="stylesheet" href="assets/css/c-cartoon_characters.css" />
+				<link rel="stylesheet" href="assets/css/s-easings.css"/>
 				<link rel="stylesheet" href="assets/css/p-grid_paper.css"/>
 				<link rel="stylesheet" href="assets/css/l-master_composition.css"/>
 				<link rel="stylesheet" href="assets/css/l-section_composition.css"/>
@@ -55,8 +57,6 @@
 				</main>
 				<xsl:call-template name="svg-elements" />
 				<script src="assets/js/main.js" defer="defer"></script>
-				<link rel="stylesheet" href="assets/css/c-cartoon_characters.css" />
-				<link rel="stylesheet" href="assets/css/s-easings.css"/>
 				<!-- <link rel="stylesheet" href="assets/css/dev.css"> -->
 			</body>
 		</html>
