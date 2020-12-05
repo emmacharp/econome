@@ -22,6 +22,7 @@
 		--BaseFontStack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 		--TitleFontStack: "Avenir Next", "Helevetica Neue", "Helvetica", "Segoe UI";
 		--SubtitleFontStack: "Helvetica Neue", "Helvetica", "Segoe UI", -apple-system;
+		--Color: var(--ColorText);
 	}
 
 
@@ -49,30 +50,36 @@
 	header { font-family: var(--SubtitleFontStack); }
 
 
-/* Distribution de l'échelle typographique ----------------------- */
+/* Distribution aux titres de l'échelle typographique ----------------------- */
 
-	h1 { --ScaleLevel: var(--Huge); --FontWeight: 600; }
-	h2 { --ScaleLevel: var(--Tallest); --FontWeight: 600; }
+	h1 { --ScaleLevel: var(--Huge); }
+	h2 { --ScaleLevel: var(--Tallest); }
 	h3 { --ScaleLevel: var(--Taller); }
 	h4 { --ScaleLevel: var(--Tall); }
 	h5 { --ScaleLevel: var(--Base); }
 	h6 { --ScaleLevel: var(--Short); }
-	p { --Color: var(--ColorText); --MaxWidth: calc(var(--Row) * 40); }
+
+
+/* Styles typograhpiques particuliers -----------------------  */
+
+	h1, h2 { 
+		--FontWeight: 600; }
 
 	main>section header {
 		--FontWeight: 600;
 		--Color: var(--ColorSupport);
-		--MaxWidth: calc(var(--Row) * 45);
-	}
+		--MaxWidth: calc(var(--Row) * 45); }
 
 	fieldset p {
 		--ScaleLevel: var(--Taller);
 		--MaxWidth: calc(var(--Row) * 22);
-		--FontWeight: 300;
-	}
+		--FontWeight: 300; }
 
-	main>section aside {
+	aside {
 		--ScaleLevel: var(--Short);
-		--LineHeightFactor: .75;
-	}
+		--LineHeightFactor: .75; }
 
+	body>aside h1,
+	body>aside h2,
+	body>aside h3 {
+		--ScaleLevel: var(--Base); }
