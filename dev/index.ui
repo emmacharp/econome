@@ -340,7 +340,7 @@
 			const main = document.querySelector('main');
 			body.style.setProperty('overflow-y', 'scroll');
 			// Snap to CSS Grid Paper Pattern Function
-			const setRowRest = () => {
+			const setPaperGrid = () => {
 				let GridUnit = Math.ceil(parseFloat(window.getComputedStyle(html).getPropertyValue('line-height')) / 2);
 				let FontSize = Math.floor(parseFloat(window.getComputedStyle(html).getPropertyValue('font-size')));
 				let Row = GridUnit * 2;
@@ -351,8 +351,8 @@
 				html.style.cssText = `--GridValue: ${GridUnit};`;
 				body.style.cssText = `--H_GridUnitRest: ${H_GridUnitRest}px; --V_GridUnitRest:${V_GridUnitRest}px; --GridUnit: ${GridUnit}px; --Row: ${Row}px;`;
 			}
-			setRowRest();
-			window.addEventListener('resize', setRowRest);
+			setPaperGrid();
+			window.addEventListener('resize', setPaperGrid);
 		</script>
 	</xsl:template>
 
