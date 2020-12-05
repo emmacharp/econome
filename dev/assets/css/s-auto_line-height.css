@@ -14,7 +14,7 @@
 							(var(--FontSizeWithRowUnit) - var(--Row) * 1.325) * 9999999), var(--Row)) - (var(--is-3-rows, 0px) + var(--is-2-rows-and-half, 0px)));
 		--is-1-row-and-half: calc(clamp(
 						0px, calc(
-							(var(--FontSizeWithRowUnit) - var(--Row) * .825) * 9999999), var(--Row)) - (var(--is-3-rows, 0px) + var(--is-2-rows-and-half, 0px) + var(--is-2-rows)));
+							(var(--FontSizeWithRowUnit) - var(--Row) * .8525) * 9999999), var(--Row)) - (var(--is-3-rows, 0px) + var(--is-2-rows-and-half, 0px) + var(--is-2-rows)));
 		--is-1-row: calc(var(--Row) - (var(--is-3-rows, 0px) + var(--is-2-rows-and-half, 0px) + var(--is-2-rows) + var(--is-1-row-and-half)));
 		--LineHeightAuto: calc(var(--is-1-row, var(--Row)) + (var(--is-1-row-and-half, 0px) * 1.5) + (var(--is-2-rows, 0px) * 2) + (var(--is-2-rows-and-half, 0px) * 2.5) + (var(--is-3-rows, 0px) * 3)); }
 
