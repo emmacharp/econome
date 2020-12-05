@@ -55,6 +55,13 @@
 				<main>
 					<xsl:apply-templates mode="main-content" />
 				</main>
+				<aside>
+					<h2>Conaissances complémentaires</h2>
+					<div id="wikiDump">
+						
+					</div>
+					<footer>Contenu provenant de Wikipedia. Voir la page ci-dessus.</footer>
+				</aside>
 				<xsl:call-template name="svg-elements" />
 				<script src="assets/js/main.js" defer="defer"></script>
 				<!-- <link rel="stylesheet" href="assets/css/dev.css"> -->
