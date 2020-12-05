@@ -55,10 +55,11 @@
 
 /* Règles initiales du système ----------------------- */
 
-/* Appliquer la taille de caractère de base choisie */
+/* Appliquer les styles typographiques de base */
 	html { 
 		line-height: var(--RowFactor, 1.5625);
-		font-size: var(--RootFontSize, 16px); }
+		font-size: var(--RootFontSize, 16px);
+		color: var(--Color, inherit); }
 
 /* Contexte du corps de la page */
 	body {
@@ -72,8 +73,7 @@
 		font-size: var(--FontSize, 1em);
 		font-style: var(--FontStyle, inherit);
 		font-weight: var(--FontWeight, inherit);
-		max-width: var(--MaxWidth, inherit);
-		color: var(--Color, inherit); }
+		max-width: var(--MaxWidth, inherit); }
 
 
 /* Héritage en place pour les éléments « en-ligne » intérieurs */
