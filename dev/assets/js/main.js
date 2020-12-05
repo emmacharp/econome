@@ -6,6 +6,11 @@
 	const sections = document.querySelectorAll('main>section');
 	const anchors = document.querySelectorAll('nav>a');
 	const parallaxItems = document.querySelectorAll('[data-parallax]');
+	const wikiLinks = document.querySelectorAll('[data-wiki]');
+	const wikiDump = document.querySelector('#wikiDump');
+	const wiki = document.createElement('section');
+
+	wikiDump.appendChild(wiki);
 
 
 // Internal Navigation Behavior Function
@@ -76,6 +81,48 @@
 	 }
 
 
+ // Fetching content from Wikipedia API
+
+ 	const fetchWikiContent = (event) => {
+ 		const el = event.target.closest('[data-wiki]') || event.target.closest('a');
+ 		const wikiPage = el.getAttribute('data-wiki') || el.getAttribute('href').split('/wiki/')[1];
+ 		let wikiUrl = '';
+ 		let wikiContent = '';
+ 		let wikiSectionIds = (el.getAttribute('data-sections')) ? el.getAttribute('data-sections').split(',') : null;
+
+ 		if (wikiSectionIds !== null) {
+			wikiUrl = `https://fr.wikipedia.org/api/rest_v1/page/mobile-sections/${wikiPage}`;
+ 		} else {
+ 			wikiUrl = `https://fr.wikipedia.org/w/api.php?origin=*&format=json&action=parse&page=${wikiPage}&prop=text`;
+ 		}
+
+ 		fetch(wikiUrl)
+ 			.then(response => {
+ 				return response.json();
+ 			})
+ 			.then(data => {
+				let wikiContent = '';
+
+		 		if (wikiSectionIds !== null) {
+	 				wikiSectionIds.forEach((id) => {
+	 					if (id === '0') {
+	 						wikiContent += data.lead.sections[id].text;
+	 					} else {
+	 						wikiContent += data.remaining.sections[id - 1].text;
+	 					}
+	 				});
+	 			} else {
+	 				wikiContent = data.parse.text['*'];
+	 			}
+
+	 			wikiContent = wikiContent.replace(/(style=".+?")/gm, '');
+
+	 			wiki.innerHTML = wikiContent;
+ 			})
+ 			.catch(error => console.log(error));
+ 	}
+
+
 // Init All
 
 	window.addEventListener('DOMContentLoaded', function() {
@@ -87,6 +134,21 @@
 		sections.forEach((item, index) => {
 			sectionObserver.observe(item);
 		});
+
+
+		// Activate wiki integration
+		wikiLinks.forEach((item) => {
+			item.addEventListener('click', fetchWikiContent);
+		});
+
+		wikiDump.addEventListener('click', function(event) {
+			let wikiLink = event.target.closest('a[href^="/wiki"]');
+
+			if (!wikiLink) return;
+			fetchWikiContent(event);
+			event.preventDefault();
+		});
+
 
 		// Nav Events
 		anchors.forEach((item) => {
