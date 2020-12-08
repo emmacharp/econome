@@ -34,7 +34,7 @@ body {
 }*/
 
 main>section>section {
-	color: blue;
+	/*color: blue;*/
 	column-width: calc(var(--Row) * 16);
 	column-gap: var(--Row);
 	column-count: 8;
@@ -201,7 +201,7 @@ main>section>h3+.chain {
 	margin-top: 0;
 }
 
-main>section>div>header+aside {
+main>section header+aside {
 	width: calc(var(--Row) * 20);
 }
 
@@ -228,7 +228,8 @@ main>section aside {
 
 main>section aside>div {
 	background-color: var(--ColorAccent);
-	box-shadow: var(--grid-paper-lines);
+	box-shadow: var(--grid-paper-lines), 0px 0px 6px 1px rgba(0,0,0,.06);
+	border-radius: 5px;
 	padding: calc(var(--Row) * .75);
 }
 
@@ -255,44 +256,10 @@ main>section aside svg+* {
 	padding-left: calc(var(--Row) * 2);
 }
 
-.chain .unknown-link {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-}
-
-
-.chain .unknown-link span {
-	--ScaleLevel: var(--Tallest);
-	border-radius: 50%;
-	--Color: white;
-	height: calc(var(--Row) * 4);
-	width: calc(var(--Row) * 4);
-	border: .25vw solid var(--ltst-primary);
-	box-sizing: border-box;
-	flex-shrink: 0;
-	text-shadow: 0px 1px 0px var(--ltr-brown);
-	background-color: var(--ltr-primary);
-	box-shadow: inset 0px 1px 0px var(--lt-primary), 0px 1px 0px var(--ltr-primary);
-}
-
-.chain .unknown-link+.unknown-link {
-	margin-left: auto;
-}
-
-.chain div:not([class])+.unknown-link {
-	flex-grow: 0;
-}
-
 .chain div:not([class])+.unknown-link hr {
 	display: none; /* SALE — Faudrait l'enlever dans le XSLT */
 }
 
-.chain .agent.active {
-	color: var(--ColorSupport);
-}
-
 use {
-	color: inherit;
 	fill: currentColor;
 }
