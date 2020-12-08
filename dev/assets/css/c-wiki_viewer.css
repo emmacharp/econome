@@ -1,0 +1,64 @@
+body>aside>div {
+	/*pointer-events: all;*/
+	padding: var(--Row);
+	width: calc(var(--Row) * 18.5);
+	top: var(--Row);
+	right: calc(var(--Row));
+	bottom: var(--Row);
+	left: calc(var(--Row) * 20);
+	height: auto;
+	background-color: var(--ColorBg);
+	/*max-height: calc(var(--Row) * 20);*/
+	margin-left: auto;
+	overflow: auto;
+	box-sizing: border-box;
+	/*position: fixed;*/
+	border: none;
+	/*opacity: 0;*/
+	transition-duration: 400ms;
+	border-radius: 5px;
+	border: 1px solid var(--ltr-primary);
+	box-shadow: 0px 4px 4px 1px rgba(0,0,0,.05);
+
+	--ScaleLevel: var(--Short);
+	--LineHeightFactor: .75;
+}
+body>aside>div:not(:hover)::-webkit-scrollbar {
+	opacity: 0;
+}
+body>aside:not(.is-visible) {
+	opacity: 0;
+}
+
+[data-wiki]:after {
+	content: '?';
+	height: 1em;
+	width: 1em;
+	padding: .125em;
+	border-radius: 50%;
+	font-size: .75em;
+	color: inherit;
+	border: 1px solid var(--ltr-primary);
+	background-color: var(--ltst-primary);
+	font-weight: 600;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: .4125em;
+	/*margin-right: .4125em;*/
+	position: relative;
+	box-shadow: 0;
+	top: -.125em;
+}
+
+[data-wiki]:hover {
+	background-color: var(--ltst-primary);
+	box-shadow: 0px 4px 0px  var(--ltst-primary);
+	color: var(--ColorSupport);
+}
+
+[data-wiki]:hover:after {
+	background-color: transparent;
+	border-color: transparent;
+	opacity: 0;
+}

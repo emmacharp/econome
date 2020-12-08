@@ -55,16 +55,20 @@
 				<main>
 					<xsl:apply-templates mode="main-content" />
 				</main>
-				<aside>
-					<h2>Conaissances complémentaires</h2>
-					<div id="wikiDump">
-						
+				<aside id="wikiViewer">
+					<div>
+						<button id="wikiViewerClose">Fermer</button>
+						<h2>Conaissances complémentaires</h2>
+						<div id="wikiDump">
+							
+						</div>
+						<footer>Contenu provenant de Wikipedia. <a id="wikiCanonical" rel="canonical" target="_blank" href="#">Voir la page ci-dessus</a>.</footer>
 					</div>
-					<footer>Contenu provenant de Wikipedia. Voir la page ci-dessus.</footer>
 				</aside>
 				<xsl:call-template name="svg-elements" />
 				<script src="assets/js/main.js" defer="defer"></script>
 				<!-- <link rel="stylesheet" href="assets/css/dev.css"> -->
+				<link rel="stylesheet" href="assets/css/c-wiki_viewer.css"/>
 			</body>
 		</html>
 	</xsl:template>

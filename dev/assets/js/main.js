@@ -7,7 +7,9 @@
 	const anchors = document.querySelectorAll('nav>a');
 	const parallaxItems = document.querySelectorAll('[data-parallax]');
 	const wikiLinks = document.querySelectorAll('[data-wiki]');
+	const wikiViewer = document.querySelector('#wikiViewer');
 	const wikiDump = document.querySelector('#wikiDump');
+	const wikiCanonical = document.querySelector('#wikiCanonical');
 	const wiki = document.createElement('section');
 
 	wikiDump.appendChild(wiki);
@@ -17,7 +19,6 @@
 
 	const onAnchorClick = (e) => {
 		const index = [...anchors].indexOf(e.target);
-
 		document.querySelector('main').scrollTo({
 			left: index * window.innerWidth,
 			top: index * window.innerHeight
@@ -116,8 +117,13 @@
 	 			}
 
 	 			wikiContent = wikiContent.replace(/(style=".+?")/gm, '');
-
+	 			wikiCanonical.setAttribute('href', `https://fr.wikipedia.org/wiki/${wikiPage}`);
 	 			wiki.innerHTML = wikiContent;
+	 			
+	 			if(!wikiViewer.classList.contains('is-visible')){
+	 				wikiViewer.classList.add('is-visible');
+	 			}
+
  			})
  			.catch(error => console.log(error));
  	}
@@ -147,6 +153,10 @@
 			if (!wikiLink) return;
 			fetchWikiContent(event);
 			event.preventDefault();
+		});
+
+		document.querySelector('#wikiViewerClose').addEventListener('click', function(event) {
+			wikiViewer.classList.remove('is-visible');
 		});
 
 

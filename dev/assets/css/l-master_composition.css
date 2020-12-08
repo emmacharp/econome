@@ -20,17 +20,13 @@
 		flex-grow: 1;
 	}
 
-	body>aside {
-		height: 100%;
-		width: 100%;
-		max-width: calc(var(--Row) * 14);
-		max-height: 100vh;
-		overflow: auto;
-		padding: var(--Row);
-		box-sizing: border-box;
-		position: sticky;
+/*	body>aside {
+		position: fixed;
 		top: 0;
-	}
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}*/
 }
 
 @media (min-width: 80em) {
@@ -111,4 +107,8 @@
 	body>nav~main {
 		padding-left: var(--Row);
 	}
+
+/*	body>aside:not(.is-visible) {
+		max-width: 0;
+	}*/
 }
