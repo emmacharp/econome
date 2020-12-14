@@ -9,9 +9,11 @@
 	padding: calc(var(--Row) * .75);
 }
 
-[id="wikiViewer"]>div {
-	/*pointer-events: all;*/
+[id="wikiViewer"]:not(.is-visible) {
+	pointer-events: none;	
+}
 
+[id="wikiViewer"]>div {
 	max-width: 40ch;
 	background-color: var(--ColorBg);
 	margin-left: auto;
