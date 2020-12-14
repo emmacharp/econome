@@ -57,12 +57,14 @@
 				</main>
 				<aside id="wikiViewer">
 					<div>
-						<button id="wikiViewerClose">Fermer</button>
-						<h2>Conaissances complémentaires</h2>
+						<header>
+							<h2>Conaissances complémentaires</h2>
+							<button id="wikiViewerClose">Fermer</button>
+						</header>
 						<div id="wikiDump">
 							
 						</div>
-						<footer>Contenu provenant de Wikipedia. <a id="wikiCanonical" rel="canonical" target="_blank" href="#">Voir la page ci-dessus</a>.</footer>
+						<footer><span>Contenu provenant de Wikipedia.</span> <a id="wikiCanonical" rel="canonical" target="_blank" href="#">Visiter la page officielle</a></footer>
 					</div>
 				</aside>
 				<xsl:call-template name="svg-elements" />
