@@ -3,28 +3,27 @@
 <root>
 	<!-- <title>Les dessous économiques du principe <span class="local">d'achat local</span> —  II : LA CHAÎNE ÉCONOMIQUE</title> -->
 	<section id="intro">
-		<div>
+		<!-- <div> -->
 			<header>
-				<h1>Le concept de l'achat local</h1>
+				<small>Economia présente</small>
+				<h1>Les dessous économique du principe d'<span class="local">achat local</span></h1>
 				<small>Démystifier pour mieux agir.</small>
 			</header>
-			<aside>
-				<symbol type="emma" class="cartoon_emma animated" />
-				<div>
-					<h5>Phrases creuses, vous dites ?</h5>
-					<ul>
-						<li>« L'achat local fait rouler notre économie ! »</li>
-						<li>« L'achat local crée des emplois ! »</li>
-					</ul>
-				</div>
-			</aside>
-		</div>
+			<!-- <aside> -->
+			<!-- 	<symbol type="emma" class="cartoon_emma animated" /> -->
+			<!-- 	<div> -->
+			<!-- 		<h5>Phrases creuses, vous dites ?</h5> -->
+			<!-- 		<ul> -->
+			<!-- 			<li>« L'achat local fait rouler notre économie ! »</li> -->
+			<!-- 			<li>« L'achat local crée des emplois ! »</li> -->
+			<!-- 		</ul> -->
+			<!-- 	</div> -->
+			<!-- </aside> -->
+		<!-- </div> -->
 		<section>
 			<p><b>Il vous est proposé aujourd'hui de démystifier la notion « d'achat local ».</b></p>
 			<p>Des questions (<em>pas plus de 10, promis</em>) vous seront posées, des concepts vous seront présentés, des implications seront abordées puis un raisonnement développé.</p>
 			<p><strong>Exigeons plus que des phrases creuses !</strong></p>
-		</section>
-		<section>
 			<p>Parce que oui, c'est plus complexe que ça (surprise ! ...mais pas tant quand même). Tout sera fait pour bien familiariser. Parce que oui, aussi, l'économique est familier. C'est de nos actions quotidiennes dont-il s'agit. <i>T'sais</i>.</p>
 		</section>
 		<aside>
@@ -37,19 +36,24 @@
 				</ul>
 			</div>
 		</aside>
+
+		<div>
+			<symbol type="basket" preserveAspectRatio="xMinYMid slice" class="basket local" data-parallax="" data-factor=".25" style="--Top: 40px;" />
+			<symbol type="basket" preserveAspectRatio="xMinYMax slice" class="basket foreign" data-parallax="" data-factor=".125" style="--Top: 80px;" />
+		</div>
 	</section>
 	<section id="presentation">
 		<header>
 			<h2>Pour commencer, présentons-nous</h2>
 		</header>
 		<section>
-			<symbol style="float:left; width: 10ch;" type="emma" class="cartoon_emma animated" />
+			<symbol type="emma" class="cartoon_emma animated" />
 			<div>
 				<h3>Marc-andré</h3>
 				<small>concepteur éclectique</small>
 				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur corporis velit, consequatur maiores minus aut excepturi dolore magni quis debitis odit quisquam sequi ratione veniam rerum fuga, blanditiis sit deleniti.</p>
 			</div>
-			<symbol style="float:left; width: 10ch;" type="emma" class="cartoon_emma animated" />
+			<symbol type="emma" class="cartoon_emma animated" />
 			<div>
 				<h3>Henri</h3>
 				<small>économiste aguerri</small>
@@ -60,7 +64,10 @@
 		<form>
 			<fieldset>
 				<p>Quel est votre nom ?</p>
-				<label ><span>Nom ou sobriquet</span><input type="text" placeholder="Joey Joe Joe" /></label>
+				<div>
+					<label >Nom ou sobriquet</label>
+					<input type="text" placeholder="Joey Joe Joe" />
+				</div>
 			</fieldset>
 			<fieldset>
 				<p>Votre âge ?</p>
@@ -73,7 +80,8 @@
 	</section>
 	<section id="preferences">
 		<header>
-			<p>Vous avez des préférences esthétiques, Joey Joe Joe ? (c'est pour rendre votre expérience plus agréable !)</p>
+			<h2>Vous avez des préférences esthétiques, Joey Joe Joe ?</h2>
+			<small>(c'est pour rendre votre expérience plus agréable !)</small>
 		</header>
 		<form>
 			<fieldset>
@@ -85,7 +93,8 @@
 	</section>
 	<section id="biere">
 		<header>
-			<p>Merci, Joey joe Joe ! Passons maintenant aux choses sérieuses.</p>
+			<h2>Merci, Joey Joe Joe !</h2>
+			<p>Passons maintenant aux choses sérieuses.</p>
 		</header>
 		<form>
 			<fieldset>
