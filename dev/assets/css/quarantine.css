@@ -91,6 +91,11 @@ section[id]>* {
 	--Color: var(--ColorForeign);
 }
 
+form {
+	background-color: white;
+	padding: var(--Row);
+}
+
 form fieldset {
 	display: flex;
 	border: none;
