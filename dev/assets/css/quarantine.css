@@ -42,6 +42,14 @@ main>section>section {
 	margin-bottom: var(--Row);
 }
 
+main>section>section svg {
+	float: left;
+	height: 8ch;
+}
+
+main>section>section svg~* {
+	overflow: hidden;
+}
 main>section>section>*+* {
 	margin-top: calc(var(--Row) * .5);
 }
@@ -56,11 +64,6 @@ main>section>section>*+* {
 	margin-left: calc(-1 * var(--diameter) / 2);
 	margin-top: calc(-1 * var(--diameter) / 2);
 }
-
-h1 {
-	margin-bottom: calc(var(--Row) * 4);
-}
-
 
 hr {
 	line-height: 0;
@@ -242,6 +245,10 @@ main>section header {
 	background-color: var(--ColorBg);
 }
 
+main>section header>*+* {
+	margin-top: calc(var(--Row) / 2);
+}
+
 main>section header small {
 	--ScaleLevel: var(--Tall);
 	display: block;
@@ -267,4 +274,8 @@ main>section aside svg+* {
 
 use {
 	fill: currentColor;
+}
+
+main>section>* {
+	margin-bottom: auto;
 }
