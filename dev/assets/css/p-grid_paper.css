@@ -25,6 +25,11 @@ main {
 
 main>section>section {
 	position: relative;
+}
+
+main>section>header,
+main>section>div>header,
+main>section>section {
 	padding: var(--Row);
 	box-shadow: var(--grid-paper-lines);
 	background-color: var(--ColorBg);
