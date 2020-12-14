@@ -2,6 +2,111 @@
 <?xml-stylesheet type="text/xsl" href="index.ui" ?>
 <root>
 	<!-- <title>Les dessous économiques du principe <span class="local">d'achat local</span> —  II : LA CHAÎNE ÉCONOMIQUE</title> -->
+	<section id="intro">
+		<div>
+			<header>
+				<h1>Le concept de l'achat local</h1>
+				<small>Démystifier pour mieux agir.</small>
+			</header>
+			<aside>
+				<symbol type="emma" class="cartoon_emma animated" />
+				<div>
+					<h5>Phrases creuses, vous dites ?</h5>
+					<ul>
+						<li>« L'achat local fait rouler notre économie ! »</li>
+						<li>« L'achat local crée des emplois ! »</li>
+					</ul>
+				</div>
+			</aside>
+		</div>
+		<section>
+			<p><b>Il vous est proposé aujourd'hui de démystifier la notion « d'achat local ».</b></p>
+			<p>Des questions (<em>pas plus de 10, promis</em>) vous seront posées, des concepts vous seront présentés, des implications seront abordées puis un raisonnement développé.</p>
+			<p><strong>Exigeons plus que des phrases creuses !</strong></p>
+		</section>
+		<section>
+			<p>Parce que oui, c'est plus complexe que ça (surprise ! ...mais pas tant quand même). Tout sera fait pour bien familiariser. Parce que oui, aussi, l'économique est familier. C'est de nos actions quotidiennes dont-il s'agit. <i>T'sais</i>.</p>
+		</section>
+		<aside>
+			<symbol type="emma" class="cartoon_emma animated" />
+			<div>
+				<ul>
+					<li>« L'achat local nous enrichit ! »</li>
+					<li>« L'achat local est bon pour l'environnement ! »</li>
+					<li><i>et caetera</i></li>
+				</ul>
+			</div>
+		</aside>
+	</section>
+	<section id="presentation">
+		<header>
+			<h2>Pour commencer, présentons-nous</h2>
+		</header>
+		<section>
+			<symbol style="float:left; width: 10ch;" type="emma" class="cartoon_emma animated" />
+			<div>
+				<h3>Marc-andré</h3>
+				<small>concepteur éclectique</small>
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur corporis velit, consequatur maiores minus aut excepturi dolore magni quis debitis odit quisquam sequi ratione veniam rerum fuga, blanditiis sit deleniti.</p>
+			</div>
+			<symbol style="float:left; width: 10ch;" type="emma" class="cartoon_emma animated" />
+			<div>
+				<h3>Henri</h3>
+				<small>économiste aguerri</small>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, rerum officiis est id. Natus ipsa, reprehenderit quo odio dolores molestiae repudiandae culpa in, neque illo iste dignissimos quas, voluptatibus quidem.</p>
+			</div>
+		</section>
+		<h3>Et vous ?</h3>
+		<form>
+			<fieldset>
+				<p>Quel est votre nom ?</p>
+				<label ><span>Nom ou sobriquet</span><input type="text" placeholder="Joey Joe Joe" /></label>
+			</fieldset>
+			<fieldset>
+				<p>Votre âge ?</p>
+				<label ><span>Âge. Véridique ou non</span><input type="text" placeholder="102 belles années" /></label>
+			</fieldset>
+		</form>
+		<section>
+			<p>Vous n'êtes pas tenu de répondre la vérité... ni même de répondre du tout. Mais ça peut être plus efficace (wiki) pour tout le monde.</p>
+		</section>
+	</section>
+	<section id="preferences">
+		<header>
+			<p>Vous avez des préférences esthétiques, Joey Joe Joe ? (c'est pour rendre votre expérience plus agréable !)</p>
+		</header>
+		<form>
+			<fieldset>
+				<p>Couleurs</p>
+				<p>Taille de caractères</p>
+				<p>Animations</p>
+			</fieldset>
+		</form>
+	</section>
+	<section id="biere">
+		<header>
+			<p>Merci, Joey joe Joe ! Passons maintenant aux choses sérieuses.</p>
+		</header>
+		<form>
+			<fieldset>
+				<p>Aimez-vous la bière ?</p>
+				<div>
+					<label>
+						<input type="radio" name="aimer-biere" />
+						<span>Oui !</span>
+					</label>
+					<label>
+						<input type="radio" name="aimer-biere" />
+						<span>Non !</span>
+					</label>
+					<label>
+						<input type="radio" name="aimer-biere" />
+						<span>Je ne bois pas</span>
+					</label>
+				</div>
+			</fieldset>
+		</form>
+	</section>
 	<section id="role-consommateur">
 		<div>
 			<header>
