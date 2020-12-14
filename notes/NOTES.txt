@@ -373,3 +373,54 @@ On termine sur note ultra provocatrice : il y a une manière d'arriver à ça sa
 Les restaurateurs ont demandé d'avoir les mêmes facilités d'immigration de travailleurs que les agriculteurs.
 
 Nous on est neutre... on veut que les gens se posent les bonnes questions en ayant les implicationss concrètes en tête.
+
+## Retranscription — Meeting Henri 3 décembre
+
+Aller vers les produits intégrés dans la production.
+On y introduit la dimension locale / étrangère
+Ingrédients et services
+On parle d'une bière moyenne au Québec
+On part de la moyenne (moitié bleue, moitié rouge) et on peut ainsi représenter aussi les extrêmes.
+On parle d'une bière irlandaise, mettons 95% de rouge. Mais quand même un peu de bleu (dépanneur, transporteurs, etc.). Elle sera toute rouge à la sortie usine mais il y a du bleu qui s'ajoute à la fin. C'est déjà beau en soi.
+Bière de microbrasserie, juste à la microbrasserie... Il y aura quand même du rouge.
+C'est ici qu'o n passe du point de vue consommateur à l'achat local. Pourquoi c'est bien l'achat local ?
+Question économique mais accessible à tous c'est quoi donc l'achat local ? (parce qu'il y a de l'étranger dans le local et du local dans l'étranger...)
+L'achat local c'est augmenter la part de bleu dans la bière moyenne.
+La traduction économique de ce principe : qu'est-ce ça fait d'avoir plus de bleu que de rouge..? PAs les impacts mais les implications... C'est là où le concept de valeur ajoutée devient pertinent !
+Expliquer ce qu'est une valeur ajoutée. Ce qu'est une importation... C'est une valeur ajoutée que tu as déléguée à un acteur à l'extérieur du québec.
+Avoir un intrant local, ça veut dire que nous allons créer de la valeur ajoutée localement. Quand l'intrant est importé, j'ai décidé d'employer le produit d'une valeur ajoutée qui a été créée à l'extérieur. __Donc j'ai acheté la valeur ajoutée.__
+
+*Henri devrait faire un schéma sur les biens*
+
+La valeur ajoutée c'est la différence entre ce que l'acteur touche d'un côté et ce qu'il dépense de l'autre.
+On fait un détour par le concept de valeur ajoutée. Primordial pour la compréhension... Pas de couleur là-dedans. Juste la chaîne et les flux.
+
+Intermède conceptuel... Faudrait possiblement en profiter pour introduire tous les concepts et variables que nous aborderons par la suite... Valeur ajoutée, emplois, salaires, profits, etc. __On pourrait permettre de retourner plus haut qu'on aborde le concept pur retourner à son introduction.__
+
+200$ de valeurr ajoutée, ça représente quoi ? Ça représente des salaires, des dividendes, donc des emplois, donc la richesse qui est créée au Québec et qui est distribuée sous plusieurs formes (rémunération, dividendes, fiscalité, etc.). la valeur ajoutée, c'est ce qui fait croître l'économie du pays. À partie de la notion de valeur ajoutée, on dérive celles de l'emploi, des salaires, etc. 
+
+Et là on intègre le tout dans les dimensions de localité/étranger. On peut passer du houblon ontarien au houblon québécois par exemple. Ça représente quoi comme valeur ajoutée 100$ de houblon ?
+J'ai rapatrié 20$ de valeur ajoutée en utilisant le houblon du Québec.
+On est pas dans les impacts, mais plutôt dans la __traduction__. On dit 5 fois la même chose de manière différente. Et on se permet de modifier les échelles en fonction de ce qui est compris l'usager... des dizaines pour l'achat de sa bière, des millier pour les salaires, des millions pour la fiscalité, par exemple.
+Il faut garder en tête à ce moment-ci qu'il s'agit vraiment d'indicateur. C'est pas dit que c'est vraiment ça qui va arriver... c'est plutôt pour donner une idée de l'ordre de magnitude, de l'envergure. Par exemple, 2 millions, c'est tant d'emplois à 15$ de l'heure. Mais c'est pas nécessairement ça qui va arriver... PArce qu'au final, on met pas en pratique la moyenne, mais plutôt la marge. Si y a de quoi peut-être qu'au final les 2 millions ne créeront pas d'emploi.
+
+Concept de marginalité... Le tracteur qui est déjà démarré...
+Si c'est beau l'achat local, pourquoi donc reste-t-il de la heineken ? Parce qu'on peut pas tout faire.
+Et étant donné qu'on ne peut pas tout faire, nous sommes aussi bien de laisser les gens qui font mieux que nous faire. C'est l'avantage relatif (wikipedia).
+Même si on pouvait produire tout ce qu'on mange, grâce à des serres, par exemple, il demeure que ça prend des travailleurs. Et que ça, on peut pas les faire pousser. Coût d'opportunité. Arbitrage.
+Si on est fou, et qu'on présente ce qui adviendrait si on produisait tout localement, tout devient bleu. Un maillon de la chaîne peut valoir 2 millions en valeur ajoutée et un autre 1 million. Mais qu'est ce que ça représente ? D'un côté ça pourrait être produit qu'avec des machines et d'un autre qu'avec des emplois... C'est la différence entre la manufacture et la finance. Si la valeur ajoutée ne représente que des dividendes, et que celles-ci s'en vont à l'extérieur du pays, qu'est-ce que ça donne ?
+Et c'est la que la question se pose : pourquoi rapatrier la valeur ajoutée au Québec ?
+On peut pas isoler seulement la valeur ajoutée... Il faut la relier à tout. Comment allons-nous la générer cette valeur ajoutée ? Avec du capital ou des travailleurs ? C'est là ou devient pertinent le concept de productivité. Le premier ministre Legault veut augmenter la productivité. Il choisira alors de rapatrier 1 million de valeur ajoutée générée par deux emplois plutôt que 10 millions de valeur ajoutée générée par 100 emplois.
+Quand on va faire la simulation complète... Hercule devrait exploser. Parce que c'est impossible. Mais après on peut porposer une composition de la chaîne qui soit possible considérant les capacités actuelles de l'économie québécoise. Les contraintes sont satisfaites.
+Mais ça ne veut pas dire que toutes les implications sont positives... En affichant les indicateurs on peut démontrer, par exemple, que les travailleurs nécessaires à la production présentée sont devenus indisponibles ailleurs. Pression à la hausse des salaires dans toutes les autres industries. Cela amènera une diminution du pouvoir d'achat moyen. Chaque dollar dépensé achètera finalement moins. Effet prix. Concurrence sur les travailleurs.
+Y a une manière de faire ça en minimisant l'impact sur les prix et c'est en important des travailleurs sud-américains, par exemple. Produire localement et avec des travailleurs étrangers.
+Saviez-vous que, les restaurants ont demandés d'avoir accès aux travailleurs étrangers de la même façon que les agriculteurs le font. https://www.ledevoir.com/politique/quebec/560583/travailleurs-etrangers-temporaires-simon-jolin-barrette-renvoie-la-balle-a-ottawa
+Nous on est neutre... Faut qu'on regarde la réalité en face. Connaître les implications.
+
+Renforcer l'élément de découverte en constituant le schéma de chaîne.
+
+---
+
+On laisse l'usager s'investir en répondant à des questions « personnelles » et en le laissant interagir avec l'expérience. Un peu comme si Henri et moi le faisions.
+    Répondre à des questions simples, cliquer sur des boutons oui ou non pour passer à une section suivante ajustée.
+Courbe de présentation de l'interaction. Plus léger, plus familier.
