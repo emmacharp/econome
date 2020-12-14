@@ -47,7 +47,7 @@
 		--RootFontSize: calc(var(--FluidFontSize, var(--BaseFontSize)) * var(--RootFontSizeFactor, 1)); }
 	
 /* Variables dynamiques (Modifiables sur une base d'éléments) */
-	p, li, span, small, th, td,
+	p, ul, a, span, small, th, td,
 	h1, h2, h3, h4, h5, h6 {
 		/* DÉPRÉCIÉ ! (en utilisant La hauteur de ligne automatique) */
 		--LineHeight: calc(var(--RowFactor) * max(1, calc(var(--RowSpan) * var(--Amplitude))) * var(--Size) * var(--FontUnit));
@@ -68,7 +68,7 @@
 		max-width: var(--MaxBodyWidth, initial); }
 
 /* Tailles typographiques et interlignage de base */
-	p, li, span, small, th, td,
+	p, ul, a, span, small, th, td,
 	h1, h2, h3, h4, h5, h6 {
 		line-height: var(--LineHeight, 1.5625);
 		font-size: var(--FontSize, 1em);
@@ -79,7 +79,7 @@
 
 
 /* Héritage en place pour les éléments « en-ligne » intérieurs */
-	p *, li *, td *,
+	p *, ul *, td *,
 	h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
 		line-height: inherit;
 		font-size: inherit;
