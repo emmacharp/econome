@@ -30,16 +30,23 @@
 
 	const onSectionObserved = (items, observer) => {
 		items.forEach((entry) => {
-			const { intersectionRatio, target } = entry;
+			const { isIntersecting , target } = entry;
 			const sectionIndex = [...sections].indexOf(target);
-			if (intersectionRatio >= observer.thresholds[0]) {
-				target.classList.add('is-visible');
+			if (isIntersecting) {
 				target.classList.remove('is-invisible');
-				if (anchors.length) anchors[sectionIndex].classList.add('is-visible');
+				sections.forEach((item)=> {
+					if (item.classList.contains('is-active')) item.classList.remove('is-active');
+				});
+				target.classList.add('is-visible', 'is-active');
+				if (anchors.length) {
+					anchors.forEach((item)=> {
+						if (item.classList.contains('is-active')) item.classList.remove('is-active');
+						anchors[sectionIndex].classList.add('is-active');
+					});
+				}
 			} else {
 				target.classList.remove('is-visible');
 				target.classList.add('is-invisible');
-				if (anchors.length) anchors[sectionIndex].classList.remove('is-visible');
 			}
 		});
 	}
@@ -135,7 +142,7 @@
 
 		// Sections Observer
 		const sectionObserver = new IntersectionObserver(onSectionObserved, {
-			threshold: 0.5,
+			rootMargin: "-45% 0% -55% 0%"
 		});
 		sections.forEach((item, index) => {
 			sectionObserver.observe(item);
