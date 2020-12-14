@@ -15,7 +15,7 @@
 		--RowUnit: 1rem;
 
 		--MinFontSize: 13px;
-		--BaseFontSize: 1vw;
+		--BaseFontSize: 1.1vw;
 		--MaxFontSize: 20px;
 		--FontUnit: 1em;
 
@@ -68,14 +68,15 @@
 	main>section header {
 		--FontWeight: 600;
 		--Color: var(--ColorSupport);
-		--MaxWidth: calc(var(--Row) * 45); }
+		--MaxWidth: calc(var(--Row) * 45);
+		--ScaleLevel: var(--Taller); }
 
 	fieldset p {
 		--ScaleLevel: var(--Taller);
 		--MaxWidth: calc(var(--Row) * 22);
 		--FontWeight: 300; }
 
-	aside {
+	main>section aside {
 		--ScaleLevel: var(--Short);
 		--LineHeightFactor: .75; }
 
