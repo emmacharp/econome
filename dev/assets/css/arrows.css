@@ -15,7 +15,7 @@ hr.arrow::after {
 	position: relative;
 }
 
-hr.arrow.horizontal:after {
+hr.arrow.horizontal::after {
 	top: -1px;
 	width: 24px;
 }
