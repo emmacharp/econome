@@ -3,10 +3,10 @@
 <root>
 	<!-- <title>Les dessous économiques du principe <span class="local">d'achat local</span> —  II : LA CHAÎNE ÉCONOMIQUE</title> -->
 	<section id="intro">
-		<!-- <div> -->
+		<div>
 			<header>
 				<small>Economia présente</small>
-				<h1>Les dessous économique du principe d'<span class="local">achat local</span></h1>
+				<h1>Les dessous économiques du principe d'<span class="local">achat local</span></h1>
 				<small>Démystifier pour mieux agir.</small>
 			</header>
 			<!-- <aside> -->
@@ -19,13 +19,13 @@
 			<!-- 		</ul> -->
 			<!-- 	</div> -->
 			<!-- </aside> -->
-		<!-- </div> -->
 		<section>
 			<p><b>Il vous est proposé aujourd'hui de démystifier la notion « d'achat local ».</b></p>
 			<p>Des questions (<em>pas plus de 10, promis</em>) vous seront posées, des concepts vous seront présentés, des implications seront abordées puis un raisonnement développé.</p>
 			<p><strong>Exigeons plus que des phrases creuses !</strong></p>
 			<p>Parce que oui, c'est plus complexe que ça (surprise ! ...mais pas tant quand même). Tout sera fait pour bien familiariser. Parce que oui, aussi, l'économique est familier. C'est de nos actions quotidiennes dont-il s'agit. <i>T'sais</i>.</p>
 		</section>
+		</div>
 		<aside>
 			<symbol type="emma" class="cartoon_emma animated" />
 			<div>
