@@ -62,8 +62,7 @@
 
 /* Styles typograhpiques particuliers -----------------------  */
 
-	h1, h2 { 
-		--FontWeight: 600; }
+
 
 	main>section header {
 		--FontWeight: 600;
