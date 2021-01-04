@@ -424,3 +424,5 @@ Renforcer l'élément de découverte en constituant le schéma de chaîne.
 On laisse l'usager s'investir en répondant à des questions « personnelles » et en le laissant interagir avec l'expérience. Un peu comme si Henri et moi le faisions.
     Répondre à des questions simples, cliquer sur des boutons oui ou non pour passer à une section suivante ajustée.
 Courbe de présentation de l'interaction. Plus léger, plus familier.
+
+Démontrer l'interrelation / porosité des marchés... Par exemple, produire toute la bière ici va faire augmenter le coût des maisons.
