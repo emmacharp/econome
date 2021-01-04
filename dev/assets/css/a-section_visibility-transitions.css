@@ -1,10 +1,4 @@
-main>section [data-parallax] {
-	/*opacity: calc(0 - var(--scrollFactor));*/
-}
-
-
 /* Facteur de durée universel ----------------------- */
-	
 	main>section {
 		--DurationFactor: 1; }
 
@@ -15,7 +9,7 @@ main>section [data-parallax] {
 	main>section,
 	main>section * {
 		--TotalDuration: calc(var(--SelfDuration, 0ms) * var(--DurationFactor, 1));
-		--TotalDelay: calc(var(--LoadingDelay, 0ms) + var(--StructuralDelay, 0ms) + var(--ChainLinkDelay, 0ms) + var(--AfterChainDelay, 0ms) + var(--SelfDelay, 0ms));
+		--TotalDelay: calc(var(--LoadingDelay, 0ms) + var(--StructuralDelay, 0ms) + var(--ChainLinkDelay, 0ms) + var(--AfterChainDelay, 0ms) + var(--ScrollDelay, 0ms)  + var(--SelfDelay, 0ms));
 		--TransitionProperties: none;
 		--TimingFunction: linear; }
 
@@ -25,7 +19,7 @@ main>section [data-parallax] {
 	 des valeurs par défaut ci-haut) */
 	
 	main>section,
-	main>section.is-visible * {
+	main>section * {
 		transition-property: var(--TransitionProperties);
 		transition-duration: var(--TotalDuration);
 		transition-timing-function: var(--TimingFunction);
@@ -68,6 +62,7 @@ main>section [data-parallax] {
 	main>section.is-invisible,
 	main>section.is-invisible>section,
 	main>section.is-invisible aside div *,
+	main>section.is-invisible [data-parallax],
 	main>section.is-invisible .chain .icon+* {
 		opacity: var(--OpacityInvisible); }
 
@@ -98,9 +93,9 @@ main>section [data-parallax] {
 		--SelfDuration: 600ms;
 		--TransitionProperties: opacity;
 		--TimingFunction: ease-out;
-		--SelfDelay: 300ms;
+		--ScrollDelay: 3000ms;
 		--LoadingDelay: 0ms; }
-	main.is-visible {
+	main>section.is-visible {
 		--LoadingDelay: 0ms; }
 
 	/* Éléments — Valeurs de base initiales */
