@@ -8,6 +8,31 @@
 /* Configuration maîtresse ----------------------- */
 	
 	:root {
+		--lt-primary: #A4A391;
+		--ltr-primary: #D5D5D2;
+		--ltst-primary: #eaeae6;
+		--brown: #59551D;
+		--lt-brown: #686100;
+		--ltr-brown: #A4A391;
+		--blue: #2B46BD;
+		--lt-blue: #EAEEFD;
+		--red: #FF0003;
+		--yellow: #FCFF9B;
+		--dk-yellow: #FFF91C;
+		--purple: #5F006C;
+		--tr-purple: #5F006C1F;
+		--lt-purple: #fceaff;
+
+		--ColorBg: white;
+		--ColorText: var(--brown);
+		--ColorLocal: var(--blue);
+		--ColorForeign: var(--red);
+		--ColorSupport: var(--purple);
+		--ColorAccent: var(--yellow);
+		--ColorDkAccent: var(--dk-yellow);
+	}
+
+	:root {
 		--BodyWidth: auto;
 		--MaxBodyWidth: initial;
 		
