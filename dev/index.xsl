@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" 
+<xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:svg="http://www.w3.org/2000/svg"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -26,7 +26,7 @@
 				<link rel="icon" href="data:;base64,iVBORwOKGO=" />
 
 				<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-				
+
 				<link rel="stylesheet" href="assets/css/a-section_visibility-transitions.css" />
 				<link rel="stylesheet" href="assets/css/system.css"/>
 				<link rel="stylesheet" href="assets/css/s-auto_line-height.css"/>
@@ -63,7 +63,7 @@
 							<button id="wikiViewerClose">Fermer</button>
 						</header>
 						<div id="wikiDump">
-							
+
 						</div>
 						<footer><span>Contenu provenant de Wikipedia.</span> <a id="wikiCanonical" rel="canonical" target="_blank" href="#">Visiter la page officielle</a></footer>
 					</div>
