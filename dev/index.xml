@@ -1,39 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="index.ui" ?>
+<?xml-stylesheet type="text/xsl" href="index.xsl" ?>
 <root>
 	<!-- <title>Les dessous économiques du principe <span class="local">d'achat local</span> —  II : LA CHAÎNE ÉCONOMIQUE</title> -->
 	<section id="intro">
-		<div>
+		<!-- <div> -->
 			<header>
 				<small>Economia présente</small>
-				<h1>Les dessous économiques du principe d'<span class="local">achat local</span></h1>
-				<small>Démystifier pour mieux agir.</small>
+				<h1>Les dessous économiques <wbr/>du principe d'<span class="local">achat local<i><symbol type="basket" /></i></span></h1>
+				<p>Démystifier pour mieux agir.</p>
 			</header>
-			<!-- <aside> -->
-			<!-- 	<symbol type="emma" class="cartoon_emma animated" /> -->
-			<!-- 	<div> -->
-			<!-- 		<h5>Phrases creuses, vous dites ?</h5> -->
-			<!-- 		<ul> -->
-			<!-- 			<li>« L'achat local fait rouler notre économie ! »</li> -->
-			<!-- 			<li>« L'achat local crée des emplois ! »</li> -->
-			<!-- 		</ul> -->
-			<!-- 	</div> -->
-			<!-- </aside> -->
 		<section>
-			<p><b>Il vous est proposé aujourd'hui de démystifier la notion « d'achat local ».</b></p>
-			<p>Des questions (<em>pas plus de 10, promis</em>) vous seront posées, des concepts vous seront présentés, des implications seront abordées puis un raisonnement développé.</p>
-			<p><strong>Exigeons plus que des phrases creuses !</strong></p>
-			<p>Parce que oui, c'est plus complexe que ça (surprise ! ...mais pas tant quand même). Tout sera fait pour bien familiariser. Parce que oui, aussi, l'économique est familier. C'est de nos actions quotidiennes dont-il s'agit. <i>T'sais</i>.</p>
-		</section>
-		</div>
-		<aside>
-			<symbol type="emma" class="cartoon_emma animated" />
 			<div>
-				<ul>
-					<li>« L'achat local nous enrichit ! »</li>
-					<li>« L'achat local est bon pour l'environnement ! »</li>
-					<li><i>et caetera</i></li>
-				</ul>
+				<header><h2>Introduction</h2></header>
+				<div>
+					<p><b>Il vous est proposé aujourd'hui de démystifier la notion « d'achat local ».</b></p>
+					<p>Des questions (<em>pas plus de 10, promis</em>) vous seront posées, des concepts vous seront présentés, des implications seront abordées puis un raisonnement développé.</p>
+					<p><strong>Exigeons plus que des phrases creuses !</strong></p>
+					<p>Parce que oui, c'est plus complexe que ça (surprise ! ...mais pas tant quand même). Tout sera fait pour bien familiariser. Parce que oui, aussi, l'économique est familier. C'est de nos actions quotidiennes dont-il s'agit. <i>T'sais</i>.</p>
+				</div>
+				<aside>
+					<h5>Phrases creuses, vous dites ?</h5>
+					<ul>
+						<li>« L'achat local fait rouler notre économie ! »</li>
+						<li>« L'achat local crée des emplois ! »</li>
+						<li>« L'achat local nous enrichit ! »</li>
+						<li>« L'achat local est bon pour l'environnement ! »</li>
+						<li><i>et caetera</i></li>
+					</ul>
+				</aside>
+			</div>
+		</section>
+		<!-- ! A ESSAYER : Table des matières -->
+		<!-- </div> -->
+		<aside>
+			<div>
+				<details>
+					<summary><span>L'expérience Economia</span></summary>
+					<div>
+						<p>La bande à gauche vous permet à tout moment de passer d'une section à l'autre, à votre bon gré. Nous croyons cependant que les 10 minutes qui suivent vaillent la peine (économique !) d'être expérimentées dans leur ensemble.</p>
+					</div>
+				</details>
 			</div>
 		</aside>
 
