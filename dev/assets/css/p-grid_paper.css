@@ -1,4 +1,4 @@
-/* IMPORTANT ! 
+/* IMPORTANT !
 	Patron de composition « papier quadrillé » nécessitant
 	l'apport de Javascript  pour arrondir les valeurs au pixel près.
 	En l'absence de JS, le patron est désactivé à l'aide de calculs nuls. */
@@ -13,14 +13,20 @@
 	--grid-paper-lines: var(--JS-activated-line) 0px var(--ltst-primary), 0px var(--JS-activated-line) var(--ltst-primary), var(--JS-activated-line) 0px var(--ltst-primary) inset, 0px var(--JS-activated-line) var(--ltst-primary) inset;
 }
 
+/* Patron cadrillé */
 main {
 	background-image:
-	 	linear-gradient(to right, transparent calc(100% - 1px), rgba(0,0,0,.1) 0),
-	/* grille de ligne de base typographique */
+		linear-gradient(to right, transparent calc(100% - 1px), rgba(0,0,0,.1) 0),
 		linear-gradient(to bottom, transparent calc(100% - 1px), rgba(0,0,0,.1) 0);
-	background-size: 
-	/* dimensions de la grille de ligne de base typographique */
+	background-size:
 		var(--GridUnit) 100%, 100% var(--GridUnit);
+}
+
+/* Patron pointillé */
+main {
+	background-image: radial-gradient(var(--tr-purple) 2px, transparent 2px), radial-gradient(var(--tr-purple) 2px, transparent 2px);
+	background-size: var(--Row) var(--Row);
+	background-position: 0 0, var(--Row) 0;
 }
 
 main>section>section {
