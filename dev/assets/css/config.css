@@ -28,18 +28,18 @@
 
 /* Adaptation de la typographie ----------------------- */
 	
-	@media all { :root { --Scale: var(--MajorSecond); } }
-	@media (min-width: 40em) { :root { --Scale: var(--MajorThird); } }
-	@media (min-width: 80em) { :root { --Scale: var(--PerfectFourth); } }
+	@media (max-width: 40em) { :root { --Scale: var(--MajorSecond); } }
+	@media (min-width: 40em) and (max-width: 80em) { :root { --Scale: var(--MajorThird); } }
+	@media (min-width: 80em) and (max-width: 100em) { :root { --Scale: var(--PerfectFourth); } }
 	@media (min-width: 100em) { :root { --Scale: var(--AugmentedFourth); } }
 
 
 /* Adaptation de la grille ----------------------- */
 	
-	@media all { :root { --Grid: 3; } }
-	@media (min-width: 40em) { :root { --Grid: 6; } }
-	@media (min-width: 60em) { :root { --Grid: 10; } }
-	@media (min-width: 80em) { :root { --Grid: 11; } }
+	@media (max-width: 40em) { :root { --Grid: 3; } }
+	@media (min-width: 40em) and (max-width: 60em) { :root { --Grid: 6; } }
+	@media (min-width: 60em) and (max-width: 80em) { :root { --Grid: 10; } }
+	@media (min-width: 80em) and (max-width: 100em) { :root { --Grid: 11; } }
 	@media (min-width: 100em) { :root { --Grid: 12; } }
 
 
