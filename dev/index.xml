@@ -3,14 +3,13 @@
 <root>
 	<!-- <title>Les dessous économiques du principe <span class="local">d'achat local</span> —  II : LA CHAÎNE ÉCONOMIQUE</title> -->
 	<section id="intro">
-		<!-- <div> -->
 			<header>
 				<small>Economia présente</small>
 				<h1>Les dessous économiques <wbr/>du principe d'<span class="local">achat local<i><symbol type="basket" /></i></span></h1>
 				<p>Démystifier pour mieux agir.</p>
 			</header>
 		<section>
-			<div>
+			<div class="grille">
 				<header><h2>Introduction</h2></header>
 				<div>
 					<p><b>Il vous est proposé aujourd'hui de démystifier la notion « d'achat local ».</b></p>
@@ -31,7 +30,6 @@
 			</div>
 		</section>
 		<!-- ! A ESSAYER : Table des matières -->
-		<!-- </div> -->
 		<aside>
 			<div>
 				<details>
@@ -53,35 +51,47 @@
 			<h2>Pour commencer, présentons-nous</h2>
 		</header>
 		<section>
-			<symbol type="emma" class="cartoon_emma animated" />
-			<div>
-				<h3>Marc-andré</h3>
-				<small>concepteur éclectique</small>
-				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur corporis velit, consequatur maiores minus aut excepturi dolore magni quis debitis odit quisquam sequi ratione veniam rerum fuga, blanditiis sit deleniti.</p>
+			<div class="grille">
+				<symbol type="emma" class="cartoon_emma animated" />
+				<header>
+					<h2>Marc-andré</h2>
+					<small>concepteur éclectique</small>
+				</header>
+				<div>
+					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur corporis velit, consequatur maiores minus aut excepturi dolore magni quis debitis odit quisquam sequi ratione veniam rerum fuga, blanditiis sit deleniti.</p>
+				</div>
 			</div>
-			<symbol type="emma" class="cartoon_emma animated" />
-			<div>
-				<h3>Henri</h3>
-				<small>économiste aguerri</small>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, rerum officiis est id. Natus ipsa, reprehenderit quo odio dolores molestiae repudiandae culpa in, neque illo iste dignissimos quas, voluptatibus quidem.</p>
+			<div class="grille">
+				<symbol type="emma" class="cartoon_emma animated" />
+				<header>
+					<h3>Henri</h3>
+					<small>économiste aguerri</small>
+				</header>
+				<div>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, rerum officiis est id. Natus ipsa, reprehenderit quo odio dolores molestiae repudiandae culpa in, neque illo iste dignissimos quas, voluptatibus quidem.</p>
+				</div>
 			</div>
 		</section>
-		<h3>Et vous ?</h3>
-		<form>
-			<fieldset>
-				<p>Quel est votre nom ?</p>
-				<div>
-					<label >Nom ou sobriquet</label>
-					<input type="text" placeholder="Joey Joe Joe" />
-				</div>
-			</fieldset>
-			<fieldset>
-				<p>Votre âge ?</p>
-				<label ><span>Âge. Véridique ou non</span><input type="text" placeholder="102 belles années" /></label>
-			</fieldset>
-		</form>
 		<section>
-			<p>Vous n'êtes pas tenu de répondre la vérité... ni même de répondre du tout. Mais ça peut être plus efficace (wiki) pour tout le monde.</p>
+			<div class="grille">
+				<header><h3>Et vous ?</h3></header>
+				<form>
+					<fieldset>
+						<p>Quel est votre nom ?</p>
+						<div>
+							<label >Nom ou sobriquet</label>
+							<input type="text" placeholder="Joey Joe Joe" />
+						</div>
+					</fieldset>
+					<fieldset>
+						<p>Votre âge ?</p>
+						<label ><span>Âge. Véridique ou non</span><input type="text" placeholder="102 belles années" /></label>
+					</fieldset>
+				</form>
+				<aside>
+					<p>Vous n'êtes pas tenu de répondre la vérité... ni même de répondre du tout. Mais ça peut être plus efficace (wiki) pour tout le monde.</p>
+				</aside>
+			</div>
 		</section>
 	</section>
 	<section id="preferences">
@@ -123,37 +133,38 @@
 		</form>
 	</section>
 	<section id="role-consommateur">
-		<div>
-			<header>
-				<h2>Vous, Joey Joe Joe.</h2>
-				<small>Rôle: consommateur</small>
-			</header>
-			<aside>
-				<symbol type="emma" class="cartoon_emma animated" />
-				<div>
-					<p><strong>Vous</strong> êtes le premier (ou dernier, c'est selon !) maillon de la chaîne. <br /><b>Votre rôle économique, est celui du consommateur.</b></p>
-				</div>
-			</aside>
-		</div>
+		<header>
+			<small>Partie 1 — La chaîne économique</small>
+			<h2>Vous, Joey Joe Joe...</h2>
+			<p><b>🍺 — avez envie d'une <span class="local">bonne bière québécoise</span>.</b></p>
+		</header>
 		<section>
-			<p><b>🍺 — Vous avez envie d'une <span class="local">bonne bière québécoise</span>.</b></p>
-			<p>Toute une chaîne d'<i>agents économiques</i> doit vous rendre disponible cette bonne bière québécoise. La façon dont vous allez acheter &amp; consommer cette bière détermine la nature des agents et conditionne la distribution de leurs rôles au sein de la chaîne. Votre action d'achat provoque un effet d'entraînement.</p>
-			<p>Il est important de comprendre cet effet pour bien comprendre les répercussions de votre achat (local ou non) !</p>
+			<div class="grille">
+				<header>
+					<h3>Rôle économique: consommateur</h3>
+				</header>
+				<div>
+					<p>Imaginons un scénario où vous, le consommateur, achetez une bonne bière québécoise au <strong>dépanneur</strong>.</p>
+					<p>Toute une chaîne d'<i>agents économiques</i> doit vous rendre disponible cette bonne bière québécoise. La façon dont vous allez acheter &amp; consommer cette bière détermine la nature des agents et conditionne la distribution de leurs rôles au sein de la chaîne. Votre action d'achat provoque un effet d'entraînement.</p>
+				</div>
+				<aside>
+					<p>Il est important de comprendre cet effet pour bien comprendre les répercussions de votre achat (local ou non) !</p>
+				</aside>
+			</div>
 		</section>
 
-		<h3>La chaîne économique de votre achat de bière</h3>
+		<section>
+			<div class="grille">
+				<header>
+					<h3>La chaîne économique de votre achat de bière</h3>
+				</header>
 
-		<diagram type="chain" links="5">
-			<agent type="consumer" name="Joey Joe Joe" class="active" />
-			<product type="beer" name="Bière" complete="" />
-		</diagram>
-
-		<aside>
-			<symbol type="emma" class="cartoon_emma animated" />
-			<div>
-				<p>Imaginons un scénario où vous, le consommateur, achetez une bonne bière québécoise au <strong>dépanneur</strong>.</p>
+				<diagram type="chain" links="5">
+					<agent type="consumer" name="Joey Joe Joe" class="active" />
+					<product type="beer" name="Bière" complete="" />
+				</diagram>
 			</div>
-		</aside>
+		</section>
 
 		<div>
 			<symbol type="basket" preserveAspectRatio="xMinYMid slice" class="basket local" data-parallax="" data-factor=".25" />
