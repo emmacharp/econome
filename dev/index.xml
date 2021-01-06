@@ -35,7 +35,12 @@
 				<details>
 					<summary><span>L'expérience Economia</span></summary>
 					<div>
-						<p>La bande à gauche vous permet à tout moment de passer d'une section à l'autre, à votre bon gré. Nous croyons cependant que les 10 minutes qui suivent vaillent la peine (économique !) d'être expérimentées dans leur ensemble.</p>
+						<ol>
+							<li>La bande à gauche vous permet à tout moment de passer d'une section à l'autre, à votre bon gré. Nous croyons cependant que les 10 minutes qui suivent vaillent la peine (économique !) d'être expérimentées dans leur ensemble.</li>
+							<li>Vous avez accès à tout (ou presque) qu'en défilant la page.</li>
+							<li>Vous pouvez répondre ou non aux questions parsemées ici et là. Encore là... Si vous voulez en profiter pleinement (économique !)...</li>
+						</ol>
+						<p>On se voit en bas !</p>
 					</div>
 				</details>
 			</div>
@@ -136,36 +141,27 @@
 		<header>
 			<small>Partie 1 — La chaîne économique</small>
 			<h2>Vous, Joey Joe Joe...</h2>
-			<p><b>🍺 — avez envie d'une <span class="local">bonne bière québécoise</span>.</b></p>
+			<p>🍺 — avez envie d'une <span class="local">bonne bière québécoise</span>.</p>
 		</header>
-		<section>
-			<div class="grille">
-				<header>
-					<h3>Rôle économique: consommateur</h3>
-				</header>
-				<div>
-					<p>Imaginons un scénario où vous, le consommateur, achetez une bonne bière québécoise au <strong>dépanneur</strong>.</p>
-					<p>Toute une chaîne d'<i>agents économiques</i> doit vous rendre disponible cette bonne bière québécoise. La façon dont vous allez acheter &amp; consommer cette bière détermine la nature des agents et conditionne la distribution de leurs rôles au sein de la chaîne. Votre action d'achat provoque un effet d'entraînement.</p>
-				</div>
-				<aside>
-					<p>Il est important de comprendre cet effet pour bien comprendre les répercussions de votre achat (local ou non) !</p>
-				</aside>
-			</div>
-		</section>
-
-		<section>
-			<div class="grille">
-				<header>
-					<h3>La chaîne économique de votre achat de bière</h3>
-				</header>
 
 				<diagram type="chain" links="5">
 					<agent type="consumer" name="Joey Joe Joe" class="active" />
 					<product type="beer" name="Bière" complete="" />
 				</diagram>
+		<section>
+			<div class="grille">
+				<div>
+					<p><b>Votre rôle est celui du consommateur.</b></p>
+					<p>Toute une chaîne d'<i>agents économiques</i> doit vous rendre disponible cette bonne bière québécoise. La façon dont vous allez acheter &amp; consommer cette bière détermine la nature des agents et conditionne la distribution de leurs rôles au sein de la chaîne. Votre action d'achat provoque un effet d'entraînement.</p>
+					<p>Pour explorer la chaîne économique, imaginons un scénario où vous, en tant que consommateur, achetez une <span class="local">bonne bière québécoise au dépanneur du coin.</span></p>
+				</div>
+				<aside>
+					<p>Cet effet d'entraînement est fondamental pour bien comprendre les répercussions économiques de votre achat (local ou non) !</p>
+				</aside>
 			</div>
 		</section>
-
+		<footer>
+		</footer>
 		<div>
 			<symbol type="basket" preserveAspectRatio="xMinYMid slice" class="basket local" data-parallax="" data-factor=".25" />
 			<symbol type="basket" preserveAspectRatio="xMinYMax slice" class="basket foreign" data-parallax="" data-factor=".125" />
