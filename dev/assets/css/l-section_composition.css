@@ -5,12 +5,6 @@ main>section [data-parallax] {
 	position: absolute;
 	top: 0;
 	right: 0;
-	/*bottom: 0;
-	left: 0;*/
-/*	top: var(--Top, auto);
-	left: var(--Left, auto);
-	right: var(--Right, auto);
-	bottom: var(--Bottom, auto);*/
 }
 
 main>section>div:last-child {
@@ -20,14 +14,11 @@ main>section>div:last-child {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	/*overflow: hidden;*/
 }
 
 .basket {
 	color: var(--Color);
-	/*--Width: calc(var(--Row) * 50);
-	--Height: calc(var(--Row) * 50);
-	*/height: var(--Height);
+	height: var(--Height);
 	width: var(--Width);
 }
 
@@ -37,32 +28,10 @@ main>section>div:last-child {
 }
 
 main>section [data-parallax] {
-	mix-blend-mode: multiply; /* ATTENTION ! performance : utiliser avec conteneur parent « isolation » */
+	/* mix-blend-mode: multiply; /1* ATTENTION ! performance : utiliser avec conteneur parent « isolation » *1/ */
 }
 
 main>section>div:last-child {
 	isolation: isolate;
 }
 
-
-
-
-section[id=role-consommateur]{
-	/*align-items: center;*/
-}
-
-section[id=role-consommateur]>* {
-	/*max-width: calc(var(--Row) * 30);*/
-}
-
-section[id=role-consommateur]>p {
-	--ScaleLevel: var(--Taller);
-}
-
-section[id=role-consommateur]>section {
-	/*max-width: calc(var(--Row) * 30);*/
-}
-
-section[id=role-consommateur]>header {
-	align-self: flex-start;
-}
