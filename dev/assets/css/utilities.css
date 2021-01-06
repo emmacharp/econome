@@ -1,23 +1,35 @@
 @charset "utf-8";
 
-/* Utilitaire de grilles (fluides) ----------------------- */
+/* Utilitaire dedivs (fluides) ----------------------- */
 	/* NB — Limitations :
-		- Ne peut recevoir d'arrière plan.
-	 	- Ne peut contenir de marge interne (padding).
+	- Ne peut recevoir d'arrière plan.
+	- Ne peut contenir de marge interne (padding).
 
 	Appliquer plutôt sur un parent si nécessaire */
+		/* Types de grilles */
+		div.grille {
+			--AlbatrossItemBasis: 66ch;
+			--Albatross: calc((var(--AlbatrossItemBasis, 66ch) - 100%) * 999);
+			--DivItemBasis: var(--Albatross);
+			--DivItemGrow: 1;
+			--DivItemGutter: var(--Row);
+		}
+
+		div *>* {
+		--DivItemBasis: auto;
+		}
 
 	/* 1. Affichage & occupation de l'espace ---- */
 		/* Contexte flex avec
 			bris de rangée pour la fluidité */
-		.grille {
-			display: flex;
+		div {
+			display: var(--DivDisplay, flex);
 			flex-wrap: wrap;
 		}
 
 		/* Permettre l'héritage des règles d'alignement.
 			Facilite l'extension par les parents */
-		.grille {
+		div {
 			justify-content: inherit;
 			align-items: inherit;
 		}
@@ -26,81 +38,61 @@
 			(peuvent être ajustées !) */
 		/* Holy Albatross. Voir Heydon Pickering :
 			(https://heydonworks.com/article/the-flexbox-holy-albatross/) */
-		.grille>* {
-			flex-basis: calc((66ch - 100%) * 999);
+		div>* {
+			flex-basis: var(--DivItemBasis, auto);
 		}
 
 		/* Distribuer également l'espace
 			vacant parmis les enfants */
-		.grille>* {
-			flex-grow: 1;
+		div>* {
+			flex-grow: var(--DivItemGrow, 0);
 		}
 
 	/* 2. Rythme interne et gouttières ---- */
 		/* Marges universelles permettant
 		l'adaptation fluide */
-		.grille>* {
-			margin-left: 1.25rem;
-			margin-top: 1.25rem;
+		div>* {
+			margin-left:  var(--DivItemGutter, 0);
+			margin-top:  var(--DivItemGutter, 0);
 		}
 
 		/* Compenser pour les marges universelles
 		(et ainsi le dédoublement) */
-		.grille {
-			margin-top: -1.25rem;
-			margin-left: -1.25rem;
+		*:not(div)>div {
+			margin-top: var(--DivGutter, calc(-1 * var(--DivItemGutter, 0)));
+			margin-left: var(--DivGutter, calc(-1 * var(--DivItemGutter, 0)));
 		}
 
 	/* 3. Rythme externe ---- */
 		/* Annuler la compensation des marges
 			(voir 2. ci-haut) lorsque précédé */
-		*+.grille {
+		*:not(div)>*+div {
 			margin-top: 0;
 		}
 
 	/* 4. Dimensions des enfants & contenus ---- */
 		/* Dimension minimale de tout enfant.
 			Permet l'adaptation. Peut être ajusté */
-		.grille>* {
-			min-width: 18ch;
+		div>* {
+			min-width: var(--DivItemMinWidth, initial);
 		}
 
 		/* Largeur minimale de tout contenu texte.
 			Force l'adaptation. Peut être ajusté */
-		.grille h1,
-		.grille h2,
-		.grille h3,
-		.grille h4,
-		.grille h5,
-		.grille h6,
-		.grille p {
+		div h1,
+		div h2,
+		div h3,
+		div h4,
+		div h5,
+		div h6,
+		div p {
 			min-width: 10ch;
 		}
 
 		/* Largeur minimale des images en tout genre
 			Force l'adaptation. Peut être ajusté */
-		.grille img,
-		.grille picture {
+		div img,
+		div picture {
 			min-width: 8ch;
 		}
 
-	/* 5. Configurations particulières ---- */
-		/* Article seul (vedette) et section
-			à largeur égale et bris de rangée plus rapide */
-		.grille>article:only-of-type {
-			flex-basis: 40ch;
-		}
-
-		.grille>article:only-of-type+* {
-			flex-basis: 40ch;
-		}
-
-		/* Image seule laissant un
-			plus grand espace à son voisin */
-		.grille>picture {
-			flex-basis: calc(5ch - 1.25rem);
-		}
-
-		.grille>picture+:not(picture) {
-			flex-basis: calc(15ch - 1.25rem);
-		}
