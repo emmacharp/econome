@@ -6,7 +6,7 @@
 */
 
 /* Configuration maîtresse ----------------------- */
-	
+
 	:root {
 		--lt-primary: #A4A391;
 		--ltr-primary: #D5D5D2;
@@ -14,6 +14,7 @@
 		--brown: #59551D;
 		--lt-brown: #686100;
 		--ltr-brown: #A4A391;
+		--dk-brown: #373409;
 		--blue: #2B46BD;
 		--lt-blue: #EAEEFD;
 		--red: #FF0003;
@@ -35,7 +36,7 @@
 	:root {
 		--BodyWidth: auto;
 		--MaxBodyWidth: initial;
-		
+
 		--RowFactor: 1.6125;
 		--RowUnit: 1rem;
 
@@ -52,7 +53,7 @@
 
 
 /* Adaptation de la typographie ----------------------- */
-	
+
 	@media (max-width: 40em) { :root { --Scale: var(--MajorSecond); } }
 	@media (min-width: 40em) and (max-width: 80em) { :root { --Scale: var(--MajorThird); } }
 	@media (min-width: 80em) and (max-width: 100em) { :root { --Scale: var(--PerfectFourth); } }
@@ -91,8 +92,6 @@
 
 	main>section header {
 		--FontWeight: 600;
-		--Color: var(--ColorSupport);
-		--MaxWidth: calc(var(--Row) * 45);
 		--ScaleLevel: var(--Taller); }
 
 	fieldset p {
