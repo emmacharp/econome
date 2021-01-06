@@ -2,12 +2,12 @@
 /* Extrêmement intensif en puissance de calcul. En ce sens, on doit l'optimiser au maximum, 
 	en choisissant manuellement les éléments qui seront touchés par les différents calculs. */
 
-	p, ul, span,
+	p, ul, ol, span,
 	h1, h2, h3, h4, h5, h6 {
 		--FontSizeWithRowUnit: calc(var(--Size) * var(--ScaleLevel) * var(--FontFactor) * var(--RowUnit));
 	}
 
-	p, ul, span, small,
+	p, ul, ol, span, small,
 	h1, h2, h3, h4, h5, h6 {
 		--is-2-rows: calc(clamp(
 						0px, calc(
@@ -27,7 +27,7 @@
 							(var(--FontSizeWithRowUnit) - var(--Row) * 1.825) * 9999999), var(--Row)) - (var(--is-3-rows)));
 	}
 
-	p, ul, span, small,
+	p, ul, ol, span, small,
 	h1, h2, h3, h4, h5, h6 {
 		--LineHeight: calc(var(--LineHeightAuto, 1.5625) * var(--LineHeightFactor, 1));
 		line-height: var(--LineHeight); }
