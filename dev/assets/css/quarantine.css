@@ -19,7 +19,7 @@ main>section>div>section>*+* {
 	width: var(--diameter);
 	height: var(--diameter);
 	border-radius: 50%;
-	background-color: var(--yellow);
+	/* background-color: var(--yellow); */
 
 	margin-left: calc(-1 * var(--diameter) / 2);
 	margin-top: calc(-1 * var(--diameter) / 2);
@@ -43,7 +43,7 @@ hr {
 }
 
 form {
-	background-color: white;
+	/* background-color: white; */
 	padding: var(--Row);
 }
 
@@ -79,7 +79,7 @@ fieldset label span {
 	padding: calc(var(--Row) / 4) var(--Row);
 	border-radius: 8px;
 	display: inline-block;
-	background-color: var(--ColorBg);
+	/* background-color: var(--ColorBg); */
 	position: relative;
 }
 
@@ -215,8 +215,7 @@ main>section.is-invisible [data-parallax] {
 
 main>section>header>small:first-child {
 	position: sticky;
-	top: 0;
-	margin-top: calc(-1.5 * var(--Row));
+	top: var(--Row);
 	margin-bottom: calc(var(--Row) * 2);
 }
 main>section>header {
@@ -224,7 +223,14 @@ main>section>header {
 }
 main>section {
 	align-self: stretch;
-	padding: calc(var(--Row) * 3);
+	padding: var(--Row);
+	min-height: 100vh; /* À CHANGER DANS LE BON FICHIER */
+}
+
+@media (orientation: landscape) {
+	main>section {
+		padding-left: calc(var(--Row) * 3);
+	}
 }
 
 main>section>aside {
@@ -234,11 +240,13 @@ main>section>aside {
 }
 
 main>section>header>small:first-child {
-	--ScaleLevel: var(--Short);	
+	--ScaleLevel: var(--Short);
 	font-weight: 700;
 }
 
-main>section>header>:last-child {
+main>section>header>:last-child,
+main>section>article,
+main>section>header+section {
 	margin-bottom: auto;
 }
 main>section>section>* {
@@ -250,58 +258,66 @@ main>section>section>h2 {
 	column-span: all;
 	--ScaleLevel: var(--Base);
 }
- main>section>section p>b:only-child {
- 	font-size: 1.4125em;
+main>section p>b:only-child {
+	font-size: 1.4125em;
 	display: block;
- }
+}
 
- h1 {
- 	font-weight: 700;
- }
- h1 span {
+h1 {
+	font-weight: 700;
+}
+h1 span {
 	white-space: nowrap;
- }
- i>svg {
+}
+i>svg {
 	height: 1ch;
 	margin-left: .5em;
 	display: inline-block;
- }
+}
 
- aside li {
+aside li {
 	margin-top: 0;
- }
- main>section h1 {
+}
+main>section h1 {
 	max-width: 26ch;
- }
- main>section>aside {
+}
+main>section>aside {
 	margin-left: auto;
 	margin-right: var(--Row);
 	position: absolute;
 	top: 0;
 	right: 0;
- }
+}
 
- aside details {
- 	width: 30ch;
+aside details {
+	width: 30ch;
 	max-width: 100%;
- }
+}
 
- main>section>*+* {
- 	margin-top: var(--Row);
- }
+main>section>*+* {
+	margin-top: var(--Row);
+}
 
- main>section>section aside {
+main>section>section aside {
 	padding: var(--Row);
 	border: 1px solid var(--tr-purple);
 	border-radius: 8px;
-	align-self: flex-start;
+	/* align-self: flex-start; */
 	background-color: var(--ColorBg);
-	--Color: var(--purple);
- }
+	background-image: linear-gradient(to top, var(--tr-purple), var(--tr-purple) 100%);
+	--Color: var(--dk-brown);
+}
 
- main>section>section .grille {
-	 align-items: baseline;
- }
+main>section>section {
+	--DivItemGutter: calc(var(--Row) * 2);
+}
+
+main>section>section div>div>* {
+	--DivItemGutter: 0;
+}
+main>section>section div {
+	align-items: baseline;
+}
 
 main>section>section header>h2,
 main>section>section header>h3,
@@ -311,15 +327,32 @@ main>section>section header>small {
 	line-height: calc(var(--Row) * .5);
 }
 
- main>section>section .grille header {
-	width: calc(var(--Row) * 5);
+main>section>section div header {
+	min-width: calc(var(--Row) * 5);
 	flex-shrink: 0;
 	flex-grow: 0;
- }
- main>section>section .grille div {
- 	flex-grow: 4;
- }
+}
+main>section>section div header>*:last-child,
+main>section>header>small:first-child {
+	display: flex;
+	align-items: baseline;
+}
+
+main>section>section div header>*:last-child:after,
+main>section>header>small:first-child:after {
+	content: '';
+	display: block;
+	flex-basis: 0;
+	flex-grow: 1;
+	border-top: 1px solid var(--ltr-brown);
+	margin-left: .25em;
+}
+
+main>section>section div div {
+	flex-grow: 4;
+}
 main>section>section>div>div {
+	--DivDisplay: block;
 	column-width: calc(var(--Row) * 10);
 	column-count: 2;
 	column-gap: var(--Row);
@@ -329,3 +362,11 @@ main>section.is-invisible [data-parallax] {
 	--ScrollDelay: 0ms;
 }
 
+.chain {
+	/* --DivItemBasis: 0; */
+	/* --DivItemGrow: 0; */
+}
+
+* {
+	/* outline: 1px dashed lightgrey; */
+}
