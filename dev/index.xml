@@ -31,7 +31,6 @@
 		</section>
 		<!-- ! A ESSAYER : Table des matières -->
 		<aside>
-			<div>
 				<details>
 					<summary><span>L'expérience Economia</span></summary>
 					<div>
@@ -43,7 +42,6 @@
 						<p>On se voit en bas !</p>
 					</div>
 				</details>
-			</div>
 		</aside>
 
 		<div>
@@ -53,44 +51,65 @@
 	</section>
 	<section id="presentation">
 		<header>
+			<small><i><symbol type="basket" class="local" /></i> — Partie 1 : Introduction</small>
 			<h2>Pour commencer, présentons-nous</h2>
 		</header>
 		<section>
 			<div class="grille">
-				<symbol type="emma" class="cartoon_emma animated" />
 				<header>
-					<h2>Marc-andré</h2>
-					<small>concepteur éclectique</small>
+					<h3>Qui sommes-nous ?</h3>
 				</header>
-				<div>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur corporis velit, consequatur maiores minus aut excepturi dolore magni quis debitis odit quisquam sequi ratione veniam rerum fuga, blanditiis sit deleniti.</p>
-				</div>
-			</div>
-			<div class="grille">
-				<symbol type="emma" class="cartoon_emma animated" />
-				<header>
-					<h3>Henri</h3>
-					<small>économiste aguerri</small>
-				</header>
-				<div>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, rerum officiis est id. Natus ipsa, reprehenderit quo odio dolores molestiae repudiandae culpa in, neque illo iste dignissimos quas, voluptatibus quidem.</p>
-				</div>
+					<!-- <symbol type="emma" class="cartoon_emma animated" /> -->
+					<div>
+						<p><b>Nous sommes deux amis et partenaires unis dans une quête de démystification économique.</b></p>
+						<p>Nous espérons communiquer l'analyse économique de manière à éclairer nos décisions communes. Exposer les implications de concepts et principes économiques et laisser le public « se faire une tête », comme on dit.</p>
+					</div>
+					<section>
+						<div class="grille">
+							<header>
+								<h4>Marc-André</h4>
+								<small>concepteur éclectique</small>
+							</header>
+							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur corporis velit, consequatur maiores minus aut excepturi dolore magni quis debitis odit quisquam sequi ratione veniam rerum fuga, blanditiis sit deleniti.</p>
+						</div>
+					</section>
+					<section>
+						<div class="grille">
+							<header>
+								<h4>Henri</h4>
+								<small>économiste aguerri</small>
+							</header>
+							<!-- <symbol type="emma" class="cartoon_emma animated" /> -->
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, rerum officiis est id. Natus ipsa, reprehenderit quo odio dolores molestiae repudiandae culpa in, neque illo iste dignissimos quas, voluptatibus quidem.</p>
+						</div>
+					</section>
 			</div>
 		</section>
 		<section>
 			<div class="grille">
 				<header><h3>Et vous ?</h3></header>
+				<div>
+					<p>
+						<b>Pouvons-nous nous permettre de vous demander quelques informations personnelles..?</b>
+					</p>
+					<p>Question de dresser un portrait de votre expérience. Par ailleurs, ce portrait est  publiquement accessible de lecture en accédant à <a href="">ce document Google Sheet</a>.</p>
+				</div>
 				<form>
 					<fieldset>
-						<p>Quel est votre nom ?</p>
-						<div>
-							<label >Nom ou sobriquet</label>
-							<input type="text" placeholder="Joey Joe Joe" />
-						</div>
+							<p>Sous quel nom/pseudonyme voudriez-vous qu'on vous <s>adresse</s> ?</p>
+							<label for="nom">
+								<span>Votre nom</span>
+								<input id="nom" type="text" placeholder="Joey Joe Joe" />
+							</label>
 					</fieldset>
 					<fieldset>
-						<p>Votre âge ?</p>
-						<label ><span>Âge. Véridique ou non</span><input type="text" placeholder="102 belles années" /></label>
+						<p>Iriez-vous jusqu'à nous informer sur votre nombre — vénérable ou juvénile — d'années ?</p>
+						<label for="age">
+							<span>Votre âge</span>
+							<input id="age" type="text" placeholder="102" />
+							<span>belles années.</span>
+						</label>
+						<!-- Insérer un choix de qualité de vie ? (Belles, bonnes, moyennes, difficile, etc.) -->
 					</fieldset>
 				</form>
 				<aside>
@@ -144,10 +163,10 @@
 			<p>🍺 — avez envie d'une <span class="local">bonne bière québécoise</span>.</p>
 		</header>
 
-				<diagram type="chain" links="5">
-					<agent type="consumer" name="Joey Joe Joe" class="active" />
-					<product type="beer" name="Bière" complete="" />
-				</diagram>
+		<diagram type="chain" links="5">
+			<agent type="consumer" name="Joey Joe Joe" class="active" />
+			<product type="beer" name="Bière" complete="" />
+		</diagram>
 		<section>
 			<div class="grille">
 				<div>
