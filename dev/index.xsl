@@ -36,7 +36,7 @@
 				<link rel="stylesheet" href="assets/css/c-internal_nav.css"/>
 				<link rel="stylesheet" href="assets/css/chain.css"/>
 				<link rel="stylesheet" href="assets/css/arrows.css"/>
-				<link rel="stylesheet" href="assets/css/c-cartoon_characters.css" />
+				<!-- <link rel="stylesheet" href="assets/css/c-cartoon_characters.css" /> -->
 				<link rel="stylesheet" href="assets/css/s-easings.css"/>
 				<link rel="stylesheet" href="assets/css/l-master_composition.css"/>
 				<link rel="stylesheet" href="assets/css/l-section_composition.css"/>
@@ -48,7 +48,7 @@
 
 			</head>
 			<body>
-				<xsl:call-template name="grid-paper-pattern" />
+				<!-- <xsl:call-template name="grid-paper-pattern" /> -->
 				<nav>
 					<xsl:apply-templates mode="internal-navigation" />
 				</nav>
