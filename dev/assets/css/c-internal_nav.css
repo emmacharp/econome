@@ -4,7 +4,7 @@
 
 
 nav {
-	background-color: var(--ltr-brown);
+	background-color: var(--brown);
 }
 
 nav a {
@@ -72,7 +72,7 @@ nav a.is-active {
 nav a.is-active~* {
 	height: var(--Row);
 	width: var(--Row);
-	background-color: var(--ltr-brown);
+	background-color: var(--brown);
 }
 
 @media (orientation: portrait) {
