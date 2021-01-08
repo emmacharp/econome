@@ -47,6 +47,7 @@
 		--RootFontSize: calc(var(--FluidFontSize, var(--BaseFontSize)) * var(--RootFontSizeFactor, 1)); }
 	
 /* Variables dynamiques (Modifiables sur une base d'éléments) */
+	select, input, textarea,
 	p, ul, ol, a, span, small, th, td,
 	h1, h2, h3, h4, h5, h6 {
 		/* DÉPRÉCIÉ ! (en utilisant La hauteur de ligne automatique) */
@@ -68,6 +69,7 @@
 		max-width: var(--MaxBodyWidth, initial); }
 
 /* Tailles typographiques et interlignage de base */
+	select, input, textarea,
 	p, ul, ol, a, span, small, th, td,
 	h1, h2, h3, h4, h5, h6 {
 		line-height: var(--LineHeight, 1.5625);
@@ -79,6 +81,7 @@
 
 
 /* Héritage en place pour les éléments « en-ligne » intérieurs */
+	select, input, textarea,
 	p *, ul *, ol *, td *,
 	h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
 		line-height: inherit;
