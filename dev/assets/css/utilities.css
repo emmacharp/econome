@@ -1,24 +1,26 @@
 @charset "utf-8";
 
-/* Utilitaire dedivs (fluides) ----------------------- */
+/* SuperDIV - Conteneur multi-usage ----------------------- */
 	/* NB — Limitations :
 	- Ne peut recevoir d'arrière plan.
 	- Ne peut contenir de marge interne (padding).
 
 	Appliquer plutôt sur un parent si nécessaire */
-		/* Types de grilles */
+
+	/* Modèles de conteneur ------------ */
+	/* Grille fluide / Albatross ---------- */
+	/* Holy Albatross. Voir Heydon Pickering :
+		(https://heydonworks.com/article/the-flexbox-holy-albatross/) */
 		div.grille {
-			--AlbatrossItemBasis: 66ch;
+			--AlbatrossItemBasis: 68ch;
 			--Albatross: calc((var(--AlbatrossItemBasis, 66ch) - 100%) * 999);
 			--DivItemBasis: var(--Albatross);
 			--DivItemGrow: 1;
 			--DivItemGutter: var(--Row);
+			--DivItemMaxWidth: 100%;
 		}
 
-		div *>* {
-		--DivItemBasis: auto;
-		}
-
+	/* Échaffaudage : propriétés et valeurs par défaut --------- */
 	/* 1. Affichage & occupation de l'espace ---- */
 		/* Contexte flex avec
 			bris de rangée pour la fluidité */
@@ -36,10 +38,9 @@
 
 		/* Dimensions initiales
 			(peuvent être ajustées !) */
-		/* Holy Albatross. Voir Heydon Pickering :
-			(https://heydonworks.com/article/the-flexbox-holy-albatross/) */
 		div>* {
 			flex-basis: var(--DivItemBasis, auto);
+			max-width: var(--DivItemMaxWidth, initial);
 		}
 
 		/* Distribuer également l'espace
@@ -68,6 +69,15 @@
 			(voir 2. ci-haut) lorsque précédé */
 		*:not(div)>*+div {
 			margin-top: 0;
+		}
+
+		/* Briser la chaîne d'héritage
+			pour permettre l'inclusion successive */
+		div *:not(div)>* {
+			--DivItemBasis: auto;
+			--DivItemGutter: 0;
+			--DivGutter: calc(-1 * var(--DivItemGutter, 0));
+			--DivItemGrow: 0;
 		}
 
 	/* 4. Dimensions des enfants & contenus ---- */
