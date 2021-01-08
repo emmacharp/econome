@@ -38,7 +38,6 @@
 				<link rel="stylesheet" href="assets/css/arrows.css"/>
 				<link rel="stylesheet" href="assets/css/c-cartoon_characters.css" />
 				<link rel="stylesheet" href="assets/css/s-easings.css"/>
-				<!-- <link rel="stylesheet" href="assets/css/p-grid_paper.css"/> -->
 				<link rel="stylesheet" href="assets/css/l-master_composition.css"/>
 				<link rel="stylesheet" href="assets/css/l-section_composition.css"/>
 				<link rel="stylesheet" href="assets/css/quarantine.css"/>
@@ -49,7 +48,7 @@
 
 			</head>
 			<body>
-				<xsl:call-template name="display-script" />
+				<xsl:call-template name="grid-paper-pattern" />
 				<nav>
 					<xsl:apply-templates mode="internal-navigation" />
 				</nav>
@@ -339,7 +338,7 @@
 		</a>
 	</xsl:template>
 
-	<xsl:template name="display-script">
+	<xsl:template name="grid-paper-pattern">
 		<script>
 			const doc = document.documentElement;
 			const body = document.querySelector('body');
@@ -361,6 +360,7 @@
 			setPaperGrid();
 			window.addEventListener('resize', setPaperGrid);
 		</script>
+		<link rel="stylesheet" href="assets/css/p-grid_paper.css"/>
 	</xsl:template>
 
 	<xsl:template name="svg-elements">
