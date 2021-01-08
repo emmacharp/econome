@@ -5,4 +5,6 @@
 (B) Implémenter content-visibility à l'aide de target et not first-child.
 (C) Intégrer « Plausible » comme analytics.
 (C) Nettoyer le répertoire et déplacer les esquisses et autres fichiers de texte. https://medium.com/@ayushya/move-directory-from-one-repository-to-another-preserving-git-history-d210fa049d4b
-(B) 2021-01-05 Essayer la grille sur un div à l'aide de switches booléennes en propriétés personnalisées (p. ex. var(--ON))
+x (B) 2021-01-05 Essayer la grille sur un div à l'aide de switches booléennes en propriétés personnalisées (p. ex. var(--ON))
+(B) 2021-01-06 Nettoyer le root en tentant de déclarer les propriétés personnalisées que lorsque nécessaire. Voir les easings. +performance @css @devtools
+(B) Raffiner la sélection des éléments transitionnés pour nettoyer l'inspecteur. +performance @css @devtools
