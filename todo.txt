@@ -8,3 +8,4 @@
 x (B) 2021-01-05 Essayer la grille sur un div à l'aide de switches booléennes en propriétés personnalisées (p. ex. var(--ON))
 (B) 2021-01-06 Nettoyer le root en tentant de déclarer les propriétés personnalisées que lorsque nécessaire. Voir les easings. +performance @css @devtools
 (B) Raffiner la sélection des éléments transitionnés pour nettoyer l'inspecteur. +performance @css @devtools
+(B) Ajouter des icônes/signaux de navigation au clavier (tab, space, enter, etc.) +ux @css @js
