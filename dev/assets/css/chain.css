@@ -124,12 +124,9 @@
 	height: calc(var(--Row) * 2);
 	width: calc(var(--Row) * 2);
 	padding: 2.5vw;
-	border: .25vw solid var(--ltst-primary);
 	box-sizing: border-box;
 	flex-shrink: 0;
-	text-shadow: 0px 1px 0px var(--ltr-brown);
 	background-color: var(--ltr-primary);
-	box-shadow: inset 0px 1px 0px var(--lt-primary), 0px 1px 0px var(--ltr-primary);
 }
 
 .chain div:not([class])+.unknown-link {
