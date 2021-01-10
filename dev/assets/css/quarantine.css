@@ -60,7 +60,7 @@ form>*+* {
 }
 
 fieldset label+label {
-	margin-left: var(--Row);
+	/* margin-left: var(--Row); */
 }
 
 fieldset label {
@@ -97,8 +97,8 @@ fieldset label input+span {
 
 
 fieldset label span+input {
-	
 }
+
 fieldset label span {
 	border-radius: 5px 0 0 5px;
 }
@@ -130,7 +130,8 @@ fieldset input[type=radio] {
 fieldset div {
 	/* position: relative; */
 	/* display: flex; */
-	/* align-items: center; */
+	align-items: baseline;
+	--DivItemGutter: var(--Row);
 }
 
 fieldset p {
@@ -235,6 +236,9 @@ use {
 
 main>section.is-invisible [data-parallax] {
 	--ScrollDelay: 0ms;
+}
+
+main>section [data-parallax] {
 	transition-property: opacity;
 }
 
@@ -247,6 +251,7 @@ main>section>header {
 	display: contents;
 }
 main>section {
+	overflow: hidden;
 	align-self: stretch;
 	padding: var(--Row);
 	min-height: 100vh; /* À CHANGER DANS LE BON FICHIER */
@@ -271,7 +276,7 @@ main>section>header>small:first-child {
 
 main>section>header>:last-child,
 main>section>article,
-main>section>header+section {
+main>section>header~* {
 	margin-bottom: auto;
 }
 main>section>section>* {
@@ -470,17 +475,20 @@ a[href=""] {
 
 p { max-width: 65ch; }
 
-	*+* {
-		margin-top: calc(var(--Row));
-	}
-
-html>*,
-body>*,
-label>*,
-ul>* {
-	margin-top: 0;
-}
-
 header>*+small {
 	margin-top: calc(var(--Row) / 4);
+}
+
+[data-parallax],
+main>section,
+main>section>* {
+	backface-visibility: hidden;
+}
+
+main>section [data-parallax] {
+	/* transition: all 2s; */
+}
+
+:root {
+	--indigo: #411d59;
 }
