@@ -133,25 +133,28 @@
 	</section>
 	<section id="biere">
 		<header>
+			<small>Partie 1 — Choses sérieuses</small>
 			<h2>Merci, Joey Joe Joe !</h2>
 			<p>Passons maintenant aux choses sérieuses.</p>
 		</header>
 		<form>
 			<fieldset>
-				<p>Aimez-vous la bière ?</p>
 				<div>
-					<label>
-						<input type="radio" name="aimer-biere" />
-						<span>Oui !</span>
-					</label>
-					<label>
-						<input type="radio" name="aimer-biere" />
-						<span>Non !</span>
-					</label>
-					<label>
-						<input type="radio" name="aimer-biere" />
-						<span>Je ne bois pas</span>
-					</label>
+					<p>Aimez-vous la bière ?</p>
+					<div>
+						<label>
+							<input type="radio" name="aimer-biere" />
+							<span>Oui !</span>
+						</label>
+						<label>
+							<input type="radio" name="aimer-biere" />
+							<span>Non !</span>
+						</label>
+						<label>
+							<input type="radio" name="aimer-biere" />
+							<span>Je ne bois pas</span>
+						</label>
+					</div>
 				</div>
 			</fieldset>
 		</form>
@@ -182,8 +185,8 @@
 		<footer>
 		</footer>
 		<div>
-			<symbol type="basket" preserveAspectRatio="xMinYMid slice" class="basket local" data-parallax="" data-factor=".25" />
-			<symbol type="basket" preserveAspectRatio="xMinYMax slice" class="basket foreign" data-parallax="" data-factor=".125" />
+			<symbol type="consumer" preserveAspectRatio="xMinYMid slice" class="consumer local" data-parallax="" data-factor=".25" />
+			<!-- <symbol type="basket" preserveAspectRatio="xMinYMax slice" class="basket foreign" data-parallax="" data-factor=".125" /> -->
 		</div>
 	</section>
 	<section id="role-detaillant">
