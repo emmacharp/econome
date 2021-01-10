@@ -1,44 +1,26 @@
-/* Facteur de durée universel ----------------------- */
-	main>section {
-		--DurationFactor: 1; }
-
-
-/* Propriétés de transition partagées -----------------------
-	(calculées & génériques) */
+/* Application générale des transitions et animations.  ----------------------- */
+/* (Opt-in. Valeurs complexes par défaut pour
+* limiter la prolifération des propriétés héritées) */
 
 	main>section,
-	main>section * {
-		--TotalDuration: calc(var(--SelfDuration, 0ms) * var(--DurationFactor, 1));
-		--TotalDelay: calc(var(--LoadingDelay, 0ms) + var(--StructuralDelay, 0ms) + var(--ChainLinkDelay, 0ms) + var(--AfterChainDelay, 0ms) + var(--ScrollDelay, 0ms)  + var(--SelfDelay, 0ms));
-		--TransitionProperties: none;
-		--TimingFunction: linear; }
-
-
-/* Application générale des transitions.  ----------------------- */
-/* (Les éléments non transitionnés héritent 
-	 des valeurs par défaut ci-haut) */
-	
-	main>section,
-	main>section * {
-		transition-property: var(--TransitionProperties);
-		transition-duration: var(--TotalDuration);
-		transition-timing-function: var(--TimingFunction);
-		transition-delay: var(--TotalDelay); }
-
-/* Animation d'apparition au chargement ----------------------- */
-/* (Les éléments non transitionnés héritent 
-	 des valeurs par défaut ci-haut) */
-
-	main>section,
-	main>section * {
+	main>section>section,
+	main>section aside svg,
+	main>section aside div,
+	main>section .chain .icon,
+	main>section .chain .icon+*,
+	main>section .chain .arrow {
+		transition-property: var(--TransitionProperties, opacity, transform);
+		transition-duration: var(--TotalDuration, calc(var(--SelfDuration, 120ms) * var(--DurationFactor, 1)));
+		transition-timing-function: var(--TimingFunction, ease-out);
+		transition-delay: var(--TotalDelay, calc(var(--LoadingDelay, 200ms) + var(--StructuralDelay, 0ms) + var(--ChainLinkDelay, 0ms) + var(--AfterChainDelay, 0ms) + var(--ScrollDelay, 0ms)  + var(--SelfDelay, 0ms)));
 		animation-name: var(--Keyframes);
 		animation-fill-mode: backwards;
-		animation-timing-function: var(--TimingFunction);
-		animation-duration: var(--TotalDuration);
-		animation-delay: var(--TotalDelay);  }
+		animation-timing-function: var(--TimingFunction, opacity);
+		animation-duration: var(--TotalDuration, calc(var(--SelfDuration, 120ms) * var(--DurationFactor, 1)));
+		animation-delay: var(--TotalDelay, calc(var(--LoadingDelay, 200ms) + var(--StructuralDelay, 0ms) + var(--ChainLinkDelay, 0ms) + var(--AfterChainDelay, 0ms) + var(--ScrollDelay, 0ms)  + var(--SelfDelay, 0ms)));  }
 
 
-/* Application « opt-in » 
+/* Application « opt-in »
 	des propriétés transitionnées  ----------------------- */
 
 	main>section>section,
@@ -46,30 +28,30 @@
 	main>section aside div,
 	main>section .chain .icon,
 	main>section .chain .arrow {
-		transform: var(--TransformVisible); }
+		transform: var(--TransformVisible, scale(1)); }
 	main>section,
 	main>section>section,
-	main>section aside div *,
+	main>section aside div>*,
 	main>section .chain .icon+* {
-		opacity: var(--OpacityVisible); }
+		opacity: var(--OpacityVisible, 1); }
 
 	main>section.is-invisible>section,
 	main>section.is-invisible aside svg,
 	main>section.is-invisible aside div,
 	main>section.is-invisible .chain .icon,
 	main>section.is-invisible .chain .arrow {
-		transform: var(--TransformInvisible); }
+		transform: var(--TransformInvisible, scale(.85)); }
 	main>section.is-invisible,
 	main>section.is-invisible>section,
 	main>section.is-invisible aside div *,
 	main>section.is-invisible [data-parallax],
 	main>section.is-invisible .chain .icon+* {
-		opacity: var(--OpacityInvisible); }
+		opacity: var(--OpacityInvisible, 0); }
 
-/* Propriétés supplémentaires 
+/* Propriétés supplémentaires
 	nécessaires au bon fonctionnement  ----------------------- */
-	
-	/* Empêche le contenu de passer 
+
+	/* Empêche le contenu de passer
 		par-dessus dans la transition */
 	main>section aside svg {
 		z-index: 1; }
@@ -82,13 +64,8 @@
 		transform-origin: left center; }
 
 /* Valeurs de transition spécifiques ----------------------- */
-	
+
 	/* Sections — Valeurs d'apparition & disparition */
-	main>section {
-		--TransitionProperties: opacity;
-		--TimingFunction: ease-out;
-		--SelfDuration: 120ms;
-		--LoadingDelay: 200ms; }
 	main>section.is-invisible {
 		--SelfDuration: 600ms;
 		--TransitionProperties: opacity;
@@ -105,14 +82,10 @@
 	main>section aside div {
 		--TransitionProperties: transform;
 		--SelfDuration: 320ms; }
-	main>section aside div * {
+	main>section aside div>* {
 		--TransitionProperties: opacity;
 		--TimingFunction: var(--ease-out-quad);
 		--SelfDuration: 320ms; }
-	main>section>section {
-		--TimingFunction: var(--ease-out-back);
-		--TransitionProperties: transform, opacity;
-		--SelfDuration: 180ms; }
 	main>section .chain .icon {
 		--TransitionProperties: transform;
 		--TimingFunction: var(--ease-out-back);
@@ -143,8 +116,6 @@
 		--SelfDelay: 100ms; }
 
 	/* Éléments — Valeurs transitionnées à la disparition */
-	main>section>section {
-		--TransformInvisible: scale(.85); }
 	main>section aside svg {
 		--TransformInvisible: scale(0); }
 	main>section aside div {
@@ -153,27 +124,10 @@
 		--TransformInvisible: scale(0); }
 	main>section .chain .arrow {
 		--TransformInvisible: scale(0, 1); }
-	main>section,
-	main>section>section,
-	main>section aside div *,
-	main>section .chain .icon+* {
-		--OpacityInvisible: 0; }
 
-	/* Éléments — Valeurs transitionnées à l'apparition */
-	main>section>section,
-	main>section aside svg,
-	main>section aside div,
-	main>section .chain .icon,
-	main>section .chain .arrow {
-		--TransformVisible: scale(1); }
-	main>section,
-	main>section>section,
-	main>section aside div *,
-	main>section .chain .icon+* {
-		--OpacityVisible: 1; }
 
 /* Cascade d'apparition générale en cascade ----------------------- */
-	
+
 	main>section>:nth-child(1) {
 		--StructuralDelay: 0ms; }
 	main>section>:nth-child(2) {
@@ -201,7 +155,7 @@
 
 
 /* Délai supplémentaire pour tout ce qui suit la chaîne ----------------------- */
-	
+
 	main>section>.chain~* {
 		--AfterChainDelay: 800ms; }
 
@@ -213,27 +167,22 @@
 		main>section aside div,
 		main>section .chain .icon,
 		main>section .chain .arrow {
-			--Keyframes: scale; }
+			animation-name: var(--Keyframes, scale); }
 		main>section,
 		main>section>section,
-		main>section aside div *,
+		main>section aside div>*,
 		main>section .chain .icon+* {
-			--Keyframes: opacity; }
-		/* Annuler l'héritage des animations */
-		main>section * {
-			--Keyframes: none; }
-
+			animation-name: var(--Keyframes, opacity); }
 
 
 /* Animations réflétant les transitions ----------------------- */
 
 @keyframes opacity {
-	from { opacity: var(--OpacityInvisible); } 
-	to { opacity: var(--OpacityVisible); }
+	from { opacity: var(--OpacityInvisible, 0); }
+	to { opacity: var(--OpacityVisible, 1); }
 }
 
 @keyframes scale {
-	from { transform: var(--TransformInvisible); } 
-	to { transform: var(--TransformVisible); }
+	from { transform: var(--TransformInvisible, 0); }
+	to { transform: var(--TransformVisible, 1); }
 }
-

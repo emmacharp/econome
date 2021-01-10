@@ -4,7 +4,7 @@
 
 	p, ul, ol, span,
 	h1, h2, h3, h4, h5, h6 {
-		--FontSizeWithRowUnit: calc(var(--Size) * var(--ScaleLevel) * var(--FontFactor) * var(--RowUnit));
+		--FontSizeWithRowUnit: calc(var(--Size, 1) * var(--ScaleLevel, 1) * var(--FontFactor, 1) * var(--RowUnit, 1rem));
 	}
 
 	p, ul, ol, span, small,
@@ -29,9 +29,4 @@
 
 	p, ul, ol, span, small,
 	h1, h2, h3, h4, h5, h6 {
-		--LineHeight: calc(var(--LineHeightAuto, 1.5625) * var(--LineHeightFactor, 1));
-		line-height: var(--LineHeight); }
-
-/* Rythme des contenus */
-	*+p, *+img, *+hr, *+ul,
-	*+h1, *+h2, *+h3, *+h4, *+h5, *+h6 { margin-top: var(--LineHeight); }
+		line-height: var(--LineHeight, calc(var(--LineHeightAuto, 1.5625) * var(--LineHeightFactor, 1))); }
