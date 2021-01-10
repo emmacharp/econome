@@ -17,7 +17,7 @@ main>section>div:last-child {
 	margin: 0;
 }
 
-.basket {
+main>section>div:last-child>svg {
 	color: var(--Color);
 	height: var(--Height);
 	width: var(--Width);
@@ -25,6 +25,11 @@ main>section>div:last-child {
 
 .basket {
 	--Height: clamp(500px, 200vh, 1400px); 
+	--Width: clamp(200px, 50vw, 800px);
+}
+
+.consumer {
+	--Height: clamp(500px, 100vh, 900px); 
 	--Width: clamp(200px, 50vw, 800px);
 }
 
