@@ -12,9 +12,7 @@
 	/* Holy Albatross. Voir Heydon Pickering :
 		(https://heydonworks.com/article/the-flexbox-holy-albatross/) */
 		div.grille {
-			--AlbatrossItemBasis: 68ch;
-			--Albatross: calc((var(--AlbatrossItemBasis, 66ch) - 100%) * 999);
-			--DivItemBasis: var(--Albatross);
+			--DivItemBasis: calc((68ch - 100%) * 999);
 			--DivItemGrow: 1;
 			--DivItemGutter: var(--Row);
 			--DivItemMaxWidth: 100%;
@@ -74,10 +72,10 @@
 		/* Briser la chaîne d'héritage
 			pour permettre l'inclusion successive */
 		div *:not(div)>* {
-			--DivItemBasis: auto;
-			--DivItemGutter: 0;
-			--DivGutter: calc(-1 * var(--DivItemGutter, 0));
-			--DivItemGrow: 0;
+			--DivItemBasis: initial;
+			--DivItemGutter: initial;
+			--DivGutter: initial;
+			--DivItemGrow: initial;
 		}
 
 	/* 4. Dimensions des enfants & contenus ---- */
