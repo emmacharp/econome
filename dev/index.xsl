@@ -102,7 +102,7 @@
 		</span>
 	</xsl:template>
 
-	<xsl:template match="agent/@local|agent/@foreign">
+	<xsl:template match="agent/@local|agent/@foreign|agent/@value">
 		<span class="added amount {name()}">
 			<xsl:text>+</xsl:text>
 			<xsl:value-of select="." />
@@ -128,7 +128,7 @@
 		<section class="link agent {@type} {@class}">
 			<xsl:apply-templates select="@paid" />
 			<div>
-				<xsl:apply-templates select="@local" />
+				<xsl:apply-templates select="@local|@value" />
 				<article>
 					<xsl:apply-templates select="ext:node-set($svg-elements)//svg:symbol[generate-id() = generate-id(key('symbol-type', current()/@type)[1])]" />
 					<h4><xsl:value-of select="@name" /></h4>
@@ -150,10 +150,27 @@
 			</xsl:choose>
 		</xsl:variable>
 		<div>
-			<xsl:if test="@local">
+			<xsl:if test="@local|@value">
 				<hr class="variable arrow from" />
 			</xsl:if>
-			<section class="{$state} product" style="--LocalAddedValue: {@local}; --ForeignAddedValue: {@foreign};">
+			<section class="{$state} product">
+				<xsl:attribute name="style">
+					<xsl:if test="@local">
+						<xsl:value-of select="'--LocalAddedValue: '" />
+						<xsl:value-of select="@local"></xsl:value-of>
+						<xsl:value-of select="';'"></xsl:value-of>
+					</xsl:if>
+					<xsl:if test="@foreign">
+						<xsl:value-of select="'--ForeignAddedValue:'" />
+						<xsl:value-of select="@foreign"></xsl:value-of>
+						<xsl:value-of select="';'"></xsl:value-of>
+					</xsl:if>
+					<xsl:if test="@value">
+						<xsl:value-of select="'--NeutralAddedValue:'" />
+						<xsl:value-of select="@value" />
+						<xsl:value-of select="';'" />
+					</xsl:if>
+				</xsl:attribute>
 				<hr>
 					<xsl:attribute name="class">
 						<xsl:text>good arrow </xsl:text>
