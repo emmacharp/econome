@@ -21,7 +21,7 @@ On veut maintenir les PME et artisans. Chiffres d'affaires plus grand. Elles dev
 
 Impact de l'achat local sur la capacité de production.
 
-Raisons à l'importation : 
+Raisons à l'importation :
 - tu peux pas produire des bananes
 - contraintes de ressources, n'a pas la masse nécessaire...
 
@@ -254,7 +254,7 @@ Présenter trois niveaux de fournisseurs max.
 
 T'achète de la bière chez Wal-Mart. ou au dépanneur du coin. Mais il reste encore beaucoup qui s'en va à l'étranger... tout ce qui est avant dans la chaîne. Le détaillant peut s'approvisionner chez un grossiste ontarien.
 
-Évitre de dédoubler les transferts... C'est le premier concept à faire comprendre... le 1000$ du départ, ne va que créer 1000$ à la fin. Ça se dédouble pas.
+Éviter de dédoubler les transferts... C'est le premier concept à faire comprendre... le 1000$ du départ, ne va que créer 1000$ à la fin. Ça se dédouble pas.
 
 ## Meeting Henri — 30/10/20
 
@@ -426,3 +426,39 @@ On laisse l'usager s'investir en répondant à des questions « personnelles �
 Courbe de présentation de l'interaction. Plus léger, plus familier.
 
 Démontrer l'interrelation / porosité des marchés... Par exemple, produire toute la bière ici va faire augmenter le coût des maisons.
+
+## Meeting Prof. Renaud 28 janvier 2021
+
+Annoncer en une phrase simple, le point du prochain paragraphe. En entête de paragraphe...
+
+Entrer et sortie
+
+On privilégie
+	On établit les contenus et la structure
+	On aime tester la forme à leur donner
+	On aime cibler les contraintes. Cohérence et créativité
+	On veut se conformer aux principes de l'interface interactive.
+	Confronter à l'usage.
+
+	Se conformer aux principes du UI en tant qu'intitulé de section.
+
+	Éviter les perspectives intériorisée.
+
+	Quantité à peu près des éléments manquants.
+
+	Références de production / corpus d'œuvres
+
+## Nouvelles notes (hoho)
+
+Il s'agit d'un projet pilote, une instance première d'un cadre conceptuel.
+Un cadre conceptuel qui allie économie et conception, dit « design ». Le design de l'économie par l'économie du design.
+On recherche l'efficacité par la performance. Toujours l'économie dans le design.
+On analyse et on fait des tests (Lighthouse, par exemple).
+En annexe des captures de tests de performance. Décisions prises en fonction de ces analyses.
+
+
+Citation de Neurath
+
+where we are using the terms “good” or “bad”
+we can use them only with the addition “for somebody”
+
