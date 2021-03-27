@@ -23,11 +23,11 @@ main {
 }
 
 /* Patron pointillé */
-main {
-	background-image: radial-gradient(var(--tr-purple) 2px, transparent 2px), radial-gradient(var(--tr-purple) 2px, transparent 2px);
-	background-size: var(--Row) var(--Row);
-	background-position: 0 0, var(--Row) 0;
-}
+/* main { */
+/* 	background-image: radial-gradient(var(--tr-purple) 2px, transparent 2px), radial-gradient(var(--tr-purple) 2px, transparent 2px); */
+/* 	background-size: var(--Row) var(--Row); */
+/* 	background-position: 0 0, var(--Row) 0; */
+/* } */
 
 main>section>section {
 	position: relative;
