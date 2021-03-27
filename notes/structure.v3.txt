@@ -60,7 +60,7 @@ Scénarios de chocs pour projeter les implications contrefactuelles.
         2. Le détaillant l'achète au grossiste.
         3. Le grossiste l'achète au dernier transformateur. 
         4. Le transformateur l'achète au fournisseur.
-        4. La brasserie « Popire » brasse « La Moyenne » depuis maintenant plus de 20 ans. Son goût « correct » lui vient du houblon ontarien qu'elle achèrte chez l'un des ses nombreux fournisseurs, « Ok Hops ».
+        4. La brasserie « Popire » brasse « La Moyenne » depuis maintenant plus de 20 ans. Son goût bien acceptable lui vient du houblon ontarien qu'elle achète chez l'un des ses nombreux fournisseurs, « Ok Hops ».
     3. « Ok, vous dites-vous, Joey Joe Joe, ok, mais il arrive quoi à mon 10 piastres que je lui ai donné au dépanneur ? »
         4. « Excellente question ! », répondons-nous, Joey Joe Joe.
     3. Votre 10 piastres, Joey Joe Joe, il parcourt la chaîne de l'autre sens !
