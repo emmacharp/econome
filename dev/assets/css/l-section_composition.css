@@ -7,17 +7,18 @@ main>section [data-parallax] {
 	right: 0;
 }
 
-main>section>div:last-child {
+main>section>:not(header)+div:last-child {
 	z-index: -1;
 	position: absolute;
-	top: 0;
+	top: calc(var(--Row) * 1.625);
 	right: 0;
-	bottom: 0;
+	bottom: calc(-1 * var(--Row) * 3);
 	left: 0;
 	margin: 0;
+	overflow: hidden;
 }
 
-main>section>div:last-child>svg {
+main>section>:not(header)+div:last-child>svg {
 	color: var(--Color);
 	height: var(--Height);
 	width: var(--Width);
@@ -29,15 +30,42 @@ main>section>div:last-child>svg {
 }
 
 .consumer {
-	--Height: clamp(500px, 100vh, 900px); 
-	--Width: clamp(200px, 50vw, 800px);
+	--Height: clamp(500px, 200vh, 1200px); 
+	--Width: clamp(600px, 250vw, 1200px);
 }
 
+.retailer {
+	--Height: clamp(500px, 200vh, 1200px); 
+	--Width: clamp(600px, 300vw, 2200px);
+}
+
+.beer {
+	--Height: clamp(500px, 160vh, 1200px);
+	--Width: clamp(600px, 80vh, 700px);
+}
+.beer[data-parallax] {
+	top: auto;
+	bottom: 0;
+	left: 70vw;
+}
+
+.retailer[data-parallax] {
+	top: auto;
+	bottom: calc(-1 * var(--Row) * 3);
+	left: 75vw;
+}
+
+.consumer[data-parallax] {
+	top: auto;
+	bottom: calc(-1 * var(--Row) * 2);
+	left: 70vw;
+	transform: rotate(265deg) scale(1);
+}
 main>section [data-parallax] {
 	/* mix-blend-mode: multiply; /1* ATTENTION ! performance : utiliser avec conteneur parent « isolation » *1/ */
 }
 
-main>section>div:last-child {
+main>section>:not(header)+div:last-child {
 	isolation: isolate;
 }
 
