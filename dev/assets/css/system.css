@@ -30,7 +30,8 @@
 /* Calculs typographiques ----------------------- */
 
 /* Variables statiques (Config seulement) */
-	:root {
+	/* PERFORMANCE À ÉVALUER (sélecteur universel vs. root) */
+	* {
 		--Row: calc(var(--RowFactor, 1.6125) * var(--RowUnit, 1rem));
 	}
 
@@ -56,7 +57,7 @@
 		font-size: var(--FontSize, calc(var(--Size, 1) * var(--ScaleLevel, 1) * var(--FontFactor, 1) * var(--FontUnit, 1em)));
 		font-style: var(--FontStyle, inherit);
 		font-weight: var(--FontWeight, inherit);
-		max-width: var(--MaxWidth, inherit);
+		max-width: var(--MaxWidth, initial);
 		color: var(--Color, inherit); }
 
 
@@ -72,14 +73,3 @@
 		font-weight: 700;
 	}
 
-/* Rythme des contenus */
-	*+* {
-		margin-top: calc(var(--Row));
-	}
-
-	html>*,
-	body>*,
-	label>*,
-	ul>* {
-		margin-top: 0;
-	}
