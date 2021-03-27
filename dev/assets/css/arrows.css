@@ -1,5 +1,5 @@
 hr.arrow {
-	--ArrowLine:  2px solid currentColor;
+	--ArrowLine:  2px solid var(--ltr-primary);
 }
 
 hr.arrow.right {
@@ -11,7 +11,7 @@ hr.arrow.left {
 }
 
 hr.arrow::after {
-	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:serif='http://www.serif.com/' width='100%25' height='100%25' viewBox='0 0 56 33' version='1.1' xml:space='preserve' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:1.5;'%3E%3Cpath d='M3.756,26.664l22.908,-22.908l24.9,24.899' style='fill:none;stroke:%23A4A391;stroke-width:4px;'/%3E%3C/svg%3E");	
+	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:serif='http://www.serif.com/' width='100%25' height='100%25' viewBox='0 0 56 33' version='1.1' xml:space='preserve' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:1.5;'%3E%3Cpath d='M3.756,26.664l22.908,-22.908l24.9,24.899' style='fill:none;stroke:%23D5D5D2;stroke-width:4px;'/%3E%3C/svg%3E");	
 	position: relative;
 }
 
