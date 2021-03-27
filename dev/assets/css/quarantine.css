@@ -30,7 +30,7 @@ hr {
 	height: 0;
 	max-height: 0;
 	border: none;
-	border-top:  2px solid currentColor;
+	border-top:  2px solid var(--ltst-primary);
 	overflow: visible;
 }
 
@@ -72,6 +72,12 @@ fieldset label {
 	flex-shrink: 0;
 	text-transform: lowercase;
 }
+
+fieldset div label {
+	 --DivItemGrow: 0;
+    --DivItemBasis: auto;
+}
+
 fieldset>*+* {
 	margin-top: calc(var(--Row) / 2);
 }
@@ -138,7 +144,7 @@ fieldset p {
 	--FontWeight: 700;
 	/* min-width: 30ch; */
 	/* flex-basis: 0; */
-	/* flex-grow: 1; */
+	flex-grow: 1;
 }
 
 /* fieldset div:before { */
@@ -251,7 +257,7 @@ main>section>header {
 	display: contents;
 }
 main>section {
-	overflow: hidden;
+	/* overflow: hidden; */
 	align-self: stretch;
 	padding: var(--Row);
 	min-height: 100vh; /* À CHANGER DANS LE BON FICHIER */
@@ -276,7 +282,8 @@ main>section>header>small:first-child {
 
 main>section>header>:last-child,
 main>section>article,
-main>section>header~* {
+main>section>header~:not(p),
+main>section>p:last-of-type {
 	margin-bottom: auto;
 }
 main>section>section>* {
@@ -421,18 +428,21 @@ main>section>section div div {
 main>section>section div div~section {
 	flex-grow: 4;
 }
-main>section>section>div>div {
+main>section>section>div>div,
+.prose {
 	--DivDisplay: block;
 	column-width: calc(var(--Row) * 10);
 	column-count: 2;
 	column-gap: var(--Row);
 }
 
-main>section>section>div>div>* {
+main>section>section>div>div>*,
+.prose>* {
 	--DivItemGutter: 0;
 }
 
-main>section>section>div>div>*+* {
+main>section>section>div>div>*+*,
+.prose>*+* {
 	margin-top: var(--Row);
 }
 main>section.is-invisible [data-parallax] {
@@ -489,6 +499,33 @@ main>section [data-parallax] {
 	/* transition: all 2s; */
 }
 
-:root {
-	--indigo: #411d59;
+/* :root { */
+/* 	--indigo: #411d59; */
+/* 	--ColorText: var(--indigo); */
+/* } */
+
+/* .chain .unknown-link span { */
+/* 	background-color: var(--indigo); */
+/* } */
+
+/* .chain .product .icon { */
+/* 	background-color: var(--indigo); */
+/* } */
+
+/* .chain { */
+/* 	color: inherit; */
+/* } */
+
+/* .chain .agent.active { */
+/* 	color: var(--lt-brown); */
+/* } */
+
+main>section>p:only-of-type {
+	margin-top: auto;
+	margin-bottom: auto;
+	max-width: 42ch;
+}
+
+main>section>header p {
+	max-width: 36ch;
 }
