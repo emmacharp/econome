@@ -25,7 +25,7 @@
 		--lt-purple: #fceaff;
 
 		--ColorBg: white;
-		--ColorText: var(--brown);
+		--ColorText: var(--indigo);
 		--ColorLocal: var(--blue);
 		--ColorForeign: var(--red);
 		--ColorSupport: var(--purple);
@@ -60,7 +60,7 @@
 /* Typographie basée sur les polices système ----------------------- */
 
 	:root { font-family: var(--BaseFontStack, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"); }
-	h1 { font-family: var(--TitleFontStack, "Avenir Next", "Helevetica Neue", "Helvetica", "Segoe UI"); }
+	h1, h4 { font-family: var(--TitleFontStack, "Avenir Next", "Helevetica Neue", "Helvetica", "Segoe UI"); }
 
 
 /* Distribution aux titres de l'échelle typographique ----------------------- */
@@ -68,7 +68,7 @@
 	h1 { --ScaleLevel: var(--Huge); }
 	h2 { --ScaleLevel: var(--Tallest); }
 	h3 { --ScaleLevel: var(--Taller); }
-	h4 { --ScaleLevel: var(--Tall); }
+	h4 { --ScaleLevel: var(--Base); --FontWeight: 600; }
 	h5 { --ScaleLevel: var(--Base); }
 	h6 { --ScaleLevel: var(--Short); }
 
@@ -76,8 +76,13 @@
 /* Styles typograhpiques particuliers -----------------------  */
 
 
+	main>section>form p:only-of-type {
+		--FontWeight: 600;
+		--ScaleLevel: var(--Tall);
+	}
 
-	main>section header {
+	main>section header,
+	main>section>p {
 		--FontWeight: 600;
 		--ScaleLevel: var(--Taller); }
 
