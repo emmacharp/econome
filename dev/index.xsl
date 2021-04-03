@@ -29,7 +29,7 @@
 
 				<!-- <link rel="stylesheet" href="assets/css/a-section_visibility-transitions.css" /> -->
 				<link rel="stylesheet" href="assets/css/t-dark-scheme.css" media="screen and (prefers-color-scheme: dark)" />
-				<link rel="stylesheet" href="assets/css/t-library.css"/>
+				<link rel="stylesheet" href="assets/css/s-library.css"/>
 				<link rel="stylesheet" href="assets/css/u-superdiv.css"/>
 				<link rel="stylesheet" href="assets/css/s-auto_line-height.css"/>
 				<link rel="stylesheet" href="assets/css/t-config.css"/>
