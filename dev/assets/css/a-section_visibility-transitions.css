@@ -126,7 +126,7 @@
 		--TransformInvisible: scale(0, 1); }
 
 
-/* Cascade d'apparition générale en cascade ----------------------- */
+/* Cascade d'apparition générale ----------------------- */
 
 	main>section>:nth-child(1) {
 		--StructuralDelay: 0ms; }
