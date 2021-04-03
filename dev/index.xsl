@@ -36,15 +36,15 @@
 				<link rel="stylesheet" href="assets/css/c-internal_nav.css"/>
 				<link rel="stylesheet" href="assets/css/chain.css"/>
 				<link rel="stylesheet" href="assets/css/arrows.css"/>
-				<!-- <link rel="stylesheet" href="assets/css/c-cartoon_characters.css" /> -->
 				<link rel="stylesheet" href="assets/css/s-easings.css"/>
 				<link rel="stylesheet" href="assets/css/l-master_composition.css"/>
 				<link rel="stylesheet" href="assets/css/l-section_composition.css"/>
 				<link rel="stylesheet" href="assets/css/quarantine.css"/>
+
 				<!-- <link rel="stylesheet" href="assets/css/p-stacking_slides.css"/> -->
-
-
+				<!-- <link rel="stylesheet" href="assets/css/c-cartoon_characters.css" /> -->
 				<!-- <link rel="stylesheet" href="assets/css/main.css"/> -->
+				<!-- <link rel="stylesheet" href="assets/css/dev.css"> -->
 
 			</head>
 			<body>
@@ -61,15 +61,12 @@
 							<h2>Conaissances complémentaires</h2>
 							<button id="wikiViewerClose">Fermer</button>
 						</header>
-						<div id="wikiDump">
-
-						</div>
+						<div id="wikiDump"></div>
 						<footer><span>Contenu provenant de Wikipedia.</span> <a id="wikiCanonical" rel="canonical" target="_blank" href="#">Visiter la page officielle</a></footer>
 					</div>
 				</aside>
 				<xsl:call-template name="svg-elements" />
 				<script src="assets/js/main.js" defer="defer"></script>
-				<!-- <link rel="stylesheet" href="assets/css/dev.css"> -->
 				<link rel="stylesheet" href="assets/css/c-wiki_viewer.css"/>
 			</body>
 		</html>
