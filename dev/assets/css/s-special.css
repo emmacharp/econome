@@ -1,0 +1,8 @@
+[data-parallax] {
+	pointer-events: none;
+}
+
+[href=""] {
+	cursor: not-allowed;
+	pointer-events: none;
+}

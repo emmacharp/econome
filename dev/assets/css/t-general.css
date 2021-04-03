@@ -1,0 +1,16 @@
+hr {
+	line-height: 0;
+	height: 0; max-height: 0;
+	border: none; border-top: 2px solid inherit;
+	overflow: visible;
+}
+
+use { fill: currentColor; }
+
+i>svg {
+	height: 1ch;
+	margin-left: .5em; margin-right: .5em;
+	display: inline-block;
+}
+
+p { max-width: 65ch; }
