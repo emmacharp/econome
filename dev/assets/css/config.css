@@ -65,7 +65,7 @@
 
 /* Distribution aux titres de l'échelle typographique ----------------------- */
 
-	h1 { --ScaleLevel: var(--Huge); }
+	h1 { --ScaleLevel: var(--Huge); --FontWeight: 700; }
 	h2 { --ScaleLevel: var(--Tallest); }
 	h3 { --ScaleLevel: var(--Taller); }
 	h4 { --ScaleLevel: var(--Base); --FontWeight: 600; }

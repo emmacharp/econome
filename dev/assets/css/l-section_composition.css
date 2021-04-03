@@ -1,3 +1,18 @@
+main>section {
+	/* overflow: hidden; */
+	align-self: stretch;
+	padding: var(--Row);
+	min-height: 100vh; /* À CHANGER DANS LE BON FICHIER */
+}
+
+main>section>header>small:first-child {
+	position: sticky;
+	top: var(--Row);
+	margin-bottom: calc(var(--Row) * 2);
+}
+main>section>header {
+	display: contents;
+}
 
 main>section [data-parallax] {
 	transform: translate3d(0, calc( var(--scrollParallax) * 1px ), 0);
@@ -69,3 +84,207 @@ main>section>:not(header)+div:last-child {
 	isolation: isolate;
 }
 
+main>section section svg {
+	height: 8ch;
+}
+
+main>section>aside {
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+	margin-right: var(--Row);
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: max-content;
+}
+
+main>section aside>div {
+	background-color: var(--ColorAccent);
+	border-radius: 5px;
+	padding: calc(var(--Row) * .75);
+}
+
+main>section aside svg {
+	position: relative;
+	height: calc(var(--Row) * 4);
+	margin-right: calc(-1 * var(--Row) * 2);
+}
+
+main>section aside svg+* {
+	overflow: hidden;
+	padding-left: calc(var(--Row) * 2);
+}
+
+@media (orientation: landscape) {
+	main>section {
+		padding-left: calc(var(--Row) * 3);
+	}
+}
+
+main>section>aside {
+	margin-top: var(--Row);
+	margin-bottom: var(--Row);
+	align-self: flex-start;
+}
+
+main>section>header>small:first-child {
+	--ScaleLevel: var(--Short);
+	font-weight: 700;
+}
+
+main>section>header>:last-child,
+main>section>article,
+main>section>header~:not(p),
+main>section>p:last-of-type {
+	margin-bottom: auto;
+}
+main>section>section>* {
+	/* display: inline-block; */
+}
+
+main>section>section>h2 {
+	display: block;
+	column-span: all;
+	--ScaleLevel: var(--Base);
+}
+main>section p>b:only-child {
+	font-size: 1.4125em;
+	display: block;
+}
+
+aside>details>* {
+	padding: calc(var(--Row) * .5);
+	background-color: var(--yellow);
+	border-radius: 5px;
+}
+
+aside details summary+* {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	padding: var(--Row);
+	background-color: var(--yellow);
+	margin-top: -5px; /* Masque le radius */
+	max-width: 100%;
+	min-width: 25ch;
+}
+
+details summary:marker {
+	font-size: .5em;
+}
+
+
+details summary::-webkit-details-marker {
+	font-size: .75em;
+	margin-right: 1em;
+}
+
+main>section>*+* {
+	margin-top: var(--Row);
+}
+
+main>section>section aside {
+	padding: var(--Row);
+	border-radius: 8px;
+	/* align-self: flex-start; */
+	background-color: var(--ColorBg);
+	background-image: linear-gradient(var(--tr-purple), var(--tr-purple) 100%);
+	--Color: var(--dk-brown);
+}
+
+main>section>section *:not(header)+*~aside {
+	flex-grow: 2;
+}
+
+main>section>section>.grille {
+	--DivItemGutter: calc(var(--Row) * 2);
+}
+
+main>section>section div {
+	align-items: baseline;
+}
+
+main>section>section header>h2,
+main>section>section header>h3,
+main>section>section header>small {
+	--ScaleLevel: var(--Short);
+	color: inherit;
+	line-height: calc(var(--Row) * .5);
+}
+
+main>section>section div header {
+	min-width: calc(var(--Row) * 5);
+	flex-shrink: 0;
+	flex-grow: 1;
+}
+main>section>section div header>*:last-child,
+main>section>header>small:first-child {
+	display: flex;
+	align-items: baseline;
+}
+
+main>section>section div header>*:last-child:after,
+main>section>header>small:first-child:after {
+	content: '';
+	display: block;
+	flex-basis: 0;
+	flex-grow: 1;
+	border-top: 1px solid var(--ltr-brown);
+	margin-left: .25em;
+}
+
+main>section>section div div {
+	flex-grow: 4;
+}
+
+main>section>section div div~section {
+	flex-grow: 4;
+}
+main>section>section>div>div,
+.prose {
+	--DivDisplay: block;
+	column-width: calc(var(--Row) * 10);
+	column-count: 2;
+	column-gap: var(--Row);
+}
+
+main>section>section>div>div>*,
+.prose>* {
+	--DivItemGutter: 0;
+}
+
+main>section>section>div>div>*+*,
+.prose>*+* {
+	margin-top: var(--Row);
+}
+
+main>section h1 {
+	max-width: 26ch;
+}
+aside details {
+	max-width: 100%;
+}
+
+aside details[open] {
+	filter: drop-shadow(0px 1px 3px rgba(0,0,0,.1));
+}
+
+main>section>p:only-of-type {
+	margin-top: auto;
+	margin-bottom: auto;
+	max-width: 42ch;
+}
+
+main>section>header p {
+	max-width: 36ch;
+}
+
+main>section>section div>form {
+	align-self: center;
+	flex-grow: 6
+}
+
+main>section>section div>form {
+	padding-top: 1.25em;
+}

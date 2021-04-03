@@ -29,3 +29,9 @@
 	/* Garder la puce à l'intérieur 
 		de la colonne de texte */
 	ul { padding-left: 1.1em; }
+
+	/* Meilleur affichage typographique */	
+	html { text-rendering: geometricPrecision; }
+
+	/* Empêcher le spring qui fuck le chien */
+	body { overscroll-behavior-y: none; }
