@@ -30,11 +30,10 @@
 
 				<link rel="stylesheet" href="assets/css/utilities/u-superdiv.css"/>
 				
-				<link rel="stylesheet" href="assets/css/theme/t-dark-scheme.css" media="screen and (prefers-color-scheme: dark)" />
+				<link rel="stylesheet" href="assets/css/theme/t-dark_scheme.css" media="screen and (prefers-color-scheme: dark)" />
 				<link rel="stylesheet" href="assets/css/theme/t-library.css"/>
 				<link rel="stylesheet" href="assets/css/theme/t-config.css"/>
 				<link rel="stylesheet" href="assets/css/theme/t-setup.css"/>
-				<link rel="stylesheet" href="assets/css/theme/t-base.css"/>
 				<link rel="stylesheet" href="assets/css/theme/t-typography.css"/>
 				<link rel="stylesheet" href="assets/css/theme/t-general.css"/>
 				<link rel="stylesheet" href="assets/css/theme/t-fieldset.css"/>
@@ -77,7 +76,7 @@
 				<xsl:call-template name="svg-elements" />
 				<script src="assets/js/main.js" defer="defer"></script>
 				<link rel="stylesheet" href="assets/css/components/c-wiki_viewer.css"/>
-				<link rel="stylesheet" href="assets/css/system/s-special.css"/>
+				<link rel="stylesheet" href="assets/css/theme/t-special.css"/>
 			</body>
 		</html>
 	</xsl:template>
