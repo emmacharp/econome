@@ -27,9 +27,10 @@
 
 				<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-				<!-- <link rel="stylesheet" href="assets/css/a-section_visibility-transitions.css" /> -->
+				<!-- <link rel="stylesheet" href="assets/css/patterns/p-section_visibility-transitions.css" /> -->
 				<link rel="stylesheet" href="assets/css/theme/t-dark-scheme.css" media="screen and (prefers-color-scheme: dark)" />
 				<link rel="stylesheet" href="assets/css/system/s-library.css"/>
+				<link rel="stylesheet" href="assets/css/system/s-tags.css"/>
 				<link rel="stylesheet" href="assets/css/utilities/u-superdiv.css"/>
 				<link rel="stylesheet" href="assets/css/system/s-auto_line-height.css"/>
 				<link rel="stylesheet" href="assets/css/theme/t-config.css"/>
