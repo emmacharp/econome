@@ -1,5 +1,6 @@
 hr.arrow {
 	--ArrowLine:  2px solid var(--ltr-primary);
+	overflow: visible;
 }
 
 hr.arrow.right {

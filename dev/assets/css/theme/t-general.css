@@ -34,7 +34,6 @@ hr {
 	line-height: 0;
 	height: 0; max-height: 0;
 	border: none; border-top: 2px solid inherit;
-	overflow: visible;
 }
 
 /* Préparer les <symbol> à être manipulés */
