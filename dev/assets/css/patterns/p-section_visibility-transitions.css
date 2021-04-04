@@ -40,7 +40,7 @@
 	main>section.is-invisible aside div,
 	main>section.is-invisible .chain .icon,
 	main>section.is-invisible .chain .arrow {
-		transform: var(--TransformInvisible, scale(.85)); }
+		transform: var(--TransformInvisible, scale(1)); }
 	main>section.is-invisible,
 	main>section.is-invisible>section,
 	main>section.is-invisible aside div *,
