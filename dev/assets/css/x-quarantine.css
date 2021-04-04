@@ -5,3 +5,15 @@
 main>section {
   content-visibility: auto;
 }
+
+.has-js [data-parallax],
+.has-js body>nav {
+	animation: opacity 1200ms 400ms;
+	animation-fill-mode: both;
+}
+
+@keyframes opacity {
+	from { opacity: var(--OpacityInvisible, 0); }
+	to { opacity: var(--OpacityVisible, 1); }
+}
+
