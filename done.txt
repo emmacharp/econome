@@ -1,0 +1,3 @@
+x 2021-01-10 correction orthographique dans Vim. +vim @dev @config
+x 2021-01-10 Essayer le plugin Taboo pour renommer les tabs dans vim. https://github.com/gcmt/taboo.vim @config +vim
+x 2021-01-10 Sauvegarder des sessions +vim @config
