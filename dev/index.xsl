@@ -41,18 +41,18 @@
 				<link rel="stylesheet" href="assets/css/theme/t-general.css"/>
 				<link rel="stylesheet" href="assets/css/theme/t-fieldset.css"/>
 				
+				<link rel="stylesheet" href="assets/css/layout/l-master_composition.css"/>
+				<link rel="stylesheet" href="assets/css/layout/l-section_composition.css"/>
+
+				<link rel="stylesheet" href="assets/css/components/c-chain.css"/>
+				<link rel="stylesheet" href="assets/css/components/c-arrows.css"/>
+				<!-- <link rel="stylesheet" href="assets/css/components/c-cartoon_characters.css" /> -->
+				
 				<link rel="stylesheet" href="assets/css/patterns/p-provenance.css"/>
 				<link rel="stylesheet" href="assets/css/patterns/p-auto_line-height.css"/>
 				<!-- <link rel="stylesheet" href="assets/css/patterns/p-section_visibility-transitions.css" /> -->
 				<!-- <link rel="stylesheet" href="assets/css/patterns/p-stacking_slides.css"/> -->
 				
-				<link rel="stylesheet" href="assets/css/components/c-chain.css"/>
-				<link rel="stylesheet" href="assets/css/components/c-arrows.css"/>
-				<!-- <link rel="stylesheet" href="assets/css/components/c-cartoon_characters.css" /> -->
-				
-				<link rel="stylesheet" href="assets/css/layout/l-master_composition.css"/>
-				<link rel="stylesheet" href="assets/css/layout/l-section_composition.css"/>
-
 				<link rel="stylesheet" href="assets/css/x-quarantine.css"/>
 				<!-- <link rel="stylesheet" href="assets/css/x-dev.css"> -->
 
