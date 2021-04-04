@@ -1,3 +1,12 @@
+/* Calculs typographiques ----------------------- */
+
+/* Variables statiques (Config seulement) */
+	/* PERFORMANCE À ÉVALUER (sélecteur universel vs. root) */
+	:root {
+		--Row: calc(var(--RowFactor, 1.6125) * var(--RowUnit, 1rem));
+	}
+
+
 /* Échelles typographiques (harmonies musicales) ----------------------- */
 		/* --MinorThird: 1.200; */
 		/* --MinorSecond: 1.067; */

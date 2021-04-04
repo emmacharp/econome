@@ -1,12 +1,3 @@
-/* Calculs typographiques ----------------------- */
-
-/* Variables statiques (Config seulement) */
-	/* PERFORMANCE À ÉVALUER (sélecteur universel vs. root) */
-	:root {
-		--Row: calc(var(--RowFactor, 1.6125) * var(--RowUnit, 1rem));
-	}
-
-
 /* Règles initiales du système ----------------------- */
 
 /* Appliquer les styles typographiques de base */
