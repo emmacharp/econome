@@ -19,6 +19,9 @@
 
 	<xsl:template match="/">
 		<html lang="fr">
+			<script>
+			document.documentElement.classList.add('has-js');	
+			</script>
 			<head>
 				<meta charset="UTF-8"/>
 				<meta name="apple-mobile-web-app-capable" content="yes"/>
