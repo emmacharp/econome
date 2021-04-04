@@ -27,32 +27,37 @@
 
 				<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-				<!-- <link rel="stylesheet" href="assets/css/patterns/p-section_visibility-transitions.css" /> -->
-				<link rel="stylesheet" href="assets/css/theme/t-dark-scheme.css" media="screen and (prefers-color-scheme: dark)" />
 				<link rel="stylesheet" href="assets/css/system/s-library.css"/>
 				<link rel="stylesheet" href="assets/css/system/s-tags.css"/>
-				<link rel="stylesheet" href="assets/css/utilities/u-superdiv.css"/>
 				<link rel="stylesheet" href="assets/css/system/s-auto_line-height.css"/>
+
+				<link rel="stylesheet" href="assets/css/utilities/u-superdiv.css"/>
+				
+				<link rel="stylesheet" href="assets/css/theme/t-dark-scheme.css" media="screen and (prefers-color-scheme: dark)" />
 				<link rel="stylesheet" href="assets/css/theme/t-config.css"/>
 				<link rel="stylesheet" href="assets/css/theme/t-base.css"/>
+				<link rel="stylesheet" href="assets/css/theme/t-typography.css"/>
 				<link rel="stylesheet" href="assets/css/theme/t-general.css"/>
-				<link rel="stylesheet" href="assets/css/components/c-internal_nav.css"/>
-				<link rel="stylesheet" href="assets/css/patterns/p-provenance.css"/>
 				<link rel="stylesheet" href="assets/css/theme/t-fieldset.css"/>
+				
+				<link rel="stylesheet" href="assets/css/patterns/p-provenance.css"/>
+				<!-- <link rel="stylesheet" href="assets/css/patterns/p-section_visibility-transitions.css" /> -->
+				<!-- <link rel="stylesheet" href="assets/css/patterns/p-stacking_slides.css"/> -->
+				
 				<link rel="stylesheet" href="assets/css/components/c-chain.css"/>
 				<link rel="stylesheet" href="assets/css/components/c-arrows.css"/>
-				<link rel="stylesheet" href="assets/css/system/s-special.css"/>
+				<!-- <link rel="stylesheet" href="assets/css/components/c-cartoon_characters.css" /> -->
+				
 				<link rel="stylesheet" href="assets/css/layout/l-master_composition.css"/>
 				<link rel="stylesheet" href="assets/css/layout/l-section_composition.css"/>
-				<link rel="stylesheet" href="assets/css/x-quarantine.css"/>
 
-				<!-- <link rel="stylesheet" href="assets/css/patterns/p-stacking_slides.css"/> -->
-				<!-- <link rel="stylesheet" href="assets/css/components/c-cartoon_characters.css" /> -->
+				<link rel="stylesheet" href="assets/css/x-quarantine.css"/>
 				<!-- <link rel="stylesheet" href="assets/css/x-dev.css"> -->
 
 			</head>
 			<body>
 				<!-- <xsl:call-template name="grid-paper-pattern" /> -->
+				<link rel="stylesheet" href="assets/css/components/c-internal_nav.css"/>
 				<nav>
 					<xsl:apply-templates mode="internal-navigation" />
 				</nav>
@@ -72,6 +77,7 @@
 				<xsl:call-template name="svg-elements" />
 				<script src="assets/js/main.js" defer="defer"></script>
 				<link rel="stylesheet" href="assets/css/components/c-wiki_viewer.css"/>
+				<link rel="stylesheet" href="assets/css/system/s-special.css"/>
 			</body>
 		</html>
 	</xsl:template>
