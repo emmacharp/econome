@@ -60,7 +60,7 @@
 					<h3>Qui sommes-nous ?</h3>
 				</header>
 					<!-- <symbol type="emma" class="cartoon_emma animated" /> -->
-					<div>
+					<div class="prose">
 						<p><b>Nous sommes deux amis et partenaires unis dans une quête de démystification économique.</b></p>
 						<p>Nous espérons communiquer l'analyse économique de manière à éclairer nos décisions communes. Exposer les implications de concepts et principes économiques et laisser le public « se faire une tête », comme on dit.</p>
 					</div>
@@ -88,7 +88,7 @@
 		<section>
 			<div class="grille">
 				<header><h3>Et vous ?</h3></header>
-				<div>
+				<div class="prose">
 					<p>
 						<b>Pouvons-nous nous permettre de vous demander quelques informations personnelles..?</b>
 					</p>
