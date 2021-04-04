@@ -3,12 +3,8 @@
  * seulement les valeurs utilisées sont déclarées. 
  * Se référer au bas de ce fichier pour la liste complète. */
 
-* {
-	
-		--Row: calc(var(--RowFactor, 1.6125) * var(--RowUnit, 1rem));
-}
-
 	:root {
+		--Row: calc(var(--RowFactor, 1.6125) * var(--RowUnit, 1rem));
 
 		--MajorSecond: 1.125;
 		--MajorThird: 1.250;
