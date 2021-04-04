@@ -11,7 +11,7 @@
 		<section>
 			<div class="grille">
 				<header><h2>Introduction</h2></header>
-				<div>
+				<div class="prose">
 					<p><b>Il vous est proposé aujourd'hui de démystifier la notion « d'achat local ».</b></p>
 					<p>Des questions (<em>pas plus de 10, promis</em>) vous seront posées, des concepts vous seront présentés, des implications seront abordées puis un raisonnement développé.</p>
 					<p><strong>Exigeons plus que des phrases creuses !</strong></p>
@@ -190,7 +190,7 @@
 		<section>
 			<div class="grille">
 				<header><h3>Rôle consommateur</h3></header>
-				<div>
+				<div class="prose">
 					<p><b>Votre rôle est celui du consommateur.</b></p>
 					<!-- <p><b>Pour bien comprendre ce que constituerait un <span class="local">achat local</span>, il faut considérer le parcours complet du bien acheté.</b></p> -->
 					<p>Toute une chaîne économique est nécessaire pour rendre un bien (une bière, dans ce cas-ci) disponible au consommateur (vous, Joey Joe Joe). La façon dont vous allez acheter &amp; consommer votre bière détermine la nature des agents et conditionne la distribution de leurs rôles au sein de la chaîne.</p>
@@ -223,7 +223,7 @@
 				<header>
 					<h3>Le détaillant</h3>
 				</header>
-				<div>
+				<div class="prose">
 					<p><b>Le dépanneur « Commun+ » joue le rôle du détaillant. Il stocke une certaine quantité de « Moyenne » pour la vendre à des consommmateurs comme vous, Joey Joe Joe.</b></p>
 					<p>Le détaillant, fait partie de ce qu'on appelle « les producteurs de marge ». C'est-à-dire que le rôle du détaillant au sein de la chaîne est d'amener <i>le bien de consommation</i>—votre bonne bière québécoise !—d'un point A à un point B. <s>Il s'agit là de la <i data-wiki="Valeur_ajoutée" data-sections="1,3"><nobr>valeur ajoutée</nobr></i> (concept fondamental ! nous y reviendrons...) par le rôle du détaillant.</s></p>
 					<p>Sans lui, la bière ne vous serait pas disponible ! Mais... le dépanneur, en tant que détaillant, doit lui aussi acheter la bière pour la rendre disponible.</p>
@@ -260,7 +260,7 @@
 				<header>
 						<h3>Grossiste et transporteur</h3>
 				</header>
-				<div>
+				<div class="prose">
 					<p><b>« Les Entrepôts Correct inc. » combine les rôles à la fois de grossiste mais aussi du transporteur !</b></p>
 					<p>Le grossiste permet d'entreposer de vastes quantités de biens de consommation et ainsi permettre une production élargie du bien tout en permettant aussi au détaillant de ne pas stocker ledit bien en d'aussi grandes quantités pour lesquelles il n'aurait pas l'espace disponible.</p>
 					<p>En tant que maillon intermédiaire de la chaîne économique, le grossiste, comme le détaillant avant lui, s'inscrit dans la catégorie des « producteurs de marge ». Son rôle est donc lui aussi d'assurer que votre bonne bière québécoise se rende du point A au point B. Sans lui, le dépanneur serait inondé de bonne bière québécoise...</p>
@@ -294,7 +294,7 @@
 		<section>
 			<div class="grille">
 				<header><h3>Le transformateur</h3></header>
-				<div>
+				<div class="prose">
 					<p><b>La où la magie (lire : fermentation) s'opère !</b> </p>
 					<p>Il s'agit là d'un agent fondamental de la chaîne, celui qui se procure les <i data-wiki="">biens intermédiaires</i>  et les transforme en biens de consommation. <strong>Sans brasserie, pas de bonne bière !</strong> </p>
 					<p>Tout dépendant de ses moyens et, surtout, de <strong>vos habitudes à vous, Joey joe Joe le consommateur</strong>, la brasserie peut endosser d'autres rôles que celui-ci de la « simple » transformation et ainsi modifier la composition de notre chaîne économique.</p>
@@ -323,7 +323,7 @@
 		<section>
 			<div class="grille">
 				<header><h3>Le(s) fournisseur(s)</h3></header>
-				<div>
+				<div class="prose">
 					<p><b>Que l'on parle du verre de la bouteille, de l'eau ou du houblon (comme ici), il aura fallu que ces biens intermédiaires soient eux aussi produits.</b></p>
 					<p>La brasserie n'est pas (généralement du moins) aussi productrice de céréales ou de verre, elle se retourne donc vers le dernier maillon de notre chaîne, les fournisseurs. Ce sont eux qui produisent les matières premières nécessaires à la confection d'une bonne bière québécoise.</p>
 					<p>La brasserie, grâce à son savoir-faire (et ses recettes secrètes) transforme les « intrants » fournis en « La Moyenne ». À ce titre, les fournisseurs deviennent en pratique tout aussi vitaux que la brasserie dans notre dégustation de bière. Tout comme le sont les fournisseurs des fournisseurs... et leurs fournisseurs à eux aussi. Ce dernier maillon de la chaîne peut ainsi se dérouler looooongtemps. L'arbre est dans ses feuilles. « Toute est dans toute ».  </p>

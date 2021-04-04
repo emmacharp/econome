@@ -18,6 +18,16 @@
 			--DivItemMaxWidth: 100%;
 		}
 
+	/* Conteneur de prose ------------- */
+		div.prose {
+			--DivDisplay: block;
+			--DivGutter: var(--Row);
+		}
+
+		div.prose>* {
+			--DivItemGutter: 0;
+		}
+
 	/* Échaffaudage : propriétés et valeurs par défaut --------- */
 	/* 1. Affichage & occupation de l'espace ---- */
 		div {

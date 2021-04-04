@@ -241,22 +241,10 @@ main>section>section div div {
 main>section>section div div~section {
 	flex-grow: 4;
 }
-main>section>section>div>div,
-.prose {
-	--DivDisplay: block;
+main>section>section>div>div {
 	column-width: calc(var(--Row) * 10);
 	column-count: 2;
 	column-gap: var(--Row);
-}
-
-main>section>section>div>div>*,
-.prose>* {
-	--DivItemGutter: 0;
-}
-
-main>section>section>div>div>*+*,
-.prose>*+* {
-	margin-top: var(--Row);
 }
 
 main>section h1 {
