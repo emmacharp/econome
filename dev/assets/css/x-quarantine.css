@@ -1,3 +1,7 @@
 .chain div:not([class])+.unknown-link hr {
 	display: none; /* SALE — Faudrait l'enlever dans le XSLT */
 }
+
+main>section {
+  content-visibility: auto;
+}
