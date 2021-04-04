@@ -20,30 +20,24 @@
 
 	/* Échaffaudage : propriétés et valeurs par défaut --------- */
 	/* 1. Affichage & occupation de l'espace ---- */
+		div {
 		/* Contexte flex avec
 			bris de rangée pour la fluidité */
-		div {
 			display: var(--DivDisplay, flex);
 			flex-wrap: wrap;
-		}
-
 		/* Permettre l'héritage des règles d'alignement.
 			Facilite l'extension par les parents */
-		div {
 			justify-content: inherit;
 			align-items: inherit;
 		}
 
+		div>* {
 		/* Dimensions initiales
 			(peuvent être ajustées !) */
-		div>* {
 			flex-basis: var(--DivItemBasis, auto);
 			max-width: var(--DivItemMaxWidth, initial);
-		}
-
 		/* Distribuer également l'espace
 			vacant parmis les enfants */
-		div>* {
 			flex-grow: var(--DivItemGrow, 0);
 		}
 
@@ -81,26 +75,26 @@
 	/* 4. Dimensions des enfants & contenus ---- */
 		/* Dimension minimale de tout enfant.
 			Permet l'adaptation. Peut être ajusté */
-		div>* {
-			min-width: var(--DivItemMinWidth, initial);
-		}
+		/* div>* { */
+		/* 	min-width: var(--DivItemMinWidth, initial); */
+		/* } */
 
 		/* Largeur minimale de tout contenu texte.
 			Force l'adaptation. Peut être ajusté */
-		div h1,
-		div h2,
-		div h3,
-		div h4,
-		div h5,
-		div h6,
-		div p {
-			min-width: 10ch;
-		}
+		/* div h1, */
+		/* div h2, */
+		/* div h3, */
+		/* div h4, */
+		/* div h5, */
+		/* div h6, */
+		/* div p { */
+		/* 	min-width: 10ch; */
+		/* } */
 
 		/* Largeur minimale des images en tout genre
 			Force l'adaptation. Peut être ajusté */
-		div img,
-		div picture {
-			min-width: 8ch;
-		}
+		/* div img, */
+		/* div picture { */
+		/* 	min-width: 8ch; */
+		/* } */
 

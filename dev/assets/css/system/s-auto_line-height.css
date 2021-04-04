@@ -2,13 +2,9 @@
 /* Extrêmement intensif en puissance de calcul. En ce sens, on doit l'optimiser au maximum, 
 	en choisissant manuellement les éléments qui seront touchés par les différents calculs. */
 
-	p, ul, ol, span,
-	h1, h2, h3, h4, h5, h6 {
-		--FontSizeWithRowUnit: calc(var(--Size, 1) * var(--ScaleLevel, 1) * var(--FontFactor, 1) * var(--RowUnit, 1rem));
-	}
-
 	p, ul, ol, span, small,
 	h1, h2, h3, h4, h5, h6 {
+		--FontSizeWithRowUnit: calc(var(--Size, 1) * var(--ScaleLevel, 1) * var(--FontFactor, 1) * var(--RowUnit, 1rem));
 		--is-2-rows: calc(clamp(
 						0px, calc(
 							(var(--FontSizeWithRowUnit) - var(--Row) * 1.625) * 9999999), var(--Row)) - (var(--is-3-rows, 0px) + var(--is-2-rows-and-half, 0px)));
@@ -16,7 +12,9 @@
 						0px, calc(
 							(var(--FontSizeWithRowUnit) - var(--Row) * .8525) * 9999999), var(--Row)) - (var(--is-3-rows, 0px) + var(--is-2-rows-and-half, 0px) + var(--is-2-rows)));
 		--is-1-row: calc(var(--Row) - (var(--is-3-rows, 0px) + var(--is-2-rows-and-half, 0px) + var(--is-2-rows) + var(--is-1-row-and-half)));
-		--LineHeightAuto: calc(var(--is-1-row, var(--Row)) + (var(--is-1-row-and-half, 0px) * 1.5) + (var(--is-2-rows, 0px) * 2) + (var(--is-2-rows-and-half, 0px) * 2.5) + (var(--is-3-rows, 0px) * 3)); }
+		--LineHeightAuto: calc(var(--is-1-row, var(--Row)) + (var(--is-1-row-and-half, 0px) * 1.5) + (var(--is-2-rows, 0px) * 2) + (var(--is-2-rows-and-half, 0px) * 2.5) + (var(--is-3-rows, 0px) * 3));
+		
+		line-height: var(--LineHeight, calc(var(--LineHeightAuto, 1.5625) * var(--LineHeightFactor, 1))); }
 
 	h1, h2, p {
 		--is-3-rows: clamp(
@@ -26,7 +24,3 @@
 						0px, calc(
 							(var(--FontSizeWithRowUnit) - var(--Row) * 1.825) * 9999999), var(--Row)) - (var(--is-3-rows)));
 	}
-
-	p, ul, ol, span, small,
-	h1, h2, h3, h4, h5, h6 {
-		line-height: var(--LineHeight, calc(var(--LineHeightAuto, 1.5625) * var(--LineHeightFactor, 1))); }
