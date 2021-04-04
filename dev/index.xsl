@@ -40,7 +40,6 @@
 				<link rel="stylesheet" href="assets/css/theme/t-fieldset.css"/>
 				<link rel="stylesheet" href="assets/css/components/c-chain.css"/>
 				<link rel="stylesheet" href="assets/css/components/c-arrows.css"/>
-				<link rel="stylesheet" href="assets/css/system/s-easings.css"/>
 				<link rel="stylesheet" href="assets/css/system/s-special.css"/>
 				<link rel="stylesheet" href="assets/css/layout/l-master_composition.css"/>
 				<link rel="stylesheet" href="assets/css/layout/l-section_composition.css"/>
