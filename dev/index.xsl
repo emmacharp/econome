@@ -41,10 +41,7 @@
 				<link rel="stylesheet" href="assets/css/theme/t-general.css"/>
 				<link rel="stylesheet" href="assets/css/theme/t-fieldset.css"/>
 				
-				<link rel="stylesheet" href="assets/css/layout/l-master_composition.css"/>
-				<link rel="stylesheet" href="assets/css/layout/l-section_composition.css"/>
-
-				<link rel="stylesheet" href="assets/css/components/c-chain.css"/>
+				<!-- <link rel="stylesheet" href="assets/css/components/c-chain.css"/> -->
 				<link rel="stylesheet" href="assets/css/components/c-arrows.css"/>
 				<!-- <link rel="stylesheet" href="assets/css/components/c-cartoon_characters.css" /> -->
 				
@@ -53,17 +50,17 @@
 				<!-- <link rel="stylesheet" href="assets/css/patterns/p-section_visibility-transitions.css" /> -->
 				<!-- <link rel="stylesheet" href="assets/css/patterns/p-stacking_slides.css"/> -->
 				
-				<link rel="stylesheet" href="assets/css/x-quarantine.css"/>
-				<!-- <link rel="stylesheet" href="assets/css/x-dev.css"> -->
 
 			</head>
 			<body>
 				<!-- <xsl:call-template name="grid-paper-pattern" /> -->
+				<link rel="stylesheet" href="assets/css/layout/l-master_composition.css"/>
 				<link rel="stylesheet" href="assets/css/components/c-internal_nav.css"/>
 				<nav>
 					<xsl:apply-templates mode="internal-navigation" />
 				</nav>
 				<main>
+					<link rel="stylesheet" href="assets/css/layout/l-section_composition.css"/>
 					<xsl:apply-templates mode="main-content" />
 				</main>
 				<aside id="wikiViewer">
@@ -77,9 +74,12 @@
 					</div>
 				</aside>
 				<xsl:call-template name="svg-elements" />
+				<script src="https://unpkg.com/htmx.org@1.3.3"></script>
 				<script src="assets/js/main.js" defer="defer"></script>
 				<link rel="stylesheet" href="assets/css/components/c-wiki_viewer.css"/>
 				<link rel="stylesheet" href="assets/css/theme/t-special.css"/>
+				<link rel="stylesheet" href="assets/css/x-quarantine.css"/>
+				<!-- <link rel="stylesheet" href="assets/css/x-dev.css"> -->
 			</body>
 		</html>
 	</xsl:template>
@@ -207,18 +207,31 @@
 		</div>
 	</xsl:template>
 
-	<xsl:template match="diagram" priority="1">
+	<xsl:template match="diagram[not(preceding::diagram)]" mode="include-once">
+		<link rel="stylesheet" href="assets/css/components/c-chain.css"/>
+	</xsl:template>
+		
+	<xsl:template match="diagram">
+		<xsl:apply-templates select="." mode="include-once" />
+		<!-- <xsl:variable name="id" select="concat(ancestor::section[@id]/@id, '-diagram')"></xsl:variable> -->
+		
+		<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))"></xsl:variable>
+		<article class="buying chain diagram" hx-get="diagrams.html" hx-select="#{$id}" hx-trigger="revealed"></article>
+	</xsl:template>
+
+	<!-- Pour intégrer les diagrammes au complet dans l'expérience, retirer le mode ci-dessous -->
+	<xsl:template match="diagram" priority="1" mode="ajax-diagrams">
 		<xsl:variable name="total-chain-links" select="@links" />
 		<xsl:variable name="actual-chain-links" select="count(agent)" />
 		<xsl:variable name="missing-links" select="$total-chain-links - $actual-chain-links" />
-		<article class="buying chain diagram">
-			<div>
+		<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))"></xsl:variable>
+		
+			<div id="{$id}">
 				<xsl:apply-templates />
 				<xsl:call-template name="missing-chain-links">
 					<xsl:with-param name="missing-links" select="$missing-links" />
 				</xsl:call-template>
 			</div>
-		</article>
 	</xsl:template>
 
 	<xsl:template name="missing-chain-links">
