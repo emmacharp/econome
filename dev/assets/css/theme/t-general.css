@@ -6,7 +6,7 @@
 
 /* Rythme des contenus ----------------------- */
 
-:not(html, body, label, ul)>*+* { 
+:not(html, body, label, ul)>*:not(link)+* { 
 margin-top: calc(var(--Row)); }
 
 
