@@ -12,6 +12,10 @@ main>section>:not(header)+div:last-child {
 	contain: strict;
 }
 
+body>nav {
+	font-size: 0;
+}
+
 .has-js [data-parallax],
 .has-js body>nav {
 	animation: opacity 1200ms 400ms;
