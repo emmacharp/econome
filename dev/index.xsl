@@ -51,7 +51,7 @@
 				<!-- <link rel="stylesheet" href="assets/css/patterns/p-section_visibility-transitions.css" /> -->
 				<!-- <link rel="stylesheet" href="assets/css/patterns/p-stacking_slides.css"/> -->
 				
-
+				<link rel="stylesheet" href="assets/css/x-quarantine.css"/>
 			</head>
 			<body>
 				<!-- <xsl:call-template name="grid-paper-pattern" /> -->
@@ -79,7 +79,6 @@
 				<script src="assets/js/main.js" defer="defer"></script>
 				<link rel="stylesheet" href="assets/css/components/c-wiki_viewer.css"/>
 				<link rel="stylesheet" href="assets/css/theme/t-special.css"/>
-				<link rel="stylesheet" href="assets/css/x-quarantine.css"/>
 				<!-- <link rel="stylesheet" href="assets/css/x-dev.css"> -->
 			</body>
 		</html>
