@@ -170,13 +170,8 @@ aside details summary+* {
 	min-width: 25ch;
 }
 
-details summary:marker {
+details summary::marker {
 	font-size: .5em;
-}
-
-
-details summary::-webkit-details-marker {
-	font-size: .75em;
 	margin-right: 1em;
 }
 
