@@ -23,6 +23,7 @@
 			document.documentElement.classList.add('has-js');	
 			</script>
 			<head>
+				<title>Economia présente : l'achat local</title>
 				<meta charset="UTF-8"/>
 				<meta name="apple-mobile-web-app-capable" content="yes"/>
 				<meta name="apple-mobile-web-app-status-bar-style" content="#ff0000"/>
@@ -251,7 +252,8 @@
 
 	<xsl:template match="section" mode="internal-navigation">
 		<a href="#{@id}">
-			<xsl:value-of select="title" />
+			
+			<xsl:value-of select="header/*[name() = 'h1' or name() = 'h2' or name() = 'h3']" />
 		</a>
 	</xsl:template>
 
