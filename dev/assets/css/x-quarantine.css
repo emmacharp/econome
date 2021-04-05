@@ -3,7 +3,13 @@
 }
 
 main>section {
-  content-visibility: auto;
+/* Cause un bug au défilement si fenêtre plus petite que contenu*/
+	/* content-visibility: auto; */
+	contain: content;
+}
+
+:not(header)+div:last-child {
+	contain: strict;
 }
 
 .has-js [data-parallax],
