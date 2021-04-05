@@ -8,7 +8,7 @@ main>section {
 	contain: content;
 }
 
-:not(header)+div:last-child {
+main>section>:not(header)+div:last-child {
 	contain: strict;
 }
 
