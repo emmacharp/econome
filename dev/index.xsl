@@ -64,6 +64,7 @@
 					<link rel="stylesheet" href="assets/css/layout/l-section_composition.css"/>
 					<xsl:apply-templates mode="main-content" />
 				</main>
+				<link rel="stylesheet" href="assets/css/components/c-wiki_viewer.css"/>
 				<aside id="wikiViewer">
 					<div>
 						<header>
@@ -77,7 +78,6 @@
 				<xsl:call-template name="svg-elements" />
 				<script src="https://unpkg.com/htmx.org@1.3.3"></script>
 				<script src="assets/js/main.js" defer="defer"></script>
-				<link rel="stylesheet" href="assets/css/components/c-wiki_viewer.css"/>
 				<link rel="stylesheet" href="assets/css/theme/t-special.css"/>
 				<!-- <link rel="stylesheet" href="assets/css/x-dev.css"> -->
 			</body>
