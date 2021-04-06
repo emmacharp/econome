@@ -42,7 +42,6 @@
 				<link rel="stylesheet" href="assets/css/theme/t-general.css"/>
 				<link rel="stylesheet" href="assets/css/theme/t-fieldset.css"/>
 				
-				<!-- <link rel="stylesheet" href="assets/css/components/c-chain.css"/> -->
 				<link rel="stylesheet" href="assets/css/components/c-arrows.css"/>
 				<!-- <link rel="stylesheet" href="assets/css/components/c-cartoon_characters.css" /> -->
 				
