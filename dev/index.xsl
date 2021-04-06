@@ -213,8 +213,6 @@
 		
 	<xsl:template match="diagram">
 		<xsl:apply-templates select="." mode="include-once" />
-		<!-- <xsl:variable name="id" select="concat(ancestor::section[@id]/@id, '-diagram')"></xsl:variable> -->
-		
 		<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))"></xsl:variable>
 		<article class="buying chain diagram" hx-get="diagrams.html" hx-select="#{$id}" hx-trigger="revealed"></article>
 	</xsl:template>
