@@ -52,14 +52,12 @@ main>section {
 @media (hover: hover) and (orientation: landscape) {
 	main>section {
 		top: 0;
-		box-shadow: -10px 0px 14px rgba(0,0,0,.2);
 	}
 }
 
 @media (hover: hover) and (orientation: portrait) {
 	main>section {
 		left: 0;
-		box-shadow: 0px -10px 14px rgba(0,0,0,.2);
 	}
 }
 
