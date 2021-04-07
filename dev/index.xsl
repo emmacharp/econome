@@ -16,7 +16,31 @@
 	</xsl:variable>
 	<xsl:key name="agent-type" match="agent" use="@type"/>
 	<xsl:key name="symbol-type" match="svg:symbol" use="substring-after(@id, 'svg-')"/>
+	<xsl:template name="head-css-links">
+		<link rel="stylesheet" href="assets/css/utilities/u-superdiv.css"/>
 
+		<link rel="stylesheet" href="assets/css/theme/t-dark_scheme.css" media="screen and (prefers-color-scheme: dark)" />
+		<link rel="stylesheet" href="assets/css/theme/t-library.css"/>
+		<link rel="stylesheet" href="assets/css/theme/t-config.css"/>
+		<link rel="stylesheet" href="assets/css/theme/t-setup.css"/>
+		<link rel="stylesheet" href="assets/css/theme/t-typography.css"/>
+		<link rel="stylesheet" href="assets/css/theme/t-general.css"/>
+		<link rel="stylesheet" href="assets/css/theme/t-fieldset.css"/>
+
+		<link rel="stylesheet" href="assets/css/components/c-arrows.css"/>
+		<!-- <link rel="stylesheet" href="assets/css/components/c-cartoon_characters.css" /> -->
+
+		<link rel="stylesheet" href="assets/css/patterns/p-provenance.css"/>
+		<link rel="stylesheet" href="assets/css/patterns/p-auto_line-height.css"/>
+		<!-- <link rel="stylesheet" href="assets/css/patterns/p-section_visibility-transitions.css" /> -->
+		<!-- <link rel="stylesheet" href="assets/css/patterns/p-stacking_slides.css"/> -->
+
+		<link rel="stylesheet" href="assets/css/x-quarantine.css"/>
+	</xsl:template>
+	<xsl:template name="body-css-links">
+		<xsl:param name="content"/>
+		<xsl:copy-of select="$content"/>
+	</xsl:template>
 	<xsl:template match="/">
 		<html lang="fr">
 			<script>
@@ -32,38 +56,34 @@
 				<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 
-				<link rel="stylesheet" href="assets/css/utilities/u-superdiv.css"/>
-				
-				<link rel="stylesheet" href="assets/css/theme/t-dark_scheme.css" media="screen and (prefers-color-scheme: dark)" />
-				<link rel="stylesheet" href="assets/css/theme/t-library.css"/>
-				<link rel="stylesheet" href="assets/css/theme/t-config.css"/>
-				<link rel="stylesheet" href="assets/css/theme/t-setup.css"/>
-				<link rel="stylesheet" href="assets/css/theme/t-typography.css"/>
-				<link rel="stylesheet" href="assets/css/theme/t-general.css"/>
-				<link rel="stylesheet" href="assets/css/theme/t-fieldset.css"/>
-				
-				<link rel="stylesheet" href="assets/css/components/c-arrows.css"/>
-				<!-- <link rel="stylesheet" href="assets/css/components/c-cartoon_characters.css" /> -->
-				
-				<link rel="stylesheet" href="assets/css/patterns/p-provenance.css"/>
-				<link rel="stylesheet" href="assets/css/patterns/p-auto_line-height.css"/>
-				<!-- <link rel="stylesheet" href="assets/css/patterns/p-section_visibility-transitions.css" /> -->
-				<!-- <link rel="stylesheet" href="assets/css/patterns/p-stacking_slides.css"/> -->
-				
-				<link rel="stylesheet" href="assets/css/x-quarantine.css"/>
+				<xsl:call-template name="head-css-links"></xsl:call-template>		
 			</head>
 			<body>
 				<!-- <xsl:call-template name="grid-paper-pattern" /> -->
-				<link rel="stylesheet" href="assets/css/layout/l-master_composition.css"/>
-				<link rel="stylesheet" href="assets/css/components/c-internal_nav.css"/>
+				<xsl:call-template name="body-css-links">
+					<xsl:with-param name="content">
+						<link rel="stylesheet" href="assets/css/layout/l-master_composition.css"/>
+						<link rel="stylesheet" href="assets/css/components/c-internal_nav.css"/>
+					</xsl:with-param>
+				</xsl:call-template>
 				<nav>
 					<xsl:apply-templates mode="internal-navigation" />
 				</nav>
 				<main>
-					<link rel="stylesheet" href="assets/css/layout/l-section_composition.css"/>
+					<xsl:call-template name="body-css-links">
+						<xsl:with-param name="content">
+							<link rel="stylesheet" href="assets/css/layout/l-section_composition.css"/>
+						</xsl:with-param>
+					</xsl:call-template>
+
 					<xsl:apply-templates mode="main-content" />
 				</main>
-				<link rel="stylesheet" href="assets/css/components/c-wiki_viewer.css"/>
+				<xsl:call-template name="body-css-links">
+					<xsl:with-param name="content">
+						<link rel="stylesheet" href="assets/css/components/c-wiki_viewer.css"/>
+					</xsl:with-param>
+				</xsl:call-template>
+				
 				<aside id="wikiViewer">
 					<div>
 						<header>
@@ -77,7 +97,11 @@
 				<xsl:call-template name="svg-elements" />
 				<script src="https://unpkg.com/htmx.org@1.3.3"></script>
 				<script src="assets/js/main.js" defer="defer"></script>
-				<link rel="stylesheet" href="assets/css/theme/t-special.css"/>
+				<xsl:call-template name="body-css-links">
+					<xsl:with-param name="content">
+						<link rel="stylesheet" href="assets/css/theme/t-special.css"/>
+					</xsl:with-param>
+				</xsl:call-template>
 				<!-- <link rel="stylesheet" href="assets/css/x-dev.css"> -->
 			</body>
 		</html>
@@ -207,7 +231,11 @@
 	</xsl:template>
 
 	<xsl:template match="diagram[not(preceding::diagram)]" mode="include-once">
-		<link rel="stylesheet" href="assets/css/components/c-chain.css"/>
+		<xsl:call-template name="body-css-links">
+			<xsl:with-param name="content">
+				<link rel="stylesheet" href="assets/css/components/c-chain.css"/>
+			</xsl:with-param>
+		</xsl:call-template>
 	</xsl:template>
 		
 	<xsl:template match="diagram">
