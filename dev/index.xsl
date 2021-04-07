@@ -98,7 +98,7 @@
 					</div>
 				</aside>
 				<xsl:call-template name="svg-elements" />
-				<script src="https://unpkg.com/htmx.org@1.3.3"></script>
+				<script src="assets/js/htmx.min.js"></script>
 				<xsl:call-template name="main-js"/>
 				<xsl:call-template name="body-css-links">
 					<xsl:with-param name="content">
