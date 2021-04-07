@@ -36,6 +36,7 @@
 		<!-- <link rel="stylesheet" href="assets/css/patterns/p-stacking_slides.css"/> -->
 
 		<link rel="stylesheet" href="assets/css/x-quarantine.css"/>
+		<!-- <link rel="stylesheet" href="assets/css/x-dev.css"> -->
 	</xsl:template>
 	<xsl:template name="body-css-links">
 		<xsl:param name="content"/>
@@ -105,7 +106,6 @@
 						<link rel="stylesheet" href="assets/css/theme/t-special.css"/>
 					</xsl:with-param>
 				</xsl:call-template>
-				<!-- <link rel="stylesheet" href="assets/css/x-dev.css"> -->
 			</body>
 		</html>
 	</xsl:template>
