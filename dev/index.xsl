@@ -41,6 +41,9 @@
 		<xsl:param name="content"/>
 		<xsl:copy-of select="$content"/>
 	</xsl:template>
+	<xsl:template name="main-js">
+		<script src="assets/js/main.js" defer="defer"></script>
+	</xsl:template>
 	<xsl:template match="/">
 		<html lang="fr">
 			<script>
@@ -96,7 +99,7 @@
 				</aside>
 				<xsl:call-template name="svg-elements" />
 				<script src="https://unpkg.com/htmx.org@1.3.3"></script>
-				<script src="assets/js/main.js" defer="defer"></script>
+				<xsl:call-template name="main-js"/>
 				<xsl:call-template name="body-css-links">
 					<xsl:with-param name="content">
 						<link rel="stylesheet" href="assets/css/theme/t-special.css"/>
