@@ -6,7 +6,7 @@
 			<xsl:apply-templates mode="main-content" />
 		</main>
 	</xsl:template>
-
+	<xsl:template match="*" mode="include-once"></xsl:template>
 	<xsl:template match="section[not(preceding::section)]" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
