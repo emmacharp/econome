@@ -11,3 +11,4 @@ x (B) 2021-01-05 Essayer la grille sur un div à l'aide de switches booléennes 
 (B) Ajouter des icônes/signaux de navigation au clavier (tab, space, enter, etc.) +ux @css @js @maitrise
 (B) Permettre de renverser (miroir) le diagramme (vers le consommateur plutôt qu'en provenance de. Une switch ferait sûrement l'affaire. @maitrise
 (B) 2021-04-07 minifier tous les fichiers de theme... ou bien les ramener dans un seul fichier. @maitrise +performance
+(B) 2021-04-09 Réunir tous les fichiers de theme initial. Éviter les requêtes trop nombreuses. +performance @maitrise
