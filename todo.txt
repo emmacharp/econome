@@ -1,0 +1,14 @@
+(A) Ajouter is-read au lien wiki déjà lu. Mettre crochet. @maitrise
+(A) Styles conditionnels à la charge de la batterie (Battery API) +performance @js @maitrise
+(B) Assurer la pleine opacité des formes lorsque la section est visible et au début de la fenêtre. @maitrise
+(B) Assurer le fonctionnement de la navigation clavier et des tabulations. @maitrise
+(B) Implémenter content-visibility à l'aide de target et not first-child. @maitrise
+(C) Intégrer « Plausible » comme analytics. @maitrise
+(C) Nettoyer le répertoire et déplacer les esquisses et autres fichiers de texte. https://medium.com/@ayushya/move-directory-from-one-repository-to-another-preserving-git-history-d210fa049d4b @maitrise
+x (B) 2021-01-05 Essayer la grille sur un div à l'aide de switches booléennes en propriétés personnalisées (p. ex. var(--ON)) @maitrise
+(B) 2021-01-06 Nettoyer le root en tentant de déclarer les propriétés personnalisées que lorsque nécessaire. Voir les easings. +performance @css @devtools @maitrise
+(B) Raffiner la sélection des éléments transitionnés pour nettoyer l'inspecteur. +performance @css @devtools @maitrise
+(B) Ajouter des icônes/signaux de navigation au clavier (tab, space, enter, etc.) +ux @css @js @maitrise
+(B) Permettre de renverser (miroir) le diagramme (vers le consommateur plutôt qu'en provenance de. Une switch ferait sûrement l'affaire. @maitrise
+(B) 2021-04-07 minifier tous les fichiers de theme... ou bien les ramener dans un seul fichier. @maitrise +performance
+(B) 2021-04-09 Réunir tous les fichiers de theme initial. Éviter les requêtes trop nombreuses. +performance @maitrise

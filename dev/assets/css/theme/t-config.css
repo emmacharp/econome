@@ -1,0 +1,51 @@
+/* NOTES -----------------------
+	- Dans Chrome, du moins, la valeur de row n'est pas toujours constante.
+	Une base précise semble être nécessaire. La seule testée présentement est :
+	(multiple de 4) * 1.5625 = 6.25px, 12.5px, 18.75px, 25px, 31.25px, etc.
+	La raison de cette inconstance est présentement inconnue.
+*/
+
+/* Configuration maîtresse ----------------------- */
+
+	:root {
+		--lt-primary: #A4A391;
+		--ltr-primary: #D5D5D2;
+		--ltst-primary: #eaeae6;
+		--brown: #59551D;
+		--lt-brown: #686100;
+		--ltr-brown: #A4A391;
+		--dk-brown: #373409;
+		--blue: #2B46BD;
+		--lt-blue: #EAEEFD;
+		--red: #FF0003;
+		--yellow: #FCFF9B;
+		--dk-yellow: #FFF91C;
+		--purple: #5F006C;
+		--tr-purple: #5F006C1F;
+		--lt-purple: #fceaff;
+
+		--ColorBg: white;
+		--ColorText: var(--indigo);
+		--ColorLocal: var(--blue);
+		--ColorForeign: var(--red);
+		--ColorSupport: var(--purple);
+		--ColorAccent: var(--yellow);
+		--ColorDkAccent: var(--dk-yellow);
+	}
+
+/* Propriétés supplémentaires configurables */
+	/* à insérer dans l'ensemble :root ci-haut */
+		/* --MinFontSize: 13px; */
+		/* --BaseFontSize: 1.1vw; */
+		/* --MaxFontSize: 20px; */
+
+		/* --Color: var(--ColorText); */
+		/* --BodyWidth: auto; */
+		/* --MaxBodyWidth: initial; */
+
+		/* --RowFactor: 1.6125; */
+		/* --RowUnit: 1rem; */
+
+		/* --FontUnit: 1em; */
+
+
