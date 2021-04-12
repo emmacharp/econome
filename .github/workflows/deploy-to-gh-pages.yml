@@ -1,0 +1,39 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.3.1
+        with:
+          persist-credentials: false 
+
+      - name: Install Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+
+      - name: Build
+        run: |
+          rsync dev/index.xml build/
+          rsync dev/index.xsl build/
+          rsync --recursive dev/includes build/
+          rsync --recursive dev/assets build/
+          npm install clean-css-cli uglify-js -g
+          cat dev/assets/js/* | uglifyjs -o build/assets/js/main.min.js
+          cleancss -o build/assets/css/main.min.css dev/assets/css/build.css
+          xsltproc dev/index.xml >> build/index.html
+          xsltproc dev/diagrams.xsl dev/index.xml >> build/diagrams.html
+          xsltproc dev/minified.xsl dev/index.xml >> build/index.min.html
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: build
+          keep_files: true
