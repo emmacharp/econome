@@ -5,7 +5,7 @@ on:
       - master
 jobs:
   build-and-deploy:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2.3.1
@@ -17,8 +17,11 @@ jobs:
         with:
           node-version: '12'
 
-      - name: Build
+      - name: Build Production Versions
         run: |
+          apt-get update
+          apt-get install rsync -y
+          apt-get install xsltproc -y
           rsync dev/index.xml build/
           rsync dev/index.xsl build/
           rsync --recursive dev/includes build/
@@ -29,9 +32,13 @@ jobs:
           xsltproc dev/index.xml >> build/index.html
           xsltproc dev/diagrams.xsl dev/index.xml >> build/diagrams.html
           xsltproc dev/minified.xsl dev/index.xml >> build/index.min.html
+          sed '/xsl:include/d' dev/index.xsl > build/index-complete.xsl ; sed '/xsl:stylesheet/d;/\?xml/d' dev/includes/* | sed -i '$e cat /dev/stdin' build/index-complete.xsl
+          cp dev/index.xml build/index-complete.xml
+          sed -i 's/index\.xsl/index-complete\.xsl/' build/index-complete.xml
+          cat build/index-complete.xml
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy to Github Pages
+        uses: peaceiris/actions-gh-pages@v3.7.3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
