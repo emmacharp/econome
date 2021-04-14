@@ -19,9 +19,9 @@ jobs:
 
       - name: Build Production Versions
         run: |
-          apt-get update
-          apt-get install rsync -y
-          apt-get install xsltproc -y
+          sudo apt-get update
+          sudo apt-get install rsync -y
+          sudo apt-get install xsltproc -y
           rsync dev/index.xml build/
           rsync dev/index.xsl build/
           rsync --recursive dev/includes build/
@@ -35,7 +35,6 @@ jobs:
           sed '/xsl:include/d' dev/index.xsl > build/index-complete.xsl ; sed '/xsl:stylesheet/d;/\?xml/d' dev/includes/* | sed -i '$e cat /dev/stdin' build/index-complete.xsl
           cp dev/index.xml build/index-complete.xml
           sed -i 's/index\.xsl/index-complete\.xsl/' build/index-complete.xml
-          cat build/index-complete.xml
 
       - name: Deploy to Github Pages
         uses: peaceiris/actions-gh-pages@v3.7.3
