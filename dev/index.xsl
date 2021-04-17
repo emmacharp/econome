@@ -16,6 +16,7 @@ exclude-result-prefixes="ext msxsl svg math">
 <xsl:include href="includes/head.xsl"/>
 <xsl:include href="includes/internal-navigation.xsl"/>
 <xsl:include href="includes/main-content.xsl"/>
+<xsl:include href="includes/fieldset.xsl"/>
 <xsl:include href="includes/body.xsl"/>
 
 <xsl:output method="html" doctype-system="about:legacy-compat" />
