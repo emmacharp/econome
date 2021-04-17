@@ -12,3 +12,6 @@ x (B) 2021-01-05 Essayer la grille sur un div à l'aide de switches booléennes 
 (B) Permettre de renverser (miroir) le diagramme (vers le consommateur plutôt qu'en provenance de. Une switch ferait sûrement l'affaire. @maitrise
 (B) 2021-04-07 minifier tous les fichiers de theme... ou bien les ramener dans un seul fichier. @maitrise +performance
 (B) 2021-04-09 Réunir tous les fichiers de theme initial. Éviter les requêtes trop nombreuses. +performance @maitrise
+(A) 2021-04-17 Intégrer de la gestion de couleur dynamique. +theme @CSS
+(A) 2021-04-17 Revoir la compilation CSS pour le thème et laisser les composantes charger leurs styles. +performance @xsl @css
+(A) 2021-04-17 Intégrer les économistes +contenu @svg
