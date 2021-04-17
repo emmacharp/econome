@@ -1,0 +1,188 @@
+/* Application générale des transitions et animations.  ----------------------- */
+/* (Opt-in. Valeurs complexes par défaut pour
+* limiter la prolifération des propriétés héritées) */
+
+	main>section,
+	main>section>section,
+	main>section aside svg,
+	main>section aside div,
+	main>section .chain .icon,
+	main>section .chain .icon+*,
+	main>section .chain .arrow {
+		transition-property: var(--TransitionProperties, opacity, transform);
+		transition-duration: var(--TotalDuration, calc(var(--SelfDuration, 120ms) * var(--DurationFactor, 1)));
+		transition-timing-function: var(--TimingFunction, ease-out);
+		transition-delay: var(--TotalDelay, calc(var(--LoadingDelay, 200ms) + var(--StructuralDelay, 0ms) + var(--ChainLinkDelay, 0ms) + var(--AfterChainDelay, 0ms) + var(--ScrollDelay, 0ms)  + var(--SelfDelay, 0ms)));
+		animation-name: var(--Keyframes);
+		animation-fill-mode: backwards;
+		animation-timing-function: var(--TimingFunction, opacity);
+		animation-duration: var(--TotalDuration, calc(var(--SelfDuration, 120ms) * var(--DurationFactor, 1)));
+		animation-delay: var(--TotalDelay, calc(var(--LoadingDelay, 200ms) + var(--StructuralDelay, 0ms) + var(--ChainLinkDelay, 0ms) + var(--AfterChainDelay, 0ms) + var(--ScrollDelay, 0ms)  + var(--SelfDelay, 0ms)));  }
+
+
+/* Application « opt-in »
+	des propriétés transitionnées  ----------------------- */
+
+	main>section>section,
+	main>section aside svg,
+	main>section aside div,
+	main>section .chain .icon,
+	main>section .chain .arrow {
+		transform: var(--TransformVisible, scale(1)); }
+	main>section,
+	main>section>section,
+	main>section aside div>*,
+	main>section .chain .icon+* {
+		opacity: var(--OpacityVisible, 1); }
+
+	main>section.is-invisible>section,
+	main>section.is-invisible aside svg,
+	main>section.is-invisible aside div,
+	main>section.is-invisible .chain .icon,
+	main>section.is-invisible .chain .arrow {
+		transform: var(--TransformInvisible, scale(1)); }
+	main>section.is-invisible,
+	main>section.is-invisible>section,
+	main>section.is-invisible aside div *,
+	main>section.is-invisible [data-parallax],
+	main>section.is-invisible .chain .icon+* {
+		opacity: var(--OpacityInvisible, 0); }
+
+/* Propriétés supplémentaires
+	nécessaires au bon fonctionnement  ----------------------- */
+
+	/* Empêche le contenu de passer
+		par-dessus dans la transition */
+	main>section aside svg {
+		z-index: 1; }
+	/* Origines de transformation particulières */
+	main>section aside div {
+		transform-origin: left center; }
+	main>section .chain .arrow {
+		transform-origin: right center; }
+	main>section .chain .arrow.from {
+		transform-origin: left center; }
+
+/* Valeurs de transition spécifiques ----------------------- */
+
+	/* Sections — Valeurs d'apparition & disparition */
+	main>section.is-invisible {
+		--SelfDuration: 600ms;
+		--TransitionProperties: opacity;
+		--TimingFunction: ease-out;
+		--ScrollDelay: 3000ms;
+		--LoadingDelay: 0ms; }
+	main>section.is-visible {
+		--LoadingDelay: 0ms; }
+
+	/* Éléments — Valeurs de base initiales */
+	main>section aside svg {
+		--TransitionProperties: transform;
+		--SelfDuration: 120ms; }
+	main>section aside div {
+		--TransitionProperties: transform;
+		--SelfDuration: 320ms; }
+	main>section aside div>* {
+		--TransitionProperties: opacity;
+		--TimingFunction: var(--ease-out-quad);
+		--SelfDuration: 320ms; }
+	main>section .chain .icon {
+		--TransitionProperties: transform;
+		--TimingFunction: var(--ease-out-back);
+		--SelfDuration: 180ms; }
+	main>section .chain .icon+* {
+		--TransitionProperties: opacity;
+		--TimingFunction: var(--ease-out-quad);
+		--SelfDuration: 180ms; }
+	main>section .chain .arrow {
+		--TransitionProperties: transform;
+		--TimingFunction: var(--ease-out-quad);
+		--SelfDuration: 200ms; }
+
+	/* Éléments — Valeurs spécifiques à l'apparition */
+	main>section.is-visible aside svg {
+		--TimingFunction: var(--ease-bounce-light);
+		--SelfDelay: 400ms; }
+	main>section.is-visible aside div {
+		--TimingFunction: var(--ease-out-back);
+		--SelfDelay: 600ms; }
+	main>section.is-visible aside div * {
+		--SelfDelay: 800ms; }
+	main>section.is-visible .chain .arrow.from {
+		--SelfDelay: 200ms; }
+	main>section.is-visible .chain .arrow {
+		--SelfDelay: 200ms; }
+	main>section.is-visible .chain .icon+* {
+		--SelfDelay: 100ms; }
+
+	/* Éléments — Valeurs transitionnées à la disparition */
+	main>section aside svg {
+		--TransformInvisible: scale(0); }
+	main>section aside div {
+		--TransformInvisible: scale(0, 1); }
+	main>section .chain .icon {
+		--TransformInvisible: scale(0); }
+	main>section .chain .arrow {
+		--TransformInvisible: scale(0, 1); }
+
+
+/* Cascade d'apparition générale ----------------------- */
+
+	main>section>:nth-child(1) {
+		--StructuralDelay: 0ms; }
+	main>section>:nth-child(2) {
+		--StructuralDelay: 200ms; }
+	main>section>:nth-child(3) {
+		--StructuralDelay: 400ms; }
+	main>section>:nth-child(4) {
+		--StructuralDelay: 600ms; }
+	main>section>:nth-child(5) {
+		--StructuralDelay: 800ms; }
+
+
+/* Cascade d'apparition des maillons de la chaîne ----------------------- */
+
+	.chain>div>:nth-last-child(1) {
+		--ChainLinkDelay: 200ms; }
+	.chain>div>:nth-last-child(2) {
+		--ChainLinkDelay: 400ms; }
+	.chain>div>:nth-last-child(3) {
+		--ChainLinkDelay: 600ms; }
+	.chain>div>:nth-last-child(4) {
+		--ChainLinkDelay: 800ms; }
+	.chain>div>:nth-last-child(5) {
+		--ChainLinkDelay: 1000ms; }
+
+
+/* Délai supplémentaire pour tout ce qui suit la chaîne ----------------------- */
+
+	main>section>.chain~* {
+		--AfterChainDelay: 800ms; }
+
+
+/* Choix d'animation au chargement de la page ----------------------- */
+
+		main>section>section,
+		main>section aside svg,
+		main>section aside div,
+		main>section .chain .icon,
+		main>section .chain .arrow {
+			animation-name: var(--Keyframes, scale); }
+		main>section,
+		main>section>section,
+		main>section aside div>*,
+		main>section .chain .icon+* {
+			animation-name: var(--Keyframes, opacity); }
+
+
+/* Animations réflétant les transitions ----------------------- */
+
+@keyframes opacity {
+	from { opacity: var(--OpacityInvisible, 0); }
+	to { opacity: var(--OpacityVisible, 1); }
+}
+
+@keyframes scale {
+	from { transform: var(--TransformInvisible, 0); }
+	to { transform: var(--TransformVisible, 1); }
+}

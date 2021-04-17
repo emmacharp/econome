@@ -1,0 +1,29 @@
+.chain div:not([class])+.unknown-link hr {
+	display: none; /* SALE — Faudrait l'enlever dans le XSLT */
+}
+
+main>section {
+/* Cause un bug au défilement si fenêtre plus petite que contenu*/
+	/* content-visibility: auto; */
+	contain: content;
+}
+
+main>section>:not(header)+div:last-child {
+	contain: strict;
+}
+
+body>nav {
+	font-size: 0;
+}
+
+.has-js [data-parallax],
+.has-js body>nav {
+	animation: opacity 1200ms 400ms;
+	animation-fill-mode: both;
+}
+
+@keyframes opacity {
+	from { opacity: var(--OpacityInvisible, 0); }
+	to { opacity: var(--OpacityVisible, 1); }
+}
+

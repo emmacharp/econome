@@ -1,0 +1,106 @@
+@media all {
+	body {
+		display: flex;
+	}
+	main>section {
+		box-sizing: border-box;
+		position: relative;
+		scroll-snap-align: start;
+		padding: var(--Row) 0;
+	}
+
+	body>nav {
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		position: sticky;
+	}
+
+	main {
+		flex-grow: 1;
+	}
+}
+
+@media (min-width: 80em) {
+	main>section {
+		padding: var(--Row);
+	}
+}
+
+@media (orientation: portrait) {
+	html, body, main { 
+	/* Contexte vertical nécessaire
+		pour assurer une hauteur de fenêtre
+		pour toute « slide ». */
+		height: 100%;  }
+	
+	body {
+	/* Previent le glitchy bouncing
+		dans Safari */
+		overflow: hidden;
+		flex-direction: column;
+	}
+
+	main { 
+		display: inherit;
+		order: -1;
+		overflow-x: auto;
+		flex-basis: 0;
+		flex-direction: row;
+		scroll-snap-type: x mandatory;
+	}
+
+	main>section {
+		height: 100%;
+		width: 100vw;
+		scroll-behavior: smooth;
+		flex-shrink: 0;
+		scroll-snap-align: start;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+
+	body>nav {
+		flex-shrink: 0;
+		flex-direction: row;
+		width: auto;
+		height: calc(var(--Row) * .5);
+	}
+}
+
+@media (orientation: landscape) {
+	html {
+		scroll-snap-type: y proximity;
+		scroll-behavior: smooth;
+	}
+	
+	body {
+		align-items: flex-start;
+	}
+	
+	main>section {
+		min-height: calc(100vh + var(--Row) - var(--V_GridUnitRest));
+		display: flex;
+		flex-direction: column;
+	}
+
+	main {
+		/*overflow-x: hidden; */ /* EMPÊCHE LE SCROLL-SNAP DE FONCTIONNER ! */
+	}
+
+	body>nav {
+		flex-direction: column;
+		width: calc(var(--Row) * .5);
+		height: 100vh;
+		position: sticky;
+		top: 0;
+	}
+
+	body>nav~main {
+		padding-left: var(--Row);
+	}
+
+/*	body>aside:not(.is-visible) {
+		max-width: 0;
+	}*/
+}
