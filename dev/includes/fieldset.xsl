@@ -8,9 +8,9 @@
 	</xsl:call-template>
 </xsl:template>
 <xsl:template match="fieldset">
+	<xsl:apply-templates select="." mode="include-once"/>
 	<xsl:element name="fieldset">
 		<xsl:apply-templates select="@*"></xsl:apply-templates>
-		<xsl:apply-templates select="." mode="include-once"/>
 		<xsl:apply-templates />
 	</xsl:element>		
 </xsl:template>
