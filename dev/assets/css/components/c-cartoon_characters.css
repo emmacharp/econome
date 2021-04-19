@@ -1,28 +1,26 @@
-.cartoon_emma *, .cartoon_henri * {
+[class*="cartoon"] * {
   transition: all 0.1s ease-in; }
 
-.cartoon_emma.animated [id*='oeil_ouvert'], .cartoon_henri.animated [id*='oeil_ouvert'] {
+[class*="cartoon"].animated [id*='oeil_ouvert'] {
   animation-name: clignement;
   animation-duration: 5s;
   animation-iteration-count: infinite; }
 
-.cartoon_emma.animated [id*='pupille'],
-.cartoon_emma.animated [id*='reflection'],
-.cartoon_emma.animated [id*='iris'], .cartoon_henri.animated [id*='pupille'],
-.cartoon_henri.animated [id*='reflection'],
-.cartoon_henri.animated [id*='iris'] {
+[class*="cartoon"].animated [id*='pupille'],
+[class*="cartoon"].animated [id*='reflection'],
+[class*="cartoon"].animated [id*='iris'] {
   animation-name: regarde_gauche, clignement;
   animation-duration: 13s, 5s;
   animation-iteration-count: infinite, infinite;
   animation-timing-function: ease-out, linear; }
 
-.cartoon_emma.animated [id*="moustache"], .cartoon_henri.animated [id*="moustache"] {
+[class*="cartoon"].animated [id*="moustache"] {
   transform-origin: center center;
   animation-name: moustache;
   animation-duration: 6s;
   animation-iteration-count: infinite; }
 
-.cartoon_emma.animated [id*="sourcils"], .cartoon_henri.animated [id*="sourcils"] {
+[class*="cartoon"].animated [id*="sourcils"] {
   transform-origin: center center;
   animation-name: hausse_sourcils;
   animation-duration: 10s;
