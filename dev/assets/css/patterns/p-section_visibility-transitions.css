@@ -23,29 +23,25 @@
 /* Application « opt-in »
 	des propriétés transitionnées  ----------------------- */
 
-	main>section>section,
 	main>section aside svg,
 	main>section aside div,
-	main>section .chain .icon,
-	main>section .chain .arrow {
+	main>section .chain .active .icon,
+	main>section .chain .active .arrow {
 		transform: var(--TransformVisible, scale(1)); }
-	main>section,
 	main>section>section,
 	main>section aside div>*,
-	main>section .chain .icon+* {
+	main>section .chain .active .icon+* {
 		opacity: var(--OpacityVisible, 1); }
 
-	main>section.is-invisible>section,
 	main>section.is-invisible aside svg,
 	main>section.is-invisible aside div,
-	main>section.is-invisible .chain .icon,
-	main>section.is-invisible .chain .arrow {
+	main>section.is-invisible .chain .active .icon,
+	main>section.is-invisible .chain .active .arrow {
 		transform: var(--TransformInvisible, scale(1)); }
-	main>section.is-invisible,
 	main>section.is-invisible>section,
 	main>section.is-invisible aside div *,
 	main>section.is-invisible [data-parallax],
-	main>section.is-invisible .chain .icon+* {
+	main>section.is-invisible .chain .active .icon+* {
 		opacity: var(--OpacityInvisible, 0); }
 
 /* Propriétés supplémentaires
