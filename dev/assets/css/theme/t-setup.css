@@ -24,7 +24,7 @@
 
 
 /* Héritage en place pour les éléments « en-ligne » intérieurs */
-	p *, ul *, ol *, td *,
+	p *, ul *, ol *, a *, span *, small *, th *, td *,
 	h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
 		line-height: inherit;
 		font-size: inherit;
