@@ -15,3 +15,5 @@ x (B) 2021-01-05 Essayer la grille sur un div à l'aide de switches booléennes 
 (A) 2021-04-17 Intégrer de la gestion de couleur dynamique. +theme @CSS
 (A) 2021-04-17 Revoir la compilation CSS pour le thème et laisser les composantes charger leurs styles. +performance @xsl @css
 (A) 2021-04-17 Intégrer les économistes +contenu @svg
+(A) 2021-04-24 Donner des contrôles persistants. Recherche par exemple. Avec explication (CMD-f). @experience
+(A) 2021-04-24 Diagramme à la diagonale @experience +css
