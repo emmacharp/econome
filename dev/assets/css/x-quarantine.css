@@ -5,7 +5,7 @@
 main>section {
 /* Cause un bug au défilement si fenêtre plus petite que contenu*/
 	/* content-visibility: auto; */
-	contain: content;
+	/* contain: content; */
 }
 
 main>section>:not(header)+div:last-child {
