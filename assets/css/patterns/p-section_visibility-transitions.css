@@ -2,7 +2,6 @@
 /* (Opt-in. Valeurs complexes par défaut pour
 * limiter la prolifération des propriétés héritées) */
 
-	main>section,
 	main>section>section,
 	main>section aside svg,
 	main>section aside div,
@@ -23,29 +22,25 @@
 /* Application « opt-in »
 	des propriétés transitionnées  ----------------------- */
 
-	main>section>section,
 	main>section aside svg,
 	main>section aside div,
-	main>section .chain .icon,
-	main>section .chain .arrow {
+	main>section .chain .active .icon,
+	main>section .chain .active .arrow {
 		transform: var(--TransformVisible, scale(1)); }
-	main>section,
 	main>section>section,
 	main>section aside div>*,
-	main>section .chain .icon+* {
+	main>section .chain .active .icon+* {
 		opacity: var(--OpacityVisible, 1); }
 
-	main>section.is-invisible>section,
 	main>section.is-invisible aside svg,
 	main>section.is-invisible aside div,
-	main>section.is-invisible .chain .icon,
-	main>section.is-invisible .chain .arrow {
+	main>section.is-invisible .chain .active .icon,
+	main>section.is-invisible .chain .active .arrow {
 		transform: var(--TransformInvisible, scale(1)); }
-	main>section.is-invisible,
 	main>section.is-invisible>section,
 	main>section.is-invisible aside div *,
 	main>section.is-invisible [data-parallax],
-	main>section.is-invisible .chain .icon+* {
+	main>section.is-invisible .chain .active .icon+* {
 		opacity: var(--OpacityInvisible, 0); }
 
 /* Propriétés supplémentaires
@@ -142,15 +137,15 @@
 
 /* Cascade d'apparition des maillons de la chaîne ----------------------- */
 
-	.chain>div>:nth-last-child(1) {
+	.chain>div>.active:first-of-type:nth-child(2) {
 		--ChainLinkDelay: 200ms; }
-	.chain>div>:nth-last-child(2) {
+	.chain>div>.active:first-of-type:nth-child(3) {
 		--ChainLinkDelay: 400ms; }
-	.chain>div>:nth-last-child(3) {
+	.chain>div>.active:first-of-type:nth-child(4) {
 		--ChainLinkDelay: 600ms; }
-	.chain>div>:nth-last-child(4) {
+	.chain>div>.active:first-of-type:nth-child(5) {
 		--ChainLinkDelay: 800ms; }
-	.chain>div>:nth-last-child(5) {
+	.chain>div>.active:first-of-type:nth-child(6) {
 		--ChainLinkDelay: 1000ms; }
 
 

@@ -16,7 +16,7 @@
 
 		<link rel="stylesheet" href="assets/css/patterns/p-provenance.css"/>
 		<link rel="stylesheet" href="assets/css/patterns/p-auto_line-height.css"/>
-		<!-- <link rel="stylesheet" href="assets/css/patterns/p-section_visibility-transitions.css" /> -->
+		<link rel="stylesheet" href="assets/css/patterns/p-section_visibility-transitions.css" />
 		<!-- <link rel="stylesheet" href="assets/css/patterns/p-stacking_slides.css"/> -->
 
 		<link rel="stylesheet" href="assets/css/layout/l-master_composition.css"/>

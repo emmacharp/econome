@@ -3,27 +3,25 @@
 
 <xsl:key name="agent-type" match="agent" use="@type"/>
 
-<xsl:template match="agent/@paid">
-	<span class="paid amount">
-		<xsl:text>-</xsl:text>
-		<xsl:value-of select="." />
-		<xsl:text> $</xsl:text>
-	</span>
-</xsl:template>
-
-<xsl:template match="agent/@local|agent/@foreign|agent/@value">
+<xsl:template match="agent/@local|agent/@foreign|agent/@value|agent/@paid">
 	<span class="added amount {name()}">
-		<xsl:text>+</xsl:text>
+		<xsl:choose>
+			<xsl:when test="name() = 'paid'">
+				<xsl:text>-</xsl:text>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:text>+</xsl:text>
+			</xsl:otherwise>
+		</xsl:choose>
 		<xsl:value-of select="." />
-		<xsl:text> $</xsl:text>
+		<span class="unit"> $</span>
 	</span>
 </xsl:template>
 
 <xsl:template match="diagram/agent">
 	<section class="link agent {@type} {@class}">
-		<xsl:apply-templates select="@paid" />
 		<div>
-			<xsl:apply-templates select="@local|@value" />
+			<xsl:apply-templates select="@local|@value|@paid" />
 			<article>
 				<xsl:apply-templates select="ext:node-set($svg-elements)//svg:symbol[generate-id() = generate-id(key('symbol-type', current()/@type)[1])]" />
 				<h4><xsl:value-of select="@name" /></h4>
@@ -104,7 +102,9 @@
 <xsl:template match="diagram">
 	<xsl:apply-templates select="." mode="include-once" />
 	<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))"></xsl:variable>
-	<article class="buying chain diagram" hx-get="diagrams.html" hx-select="#{$id}" hx-trigger="revealed"></article>
+	<article class="buying chain diagram">
+		<xsl:apply-templates select="." mode="ajax-diagrams"></xsl:apply-templates>
+	</article>
 </xsl:template>
 
 <!-- Pour intégrer les diagrammes au complet dans l'expérience, retirer le mode ci-dessous -->

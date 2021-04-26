@@ -181,7 +181,7 @@
 			</fieldset>
 		</form>
 		<div>
-			<symbol type="beer" preserveAspectRatio="xMinYMid slice" class="beer local" data-parallax="" data-factor=".5" />
+			<!-- <symbol type="beer" preserveAspectRatio="xMinYMid slice" class="beer local" data-parallax="" data-factor=".5" /> -->
 		</div>
 	</section>
 	<section>
@@ -209,7 +209,7 @@
 			</div>
 		</section>
 		<div>
-			<symbol type="consumer" preserveAspectRatio="xMinYMid slice" class="consumer local" data-parallax="" data-factor=".25" />
+			<!-- <symbol type="consumer" preserveAspectRatio="xMinYMid slice" class="consumer local" data-parallax="" data-factor=".25" /> -->
 		</div>
 	</section>
 	<section id="role-detaillant">
@@ -239,7 +239,7 @@
 			</div>
 		</section>
 		<div>
-			<symbol type="retailer" preserveAspectRatio="xMinYMid slice" class="retailer local" data-parallax="" data-factor=".25" />
+			<!-- <symbol type="retailer" preserveAspectRatio="xMinYMid slice" class="retailer local" data-parallax="" data-factor=".25" /> -->
 		</div>
 	</section>
 
@@ -256,7 +256,7 @@
 		<!-- 	</div> -->
 		<!-- </aside> -->
 		<diagram type="chain" links="5">
-			<agent type="consumer" name="Joey Joe Joe" paid="10" />
+			<agent type="consumer" name="Joey Joe Joe" />
 			<product type="beer" name="Bière" complete="" />
 			<agent type="retailer" name="Dépanneur" />
 			<product type="beer" name="Bière" />
@@ -290,7 +290,7 @@
 		</header>
 
 		<diagram type="chain" links="5">
-			<agent type="consumer" name="Joey Joe Joe" paid="10" />
+			<agent type="consumer" name="Joey Joe Joe" />
 			<product type="beer" name="Bière" complete="" />
 			<agent type="retailer" name="Dépanneur" />
 			<product type="beer" name="Bière" />
@@ -317,14 +317,14 @@
 			<p>Vend les mêmes houblons ordinaires depuis les 20 ans d'existence de la brasserie « Pâpire ».</p>
 		</header>
 		<diagram type="chain" links="5">
-			<agent type="consumer" name="Joey Joe Joe" paid="10" />
+			<agent type="consumer" name="Joey Joe Joe" />
 			<product type="beer" name="Bière" complete="" />
 			<agent type="retailer" name="Dépanneur" />
 			<product type="beer" name="Bière" />
 			<agent type="manufacturer" name="L'entrepôt" />
 			<product type="beer" name="Bière" />
 			<agent type="transformer" name="La brasserie" />
-			<product type="beer" name="Bière" local="55%" foreign="0%" />
+			<product type="beer" name="Bière" />
 			<agent type="provider" name="Le fournisseur" class="active" />
 		</diagram>
 		<section>
@@ -357,10 +357,10 @@
 		<diagram type="chain" links="5">
 			<agent type="consumer" name="Joey Joe Joe" paid="10" />
 			<product type="beer" name="Bière" complete="" value="100%" />
-			<agent type="retailer" name="Dépanneur" value="10" />
+			<agent type="retailer" name="Dépanneur" value="10" class="active" />
 			<agent type="manufacturer" name="L'entrepôt" />
 			<agent type="transformer" name="La brasserie" />
-			<agent type="provider" name="Le fournisseur" class="active" />
+			<agent type="provider" name="Le fournisseur" />
 		</diagram>
 	</section>
 	<section>
@@ -375,9 +375,9 @@
 			<product type="beer" name="Bière" complete="" value="100%" />
 			<agent type="retailer" name="Dépanneur" value="1" />
 			<product type="beer" name="Bière" value="90" />
-			<agent type="manufacturer" name="L'entrepôt" value="9" />
+			<agent type="manufacturer" name="L'entrepôt" value="9" class="active" />
 			<agent type="transformer" name="La brasserie" />
-			<agent type="provider" name="Le fournisseur" class="active" />
+			<agent type="provider" name="Le fournisseur" />
 		</diagram>
 	</section>
 	<section>
@@ -394,8 +394,8 @@
 			<product type="beer" name="Bière" value="90" />
 			<agent type="manufacturer" name="L'entrepôt" value="1" />
 			<product type="beer" name="Bière" value="80" />
-			<agent type="transformer" name="La brasserie" value="8" />
-			<agent type="provider" name="Le fournisseur" class="active" />
+			<agent type="transformer" name="La brasserie" value="8" class="active" />
+			<agent type="provider" name="Le fournisseur" />
 		</diagram>
 	</section>
 	<section>
@@ -502,7 +502,6 @@
 			<h2>Comparons la valeur ajoutée de trois bières différentes</h2>
 		</header>
 		<section>
-			<div class="grille">
 				<header>
 					<h3>La bière québécoise « Moyenne »</h3>
 				</header>
@@ -518,7 +517,6 @@
 					<agent type="provider" name="Le fournisseur" foreign="4" local="0" class="active" />
 
 				</diagram>
-			</div>
 		</section>
 	</section>
 </root>
