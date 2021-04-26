@@ -2,7 +2,6 @@
 /* (Opt-in. Valeurs complexes par défaut pour
 * limiter la prolifération des propriétés héritées) */
 
-	main>section,
 	main>section>section,
 	main>section aside svg,
 	main>section aside div,
@@ -138,15 +137,15 @@
 
 /* Cascade d'apparition des maillons de la chaîne ----------------------- */
 
-	.chain>div>:nth-last-child(1) {
+	.chain>div>.active:first-of-type:nth-child(2) {
 		--ChainLinkDelay: 200ms; }
-	.chain>div>:nth-last-child(2) {
+	.chain>div>.active:first-of-type:nth-child(3) {
 		--ChainLinkDelay: 400ms; }
-	.chain>div>:nth-last-child(3) {
+	.chain>div>.active:first-of-type:nth-child(4) {
 		--ChainLinkDelay: 600ms; }
-	.chain>div>:nth-last-child(4) {
+	.chain>div>.active:first-of-type:nth-child(5) {
 		--ChainLinkDelay: 800ms; }
-	.chain>div>:nth-last-child(5) {
+	.chain>div>.active:first-of-type:nth-child(6) {
 		--ChainLinkDelay: 1000ms; }
 
 
