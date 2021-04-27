@@ -102,7 +102,7 @@ exclude-result-prefixes="ext msxsl svg math">
 	</section>
 </xsl:template>
 
-<xsl:template match="diagram/product">
+<xsl:template match="diagram/product" name="diagram-product">
 	<xsl:variable name="state">
 		<xsl:choose>
 			<xsl:when test="@complete">
@@ -197,6 +197,7 @@ exclude-result-prefixes="ext msxsl svg math">
 	<xsl:param name="missing-links" select="0" />
 	<xsl:choose>
 		<xsl:when test="$missing-links > 0">
+			<xsl:call-template name="diagram-product"/>
 			<div class="unknown-link">
 				<hr class="good arrow to" />
 				<span class="icon">?</span>
