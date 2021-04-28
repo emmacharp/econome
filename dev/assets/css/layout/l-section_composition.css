@@ -1,17 +1,27 @@
 main>section {
-	/* overflow: hidden; */
-	align-self: stretch;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	grid-template-rows: auto auto;
 	padding: var(--Row);
 	min-height: 100vh; /* À CHANGER DANS LE BON FICHIER */
+	align-content: center;
 }
 
-main>section>header>small:first-child {
+
+main>section>* {
+	grid-column: 1;
+}
+
+main>section>article {
+	grid-column: 2;
+	grid-row: 1 / -1;
+	margin-bottom: 0;
+}
+
+main>h2 {
 	position: sticky;
 	top: var(--Row);
 	margin-bottom: calc(var(--Row) * 2);
-}
-main>section>header {
-	display: contents;
 }
 
 main>section [data-parallax] {
@@ -44,38 +54,6 @@ main>section>:not(header)+div:last-child>svg {
 	--Width: clamp(200px, 50vw, 800px);
 }
 
-.consumer {
-	--Height: clamp(500px, 200vh, 1200px); 
-	--Width: clamp(600px, 250vw, 1200px);
-}
-
-.retailer {
-	--Height: clamp(500px, 200vh, 1200px); 
-	--Width: clamp(600px, 300vw, 2200px);
-}
-
-.beer {
-	--Height: clamp(500px, 160vh, 1200px);
-	--Width: clamp(600px, 80vh, 700px);
-}
-.beer[data-parallax] {
-	top: auto;
-	bottom: 0;
-	left: 70vw;
-}
-
-.retailer[data-parallax] {
-	top: auto;
-	bottom: calc(-1 * var(--Row) * 3);
-	left: 75vw;
-}
-
-.consumer[data-parallax] {
-	top: auto;
-	bottom: calc(-1 * var(--Row) * 2);
-	left: 70vw;
-	transform: rotate(265deg) scale(1);
-}
 main>section [data-parallax] {
 	mix-blend-mode: multiply; /* ATTENTION ! performance : utiliser avec conteneur parent « isolation » */
 }
@@ -200,6 +178,7 @@ main>section>section div {
 	align-items: baseline;
 }
 
+main>h2,
 main>section>section header>h2,
 main>section>section header>h3,
 main>section>section header>small {
@@ -271,3 +250,15 @@ main>section>section div>form {
 main>section>section div>form {
 	padding-top: 1.25em;
 }
+
+
+main>section>.diagram, 
+main>section>.diagram>div {
+	width: min(120vh, 52vw);
+}
+
+main>section>.diagram>div {
+	position: fixed;
+}
+
+

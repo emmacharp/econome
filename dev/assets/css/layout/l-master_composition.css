@@ -9,6 +9,11 @@
 		padding: var(--Row) 0;
 	}
 
+	main>section:not(.is-active) {
+		opacity: 0;
+		pointer-events: none;
+	}
+
 	body>nav {
 		box-sizing: border-box;
 		display: flex;
@@ -79,13 +84,7 @@
 	}
 	
 	main>section {
-		min-height: calc(100vh + var(--Row) - var(--V_GridUnitRest));
-		display: flex;
-		flex-direction: column;
-	}
-
-	main {
-		/*overflow-x: hidden; */ /* EMPÊCHE LE SCROLL-SNAP DE FONCTIONNER ! */
+		min-height: calc(100vh + var(--Row) - var(--V_GridUnitRest, 0));
 	}
 
 	body>nav {
@@ -99,8 +98,4 @@
 	body>nav~main {
 		padding-left: var(--Row);
 	}
-
-/*	body>aside:not(.is-visible) {
-		max-width: 0;
-	}*/
 }
