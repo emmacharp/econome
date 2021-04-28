@@ -12,7 +12,7 @@
 	/* Holy Albatross. Voir Heydon Pickering :
 		(https://heydonworks.com/article/the-flexbox-holy-albatross/) */
 		div.grille {
-			--DivItemBasis: calc((68ch - 100%) * 999);
+			--DivItemBasis: calc((84ch - 100%) * 999);
 			--DivItemGrow: 1;
 			--DivItemGutter: var(--Row);
 			--DivItemMaxWidth: 100%;

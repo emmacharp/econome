@@ -4,11 +4,30 @@
 	font-weight: 500;
 	font-family: 'Helvetica Neue';
 	display: inline-flex;
-	/* padding: var(--Row); */
-	/* /1* margin-right: var(--Row) *1/ Créer un problème de wrap */
 }
 
 .chain>div {
+	--SecurityColCount: 4;
+	--SecurityRowCount: 2;
+	--TotalElements: calc(var(--total-chain-links) * 2 - 1);
+	--ColumnCount: calc(var(--TotalElements) + var(--SecurityColCount));
+	--RowCount: calc(var(--TotalElements) + var(--SecurityRowCount));
+	display: grid;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	grid-template: repeat(var(--ColumnCount), minmax(0, 1fr)) / repeat(var(--RowCount), minmax(0, 1fr));
+}
+
+.chain>div>* {
+	grid-row-end: span 3;
+	grid-row-start: calc(var(--link-position) + 1);
+	grid-column-start: calc(var(--link-position) + 1);
+}
+
+
+
+.chain>div * {
 	display: flex;
 	flex-wrap: nowrap;
 }
@@ -104,16 +123,13 @@
 }
 
 .chain .icon {
-	--IconHeight: calc(var(--Row) * 3 * var(--Size));
+	--IconHeight: calc(var(--Row) * 2.5 * var(--Size));
 	height: var(--IconHeight);
 	fill: currentColor;
 }
 
-.chain .icon.beer {
-	--IconHeight: calc(var(--Row) * 2.5 * var(--Size));
-}
-.chain .icon:not(:last-child) {
-	margin-top: auto;
+.chain .product .icon {
+	--IconHeight: calc(var(--Row) * 2 * var(--Size));
 }
 
 .chain .icon.consumer {
@@ -126,7 +142,7 @@
 
 .chain .unknown-link {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 	flex-grow: .5625;
 }
 

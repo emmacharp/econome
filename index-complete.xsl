@@ -90,7 +90,7 @@ exclude-result-prefixes="ext msxsl svg math">
 </xsl:template>
 
 <xsl:template match="diagram/agent">
-	<section class="link agent {@type} {@class}">
+	<section class="link agent {@type} {@class}" style="--link-position: {count(preceding-sibling::*) + 1};">
 		<div>
 			<xsl:apply-templates select="@local|@value|@paid" />
 			<article>
@@ -103,6 +103,9 @@ exclude-result-prefixes="ext msxsl svg math">
 </xsl:template>
 
 <xsl:template match="diagram/product" name="diagram-product">
+	<xsl:param name="missing-links" select="0"/>
+	<xsl:param name="total-chain-links" select="0"/>
+	<xsl:param name="actual-chain-links" select="0"/>
 	<xsl:variable name="state">
 		<xsl:choose>
 			<xsl:when test="@complete">
@@ -114,6 +117,16 @@ exclude-result-prefixes="ext msxsl svg math">
 		</xsl:choose>
 	</xsl:variable>
 	<div>
+		<xsl:attribute name="style">
+			<xsl:choose>
+				<xsl:when test="not($missing-links)">
+					<xsl:value-of select="concat('--link-position:', count(preceding-sibling::*) + 1, ';')"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="concat('--link-position: ', ($total-chain-links - $missing-links) * 2, ';')"/>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:attribute>
 		<xsl:if test="@local|@value">
 			<hr class="variable arrow from" />
 		</xsl:if>
@@ -173,7 +186,7 @@ exclude-result-prefixes="ext msxsl svg math">
 <xsl:template match="diagram">
 	<xsl:apply-templates select="." mode="include-once" />
 	<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))"></xsl:variable>
-	<article class="buying chain diagram">
+	<article class="buying chain diagram" style="--total-chain-links: {@links};">
 		<xsl:apply-templates select="." mode="ajax-diagrams"></xsl:apply-templates>
 	</article>
 </xsl:template>
@@ -189,20 +202,30 @@ exclude-result-prefixes="ext msxsl svg math">
 		<xsl:apply-templates />
 		<xsl:call-template name="missing-chain-links">
 			<xsl:with-param name="missing-links" select="$missing-links" />
+			<xsl:with-param name="actual-chain-links" select="$actual-chain-links"/>
+			<xsl:with-param name="total-chain-links" select="$total-chain-links"/>
 		</xsl:call-template>
 	</div>
 </xsl:template>
 
 <xsl:template name="missing-chain-links">
 	<xsl:param name="missing-links" select="0" />
+	<xsl:param name="actual-chain-links" select="0"/>
+	<xsl:param name="total-chain-links" select="0"/>
 	<xsl:choose>
 		<xsl:when test="$missing-links > 0">
-			<xsl:call-template name="diagram-product"/>
-			<div class="unknown-link">
+			<xsl:call-template name="diagram-product">
+				<xsl:with-param name="actual-chain-links" select="$actual-chain-links"/>
+				<xsl:with-param name="total-chain-links" select="$total-chain-links"/>
+				<xsl:with-param name="missing-links" select="$missing-links"></xsl:with-param>
+			</xsl:call-template>
+			<div class="unknown-link" style="--link-position: {($total-chain-links - $missing-links) * 2 + 1}">
 				<hr class="good arrow to" />
 				<span class="icon">?</span>
 			</div>
 			<xsl:call-template name="missing-chain-links">
+				<xsl:with-param name="actual-chain-links" select="$actual-chain-links"/>
+				<xsl:with-param name="total-chain-links" select="$total-chain-links"/>
 				<xsl:with-param name="missing-links" select="$missing-links - 1"></xsl:with-param>
 			</xsl:call-template>
 		</xsl:when>
@@ -437,9 +460,7 @@ exclude-result-prefixes="ext msxsl svg math">
 					<clipPath id="_clip1">
 						<path id="visage" d="M191,64.499c-109.805,0 -129.763,65.744 -130,100c-0.237,34.256 9.265,136.94 10,150c2.813,49.952 19.932,71.58 50,110c30.068,38.421 50.636,50 75.282,50c24.645,0 45.676,-10.269 74.718,-50c29.042,-39.73 43.913,-75.484 45,-120c0.181,-7.424 3.953,-114.771 5,-140c1.047,-25.228 -20.195,-100 -130,-100Z"/>
 					</clipPath>
-					<g clip-path="url(#_clip1)">
-						<path id="barbe" d="M309,222.499c0,0 11.91,88.683 -6,107c-17.91,18.317 -45,35 -45,35l-122,-1c0,0 -25.313,4.787 -45,-26c-19.687,-30.786 -20,-99 -20,-99c0,0 -2.773,-5.375 -5.691,-5.846c-1.316,29.579 2.422,114.219 17.691,142.846c26.723,50.103 65.875,105.246 106,103c40.125,-2.245 69.285,-10.096 114,-90c17.779,-31.769 18.368,-67.518 17.446,-95.445c-0.626,-18.966 2.009,-53.105 -0.409,-65.141c-5.736,-2.831 -11.037,-5.414 -11.037,-5.414Z" style="fill:#c7b1a8;"/>
-					</g>
+					<path id="barbe" d="M309,222.499c0,0 11.91,88.683 -6,107c-17.91,18.317 -45,35 -45,35l-122,-1c0,0 -25.313,4.787 -45,-26c-19.687,-30.786 -20,-99 -20,-99c0,0 -2.773,-5.375 -5.691,-5.846c-1.316,29.579 2.422,114.219 17.691,142.846c26.723,50.103 65.875,105.246 106,103c40.125,-2.245 69.285,-10.096 114,-90c17.779,-31.769 18.368,-67.518 17.446,-95.445c-0.626,-18.966 2.009,-53.105 -0.409,-65.141c-5.736,-2.831 -11.037,-5.414 -11.037,-5.414Z" style="fill:#c7b1a8;"/>
 					<path id="levres" d="M147,367.499c0,0 0.795,24.211 42,25c12.406,0.238 61.081,5.375 62,-30c-64.157,-20.593 -105.211,4.053 -105,4" style="fill:#cd8a90;"/>
 					<path id="levre_inferieure" d="M153,378.499c0,0 6.281,12.611 28,13c21.719,0.39 13.305,-0.504 35,-1c21.695,-0.495 29.537,-9.264 30,-13" style="fill:none;stroke-width:3px;stroke:#c77785;"/>
 					<path id="bouche" d="M150,370.499c0,0 21.501,-2.163 36,-1c14.499,1.164 17.397,0.962 25,-1c7.603,-1.961 45.254,-0.23 45,0" style="fill:none;stroke-width:3px;stroke:#a3545b;"/>

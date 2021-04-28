@@ -33,7 +33,7 @@ body { overscroll-behavior-y: none; }
 hr {
 	line-height: 0;
 	height: 0; max-height: 0;
-	border: none; border-top: 2px solid inherit;
+	border: none; border-top: 2px solid currentColor;
 }
 
 /* Préparer les <symbol> à être manipulés */
