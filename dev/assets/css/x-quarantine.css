@@ -8,7 +8,8 @@ main>section {
 	/* contain: content; */
 }
 
-main>section>:not(header)+div:last-child {
+main>section>:not(header)+div:last-child,
+main>section>article>div {
 	contain: strict;
 }
 
@@ -27,21 +28,9 @@ body>nav {
 	to { opacity: var(--OpacityVisible, 1); }
 }
 
-section[id]:not(.is-active) .diagram {
+section[id]:not(.is-active) {
 	opacity: 0;
 	pointer-events: none;
-}
-
-.good.arrow {
-	opacity: 0;
-}
-
-.diagram {
-	/* position: fixed; */
-	/* right: 0; */
-	/* top: 40vh; */
-	/* align-items: center; */
-	/* justify-content: center; */
 }
 
 .diagram>div {
@@ -49,69 +38,9 @@ section[id]:not(.is-active) .diagram {
 	/* top: 40vh; */
 }
 
-/* .diagram+section { */
-/* 	max-width: 75vmin */
-/* } */
-
-/* .diagram>div { */
-/* 	width: 100%; */
-/* 	justify-content: flex-start; */
-/* } */
-
-/* .diagram>div { */
-/* 	transform: rotate(45deg); */
-/* } */
-
-/* .diagram>div>* { */
-/* 	transform: rotate(45deg); */
-/* } */
-
-/* .diagram .amount, */
-/* .diagram article { */
-/* 	transform: rotate(-90deg) */
-/* } */
-
-/* .diagram .variable.arrow { */
-/* 	transform: rotate(-45deg); */
-/* 	transform-origin: right !important; */
-/* } */
-
-/* .diagram .variable:first-child { */
-/* 	transform: rotate(-45deg); */
-/* 	transform-origin: bottom !important; */
-/* } */
-
-/* .diagram .product { */
-/* 	transform: rotate(-45deg); */
-/* } */
-
-/* .diagram .unknown-link { */
-/* 	transform: rotate(0deg); */
-/* } */
-
-/* .diagram .unknown-link .icon { */
-/* 	transform: rotate(-45deg); */
-/* } */
-
-/* .diagram .product article { */
-/* 	transform: rotate(-45deg); */
-/* } */
-
 .diagram .product h4 {
 	display: none !important;
 }
-
-/* .diagram .good.arrow.to { */
-/* 	margin-left: 20% !important; */
-/* } */
-
-/* .diagram .good.arrow.from { */
-/* 	margin-right: 20% !important; */
-/* } */
-
-/* .diagram>div>div { */
-/* 	margin-top: .3em; */
-/* } */
 
 article.chain .product .icon {
     --IconHeight: calc(var(--Row) * 2 * var(--Size));
@@ -130,7 +59,7 @@ div.grille {
 }
 
 .chain .good.arrow {
-	--ArrowLine: initial;
+	/* --ArrowLine: initial; */
 }
 
 .chain .amount {
@@ -140,10 +69,6 @@ div.grille {
 .chain .variable.arrow {
 	--ArrowLine: 2px dotted currentColor;
 }
-
-/* .chain .variable.arrow:last-child { */
-/* 	--ArrowLine: 2px solid var(--ColorForeign); */
-/* } */
 
 .chain .variable.arrow:only-of-type {
 	--ArrowLine: 2px solid currentColor;
@@ -191,10 +116,6 @@ main>section {
 	scroll-snap-align: initial;
 }
 
-/* .diagram * { */
-/* 	transform: initial !important; */
-/* } */
-
 .diagram>div {
 	display: grid !important;
 	top: 0;
@@ -222,47 +143,12 @@ main>section {
 .chain .unknown-link {
 	justify-content: center !important;
 }
-.diagram>div>:first-child {
-	grid-row-start: 2;
-	grid-column-start: 2;
+
+.diagram>div>* {
+	grid-row-start: calc(var(--link-position) + 1);
+	grid-column-start: calc(var(--link-position) + 1);
 }
 
-.diagram>div>:nth-child(2) {
-	grid-row-start: 3;
-	grid-column-start: 3;
-
-	transform: translateZ(30px);
-}
-.diagram>div>:nth-child(3) {
-	grid-row-start: 4;
-	grid-column-start: 4;
-	transform: translateZ(60px);
-}
-.diagram>div>:nth-child(4) {
-	grid-row-start: 5;
-	grid-column-start: 5;
-	transform: translateZ(90px);
-}
-.diagram>div>:nth-child(5) {
-	grid-row-start: 6;
-	grid-column-start: 6;
-}
-.diagram>div>:nth-child(6) {
-	grid-row-start: 7;
-	grid-column-start: 7;
-}
-.diagram>div>:nth-child(7) {
-	grid-row-start: 8;
-	grid-column-start: 8;
-}
-.diagram>div>:nth-child(8) {
-	grid-row-start: 9;
-	grid-column-start: 9;
-}
-.diagram>div>:nth-child(9) {
-	grid-row-start: 10;
-	grid-column-start: 10;
-}
 
 .chain * {
 	display: flex !important;
@@ -275,13 +161,10 @@ main>section {
 .diagram .variable.arrow {
 	transform: rotate(40deg);
 	transform-origin: center !important;
-	/* margin-left: calc(-1 * var(--Row)); */
-	/* margin-right: calc(-1 * var(--Row)); */
 	display: none !important;
 }
 
 .diagram .variable.arrow {
-	/* margin-top: -.5em !important; */
 	margin: var(--Row) 0 !important;
 }
 
