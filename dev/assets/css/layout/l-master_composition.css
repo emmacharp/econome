@@ -98,4 +98,9 @@
 	body>nav~main {
 		padding-left: var(--Row);
 	}
+	
+	nav~main>* {
+		padding-left: calc(var(--Row) * 3);
+	}
+
 }
