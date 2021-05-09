@@ -135,26 +135,6 @@
 		--StructuralDelay: 800ms; }
 
 
-/* Cascade d'apparition des maillons de la chaîne ----------------------- */
-
-	.chain>div>.active:first-of-type:nth-child(2) {
-		--ChainLinkDelay: 200ms; }
-	.chain>div>.active:first-of-type:nth-child(3) {
-		--ChainLinkDelay: 400ms; }
-	.chain>div>.active:first-of-type:nth-child(4) {
-		--ChainLinkDelay: 600ms; }
-	.chain>div>.active:first-of-type:nth-child(5) {
-		--ChainLinkDelay: 800ms; }
-	.chain>div>.active:first-of-type:nth-child(6) {
-		--ChainLinkDelay: 1000ms; }
-
-
-/* Délai supplémentaire pour tout ce qui suit la chaîne ----------------------- */
-
-	main>section>.chain~* {
-		--AfterChainDelay: 800ms; }
-
-
 /* Choix d'animation au chargement de la page ----------------------- */
 
 		main>section>section,
