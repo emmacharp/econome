@@ -1,24 +1,52 @@
 @media all {
 	body {
 		display: flex;
+		background-color: var(--ColorBg);
 	}
+
+	main>h2 {
+		position: sticky;
+		top: 0;
+		padding-top: var(--Row);
+		margin-bottom: calc(var(--Row) * 2);
+		background-color: var(--ColorBg);
+		display: flex;
+		align-items: baseline;
+		--ScaleLevel: var(--Short);
+		font-weight: 700;
+		z-index: 1;
+		counter-increment: numero-partie;
+	}
+
+	main>h2:after {
+		content: '';
+		display: block;
+		flex-basis: 0;
+		flex-grow: 1;
+		border-bottom: 1px solid var(--ltr-brown);
+		margin-left: .25em;
+	}
+
+	main>h2:before {
+		content: "Partie " counter(numero-partie) " — ";
+	} 
+
 	main>section {
 		box-sizing: border-box;
 		position: relative;
 		scroll-snap-align: start;
-		padding: var(--Row) 0;
+		padding: var(--Row);
 	}
 
-	main>section:not(.is-active) {
+	main>section:not(.is-active)>article {
 		opacity: 0;
 		pointer-events: none;
 	}
 
 	body>nav {
 		box-sizing: border-box;
-		display: flex;
-		align-items: center;
 		position: sticky;
+		flex-shrink: 0;
 	}
 
 	main {
