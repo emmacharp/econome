@@ -3,6 +3,7 @@
 * limiter la prolifération des propriétés héritées) */
 
 	main>section>section,
+	main>section>article,
 	main>section aside svg,
 	main>section aside div,
 	main>section .chain .icon,
@@ -29,6 +30,7 @@
 		transform: var(--TransformVisible, scale(1)); }
 	main>section>section,
 	main>section aside div>*,
+	main>section>article,
 	main>section .chain .active .icon+* {
 		opacity: var(--OpacityVisible, 1); }
 
@@ -65,7 +67,7 @@
 		--SelfDuration: 600ms;
 		--TransitionProperties: opacity;
 		--TimingFunction: ease-out;
-		--ScrollDelay: 3000ms;
+		--ScrollDelay: 0ms;
 		--LoadingDelay: 0ms; }
 	main>section.is-visible {
 		--LoadingDelay: 0ms; }
@@ -93,6 +95,10 @@
 		--TransitionProperties: transform;
 		--TimingFunction: var(--ease-out-quad);
 		--SelfDuration: 200ms; }
+	main>section>article {
+		--TransitionProperties: opacity;
+		--SelfDuration: 200ms;
+		--SelfDelay: 160ms; }
 
 	/* Éléments — Valeurs spécifiques à l'apparition */
 	main>section.is-visible aside svg {
@@ -103,8 +109,6 @@
 		--SelfDelay: 600ms; }
 	main>section.is-visible aside div * {
 		--SelfDelay: 800ms; }
-	main>section.is-visible .chain .arrow.from {
-		--SelfDelay: 200ms; }
 	main>section.is-visible .chain .arrow {
 		--SelfDelay: 200ms; }
 	main>section.is-visible .chain .icon+* {
