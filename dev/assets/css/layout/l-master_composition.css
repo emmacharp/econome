@@ -102,22 +102,15 @@
 }
 
 @media (orientation: landscape) {
-	html {
-		scroll-snap-type: y proximity;
-		scroll-behavior: smooth;
-	}
-	
 	body {
 		align-items: flex-start;
 	}
-	
+
 	main>section {
 		min-height: calc(100vh + var(--Row) - var(--V_GridUnitRest, 0));
 	}
 
 	body>nav {
-		flex-direction: column;
-		width: calc(var(--Row) * .5);
 		height: 100vh;
 		position: sticky;
 		top: 0;
