@@ -17,9 +17,15 @@
 
 	<xsl:template match="section" mode="main-content">
 		<xsl:apply-templates select="." mode="include-once"/>
-		<section id="{@id}">
+		<xsl:variable name="wordcount" select="string-length(normalize-space(.)) - string-length(translate(normalize-space(.),' ','')) +1"/>
+		<xsl:variable name="needed-time" select="number($wordcount) div 1000 * 60000"/>
+		<section id="{@id}" data-wordcount="{$wordcount}" data-needed-time="{$needed-time}">
 			<xsl:apply-templates />
 		</section>
+	</xsl:template>
+
+	<xsl:template match="h2" mode="main-content">
+			<xsl:apply-templates select="." />
 	</xsl:template>
 
 	<xsl:template match="title" mode="main-content">
