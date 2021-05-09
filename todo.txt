@@ -17,3 +17,4 @@ x (B) 2021-01-05 Essayer la grille sur un div à l'aide de switches booléennes 
 (A) 2021-04-17 Intégrer les économistes +contenu @svg
 (A) 2021-04-24 Donner des contrôles persistants. Recherche par exemple. Avec explication (CMD-f). @experience
 (A) 2021-04-24 Diagramme à la diagonale @experience +css
+(A) 2021-04-30 Essayer avec le produit côte-à-côte avec l'agent pour le diagramme à la diagonale @maitrise +ux +design
