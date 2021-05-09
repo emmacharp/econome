@@ -1,21 +1,24 @@
 const parallaxItems = document.querySelectorAll('[data-parallax]');
 const setParallaxData = () => {
 	[...parallaxItems].forEach((el) => {
-		const e = el;
+		const e = el.closest('div');
 		const eH = e.offsetHeight || e.getBBox().height;
 		const wH = window.innerHeight;
 		const curScroll = (e.getBoundingClientRect().top - wH) * -1;
 		const toScroll = eH + wH;
 		let progress = Math.min(Math.max(curScroll, 0) / toScroll, 1);
-		const factor = parseFloat(e.getAttribute('data-factor')) || 0.2;
-		const fit = e.getAttribute('data-fit') || 'contain';
+		const factor = parseFloat(el.getAttribute('data-factor')) || 0.2;
+		const fit = el.getAttribute('data-fit') || 'contain';
+		
+		
 		if (fit === 'contain') {
 			progress = (progress < 0.5 ? 1 - progress * 2 : progress * -2 + 1) * -1;
 		} else {
 			progress = 1 - progress;
 		}
 
-		e.style.cssText = `--scrollParallax: ${progress * (eH * factor)}; --scrollFactor: ${progress};`;
+		console.log(e.getBoundingClientRect().top, progress);
+		el.style.cssText += `--scrollParallax: ${progress * (eH * factor)}; --scrollFactor: ${progress};`;
 	});
 }
 

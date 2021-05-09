@@ -13,7 +13,7 @@
 
 /* Tailles typographiques et interlignage de base */
 	select, input, textarea,
-	p, ul, ol, a, span, small, th, td,
+	p, ul, ol, a, q, cite, span, small, th, td,
 	h1, h2, h3, h4, h5, h6 {
 		line-height: var(--LineHeight, inherit);
 		font-size: var(--FontSize, calc(var(--Size, 1) * var(--ScaleLevel, 1) * var(--FontFactor, 1) * var(--FontUnit, 1em)));
@@ -24,7 +24,7 @@
 
 
 /* Héritage en place pour les éléments « en-ligne » intérieurs */
-	p *, ul *, ol *, a *, span *, small *, th *, td *,
+	p *, ul *, ol *, a *, q *, cite *, span *, small *, th *, td *,
 	h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
 		line-height: inherit;
 		font-size: inherit;

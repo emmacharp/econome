@@ -2,81 +2,225 @@
 	Toute propriété relevant de la composition
 	se retrouve dans « l-master_composition.css » */
 
-
 nav {
-	background-color: var(--brown);
+	background-color: var(--ColorAccent);
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+	width: 30ch;
+}
+
+nav::-webkit-scrollbar {
+	display: none;
+}
+
+nav>* {
+	width: 30ch;
+	box-sizing: border-box;
+}
+
+body>nav a {
+	display: flex;
+	align-items: baseline;
+	justify-content: flex-start;
+	margin: 0;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	--LineHeightFactor: .75;
+}
+
+nav a,
+nav header {
+	padding: calc(var(--Row) * .25) var(--Row);
+}
+
+nav header>*+* {
+	margin-top: calc(var(--Row) * .25);
 }
 
 nav a {
 	text-decoration: none;
-	width: calc(var(--Row) * 1.5);
-	height: calc(var(--Row) * 1.5);
-	background-color: var(--ColorAccent);
-	border-radius: 50%;
 	position: relative;
-	margin-top: calc(var(--Row) * .75 / 2);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
+}
+
+nav a {
+	background-color: var(--lt-red);
+}
+
+nav li.is-read>a {
+	background-color: var(--lt-green);
+}
+
+nav ul ul li.is-read>a:before {
+	background-image: var(--base64-checkmark), var(--base64-book);
+	background-repeat: no-repeat;
+	background-size: .78125rem, 1.125rem;
+	background-position: center, 0 0;
+	
+}
+
+nav ul ul a {
+	padding-left: calc(var(--Row) * 1.5);
+}
+
+nav a::before,
+.trigger-internal-nav::before {
+	content: "";
+	display: block;
+	width: 1.25rem;
+	height: 1.125rem;
+	top: .1425rem;
+	margin-right: .5rem;
+	margin-left: -.75rem;
 }
 
 nav a:before {
-	content: "";
-	width: var(--Row);
-	height: calc(var(--Row) * 1.5);
-	display: block;
-	position: absolute;
-	bottom: calc(100% - var(--Row) / 2);
-	background-color: var(--ColorAccent);
-	/*margin-top: calc(-1 * var(--Row) * .75);*/
-}
-
-nav a:after {
 	flex-shrink: 0;
+	mix-blend-mode: difference; /* WATCH OUT ! */
 	z-index: 1;
-	display: block;
-	width: calc(var(--Row) * .4125);
 	position: relative;
-	left: calc(var(--Row) * .125);
-	content: url("data:image/svg+xml,%3Csvg viewBox='0 0 68 65' xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='2'%3E%3Cpath d='M24.451 45.62L54.465 3.087c2.302-3.29 6.877-4.074 10.153-1.757 3.276 2.321 4.072 6.873 1.77 10.163L30.973 61.698a7.294 7.294 0 01-5.637 3.082 7.267 7.267 0 01-5.873-2.552L1.756 41.483c-2.627-3.062-2.243-7.665.826-10.28 3.04-2.611 7.644-2.247 10.27.812l11.599 13.604z' fill='%237c0fc0'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-size: 1.125rem;
+	background-image: var(--base64-book);
 }
 
-nav a.is-active:after {
-	content: "";
-	border-radius: 50%;
-	/*opacity: .5;*/
-	z-index: -1;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	/*box-shadow: 0px 0px 0px 4px var(--ColorDkAccent);*/
-	/*background-color: var(--ltst-primary);*/
+nav>ul>li>a:before {
+	background-image: var(--base64-mark);
+	background-size: 125%;
+	background-position: 0 -.125rem;
 }
 
-nav a.is-active~a:after {
+nav li.is-active>a:before {
 	content: "";
 }
 
-nav a.is-active~a:before {
-	content: none;
+nav li.is-active~* a:before,
+nav li.is-active li a:before,
+nav li.has-active~* a:before {
+	opacity: 0;
 }
 
-nav a.is-active {
-	border: 4px solid var(--ColorDkAccent);
-	/*box-shadow: 0px calc(var(--Row) * .25) var(--ColorDkAccent);*/
+nav li.is-active~* a,
+nav li.is-active li a,
+nav li.has-active~* a,
+nav li.has-active li.is-active~li a {
+	background-color: var(--ltst-primary);
+	color: var(--brown);
 }
 
-nav a.is-active~* {
-	height: var(--Row);
-	width: var(--Row);
-	background-color: var(--brown);
+nav li li.is-active~* a,
+nav li.has-active~li li a {
+}
+
+nav li.has-active li.is-read a {
+	background-color: var(--dk-yellow);
+}
+
+nav li.has-active>a {
+	background-color: var(--green);
+}
+
+nav li.is-active>a {
+	background-color: var(--ColorAccent);
 }
 
 @media (orientation: portrait) {
 	nav a {
 		flex-shrink: 0;
 	}
+}
+
+.trigger-internal-nav {
+	appearance: none;
+	position: fixed;
+	top: calc(var(--Row) * .75);
+	left: var(--Row);
+	z-index: 4;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-start;
+}
+
+.trigger-internal-nav::before {
+	color: var(--brown);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	content: "▶";
+	text-align: center;
+	font-size: 9px;
+	margin-left: -.5rem;
+	background-color: var(--ltr-primary);
+	border: 1px solid var(--ltst-primary);
+	border-top-width: 1px;
+	border-bottom-width: 2px;
+	box-shadow: 0 1px 2px  var(--purple);
+	position: relative;
+	top: .15em;
+}
+
+.trigger-internal-nav:checked::before {
+	content: "◀";
+}
+
+.trigger-internal-nav:checked~main>* {
+	padding-left: calc(var(--Row) * .5);
+} 
+
+.trigger-internal-nav::after {
+	content: "Menu";
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: 12px;
+	color: var(--lt-primary);
+}
+.trigger-internal-nav:checked::after {
+	color: var(--dk-brown);
+}
+
+.trigger-internal-nav:not(:checked)~nav {
+	width: calc(var(--Row) * 1.125);
+}
+
+.trigger-internal-nav:not(:checked)~nav ul * {
+	color: transparent;
+}
+
+.trigger-internal-nav:not(:checked)~nav header * {
+	opacity: 0;
+}
+
+.trigger-internal-nav:not(:checked)~nav a:before {
+	opacity: 0;
+}
+
+nav header {
+	padding-top: calc(var(--Row) * 2.3);
+	padding-bottom: calc(var(--Row) * .8);
+	background-color: var(--dk-beige);
+}
+
+nav header span {
+	font-size: .7125em;
+	font-weight: 600;
+}
+
+nav header strong {
+	padding: .1825em .325em;
+	text-transform: uppercase;
+	border-radius: 3px;
+	font-weight:800;
+	background-color: var(--dk-brown);
+	color: var(--beige);
+	margin-right: .25em;
+	text-shadow: 0px 2px 0px var(--brown);
+}
+
+nav details {
+	--ScaleLevel: var(--Short);
+	--LineHeightFactor: .75;
 }

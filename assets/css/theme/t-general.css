@@ -6,7 +6,7 @@
 
 /* Rythme des contenus ----------------------- */
 
-:not(html, body, label, ul)>*:not(link)+* { 
+:not(html, body, label, ul, ol)>*:not(link)+* { 
 margin-top: calc(var(--Row)); }
 
 
@@ -21,7 +21,7 @@ img {
 
 /* Garder la puce à l'intérieur 
 de la colonne de texte */
-ul { padding-left: 1.1em; }
+ul, ol { padding-left: 1.1em; }
 
 /* Meilleur affichage typographique */	
 html { text-rendering: geometricPrecision; }

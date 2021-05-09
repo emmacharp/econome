@@ -8,7 +8,8 @@ fieldset>*+* {
 
 fieldset label {
 	position: relative;
-	display: inline-block;
+	display: inline-flex;
+	align-items: baseline;
 	box-sizing: border-box;
 	color: var(--brown);
 	flex-shrink: 0;
@@ -19,16 +20,17 @@ fieldset label {
 
 fieldset span,
 fieldset input {
-	border: 3px solid currentColor;
-	box-shadow: 0 2px 0 0 currentColor;
+	border: 0;
+	border-bottom: 1px solid var(--lt-purple);
 	padding: calc(var(--Row) / 8) calc(var(--Row) / 4);
 	display: inline-block;
 	position: relative;
+	background-color: var(--ColorAccent);
 	font-weight: 600;
 }
 
 fieldset span {
-	border-radius: 5px 0 0 5px;
+	border-radius: 5px 0 0 0;
 }
 
 fieldset span~span {
@@ -36,13 +38,13 @@ fieldset span~span {
 	box-shadow: initial;
 }
 
-fieldset input+span {
+fieldset input[type=radio]+span {
+	box-shadow: 0 1px 2px  var(--purple);
 	padding: calc(var(--Row) / 4) var(--Row);
-	border-radius: 8px;
-}
-
-fieldset span+input {
-	border-radius: 0 5px 5px 0;
+	border-radius: 5px;
+	border: 1px solid var(--dk-yellow);
+	border-top-width: 1px;
+	border-bottom-width: 2px;
 }
 
 fieldset input[type=radio] {
@@ -70,15 +72,19 @@ fieldset p {
 
 fieldset input[type=radio]:checked~span,
 fieldset span:hover {
-	box-shadow: inset 0 -1px 0 0 currentColor;
+	box-shadow: inset 0 1px 2px  var(--purple);
 	top: 1px;
 }
 
 fieldset input[type=radio]:checked~span {
-	box-shadow: inset 0 -1px 0 1px currentColor;
 	top: 2px;
+	border-top-width: 2px;
+	border-bottom-width: 1px;
+	background-color: var(--ColorDkAccent);
+}
+
+fieldset input[type=radio]:checked~span[class] {
 	background-color: currentColor;
-	background-image: linear-gradient(#ffffffa0 0, #ffffffa0 100%);
+	background-image: linear-gradient(#ffffffe0 0, #ffffffe0 100%);
 	background-blend-mode: hard-light;
-	filter: contrast(2);
 }

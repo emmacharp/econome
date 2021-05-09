@@ -41,7 +41,7 @@ exclude-result-prefixes="ext msxsl svg math">
 
 		<link rel="stylesheet" href="assets/css/patterns/p-provenance.css"/>
 		<link rel="stylesheet" href="assets/css/patterns/p-auto_line-height.css"/>
-		<link rel="stylesheet" href="assets/css/patterns/p-section_visibility-transitions.css" />
+		<!-- <link rel="stylesheet" href="assets/css/patterns/p-section_visibility-transitions.css" /> -->
 		<!-- <link rel="stylesheet" href="assets/css/patterns/p-stacking_slides.css"/> -->
 
 		<link rel="stylesheet" href="assets/css/layout/l-master_composition.css"/>
@@ -186,9 +186,7 @@ exclude-result-prefixes="ext msxsl svg math">
 <xsl:template match="diagram">
 	<xsl:apply-templates select="." mode="include-once" />
 	<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))"></xsl:variable>
-	<article class="buying chain diagram" style="--total-chain-links: {@links};">
-		<xsl:apply-templates select="." mode="ajax-diagrams"></xsl:apply-templates>
-	</article>
+	<article class="buying chain diagram" hx-get="diagrams.html" hx-select="#{$id}" hx-trigger="revealed" style="--total-chain-links: {@links};"></article>
 </xsl:template>
 
 <!-- Pour intégrer les diagrammes au complet dans l'expérience, retirer le mode ci-dessous -->
@@ -273,7 +271,7 @@ exclude-result-prefixes="ext msxsl svg math">
 	<xsl:template name="head">
 		<head>
 			<script>document.documentElement.classList.add('has-js');</script>
-			<title>Economia présente : l'achat local</title>
+			<title>ECONOME présente : l'achat local</title>
 			<meta charset="UTF-8"/>
 			<meta name="apple-mobile-web-app-capable" content="yes"/>
 			<meta name="apple-mobile-web-app-status-bar-style" content="#ff0000"/>
@@ -285,21 +283,49 @@ exclude-result-prefixes="ext msxsl svg math">
 		</head>
 	</xsl:template>
 	<xsl:template name="internal-navigation">
+		<input type="checkbox" class="trigger-internal-nav" />
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
 				<link rel="stylesheet" href="assets/css/components/c-internal_nav.css"/>
 			</xsl:with-param>
 		</xsl:call-template>
 		<nav>
-			<xsl:apply-templates mode="internal-navigation" />
+			<header>
+				<span><strong>Econome</strong> présente</span>
+				<p><xsl:value-of select="//h1"></xsl:value-of></p>
+				<details>
+					<summary><span>En savoir plus sur Econome</span></summary>
+					<p>Econome c'est une initiative de commnuication économique populaire. Comme d'autres <i data-wiki="Otto_Neurath">avant nous</i>, nous espérons informer le public dans ses prises de décision politiques grâce à l'exposition de faits économiques.</p>
+					<p>Econome veut éclairer les enjeux économiques contemporains s'en pour autant prendre position. C'est au public que revient la décision.</p>
+				</details>
+			</header>
+			<ul>
+				<xsl:apply-templates select="/root/h2" mode="internal-navigation" />
+			</ul>
 		</nav>
 	</xsl:template>
-
 	<xsl:template match="section" mode="internal-navigation">
-		<a href="#{@id}">
-			<xsl:value-of select="header/*[name() = 'h1' or name() = 'h2' or name() = 'h3']" />
-		</a>
+		<li>
+			<a href="#{@id}">
+				<xsl:value-of select="header/*[name() = 'h2' or name() = 'h3']" />
+			</a>
+			<ul>
+			</ul>
+
+		</li>
+		<xsl:apply-templates select="following-sibling::*[1][name() = 'section']" mode="internal-navigation"/>
 	</xsl:template>
+	<xsl:template match="h2" mode="internal-navigation">
+		<li>
+			<a href="#{@id}">
+				<xsl:value-of select="." />
+			</a>
+			<ul>
+				<xsl:apply-templates select="following-sibling::*[1][name() = 'section']" mode="internal-navigation"/>
+			</ul>
+		</li>
+	</xsl:template>
+
 
 	<xsl:template name="main-content">
 		<main>
@@ -317,9 +343,15 @@ exclude-result-prefixes="ext msxsl svg math">
 
 	<xsl:template match="section" mode="main-content">
 		<xsl:apply-templates select="." mode="include-once"/>
-		<section id="{@id}">
+		<xsl:variable name="wordcount" select="string-length(normalize-space(.)) - string-length(translate(normalize-space(.),' ','')) +1"/>
+		<xsl:variable name="needed-time" select="number($wordcount) div 1000 * 60000"/>
+		<section id="{@id}" data-wordcount="{$wordcount}" data-needed-time="{$needed-time}">
 			<xsl:apply-templates />
 		</section>
+	</xsl:template>
+
+	<xsl:template match="h2" mode="main-content">
+			<xsl:apply-templates select="." />
 	</xsl:template>
 
 	<xsl:template match="title" mode="main-content">
@@ -332,8 +364,7 @@ exclude-result-prefixes="ext msxsl svg math">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
 				<script src="assets/js/parallax.js"></script>
-				<script>
-					setParallaxData();</script>
+				<script>setParallaxData();</script>
 			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>

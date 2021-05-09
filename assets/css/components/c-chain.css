@@ -4,6 +4,7 @@
 	font-weight: 500;
 	font-family: 'Helvetica Neue';
 	display: inline-flex;
+	z-index: 2;
 }
 
 .chain>div {

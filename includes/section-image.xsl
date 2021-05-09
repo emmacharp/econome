@@ -3,8 +3,7 @@
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
 				<script src="assets/js/parallax.js"></script>
-				<script>
-					setParallaxData();</script>
+				<script>setParallaxData();</script>
 			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>

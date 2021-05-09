@@ -18,11 +18,16 @@
 		--blue: #2B46BD;
 		--lt-blue: #EAEEFD;
 		--red: #FF0003;
+		--lt-red: #ffd3d9;
 		--yellow: #FCFF9B;
-		--dk-yellow: #FFF91C;
-		--purple: #5F006C;
+		--dk-yellow: #f7f360;
+		--purple: #ac00b1;
 		--tr-purple: #5F006C1F;
 		--lt-purple: #fceaff;
+		--beige: #fffff7;
+		--dk-beige: #fdfbf0;
+		--green: #c8ef8e;
+		--lt-green: #dfff5e;
 
 		--ColorBg: white;
 		--ColorText: var(--indigo);
