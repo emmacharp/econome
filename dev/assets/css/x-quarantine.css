@@ -13,10 +13,6 @@ main>section>article>div {
 	contain: strict;
 }
 
-body>nav {
-	font-size: 0;
-}
-
 .has-js [data-parallax],
 .has-js body>nav {
 	animation: opacity 1200ms 400ms;
@@ -34,10 +30,6 @@ body>nav {
 
 .chain .variable.arrow:only-of-type {
 	--ArrowLine: 2px solid currentColor;
-}
-
-nav {
-	opacity: 0 !important;
 }
 
 .diagram .variable.arrow {
@@ -60,4 +52,18 @@ nav {
 
 .chain .arrow:after {
     width: initial !important;
+}
+
+:root {
+	--purple: #ac00b1;
+	--purple: #641677;
+	--purple: #7a0098;
+}
+
+main>section>section div header>* {
+	margin-top: 0;
+}
+
+main>section>section section header {
+	align-self: flex-end;
 }
