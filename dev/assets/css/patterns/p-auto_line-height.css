@@ -3,10 +3,10 @@
 	en choisissant manuellement les éléments qui seront touchés par les différents calculs. */
 /* Repose sur la présence des variables de thème */
 
-	p, ul, ol, span, small,
+	p, ul, ol, a, span, small,
 	h1, h2, h3, h4, h5, h6 {
 		--alh-factor: var(--Size, 1) * var(--ScaleLevel, 1) * var(--FontFactor, 1) * var(--RowUnit, 1rem);
-		--alh-threshold_1_5: var(--alh-multiplier) * .6525;
+		--alh-threshold_1_5: var(--alh-multiplier) * 1;
 		--alh-threshold_2: var(--alh-multiplier) * 1.625;
 		--alh-threshold_2_5: var(--alh-multiplier) * 1.825;
 		--alh-threshold_3: var(--alh-multiplier) * 2.25;
