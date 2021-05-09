@@ -2,7 +2,6 @@ main>section {
 	display: grid;
 	grid-template-columns: 1fr auto;
 	grid-template-rows: auto auto;
-	padding: var(--Row);
 	min-height: 100vh; /* À CHANGER DANS LE BON FICHIER */
 	align-content: center;
 }
@@ -18,24 +17,17 @@ main>section>article {
 	margin-bottom: 0;
 }
 
-main>h2 {
-	position: sticky;
-	top: var(--Row);
-	margin-bottom: calc(var(--Row) * 2);
-}
+
 
 main>section [data-parallax] {
 	transform: translate3d(0, calc( var(--scrollParallax) * 1px ), 0);
 	transition: none;
-	position: absolute;
-	top: 0;
-	right: 0;
-}
+ }
 
 main>section>:not(header)+div:last-child {
 	z-index: -1;
 	position: absolute;
-	top: calc(var(--Row) * 1.625);
+	top: 0;
 	right: 0;
 	bottom: calc(-1 * var(--Row) * 3);
 	left: 0;
@@ -47,6 +39,14 @@ main>section>:not(header)+div:last-child>svg {
 	color: var(--Color);
 	height: var(--Height);
 	width: var(--Width);
+	mix-blend-mode: multiply; /* ATTENTION ! performance : utiliser avec conteneur parent « isolation » */
+	position: absolute;
+	top: var(--Top, 0);
+	right: var(--Right, 0);
+}
+
+main>section>:not(header)+div:last-child {
+	isolation: isolate;
 }
 
 .basket {
@@ -54,56 +54,80 @@ main>section>:not(header)+div:last-child>svg {
 	--Width: clamp(200px, 50vw, 800px);
 }
 
-main>section [data-parallax] {
-	mix-blend-mode: multiply; /* ATTENTION ! performance : utiliser avec conteneur parent « isolation » */
-}
-
-main>section>:not(header)+div:last-child {
-	isolation: isolate;
-}
 
 main>section section svg {
 	height: 8ch;
 }
 
 main>section>aside {
-	display: flex;
-	align-items: center;
+
 	margin-left: auto;
 	margin-right: var(--Row);
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: max-content;
+	position: fixed;
+	z-index: 3;
+	margin: 0;
+	top: calc(var(--Row) * 2.5);
+	right: calc(var(--Row) * 1.5);
+	font-weight: 500;
+}
+
+main>section aside {
+	display: flex;
+	align-items: center;
+	align-self: center;
+	max-width: max-content;
+}
+
+main>section aside div>*+* {
+	margin-top: calc(var(--Row) * .5);
+}
+
+main>section aside>div:only-child {
+	padding: var(--Row);
+}
+
+main>section>aside q::first-line {
+	font-weight: 700;
+}
+
+main>section>aside q+cite {
+	margin-top: calc(var(--Row) * .25);
+}
+
+main>section>aside>div>cite {
+	font-weight: 400;
+	--ScaleLevel: var(--Base);
+}
+main>section aside>div {
+	max-width: 35ch;
+	margin: 0;
+	box-shadow: 0 2px 2px rgba(0,0,0,.075);
 }
 
 main>section aside>div {
-	background-color: var(--ColorAccent);
 	border-radius: 5px;
-	padding: calc(var(--Row) * .75);
+	padding: calc(var(--Row) * .5);
+	padding-left: calc(var(--Row) * 1.25);
+	margin: 0;
+	border: 1px solid var(--tr-purple);
+	background-color: var(--beige);
+	color: var(--ColorSupport);
+	--DivDisplay: block;
+}
+
+main>section aside>div>* {
+	display: block;
 }
 
 main>section aside svg {
 	position: relative;
-	height: calc(var(--Row) * 4);
-	margin-right: calc(-1 * var(--Row) * 2);
-}
-
-main>section aside svg+* {
-	overflow: hidden;
-	padding-left: calc(var(--Row) * 2);
-}
-
-@media (orientation: landscape) {
-	main>section {
-		padding-left: calc(var(--Row) * 3);
-	}
-}
-
-main>section>aside {
-	margin-top: var(--Row);
-	margin-bottom: var(--Row);
-	align-self: flex-start;
+	z-index: 1;
+	height: calc(var(--Row) * 3);
+	margin-right: calc(-1 * var(--Row) * .75);
+	flex-shrink: 0;
+	align-self: center;
+	filter: drop-shadow(0px 0px 2px rgba(255,255,255,1));
+	border-radius: 20px;
 }
 
 main>section>header>small:first-child {
@@ -116,9 +140,6 @@ main>section>article,
 main>section>header~:not(p),
 main>section>p:last-of-type {
 	margin-bottom: auto;
-}
-main>section>section>* {
-	/* display: inline-block; */
 }
 
 main>section>section>h2 {
@@ -154,16 +175,13 @@ details summary::marker {
 }
 
 main>section>*+* {
-	margin-top: var(--Row);
+	margin-top: calc(var(--Row) * 2);
 }
 
-main>section>section aside {
-	padding: var(--Row);
-	border-radius: 8px;
-	/* align-self: flex-start; */
-	background-color: var(--ColorBg);
-	background-image: linear-gradient(var(--tr-purple), var(--tr-purple) 100%);
-	--Color: var(--dk-brown);
+main>section>section aside>div {
+	border: 1px solid var(--tr-purple);
+	background-color: var(--lt-purple);
+	--Color: var(--ColorSupport);
 }
 
 main>section>section *:not(header)+*~aside {
@@ -212,7 +230,8 @@ main>section>section div div {
 	flex-grow: 4;
 }
 
-main>section>section div div~section {
+main>section>section div div~section, 
+main>section>section div div~* {
 	flex-grow: 4;
 }
 main>section>section>div>div {
