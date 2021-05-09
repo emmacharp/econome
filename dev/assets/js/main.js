@@ -4,7 +4,7 @@
 // Necessary DOM Elements
 
 	const sections = document.querySelectorAll('main>section');
-	const anchors = document.querySelectorAll('nav>a');
+	const anchors = document.querySelectorAll('nav a');
 	const wikiLinks = document.querySelectorAll('[data-wiki]');
 	const wikiViewer = document.querySelector('#wikiViewer');
 	const wikiDump = document.querySelector('#wikiDump');
@@ -12,6 +12,28 @@
 	const wiki = document.createElement('section');
 
 	wikiDump.appendChild(wiki);
+
+// Get Parents helper function
+	// https://gomakethings.com/how-to-get-all-parent-elements-with-vanilla-javascript/
+var getParents = function (elem, selector) {
+	// Set up a parent array
+	var parents = [];
+
+	// Push each parent element to the array
+	for ( ; elem && elem !== document; elem = elem.parentNode ) {
+		if (selector) {
+			if (elem.matches(selector)) {
+				parents.push(elem);
+			}
+			continue;
+		}
+		parents.push(elem);
+	}
+
+	// Return our parent array
+	return parents;
+
+};
 
 
 // Internal Navigation Behavior Function
@@ -31,21 +53,52 @@
 		items.forEach((entry) => {
 			const { isIntersecting , target } = entry;
 			const sectionIndex = [...sections].indexOf(target);
+			let elapsed;
+			let start;
+			let time = target.getAttribute('data-needed-time');
+			console.log('Je joue encore');
+			
 			if (isIntersecting) {
 				target.classList.remove('is-invisible');
+				time = target.getAttribute('data-needed-time');
+				if (time > 0) {
+					start = new Date().getTime();
+					target.setAttribute('data-start-time', start);
+				}
 				sections.forEach((item)=> {
 					if (item.classList.contains('is-active')) item.classList.remove('is-active');
 				});
 				target.classList.add('is-visible', 'is-active');
 				if (anchors.length) {
 					anchors.forEach((item)=> {
-						if (item.classList.contains('is-active')) item.classList.remove('is-active');
-						anchors[sectionIndex].classList.add('is-active');
+						let parentItems = getParents(item, 'li');
+						parentItems.forEach((parent)=> {
+							if (parent.classList.contains('has-active')) parent.classList.remove('has-active');
+						});
+
+						if (item.closest('li').classList.contains('is-active')) item.closest('li').classList.remove('is-active');
+						anchors[sectionIndex].closest('li').classList.add('is-active');
+						let activeParents = getParents(anchors[sectionIndex].closest('li').parentElement, 'li');
+						[...activeParents].forEach((parent)=> {
+							parent.classList.add('has-active');
+						});
 					});
 				}
 			} else {
 				target.classList.remove('is-visible');
 				target.classList.add('is-invisible');
+				if (time > 0) {
+					start = target.getAttribute('data-start-time') || new Date().getTime();
+					let now = new Date().getTime();
+					elapsed = now - start;
+					time = time - elapsed;
+					target.setAttribute('data-needed-time', time);
+					if (time < 0) {
+						target.classList.add('is-read');
+						console.log(anchors[sectionIndex]);
+						anchors[sectionIndex].closest('li').classList.add('is-read');
+					}
+				}
 			}
 		});
 	}
