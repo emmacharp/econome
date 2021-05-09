@@ -15,14 +15,16 @@
 					<p>Parce que oui, c'est plus complexe que ça (surprise ! ...mais pas tant quand même). Tout sera fait pour bien familiariser. Parce que oui, aussi, l'économique est familier. C'est de nos actions quotidiennes dont-il s'agit. <i>T'sais</i>.</p>
 				</div>
 				<aside>
-					<h5>Phrases creuses, vous dites ?</h5>
-					<ul>
-						<li>« L'achat local fait rouler notre économie ! »</li>
-						<li>« L'achat local crée des emplois ! »</li>
-						<li>« L'achat local nous enrichit ! »</li>
-						<li>« L'achat local est bon pour l'environnement ! »</li>
-						<li><i>et caetera</i></li>
-					</ul>
+					<div>
+						<h5>Phrases creuses, vous dites ?</h5>
+						<ul>
+							<li>« L'achat local fait rouler notre économie ! »</li>
+							<li>« L'achat local crée des emplois ! »</li>
+							<li>« L'achat local nous enrichit ! »</li>
+							<li>« L'achat local est bon pour l'environnement ! »</li>
+							<li><i>et caetera</i></li>
+						</ul>
+					</div>
 				</aside>
 			</div>
 		</section>
@@ -60,26 +62,27 @@
 					<p><b>Nous sommes deux amis et partenaires unis dans une quête de démystification économique.</b></p>
 					<p>Nous espérons communiquer l'analyse économique de manière à éclairer nos décisions communes. Exposer les implications de concepts et principes économiques et laisser le public « se faire une tête », comme on dit.</p>
 				</div>
-				<section>
-					<div class="grille">
+				<aside>
+					<symbol type="emma" class="cartoon_emma animated" />
+
+					<div>
 						<header>
-							<symbol type="emma" class="cartoon_emma animated" />
 							<h4>Marc-André</h4>
 							<small>concepteur éclectique</small>
 						</header>
 						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur corporis velit, consequatur maiores minus aut excepturi dolore magni quis debitis odit quisquam sequi ratione veniam rerum fuga, blanditiis sit deleniti.</p>
 					</div>
-				</section>
-				<section>
-					<div class="grille">
+				</aside>
+				<aside>
+					<symbol type="henri" class="cartoon_henri animated" />
+					<div>
 						<header>
-							<symbol type="henri" class="cartoon_henri animated" />
 							<h4>Henri</h4>
 							<small>économiste aguerri</small>
 						</header>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, rerum officiis est id. Natus ipsa, reprehenderit quo odio dolores molestiae repudiandae culpa in, neque illo iste dignissimos quas, voluptatibus quidem.</p>
 					</div>
-				</section>
+				</aside>
 			</div>
 		</section>
 		<section>
@@ -163,16 +166,16 @@
 			<fieldset>
 				<p>Vous savez que la bière (sans alcool, bien sûr) que vous tenez peut-être présentement dans votre main aura parcouru toute une chaîne d'acteurs endossant chacun un (ou des) rôle(s) nécessaires à la gorgée que vous prendrez.</p>
 				<div>
-					<label for="">
+					<label>
 						<input type="radio" name="chaine-biere" />
 						<span>Bien sûr que je savais !</span>
 					</label>
-					<label for="">
+					<label>
 						<input type="radio" name="chaine-biere" />
 						<span>Hmmm, j'y avais pas pensé</span>
 					</label>
-					<label for="chaine-biere">
-						<input type="radio" />
+					<label>
+						<input type="radio" name="chaine-biere" />
 						<span>Pourquoi aurais-je su ça ?</span>
 					</label>
 				</div>
@@ -218,7 +221,7 @@
 	</section>
 	<section id="role-detaillant">
 		<header>
-			
+
 			<h2>Le dépanneur « Commun+ »...</h2>
 			<p>Au coin de votre rue, vous vend votre bière québécoise de choix. Appelons-la, <span class="local">« La moyenne ».</span></p>
 		</header>	
@@ -249,7 +252,7 @@
 
 	<section id="role-grossiste">
 		<header>
-			
+
 			<h2>« Les Entrepôts Correct inc. »...</h2>
 			<p>Reçoit, entrepose puis transporte plusieurs palettes de « Moyenne ».</p>
 		</header>
@@ -288,7 +291,7 @@
 			</section>
 			<section>
 				<header>
-					
+
 					<h2>La brasserie « Pâpire »...</h2>
 					<p>Brasse depuis maintenant 20 ans « La Moyenne », à votre grand plaisir, Joey Joe Joe.</p>
 				</header>
@@ -316,7 +319,7 @@
 			</section>
 			<section>
 				<header>
-					
+
 					<h2>« Ok Hops » en Ontario...</h2>
 					<p>Vend les mêmes houblons ordinaires depuis les 20 ans d'existence de la brasserie « Pâpire ».</p>
 				</header>
@@ -344,7 +347,7 @@
 			</section>
 			<section>
 				<header>
-					
+
 					<h2>Et mon 10$ lui ?</h2>
 					<p>« Ok, vous dites-vous, Joey Joe Joe, ok, mais il arrive quoi à mon 10 piastres que je lui ai donné au dépanneur ? »</p>
 				</header>
@@ -353,7 +356,7 @@
 			</section>
 			<section>
 				<header>
-					
+
 					<h2>Le périple du 10 piastres</h2>
 					<p>Vous donnez 10$ au dépanneur « Commun+ »</p>
 				</header>
@@ -372,7 +375,7 @@
 			</section>
 			<section>
 				<header>
-					
+
 					<h2>Le périple du 10 piastres</h2>
 					<p>Le dépanneur se retourne et donne 9$ au manufacturier</p>
 				</header>
@@ -391,7 +394,7 @@
 			</section>
 			<section>
 				<header>
-					
+
 					<h2>Le périple du 10 piastres</h2>
 					<p>Le manufacturier se retourne de son tour puis donne 8$ à la brasserie.</p>
 				</header>
@@ -410,7 +413,7 @@
 			</section>
 			<section>
 				<header>
-					
+
 					<h2>Le périple du 10 piastres</h2>
 					<p>La brasserie, elle, se retourne plusieurs fois et donne au total 4$ à ses fournisseurs en tout genre.</p>
 				</header>
