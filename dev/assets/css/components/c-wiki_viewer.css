@@ -134,6 +134,10 @@
 	top: -.125em;
 }
 
+[data-wiki].is-read:after {
+	content: "✓";
+}
+
 :not(p)>[data-wiki]:after {
 	margin-left: 1em;
 	margin-right: 1em;
@@ -170,7 +174,6 @@ p>[data-wiki]:after {
 [id="wikiViewer"] input,
 [id="wikiViewer"] .wikidata-linkback,
 [id="wikiViewer"] .mw-editsection,
-[id="wikiViewer"] .mw-parser-output,
 [id="wikiViewer"] .noprint {
 	display: none;
 }
