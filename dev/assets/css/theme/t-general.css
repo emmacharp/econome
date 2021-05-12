@@ -3,6 +3,9 @@
 /* Enlever toutes marges */
 * { padding: 0; margin: 0; }
 
+/* Forcer tous les éléments, dont les contrôles
+ * à respecter les polices de caractères par défaut. */
+* { font-family: inherit; }
 
 /* Rythme des contenus ----------------------- */
 
