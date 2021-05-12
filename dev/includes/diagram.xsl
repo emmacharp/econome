@@ -115,7 +115,7 @@
 <xsl:template match="diagram">
 	<xsl:apply-templates select="." mode="include-once" />
 	<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))"></xsl:variable>
-	<article class="buying chain diagram" hx-get="diagrams.html" hx-select="#{$id}" hx-trigger="revealed" style="--total-chain-links: {@links};"></article>
+	<article class="buying chain diagram" hx-get="diagrams.html" hx-select="#{$id}" hx-trigger="load" style="--total-chain-links: {@links};"></article>
 </xsl:template>
 
 <!-- Pour intégrer les diagrammes au complet dans l'expérience, retirer le mode ci-dessous -->
