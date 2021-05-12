@@ -17,15 +17,23 @@
 
 	<xsl:template match="section" mode="main-content">
 		<xsl:apply-templates select="." mode="include-once"/>
+		<xsl:variable name="id" select="concat('id-', count(preceding-sibling::*))"></xsl:variable>
 		<xsl:variable name="wordcount" select="string-length(normalize-space(.)) - string-length(translate(normalize-space(.),' ','')) +1"/>
 		<xsl:variable name="needed-time" select="number($wordcount) div 1000 * 60000"/>
-		<section id="{@id}" data-wordcount="{$wordcount}" data-needed-time="{$needed-time}">
-			<xsl:apply-templates />
+		<section data-wordcount="{$wordcount}" data-needed-time="{$needed-time}">
+			<xsl:apply-templates select="@*" />
+			<xsl:attribute name="id">
+				<xsl:value-of select="$id"/>
+			</xsl:attribute>
+			<xsl:apply-templates/>
 		</section>
 	</xsl:template>
 
 	<xsl:template match="h2" mode="main-content">
-			<xsl:apply-templates select="." />
+		<xsl:variable name="id" select="concat('id-', count(preceding-sibling::*))"></xsl:variable>
+		<h2 id="{$id}">
+			<xsl:apply-templates />
+		</h2>
 	</xsl:template>
 
 	<xsl:template match="title" mode="main-content">
