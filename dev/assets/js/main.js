@@ -122,7 +122,7 @@ var getSiblings = function (elem) {
 					target.classList.add('is-complete');
 				}
 
-				if (anchorRef !== null) {
+				if (anchorRef.length > 0) {
 					const activeAnchor = [...anchors].filter(anchor => { return anchor.hash == '#'+itemId })[0];
 					const activeSectionClassList = target.classList;
 					activeAnchor.closest('li').className = activeSectionClassList;
