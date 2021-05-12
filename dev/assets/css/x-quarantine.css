@@ -67,3 +67,25 @@ main>section>section div header>* {
 main>section>section section header {
 	align-self: flex-end;
 }
+
+.sitename {
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: .73125em;
+	display: inline-block;
+	/* background-color: var(--dk-brown); */
+	/* border-radius: 5px; */
+	/* color: var(--beige); */
+	/* padding: .125em .25em; */
+}
+
+/* .sitename::first-letter { */
+/* 	line-height: 1; */
+/* 	display: inline-block; */
+/* 	text-shadow: 0px -3px 0px var(--beige), 0px -7px 0px currentColor; */
+/* } */
+
+h1+p {
+	font-weight: 700;
+	/* --ScaleLevel: var(--Huge); */
+}
