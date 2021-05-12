@@ -10,14 +10,14 @@
 /* Typographie basée sur les polices système ----------------------- */
 
 	:root { font-family: var(--BaseFontStack, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"); }
-	h1, h4 { font-family: var(--TitleFontStack, "Avenir Next", "Helevetica Neue", "Helvetica", "Segoe UI"); }
+	h1, h1+* { font-family: var(--TitleFontStack, "Avenir Next", "Helevetica Neue", "Helvetica", "Segoe UI"); }
 
 
 /* Distribution aux titres de l'échelle typographique ----------------------- */
 
 	h1 { --ScaleLevel: var(--Huge); --FontWeight: 700; }
 	h2 { --ScaleLevel: var(--Tallest); }
-	h3 { --ScaleLevel: var(--Taller); }
+	h3 { --ScaleLevel: var(--Tallest); }
 	h4 { --ScaleLevel: var(--Base); --FontWeight: 600; }
 	h5 { --ScaleLevel: var(--Base); }
 	h6 { --ScaleLevel: var(--Short); }

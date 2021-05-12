@@ -18,6 +18,41 @@ exclude-result-prefixes="ext msxsl svg math">
 		</xsl:copy>
 	</xsl:template>
 
+	<xsl:template match="text()[contains(.,'Joey Joe Joe')]">
+		<xsl:if test="substring-before(., 'Joey Joe Joe')">
+			<xsl:copy-of select="substring-before(., 'Joey Joe Joe')"></xsl:copy-of>
+		</xsl:if>
+		<span class="username">Joey Joe Joe</span>
+		<xsl:if test="substring-after(., 'Joey Joe Joe')">
+			<xsl:copy-of select="substring-after(., 'Joey Joe Joe')"></xsl:copy-of>
+		</xsl:if>
+
+	</xsl:template>
+	<xsl:template match="diagram/agent/@name">
+		<span><xsl:value-of select="." /></span>
+	</xsl:template>
+	<xsl:template match="diagram/agent/@name[contains(.,'Joey Joe Joe')]">
+		<xsl:if test="substring-before(., 'Joey Joe Joe')">
+			<xsl:copy-of select="substring-before(., 'Joey Joe Joe')"></xsl:copy-of>
+		</xsl:if>
+			
+		<span class="username">Joey Joe Joe</span>
+		<xsl:if test="substring-after(., 'Joey Joe Joe')">
+			<xsl:copy-of select="substring-after(., 'Joey Joe Joe')"></xsl:copy-of>
+		</xsl:if>
+
+	</xsl:template>
+
+	<xsl:template match="text()[contains(.,'Econome')]">
+		<xsl:if test="substring-before(., 'Econome')">
+			<xsl:copy-of select="substring-before(., 'Econome')"></xsl:copy-of>
+		</xsl:if>
+		<span class="sitename">Econome</span>
+		<xsl:if test="substring-after(., 'Econome')">
+			<xsl:copy-of select="substring-after(., 'Econome')"></xsl:copy-of>
+		</xsl:if>
+
+	</xsl:template>
 	<xsl:template match="/">
 		<html lang="fr">
 			<xsl:call-template name="head"/>
@@ -95,7 +130,7 @@ exclude-result-prefixes="ext msxsl svg math">
 			<xsl:apply-templates select="@local|@value|@paid" />
 			<article>
 				<xsl:apply-templates select="ext:node-set($svg-elements)//svg:symbol[generate-id() = generate-id(key('symbol-type', current()/@type)[1])]" />
-				<h4><xsl:value-of select="@name" /></h4>
+				<h4><xsl:apply-templates select="@name" /></h4>
 			</article>
 			<xsl:apply-templates select="@foreign" />
 		</div>
@@ -186,7 +221,7 @@ exclude-result-prefixes="ext msxsl svg math">
 <xsl:template match="diagram">
 	<xsl:apply-templates select="." mode="include-once" />
 	<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))"></xsl:variable>
-	<article class="buying chain diagram" hx-get="diagrams.html" hx-select="#{$id}" hx-trigger="revealed" style="--total-chain-links: {@links};"></article>
+	<article class="buying chain diagram" hx-get="diagrams.html" hx-select="#{$id}" hx-trigger="load" style="--total-chain-links: {@links};"></article>
 </xsl:template>
 
 <!-- Pour intégrer les diagrammes au complet dans l'expérience, retirer le mode ci-dessous -->
@@ -305,20 +340,23 @@ exclude-result-prefixes="ext msxsl svg math">
 		</nav>
 	</xsl:template>
 	<xsl:template match="section" mode="internal-navigation">
-		<li>
-			<a href="#{@id}">
-				<xsl:value-of select="header/*[name() = 'h2' or name() = 'h3']" />
-			</a>
-			<ul>
-			</ul>
-
-		</li>
+		<xsl:if test=".//h3">
+			<xsl:variable name="id" select="concat('id-', count(preceding-sibling::*))"></xsl:variable>
+			<li>
+				<xsl:apply-templates select="@*"/>
+				<a href="#{$id}">
+					<xsl:apply-templates select="header/*[name() = 'h2' or name() = 'h3']/text()" />
+				</a>
+			</li>
+		</xsl:if>
 		<xsl:apply-templates select="following-sibling::*[1][name() = 'section']" mode="internal-navigation"/>
 	</xsl:template>
 	<xsl:template match="h2" mode="internal-navigation">
+		<xsl:variable name="id" select="concat('id-', count(preceding-sibling::*))"></xsl:variable>
 		<li>
-			<a href="#{@id}">
-				<xsl:value-of select="." />
+			<xsl:apply-templates select="@*"/>
+			<a href="#{$id}">
+				<xsl:apply-templates select="text()" />
 			</a>
 			<ul>
 				<xsl:apply-templates select="following-sibling::*[1][name() = 'section']" mode="internal-navigation"/>
@@ -343,15 +381,23 @@ exclude-result-prefixes="ext msxsl svg math">
 
 	<xsl:template match="section" mode="main-content">
 		<xsl:apply-templates select="." mode="include-once"/>
+		<xsl:variable name="id" select="concat('id-', count(preceding-sibling::*))"></xsl:variable>
 		<xsl:variable name="wordcount" select="string-length(normalize-space(.)) - string-length(translate(normalize-space(.),' ','')) +1"/>
 		<xsl:variable name="needed-time" select="number($wordcount) div 1000 * 60000"/>
-		<section id="{@id}" data-wordcount="{$wordcount}" data-needed-time="{$needed-time}">
-			<xsl:apply-templates />
+		<section data-wordcount="{$wordcount}" data-needed-time="{$needed-time}">
+			<xsl:apply-templates select="@*" />
+			<xsl:attribute name="id">
+				<xsl:value-of select="$id"/>
+			</xsl:attribute>
+			<xsl:apply-templates/>
 		</section>
 	</xsl:template>
 
 	<xsl:template match="h2" mode="main-content">
-			<xsl:apply-templates select="." />
+		<xsl:variable name="id" select="concat('id-', count(preceding-sibling::*))"></xsl:variable>
+		<h2 id="{$id}">
+			<xsl:apply-templates />
+		</h2>
 	</xsl:template>
 
 	<xsl:template match="title" mode="main-content">

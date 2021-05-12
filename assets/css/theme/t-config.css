@@ -18,7 +18,7 @@
 		--blue: #2B46BD;
 		--lt-blue: #EAEEFD;
 		--red: #FF0003;
-		--lt-red: #ffd3d9;
+		--lt-red: #ffceda;
 		--yellow: #FCFF9B;
 		--dk-yellow: #f7f360;
 		--purple: #ac00b1;
@@ -36,6 +36,7 @@
 		--ColorSupport: var(--purple);
 		--ColorAccent: var(--yellow);
 		--ColorDkAccent: var(--dk-yellow);
+		--ColorBgControls: var(--ColorAccent);
 	}
 
 /* Propriétés supplémentaires configurables */
