@@ -29,6 +29,41 @@ exclude-result-prefixes="ext msxsl svg math">
 		</xsl:copy>
 	</xsl:template>
 
+	<xsl:template match="text()[contains(.,'Joey Joe Joe')]">
+		<xsl:if test="substring-before(., 'Joey Joe Joe')">
+			<xsl:copy-of select="substring-before(., 'Joey Joe Joe')"></xsl:copy-of>
+		</xsl:if>
+		<span class="username">Joey Joe Joe</span>
+		<xsl:if test="substring-after(., 'Joey Joe Joe')">
+			<xsl:copy-of select="substring-after(., 'Joey Joe Joe')"></xsl:copy-of>
+		</xsl:if>
+
+	</xsl:template>
+	<xsl:template match="diagram/agent/@name">
+		<span><xsl:value-of select="." /></span>
+	</xsl:template>
+	<xsl:template match="diagram/agent/@name[contains(.,'Joey Joe Joe')]">
+		<xsl:if test="substring-before(., 'Joey Joe Joe')">
+			<xsl:copy-of select="substring-before(., 'Joey Joe Joe')"></xsl:copy-of>
+		</xsl:if>
+			
+		<span class="username">Joey Joe Joe</span>
+		<xsl:if test="substring-after(., 'Joey Joe Joe')">
+			<xsl:copy-of select="substring-after(., 'Joey Joe Joe')"></xsl:copy-of>
+		</xsl:if>
+
+	</xsl:template>
+
+	<xsl:template match="text()[contains(.,'Econome')]">
+		<xsl:if test="substring-before(., 'Econome')">
+			<xsl:copy-of select="substring-before(., 'Econome')"></xsl:copy-of>
+		</xsl:if>
+		<span class="sitename">Econome</span>
+		<xsl:if test="substring-after(., 'Econome')">
+			<xsl:copy-of select="substring-after(., 'Econome')"></xsl:copy-of>
+		</xsl:if>
+
+	</xsl:template>
 	<xsl:template match="/">
 		<html lang="fr">
 			<xsl:call-template name="head"/>

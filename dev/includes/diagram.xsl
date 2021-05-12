@@ -24,7 +24,7 @@
 			<xsl:apply-templates select="@local|@value|@paid" />
 			<article>
 				<xsl:apply-templates select="ext:node-set($svg-elements)//svg:symbol[generate-id() = generate-id(key('symbol-type', current()/@type)[1])]" />
-				<h4><xsl:value-of select="@name" /></h4>
+				<h4><xsl:apply-templates select="@name" /></h4>
 			</article>
 			<xsl:apply-templates select="@foreign" />
 		</div>
