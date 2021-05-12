@@ -36,14 +36,7 @@ var getParents = function (elem, selector) {
 };
 
 
-// Internal Navigation Behavior Function
 
-	const onAnchorClick = (e) => {
-		const index = [...anchors].indexOf(e.target);
-		document.querySelector('main').scrollTo({
-			left: index * window.innerWidth,
-			top: index * window.innerHeight
-		});
 	}
 
 
@@ -183,9 +176,6 @@ var getParents = function (elem, selector) {
 		});
 
 
-		// Nav Events
-		anchors.forEach((item) => {
-			item.addEventListener('click', onAnchorClick);
 		});
 
 		
