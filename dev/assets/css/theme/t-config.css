@@ -36,6 +36,7 @@
 		--ColorSupport: var(--purple);
 		--ColorAccent: var(--yellow);
 		--ColorDkAccent: var(--dk-yellow);
+		--ColorBgControls: var(--ColorAccent);
 	}
 
 /* Propriétés supplémentaires configurables */
