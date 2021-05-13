@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="assets/css/theme/t-typography.css"/>
 		<link rel="stylesheet" href="assets/css/theme/t-general.css"/>
 		<link rel="stylesheet" href="assets/css/theme/t-special.css"/>
+		<link rel="stylesheet" href="assets/css/theme/t-controls.css"/>
 
 		<link rel="stylesheet" href="assets/css/components/c-arrows.css"/>
 		<!-- <link rel="stylesheet" href="assets/css/components/c-cartoon_characters.css" /> -->

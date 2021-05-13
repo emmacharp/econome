@@ -50,21 +50,31 @@ nav a {
 }
 
 nav a {
-	background-color: var(--lt-red);
+	background-color: var(--ltst-primary);
 }
 
-nav li.is-read>a {
+nav li.is-complete>a {
 	background-color: var(--lt-green);
 }
 
+nav li.is-incomplete>a {
+	background-color: var(--lt-red);
+}
+
 nav ul ul li.is-complete>a:before {
-	content: "✓";
+	content: "•";
 	background-image: none;
 	font-weight: 700;
 	color: var(--dk-brown);
 	line-height: 1;
 	vertical-align: top;
-	text-indent: 1px;
+	text-align: center;
+	text-indent: -.25em;
+}
+
+nav li.has-active li.is-complete>a:before {
+	content: "✓";
+	font-size: .8em;
 }
 
 nav a {
@@ -83,12 +93,14 @@ nav a::before {
 
 nav a:before {
 	flex-shrink: 0;
-	mix-blend-mode: difference; /* WATCH OUT ! */
 	z-index: 1;
 	position: relative;
 	background-repeat: no-repeat;
 	background-size: 1.125rem;
 	background-image: var(--base64-book);
+}
+nav li:not(.is-active)>a:before {
+	opacity: 0.5;
 }
 
 nav [data-type=question]>a:before {
@@ -107,6 +119,8 @@ nav>ul>li>a:before {
 
 nav>ul>li.is-complete>a:before {
 	background-image: var(--base64-thumb);
+	background-position: 70% center;
+	background-size: 140%;
 }
 
 nav li.is-active>a:before {
@@ -125,12 +139,12 @@ nav li li.is-active~* a,
 nav li.has-active~li li a {
 }
 
-nav li.has-active li.is-read a {
+nav li.has-active li.is-complete a {
 	background-color: var(--dk-yellow);
 }
 
 nav li.has-active>a {
-	background-color: var(--green);
+	background-color: var(--dk-yellow);
 }
 
 nav li.is-active>a {
