@@ -22,7 +22,7 @@ main>section>article {
 main>section [data-parallax] {
 	transform: translate3d(0, calc( var(--scrollParallax) * 1px ), 0);
 	transition: none;
- }
+}
 
 main>section>:not(header)+div:last-child {
 	z-index: -1;
@@ -50,7 +50,7 @@ main>section>:not(header)+div:last-child {
 }
 
 .basket {
-	--Height: clamp(500px, 200vh, 1400px); 
+	--Height: clamp(500px, 200vh, 1400px);
 	--Width: clamp(200px, 50vw, 800px);
 }
 
@@ -241,7 +241,7 @@ main>section>section div div {
 	flex-grow: 4;
 }
 
-main>section>section div div~section, 
+main>section>section div div~section,
 main>section>section div div~* {
 	flex-grow: 4;
 }
@@ -283,7 +283,7 @@ main>section>section div>form {
 }
 
 
-main>section>.diagram, 
+main>section>.diagram,
 main>section>.diagram>div {
 	width: min(120vh, 52vw);
 }
