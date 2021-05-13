@@ -83,7 +83,6 @@ nav a::before {
 
 nav a:before {
 	flex-shrink: 0;
-	mix-blend-mode: difference; /* WATCH OUT ! */
 	z-index: 1;
 	position: relative;
 	background-repeat: no-repeat;
