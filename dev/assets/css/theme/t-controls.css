@@ -1,3 +1,5 @@
+nav a,
+.trigger-internal-nav::before,
 fieldset span,
 fieldset input,
 aside>details>*,
@@ -7,20 +9,44 @@ fieldset input[type=radio]+span {
 	background-color: var(--ColorBgControls);
 }
 
-fieldset:valid,
-[data-wiki].is-read {
-	--ColorBgControls: var(--lt-green);
-}
-
+nav li.is-incomplete>a,
 .is-read fieldset:invalid,
 .is-read [data-wiki]:not(.is-read) {
 	--ColorBgControls: var(--lt-red);
 }
 
+nav a,
+nav li.has-active~* a,
+nav li.is-active~* a {
+	--ColorBgControls: var(--ltst-primary);
+}
+
+.trigger-internal-nav::before {
+	--ColorBgControls: var(--ltr-primary);
+}
+
+nav li.has-active>a,
+nav li.has-active li.is-complete:not(.is-active) a {
+	--ColorBgControls: var(--dk-yellow);
+}
+
+
+nav li.is-complete>a,
+fieldset:valid,
+[data-wiki].is-read {
+	--ColorBgControls: var(--lt-green);
+}
+
+nav li.is-active>a {
+	--ColorBgControls: var(--lt-purple);
+}
+
+
 aside>details>*,
 [data-wiki]:after,
 [id="wikiViewer"] [id="wikiViewerClose"]:after,
-fieldset input[type=radio]+span {
+fieldset input[type=radio]+span,
+.trigger-internal-nav::before {
 	border-radius: .25em;
 	border: 1px solid var(--dk-yellow);
 	border-top-width: 1px;

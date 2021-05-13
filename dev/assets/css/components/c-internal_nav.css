@@ -3,7 +3,7 @@
 	se retrouve dans « l-master_composition.css » */
 
 nav {
-	background-color: var(--ColorAccent);
+	background-color: var(--ltst-primary);
 	display: flex;
 	flex-direction: column;
 	overflow: auto;
@@ -47,23 +47,10 @@ nav a {
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
+	box-sizing: border-box;
 }
 
-nav a {
-	background-color: var(--ltst-primary);
-}
-
-nav li.is-complete>a {
-	background-color: var(--lt-green);
-}
-
-nav li.is-incomplete>a {
-	background-color: var(--lt-red);
-}
-
-nav ul ul li.is-complete>a:before {
-	content: "•";
-	background-image: none;
+nav ul li li>a:before {
 	font-weight: 700;
 	color: var(--dk-brown);
 	line-height: 1;
@@ -71,8 +58,13 @@ nav ul ul li.is-complete>a:before {
 	text-align: center;
 	text-indent: -.25em;
 }
+nav ul li.is-complete li.is-complete>a:before {
+	content: "•";
+	
+}
 
-nav li.has-active li.is-complete>a:before {
+nav li.is-complete>a:before {
+	background-image: none;
 	content: "✓";
 	font-size: .8em;
 }
@@ -123,34 +115,6 @@ nav>ul>li.is-complete>a:before {
 	background-size: 140%;
 }
 
-nav li.is-active>a:before {
-	content: "";
-}
-
-nav li.is-active~* a,
-nav li.is-active li a,
-nav li.has-active~* a,
-nav li.has-active li.is-active~li a {
-	background-color: var(--ltst-primary);
-	color: var(--brown);
-}
-
-nav li li.is-active~* a,
-nav li.has-active~li li a {
-}
-
-nav li.has-active li.is-complete a {
-	background-color: var(--dk-yellow);
-}
-
-nav li.has-active>a {
-	background-color: var(--dk-yellow);
-}
-
-nav li.is-active>a {
-	background-color: var(--ColorAccent);
-}
-
 @media (orientation: portrait) {
 	nav a {
 		flex-shrink: 0;
@@ -178,11 +142,6 @@ nav li.is-active>a {
 	font-size: 9px;
 	line-height: 1.75em;
 	margin-left: -.5rem;
-	background-color: var(--ltr-primary);
-	border: 1px solid var(--ltst-primary);
-	border-top-width: 1px;
-	border-bottom-width: 2px;
-	box-shadow: 0 1px 2px  var(--purple);
 	position: relative;
 	display: block;
 	width: 1.25rem;
