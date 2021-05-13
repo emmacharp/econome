@@ -258,6 +258,7 @@ main>section h1 {
 }
 aside details {
 	max-width: 100%;
+	margin-top: calc(-1 * var(--Row) * 2.325);
 }
 
 aside details[open] {
