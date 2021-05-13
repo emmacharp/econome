@@ -153,9 +153,9 @@ main>section p>b:only-child {
 }
 
 aside>details>* {
-	padding: calc(var(--Row) * .5);
 	background-color: var(--yellow);
 	border-radius: 5px;
+	padding: calc(var(--Row) * .25) calc(var(--Row) * .5);
 	line-height: 1;
 	position: relative;
 }
