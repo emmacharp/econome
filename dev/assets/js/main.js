@@ -125,17 +125,21 @@ var getSiblings = function (elem) {
 				if (anchorRef.length > 0) {
 					const activeAnchor = [...anchors].filter(anchor => { return anchor.hash == '#'+itemId })[0];
 					const activeSectionClassList = target.classList;
+					let activeParents = getParents(activeAnchor.closest('li').parentElement, 'li');
 					activeAnchor.closest('li').className = activeSectionClassList;
 					if (target.tagName !== 'h2') {
 						const activeAnchorSiblings = getSiblings(activeAnchor.closest('li'));
 						const completedSiblings = activeAnchorSiblings.filter(sibling => { return sibling.matches('.is-complete'); });
 						console.log(completedSiblings, activeAnchorSiblings);
-						if (completedSiblings.length === activeAnchorSiblings.length) {
-							let activeParents = getParents(activeAnchor.closest('li').parentElement, 'li');
+						if (target.matches('.is-complete') && completedSiblings.length === activeAnchorSiblings.length) {
 							[...activeParents].forEach((parent)=> {
 								parent.classList.add('is-complete');
 							});
 
+						} else {
+							[...activeParents].forEach((parent)=> {
+								parent.classList.add('is-incomplete');
+							});
 						}
 					}
 
