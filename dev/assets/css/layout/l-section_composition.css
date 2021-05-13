@@ -156,6 +156,7 @@ aside>details>* {
 	padding: calc(var(--Row) * .5);
 	background-color: var(--yellow);
 	border-radius: 5px;
+	line-height: 1;
 	position: relative;
 }
 
