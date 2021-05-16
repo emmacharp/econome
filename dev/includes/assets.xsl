@@ -21,7 +21,6 @@
 		<!-- <link rel="stylesheet" href="assets/css/patterns/p-stacking_slides.css"/> -->
 
 		<link rel="stylesheet" href="assets/css/layout/l-master_composition.css"/>
-		<link rel="stylesheet" href="assets/css/x-quarantine.css"/>
 		<!-- <link rel="stylesheet" href="assets/css/x-dev.css"> -->
 		</xsl:template>
 
@@ -33,6 +32,7 @@
 		<xsl:template name="scripts">
 			<script src="assets/js/htmx.min.js"></script>
 			<script src="assets/js/main.js" defer="defer"></script>
+			<link rel="stylesheet" href="assets/css/x-quarantine.css"/>
 		</xsl:template>
 
 </xsl:stylesheet>
