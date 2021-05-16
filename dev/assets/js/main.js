@@ -55,7 +55,7 @@ var getSiblings = function (elem) {
 };
 
 // Sections Observer with Binding to Internal Navigation Anchors Function
-
+	let isLeaving = false; //https://www.smashingmagazine.com/2018/01/deferring-lazy-loading-intersection-observer-api/
 	const onSectionObserved = (items, observer) => {
 		items.forEach((entry) => {
 			const { isIntersecting , target } = entry;
@@ -68,6 +68,7 @@ var getSiblings = function (elem) {
 			let time = target.getAttribute('data-needed-time');
 			
 			if (isIntersecting) {
+				isLeaving = true;
 				target.classList.remove('is-invisible');
 				time = target.getAttribute('data-needed-time');
 				if (time > 0) {
@@ -94,7 +95,8 @@ var getSiblings = function (elem) {
 						});
 					});
 				}
-			} else {
+			} else if (isLeaving) {
+				isLeaving = false;
 				target.classList.remove('is-visible');
 				target.classList.add('is-invisible');
 				if (time > 0) {
