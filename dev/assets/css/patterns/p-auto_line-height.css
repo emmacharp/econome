@@ -27,7 +27,7 @@
 		--is-1-row: calc(var(--Row) - (var(--switch-1)));
 		--alh-line_height: calc(var(--is-1-row, var(--Row)) + (var(--is-1_5-row, 0px) * 1.5) + (var(--is-2-rows, 0px) * 2) + (var(--is-2_5-rows, 0px) * 2.5) + (var(--is-3-rows, 0px) * 3));
 		
-		--LineHeight: calc(var(--alh-line_height, 1.5625) * var(--LineHeightFactor, 1)); }
+		--LineHeight: calc(var(--alh-line_height, 1.5625) * var(--LineHeightFactor, 1) * var(--Size, 1)); }
 
 	h1, h2, p {
 		--is-3-rows: var(--magic-3);
