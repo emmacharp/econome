@@ -101,7 +101,7 @@
 }
 
 .chain section>div *+* {
-	margin-top: calc(var(--Row) / 2);
+	margin-top: calc(var(--Row) / 2 * var(--Size));
 }
 
 .chain .product .icon {
@@ -151,8 +151,8 @@
 	--ScaleLevel: var(--Tallest);
 	border-radius: 50%;
 	--Color: white;
-	height: calc(var(--Row) * 2);
-	width: calc(var(--Row) * 2);
+	height: calc(var(--Row) * 2 * var(--Size));
+	width: calc(var(--Row) * 2 * var(--Size));
 	padding: 2.5vw;
 	box-sizing: border-box;
 	flex-shrink: 0;
@@ -284,8 +284,8 @@
 	}
 
 	.chain .icon+* {
-		margin-left: calc(-1 * var(--Row));
-		margin-right: calc(-1 * var(--Row));
+		margin-left: calc(-1 * var(--Row) * var(--Size));
+		margin-right: calc(-1 * var(--Row) * var(--Size));
 	}
 }
 
