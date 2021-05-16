@@ -37,7 +37,7 @@ fieldset:valid,
 	--ColorBgControls: var(--lt-green);
 }
 
-nav li.is-active>a {
+nav li.has-active>a {
 	--ColorBgControls: var(--lt-purple);
 }
 
