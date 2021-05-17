@@ -210,7 +210,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
 	// Sections Observer
 	const sectionObserver = new IntersectionObserver(onSectionObserved, {
-		rootMargin: "-45% 0% -55% 0%"
+		rootMargin: "-45% -55% -55% -45%"
 	});
 	sections.forEach((item, index) => {
 		sectionObserver.observe(item);
