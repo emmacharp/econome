@@ -1,8 +1,7 @@
 
 /* Adaptation de la typographie ----------------------- */
 
-	@media (max-width: 40em) { :root { --Scale: var(--MajorSecond); } }
-	@media (min-width: 40em) and (max-width: 80em) { :root { --Scale: var(--MajorThird); } }
+	@media (max-width: 80em) { :root { --Scale: var(--MajorThird); } }
 	@media (min-width: 80em) and (max-width: 100em) { :root { --Scale: var(--PerfectFourth); } }
 	@media (min-width: 100em) { :root { --Scale: var(--AugmentedFourth); } }
 
