@@ -8,7 +8,7 @@
 		--alh-factor: var(--Size, 1) * var(--ScaleLevel, 1) * var(--FontFactor, 1) * var(--RowUnit, 1rem);
 		--alh-threshold_1_5: var(--alh-multiplier) * 1;
 		--alh-threshold_2: var(--alh-multiplier) * 1.625;
-		--alh-threshold_2_5: var(--alh-multiplier) * 1.825;
+		--alh-threshold_2_5: var(--alh-multiplier) * 1.925;
 		--alh-threshold_3: var(--alh-multiplier) * 2.25;
 		--alh-multiplier: var(--alh-factor) - var(--Row);
 		--magic-1: clamp(0px, calc((var(--alh-threshold_1)) * 9999999), var(--Row));
