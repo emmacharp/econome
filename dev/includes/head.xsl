@@ -9,7 +9,7 @@
 			<meta name="apple-mobile-web-app-status-bar-style" content="#ff0000"/>
 			<link rel="icon" href="data:;base64,iVBORwOKGO=" />
 
-			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<meta name="viewport" content="width=device-width, user-scalable=no"/>
 
 			<xsl:call-template name="head-css"></xsl:call-template>		
 		</head>
