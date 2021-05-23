@@ -25,9 +25,8 @@ nav li.is-active~* a {
 	--ColorBgControls: var(--ltr-primary);
 }
 
-nav li.has-active>a,
 nav li.has-active li.is-complete:not(.is-active) a {
-	--ColorBgControls: var(--dk-yellow);
+	--ColorBgControls: var(--lt-yellow);
 }
 
 
@@ -37,7 +36,7 @@ fieldset:valid,
 	--ColorBgControls: var(--lt-green);
 }
 
-nav li.has-active>a {
+nav li.is-active>a {
 	--ColorBgControls: var(--lt-purple);
 }
 
