@@ -20,6 +20,15 @@
 
 <xsl:template match="diagram/agent">
 	<section class="link agent {@type} {@class}" style="--link-position: {count(preceding-sibling::*) + 1};">
+		<xsl:if test="@goods">
+
+			<aside class="goods-list">
+				<input type="checkbox" name="goods-trigger" />
+				<div hx-get="goods.html" hx-trigger="load" hx-select="#goods-list" hx-swap="outerHTML">
+				</div>
+			</aside>
+		</xsl:if>
+
 		<div>
 			<xsl:apply-templates select="@local|@value|@paid" />
 			<article>
