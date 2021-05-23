@@ -288,7 +288,7 @@ main>section>section div>form {
 	padding-top: 1.25em;
 }
 
-@media (min-height: 40em) (min-width: 50em) {
+@media (min-height: 40em) and (min-width: 50em) {
 	main>section>.diagram,
 	main>section>.diagram>div {
 		width: min(120vh, 52vw);
