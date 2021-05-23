@@ -7,6 +7,7 @@
 	main>h2 {
 		position: sticky;
 		top: 0;
+		left: 0;
 		padding-top: var(--Row);
 		margin-bottom: calc(var(--Row) * 2);
 		background-color: var(--ColorBg);
@@ -35,24 +36,14 @@
 		box-sizing: border-box;
 		position: relative;
 		padding: var(--Row);
+		padding-top: calc(var(--Row) * 2);
+		margin: 0;
 	}
 
 	main>section:not(.is-active)>article,
 	main>section:not(.is-active)>aside {
 		opacity: 0;
 		pointer-events: none;
-	}
-
-	body>nav {
-		box-sizing: border-box;
-		position: sticky;
-		flex-shrink: 0;
-	}
-
-	body>nav {
-		height: 100vh;
-		position: sticky;
-		top: 0;
 	}
 
 	main {
@@ -78,6 +69,7 @@
 		/* Previent le glitchy bouncing
 		dans Safari */
 		overflow: hidden;
+		flex-direction: column;
 	}
 
 	main { 
@@ -86,6 +78,10 @@
 		flex-basis: 0;
 		flex-direction: row;
 		scroll-snap-type: x mandatory;
+	}
+
+	main>h2 {
+		display: none;
 	}
 
 	main>section {
@@ -97,6 +93,16 @@
 		overflow-y: auto;
 		overflow-x: hidden;
 	}
+	
+	nav {
+		bottom: 0;
+		height: calc(var(--Row) * 1.75);
+		top: auto;
+		left: 0;
+		right: 0;
+		order: 1;
+		z-index: 4;
+	}
 }
 
 @media (orientation: landscape) {
@@ -105,9 +111,17 @@
 	}
 
 	main>section {
-		min-height: calc(100vh + var(--Row) - var(--V_GridUnitRest, 0));
+		min-height: calc(100vh - var(--V_GridUnitRest, 0vh));
 	}
-
+	
+	body>nav {
+		box-sizing: border-box;
+		position: sticky;
+		flex-shrink: 0;
+		height: 100vh;
+		position: sticky;
+		top: 0;
+	}
 
 	body>nav~main {
 		padding-left: var(--Row);
