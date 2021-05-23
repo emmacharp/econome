@@ -141,13 +141,6 @@ main>section>header>small:first-child {
 	font-weight: 700;
 }
 
-main>section>header>:last-child,
-main>section>article,
-main>section>header~:not(p),
-main>section>p:last-of-type {
-	margin-bottom: auto;
-}
-
 main>section>section>h2 {
 	display: block;
 	column-span: all;
