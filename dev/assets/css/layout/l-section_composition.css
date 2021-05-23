@@ -125,7 +125,7 @@ main>section aside>div>* {
 	display: block;
 }
 
-main>section aside svg {
+main>section aside>svg[class*="cartoon"] {
 	position: relative;
 	z-index: 1;
 	height: calc(var(--Row) * 3);
