@@ -40,7 +40,7 @@ hr {
 }
 
 /* Préparer les <symbol> à être manipulés */
-use { fill: currentColor; }
+use, svg, path { fill: inherit; }
 
 /* Icônes intégrés dans le texte */
 i>svg {
@@ -49,4 +49,12 @@ i>svg {
 	display: inline-block;
 }
 
-p { max-width: 65ch; }
+/* Largeur maximale générique 
+ * pour quelconque paragraphe */
+p{ max-width: 65ch; }
+
+/* Désactiver le délai sur iOS 
+ * lorsqu'on tape sur un élément */
+@media (hover:none) {
+	* { touch-action: manipulation; }
+}

@@ -1,8 +1,7 @@
 
 /* Adaptation de la typographie ----------------------- */
 
-	@media (max-width: 40em) { :root { --Scale: var(--MajorSecond); } }
-	@media (min-width: 40em) and (max-width: 80em) { :root { --Scale: var(--MajorThird); } }
+	@media (max-width: 80em) { :root { --Scale: var(--MajorThird); } }
 	@media (min-width: 80em) and (max-width: 100em) { :root { --Scale: var(--PerfectFourth); } }
 	@media (min-width: 100em) { :root { --Scale: var(--AugmentedFourth); } }
 
@@ -18,9 +17,9 @@
 	h1 { --ScaleLevel: var(--Huge); --FontWeight: 700; }
 	h2 { --ScaleLevel: var(--Tallest); }
 	h3 { --ScaleLevel: var(--Tallest); }
-	h4 { --ScaleLevel: var(--Base); --FontWeight: 600; }
-	h5 { --ScaleLevel: var(--Base); }
-	h6 { --ScaleLevel: var(--Short); }
+	h4 { --ScaleLevel: var(--Base); --FontWeight: 600; --LineHeightFactor: .75; }
+	h5 { --ScaleLevel: var(--Base); --LineHeightFactor: .75; }
+	h6 { --ScaleLevel: var(--Short); --LineHeightFactor: .75; }
 
 
 /* Styles typograhpiques particuliers -----------------------  */
@@ -36,7 +35,8 @@
 		--FontWeight: 600;
 		--ScaleLevel: var(--Taller); }
 
-	main>section aside {
+	main>section>aside,
+	main>section>section aside {
 		--ScaleLevel: var(--Short);
 		--LineHeightFactor: .75; }
 

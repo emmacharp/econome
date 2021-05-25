@@ -7,30 +7,48 @@
 	z-index: 2;
 }
 
-.chain>div {
-	--SecurityColCount: 4;
-	--SecurityRowCount: 2;
-	--TotalElements: calc(var(--total-chain-links) * 2 - 1);
-	--ColumnCount: calc(var(--TotalElements) + var(--SecurityColCount));
-	--RowCount: calc(var(--TotalElements) + var(--SecurityRowCount));
-	display: grid;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	grid-template: repeat(var(--ColumnCount), minmax(0, 1fr)) / repeat(var(--RowCount), minmax(0, 1fr));
+@media (orientation: portrait) {
+	
+	.chain {
+		--Size: .6;
+		width: 100%;
+		flex-shrink: 0;
+	}
+
+	.chain>div {
+		grid-template: repeat(var(--ColumnCount), minmax(0, 1fr));
+		grid-auto-flow: column;
+		max-width: 100%;
+		justify-content: space-between;
+	}
 }
 
-.chain>div>* {
-	grid-row-end: span 3;
-	grid-row-start: calc(var(--link-position) + 1);
-	grid-column-start: calc(var(--link-position) + 1);
+@media (max-width: 40em)  {
+	.chain>div>*:not(.active) h4 {
+		opacity: 0;
+	}
 }
 
+@media (orientation: landscape) {
+	
+	.chain>div {
+		--SecurityColCount: 4;
+		--SecurityRowCount: 2;
+		--TotalElements: calc(var(--total-chain-links) * 2 - 1);
+		--ColumnCount: calc(var(--TotalElements) + var(--SecurityColCount));
+		--RowCount: calc(var(--TotalElements) + var(--SecurityRowCount));
+		display: grid;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		grid-template: repeat(var(--ColumnCount), minmax(0, 1fr)) / repeat(var(--RowCount), minmax(0, 1fr));
+	}
 
-
-.chain>div * {
-	display: flex;
-	flex-wrap: nowrap;
+	.chain>div>* {
+		grid-row-end: span 3;
+		grid-row-start: calc(var(--link-position) + 1);
+		grid-column-start: calc(var(--link-position) + 1);
+	}
 }
 
 .chain .arrow.from {
@@ -64,14 +82,24 @@
 
 .chain * {
 	margin: 0;
-	display: inherit;
+	display: flex;
+	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 }
 
 .chain article {
 	flex-direction: column;
-	flex-grow: 1;
+	text-align: center;
+}
+
+.chain article>:first-child {
+	margin-top: auto;
+}
+
+.chain article>:last-child {
+	margin-bottom: auto;
 }
 
 .chain>div>div,
@@ -95,13 +123,27 @@
 	color: var(--ColorForeign);
 }
 
-.chain .amount {
+.chain .amount,
+.chain article:before,
+.chain article:after {
 	font-weight: 700;
 	--ScaleLevel: var(--Taller);
 }
 
-.chain section>div *+* {
-	margin-top: calc(var(--Row) / 2);
+.chain article:not(:first-child):last-child:after,
+.chain article:not(:last-child):first-child:before {
+	content: "+0";
+	pointer-events: none;
+	visibility: hidden;
+	font-size: var(--FontSize);
+	line-height: var(--LineHeight);
+}
+
+.chain section>div>*+*,
+.chain section>div>article>svg+h4,
+.chain article:not(:first-child):last-child:after,
+.chain article:not(:last-child):first-child:before {
+	margin-top: calc(var(--Row) / 2 * var(--Size));
 }
 
 .chain .product .icon {
@@ -137,10 +179,6 @@
 	--IconHeight: calc(var(--Row) * 2.5 * var(--Size));
 }
 
-.chain .agent.active {
-	color: var(--ColorSupport);
-}
-
 .chain .unknown-link {
 	display: flex;
 	justify-content: center;
@@ -150,13 +188,12 @@
 .chain .unknown-link span {
 	--ScaleLevel: var(--Tallest);
 	border-radius: 50%;
-	--Color: white;
-	height: calc(var(--Row) * 2);
-	width: calc(var(--Row) * 2);
+	height: calc(var(--Row) * 2 * var(--Size));
+	width: calc(var(--Row) * 2 * var(--Size));
 	padding: 2.5vw;
 	box-sizing: border-box;
 	flex-shrink: 0;
-	background-color: var(--ltr-primary);
+	border: 4px solid var(--lt-primary);
 }
 
 .chain div:not([class])+.unknown-link {
@@ -164,7 +201,7 @@
 }
 
 /* Diagramme Horizontal */
-@media (orientation: landscape) {
+/* @media (orientation: landscape) { */
 	.chain {
 		flex-direction: column;
 	}
@@ -284,127 +321,7 @@
 	}
 
 	.chain .icon+* {
-		margin-left: calc(-1 * var(--Row));
-		margin-right: calc(-1 * var(--Row));
+		margin-left: calc(-1 * var(--Row) * var(--Size));
+		margin-right: calc(-1 * var(--Row) * var(--Size));
 	}
-}
-
-
-/* Diagramme Vertical */
-
-@media (orientation: portrait) {
-	.chain {
-		flex-direction: row;
-		font-size: 16px;
-		justify-content: center;
-		position: relative;
-	}
-
-	.chain hr {
-		height: auto;
-		max-height: initial;
-	}
-
-	.chain>hr {
-		margin-top: calc(var(--Row) * 4);
-	}
-
-	.chain>div {
-		flex-direction: column;
-	}
-
-	.chain article {
-		min-width: calc(var(--Row) * 9);
-	}
-
-	.chain section>div,
-	.chain div>div {
-		flex-direction: row;
-		flex-shrink: 0;
-	}
-
-	.chain>div>div[class] {
-		flex-direction: column;
-	}
-
-	.chain .total {
-		position: absolute;
-		bottom: 0;
-		flex-direction: column-reverse;
-	}
-
-	.chain .total:last-child {
-		right: 0;
-	}
-
-	.chain .total:first-child {
-		left: 0;
-	}
-
-	.chain .total .amount {
-		margin-top: calc(var(--Row) / 2);
-	}
-
-	.chain .link .amount {
-		margin-top: var(--Row);
-		margin-bottom: var(--Row);
-	}
-
-	.chain .arrow {
-		border-top: 0;
-		border-left:  var(--ArrowLine);
-		margin-left: -1px;
-		margin-right: -1px;
-		flex-direction: column;
-		align-items: center;
-		width: 0;
-	}
-
-	.chain .variable.arrow {
-		align-self: stretch;
-	}
-
-	.chain .good.arrow {
-		height: var(--Row);
-		flex-shrink: 0;
-	}
-
-	.chain .arrow:after {
-		left: -1px;
-		width: 24px;
-	}
-
-	.chain .arrow.to::after {
-		top: -4px;
-	}
-
-	.chain .arrow.from::after {
-		transform: rotate(180deg);
-		top: 2px;
-	}
-
-	.chain .product {
-		flex-direction: column;
-	}
-
-	.chain .icon.beer {
-		left: -10px;
-		position: relative;
-	}
-
-	.chain .product article {
-		margin-left: calc(var(--Row) * 2);
-		margin-right: calc(var(--Row) * 2);
-	}
-
-	.chain .variable.arrow {
-		min-height: 100%;
-		position: relative;
-		margin-top: calc(-1 * var(--Row) * 1.5);
-		margin-bottom: calc(-1 * var(--Row) * 1.5);
-	}
-
-	.chain .partial.product .icon+* {
-		display: none;
-	}
-}
+/* } */

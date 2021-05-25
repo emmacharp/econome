@@ -5,23 +5,11 @@
 nav {
 	background-color: var(--ltst-primary);
 	display: flex;
-	flex-direction: column;
 	overflow: auto;
-	width: 30ch;
 }
 
 nav::-webkit-scrollbar {
 	display: none;
-}
-
-nav>* {
-	width: 30ch;
-	box-sizing: border-box;
-}
-
-body>nav a {
-	margin: 0;
-	display: block;
 }
 
 nav ul {
@@ -43,141 +31,12 @@ nav header>*+* {
 nav a {
 	text-decoration: none;
 	position: relative;
-	display: block;
+	margin: 0;
+	display: flex;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
 	box-sizing: border-box;
-}
-
-nav ul li li>a:before {
-	font-weight: 700;
-	color: var(--dk-brown);
-	line-height: 1;
-	vertical-align: top;
-	text-align: center;
-	text-indent: -.25em;
-}
-nav ul li.is-complete li.is-complete>a:before {
-	content: "•";
-	
-}
-
-nav li.is-complete>a:before {
-	background-image: none;
-	content: "✓";
-	font-size: .8em;
-}
-
-nav a {
-	padding-left: calc(var(--Row) * .25);
-}
-
-nav a::before {
-	content: "";
-	display: inline-block;
-	width: 1.25rem;
-	height: 1.125rem;
-	top: .1425rem;
-	margin-right: .5rem;
-}
-
-
-nav a:before {
-	flex-shrink: 0;
-	z-index: 1;
-	position: relative;
-	background-repeat: no-repeat;
-	background-size: 1.125rem;
-	background-image: var(--base64-book);
-}
-nav li:not(.is-active)>a:before {
-	opacity: 0.5;
-}
-
-nav [data-type=question]>a:before {
-	background-image: var(--base64-question);
-}
-
-nav [data-type=chaine]>a:before {
-	background-image: var(--base64-chain-link);
-}
-
-nav>ul>li>a:before {
-	background-image: var(--base64-mark);
-	background-size: 125%;
-	background-position: -.125rem -.125rem;
-}
-
-nav>ul>li.is-complete>a:before {
-	background-image: var(--base64-thumb);
-	background-position: 70% center;
-	background-size: 140%;
-}
-
-@media (orientation: portrait) {
-	nav a {
-		flex-shrink: 0;
-	}
-}
-
-.trigger-internal-nav {
-	appearance: none;
-	position: fixed;
-	top: calc(var(--Row) * .9875);
-	left: var(--Row);
-	z-index: 4;
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-}
-
-.trigger-internal-nav::before {
-	color: var(--brown);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	content: "▶";
-	text-align: center;
-	font-size: 9px;
-	line-height: 1.75em;
-	margin-left: -.5rem;
-	position: relative;
-	display: block;
-	width: 1.25rem;
-	height: 1.75em;
-	margin-right: .5rem;
-}
-
-.trigger-internal-nav:checked::before {
-	content: "◀";
-}
-
-.trigger-internal-nav:checked~main>* {
-	padding-left: calc(var(--Row) * .5);
-} 
-
-.trigger-internal-nav::after {
-	content: "Menu";
-	font-weight: 900;
-	text-transform: uppercase;
-	font-size: 12px;
-	color: var(--lt-primary);
-}
-.trigger-internal-nav:checked::after {
-	color: var(--dk-brown);
-}
-
-.trigger-internal-nav:not(:checked)~nav {
-	width: calc(var(--Row) * 1.125);
-}
-
-.trigger-internal-nav:not(:checked)~nav ul * {
-	color: transparent;
-}
-
-.trigger-internal-nav:not(:checked)~nav header * {
-	opacity: 0;
 }
 
 nav header {
@@ -202,7 +61,181 @@ nav header strong {
 	text-shadow: 0px 2px 0px var(--brown);
 }
 
+nav ul li li>a:before {
+	font-weight: 700;
+	color: var(--dk-brown);
+	line-height: 1;
+	vertical-align: top;
+	text-align: center;
+	text-indent: -.25em;
+}
+nav ul li.is-complete li>a:before {
+	content: "•";
+	
+}
+
+nav li.is-complete>a:before {
+	background-image: none;
+	content: "✓";
+	font-size: clamp(16px, 1rem, .8em);
+	line-height: 120%;
+}
+
+nav a::before {
+	content: "";
+	display: inline-block;
+	flex-shrink: 0;
+	z-index: 1;
+	position: relative;
+	align-self: center;
+	background-repeat: no-repeat;
+	background-size: 90%;
+	background-image: var(--base64-book);
+}
+
+nav [data-type=question]>a:before {
+	background-image: var(--base64-question);
+}
+
+nav [data-type=chaine]>a:before {
+	background-image: var(--base64-chain-link);
+}
+
+nav>ul>li>a:before {
+	background-image: var(--base64-mark);
+	background-size: 125%;
+	background-position: -.125rem -.125rem;
+}
+
+nav>ul>li.is-complete>a:before {
+	background-image: var(--base64-thumb);
+	background-position: 70% center;
+	background-size: 140%;
+}
+
+.trigger-internal-nav {
+	position: absolute;
+	-webkit-appearance: none;
+	appearance: none;
+	z-index: 4;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	visibility: hidden;
+	top: calc(var(--Row) * .9875);
+	left: var(--Row);
+}
+
+@media (min-height: 40em) and (min-width: 80em) {
+	.trigger-internal-nav {
+		position: fixed;
+	}
+	
+	.trigger-internal-nav::before {
+		margin-left: -.5rem;
+	} 
+}
+
+.trigger-internal-nav::before {
+	color: var(--brown);
+	align-items: center;
+	justify-content: center;
+	content: "▶";
+	text-align: center;
+	font-size: 9px;
+	line-height: 1.75em;
+	position: relative;
+	display: block;
+	width: 1.25em;
+	height: 1.75em;
+	margin-right: .5rem;
+	visibility: visible;
+}
+
+.trigger-internal-nav:checked::before {
+	content: "◀";
+}
+
+.trigger-internal-nav:checked~main>* {
+	padding-left: calc(var(--Row) * .5);
+} 
+
+.trigger-internal-nav::after {
+	content: "Menu";
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: 12px;
+	color: var(--lt-primary);
+	visibility: visible;
+}
+.trigger-internal-nav:checked::after {
+	color: var(--dk-brown);
+}
+
+.trigger-internal-nav:not(:checked)~nav ul * {
+	color: transparent;
+}
+
+.trigger-internal-nav:not(:checked)~nav header * {
+	opacity: 0;
+}
+
 nav details {
 	--ScaleLevel: var(--Short);
 	--LineHeightFactor: .75;
+}
+
+@media (orientation: landscape) {
+	nav {
+		width: 30ch;
+		flex-direction: column;
+	}
+
+	nav>* {
+		width: 30ch;
+		box-sizing: border-box;
+	}
+	
+	nav a {
+		padding-left: calc(var(--Row) * .25);
+	}
+
+	nav a::before {
+		width: 1.25rem;
+		height: 1.125rem;
+		margin-right: .5rem;
+	}
+
+	.trigger-internal-nav:not(:checked)~nav {
+		width: calc(var(--Row) * 1.125);
+	}
+}
+
+@media (orientation: portrait) {
+	body>.trigger-internal-nav,
+	nav header {
+		display: none;
+	}
+
+	nav {
+		order: 1;
+	}
+
+	nav * {
+		display: flex;
+	}
+
+	nav a {
+		width: calc(var(--Row) * 1.75);
+		height: calc(var(--Row) * 1.75);
+		padding: 0;
+		font-size: 0;
+		align-items: center;
+		justify-content: center;
+	}
+
+	nav a::before {
+		width: 1.75rem;
+		height: 1.75rem;
+	}
 }

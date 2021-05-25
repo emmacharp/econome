@@ -5,7 +5,7 @@
 
 	const sections = document.querySelectorAll('main>section');
 	const anchors = document.querySelectorAll('nav a');
-	const wikiLinks = document.querySelectorAll('[data-wiki]');
+	const complementaryLinks = document.querySelectorAll('[data-wiki], .trigger-goods-list');
 	const wikiViewer = document.querySelector('#wikiViewer');
 	const wikiDump = document.querySelector('#wikiDump');
 	const wikiCanonical = document.querySelector('#wikiCanonical');
@@ -55,7 +55,7 @@ var getSiblings = function (elem) {
 };
 
 // Sections Observer with Binding to Internal Navigation Anchors Function
-
+	let isLeaving = false; //https://www.smashingmagazine.com/2018/01/deferring-lazy-loading-intersection-observer-api/
 	const onSectionObserved = (items, observer) => {
 		items.forEach((entry) => {
 			const { isIntersecting , target } = entry;
@@ -68,6 +68,7 @@ var getSiblings = function (elem) {
 			let time = target.getAttribute('data-needed-time');
 			
 			if (isIntersecting) {
+				isLeaving = true;
 				target.classList.remove('is-invisible');
 				time = target.getAttribute('data-needed-time');
 				if (time > 0) {
@@ -94,7 +95,8 @@ var getSiblings = function (elem) {
 						});
 					});
 				}
-			} else {
+			} else if (isLeaving) {
+				isLeaving = false;
 				target.classList.remove('is-visible');
 				target.classList.add('is-invisible');
 				if (time > 0) {
@@ -130,7 +132,6 @@ var getSiblings = function (elem) {
 					if (target.tagName !== 'h2') {
 						const activeAnchorSiblings = getSiblings(activeAnchor.closest('li'));
 						const completedSiblings = activeAnchorSiblings.filter(sibling => { return sibling.matches('.is-complete'); });
-						console.log(completedSiblings, activeAnchorSiblings);
 						if (target.matches('.is-complete') && completedSiblings.length === activeAnchorSiblings.length) {
 							[...activeParents].forEach((parent)=> {
 								parent.classList.add('is-complete');
@@ -194,7 +195,6 @@ const fetchWikiContent = (event) => {
 				wikiViewer.classList.add('is-visible');
 			}
 
-			event.target.classList.add('is-read');
 			wikiDump.scrollTop = 0;
 
 		})
@@ -208,7 +208,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
 	// Sections Observer
 	const sectionObserver = new IntersectionObserver(onSectionObserved, {
-		rootMargin: "-45% 0% -55% 0%"
+		rootMargin: "-45% -55% -55% -45%"
 	});
 	sections.forEach((item, index) => {
 		sectionObserver.observe(item);
@@ -216,9 +216,14 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 	// Activate wiki integration
-	wikiLinks.forEach((item) => {
-		item.addEventListener('click', fetchWikiContent);
-	});
+	// complementaryLinks.forEach((item) => {
+		document.body.addEventListener('click', function(event) {
+			const clickTarget = event.target;
+
+			if (clickTarget.matches('[data-wiki]') ||  clickTarget.matches('.trigger-goods-list')) event.target.classList.add('is-read');
+			if (event.target.matches('[data-wiki]')) fetchWikiContent(event);
+		});
+	// });
 
 	wikiDump.addEventListener('click', function(event) {
 		let wikiLink = event.target.closest('a[href^="/wiki"]');

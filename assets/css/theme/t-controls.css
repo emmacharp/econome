@@ -1,5 +1,6 @@
 nav a,
 .trigger-internal-nav::before,
+.trigger-goods-list:before,
 fieldset span,
 fieldset input,
 aside>details>*,
@@ -25,14 +26,14 @@ nav li.is-active~* a {
 	--ColorBgControls: var(--ltr-primary);
 }
 
-nav li.has-active>a,
 nav li.has-active li.is-complete:not(.is-active) a {
-	--ColorBgControls: var(--dk-yellow);
+	--ColorBgControls: var(--lt-yellow);
 }
 
 
 nav li.is-complete>a,
 fieldset:valid,
+.trigger-goods-list.is-read,
 [data-wiki].is-read {
 	--ColorBgControls: var(--lt-green);
 }
@@ -41,11 +42,41 @@ nav li.is-active>a {
 	--ColorBgControls: var(--lt-purple);
 }
 
+.chain .goods-list>input::before,
+[id="wikiViewer"] [id="wikiViewerClose"]:after,
+[data-wiki]:after {
+	font-weight: 700;
+	width: 1ch;
+	height: 1ch;
+	line-height: 1ch;
+	display: inline-flex;
+	align-items: center;
+	flex-shrink: 0;
+	justify-content: center;
+	padding: .5ch;
+	vertical-align: text-top;
+}
+
+[id="wikiViewer"] [id="wikiViewerClose"]:after {
+	content: "x";
+}
+
+[data-wiki]:after,
+.trigger-goods-list::before {
+	content: '?';
+}
+
+.trigger-goods-list.is-read:before,
+[data-wiki].is-read:after {
+	content: "✓";
+}
+
 
 aside>details>*,
 [data-wiki]:after,
 [id="wikiViewer"] [id="wikiViewerClose"]:after,
 fieldset input[type=radio]+span,
+.trigger-goods-list:before,
 .trigger-internal-nav::before {
 	border-radius: .25em;
 	border: 1px solid var(--dk-yellow);
@@ -55,6 +86,7 @@ fieldset input[type=radio]+span,
 }
 
 [data-wiki]:hover:after,
+.trigger-goods-list:hover:before,
 [id="wikiViewer"] [id="wikiViewerClose"]:hover:after,
 fieldset input[type=radio]:not(:checked)~span:hover {
 
