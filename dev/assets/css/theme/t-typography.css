@@ -17,9 +17,9 @@
 	h1 { --ScaleLevel: var(--Huge); --FontWeight: 700; }
 	h2 { --ScaleLevel: var(--Tallest); }
 	h3 { --ScaleLevel: var(--Tallest); }
-	h4 { --ScaleLevel: var(--Base); --FontWeight: 600; }
-	h5 { --ScaleLevel: var(--Base); }
-	h6 { --ScaleLevel: var(--Short); }
+	h4 { --ScaleLevel: var(--Base); --FontWeight: 600; --LineHeightFactor: .75; }
+	h5 { --ScaleLevel: var(--Base); --LineHeightFactor: .75; }
+	h6 { --ScaleLevel: var(--Short); --LineHeightFactor: .75; }
 
 
 /* Styles typograhpiques particuliers -----------------------  */
