@@ -29,6 +29,35 @@
 	}
 }
 
+
+@media (max-height: 40em) and (max-width: 50em) {
+	main>section>aside {
+		position: relative;
+		align-self: stretch;
+		margin: 0;
+		margin-bottom: var(--Row);
+		top: 0;
+		max-width: initial;
+		flex-shrink: 0;
+	}
+
+	main>section>:not(header):not(article):not(aside) {
+		order: 2;
+	}
+
+
+	main>section>aside>details {
+		margin: 0;
+		width: 100%;
+		margin-top: var(--Row);
+	}
+
+	main>section>aside>details>summary~* {
+		position: initial;
+		top: initial;
+	}
+}
+
 main>section [data-parallax] {
 	transform: translate3d(0, calc( var(--scrollParallax) * 1px ), 0);
 	transition: none;
