@@ -40,7 +40,7 @@ hr {
 }
 
 /* Préparer les <symbol> à être manipulés */
-use { fill: currentColor; }
+use, svg, path { fill: inherit; }
 
 /* Icônes intégrés dans le texte */
 i>svg {
