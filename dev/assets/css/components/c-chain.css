@@ -51,13 +51,6 @@
 	}
 }
 
-
-
-.chain>div * {
-	display: flex;
-	flex-wrap: nowrap;
-}
-
 .chain .arrow.from {
 	justify-content: flex-end;
 }
@@ -89,7 +82,8 @@
 
 .chain * {
 	margin: 0;
-	display: inherit;
+	display: flex;
+	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
 	position: relative;
