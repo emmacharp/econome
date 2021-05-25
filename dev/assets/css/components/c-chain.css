@@ -91,7 +91,15 @@
 
 .chain article {
 	flex-direction: column;
-	flex-grow: 1;
+	text-align: center;
+}
+
+.chain article>:first-child {
+	margin-top: auto;
+}
+
+.chain article>:last-child {
+	margin-bottom: auto;
 }
 
 .chain>div>div,
