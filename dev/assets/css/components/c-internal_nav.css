@@ -78,7 +78,7 @@ nav li.is-complete>a:before {
 	background-image: none;
 	content: "✓";
 	font-size: clamp(16px, 1rem, .8em);
-	line-height: 150%;
+	line-height: 120%;
 }
 
 nav a::before {
