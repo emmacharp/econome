@@ -123,12 +123,26 @@
 	color: var(--ColorForeign);
 }
 
-.chain .amount {
+.chain .amount,
+.chain article:before,
+.chain article:after {
 	font-weight: 700;
 	--ScaleLevel: var(--Taller);
 }
 
-.chain section>div *+* {
+.chain article:not(:first-child):last-child:after,
+.chain article:not(:last-child):first-child:before {
+	content: "+0";
+	pointer-events: none;
+	visibility: hidden;
+	font-size: var(--FontSize);
+	line-height: var(--LineHeight);
+}
+
+.chain section>div>*+*,
+.chain section>div>article>svg+h4,
+.chain article:not(:first-child):last-child:after,
+.chain article:not(:last-child):first-child:before {
 	margin-top: calc(var(--Row) / 2 * var(--Size));
 }
 
