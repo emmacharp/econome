@@ -35,7 +35,8 @@
 		--FontWeight: 600;
 		--ScaleLevel: var(--Taller); }
 
-	main>section aside {
+	main>section>aside,
+	main>section>section aside {
 		--ScaleLevel: var(--Short);
 		--LineHeightFactor: .75; }
 
