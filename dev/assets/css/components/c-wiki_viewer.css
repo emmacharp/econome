@@ -128,7 +128,7 @@
 	
 }
 
-p>[data-wiki]:after {
+p [data-wiki]:after {
 	margin-left: .5em;
 	margin-right: .5em;
 	
