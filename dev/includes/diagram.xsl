@@ -20,18 +20,20 @@
 
 <xsl:template match="diagram/agent">
 	<section class="link agent {@type} {@class}" style="--link-position: {count(preceding-sibling::*) + 1};">
-		<xsl:if test="@goods">
+		
 
+		<div>
+			<xsl:apply-templates select="@local|@value|@paid" />
+			<article>
+<xsl:if test="@goods">
+
+	<xsl:apply-templates select="." mode="include-once" />
 			<aside class="goods-list">
 				<input type="checkbox" name="goods-trigger" />
 				<div hx-get="goods.html" hx-trigger="load" hx-select="#goods-list" hx-swap="outerHTML">
 				</div>
 			</aside>
 		</xsl:if>
-
-		<div>
-			<xsl:apply-templates select="@local|@value|@paid" />
-			<article>
 				<xsl:apply-templates select="ext:node-set($svg-elements)//svg:symbol[generate-id() = generate-id(key('symbol-type', current()/@type)[1])]" />
 				<h4><xsl:apply-templates select="@name" /></h4>
 			</article>
@@ -120,7 +122,13 @@
 		</xsl:with-param>
 	</xsl:call-template>
 </xsl:template>
-
+<xsl:template match="agent[@goods and not(preceding::agent[@goods])]" mode="include-once">
+	<xsl:call-template name="body-css">
+		<xsl:with-param name="content">
+			<link rel="stylesheet" href="assets/css/components/c-goods-list.css"/>
+		</xsl:with-param>
+	</xsl:call-template>
+</xsl:template>
 <xsl:template match="diagram">
 	<xsl:apply-templates select="." mode="include-once" />
 	<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))"></xsl:variable>
