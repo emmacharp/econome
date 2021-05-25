@@ -101,7 +101,6 @@ main>section>:not(header)+div:last-child {
 main>section>aside {
 
 	margin: 0;
-	margin-left: auto;
 	font-weight: 500;
 }
 
@@ -111,14 +110,14 @@ main>section>aside {
 		z-index: 3;
 		top: calc(var(--Row) * 2.5);
 		right: calc(var(--Row) * 1.5);
+		align-items: center;
+		max-width: max-content;
+		margin-left: auto;
 	}
 }
 
 main>section aside {
 	display: flex;
-	align-items: center;
-	align-self: center;
-	max-width: max-content;
 }
 
 main>section aside div>*+* {
