@@ -3,7 +3,7 @@
 <root>
 	<section id="intro">
 		<header>
-			<h1>Comprendre l'<span class="local">achat local<i><symbol type="basket" /></i></span></h1>
+			<h1>Économie et <span class="local">achat local<i><symbol type="basket" /></i></span></h1>
 			<p>Un exposé Econome</p>
 		</header>
 		<section>
@@ -31,7 +31,7 @@
 		<!-- ! A ESSAYER : Table des matières -->
 		<aside>
 			<details>
-				<summary><span>L'expérience Econome</span></summary>
+				<summary><span>C'est quoi, Econome ?</span></summary>
 				<div>
 					<ol>
 						<li>La bande à gauche vous permet à tout moment de passer d'une section à l'autre, à votre bon gré. Nous croyons cependant que les 10 minutes qui suivent vaillent la peine (économique !) d'être expérimentées dans leur ensemble.</li>
@@ -198,11 +198,11 @@
 			</div>
 		</aside>
 		<diagram type="chain" links="5">
-			<agent type="consumer" name="Joey Joe Joe" class="active" />
+			<agent type="consumer" name="Joey Joe Joe" class="active" goods="" />
 		</diagram>
 		<section>
 			<div class="grille">
-				<header><h4>Rôle consommateur</h4></header>
+				<!-- <header><h4>Rôle consommateur</h4></header> -->
 				<div class="prose">
 					<p><b>Votre rôle est celui du consommateur.</b></p>
 					<!-- <p><b>Pour bien comprendre ce que constituerait un <span class="local">achat local</span>, il faut considérer le parcours complet du bien acheté.</b></p> -->
@@ -210,7 +210,11 @@
 					<p>Pour explorer la chaîne économique, imaginons un scénario où vous, le consommateur, achetez une <span class="local">bière québécoise au dépanneur du coin...</span></p>
 				</div>
 				<aside>
-					<p>Analyser la chaîne économique d'un achat est nécessaire pour en comprendre les répercussions !</p>
+					<symbol type="henri" class="cartoon_henri animated" />
+					<div>
+					<q>Analyser la chaîne économique d'un achat est nécessaire pour en comprendre les répercussions !</q>
+
+					</div>
 				</aside>
 			</div>
 		</section>
@@ -221,23 +225,23 @@
 	<section data-type="chaine">
 		<header>
 
-			<h3>Le dépanneur « Commun+ »...</h3>
-			<p>Au coin de votre rue, vous vend votre bière québécoise de choix. Appelons-la, <span class="local">« La moyenne ».</span></p>
+			<h3>Le dépanneur <span class="local">Commun+</span></h3>
+			<p>au coin de votre rue, vous vend votre bière québécoise de choix. Appelons-la, <span class="local">La moyenne.</span></p>
 		</header>	
 
 		<diagram type="chain" links="5">
 			<agent type="consumer" name="Joey Joe Joe" />
 			<product type="beer" name="Bière" complete="" />
-			<agent type="retailer" name="Dépanneur" class="active" />
+			<agent type="retailer" name="Dépanneur Commun+" class="local" />
 		</diagram>
 
 		<section>
 			<div class="grille">
-				<header>
-					<h4>Le détaillant</h4>
-				</header>
+				<!-- <header> -->
+				<!-- 	<h4>Le détaillant</h4> -->
+				<!-- </header> -->
 				<div class="prose">
-					<p><b>Le dépanneur « Commun+ » joue le rôle du détaillant. Il stocke une certaine quantité de « Moyenne » pour la vendre à des consommmateurs comme vous, Joey Joe Joe.</b></p>
+					<p><b>Le dépanneur joue le rôle du détaillant. Il stocke une certaine quantité de « Moyenne » pour la vendre à des consommmateurs comme vous, Joey Joe Joe.</b></p>
 					<p>Le détaillant, fait partie de ce qu'on appelle « les producteurs de marge ». C'est-à-dire que le rôle du détaillant au sein de la chaîne est d'amener <i>le bien de consommation</i>—votre bonne bière québécoise !—d'un point A à un point B. <s>Il s'agit là de la <i data-wiki="Valeur_ajoutée" data-sections="1,3"><nobr>valeur ajoutée</nobr></i> (concept fondamental ! nous y reviendrons...) par le rôle du détaillant.</s></p>
 					<p>Sans lui, la bière ne vous serait pas disponible ! Mais... le dépanneur, en tant que détaillant, doit lui aussi acheter la bière pour la rendre disponible.</p>
 					<p>C'est là où entre en scène le rôle du <strong>grossiste</strong> !</p>
@@ -252,8 +256,8 @@
 	<section data-type="chaine">
 		<header>
 
-			<h3>« Les Entrepôts Correct inc. »...</h3>
-			<p>Reçoit, entrepose puis transporte plusieurs palettes de « Moyenne ».</p>
+			<h3>Les <span class="local">Entrepôts Correct</span> inc.</h3>
+			<p>reçoit, entrepose puis transporte plusieurs palettes de « Moyenne ».</p>
 		</header>
 		<!-- <aside> -->
 			<!-- 	<symbol type="emma" class="cartoon_emma animated" /> -->
@@ -264,17 +268,17 @@
 			<diagram type="chain" links="5">
 				<agent type="consumer" name="Joey Joe Joe" />
 				<product type="beer" name="Bière" complete="" />
-				<agent type="retailer" name="Dépanneur" />
+				<agent type="retailer" name="Dépanneur Commun+" goods="" />
 				<product type="beer" name="Bière" />
-				<agent type="manufacturer" name="L'entrepôt" class="active" />
+				<agent type="manufacturer" name="Entrepôts Correct" class="local" goods="" />
 			</diagram>
 			<section>
 				<div class="grille">
-					<header>
-						<h4>Grossiste et transporteur</h4>
-					</header>
+					<!-- <header> -->
+					<!-- 	<h4>Grossiste et transporteur</h4> -->
+					<!-- </header> -->
 					<div class="prose">
-						<p><b>« Les Entrepôts Correct inc. » combine les rôles à la fois de grossiste mais aussi du transporteur !</b></p>
+						<p><b>« Les Entrepôts Correct inc. » combine les rôles à la fois de grossiste mais aussi du <i data-wiki="Le_Transporteur">transporteur</i> !</b></p>
 						<p>Le grossiste permet d'entreposer de vastes quantités de biens de consommation et ainsi permettre une production élargie du bien tout en permettant aussi au détaillant de ne pas stocker ledit bien en d'aussi grandes quantités pour lesquelles il n'aurait pas l'espace disponible.</p>
 						<p>En tant que maillon intermédiaire de la chaîne économique, le grossiste, comme le détaillant avant lui, s'inscrit dans la catégorie des « producteurs de marge ». Son rôle est donc lui aussi d'assurer que votre bonne bière québécoise se rende du point A au point B. Sans lui, le dépanneur serait inondé de bonne bière québécoise...</p>
 						<p>Et l'espace lui manquerait pour nous procurer les bonnes pinottes accompagnant notre bonne bière. Huuummmm... des pinoooottes. Euh, bon, s'cusez.</p>
@@ -291,22 +295,22 @@
 			<section data-type="chaine">
 				<header>
 
-					<h3>La brasserie « Pâpire »...</h3>
-					<p>Brasse depuis maintenant 20 ans « La Moyenne », à votre grand plaisir, Joey Joe Joe.</p>
+					<h3>La brasserie <span class="local">Pâpire</span></h3>
+					<p>brasse depuis maintenant 20 ans <span class="local">La Moyenne</span>, à votre grand plaisir, Joey Joe Joe.</p>
 				</header>
 
 				<diagram type="chain" links="5">
 					<agent type="consumer" name="Joey Joe Joe" />
 					<product type="beer" name="Bière" complete="" />
-					<agent type="retailer" name="Dépanneur" />
+					<agent type="retailer" name="Dépanneur Commun+" class="local" />
 					<product type="beer" name="Bière" />
-					<agent type="manufacturer" name="L'entrepôt" />
+					<agent type="manufacturer" name="Entrepôts Correct" class="local" />
 					<product type="beer" name="Bière" />
-					<agent type="transformer" name="La brasserie" class="active" />
+					<agent type="transformer" name="Brasserie Pâpire" class="active" />
 				</diagram>
 				<section>
 					<div class="grille">
-						<header><h4>Le transformateur</h4></header>
+						<!-- <header><h4>Le transformateur</h4></header> -->
 						<div class="prose">
 							<p><b>La où la magie (lire : fermentation) s'opère !</b> </p>
 							<p>Il s'agit là d'un agent fondamental de la chaîne, celui qui se procure les <i data-wiki="">biens intermédiaires</i>  et les transforme en biens de consommation. <strong>Sans brasserie, pas de bonne bière !</strong> </p>
@@ -319,27 +323,27 @@
 			<section data-type="chaine">
 				<header>
 
-					<h3>« Ok Hops » en Ontario...</h3>
-					<p>Vend les mêmes houblons ordinaires depuis les 20 ans d'existence de la brasserie « Pâpire ».</p>
+					<h3><span class="foreign">Ok Hops</span> en Ontario</h3>
+					<p>vend les mêmes houblons ordinaires depuis les 20 ans d'existence de la brasserie « Pâpire ».</p>
 				</header>
 				<diagram type="chain" links="5">
 					<agent type="consumer" name="Joey Joe Joe" />
 					<product type="beer" name="Bière" complete="" />
-					<agent type="retailer" name="Dépanneur" />
+					<agent type="retailer" name="Dépanneur Commun+" class="local" />
 					<product type="beer" name="Bière" />
-					<agent type="manufacturer" name="L'entrepôt" />
+					<agent type="manufacturer" name="Entrepôts Correct" class="local" />
 					<product type="beer" name="Bière" />
-					<agent type="transformer" name="La brasserie" />
+					<agent type="transformer" name="Brasserie Pâpire" class="local" />
 					<product type="beer" name="Bière" />
-					<agent type="provider" name="Le fournisseur" class="active" />
+					<agent type="provider" name="Ok Hops" class="active foreign" />
 				</diagram>
 				<section>
 					<div class="grille">
-						<header><h4>Le(s) fournisseur(s)</h4></header>
+						<!-- <header><h4>Le(s) fournisseur(s)</h4></header> -->
 						<div class="prose">
 							<p><b>Que l'on parle du verre de la bouteille, de l'eau ou du houblon (comme ici), il aura fallu que ces biens intermédiaires soient eux aussi produits.</b></p>
 							<p>La brasserie n'est pas (généralement du moins) aussi productrice de céréales ou de verre, elle se retourne donc vers le dernier maillon de notre chaîne, les fournisseurs. Ce sont eux qui produisent les matières premières nécessaires à la confection d'une bonne bière québécoise.</p>
-							<p>La brasserie, grâce à son savoir-faire (et ses recettes secrètes) transforme les « intrants » fournis en « La Moyenne ». À ce titre, les fournisseurs deviennent en pratique tout aussi vitaux que la brasserie dans notre dégustation de bière. Tout comme le sont les fournisseurs des fournisseurs... et leurs fournisseurs à eux aussi. Ce dernier maillon de la chaîne peut ainsi se dérouler looooongtemps. L'arbre est dans ses feuilles. « Toute est dans toute ».  </p>
+							<p>La brasserie, grâce à son savoir-faire (et ses recettes secrètes) transforme les « intrants » fournis en <span class="local">La Moyenne</span>. À ce titre, les fournisseurs deviennent en pratique tout aussi vitaux que la brasserie dans notre dégustation de bière. Tout comme le sont les fournisseurs des fournisseurs... et leurs fournisseurs à eux aussi. Ce dernier maillon de la chaîne peut ainsi se dérouler looooongtemps. L'arbre est dans ses feuilles. « Toute est dans toute ».  </p>
 						</div>
 					</div>
 				</section>
@@ -363,13 +367,13 @@
 				<diagram type="chain" links="5">
 					<agent type="consumer" name="Joey Joe Joe" paid="10" />
 					<product type="beer" name="Bière" complete="" value="100%" />
-					<agent type="retailer" name="Dépanneur" value="10" class="active" />
+					<agent type="retailer" name="Dépanneur Commun+" value="10" class="active" />
 					<product type="beer" name="Bière" />
-					<agent type="manufacturer" name="L'entrepôt" />
+					<agent type="manufacturer" name="Entrepôts Correct" class="local" />
 					<product type="beer" name="Bière" />
-					<agent type="transformer" name="La brasserie" />
+					<agent type="transformer" name="Brasserie Pâpire" class="local" />
 					<product type="beer" name="Bière" />
-					<agent type="provider" name="Le fournisseur" />
+					<agent type="provider" name="Ok Hops" class="foreign" />
 				</diagram>
 			</section>
 			<section>
@@ -381,13 +385,13 @@
 				<diagram type="chain" links="5">
 					<agent type="consumer" name="Joey Joe Joe" paid="10" />
 					<product type="beer" name="Bière" complete="" value="100%" />
-					<agent type="retailer" name="Dépanneur" value="1" />
+					<agent type="retailer" name="Dépanneur Commun+" class="local" value="1" />
 					<product type="beer" name="Bière" value="90" />
-					<agent type="manufacturer" name="L'entrepôt" value="9" class="active" />
+					<agent type="manufacturer" name="Entrepôts Correct" value="9" class="active" />
 					<product type="beer" name="Bière" />
-					<agent type="transformer" name="La brasserie" />
+					<agent type="transformer" name="Brasserie Pâpire" class="local" />
 					<product type="beer" name="Bière" />
-					<agent type="provider" name="Le fournisseur" />
+					<agent type="provider" name="Ok Hops" class="foreign" />
 				</diagram>
 			</section>
 			<section>
@@ -399,13 +403,13 @@
 				<diagram type="chain" links="5">
 					<agent type="consumer" name="Joey Joe Joe" paid="10" />
 					<product type="beer" name="Bière" complete="" value="100%" />
-					<agent type="retailer" name="Dépanneur" value="1" />
+					<agent type="retailer" name="Dépanneur Commun+" class="local" value="1" />
 					<product type="beer" name="Bière" value="90" />
-					<agent type="manufacturer" name="L'entrepôt" value="1" />
+					<agent type="manufacturer" name="Entrepôts Correct" class="local" value="1" />
 					<product type="beer" name="Bière" value="80" />
-					<agent type="transformer" name="La brasserie" value="8" class="active" />
+					<agent type="transformer" name="Brasserie Pâpire" value="8" class="active" />
 					<product type="beer" name="Bière" />
-					<agent type="provider" name="Le fournisseur" />
+					<agent type="provider" name="Ok Hops" class="foreign" />
 				</diagram>
 			</section>
 			<section>
@@ -417,13 +421,13 @@
 				<diagram type="chain" links="5">
 					<agent type="consumer" name="Joey Joe Joe" paid="10" />
 					<product type="beer" name="Bière" complete="" value="100%"  />
-					<agent type="retailer" name="Dépanneur" value="1" />
+					<agent type="retailer" name="Dépanneur Commun+" class="local" value="1" />
 					<product type="beer" name="Bière" value="90%" />
-					<agent type="manufacturer" name="L'entrepôt" value="1" />
+					<agent type="manufacturer" name="Entrepôts Correct" class="local" value="1" />
 					<product type="beer" name="Bière" value="80%" />
-					<agent type="transformer" name="La brasserie" value="4" />
+					<agent type="transformer" name="Brasserie Pâpire" class="local" value="4" />
 					<product type="beer" name="Bière" value="40%" />
-					<agent type="provider" name="Le fournisseur" value="4" class="active" />
+					<agent type="provider" name="Ok Hops" value="4" class="active foreign" />
 				</diagram>
 			</section>
 			<h2>La valeur ajoutée</h2>
@@ -512,13 +516,13 @@
 					<diagram>
 						<agent type="consumer" name="Joey Joe Joe" paid="10" />
 						<product type="beer" name="Bière" complete="" local="50%" foreign="50%"  />
-						<agent type="retailer" name="Dépanneur" local="1" foreign="0" />
+						<agent type="retailer" name="Dépanneur Commun+" class="local" local="1" foreign="0" />
 						<product type="beer" name="Bière" local="40%" foreign="50%" />
-						<agent type="manufacturer" name="L'entrepôt" local="1" foreign="0" />
+						<agent type="manufacturer" name="Entrepôts Correct" class="local" local="1" foreign="0" />
 						<product type="beer" name="Bière" local="30%" foreign="50%" />
-						<agent type="transformer" name="La brasserie" local="3" foreign="1" />
+						<agent type="transformer" name="Brasserie Pâpire" class="local" local="3" foreign="1" />
 						<product type="beer" name="Bière" local="0%" foreign="40%" />
-						<agent type="provider" name="Le fournisseur" foreign="4" local="0" class="active" />
+						<agent type="provider" name="Ok Hops" foreign="4" local="0" class="foreign" />
 
 					</diagram>
 				</section>
