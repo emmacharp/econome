@@ -179,10 +179,6 @@
 	--IconHeight: calc(var(--Row) * 2.5 * var(--Size));
 }
 
-.chain .agent.active {
-	color: var(--ColorSupport);
-}
-
 .chain .unknown-link {
 	display: flex;
 	justify-content: center;
