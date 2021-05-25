@@ -132,7 +132,6 @@ var getSiblings = function (elem) {
 					if (target.tagName !== 'h2') {
 						const activeAnchorSiblings = getSiblings(activeAnchor.closest('li'));
 						const completedSiblings = activeAnchorSiblings.filter(sibling => { return sibling.matches('.is-complete'); });
-						console.log(completedSiblings, activeAnchorSiblings);
 						if (target.matches('.is-complete') && completedSiblings.length === activeAnchorSiblings.length) {
 							[...activeParents].forEach((parent)=> {
 								parent.classList.add('is-complete');
