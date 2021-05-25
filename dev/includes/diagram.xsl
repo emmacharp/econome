@@ -29,7 +29,7 @@
 
 						<xsl:apply-templates select="." mode="include-once" />
 						<aside class="goods-list">
-							<input type="checkbox" name="goods-trigger" />
+							<input type="checkbox" name="trigger-goods-list" class="trigger-goods-list" />
 							<div hx-get="goods.html" hx-trigger="load" hx-select="#goods-list" hx-swap="outerHTML">
 							</div>
 						</aside>
