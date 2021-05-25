@@ -5,7 +5,7 @@
 
 	const sections = document.querySelectorAll('main>section');
 	const anchors = document.querySelectorAll('nav a');
-	const wikiLinks = document.querySelectorAll('[data-wiki]');
+	const complementaryLinks = document.querySelectorAll('[data-wiki], .trigger-goods-list');
 	const wikiViewer = document.querySelector('#wikiViewer');
 	const wikiDump = document.querySelector('#wikiDump');
 	const wikiCanonical = document.querySelector('#wikiCanonical');
@@ -196,7 +196,6 @@ const fetchWikiContent = (event) => {
 				wikiViewer.classList.add('is-visible');
 			}
 
-			event.target.classList.add('is-read');
 			wikiDump.scrollTop = 0;
 
 		})
@@ -218,9 +217,14 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 	// Activate wiki integration
-	wikiLinks.forEach((item) => {
-		item.addEventListener('click', fetchWikiContent);
-	});
+	// complementaryLinks.forEach((item) => {
+		document.body.addEventListener('click', function(event) {
+			const clickTarget = event.target;
+
+			if (clickTarget.matches('[data-wiki]') ||  clickTarget.matches('.trigger-goods-list')) event.target.classList.add('is-read');
+			if (event.target.matches('[data-wiki]')) fetchWikiContent(event);
+		});
+	// });
 
 	wikiDump.addEventListener('click', function(event) {
 		let wikiLink = event.target.closest('a[href^="/wiki"]');
