@@ -122,9 +122,9 @@
 	content: "✓";
 }
 
-:not(p)>[data-wiki]:after {
-	margin-left: 1em;
-	margin-right: 1em;
+:not(p):not(b)>[data-wiki]:after {
+	margin-left: .75em;
+	margin-right: .75em;
 	
 }
 
