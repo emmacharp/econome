@@ -136,9 +136,7 @@ Séquence de communication
 
 Quand on parle d'achat local, on doit parler d'approvisionnement et de valeur ajoutée. Quelle valeur est produite par notre achat ? Pourrait-on générer une plus grande valeur ajoutée en produisant autre chose ? Quelle est la plus grande valeur ajoutée à laquelle nous renonçons en produisant une plus grande quantité d'un certain produit ?
 
-L’achat local gagne en popularité. Les résultats du baromètre de la
-consommation responsable des dernières années montrent en effet que
-l’origine des produits est un critère de plus en plus important de la décision d’achat : 64,2 % des répondants disent privilégier l’achat local2
+__L’achat local gagne en popularité. Les résultats du baromètre de la consommation responsable des dernières années montrent en effet que l’origine des produits est un critère de plus en plus important de la décision d’achat : 64,2 % des répondants disent privilégier l’achat local2__
 
 Questions à Henri
 
@@ -414,7 +412,9 @@ On peut pas isoler seulement la valeur ajoutée... Il faut la relier à tout. Co
 Quand on va faire la simulation complète... Hercule devrait exploser. Parce que c'est impossible. Mais après on peut porposer une composition de la chaîne qui soit possible considérant les capacités actuelles de l'économie québécoise. Les contraintes sont satisfaites.
 Mais ça ne veut pas dire que toutes les implications sont positives... En affichant les indicateurs on peut démontrer, par exemple, que les travailleurs nécessaires à la production présentée sont devenus indisponibles ailleurs. Pression à la hausse des salaires dans toutes les autres industries. Cela amènera une diminution du pouvoir d'achat moyen. Chaque dollar dépensé achètera finalement moins. Effet prix. Concurrence sur les travailleurs.
 Y a une manière de faire ça en minimisant l'impact sur les prix et c'est en important des travailleurs sud-américains, par exemple. Produire localement et avec des travailleurs étrangers.
-Saviez-vous que, les restaurants ont demandés d'avoir accès aux travailleurs étrangers de la même façon que les agriculteurs le font. https://www.ledevoir.com/politique/quebec/560583/travailleurs-etrangers-temporaires-simon-jolin-barrette-renvoie-la-balle-a-ottawa
+
+__Saviez-vous que, les restaurants ont demandés d'avoir accès aux travailleurs étrangers de la même façon que les agriculteurs le font. https://www.ledevoir.com/politique/quebec/560583/travailleurs-etrangers-temporaires-simon-jolin-barrette-renvoie-la-balle-a-ottawa__
+
 Nous on est neutre... Faut qu'on regarde la réalité en face. Connaître les implications.
 
 Renforcer l'élément de découverte en constituant le schéma de chaîne.
@@ -475,3 +475,78 @@ Ce qu'il faut montrer : l'économie c'est une science pour optimiser l'utilisati
 Oui, je pourrais aller au dépanneur... mais j'ai plutôt envie d'Encourager mon bar de quartier. On peut  y acheter une Guinness ou une Heineken... mais on crée plus valeur ajoutée parce que ce n'est pas qu'un simple distributeur (comme un dépanneur).
 
 « C'est la meilleure information disponible... t'en as-tu de la meilleure ? Non ? Décâlice. »
+
+## 25 mai 2021
+
+Comment aborder l'achat local ?
+
+0. Introduction.
+	1. La mission de Econome.
+	2. Présentations
+1. C'est quoi l'achat local ?
+	1. Définition et articles.
+	3. On parle d'acheter PLUS local. On change la composition de nos achats.
+	2. Selon vous, ces achats sont-ils locaux ?
+2. Considérer les éléments économiques
+	1. Pour acheter localement... il faut produire localement. L'un ne va pas sans l'autre.  
+3. La chaîne économique de La Moyenne.
+	1. Les agents et leur(s) rôles.
+	4. La valeur ajoutée
+	5. La répartition de la valeur.
+		1. Local vs. Étrangère
+		2. Et si on produisait tout localement (Appelons-la La Locale) ?
+			1. Intrants matériels impossibles... On oublie ça.
+			2. Tout est produit par des travailleurs locaux.
+				3. Ça prend 100 000 travailleurs de plus dans la chaîne économique de la bière.
+					Ces travailleurs sont inexistants. Il faut les déplacer de leurs industries actuelles pour produire La Locale.
+					Un surenchère salariale (comment attirer autrement les travailleurs nécessaires ?) cause une pression à la hausse sur le niveau général des prix locaux. Certains pourraient parler d'inflation (Il y a plusieurs définitions opposées...).
+					Pour éviter la surenchère salariale, il faut équilibrer l'offre et la demande de travailleurs locaux. En produisant La Locale, la demande de travailleurs locaux augmente mais l'offre de travailleurs locaux reste pour sa part inchangée (ça prend tout un moment produire de nouveaux travailleurs !). C'est pourquoi, pour produire La Locale sans faire pression sur les prix, il nous faut ultimement... Importer des travailleurs. Tout comme le font par ailleurs en masse les agriculteurs maraîchers en accueillant des travailleurs sud-américains qui, une fois la saison complétée, retourneront dépenser leur salaire à l'étranger.
+			3. À la lumière de ce scénario, est-il réellement possible de produire La Locale, de manière efficace ?
+				Les limites de la production locale (et donc de la consommation locale) se font ici bien sentir...
+6. Les limites de l'achat local.
+	0. Selon vous, pourrait-on produire localement toute la valeur ajoutée d'une bière ?
+	1. Pourrait-on produire localement l'entièreté de la valeur ajoutée de l'économie québécoise ?
+	1. Coût d'opportunité.
+		- Quand on parle d'achat local, on doit parler d'approvisionnement et de valeur ajoutée. Quelle valeur est produite par notre achat ? Pourrait-on générer une plus grande valeur ajoutée en produisant autre chose ? Quelle est la plus grande valeur ajoutée à laquelle nous renonçons en produisant une plus grande quantité d'un certain produit ?
+	2. Ressources disponibles.
+		- Niveau de prix qui augmente avec les salaires à cause de l'inflation (manque de travailleurs = ).
+	3. Ces contraintes nous imposent d'économiser.
+		1. Comment acheter ?
+		2. Quoi acheter ?
+		3. Où acheter ?
+		4. POURQUOI ?
+7. Pourquoi acheter local ?
+	1. Et maintenant, selon vous ?
+	2. Encourager une entreprise locale.
+	3. Diminuer notre empreinte écologique.
+	4. Créer des emplois
+	5. Augmenter la productivité.
+	4. Et puis, comment faut-il aborder l'achat local ?
+		1. Objectifs
+		2. Chaîne
+		3. Valeur ajoutée
+		4. Répartition
+		- Importance de la distribution de la valeur ajoutée. Capital ou travail ? Actionnaires Québecois ou étrangers ? Différence entre salaires qui restent à l'intérieur vs. dividendes qui sortent du pays.
+		5. Arbitrage
+			1. Qu'est-ce qu'on gagne ? Qu'est-ce qu'on perd ?
+				Pour certaines choses on est mieux de laisser les acteurs efficaces, bien qu'étrangers faire le truc !
+		6. Optimisation
+			1. Augmenter notre consommation de biens dont la valeur ajoutée est produite localement implique l'usage exclusif de ressources rares qui pourraient allouées ailleurs. Cette réalité économique inéluctable appelle à l'optimisation et non la maximisation de notre consommation de biens dits locaux.
+	5. Questions à se poser
+		3. Est-ce que n'importe quel achat local va nécessairement nous enrichir ?  
+		4. Est-ce que tous les achats locaux sont comparables en termes de bénéfices ?  
+		5. Qu'est-ce qui fait qu'un achat local est bénéfique ? En quoi l'un pourrait-il l'être plus qu'un autre ?  
+8. Post-Mortem Econome.
+	1. Avez-vous appris quelque chose ?
+	2. Aimeriez-vous en savoir plus ?
+	3. Quel énoncé ci-bas se rapproche le plus de *votre* perception de ce qu'est « l'économie » ?
+		- Les marchés boursiers et les taux d'intérêt.
+		- Le chômage, les emplois et le PIB.
+		- Rationalisation, productivité et efficacité.
+		- Des objectifs alternatifs et des ressources limitées.
+	4. Vous y intéressez-vous ?
+	4. Avez-vous une autre vision de l'achat local ? 
+	5. Vous sentez-vous plus à même de poser des actions informées ?
+	6. Maintenant y voyez vous un peu plus clair ?
+	6. Avons-nous, Henri et Marc-André, stimulé votre intérêt pour l'économique ?
+	3. Laissez une appréciation libre de l'expérience.
