@@ -18,3 +18,9 @@ x (B) 2021-01-05 Essayer la grille sur un div à l'aide de switches booléennes 
 (A) 2021-04-24 Donner des contrôles persistants. Recherche par exemple. Avec explication (CMD-f). @experience
 (A) 2021-04-24 Diagramme à la diagonale @experience +css
 (A) 2021-04-30 Essayer avec le produit côte-à-côte avec l'agent pour le diagramme à la diagonale @maitrise +ux +design
+2021-05-25 Essayer la grille de biens produits dans la chaîne avec des emoji... @maitrise +design
+2021-05-25 Intégrer de vrais SVG dans la navigation plutôt que URL css @maitrise +dev
+2021-05-25 Demander à l'usager s'il a apprécié, s'il aimerait en avoir plus. @maitrise +ux
+2021-05-25 Donner de une couleur locale ou étrangère aux agents de la chaîne, dès le début @maitrise +ux
+2021-05-25 Essayer avec les marks à la droite, sortis de la nav @maitrise +design
+2021-05-25 Utiliser des delais pour simuler l'attente de la lecture avant de faire parler Henri ou Emma @maitrise +ux
