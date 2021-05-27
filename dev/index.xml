@@ -1,57 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="index.xsl" ?>
 <root>
-	<section id="intro">
+	<section>
 		<header>
-			<h1>Économie et <span class="local">achat local<i><symbol type="basket" /></i></span></h1>
+
+			<h1>Comment aborder l'achat <span class="local">local<i><symbol type="basket" /></i></span></h1>
 			<p>Un exposé Econome</p>
 		</header>
 		<section>
-			<div class="grille">
-				<div class="prose">
-					<p><b>Il vous est proposé aujourd'hui de démystifier la notion « d'achat local ».</b></p>
-					<p>Des questions (<em>pas plus de 10, promis</em>) vous seront posées, des concepts vous seront présentés, des implications seront abordées puis un raisonnement développé.</p>
-					<p><strong>Exigeons plus que des phrases creuses !</strong></p>
-					<p>Parce que oui, c'est plus complexe que ça (surprise ! ...mais pas tant quand même). Tout sera fait pour bien familiariser. Parce que oui, aussi, l'économique est familier. C'est de nos actions quotidiennes dont-il s'agit. <i>T'sais</i>.</p>
-				</div>
-				<aside>
-					<div>
-						<h5>Phrases creuses, vous dites ?</h5>
-						<ul>
-							<li>« L'achat local fait rouler notre économie ! »</li>
-							<li>« L'achat local crée des emplois ! »</li>
-							<li>« L'achat local nous enrichit ! »</li>
-							<li>« L'achat local est bon pour l'environnement ! »</li>
-							<li><i>et caetera</i></li>
-						</ul>
-					</div>
-				</aside>
-			</div>
+			<p>
+				<b>
+					Acheter localement est devenu dans les dernières années un sujet économique de choix.
+				</b>
+			</p>
+			<p>Mais que trop rarement (jamais ?) avons-nous abordé l'achat local de manière économique. Si nous, le public, voulons résoudre au mieux nos enjeux socio-économiques, il nous faut aller au-delà des slogans et campagnes de visibilité. Il nous faut comprendre les implications économiques des changements encourus. Et pour ce faire, il nous faut manier quelques concepts simples mais clés, concepts qui nous permettrons d'aborder nos achats, locaux ou pas, de manière informée et réfléchie. De manière <i data-wiki="Rationalité" data-sections="4">rationnelle</i>, quoi !</p>
+			<p>Dans les 5 prochaines minutes, nous espérons vous exposer, de manière aussi légère et familière que possible (promis !), les impacts économiques d'une croissance des achats dits « locaux ». Oui, entre « guillemets », car après tout, c'est quoi un achat « local » ?</p>
+			<p>Mais bon, où sont nos manières ! Présentons-nous, avant tout.</p>
 		</section>
-		<!-- ! A ESSAYER : Table des matières -->
-		<aside>
-			<details>
-				<summary><span>C'est quoi, Econome ?</span></summary>
-				<div>
-					<ol>
-						<li>La bande à gauche vous permet à tout moment de passer d'une section à l'autre, à votre bon gré. Nous croyons cependant que les 10 minutes qui suivent vaillent la peine (économique !) d'être expérimentées dans leur ensemble.</li>
-						<li>Vous avez accès à tout (ou presque) qu'en défilant la page.</li>
-						<li>Vous pouvez répondre ou non aux questions parsemées ici et là. Encore là... Si vous voulez en profiter pleinement (économique !)...</li>
-					</ol>
-					<p>On se voit en bas !</p>
-				</div>
-			</details>
-		</aside>
-
-		<div>
-			<symbol type="basket" preserveAspectRatio="xMinYMid slice" class="basket local" style="--Top: -50vh;" />
-			<symbol type="basket" preserveAspectRatio="xMinYMax slice" class="basket foreign" style="--Top: -70vh;" />
-		</div>
 	</section>
-	<h2><i><symbol type="basket" class="local" /></i>Introduction</h2>
-	<section data-type="question">
+	<section>
 		<header>
-			<h3>Pour commencer, présentons-nous</h3>
+			<h3>C'est qui <em>nous</em> ? Et vous ?</h3>
 		</header>
 		<section>
 			<div class="grille">
@@ -60,7 +29,7 @@
 				</header>
 				<div class="prose">
 					<p><b>Nous sommes deux amis et partenaires unis dans une quête de démystification économique.</b></p>
-					<p>Nous espérons communiquer l'analyse économique de manière à éclairer nos décisions communes. Exposer les implications de concepts et principes économiques et laisser le public « se faire une tête », comme on dit.</p>
+					<p>Nous espérons communiquer l'analyse économique de manière à éclairer nos décisions communes. Exposer les implications (inéluctables !) de nos actions économiques et laisser le public « se faire une tête », comme on dit.</p>
 				</div>
 				<aside>
 					<symbol type="emma" class="cartoon_emma animated" />
@@ -70,7 +39,8 @@
 							<h5>Marc-André</h5>
 							<small>concepteur éclectique</small>
 						</header>
-						<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur corporis velit, consequatur maiores minus aut excepturi dolore magni quis debitis odit quisquam sequi ratione veniam rerum fuga, blanditiis sit deleniti.</p>
+						<p><b>Hello !</b></p>
+						<p>Je suis le concepteur de Econome. J'interviendrai ici et là pour illustrer certains aspects et vous, oui vous, questionner sur.. surprise ! Vous verrez bien. <b>Mystère !</b> </p>
 					</div>
 				</aside>
 				<aside>
@@ -80,7 +50,8 @@
 							<h5>Henri</h5>
 							<small>économiste aguerri</small>
 						</header>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, rerum officiis est id. Natus ipsa, reprehenderit quo odio dolores molestiae repudiandae culpa in, neque illo iste dignissimos quas, voluptatibus quidem.</p>
+						<p><b>Bonjour !</b></p>
+						<p>Alors moi, c'est Henri. Je suis l'économiste de l'équipe. Je serai là pour résumer ou expliquer les concepts importants. L'analyse, les modèles et les chiffres, c'est de moi !</p>
 					</div>
 				</aside>
 			</div>
@@ -117,19 +88,131 @@
 				</aside>
 			</div>
 		</section>
+
 	</section>
-	<section id="preferences">
+	<!-- SECTION SUR LES PRÉFÉRENCES DE CONSULTATION -->
+	<section>
 		<header>
-			<h3>Vous avez des préférences esthétiques, Joey Joe Joe ?</h3>
-			<small>(c'est pour rendre votre expérience plus agréable !)</small>
+			<h3>Premièrement, l'achat local, c'est quoi ?</h3>
 		</header>
-		<form>
-			<fieldset>
-				<p>Couleurs</p>
-				<p>Taille de caractères</p>
-				<p>Animations</p>
-			</fieldset>
-		</form>
+		<section>
+			<div class="prose">
+				<p><b>Plusieurs définitions de l'achat local circulent.</b> Dépendant de celle-ci, on parlera d'achat local lorsqu'on magasine à la boutique du coin plutôt que sur Amazon. Ou lorsqu'on choisit des raisins du Québec plutôt que des raisins de l'Ontario. On inclura aussi, ou non, l'approvisionnement du commerçant où l'on choisit d'acheter. Bref, l'achat local demeure encore, malgré sa popularité grandissante, plutôt flou. Et nous essaierons par cet exposé de le préciser.</p>
+				<p>Pour bien apprécier ce qui suit, Joey Joe Joe, il vous est important de garder en tête que peu importe la définition acceptée de l'achat local, on parle toujours d'acheter <b>plus</b> localement que nous le faisions précédemment.</p>
+				<p><b>Nous changeons ainsi la composition de nos achats et ce faisant, la composition de l'activité économique. Et c'est cette <strong>relation entre notre comportement d'achat et la composition de l'économie</strong> qu'il nous faut bien comprendre pour acheter de manière efficace. Localement ou non !</b></p>
+			</div>
+			<aside>
+				<div>
+					<h4>L'achat local vu par d'autres</h4>
+					<ul>
+						<li><a href="https://www.protegez-vous.ca/argent/achat-local-definition">Protégez-vous</a></li>
+						<li><a href="https://www.fondsftq.com/fr-ca/particuliers/epargne-positive/pourquoi-acheter-local#:~:text=Mais%20qu'est%2Dce%20que,entreprises%20qu%C3%A9b%C3%A9coises%20aux%20grandes%20multinationales.">Fonds FTQ</a></li>
+						<li><a href="https://coalitionavenirquebec.org/fr/blog/editionspeciale/lachat-local-est-ce-que-ca-vaut-la-peine/">La CAQ</a></li>
+					</ul>
+				</div>
+			</aside>
+		</section>
+		<aside>
+			<div>
+				<q>Il faut acheter québécois, il faut acheter local, c’est important pour nos entreprises québécoises, et puis c’est important pour nos travailleurs/travailleuses québécois de ces entreprises-là.</q>
+				<cite>François Legault, Premier Ministre du Québec</cite>
+			</div>
+		</aside>
+	</section>
+	<section>
+		<header>
+			<h3>Aimez-vous la bière, Joey Joe Joe ?</h3>
+			<form>
+				<fieldset>
+					<p>Aimez-vous la bière ?</p>
+					<div>
+						<label>
+							<input type="radio" name="aimer-biere" required="" />
+							<span>Oui !</span>
+						</label>
+						<label>
+							<input type="radio" name="aimer-biere" />
+							<span>Non !</span>
+						</label>
+						<label>
+							<input type="radio" name="aimer-biere" />
+							<span>Je ne bois pas</span>
+						</label>
+					</div>
+				</fieldset>
+			</form>
+		</header>
+		<section>
+			<p>Parce que notre exposé repose sur un produit typique, soigneusement choisi par nous deux. Oui, il s'agit de bière. C'est bon, la bière. C'est le fun, aussi. Ça se porte bien à l'analyse de la consommation locale.</p>
+			<p>En tout cas, si vous aimez la bière, tant mieux. Sinon, pourriez-vous faire semblant durant les prochaines minutes ? Nous vous en serions reconnaissants. Humhum.</p>
+		</section>
+	</section>
+	<section>
+		<header>
+			<h3>Une p'tite question pour commencer...</h3>
+			<p>Selon vous, les achats suivants constitueraient-ils des achats locaux ?</p>
+		</header>
+		<section>
+			<form>
+				<fieldset>
+					<div class="grille">
+						<p>Acheter une caisse de Heineken au dépanneur du coin.</p>
+						<div>
+							<label><input type="radio" name="heineken" /><span class="local">Oui !</span></label>
+							<label><input type="radio" name="heineken" /><span class="foreign">Non !</span></label>
+							<label><input type="radio" name="heineken" /><span>Pas sûr...</span></label>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset>
+					<div class="grille">
+						<p>Acheter pinte de Guinness à votre bar préféré.</p>
+						<div>
+							<label><input type="radio" name="guinness" /><span class="local">Oui !</span></label>
+							<label><input type="radio" name="guinness" /><span class="foreign">Non !</span></label>
+							<label><input type="radio" name="guinness" /><span>Pas sûr...</span></label>
+						</div>
+					</div>
+				</fieldset>
+				<fieldset>
+					<div class="grille">
+						<p>Acheter une caisse de Boréale chez Wal-Mart.</p>
+						<div>
+							<label><input type="radio" name="heineken" /><span class="local">Oui !</span></label>
+							<label><input type="radio" name="heineken" /><span class="foreign">Non !</span></label>
+							<label><input type="radio" name="heineken" /><span>Pas sûr...</span></label>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</section>
+		<aside>
+			<symbol type="emma" class="cartoon_emma animated" />
+			<div>
+				<p><b>Il n'y a pas de bonnes ou mauvaises réponses !</b></p>
+				<p>C'est tout simplement pour évaluer si votre perspective aura évolué au long de l'exposé. Il est toujours possible de consulter les données <a href="#">ici</a>.</p>
+			</div>
+		</aside>
+	</section>
+	<section>
+		<header>
+			<h3>Le scénario de départ</h3>
+		</header>
+		<section>
+			<div class="prose">
+				<p><b>Vous, Joey Joe Joe, en tant que grand amateur de bière, avez soif.</b></p>
+				<p>En ces moments de chaleur, rien n'étanche votre cette viscérale soif comme votre bière québécoise de prédilection : La Moyenne. Vous avez l'habitude, Joey Joe Joe, d'acheter vos caisses de Moyenne au dépanneur du coin.</p>
+
+				<p>Vous partez donc vers le dépanneur, le dernier maîllon de la chaîne économique qui sous-tend votre consommation de Moyenne. En tant que maîllon de la chaîne économique, le dépanneur fait partie d'une suite d'<i data-wiki="Agent_économique">agents</i> qui se partagent les rôles économiques nécessaires à votre achat de bière, depuis sa production jusqu'à sa consommation</p>
+				<p>Reconstituons cette chaîne ensemble.</p>
+			</div>
+			<aside>
+				<symbol type="henri" class="cartoon_henri animated" />
+				<div>
+					<p>La chaîne économique est le premier concept que nous abordons. Analyser la chaîne économique d'un achat, son parcours en quelque sorte, est nécessaire pour en comprendre les retombées !</p>
+				</div>
+			</aside>
+		</section>
 		<aside>
 			<symbol type="robinson" class="cartoon_robinson animated" />
 			<div>
@@ -137,96 +220,36 @@
 				<cite>— <i data-wiki="Joan_Robinson">Joan Robinson</i></cite>
 			</div>
 		</aside>
-
-	</section>
-	<section data-type="question">
-		<header>
-			<p>Merci de vous être prêté au jeu, Joey Joe Joe !</p>
-			<h3>Passons maintenant aux choses sérieuses.</h3>
-		</header>
-		<form>
-			<fieldset>
-				<p>Aimez-vous la bière ?</p>
-				<div>
-					<label>
-						<input type="radio" name="aimer-biere" required="" />
-						<span>Oui !</span>
-					</label>
-					<label>
-						<input type="radio" name="aimer-biere" />
-						<span>Non !</span>
-					</label>
-					<label>
-						<input type="radio" name="aimer-biere" />
-						<span>Je ne bois pas</span>
-					</label>
-				</div>
-			</fieldset>
-			<fieldset>
-				<p>Vous savez que la bière (sans alcool, bien sûr) que vous tenez peut-être présentement dans votre main aura parcouru toute une chaîne d'acteurs endossant chacun un (ou des) rôle(s) nécessaires à la gorgée que vous prendrez.</p>
-				<div>
-					<label>
-						<input type="radio" name="chaine-biere" required="" />
-						<span>Bien sûr que je savais !</span>
-					</label>
-					<label>
-						<input type="radio" name="chaine-biere" />
-						<span>Hmmm, j'y avais pas pensé</span>
-					</label>
-					<label>
-						<input type="radio" name="chaine-biere" />
-						<span>Pourquoi aurais-je su ça ?</span>
-					</label>
-				</div>
-			</fieldset>
-		</form>
-		<div>
-			<!-- <symbol type="beer" preserveAspectRatio="xMinYMid slice" class="beer local" data-parallax="" data-factor=".5" /> -->
-		</div>
 	</section>
 	<h2>La chaîne économique</h2>
 	<section data-type="chaine">
 		<header>
 			<h3>Vous, Joey Joe Joe</h3>
-			<p>🍺 — Vous avez envie d'une bonne bière québécoise.</p>
+			<p>êtes assoiffé. Vous rêvez d'une bonne Moyenne, bien froide.</p>
 		</header>
-		<aside>
-			<symbol type="robinson" class="cartoon_robinson animated" />
-			<div>
-				<q> Étudier l’économie ne sert pas à acquérir des réponses toutes faites aux questions économiques mais plutôt à apprendre comment ne pas être trompé par les économistes.</q>
-				<cite>— <i data-wiki="Joan_Robinson">Joan Robinson</i></cite>
-			</div>
-		</aside>
 		<diagram type="chain" links="5">
-			<agent type="consumer" name="Joey Joe Joe" class="active" goods="" />
+			<agent type="consumer" name="Joey Joe Joe" />
+			<product type="beer" name="La Moyenne" complete="" class="local" />
 		</diagram>
 		<section>
-			<div class="grille">
-				<!-- <header><h4>Rôle consommateur</h4></header> -->
-				<div class="prose">
-					<p><b>Votre rôle est celui du consommateur.</b></p>
-					<!-- <p><b>Pour bien comprendre ce que constituerait un <span class="local">achat local</span>, il faut considérer le parcours complet du bien acheté.</b></p> -->
-					<p>Toute une chaîne économique est nécessaire pour rendre un bien (une bière, dans ce cas-ci) disponible au consommateur (vous, Joey Joe Joe). La façon dont vous allez acheter &amp; consommer votre bière détermine la nature des agents et conditionne la distribution de leurs rôles au sein de la chaîne.</p>
-					<p>Pour explorer la chaîne économique, imaginons un scénario où vous, le consommateur, achetez une <span class="local">bière québécoise au dépanneur du coin...</span></p>
-				</div>
-				<aside>
-					<symbol type="henri" class="cartoon_henri animated" />
-					<div>
-					<q>Analyser la chaîne économique d'un achat est nécessaire pour en comprendre les répercussions !</q>
-
-					</div>
-				</aside>
+			<div class="prose">
+				<p><b>Votre rôle économique est celui du <i data-wiki="Consommateur" data-sections="2">consommateur</i>.</b></p>
+				<p>Vous êtes le maîllon ultime de la chaîne, celui sans lequel la chaîne n'a de raison d'exister. Vous êtes à la fois le point de départ et le point d'arrivée de celle-ci (vous verrez !).</p>
+				<p>La façon dont vous allez acheter &amp; consommer votre bière détermine la nature des agents et conditionne la distribution de leurs rôles au sein de la chaîne. Par exemple, dans ce cas-ci Joey Joe Joe, vous achetez votre Moyenne au dépanneur. C'est à partir de cette décision économique que se déroule notre chaîne.</p>
 			</div>
+			<aside>
+				<symbol type="henri" class="cartoon_henri animated" />
+				<div>
+					<p>Tous les chiffres utilisés dans le reste de notre exposé proviennent de statistiques Canada et représentent <strong>en moyenne</strong>😉 l'industrie brassicole québécoise.</p>
+				</div>
+			</aside>
 		</section>
-		<div>
-			<!-- <symbol type="consumer" preserveAspectRatio="xMinYMid slice" class="consumer local" data-parallax="" data-factor=".25" /> -->
-		</div>
 	</section>
 	<section data-type="chaine">
 		<header>
 
 			<h3>Le dépanneur <span class="local">Commun+</span></h3>
-			<p>au coin de votre rue, vous vend votre bière québécoise de choix. Appelons-la, <span class="local">La moyenne.</span></p>
+			<p>au coin de votre rue, détient toujours une quantité suffisante de <span class="local">🍺 Moyenne.</span></p>
 		</header>	
 
 		<diagram type="chain" links="5">
@@ -237,294 +260,368 @@
 
 		<section>
 			<div class="grille">
-				<!-- <header> -->
-				<!-- 	<h4>Le détaillant</h4> -->
-				<!-- </header> -->
 				<div class="prose">
-					<p><b>Le dépanneur joue le rôle du détaillant. Il stocke une certaine quantité de « Moyenne » pour la vendre à des consommmateurs comme vous, Joey Joe Joe.</b></p>
-					<p>Le détaillant, fait partie de ce qu'on appelle « les producteurs de marge ». C'est-à-dire que le rôle du détaillant au sein de la chaîne est d'amener <i>le bien de consommation</i>—votre bonne bière québécoise !—d'un point A à un point B. <s>Il s'agit là de la <i data-wiki="Valeur_ajoutée" data-sections="1,3"><nobr>valeur ajoutée</nobr></i> (concept fondamental ! nous y reviendrons...) par le rôle du détaillant.</s></p>
-					<p>Sans lui, la bière ne vous serait pas disponible ! Mais... le dépanneur, en tant que détaillant, doit lui aussi acheter la bière pour la rendre disponible.</p>
-					<p>C'est là où entre en scène le rôle du <strong>grossiste</strong> !</p>
+					<p><b>Le dépanneur joue le rôle du <i data-wiki="Commerce_de_détail">détaillant</i>. Il stocke une certaine quantité de Moyenne pour la vendre à de fins <em>connoisseurs</em> comme vous, Joey Joe Joe.</b></p>
+					<p>Le détaillant, fait partie de ce qu'on appelle <em>les producteurs de marge</em>. C'est-à-dire que le rôle du détaillant au sein de la chaîne est d'amener <i data-wiki="Bien_(économie)">le bien de consommation</i>—votre bonne bière Moyenne !—d'un point A à un point B. Sans le détaillant, votre bière vous serait difficilement accessible !</p>
+					<p>Cependant votre bière n'apparaît pas d'elle-même dans les réfrigérateurs de votre dépanneur Commun+, lui aussi, en tant que détaillant, achète à son tour la Moyenne qu'il vous offre. Il doit effectivement s'approvisionner quelque part...</p>
 				</div>
 			</div>
 		</section>
-		<div>
-			<!-- <symbol type="retailer" preserveAspectRatio="xMinYMid slice" class="retailer local" data-parallax="" data-factor=".25" /> -->
-		</div>
 	</section>
-
 	<section data-type="chaine">
 		<header>
 
 			<h3>Les <span class="local">Entrepôts Correct</span> inc.</h3>
-			<p>reçoit, entrepose puis transporte plusieurs palettes de « Moyenne ».</p>
+			<p>reçoit, entrepose puis transporte plusieurs palettes de Moyenne.</p>
 		</header>
-		<!-- <aside> -->
-			<!-- 	<symbol type="emma" class="cartoon_emma animated" /> -->
-			<!-- 	<div> -->
-				<!-- 		<p></p> -->
-				<!-- 	</div> -->
-				<!-- </aside> -->
-			<diagram type="chain" links="5">
-				<agent type="consumer" name="Joey Joe Joe" />
-				<product type="beer" name="Bière" complete="" />
-				<agent type="retailer" name="Dépanneur Commun+" goods="" />
-				<product type="beer" name="Bière" />
-				<agent type="manufacturer" name="Entrepôts Correct" class="local" goods="" />
-			</diagram>
-			<section>
-				<div class="grille">
-					<!-- <header> -->
-					<!-- 	<h4>Grossiste et transporteur</h4> -->
-					<!-- </header> -->
-					<div class="prose">
-						<p><b>« Les Entrepôts Correct inc. » combine les rôles à la fois de grossiste mais aussi du <i data-wiki="Le_Transporteur">transporteur</i> !</b></p>
-						<p>Le grossiste permet d'entreposer de vastes quantités de biens de consommation et ainsi permettre une production élargie du bien tout en permettant aussi au détaillant de ne pas stocker ledit bien en d'aussi grandes quantités pour lesquelles il n'aurait pas l'espace disponible.</p>
-						<p>En tant que maillon intermédiaire de la chaîne économique, le grossiste, comme le détaillant avant lui, s'inscrit dans la catégorie des « producteurs de marge ». Son rôle est donc lui aussi d'assurer que votre bonne bière québécoise se rende du point A au point B. Sans lui, le dépanneur serait inondé de bonne bière québécoise...</p>
-						<p>Et l'espace lui manquerait pour nous procurer les bonnes pinottes accompagnant notre bonne bière. Huuummmm... des pinoooottes. Euh, bon, s'cusez.</p>
-						<p>Mais donc, si le détaillant et le grossiste ne font que rendre disponible notre bonne bière québécoise, <strong>qui la produit</strong> ?</p>
-					</div>
-				</div>
-			</section>
-			<!-- <aside> -->
-				<!-- 	<symbol type="emma" class="cartoon_emma animated" /> -->
-				<!-- 	<div> -->
-					<!-- 	</div> -->
-					<!-- </aside> -->
-			</section>
-			<section data-type="chaine">
-				<header>
-
-					<h3>La brasserie <span class="local">Pâpire</span></h3>
-					<p>brasse depuis maintenant 20 ans <span class="local">La Moyenne</span>, à votre grand plaisir, Joey Joe Joe.</p>
-				</header>
-
-				<diagram type="chain" links="5">
-					<agent type="consumer" name="Joey Joe Joe" />
-					<product type="beer" name="Bière" complete="" />
-					<agent type="retailer" name="Dépanneur Commun+" class="local" />
-					<product type="beer" name="Bière" />
-					<agent type="manufacturer" name="Entrepôts Correct" class="local" />
-					<product type="beer" name="Bière" />
-					<agent type="transformer" name="Brasserie Pâpire" class="active" />
-				</diagram>
-				<section>
-					<div class="grille">
-						<!-- <header><h4>Le transformateur</h4></header> -->
-						<div class="prose">
-							<p><b>La où la magie (lire : fermentation) s'opère !</b> </p>
-							<p>Il s'agit là d'un agent fondamental de la chaîne, celui qui se procure les <i data-wiki="">biens intermédiaires</i>  et les transforme en biens de consommation. <strong>Sans brasserie, pas de bonne bière !</strong> </p>
-							<p>Tout dépendant de ses moyens et, surtout, de <strong>vos habitudes à vous, Joey Joe Joe, le consommateur</strong>, la brasserie peut endosser d'autres rôles que celui-ci de la « simple » transformation et ainsi modifier la composition de notre chaîne économique.</p>
-							<p> Ceci dit, bien que la brasserie soit fondamentale à notre chaîne (et à votre dégustation de bière), elle aussi repose sur un autre maillon, un maillon où beaucoup du « degré de localité » de notre achat se joue : celui du fournisseur.</p>
-						</div>
-					</div>
-				</section>
-			</section>
-			<section data-type="chaine">
-				<header>
-
-					<h3><span class="foreign">Ok Hops</span> en Ontario</h3>
-					<p>vend les mêmes houblons ordinaires depuis les 20 ans d'existence de la brasserie « Pâpire ».</p>
-				</header>
-				<diagram type="chain" links="5">
-					<agent type="consumer" name="Joey Joe Joe" />
-					<product type="beer" name="Bière" complete="" />
-					<agent type="retailer" name="Dépanneur Commun+" class="local" />
-					<product type="beer" name="Bière" />
-					<agent type="manufacturer" name="Entrepôts Correct" class="local" />
-					<product type="beer" name="Bière" />
-					<agent type="transformer" name="Brasserie Pâpire" class="local" />
-					<product type="beer" name="Bière" />
-					<agent type="provider" name="Ok Hops" class="active foreign" />
-				</diagram>
-				<section>
-					<div class="grille">
-						<!-- <header><h4>Le(s) fournisseur(s)</h4></header> -->
-						<div class="prose">
-							<p><b>Que l'on parle du verre de la bouteille, de l'eau ou du houblon (comme ici), il aura fallu que ces biens intermédiaires soient eux aussi produits.</b></p>
-							<p>La brasserie n'est pas (généralement du moins) aussi productrice de céréales ou de verre, elle se retourne donc vers le dernier maillon de notre chaîne, les fournisseurs. Ce sont eux qui produisent les matières premières nécessaires à la confection d'une bonne bière québécoise.</p>
-							<p>La brasserie, grâce à son savoir-faire (et ses recettes secrètes) transforme les « intrants » fournis en <span class="local">La Moyenne</span>. À ce titre, les fournisseurs deviennent en pratique tout aussi vitaux que la brasserie dans notre dégustation de bière. Tout comme le sont les fournisseurs des fournisseurs... et leurs fournisseurs à eux aussi. Ce dernier maillon de la chaîne peut ainsi se dérouler looooongtemps. L'arbre est dans ses feuilles. « Toute est dans toute ».  </p>
-						</div>
-					</div>
-				</section>
-			</section>
-					<h2>Et mon 10$ lui ?</h2>
-			<section>
-				<header>
-
-					<p>« Ok, vous dites-vous, Joey Joe Joe, ok, mais il arrive quoi à mon 10 piastres que je lui ai donné au dépanneur ? »</p>
-				</header>
-				<p>« Excellente question ! », répondons-nous, Joey Joe Joe !</p>
-				<p>Votre 10 piastres, Joey Joe Joe, il parcourt la chaîne de l'autre sens !</p>
-			</section>
-			<section>
-				<header>
-
-					<h3>Le périple du 10 piastres</h3>
-					<p>Vous donnez 10$ au dépanneur « Commun+ »</p>
-				</header>
-
-				<diagram type="chain" links="5">
-					<agent type="consumer" name="Joey Joe Joe" paid="10" />
-					<product type="beer" name="Bière" complete="" value="100%" />
-					<agent type="retailer" name="Dépanneur Commun+" value="10" class="active" />
-					<product type="beer" name="Bière" />
-					<agent type="manufacturer" name="Entrepôts Correct" class="local" />
-					<product type="beer" name="Bière" />
-					<agent type="transformer" name="Brasserie Pâpire" class="local" />
-					<product type="beer" name="Bière" />
-					<agent type="provider" name="Ok Hops" class="foreign" />
-				</diagram>
-			</section>
-			<section>
-				<header>
-
-					<p>Le dépanneur se retourne et donne 9$ au manufacturier</p>
-				</header>
-
-				<diagram type="chain" links="5">
-					<agent type="consumer" name="Joey Joe Joe" paid="10" />
-					<product type="beer" name="Bière" complete="" value="100%" />
-					<agent type="retailer" name="Dépanneur Commun+" class="local" value="1" />
-					<product type="beer" name="Bière" value="90" />
-					<agent type="manufacturer" name="Entrepôts Correct" value="9" class="active" />
-					<product type="beer" name="Bière" />
-					<agent type="transformer" name="Brasserie Pâpire" class="local" />
-					<product type="beer" name="Bière" />
-					<agent type="provider" name="Ok Hops" class="foreign" />
-				</diagram>
-			</section>
-			<section>
-				<header>
-
-					<p>Le manufacturier se retourne de son tour puis donne 8$ à la brasserie.</p>
-				</header>
-
-				<diagram type="chain" links="5">
-					<agent type="consumer" name="Joey Joe Joe" paid="10" />
-					<product type="beer" name="Bière" complete="" value="100%" />
-					<agent type="retailer" name="Dépanneur Commun+" class="local" value="1" />
-					<product type="beer" name="Bière" value="90" />
-					<agent type="manufacturer" name="Entrepôts Correct" class="local" value="1" />
-					<product type="beer" name="Bière" value="80" />
-					<agent type="transformer" name="Brasserie Pâpire" value="8" class="active" />
-					<product type="beer" name="Bière" />
-					<agent type="provider" name="Ok Hops" class="foreign" />
-				</diagram>
-			</section>
-			<section>
-				<header>
-
-					<p>La brasserie, elle, se retourne plusieurs fois et donne au total 4$ à ses fournisseurs en tout genre.</p>
-				</header>
-
-				<diagram type="chain" links="5">
-					<agent type="consumer" name="Joey Joe Joe" paid="10" />
-					<product type="beer" name="Bière" complete="" value="100%"  />
-					<agent type="retailer" name="Dépanneur Commun+" class="local" value="1" />
-					<product type="beer" name="Bière" value="90%" />
-					<agent type="manufacturer" name="Entrepôts Correct" class="local" value="1" />
-					<product type="beer" name="Bière" value="80%" />
-					<agent type="transformer" name="Brasserie Pâpire" class="local" value="4" />
-					<product type="beer" name="Bière" value="40%" />
-					<agent type="provider" name="Ok Hops" value="4" class="active foreign" />
-				</diagram>
-			</section>
-			<h2>La valeur ajoutée</h2>
-			<section>
-				<header>
-					<p>« Donc là, vous dites-vous, l'argent que chacun garde, c'est leur profit, c'est ça ?</p>
-				</header>
+		<diagram type="chain" links="5">
+			<agent type="consumer" name="Joey Joe Joe" />
+			<product type="beer" name="Bière" complete="" />
+			<agent type="retailer" name="Dépanneur Commun+" goods="" />
+			<product type="beer" name="Bière" />
+			<agent type="manufacturer" name="Entrepôts Correct" class="local" goods="" />
+		</diagram>
+		<section>
+			<div class="grille">
 				<div class="prose">
-					<p>Encore, une excellente question. Deux en deux !</p>
-					<p>Mais non, pas tout à fait, c'est ça, mais aussi les salaires, l'électricité, le comptable... donc toutes leurs dépenses plus leurs profits.</p>
-					<p><b>Et ça, c'est ce qu'on appelle la valeur ajoutée !</b></p>
-					<p>Chacun des agents de la chaîne, grâce aux différents rôles qu'ils endossent, génèrent de la « valeur ajoutée ». Cette valeur « ajoutée » représente la part gardée par chacun. Et celle-ci joue un rôle fondamental dans l'analyse économique.</p>
-					<p>Et il peut arriver que l'un des acteurs soit « étranger ». Qu'il ne soit pas considéré comme « local » selon les frontières qu'on s'est donné. Par exemple, ici,  « Ok Hops » est un producteur de houblons en Ontario.</p>
+					<p><b>« Les Entrepôts Correct inc. » combine les rôles à la fois de  s<i data-wiki="Commerce_de_gros">grossiste</i> mais aussi du <i data-wiki="Le_Transporteur">transporteur</i> !</b></p>
+					<p>Le grossiste permet d'entreposer de vastes quantités de biens de consommation et ainsi permettre une production élargie du bien tout en permettant aussi au détaillant de ne pas stocker ledit bien en d'aussi grandes quantités pour lesquelles il n'aurait pas l'espace disponible.</p>
+					<p>En tant que maillon intermédiaire de la chaîne économique, le grossiste, comme le détaillant avant lui, s'inscrit dans la catégorie des producteurs de marge. Son rôle est donc lui aussi d'assurer que votre bonne bière québécoise se rende du point A au point B. </p>
+
+					<p>Mais donc, si le détaillant et le grossiste ne font que rendre disponible notre Moyenne, <strong>qui la produit</strong> ?</p>
+				</div>
+			</div>
+		</section>
+		<aside>
+			<symbol type="emma" class="cartoon_emma animated" />
+			<div>
+				<p>Sans les Entrepôts Correct, votre Commun+ serait inondé de Moyenne... et il ne pourrait plus vous offrir les bonnes pinottes accompagnant si bien votre bonne Moyenne. <em>Huuummmm... De la bière pis des pinoooottes</em>.</p>
+			</div>
+		</aside>
+	</section>
+	<section data-type="chaine">
+		<header>
+
+			<h3>La brasserie <span class="local">Pâpire</span></h3>
+			<p>comme vous le savez déjà, brasse <span class="local">La Moyenne</span> depuis plus de vingt ans et ce, à votre grand plaisir, Joey Joe Joe.</p>
+		</header>
+
+		<diagram type="chain" links="5">
+			<agent type="consumer" name="Joey Joe Joe" />
+			<product type="beer" name="Bière" complete="" />
+			<agent type="retailer" name="Dépanneur Commun+" class="local" />
+			<product type="beer" name="Bière" />
+			<agent type="manufacturer" name="Entrepôts Correct" class="local" />
+			<product type="beer" name="Bière" />
+			<agent type="transformer" name="Brasserie Pâpire" class="active" />
+		</diagram>
+		<section>
+			<div class="grille">
+				<!-- <header><h4>Le transformateur</h4></header> -->
+				<div class="prose">
+					<p><b>La brasserie Pâpire est le transformateur de notre chaîne. c'est la où la magie (lire : fermentation) s'opère !</b> </p>
+					<p>Le transformateur est un agent fondamental de la chaîne, celui qui se procure les <i data-wiki="Consommation_intermédiaire" data-sections="0">biens intermédiaires</i>  et les transforme en biens de consommation. <strong>Bref, sans brasserie, pas de bonne bière !</strong> </p>
+					<p>Tout dépendant de ses moyens et, surtout, de <strong>vos habitudes à vous, Joey Joe Joe, le consommateur</strong>, la brasserie peut endosser d'autres rôles que celui-ci de la « simple » transformation et ainsi modifier la composition de notre chaîne économique.</p>
+					<p> Ceci dit, bien que la brasserie soit essentielle à notre chaîne (et à votre dégustation de bière), elle aussi repose sur un autre maillon fondamental qui donne le goût ordinaire, si caractéristique de La Moyenne.</p>
+				</div>
+			</div>
+		</section>
+	</section>
+	<section data-type="chaine">
+		<header>
+
+			<h3><span class="foreign">Ok Hops</span> en Ontario</h3>
+			<p>vend les mêmes houblons ordinaires depuis les 20 ans d'existence de la brasserie « Pâpire ».</p>
+		</header>
+		<diagram type="chain" links="5">
+			<agent type="consumer" name="Joey Joe Joe" />
+			<product type="beer" name="Bière" complete="" />
+			<agent type="retailer" name="Dépanneur Commun+" class="local" />
+			<product type="beer" name="Bière" />
+			<agent type="manufacturer" name="Entrepôts Correct" class="local" />
+			<product type="beer" name="Bière" />
+			<agent type="transformer" name="Brasserie Pâpire" class="local" />
+			<product type="beer" name="Bière" />
+			<agent type="provider" name="Ok Hops" class="active foreign" />
+		</diagram>
+		<section>
+			<div class="grille">
+				<!-- <header><h4>Le(s) fournisseur(s)</h4></header> -->
+				<div class="prose">
+					<p><b>Que l'on parle du verre de la bouteille, de l'eau ou du houblon (comme ici), il aura fallu que ces biens intermédiaires soient eux aussi produits.</b></p>
+					<p>La brasserie n'est pas (généralement du moins) aussi productrice de céréales ou de verre, elle se retourne donc vers le dernier maillon de notre chaîne, les fournisseurs. Ce sont eux qui produisent les matières premières nécessaires à la confection d'une bonne Moyenne.</p>
+					<p>La brasserie, grâce à son savoir-faire (et ses recettes secrètes) transforme les « intrants » fournis en <span class="local">La Moyenne</span>. À ce titre, les fournisseurs deviennent en pratique tout aussi vitaux que la brasserie dans notre dégustation de bière.    </p>
+				</div>
+				<aside>
+					<symbol type="henri" class="cartoon_henri animated" />
+					<div>Le maillon des fournisseurs peut se dérouler très looooongtemps. Car les fournisseurs ont eux aussi des fournisseurs... qui eux aussi ont des fournisseurs. L'arbre est dans ses feuilles, quoi. « Toute est dans toute ».</div>
+				</aside>
+			</div>
+		</section>
+	</section>
+	<section>
+		<header>
+			<p>Et c'est ainsi que nous avons maintenant un modèle simple mais complet de la chaîne économique de votre achat de Moyenne, Joey Joe Joe.</p>
+		</header>
+		<section>
+			<div class="prose">
+				<p><b>Cette chaîne s'avère être la colonne vertébrale de votre consommation. C'est à travers elle que la valeur est ajoutée.</b></p>
+				<p>La valeur ajoutée est le deuxième concept primordial à une compréhension rationnelle de notre acte de consommation locale. Elle représente la trace économique, de chacun des agents de la chaîne. Grâce à elle, nous pouvons évaluer quelle part de votre satisfaction, Joey Joe Joe, repose sur quelles épaules et beaucoup plus encore.</p>
+				<p>Voyons donc dès maintenant comment se répartie la création de valeur ajoutée au sein de la chaîne de votre achat de Moyenne, Joey Joe Joe.</p>
+			</div>
+		</section>
+		<aside>
+			<symbol type="neurath" class="cartoon_neurath animated" />
+			<div>
+				<q>En économie, lorsqu'on emploie les termes « bon » et « mauvais », nous ne pouvons le faire qu'en y ajoutant « pour quelqu'un »...</q>
+				<cite><i data-wiki="Otto_Neurath">Otto Neurath</i></cite>
+			</div>
+		</aside>
+	</section>
+	<h2>La valeur ajoutée</h2>
+	<section>
+		<header>
+			<h3>Le périple du 10 $ à Joey Joe Joe</h3>
+		</header>
+		<section>
+			<div class="prose">Retournons à vous, Joey Joe Joe et au 10 piastres que vous utilisez pour acheter votre Moyenne chez Commun+. Ce 10$, c'est la valeur qui est accordée à la Moyenne, valeur que vous-même considérez minimalement égale à 10 $... puisque vous l'échangez pour la Moyenne. </div>
+		</section>
+		<diagram type="chain" links="5">
+			<agent type="consumer" name="Joey Joe Joe" paid="10" />
+			<product type="beer" name="Bière" complete="" value="100%" />
+			<agent type="retailer" name="Dépanneur Commun+" value="10" class="active" />
+			<product type="beer" name="Bière" />
+			<agent type="manufacturer" name="Entrepôts Correct" class="local" />
+			<product type="beer" name="Bière" />
+			<agent type="transformer" name="Brasserie Pâpire" class="local" />
+			<product type="beer" name="Bière" />
+			<agent type="provider" name="Ok Hops" class="foreign" />
+		</diagram>
+		<aside>
+			<symbol type="henri" class="cartoon_henri animated" />
+				<div><b>Humhum.</b> C'est un peu plus compliqué que ça quand même, mais c'est suffisant pour l'usage que nous en faisons ici.</div>
+			</aside>
+		</section>
+		<section>
+			<header>
+
+				<p>Commun+ ajoute 2$ de valeur en biens et services, c'est le montant qu'il se garde avant de passer la suite à Entrepôts Correct...</p>
+			</header>
+
+			
+			<diagram type="chain" links="5">
+				<agent type="consumer" name="Joey Joe Joe" paid="10" />
+				<product type="beer" name="Bière" complete="" value="100%" />
+				<agent type="retailer" name="Dépanneur Commun+" class="local" value="1" />
+				<product type="beer" name="Bière" value="90" />
+				<agent type="manufacturer" name="Entrepôts Correct" value="9" class="active" />
+				<product type="beer" name="Bière" />
+				<agent type="transformer" name="Brasserie Pâpire" class="local" />
+				<product type="beer" name="Bière" />
+				<agent type="provider" name="Ok Hops" class="foreign" />
+			</diagram>
+
+			<aside>
+				<symbol type="emma" />
+				<div>
+					<p>Vous pouvez accéder à un aperçu de ce qui constitue la valeur ajoutée par chacun des agents en cliquant sur l'un de ces curieux boutons jaunes...</p>
+					<p>Si jamais vous ne vous étiez pas rendu compte de leur intérêt, Joey Joe Joe.</p>
+				</div>
+			</aside>
+		</section>
+		<section>
+			<header>
+				<p>... qui à son tour garde la partie qui lui revient de votre 10$ de butin puis passe le sac au suivant...</p>
+			</header>
+			<diagram type="chain" links="5">
+				<agent type="consumer" name="Joey Joe Joe" paid="10" />
+				<product type="beer" name="Bière" complete="" value="100%" />
+				<agent type="retailer" name="Dépanneur Commun+" class="local" value="1" />
+				<product type="beer" name="Bière" value="90" />
+				<agent type="manufacturer" name="Entrepôts Correct" class="local" value="1" />
+				<product type="beer" name="Bière" value="80" />
+				<agent type="transformer" name="Brasserie Pâpire" value="8" class="active" />
+				<product type="beer" name="Bière" />
+				<agent type="provider" name="Ok Hops" class="foreign" />
+			</diagram>
+
+		</section>
+		<section>
+			<header>
+
+				<p>... La brasserie Pâpire se garde la part substantielle du 10$ de valeur, parce qu'après tout, c'est elle qui produit votre Moyenne, Joe Joe Joe !</p>
+				<p>Malgré tout, une autre part substantielle ira aux fournisseurs en tout genre, dont font partie Ok Hops en Ontario.</p>
+			</header>
+
+			<diagram type="chain" links="5">
+				<agent type="consumer" name="Joey Joe Joe" paid="10" />
+				<product type="beer" name="Bière" complete="" value="100%"  />
+				<agent type="retailer" name="Dépanneur Commun+" class="local" value="1" />
+				<product type="beer" name="Bière" value="90%" />
+				<agent type="manufacturer" name="Entrepôts Correct" class="local" value="1" />
+				<product type="beer" name="Bière" value="80%" />
+				<agent type="transformer" name="Brasserie Pâpire" class="local" value="4" />
+				<product type="beer" name="Bière" value="40%" />
+				<agent type="provider" name="Ok Hops et autres" value="4" class="active foreign" />
+			</diagram>
+			<aside>
+				<symbol type="emma" />
+				<div>
+					<p>Je vous le dis, Joey Joe Joe, c'est super intéressant de regarder la production de valeur de chacun des agents parce que ce sont de vrais estimés de notre production moyenne de bière québécoise !</p>
+					<p>Bonbon, j'insiste pas plus.</p>
+				</div>
+			</aside>
+		</section>
+		<section>
+			<header>
+				<h3>La répartition complète de la valeur ajoutée</h3>
+			</header>
+			<section>
+				<div class="prose">
+					<p><b>Arrêtons-nous un instant pour regarder notre chaîne de valeur complétée.</b></p>
+					<p>Plusieurs faits économiques importants y apparaissent. Notamment, il devient clair que tous les agents économiques n'ajoutent pas la même valeur. Il devient tout aussi clair que finalement, votre achat dit « local », Joey Joe Joe, devient celui de la chaîne de valeur au complet. Et c'est là où ça devient intéressant.</p>
+					<p><b>Car, comme vous le verrez bientôt, la chaîne de valeur d'un achat ne peut jamais être entièrement locale.</b></p>
+					<p>Ultimement votre achat, Joey Joe Joe, qu'il soit de bière ou de tout autre bien économique, présentera un certain <strong>degré de localité</strong></p>
+					<p>Le degré de localité de votre achat donc, dépendra de la chaîne de valeur que vous mettez en action par votre consommation. Et comme vous pouvez le constater dans la chaîne ici présente, les agents peuvent être soit locaux, soit étrangers. Il s'agit là d'un premier élément d'information quant au degré de localité de notre achat. Plus il y aura de valeur ajoutée qui soit locale, le plus haut sera le degré de localité de votre achat. Mais encore, au-delà de la localité des agents dans la chaîne, il y a bien plus important...</p>
 				</div>
 			</section>
+			<diagram type="chain" links="5">
+				<agent type="consumer" name="Joey Joe Joe" paid="10" />
+				<product type="beer" name="Bière" complete="" value="100%"  />
+				<agent type="retailer" name="Dépanneur Commun+" class="local" value="1" />
+				<product type="beer" name="Bière" value="90%" />
+				<agent type="manufacturer" name="Entrepôts Correct" class="local" value="1" />
+				<product type="beer" name="Bière" value="80%" />
+				<agent type="transformer" name="Brasserie Pâpire" class="local" value="4" />
+				<product type="beer" name="Bière" value="40%" />
+				<agent type="provider" name="Ok Hops" value="4" class="active foreign" />
+			</diagram>
+		</section>
+		<section>
+			<header>
+				<p>Il y a la provenance de la valeur ajoutée de chacun !</p>
+			</header>
 			<section>
-				<header>
-					<h3>Valeur ajoutée et achat local</h3>
-					<p>Et c'est ainsi que <em>votre</em> « achat local » au dépanneur peut devenir (ou pas) l'achat local de l'entière chaîne économique.</p>
-				</header>
-				<p>Et que la question suivante vous vient à l'esprit : « Ben là, faut qu'il y en ait combien d'acteurs québécois dans la chaîne économique pour que « <span class="local">j'achète Québécois </span>» ?</p>
-				<p>« Boom !, répondons-nous, en plein dans le mille. »</p>
-				<p>Mais alors, c'est quoi un « <span class="local">achat local</span> » ?</p>
+				<div class="prose">
+					<p><b>Pour nous sortir des slogans et autres phrases creuses lancées dans la discussion, il nous faut aborder l'achat local en termes de valeur ajoutée.</b></p>
+					<p>Effectivement, Joey Joe Joe, ce qui ultimement compte le plus dans l'évaluation du degré de localité de votre achat, c'est la provenance de la valeur ajoutée. Des agents locaux peuvent « acheter » de la valeur à l'étranger alors que des agents étrangers peuvent produire de la valeur, ici, localement.</p>
+				</div>
 			</section>
-			<h2>Vers une conception économique de l'achat local</h2>
+			<diagram type="chain" links="5">
+				<agent type="consumer" name="Joey Joe Joe" paid="10" />
+				<product type="beer" name="Bière" complete="" value="100%"  />
+				<agent type="retailer" name="Dépanneur Commun+" class="local" value="1" />
+				<product type="beer" name="Bière" value="90%" />
+				<agent type="manufacturer" name="Entrepôts Correct" class="local" value="1" />
+				<product type="beer" name="Bière" value="80%" />
+				<agent type="transformer" name="Brasserie Pâpire" class="local" value="4" />
+				<product type="beer" name="Bière" value="40%" />
+				<agent type="provider" name="Ok Hops" value="4" class="active foreign" />
+			</diagram>
+				<aside>
+					<symbol type="henri" />
+					<div>
+						<p>Si l'on parle d'achat ou de consommation locale, il faut absolument parler de production locale. L'un ne va pas sans l'autre !</p>
+					</div>
+				</aside>
+		</section>
+		<section>
+			<header>
+				<h3>Où est produite la valeur ajoutée ?</h3>
+				<p><b>Voilà la question qu'il faut vous poser, Joey Joe Joe !</b></p>
+			</header>
 			<section>
-				<header>
-					<h3>C'est quoi un achat local ?</h3>
-				</header>
-				<p><mark>Définition et exemples</mark></p>
+				<div class="prose">
+					<p><b>Ainsi donc la chaîne économique de votre bière Moyenne produit localement 7.50$ et puis 2.50% à l'étranger. Ce rapport lui donne un degré (indice ?) de localité de 75%.</b></p>
+					<p>Avec en main ces données, nous pouvons passer à la prochaine étape notre exposé...</p>
+				</div>
 			</section>
-			<section>
-				<header>
-					<h3>Et selon vous..?</h3>
-					<p>... les achats ci-dessous sont-ils locaux ?</p>
-				</header>
-				<form action="">
-					<fieldset>
-						<div class="grille">
-							<p>Acheter une télévision coréenne dans une chaîne de magasin américaine installée au Québec.</p>
-							<div>
-								<label><input type="radio" name="television" /><span class="local">Oui !</span></label>
-								<label><input type="radio" name="television" /><span class="foreign">Non !</span></label>
-								<label><input type="radio" name="television" /><span>Pas sûr...</span></label>
-							</div>
-						</div>
-					</fieldset>
-					<fieldset>
-						<div class="grille">
-							<p>Acheter du jus d'orange de la Floride transformé au Québec.</p>
-							<div>
-								<label><input type="radio" name="orange" /><span class="local">Oui !</span></label>
-								<label><input type="radio" name="orange" /><span class="foreign">Non !</span></label>
-								<label><input type="radio" name="orange" /><span>Pas sûr...</span></label>
-							</div>
-						</div>
-					</fieldset>
-					<fieldset>
-						<div class="grille">
-							<p>Acheter dans un supermarché une bière québécoise produite à l'aide de houblons belges.</p>
-							<div>
-								<label><input type="radio" name="biere" /><span class="local">Oui !</span></label>
-								<label><input type="radio" name="biere" /><span class="foreign">Non !</span></label>
-								<label><input type="radio" name="biere" /><span>Pas sûr...</span></label>
-							</div>
-						</div>
-					</fieldset>
-				</form>
-			</section>
-			<section>
-				<header>
-					<h3>Quand est-ce qu'un achat devient-il local ?</h3>
-				</header>
-				<p>Comme vous avez peut-être pu constater, un achat est rarement complètement local. « C'est quoi un achat local ? » est une question moins pertinente que « Quand est-ce qu'un achat devient-il local ? »</p>
-				<p>Et à cette question, nous répondons : « C'est une question de degré ! C'est rarement noir ou blanc en économie.</p>
+			<diagram type="chain" links="5">
+				<agent type="consumer" name="Joey Joe Joe" paid="10" />
+				<product type="beer" name="Bière" complete="" value="100%"  />
+				<agent type="retailer" name="Dépanneur Commun+" class="local" local="1" />
+				<product type="beer" name="Bière" value="90%" />
+				<agent type="manufacturer" name="Entrepôts Correct" class="local" local=".50" foreign=".50" />
+				<product type="beer" name="Bière" value="80%" />
+				<agent type="transformer" name="Brasserie Pâpire" class="local" local="3" foreign="1" />
+				<product type="beer" name="Bière" value="40%" />
+				<agent type="provider" name="Fournisseurs" local="2" foreign="2" class="active foreign" />
+			</diagram>
 
-			</section>
-			<section>
-				<header>
-					<h3>Comparons la valeur ajoutée de trois bières différentes</h3>
-				</header>
-				<section>
-					<header>
-						<h4>La bière québécoise « Moyenne »</h4>
-					</header>
-					<diagram>
-						<agent type="consumer" name="Joey Joe Joe" paid="10" />
-						<product type="beer" name="Bière" complete="" local="50%" foreign="50%"  />
-						<agent type="retailer" name="Dépanneur Commun+" class="local" local="1" foreign="0" />
-						<product type="beer" name="Bière" local="40%" foreign="50%" />
-						<agent type="manufacturer" name="Entrepôts Correct" class="local" local="1" foreign="0" />
-						<product type="beer" name="Bière" local="30%" foreign="50%" />
-						<agent type="transformer" name="Brasserie Pâpire" class="local" local="3" foreign="1" />
-						<product type="beer" name="Bière" local="0%" foreign="40%" />
-						<agent type="provider" name="Ok Hops" foreign="4" local="0" class="foreign" />
+		</section>
 
-					</diagram>
-				</section>
+		<section>
+			<header>
+				<h3>Augmenter le degré de localité de votre consommation</h3>
+				<p>« Acheter local », nous l'avons dit, implique une augmentation du degré de localité de votre consommation. Présentement, la bière québécoise Moyenne présente un degré de localité de 75%.</p>
+			</header>
+			<section>
+				<div class="prose">
+					<p><b>Selon vous, pourrions-nous augmenter le degré de localité de la bière Moyenne à 100%, pour qu'elle soit ainsi <em>entièrement locale</em> ?</b></p>
+					<form>
+						<fieldset>
+							<div class="grille">
+								<label>
+									<input type="radio" value="oui" />
+									<span>Oui !</span>
+								</label>
+								<label>
+									<input type="radio" value="non"></input>
+									<span>Non !</span>
+								</label>
+							</div>
+						</fieldset>
+					</form>
+				</div>
 			</section>
-		</root>
+		</section>
+		<section>
+			<header>
+				<h3>La locale : 100% québécoise</h3>
+			</header>
+			<section>
+				<div class="prose">
+					<p><b>Pourrions-nous donc produire localement l'entièreté de la valeur ajoutée à notre bière Moyenne ?</b></p>
+					<p>D'emblée, nous sommes obligés de dire non. Certains biens intermédiaires, nécessaires à votre consommation de bière, Joey Joe Joe, ne peuvent être produits au Québec, tout simplement parce que la matière première est indisponible ici.</p>
+					<p>Cette contrainte matérielle porte le degré maximum de localité possible à 90%. Nous pouvons donc espérer un gain de 15% de localité pour notre Locale</p>
+				</div>
+			</section>
+			<diagram type="chain" links="5">
+				<agent type="consumer" name="Joey Joe Joe" paid="10" />
+				<product type="beer" name="Bière" complete="" value="100%"  />
+				<agent type="retailer" name="Dépanneur Commun+" class="local" local="1" />
+				<product type="beer" name="Bière" value="90%" />
+				<agent type="manufacturer" name="Entrepôts Correct" class="local" local=".50" foreign=".50" />
+				<product type="beer" name="Bière" value="80%" />
+				<agent type="transformer" name="Brasserie Pâpire" class="local" local="3" foreign="1" />
+				<product type="beer" name="Bière" value="40%" />
+				<agent type="provider" name="Fournisseurs" local="2" foreign="2" class="active foreign" />
+			</diagram>
+		</section>
+		<section>
+			<header>
+				<h3>La locale : <s>100%</s> 90% québécoise</h3>
+			</header>
+			<section>
+				<div class="prose">
+					<p><b>Bon. On oublie le 100%. Mais pouvons-nous au minimum nous assurer que nous atteignons le 90% de localité possible ?</b></p>
+					<p>Le 15% de localité que nous pouvons aller chercher se situe du côté de la valeur ajoutée par la main-d'œuvre, par les travailleurs et travailleuses donc. La valeur ajoutée produite par la main d'œuvre se répercute par son salaire.</p>
+					<p>Pour ajouter localement 15% de valeur à votre Locale, Joey Joe Joe, il nous faut donc ajouter de la main d'œuvre locale aux maillons de notre chaîne de valeur économique.</p>
+					<p>Combien de travailleurs et travailleuses nous faudrait-il ajouter à notre production locale de bière pour atteindre notre 90% de localité ?</p>
+					<p><b>Probablement trop...</b></p>
+				</div>
+			</section>
+			<diagram type="chain" links="5">
+				<agent type="consumer" name="Joey Joe Joe" paid="10" />
+				<product type="beer" name="Bière" complete="" value="100%"  />
+				<agent type="retailer" name="Dépanneur Commun+" class="local" local="1" />
+				<product type="beer" name="Bière" value="90%" />
+				<agent type="manufacturer" name="Entrepôts Correct" class="local" local="1" />
+				<product type="beer" name="Bière" value="80%" />
+				<agent type="transformer" name="Brasserie Pâpire" class="local" local="4" />
+				<product type="beer" name="Bière" value="40%" />
+				<agent type="provider" name="Fournisseurs locaux" local="3" foreign="1" class="local" />
+			</diagram>
+
+		</section>
+	</root>
