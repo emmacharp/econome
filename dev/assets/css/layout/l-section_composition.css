@@ -76,6 +76,7 @@ main>section>:not(header)+div:last-child {
 
 main>section>:not(header)+div:last-child>svg {
 	color: var(--Color);
+	fill: var(--Color);
 	height: var(--Height);
 	width: var(--Width);
 	mix-blend-mode: multiply; /* ATTENTION ! performance : utiliser avec conteneur parent « isolation » */
