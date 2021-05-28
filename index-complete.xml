@@ -624,4 +624,213 @@
 			</diagram>
 
 		</section>
-	</root>
+		<section>
+			<header>
+				<h3>En économie, tout est question de ressources.</h3>
+			</header>
+			<section>
+				<div class="prose">
+					<p>Le fait est que les travailleu(r/se)s du Québec sont une ressource économique, comme le houblon ou l'eau nécessaire pour produire votre Moyenne. </p>
+					<p>De surcroît, il s'agit d'une ressource (pré-pandémie et espérons, post-pandémie), rare. Très rare même. La rareté de la main-d'œuvre locale implique qu'on doive la débaucher, c'est-à-dire, la soutirer d'autres industries, qui elles se retrouveront à leur tour en pénurie de main-d'œuvre... Et ainsi se perpétue le cycle de pénurie.</p>
+					<p>Ce qui a un effet notable sur...</p>
+				</div>
+			</section>
+			<diagram type="chain" links="5">
+				<agent type="consumer" name="Joey Joe Joe" paid="10" />
+				<product type="beer" name="Bière" complete="" value="100%"  />
+				<agent type="retailer" name="Dépanneur Commun+" class="local" local="1" />
+				<product type="beer" name="Bière" value="90%" />
+				<agent type="manufacturer" name="Entrepôts Correct" class="local" local="1" />
+				<product type="beer" name="Bière" value="80%" />
+				<agent type="transformer" name="Brasserie Pâpire" class="local" local="4" />
+				<product type="beer" name="Bière" value="40%" />
+				<agent type="provider" name="Fournisseurs locaux" local="3" foreign="1" class="local" />
+			</diagram>
+			<aside>
+				<symbol type="henri" />
+				<div>
+					<p><a href="https://www.journaldequebec.com/2021/04/10/un-peu-moins-de-150000-postes-vacants" target="_blank">Plusieurs</a> <a href="https://www.lesaffaires.com/dossier/signaux-forts/penurie-de-main-det8217oeuvre--la-deuxieme-vague/623445" target="_blank">parlent</a> de <a href="https://www.ledevoir.com/opinion/idees/598739/idees-a-propos-de-la-penurie-de-main-d-oeuvre" target="_blank">pénurie</a> de <a href="https://ici.radio-canada.ca/nouvelle/1790287/penurie-main-oeuvre-richesse-appauvrissement-economie-emploi-salaires" target="_blank">main-d'œuvre</a> même.</p>
+					<p>Raison de plus alors pour nous assurer d'<i data-wiki="Allocation_des_ressources">allouer cette ressource</i> de manière efficace !</p>
+				</div>
+			</aside>
+		</section>
+		<section>
+			<header>
+				<h3>La Locale : 90% québécoise, 25 % plus chère</h3>
+			</header>
+			<section>
+				<div class="prose">
+					<p><b>La pénurie de main-d'œuvre, déjà problématique actuellement, ne peut que s'aggraver à mesure que l'on décide d'augmenter la production locale.</b></p>
+					<p>Plus nous augmentons la demande de main-d'œuvre locale, plus celle-ci devra être chère payée pour se déplacer et produire. Une surenchère salariale s'enclenche. Et bien que nous soyons tous heureux d'être mieux rémunéré pour notre production de valeur en tant que travailleurs, il faut considérer l'envers de la médaille : une hausse substantielle des prix. Effectivement, le prix que vous devez payer pour votre Locale, Joey Joe Joe est 25% plus élevé que ce que vous déboursiez pour votre Moyenne. Plus important encore, la hausse des prix ainsi déclenchée se transmettra tranquillement d'une industrie à l'autre. On parlera alors de <strong>hausse du niveau général de prix</strong>. Certains appellent cela <i data-wiki="Inflation">inflation</i></p>
+					<p>Mais, est-ce que cette hausse du niveau général des prix est inévitable ? N'y aurait-il pas de moyen pour l'éviter ?</p>
+				</div>
+			</section>
+			<diagram type="chain" links="5">
+				<agent type="consumer" name="Joey Joe Joe" paid="12.50" />
+				<product type="beer" name="Bière" complete="" value="100%"  />
+				<agent type="retailer" name="Dépanneur Commun+" class="local" local="1" />
+				<product type="beer" name="Bière" value="90%" />
+				<agent type="manufacturer" name="Entrepôts Correct" class="local" local="1" />
+				<product type="beer" name="Bière" value="80%" />
+				<agent type="transformer" name="Brasserie Pâpire" class="local" local="4" />
+				<product type="beer" name="Bière" value="40%" />
+				<agent type="provider" name="Fournisseurs locaux" local="5.50" foreign="1" class="local" />
+			</diagram>
+			<aside>
+				<symbol type="henri" />
+				<div>
+					<p>La hausse des prix, conséquence de la pression accrue sur la main d'œuvre locale viendra annuler l'augmentation des salaires... L'augmentation de la rémunération se répercute proportionnellement dans l'augmentation des prix.</p>
+					<p>Et donc, aucun bénéfice économique n'est gagné. L'économie tourne... dans le vide.</p>
+				</div>
+			</aside>
+		</section>
+		<section>
+			<header>
+				<h3>La Locale : 75% québécoise, 25% étrangère</h3>
+			</header>
+			<section>
+				<div class="prose">
+					<p><b>Pour éviter la surenchère salariale, il faut <i data-wiki="Offre_et_demande">équilibrer l'offre et la demande</i> de travailleurs locaux.</b></p>
+					<p>En produisant La Locale, la demande de travailleurs locaux augmente mais l'offre de travailleurs locaux reste pour sa part inchangée (ça prend tout un moment produire de nouveaux travailleurs !). C'est pourquoi, pour produire La Locale sans faire pression sur le niveau général des prix, il nous faut ultimement... <strong>Importer des travailleurs.</strong></p>
+					<p>Vous avez bien lu, oui. Pour produire localement une plus grande quantité de biens, il nous faut importer de la main-d'œuvre afin d'éviter une spirale inflationniste.</p>
+				</div>
+			</section>
+			<diagram type="chain" links="5">
+				<agent type="consumer" name="Joey Joe Joe" paid="10" />
+				<product type="beer" name="Bière" complete="" value="100%"  />
+				<agent type="retailer" name="Dépanneur Commun+" class="local" local="1" />
+				<product type="beer" name="Bière" value="90%" />
+				<agent type="manufacturer" name="Entrepôts Correct" class="local" local="1" />
+				<product type="beer" name="Bière" value="80%" />
+				<agent type="transformer" name="Brasserie Pâpire" class="local" local="4" />
+				<product type="beer" name="Bière" value="40%" />
+				<agent type="provider" name="Fournisseurs mixtes" local="1" foreign="3" class="local foreign" />
+			</diagram>
+			<aside>
+				<symbol type="emma" />
+				<div>
+					<p>Vous savez, Joey Joe Joe, l'importation de main-d'œuvre que nous projetons ici est déjà utilisée par les maraîchers locaux. Les restaurateurs aimeraient par ailleurs y avoir tout autant accès.</p>
+				</div>
+			</aside>
+		</section>
+		<section>
+			<header>
+				<p>À la lumière du scénario précédent, croyez-vous Joey Joe Joe qu'il soit toujours avantageux de transformer votre Moyenne en Locale ?</p>
+			</header>
+			<form>
+				<fieldset>
+					<div class="grille">
+						<label>
+							<input type="radio" name="avantageux" value="oui" />
+							<span>Oui !</span>
+						</label>
+						<label>
+							<input type="radio" name="avantageux" value="non"></input>
+							<span>Non !</span>
+						</label>
+					</div>
+				</fieldset>
+			</form>
+			<section>
+				<p><b>Mais encore, les arbitrages exposés ci-haut, ne s'appliquent pas que du côté de la production bière, loin de là ! Bien au contraire, les dynamiques économiques abordées se déclencheront (à intensité variable) dans toute l'économie locale.</b></p>
+				<p>Effectivement, les limites de la production locale (et donc de la consommation locale) de bière s'étendent à tout type d'achat de bien ou service. Les limites économiques de l'achat local sont universelles.</p>
+			</section>
+		</section>
+		<section>
+			<header>
+				<h3>Les limites de l'achat local</h3>
+				<p>Peut-être était-ce déjà clair pour vous Joey Joe Joe, mais affirmons le quand même : il est impossible de produire localement, sans perturbations, l'entièreté des biens et services que nous pouvons acheter.</p>
+			</header>
+			<section>
+				<div class="grille">
+					<p>Dès qu'on accepte ce fait économique, Joey Joe Joe, il nous faut alors faire des choix, rationaliser notre rapport à l'achat local. Pour ce faire, nous pouvons utiliser d'autres outils de l'analyse économique :</p>
+					<section>
+						<h4>Le coût d'opportunité</h4>
+						<p>Quand on parle d'achat local, on doit parler d'approvisionnement et de valeur ajoutée. Quelle valeur est produite par notre achat ? Pourrait-on générer une plus grande valeur ajoutée en produisant autre chose ? <em>Quelle est la plus grande valeur ajoutée à laquelle nous renonçons en produisant une plus grande quantité d'un certain produit ?</em></p>
+					</section>
+					<section>
+						<h4>Le produit marginal</h4>
+						<p>...</p>
+					</section>
+					<section>
+						<h4>La productivité</h4>
+						<p>...</p>
+					</section>
+				</div>
+			</section>
+			<section>
+				<p>Les outils analytiques ci-haut permettent d'économiser notre recours à la production locale. Ils peuvent nous aider à décider comment, où et quoi acheter. Mais l'économie étant une science des moyens, encore faut-il savoir <strong>pourquoi</strong> il nous est important d'acheter localement.</p>
+			</section>
+			<aside>
+				<symbol type="henri" />
+				<div>
+					<p>Augmenter notre consommation de biens dont la valeur ajoutée est produite localement implique l'usage exclusif de ressources rares qui pourraient être allouées ailleurs. Cette réalité économique inéluctable <em>appelle à l'optimisation et non la maximisation</em> de notre consommation de biens dits locaux.</p>
+				</div>
+			</aside>
+		</section>
+		<section>
+			<header>
+				<h3>Pourquoi acheter local ? (EN COURS)</h3>
+			</header>
+		</section>
+		<section>
+			2. Encourager une entreprise locale.
+	3. Diminuer notre empreinte écologique.
+	4. Créer des emplois
+	5. Augmenter la productivité.
+		- Importance de la distribution de la valeur ajoutée. Capital ou travail ? Actionnaires Québecois ou étrangers ? Différence entre salaires qui restent à l'intérieur vs. dividendes qui sortent du pays.
+		5. Arbitrage
+			1. Qu'est-ce qu'on gagne ? Qu'est-ce qu'on perd ?
+				Pour certaines choses on est mieux de laisser les acteurs efficaces, bien qu'étrangers faire le truc !
+	5. Questions à se poser
+		3. Est-ce que n'importe quel achat local va nécessairement nous enrichir ?  
+		4. Est-ce que tous les achats locaux sont comparables en termes de bénéfices ?  
+		5. Qu'est-ce qui fait qu'un achat local est bénéfique ? En quoi l'un pourrait-il l'être plus qu'un autre ?  
+		</section>
+		<section>
+			<header>
+				<h3>Sommaire et conclusion (EN COURS)</h3>
+			</header>
+			<section>
+				<ul>
+					<li>Concepts vus et à retenir</li>
+					<li>Questions à se poser</li>
+					<li>Comparaison Heineken, Guinness, Boréale (??)</li>
+					<li>Réponse à la question initiale : Et puis, comment devriez-vous aborder l'achat local, Joey Joe Joe ?
+					<ul>
+						<li>1. Objectifs</li>
+						<li>2. Chaîne</li>
+						<li>3. Valeur ajoutée</li>
+						<li>4. Répartition</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+	</section>
+	<section>
+		<header>
+			<h3>Votre expérience Econome, Joey Joe Joe</h3>
+		</header>
+		<section>
+			<ul>
+				<li>1. Avez-vous appris quelque chose ?</li>
+				<li>2. Aimeriez-vous en savoir plus ?</li>
+				<li>3. Quel énoncé ci-bas se rapproche le plus de *votre* perception de ce qu'est « l'économie » ?
+				<ul>
+					<li>- Les marchés boursiers et les taux d'intérêt.</li>
+					<li>- Le chômage, les emplois et le PIB.</li>
+					<li>- Rationalisation, productivité et efficacité.</li>
+					<li>- Des objectifs alternatifs et des ressources limitées.</li>
+
+				</ul>
+			</li>
+			<li>4. Vous y intéressez-vous ?</li>
+			<li>4. Avez-vous une autre vision de l'achat local ? </li>
+			<li>5. Vous sentez-vous plus à même de poser des actions informées ?</li>
+			<li>6. Maintenant y voyez vous un peu plus clair ?</li>
+			<li>6. Avons-nous, Henri et Marc-André, stimulé votre intérêt pour l'économique ?</li>
+			<li>3. Laissez une appréciation libre de l'expérience.</li>
+		</ul>
+	</section>
+</section>
+</root>
