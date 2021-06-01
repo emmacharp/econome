@@ -22,9 +22,11 @@
 		<xsl:variable name="needed-time" select="number($wordcount) div 1000 * 60000"/>
 		<section data-wordcount="{$wordcount}" data-needed-time="{$needed-time}">
 			<xsl:apply-templates select="@*" />
-			<xsl:attribute name="id">
-				<xsl:value-of select="$id"/>
-			</xsl:attribute>
+			<xsl:if test=".//h3">
+				<xsl:attribute name="id">
+					<xsl:value-of select="$id"/>
+				</xsl:attribute>
+			</xsl:if>
 			<xsl:apply-templates/>
 		</section>
 	</xsl:template>
