@@ -64,7 +64,7 @@ exclude-result-prefixes="ext msxsl svg math">
 		</xsl:if>
 
 	</xsl:template>
-	<xsl:template match="/">
+	<xsl:template match="/root">
 		<html lang="fr">
 			<xsl:call-template name="head"/>
 			<xsl:call-template name="body"/>

@@ -134,11 +134,11 @@ p [data-wiki]:after {
 	display: none;
 }
 
-[id="wikiViewer"] .bandeau-container+*,
-[id="wikiViewer"] input+*,
-[id="wikiViewer"] .mw-editsection+* {
-	margin-top: 0;
-}
+/* [id="wikiViewer"] .bandeau-container+*, */
+/* [id="wikiViewer"] input+*, */
+/* [id="wikiViewer"] .mw-editsection+* { */
+/* 	margin-top: 0; */
+/* } */
 
 [id="wikiViewer"] .toc,
 [id="wikiViewer"] .references-small,

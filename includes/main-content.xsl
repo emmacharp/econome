@@ -14,7 +14,7 @@
 			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
-
+	<xsl:template match="*" mode="main-content"/>
 	<xsl:template match="section" mode="main-content">
 		<xsl:apply-templates select="." mode="include-once"/>
 		<xsl:variable name="id" select="concat('id-', count(preceding-sibling::*))"></xsl:variable>
@@ -22,9 +22,11 @@
 		<xsl:variable name="needed-time" select="number($wordcount) div 1000 * 60000"/>
 		<section data-wordcount="{$wordcount}" data-needed-time="{$needed-time}">
 			<xsl:apply-templates select="@*" />
-			<xsl:attribute name="id">
-				<xsl:value-of select="$id"/>
-			</xsl:attribute>
+			<xsl:if test=".//h3">
+				<xsl:attribute name="id">
+					<xsl:value-of select="$id"/>
+				</xsl:attribute>
+			</xsl:if>
 			<xsl:apply-templates/>
 		</section>
 	</xsl:template>

@@ -123,3 +123,41 @@ nav>ul>li:not(.is-complete)>a {
 .chain article:not(:first-child):not(:last-child) svg {
 	fill: url('#gradient-local-foreign');
 }
+
+@media (orientation: landscape) {
+	body {
+		flex-wrap: wrap;
+	}
+
+}
+
+footer {
+	margin: var(--Row);
+	margin-left: calc(var(--Row) * 4);
+
+}
+
+@media (orientation: portrait) {
+	footer {
+		display: none;
+	}
+}
+
+main {
+	flex: 1 1 0%;
+}
+
+main>section>article~section aside {
+	position: fixed;
+	top: auto;
+	bottom: calc(var(--Row) * 3);
+	left: max(calc(100% - 120vh), calc(100% - 52vw));
+	/* --Size: 1.25; */
+	max-width: 30ch;
+	z-index: 3;
+}
+
+main>section:not(.is-visible)>article~section aside {
+	opacity: 0;
+	pointer-events: none;
+}

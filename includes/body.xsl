@@ -5,6 +5,7 @@
 			<!-- <xsl:call-template name="grid-paper-pattern" /> -->
 			<xsl:call-template name="internal-navigation"/>
 			<xsl:call-template name="main-content"/>
+			<xsl:apply-templates select="footer" />
 			<xsl:call-template name="wiki-viewer"/>
 			<xsl:call-template name="svg-elements"/>
 			<xsl:call-template name="scripts"/>	

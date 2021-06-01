@@ -77,9 +77,10 @@ var getSiblings = function (elem) {
 				}
 				sections.forEach((item)=> {
 					if (item.classList.contains('is-active')) item.classList.remove('is-active');
+					if (item.classList.contains('is-visible')) item.classList.remove('is-visible');
 				});
 				target.classList.add('is-visible', 'is-active');
-				if (anchors.length && target.querySelector('h3') !== null) {
+				if (anchors.length && target.querySelector('h3') !== null && target.matches('[id]')) {
 					anchors.forEach((item)=> {
 						let parentItems = getParents(item, 'li');
 						parentItems.forEach((parent)=> {

@@ -44,14 +44,17 @@ use, svg, path { fill: inherit; }
 
 /* Icônes intégrés dans le texte */
 i>svg {
-	height: 1ch;
+	height: 1.1ch;
 	margin-left: .5em; margin-right: .5em;
 	display: inline-block;
 }
 
+/* Styles d'emphase */
+p>em { font-style: italic; }
+
 /* Largeur maximale générique 
  * pour quelconque paragraphe */
-p{ max-width: 65ch; }
+p { max-width: 65ch; }
 
 /* Désactiver le délai sur iOS 
  * lorsqu'on tape sur un élément */
