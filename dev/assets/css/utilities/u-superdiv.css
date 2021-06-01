@@ -21,7 +21,10 @@
 	/* Conteneur de prose ------------- */
 		div.prose {
 			--DivDisplay: block;
-			--DivGutter: var(--Row);
+			column-width: calc(var(--Row) * 10);
+			column-count: 2;
+			column-gap: var(--Row);
+			/* --DivGutter: var(--Row); */
 		}
 
 		div.prose>* {
