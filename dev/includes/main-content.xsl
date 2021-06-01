@@ -14,7 +14,7 @@
 			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
-
+	<xsl:template match="*" mode="main-content"/>
 	<xsl:template match="section" mode="main-content">
 		<xsl:apply-templates select="." mode="include-once"/>
 		<xsl:variable name="id" select="concat('id-', count(preceding-sibling::*))"></xsl:variable>
