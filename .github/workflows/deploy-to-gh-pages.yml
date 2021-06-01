@@ -31,6 +31,7 @@ jobs:
           cleancss -o build/assets/css/main.min.css dev/assets/css/build.css
           cleancss -o build/assets/css/theme.min.css dev/assets/css/theme/build.css
           xsltproc dev/index.xml >> build/index.html
+          xsltproc dev/goods.xml >> build/goods.html
           xsltproc dev/diagrams.xsl dev/index.xml >> build/diagrams.html
           xsltproc dev/minified.xsl dev/index.xml >> build/index.min.html
           xsltproc dev/progressive.xsl dev/index.xml >> build/index.progressive.html
