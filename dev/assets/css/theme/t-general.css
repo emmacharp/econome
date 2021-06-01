@@ -49,9 +49,12 @@ i>svg {
 	display: inline-block;
 }
 
+/* Styles d'emphase */
+p>em { font-style: italic; }
+
 /* Largeur maximale générique 
  * pour quelconque paragraphe */
-p{ max-width: 65ch; }
+p { max-width: 65ch; }
 
 /* Désactiver le délai sur iOS 
  * lorsqu'on tape sur un élément */
