@@ -24,3 +24,13 @@ x (B) 2021-01-05 Essayer la grille sur un div à l'aide de switches booléennes 
 2021-05-25 Donner de une couleur locale ou étrangère aux agents de la chaîne, dès le début @maitrise +ux
 2021-05-25 Essayer avec les marks à la droite, sortis de la nav @maitrise +design
 2021-05-25 Utiliser des delais pour simuler l'attente de la lecture avant de faire parler Henri ou Emma @maitrise +ux
+2021-07-02 Est-ce que ça vaut la peine de visualiser les intrants des maillons ? @maitrise +henri
+2021-07-02 Observation #01 — On achète plus québécois qu'étranger. Les brasseries québécoises achètent plus à l'étranger qu'au Québec. En achetant plus localement, on achète plus à l'étranger. On importe plus @maitrise +contenu
+2021-07-02 Scénario : on achète plus local. La composition de nos achats changent. Plus de boréale, moins de Guinness. Joey Joe Joe achète les deux. @maitrise +contenu
+2021-07-02 On demande que les producteurs locaux achète plus localement. Exemple de ce qui se passe. @maitrise +contenu
+2021-07-02 On pourrait tu trouver une industrie qu'on présente comme exemple pour illustrer les ramifications d'une augmentation des intrants locaux. @maitrise +henri
+2021-07-02 Qu'est-ce qui fait que les brasseurs étrangers ajoutent plus de valeur indirecte que les québécois ? Le transport ? @maitrise +henri
+2021-07-02 Comment pourrait-on reformuler « Excédent d'exploitation brut » pour que ce soit compréhensible ? @maitrise +henri
+2021-07-02 Observation #0x — Le consommateur ne peut que se fier sur ses propres actions quant il est question d'achat local. Toute la chaîne doit être prise en compte @maitrise +contenu
+2021-07-02 pourrait-on distinguer la valeur ajoutée au Québec par les brasseurs étranger ? @maitrise +henri
+2021-07-02 On garde la même chaîne mais on change le producteur de bière. Joey Joe Joe passe de la Boréale à la Guinness. @maitrise +henri
