@@ -30,7 +30,7 @@
 						<xsl:apply-templates select="." mode="include-once" />
 						<aside class="goods-list">
 							<input type="checkbox" name="trigger-goods-list" class="trigger-goods-list" />
-							<div hx-get="goods.html" hx-trigger="load" hx-select="#goods-list" hx-swap="outerHTML">
+							<div hx-get="goods.html" hx-trigger="revealed" hx-select="#goods-list" hx-swap="outerHTML">
 							</div>
 						</aside>
 					</xsl:if>
@@ -132,7 +132,7 @@
 	<xsl:template match="diagram">
 		<xsl:apply-templates select="." mode="include-once" />
 		<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))"></xsl:variable>
-		<article class="buying chain diagram" hx-get="diagrams.html" hx-select="#{$id}" hx-trigger="load" style="--total-chain-links: {@links};"></article>
+		<article class="buying chain diagram" hx-get="diagrams.html" hx-select="#{$id}" hx-trigger="revealed" style="--total-chain-links: {@links};"></article>
 	</xsl:template>
 
 	<!-- Pour intégrer les diagrammes au complet dans l'expérience, retirer le mode ci-dessous -->
