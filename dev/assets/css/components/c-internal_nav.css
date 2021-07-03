@@ -137,7 +137,7 @@ nav>ul>li.is-complete>a:before {
 	} 
 }
 
-@media (min-height: 40em) and (min-width: 130em) {
+@media (min-height: 40em) and (min-width: 100em) {
 	.trigger-internal-nav::after {
 		content: "Menu";
 		font-weight: 900;

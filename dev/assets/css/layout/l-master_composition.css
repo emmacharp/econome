@@ -58,6 +58,12 @@
 	}
 }
 
+@media (min-width: 100em) {
+	body>main>* {
+		padding-left: calc(var(--Row) * 4);
+	}
+}
+
 @media (orientation: portrait) {
 	html, body, main { 
 		/* Contexte vertical nécessaire
