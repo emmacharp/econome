@@ -118,6 +118,40 @@
 		</xsl:choose>
 	</xsl:template>
 
+	<xsl:template match="code" mode="emoji-chooser">
+		<xsl:choose>
+			<xsl:when test="contains(., 'ADM')">
+				<span>📠</span>
+			</xsl:when>
+			<xsl:when test="contains(., 'PRM')">
+				<span>💵</span>
+			</xsl:when>
+			<xsl:when test="contains(., 'IMM')">
+				<span>🏭</span>
+			</xsl:when>
+			<xsl:when test="contains(., 'ALI')">
+				<span>🍽</span>
+			</xsl:when>
+			<xsl:when test="contains(., 'PAP')">
+				<span>📃</span>
+			</xsl:when>
+			<xsl:when test="contains(., 'MET')">
+				<span>🔗</span>
+			</xsl:when>
+			<xsl:when test="contains(., 'MPS')">
+				<span>🚛</span>
+			</xsl:when>
+			<xsl:when test="contains(., 'HEB')">
+				<span>🍔</span>
+			</xsl:when>
+			<xsl:when test="contains(., 'CUL')">
+				<span>👩‍💻</span>
+			</xsl:when>
+			<xsl:otherwise>
+				<span>🌫</span>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
 	<xsl:template name="svg-symbol-creator">
 		<svg width="100%" height="100%">
 			<xsl:apply-templates select="code" mode="symbol-chooser"/>
