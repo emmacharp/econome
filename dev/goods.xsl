@@ -62,58 +62,58 @@
 		
 		<xsl:choose>
 			<xsl:when test="contains(. ,'PRM800000')">
-				<use xlink:href="#svg-money-symbol"></use>
+				<use xlink:href="symbols.svg#svg-money-symbol"></use>
 			</xsl:when>
 			<xsl:when test="contains(. ,'PRM500000')">
-				<use xlink:href="#svg-worker-symbol"></use>
+				<use xlink:href="symbols.svg#svg-worker-symbol"></use>
 			</xsl:when>
 			<xsl:when test="contains(. ,'IMS551002')">
-				<use xlink:href="#svg-building-symbol"></use>
+				<use xlink:href="symbols.svg#svg-building-symbol"></use>
 			</xsl:when>
 			<xsl:when test="contains(. ,'PRM600000')">
-				<use xlink:href="#svg-contribution-symbol"></use>
+				<use xlink:href="symbols.svg#svg-contribution-symbol"></use>
 			</xsl:when>
 			<xsl:when test="contains(., 'MPS533000')">
-				<use xlink:href="#svg-copyright-symbol"></use>
+				<use xlink:href="symbols.svg#svg-copyright-symbol"></use>
 			</xsl:when>
 			<xsl:when test="contains(., 'MPG322201')">
-				<use xlink:href="#svg-cardboard-symbol"></use>
+				<use xlink:href="symbols.svg#svg-cardboard-symbol"></use>
 			</xsl:when>
 			<xsl:when test="contains(., 'MPG332401')">
-				<use xlink:href="#svg-cap-symbol"></use>
+				<use xlink:href="symbols.svg#svg-cap-symbol"></use>
 			</xsl:when>
 			<xsl:when test="contains(., 'MPG311208')">
-				<use xlink:href="#svg-cereal-symbol"></use>
+				<use xlink:href="symbols.svg#svg-cereal-symbol"></use>
 			</xsl:when>
 			<xsl:when test="contains(., 'MPS541800')">
-				<use xlink:href="#svg-advertising-symbol"></use>
+				<use xlink:href="symbols.svg#svg-advertising-symbol"></use>
 			</xsl:when>
 			<xsl:when test="contains(., 'PRM400000')">
-				<use xlink:href="#svg-tax-symbol"></use>
+				<use xlink:href="symbols.svg#svg-tax-symbol"></use>
 			</xsl:when>
 			<xsl:when test="contains(., 'MPS722001')">
-				<use xlink:href="#svg-meal-symbol"></use>
+				<use xlink:href="symbols.svg#svg-meal-symbol"></use>
 			</xsl:when>
 			<xsl:when test="contains(., 'MPG327A02')">
-				<use xlink:href="#svg-bottle-symbol"></use>
+				<use xlink:href="symbols.svg#svg-bottle-symbol"></use>
 			</xsl:when>
 			<xsl:when test="contains(., 'MPG311301')">
-				<use xlink:href="#svg-sugar-symbol"></use>
+				<use xlink:href="symbols.svg#svg-sugar-symbol"></use>
 			</xsl:when>
 			<xsl:when test="contains(., 'PRM')">
-				<use xlink:href="#svg-contribution-symbol"></use>
+				<use xlink:href="symbols.svg#svg-contribution-symbol"></use>
 			</xsl:when>
 			<xsl:when test="contains(., 'MPS')">
-				<use xlink:href="#svg-truck-symbol"></use>
+				<use xlink:href="symbols.svg#svg-truck-symbol"></use>
 			</xsl:when>
 			<xsl:when test="contains(., 'ENE')">
-				<use xlink:href="#svg-electricity-symbol"></use>
+				<use xlink:href="symbols.svg#svg-electricity-symbol"></use>
 			</xsl:when>
 			<xsl:when test="contains(., 'MPG')">
-				<use xlink:href="#svg-goods-symbol"></use>
+				<use xlink:href="symbols.svg#svg-goods-symbol"></use>
 			</xsl:when>
 			<xsl:otherwise>
-				<use xlink:href="#svg-unknown-symbol"></use>
+				<use xlink:href="symbols.svg#svg-unknown-symbol"></use>
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
