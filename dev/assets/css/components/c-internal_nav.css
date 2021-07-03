@@ -167,10 +167,6 @@ nav>ul>li.is-complete>a:before {
 	content: "◀";
 }
 
-.trigger-internal-nav:checked~main>* {
-	padding-left: calc(var(--Row) * .5);
-} 
-
 .trigger-internal-nav:checked::after {
 	color: var(--dk-brown);
 }
