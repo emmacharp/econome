@@ -6,7 +6,7 @@
 	xmlns:msxsl="urn:schemas-microsoft-com:xslt"
 	xmlns:ext="http://exslt.org/common"
 	exclude-result-prefixes="ext msxsl">
-	<xsl:output indent="yes" media-type="text/html" method="html" encoding="UTF-8" />
+	<xsl:output method="html" doctype-system="about:legacy-compat" />
 	<xsl:variable name="special-characters" select="'/ áàâäéèêëíìîïóòôöúùûüçÁÀÂÄÉÈÊËÍÌÎÏÓÒÔÖÚÙÛÜÇABCDEFGHIJKLMNOPQRSTUVWXYZ&amp;’?.()!:,'"/>
 	<xsl:variable name="normalized-special-characters" select="'--aaaaeeeeiiiioooouuuuçaaaaeeeeiiiioooouuuuçabcdefghijklmnopqrstuvwxyz_'"/>
 
