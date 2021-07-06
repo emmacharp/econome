@@ -21,7 +21,7 @@
 		<!-- <link rel="stylesheet" href="assets/css/patterns/p-stacking_slides.css"/> -->
 
 		<link rel="stylesheet" href="assets/css/layout/l-master_composition.css"/>
-		<!-- <link rel="stylesheet" href="assets/css/x-dev.css"> -->
+		<!-- <link rel="stylesheet" href="assets/css/x-dev.css"/> -->
 		</xsl:template>
 
 		<xsl:template name="body-css">
