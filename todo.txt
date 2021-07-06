@@ -34,3 +34,5 @@ x (B) 2021-01-05 Essayer la grille sur un div à l'aide de switches booléennes 
 2021-07-02 Observation #0x — Le consommateur ne peut que se fier sur ses propres actions quant il est question d'achat local. Toute la chaîne doit être prise en compte @maitrise +contenu
 2021-07-02 pourrait-on distinguer la valeur ajoutée au Québec par les brasseurs étranger ? @maitrise +henri
 2021-07-02 On garde la même chaîne mais on change le producteur de bière. Joey Joe Joe passe de la Boréale à la Guinness. @maitrise +henri
+(A) 2021-07-06 Créer les identifiants pour les grilles de biens économiques @maitrise +xsl
+(A) 2021-07-06 Déplacer les derniers symboles SVG dans le fichier svg plutôt que xsl @maitrise +nettoyage
