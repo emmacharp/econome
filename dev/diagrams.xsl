@@ -14,9 +14,24 @@
 		<html>
 			<head>
 				<meta charset="UTF-8"/>
+				<link rel="stylesheet" href="assets/css/components/c-chain.css" />
+				<xsl:call-template name="head-css" />
+				<style>
+					html, body, body>section, body>section>article {
+						height: 100%;
+						min-height: max-content;
+						width: 100%;
+					}
+				</style>
 			</head>
 			<body>
-				<xsl:apply-templates select="//diagram" mode="ajax-diagrams" />
+				<section>
+					<article class="buying chain diagram" style="--total-chain-links: 5;">
+						<xsl:apply-templates select="//diagram" mode="ajax-diagrams" />
+					</article>
+				</section>
+				<xsl:call-template name="svg-elements" />
+				<xsl:call-template name="scripts" />
 			</body>
 		</html>
 	</xsl:template>
