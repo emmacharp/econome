@@ -23,22 +23,22 @@
 
 
 			<div>
-				<xsl:apply-templates select="@local|@value|@paid" />
+				<xsl:apply-templates select="@foreign|@value|@paid" />
 				<article>
-					<xsl:if test="@goods">
 
-						<xsl:apply-templates select="." mode="include-once" />
-						<aside class="goods-list">
-							<input type="checkbox" name="trigger-goods-list" class="trigger-goods-list" />
-							<div hx-get="goods.html" hx-trigger="revealed" hx-select="#goods-list" hx-swap="outerHTML">
-							</div>
-						</aside>
-					</xsl:if>
 					<xsl:apply-templates select="ext:node-set($svg-symbols)//svg:symbol[generate-id() = generate-id(key('symbol-type', current()/@type)[1])]" />
 					<h4><xsl:apply-templates select="@name" /></h4>
 				</article>
-				<xsl:apply-templates select="@foreign" />
+				<xsl:apply-templates select="@local" />
 			</div>
+			<xsl:if test="@goods">
+				<xsl:apply-templates select="." mode="include-once" />
+				<aside class="goods-list">
+					<input type="checkbox" checked="" name="trigger-goods-list" class="trigger-goods-list" />
+					<div hx-get="goods.html" hx-trigger="load" hx-select="#goods-list" hx-swap="outerHTML">
+					</div>
+				</aside>
+			</xsl:if>
 		</section>
 	</xsl:template>
 
