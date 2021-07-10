@@ -26,7 +26,7 @@
 			</head>
 			<body>
 				<section>
-					<article class="buying chain diagram" style="--total-chain-links: 5;">
+					<article class="buying chain diagram" style="--total-chain-links: 4;">
 						<xsl:apply-templates select="//diagram" mode="ajax-diagrams" />
 					</article>
 				</section>
