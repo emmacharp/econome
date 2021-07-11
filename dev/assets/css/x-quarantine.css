@@ -106,17 +106,17 @@ nav>ul>li:not(.is-complete)>a {
 
 
 .chain .product .icon {
-	--IconHeight: calc(var(--Row) * 1.25 * var(--Size));
+	/* --IconHeight: calc(var(--Row) * 1.25 * var(--Size)); */
 	background-color: var(--lt-primary);
 }
 .chain .good.arrow {
-	flex-grow: 0;
+	/* flex-grow: 0; */
 }
 
-.chain .good.arrow,
-.chain .link .amount {
-	margin: 0;
-}
+/* .chain .good.arrow, */
+/* .chain .link .amount { */
+/* 	margin: 0; */
+/* } */
 
 
 
@@ -131,14 +131,15 @@ nav>ul>li:not(.is-complete)>a {
 
 }
 
-footer {
-	margin: var(--Row);
-	margin-left: calc(var(--Row) * 4);
-
+body>footer {
+	padding: var(--Row);
+	padding-left: calc(var(--Row) * 4);
+	flex: 0 0 100%;
+	box-sizing: border-box;
 }
 
 @media (orientation: portrait) {
-	footer {
+	body>footer {
 		display: none;
 	}
 }
@@ -161,3 +162,226 @@ main>section:not(.is-visible)>article~section aside {
 	opacity: 0;
 	pointer-events: none;
 }
+
+main>section>article~section>*,
+main>section>section:only-of-type:not(:last-child) {
+	max-width: 80ch;
+}
+
+main>section>figure {
+	position: fixed;
+	right: var(--Row);
+	top: 50%;
+	height: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	--Size: .5;
+}
+
+main>section>figure>img {
+	max-width: 40vw;
+	max-height: 50vh;
+	display: block;
+}
+
+main>section:not(.is-active)>figure {
+	opacity: 0;
+}
+
+strong {
+	background-color: var(--tr-purple);
+	font-weight: 500;
+}
+
+mark {
+	background-color: var(--yellow);
+}
+
+main>h2 {
+	padding-bottom: 0;
+}
+
+main > section p > b:only-child {
+	font-size: 1.3125em;
+}
+
+/* :root { */
+/* 	--blue: #63B6FF; */
+/* 	--red: #FF8181; */
+/* 	--beige: #1c1a10; */
+/* 	--lt-beige: #1c1a10; */
+/* 	--dk-beige: #1c1a10; */
+/* 	--lt-purple: #762484; */
+/* 	--purple: #f6bfff; */
+/* 	--brown: #A2A19B; */
+/* 	--ltst-primary: #26262b; */
+/* 	--ltr-primary: #151519; */
+/* 	--lt-red: #8e083b; */
+/* 	--yellow: #736C00; */
+
+/* 	--ColorBg: white; */
+/* 	--ColorText: var(--indigo); */
+/* 	--ColorLocal: var(--blue); */
+/* 	--ColorForeign: var(--red); */
+/* 	--ColorAccent: var(--yellow); */
+/* 	--ColorDkAccent: var(--dk-yellow); */
+	
+
+/* 	/1* --ColorSupport: var(--lt-purple); *1/ */
+/* 	--ColorBg: #333; */
+/* 	--ColorText: #ddd; */
+/* } */
+
+/* nav a:before { */
+/* 	filter: invert(1); */
+/* } */
+
+html {
+	-moz-osx-font-smoothing: grayscale;
+}
+
+main > section aside > svg[class*="cartoon"] {
+	height: calc(var(--Row) * 4);
+	float: left;
+	shape-outside: circle(55% at 50% 50%) padding-box;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	margin-top: -20px;
+	margin-left: -60px;
+	padding: 15px;
+}
+main > section aside > div {
+	max-width: 30ch;
+}
+
+main > section aside {
+	display: block;
+}
+
+.chain>div>*,
+.chain>div>*>div {
+	display: contents;
+}
+
+.chain .arrow {
+	/* display: none; */
+}
+
+.chain .amount.local {
+	grid-row-start: 5;
+}
+
+.chain .amount.value {
+	grid-row-start: 4;
+}
+
+.chain .amount.foreign {
+	grid-row-start: 1;
+}
+
+.chain .goods-list section {
+	/* grid-column-end: span 2; */
+	width: auto;
+	min-width: 100%;
+	margin-right: calc(-1 * var(--Row));
+	/* padding-right: var(--Row); */
+	padding-bottom: 10px;
+	border-bottom: 1px solid currentColor;
+}
+.chain .goods-list section.local {
+	grid-row-start: 5;
+	fill: var(--ColorLocal);
+}
+
+.chain .goods-list section.foreign {
+	grid-row-start: 1;
+	fill: var(--ColorForeign);
+}
+
+.chain .goods-list section.value {
+	grid-row-start: 4;
+}
+
+.chain article, .chain .product {
+	grid-row-start: 3;
+}
+.chain article, .chain .amount,
+.chain .goods-list section, .chain .product {
+	grid-column-start: calc(var(--link-position));
+}
+.chain .goods-list section {
+	grid-column-start: calc(var(--link-position) - 1);
+}
+
+.chain>div {
+	--SecurityRowCount: 0;
+	--SecurityColCount: 0;
+	grid-template-rows: repeat(5, minmax(0, max-content));
+	grid-template-columns: min-content repeat(4, minmax(0, 1fr)) 2fr minmax(0, 1fr);
+	align-items: initial;
+	gap: var(--Row);
+}
+
+.chain article:not(:first-child):last-child::after, .chain article:not(:last-child):first-child::before {
+	content: initial;
+}
+
+.chain .goods-list>.product>section {
+	direction: rtl;
+}
+
+.chain .goods-list>.product>section>* {
+	direction: initial;
+}
+
+.chain section > div > * + *, .chain section > div > article > svg + h4, .chain article:not(:first-child):last-child::after, .chain article:not(:last-child):first-child::before {
+	margin-top: 0;
+}
+
+main > section > .diagram > div {
+	height: max-content;
+	margin: auto;
+}
+
+.chain .link .amount {
+	margin: 0;
+	padding: 10px;
+	align-items: flex-end;
+}
+
+.chain .amount::after {
+	content: "Biens intrants";
+	position: absolute;
+	bottom: -.5em;
+	font-size: 10px;
+	padding: 0 10px;
+	line-height: 1;
+	background-color: white;
+	text-transform: uppercase;
+}
+
+.chain .amount.paid::after {
+	content: "Montant déboursé";
+}
+
+.chain .amount::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	width: 50%;
+	left: 0;
+	border-bottom: 1px solid currentColor;
+}
+
+.chain .amount.value::after {
+	content: "Valeur ajoutée";
+}
+
+.chain .goods-list>.product>section {
+	align-items: end;
+	align-content: end;
+	width: auto;
+}
+
