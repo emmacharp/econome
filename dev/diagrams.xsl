@@ -17,11 +17,12 @@
 				<link rel="stylesheet" href="assets/css/components/c-chain.css" />
 				<xsl:call-template name="head-css" />
 				<style>
-					html, body, body>section, body>section>article {
+					html, body, body>section {
 						height: 100%;
 						min-height: max-content;
 						width: 100%;
 					}
+					body>section>article { display: flex; justify-content: center; align-items: center; }
 				</style>
 			</head>
 			<body>
