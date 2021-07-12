@@ -30,22 +30,22 @@
     <etranger>5542.2038910738</etranger>
   </produit>
   <produit>
-    <code>MPS</code>
-    <classe>Services de réparations liés à la construction</classe>
+    <code>CON</code>
+    <classe>Réparations</classe>
     <depense>1277.1281382525</depense>
     <local>1277.1281382525</local>
     <etranger>0</etranger>
   </produit>
   <produit>
     <code>ALI</code>
-    <classe>Aliments et boissons non alcoolisées</classe>
+    <classe>Aliments et boissons</classe>
     <depense>46312.6712987063</depense>
     <local>44094.5918930491</local>
     <etranger>2218.0794056572</etranger>
   </produit>
   <produit>
     <code>ALC</code>
-    <classe>Boissons alcoolisées et produits du tabac</classe>
+    <classe>Alcool et tabac</classe>
     <depense>7499.2666033083</depense>
     <local>2141.41793949</local>
     <etranger>5357.8486638183</etranger>
@@ -175,7 +175,7 @@
   </produit>
   <produit>
     <code>CUL</code>
-    <classe>Services liés à l'information et la culture</classe>
+    <classe>Information et culture</classe>
     <depense>11446.7535760887</depense>
     <local>10939.3571997771</local>
     <etranger>507.3963763116</etranger>
@@ -204,39 +204,36 @@
     <etranger>2611.6015928958</etranger>
   </produit>
   <produit>
-    <code>PRM</code>
-    <classe>Autres finances et assurances</classe>
+    <code>FIN</code>
+    <classe>Finances et assurances</classe>
     <depense>13010.4100456088</depense>
     <local>10310.3900850776</local>
     <etranger>2700.0199605312</etranger>
   </produit>
   <produit>
     <code>IMM</code>
-    <classe>Services immobiliers, location et location à bail et
-    droits liés aux biens incorporels non financiers</classe>
+    <classe>Immobilier et location</classe>
     <depense>48745.4992117744</depense>
     <local>47601.2594275661</local>
     <etranger>1144.2397842084</etranger>
   </produit>
   <produit>
-    <code>PRM</code>
-    <classe>Services professionnels (sauf logiciels et recherche et
-    développement)</classe>
+    <code>PRO</code>
+    <classe>Services professionnels</classe>
     <depense>22575.5565689677</depense>
     <local>22369.611551233</local>
     <etranger>205.9450177346</etranger>
   </produit>
   <produit>
     <code>ADM</code>
-    <classe>Services administratifs et de soutien, sièges sociaux
-    et services de gestion des déchets et d'assainissement</classe>
+    <classe>Administration et sièges sociaux</classe>
     <depense>71432.3651138926</depense>
     <local>52484.1980625977</local>
     <etranger>18948.1670512949</etranger>
   </produit>
   <produit>
     <code>HEB</code>
-    <classe>Services d'hébergement et restauration</classe>
+    <classe>Hébergement et restauration</classe>
     <depense>17096.9005396919</depense>
     <local>16346.6572285138</local>
     <etranger>750.2433111781</etranger>
@@ -267,23 +264,21 @@
     <ajout>19620</ajout>
   </produit>
   <produit>
-    <code>PRM500000</code>
-    <titre>Salaires et traitements</titre>
-    <classe>Salaires et traitements</classe>
+    <code>SAL</code>
+    <titre>Salaires</titre>
+    <classe>Salaires</classe>
     <ajout>127173</ajout>
   </produit>
   <produit>
-    <code>PRM600000</code>
-    <titre>Cotisations sociales à la charge des
-      employeurs</titre>
-    <classe>Cotisations sociales à la charge des
-      employeurs</classe>
+    <code>COT</code>
+    <titre>Cotisations sociales</titre>
+    <classe>Cotisations sociales</classe>
     <ajout>57173</ajout>
   </produit>
   <produit>
-    <code>PRM700000</code>
-    <titre>Revenu mixte brut</titre>
-    <classe>Revenu mixte brut</classe>
+    <code>REV</code>
+    <titre>Revenu brut</titre>
+    <classe>Revenu brut</classe>
     <ajout>210</ajout>
   </produit>
   <produit>
