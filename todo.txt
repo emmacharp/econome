@@ -38,3 +38,10 @@ x (B) 2021-01-05 Essayer la grille sur un div à l'aide de switches booléennes 
 (A) 2021-07-06 Déplacer les derniers symboles SVG dans le fichier svg plutôt que xsl @maitrise +nettoyage
 (A) Régler le problème de franglais dans les produits (type en anglais / balise en francais...) @maitrise +xsl
 (B) Nettoyer les sources de données @maitrise +xsl
+(A) 2021-07-10 Version verticale. @maitrise +design
+(A) 2021-07-10 Essayer de masquer pour mobile en retranchant la même quantité d'éléments pour chaque point de rupture @maitrise +design
+(A) 2021-07-10 Animer ouverture et fermeture des sections en fonction du nombre d'éléments et de l'interaction de l'usager. @maitrise +design
+(A) 2021-07-10 Tout aligner à droite @maitrise +design
+2021-07-10 Afficher les infos (dollars et nom) des produits par dessus la quantité totale de la section. @maitrise +design
+(A) 2021-07-10 Tenter l'inversion du total de section et des symboles de produit @maitrise +design
+(A) 2021-07-11 Tenter d'inférer les sommes à mettre dans les attributs du diagramme (value, foreign, etc.) @maitrise +donnees
