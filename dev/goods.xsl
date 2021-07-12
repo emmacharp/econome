@@ -35,7 +35,7 @@ exclude-result-prefixes="ext msxsl">
 							<xsl:sort select="depense" order="descending" data-type="number" />
 						</xsl:apply-templates>
 					</section>
-					<section class="value">
+					<section class="value local">
 						<xsl:apply-templates select="//produit[ajout]" mode="percentage-squares">
 							<xsl:with-param name="source" select="'ajout'" />
 							<xsl:sort select="ajout" order="descending" data-type="number" />
@@ -81,13 +81,13 @@ exclude-result-prefixes="ext msxsl">
 				<!-- TODO : nettoyer les données du Choose au complet -->
 				<xsl:choose>
 					<xsl:when test="not($node-name = 'depense')">
-						<section class="foreign"></section>
+						<section class="placeholder foreign"></section>
 						<section class="local">
 							<xsl:apply-templates select="//produit[not(@type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe)[1])]/*[local-name() = $node-name]" mode="product-creator">
 								<xsl:with-param name="relative" select="true()" />
 							</xsl:apply-templates>
 						</section>
-						<section class="value">
+						<section class="value local">
 							<xsl:apply-templates select="//produit[@type = 'ajout'][generate-id() = generate-id(key('class-aggregate', classe)[1])]/*[local-name() = $node-name]" mode="product-creator">
 								<xsl:with-param name="relative" select="true()" />
 							</xsl:apply-templates>
@@ -101,7 +101,7 @@ exclude-result-prefixes="ext msxsl">
 						<section class="foreign">
 							<xsl:apply-templates select="//produit[generate-id() = generate-id(key('class-aggregate', classe)[1])]/etranger" mode="product-creator" />
 						</section>
-						<section class="value">
+						<section class="value local">
 							<xsl:apply-templates select="//produit[generate-id() = generate-id(key('class-aggregate', classe)[1])]/ajout" mode="product-creator" />
 						</section>
 					</xsl:otherwise>

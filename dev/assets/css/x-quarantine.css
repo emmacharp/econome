@@ -107,7 +107,7 @@ nav>ul>li:not(.is-complete)>a {
 
 .chain .product .icon {
 	/* --IconHeight: calc(var(--Row) * 1.25 * var(--Size)); */
-	background-color: var(--lt-primary);
+	/* background-color: var(--lt-primary); */
 }
 .chain .good.arrow {
 	/* flex-grow: 0; */
@@ -120,7 +120,7 @@ nav>ul>li:not(.is-complete)>a {
 
 
 
-.chain article:not(:first-child):not(:last-child) svg {
+.chain .foreign:not(.placeholder)~article svg {
 	fill: url('#gradient-local-foreign');
 }
 
@@ -269,45 +269,66 @@ main > section aside {
 	/* display: none; */
 }
 
-.chain .amount.local {
-	grid-row-start: 5;
+.chain .local {
+	order: 5;
+	/* grid-row-start: 5; */
 }
 
-.chain .amount.value {
-	grid-row-start: 4;
+.chain .value,
+.chain .paid {
+	order: 4;
+	/* grid-row-start: 4; */
 }
 
-.chain .amount.foreign {
-	grid-row-start: 1;
+.chain .foreign {
+	order: 1;
+	/* grid-row-start: 1; */
 }
 
 .chain .goods-list section {
 	/* grid-column-end: span 2; */
 	width: auto;
-	min-width: 100%;
+	/* min-width: 100%; */
+	margin-left: var(--Row);
+	padding-left: calc(var(--Row) / 2);
 	margin-right: calc(-1 * var(--Row));
-	/* padding-right: var(--Row); */
+	padding-right: var(--Row);
 	padding-bottom: 10px;
-	border-bottom: 1px solid currentColor;
-}
-.chain .goods-list section.local {
-	grid-row-start: 5;
-	fill: var(--ColorLocal);
+	border-left: 1px solid currentColor;
 }
 
+.chain .goods-list section.local {
+	order: 5;
+	/* grid-row-start: 5; */
+	fill: var(--ColorLocal);
+	border-bottom: 1px solid currentColor;
+}
+
+.chain .agent:not(:first-of-type)>div:last-child::after {
+	content: "";
+	order: 1;
+}
 .chain .goods-list section.foreign {
-	grid-row-start: 1;
+	order: 1;
+	/* grid-row-start: 1; */
 	fill: var(--ColorForeign);
+	border-top: 1px solid currentColor;
+	padding-bottom: 0px;
+	padding-top: 10px;
 }
 
 .chain .goods-list section.value {
-	grid-row-start: 4;
+	order: 4;
+	border-bottom: 1px solid currentColor;
+	/* grid-row-start: 4; */
 }
 
 .chain article, .chain .product {
-	grid-row-start: 3;
+	order: 3;
+	align-items: flex-end;
+	/* grid-row-start: 3; */
 }
-.chain article, .chain .amount,
+.chain article, .chain .amount, .chain .placeholder,
 .chain .goods-list section, .chain .product {
 	grid-column-start: calc(var(--link-position));
 }
@@ -318,10 +339,12 @@ main > section aside {
 .chain>div {
 	--SecurityRowCount: 0;
 	--SecurityColCount: 0;
-	grid-template-rows: repeat(5, minmax(0, max-content));
-	grid-template-columns: min-content repeat(4, minmax(0, 1fr)) 2fr minmax(0, 1fr);
+	grid-template-rows: auto;
+	grid-template-columns: auto;
+	grid-auto-flow: dense;
 	align-items: initial;
 	gap: var(--Row);
+	max-width: max-content;
 }
 
 .chain article:not(:first-child):last-child::after, .chain article:not(:last-child):first-child::before {
@@ -329,14 +352,14 @@ main > section aside {
 }
 
 .chain .goods-list>.product>section {
-	direction: rtl;
+	/* direction: rtl; */
 }
 
 .chain .goods-list>.product>section>* {
-	direction: initial;
+	/* direction: initial; */
 }
 
-.chain section > div > * + *, .chain section > div > article > svg + h4, .chain article:not(:first-child):last-child::after, .chain article:not(:last-child):first-child::before {
+.chain section > div > * + *, .chain article:not(:first-child):last-child::after, .chain article:not(:last-child):first-child::before {
 	margin-top: 0;
 }
 
@@ -347,8 +370,10 @@ main > section > .diagram > div {
 
 .chain .link .amount {
 	margin: 0;
-	padding: 10px;
+	padding-bottom: 10px;
 	align-items: flex-end;
+	text-align: right;
+	justify-content: flex-end;
 }
 
 .chain .amount::after {
@@ -356,10 +381,25 @@ main > section > .diagram > div {
 	position: absolute;
 	bottom: -.5em;
 	font-size: 10px;
-	padding: 0 10px;
+	right: 0;
 	line-height: 1;
+	padding-left: 10px;
 	background-color: white;
+	max-width: max-content;
 	text-transform: uppercase;
+	white-space: nowrap;
+	z-index: 1;
+	/* text-align: right; */
+}
+
+.chain .foreign.amount::after {
+	top: -.75em;
+	bottom: auto;
+}
+
+.chain .link .amount.foreign {
+	padding-top: 10px;
+	padding-bottom: 0;
 }
 
 .chain .amount.paid::after {
@@ -370,9 +410,10 @@ main > section > .diagram > div {
 	content: "";
 	position: absolute;
 	bottom: 0;
-	width: 50%;
+	width: 100%;
 	left: 0;
-	border-bottom: 1px solid currentColor;
+	right: 0;
+	/* border-bottom: 1px solid currentColor; */
 }
 
 .chain .amount.value::after {
@@ -383,5 +424,119 @@ main > section > .diagram > div {
 	align-items: end;
 	align-content: end;
 	width: auto;
+	flex-direction: row-reverse;
 }
 
+link {
+	display: none !important;
+}
+
+.chain section[class]:empty {
+	border: none;
+}
+
+.chain * {
+	justify-content: flex-end;
+}
+
+.chain article {
+	text-align: right;
+	align-items: flex-end;
+	/* max-width:max-content; */
+}
+
+.chain h4 {
+	width: 0;
+	justify-content: flex-end;
+}
+
+.chain article {
+	/* padding: 10px; */
+}
+
+.chain article > :first-child {
+	margin-top: initial;
+}
+
+.chain article > :last-child {
+	margin-bottom: initial;
+}
+.chain article h4 {
+	height: calc(var(--Row) * .75);
+}
+.chain article {
+	/* white-space: nowrap; */
+}
+
+.product article {
+	/* margin-bottom: 2em; */
+	margin-top: auto;
+}
+
+.product>section {
+	max-width: 500px;
+}
+
+.chain>div>section:first-child * {
+	text-align: left;
+}
+
+.chain * {
+	justify-content: initial;
+	align-items: initial;
+}
+
+.chain .agent:first-child article {
+	align-items: flex-start;
+}
+
+.chain .agent:first-child article * {
+	justify-content: flex-start;
+}
+
+.chain .agent:first-child .amount::after {
+	right: auto;
+	left: 0;
+}
+
+.chain .good.arrow {
+	margin: 0 calc(var(--Row) / 2);
+	border-top-style: dotted;
+	min-width: 100%;
+}
+
+.chain h4>span {
+	background-color: white;
+	padding-left: 10px;
+}
+.chain .agent:first-child h4 {
+	width: auto;
+}
+.chain .agent:first-child h4>span {
+	padding-left: 0;
+	padding-right: 10px;
+}
+
+.chain .agent:first-child .amount {
+	justify-content: flex-start;
+}
+
+.chain .goods-list input {
+	display: none;
+}
+
+.chain .product>section:not(:empty):after {
+	content: "•";
+	position: absolute;
+	left: 0;
+	top: 0;
+	text-align: center;
+	display: block;
+	line-height: 0;
+	margin-left: -.28125em;
+}
+
+.chain .product>section.foreign:not(:empty):after {
+	bottom: 0;
+	top: auto;
+}
