@@ -24,36 +24,6 @@ main>section>article>div {
 	to { opacity: var(--OpacityVisible, 1); }
 }
 
-.chain .variable.arrow {
-	--ArrowLine: 2px dotted currentColor;
-}
-
-.chain .variable.arrow:only-of-type {
-	--ArrowLine: 2px solid currentColor;
-}
-
-.diagram .variable.arrow {
-	transform: rotate(40deg);
-	transform-origin: center !important;
-	display: none !important;
-}
-
-.diagram .variable.arrow {
-	margin: var(--Row) 0 !important;
-}
-
-.diagram>div>div:last-of-type hr.arrow::after {
-	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:serif='http://www.serif.com/' width='28px' height='16px' viewBox='0 0 56 33' version='1.1' xml:space='preserve' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:butt;stroke-miterlimit:1.5;'%3E%3Cpath d='M3.756,26.664l22.908,-22.908l24.9,24.899' style='fill:none;stroke:%23D5D5D2;stroke-width:8px;'/%3E%3C/svg%3E");	
-	content: initial;
-	top: -3px !important;
-	left: 30% !important;
-	position: relative;
-}
-
-.chain .arrow:after {
-    width: initial !important;
-}
-
 .product h4 {
 	display: none;
 }
@@ -88,37 +58,9 @@ h1 .local {
 	white-space: nowrap;
 }
 
-body {
-}
-
-/* main { */
-/* 	align-items: flex-start; */
-/* 	overflow-y: hidden; */
-/* } */
-
-nav a {
-	/* outline: 1px solid red; */
-}
-
 nav>ul>li:not(.is-complete)>a {
 	background-color: var(--ltr-primary);
 }
-
-
-.chain .product .icon {
-	/* --IconHeight: calc(var(--Row) * 1.25 * var(--Size)); */
-	/* background-color: var(--lt-primary); */
-}
-.chain .good.arrow {
-	/* flex-grow: 0; */
-}
-
-/* .chain .good.arrow, */
-/* .chain .link .amount { */
-/* 	margin: 0; */
-/* } */
-
-
 
 .chain .foreign:not(.placeholder)~article svg {
 	fill: url('#gradient-local-foreign');
@@ -207,37 +149,6 @@ main > section p > b:only-child {
 	font-size: 1.3125em;
 }
 
-/* :root { */
-/* 	--blue: #63B6FF; */
-/* 	--red: #FF8181; */
-/* 	--beige: #1c1a10; */
-/* 	--lt-beige: #1c1a10; */
-/* 	--dk-beige: #1c1a10; */
-/* 	--lt-purple: #762484; */
-/* 	--purple: #f6bfff; */
-/* 	--brown: #A2A19B; */
-/* 	--ltst-primary: #26262b; */
-/* 	--ltr-primary: #151519; */
-/* 	--lt-red: #8e083b; */
-/* 	--yellow: #736C00; */
-
-/* 	--ColorBg: white; */
-/* 	--ColorText: var(--indigo); */
-/* 	--ColorLocal: var(--blue); */
-/* 	--ColorForeign: var(--red); */
-/* 	--ColorAccent: var(--yellow); */
-/* 	--ColorDkAccent: var(--dk-yellow); */
-	
-
-/* 	/1* --ColorSupport: var(--lt-purple); *1/ */
-/* 	--ColorBg: #333; */
-/* 	--ColorText: #ddd; */
-/* } */
-
-/* nav a:before { */
-/* 	filter: invert(1); */
-/* } */
-
 html {
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -260,38 +171,12 @@ main > section aside {
 	display: block;
 }
 
-.chain .arrow {
-	/* display: none; */
-}
-
-
-.chain article:not(:first-child):last-child::after, .chain article:not(:last-child):first-child::before {
-	content: initial;
-}
-
-.chain .goods-list>.product>section {
-	/* direction: rtl; */
-}
-
-.chain .goods-list>.product>section>* {
-	/* direction: initial; */
-}
-
-.chain section > div > * + *, .chain article:not(:first-child):last-child::after, .chain article:not(:last-child):first-child::before {
-	margin-top: 0;
-}
-
-main > section > .diagram > div {
-	height: max-content;
-	margin: auto;
-}
-
 .chain .link .amount {
-	margin: 0;
-	padding-bottom: 10px;
+	padding-bottom: calc(var(--Row) / 2);
 	align-items: flex-end;
 	text-align: right;
 	justify-content: flex-end;
+	position: relative;
 }
 
 .chain .amount::after {
@@ -301,13 +186,11 @@ main > section > .diagram > div {
 	font-size: 10px;
 	right: 0;
 	line-height: 1;
-	padding-left: 10px;
+	padding-left: calc(var(--Row) / 2);
 	background-color: white;
-	max-width: max-content;
 	text-transform: uppercase;
 	white-space: nowrap;
 	z-index: 1;
-	/* text-align: right; */
 }
 
 .chain .foreign.amount::after {
@@ -316,7 +199,7 @@ main > section > .diagram > div {
 }
 
 .chain .link .amount.foreign {
-	padding-top: 10px;
+	padding-top: calc(var(--Row) / 2);
 	padding-bottom: 0;
 }
 
@@ -324,39 +207,21 @@ main > section > .diagram > div {
 	content: "Montant déboursé";
 }
 
-.chain .amount::before {
-	content: "";
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	left: 0;
-	right: 0;
-	/* border-bottom: 1px solid currentColor; */
-}
-
 .chain .amount.value::after {
 	content: "Valeur ajoutée";
 }
 
 .chain .goods-list>.product>section {
-	align-items: end;
-	align-content: end;
-	width: auto;
 	flex-direction: row-reverse;
+	align-content: flex-start;
 }
 
 link {
 	display: none !important;
 }
 
-.chain * {
-	justify-content: flex-end;
-}
-
 .chain article {
 	text-align: right;
-	align-items: flex-end;
-	/* max-width:max-content; */
 }
 
 .chain h4 {
@@ -364,71 +229,36 @@ link {
 	justify-content: flex-end;
 }
 
-.chain article {
-	/* padding: 10px; */
-}
-
-.chain article > :first-child {
-	margin-top: initial;
-}
-
-.chain article > :last-child {
-	margin-bottom: initial;
-}
 .chain article h4 {
 	height: calc(var(--Row) * .75);
-}
-.chain article {
-	/* white-space: nowrap; */
-}
-
-.product article {
-	/* margin-bottom: 2em; */
-	margin-top: auto;
 }
 
 .product>section {
 	max-width: 500px;
 }
 
-.chain>div>section:first-child * {
-	text-align: left;
-}
-
-.chain * {
-	justify-content: initial;
-	align-items: initial;
-}
-
 .chain .agent:first-child article {
 	align-items: flex-start;
-}
-
-.chain .agent:first-child article * {
-	justify-content: flex-start;
-}
-
-.chain .agent:first-child .amount::after {
-	right: auto;
-	left: 0;
 }
 
 .chain .good.arrow {
 	margin: 0 calc(var(--Row) / 2);
 	border-top-style: dotted;
-	min-width: 100%;
+	flex: 100% 1 1;
 }
 
 .chain h4>span {
 	background-color: white;
-	padding-left: 10px;
+	padding-left: calc(var(--Row) / 2);
 }
+
 .chain .agent:first-child h4 {
 	width: auto;
 }
+
 .chain .agent:first-child h4>span {
 	padding-left: 0;
-	padding-right: 10px;
+	padding-right: calc(var(--Row) / 2);
 }
 
 .chain .agent:first-child .amount {
@@ -440,42 +270,34 @@ link {
 }
 
 .chain .goods-list section {
-	/* grid-column-end: span 2; */
-	width: auto;
-	/* min-width: 100%; */
-	margin-left: var(--Row);
 	padding-left: calc(var(--Row) / 2);
 	margin-right: calc(-1 * var(--Row));
 	padding-right: var(--Row);
-	padding-bottom: 10px;
+	padding-bottom: calc(var(--Row) / 2);
 	border-left: 1px solid currentColor;
+	fill: currentColor;
 }
 
 .chain .goods-list section.local {
-	/* grid-row-start: 5; */
-	fill: var(--ColorLocal);
 	border-bottom: 1px solid currentColor;
 }
 
 .chain .agent:not(:first-of-type)>div:last-child::after {
 	content: "";
 }
+
 .chain .goods-list section.foreign {
-	/* grid-row-start: 1; */
-	fill: var(--ColorForeign);
 	border-top: 1px solid currentColor;
 	padding-bottom: 0px;
-	padding-top: 10px;
-}
-
-.chain .goods-list section.value {
-	border-bottom: 1px solid currentColor;
-	/* grid-row-start: 4; */
+	padding-top: calc(var(--Row) / 2);
 }
 
 .chain article, .chain .product {
 	align-items: flex-end;
-	/* grid-row-start: 3; */
+}
+
+.chain .product>section:not(:empty) {
+	position: relative;
 }
 
 .chain .product>section:not(:empty):after {
@@ -501,77 +323,58 @@ link {
 /* Grille du diagramme --- */
 
 .chain>div {
-	--SecurityRowCount: 0;
-	--SecurityColCount: 0;
 	display: grid;
-	/* grid-template-rows: auto; */
-	/* grid-template-columns: auto; */
 	grid-auto-flow: dense;
-	align-items: initial;
 	gap: var(--Row);
 	max-width: max-content;
 }
-
-.chain>div>* {
-	/* grid-row-end: span 3; */
-	/* grid-row-start: 2; */
-	/* grid-column-start: calc(var(--link-position)); */
-	/* grid-column-end: span 3; */
-}
-
 
 .chain>div>*,
 .chain>div>*>div {
 	display: contents;
 }
 
-/* .chain article, .chain .amount, .chain .placeholder, */
-/* .chain .goods-list section, .chain .product { */
-/* 	grid-column-start: calc(var(--link-position)); */
-/* } */
-/* .chain .goods-list section { */
-/* 	grid-column-start: calc(var(--link-position) - 1); */
-/* } */
+.chain article, .chain .amount, .chain .placeholder,
+.chain .goods-list section, .chain .product {
+	grid-column-start: calc(var(--link-position));
+}
+.chain .goods-list section {
+	grid-column-start: calc(var(--link-position) - 1);
+}
 
-/* /1* Ordre des éléments de diagramme --- *1/ */
+/* Ordre des éléments de diagramme --- */
 
-/* .chain .foreign, */
-/* .chain .agent:not(:first-of-type)>div:last-child::after { */
-/* 	order: 1; */
-/* } */
+.chain .foreign,
+.chain .agent:not(:first-of-type)>div:last-child::after {
+	order: 1;
+}
 
-/* .chain article, .chain .product { */
-/* 	order: 3; */
-/* } */
+.chain article, .chain .product {
+	order: 3;
+}
 
-/* .chain .local { */
-/* 	order: 5; */
-/* } */
+.chain .local {
+	order: 5;
+}
  
-/* .chain .value, */
-/* .chain .paid { */
-/* 	order: 4; */
-/* } */
+.chain .value,
+.chain .paid {
+	order: 4;
+}
 
 /* ------ DIAGRAMME VERTICAL ---- */
 
 .chain>div {
-	--SecurityRowCount: 0;
-	--SecurityColCount: 0;
-	display: grid;
-	/* grid-template-rows: auto; */
-	/* grid-template-columns: auto; */
 	grid-auto-flow: column dense;
-	align-items: initial;
-	gap: var(--Row);
-	max-width: max-content;
 }
 
 .chain article, .chain .amount, .chain .placeholder,
 .chain .goods-list section, .chain .product, .chain .unknown-link {
+	grid-column-start: initial;
 	grid-row-start: calc(var(--link-position));
 }
 .chain .goods-list section {
+	grid-column-start: initial;
 	grid-row-start: calc(var(--link-position) - 1);
 }
 /* Ordre des éléments de diagramme --- */
@@ -594,82 +397,22 @@ link {
 	order: 2;
 }
 
-.chain .link .amount {
-	align-items: flex-start;
-}
-
-.chain .amount::after {
-	bottom: auto;
-	top: -.75em;
-}
-
-.chain .amount {
-	padding-top: 10px;
-	padding-bottom: 0px;
-}
-
 .chain .goods-list section {
-	/* grid-column-end: span 2; */
-	width: auto;
-	/* min-width: 100%; */
-	/* margin-left: var(--Row); */
-	/* padding-left: calc(var(--Row) / 2); */
-	/* margin-right: calc(-1 * var(--Row)); */
-	margin: 0;
-	padding-right: var(--Row);
-	padding-bottom: 10px;
-	border-left: 1px solid currentColor;
+	border-top: 1px solid currentColor;
 }
 
 .chain .goods-list section.local {
-	/* grid-row-start: 5; */
-	fill: var(--ColorLocal);
 	border-bottom: none;
-	border-top: 1px solid currentColor;
-}
-
-.chain .agent:not(:first-of-type)>div:last-child::after {
-	content: "";
-}
-.chain .goods-list section.foreign {
-	/* grid-row-start: 1; */
-	fill: var(--ColorForeign);
-	border-top: 1px solid currentColor;
-	padding-bottom: 0px;
-	padding-top: 10px;
-}
-
-.chain .goods-list section.value {
-	/* border-bottom: 1px solid currentColor; */
-	/* grid-row-start: 4; */
 }
 
 .chain article, .chain .product {
 	align-items: center;
-	/* grid-row-start: 3; */
 }
 
 .chain .product>section:not(:empty):after {
-	/* content: "•"; */
-	/* position: absolute; */
 	left: auto;
 	right: 0;
-	/* top: 0; */
-	/* text-align: center; */
-	/* display: block; */
-	/* line-height: 0; */
-	/* margin-left: -.28125em; */
-	margin-left: 0;
-	margin-right: -.28125em;
-}
-
-.chain section[class]:empty {
-	border: none;
-}
-
-.chain .product>section.foreign:not(:empty):after {
-	bottom: 0;
-	top: auto;
+	margin-top: -.125em;
 }
 
 .chain h4 {
@@ -681,21 +424,9 @@ link {
 }
 
 .chain .good.arrow {
-	height: initial;
-	min-height: initial;
 	max-height: initial;
 	border-left: var(--ArrowLine);
 	border-left-style: dotted;
-	min-width: 0;
-}
-
-.chain .link .amount {
-	justify-content: flex-start;
-}
-
-.chain .amount::after {
-	right: auto;
-	left: 0;
 }
 
 .chain .goods-list section.foreign:not(:empty) {
