@@ -260,92 +260,10 @@ main > section aside {
 	display: block;
 }
 
-.chain>div>*,
-.chain>div>*>div {
-	display: contents;
-}
-
 .chain .arrow {
 	/* display: none; */
 }
 
-.chain .local {
-	order: 5;
-	/* grid-row-start: 5; */
-}
-
-.chain .value,
-.chain .paid {
-	order: 4;
-	/* grid-row-start: 4; */
-}
-
-.chain .foreign {
-	order: 1;
-	/* grid-row-start: 1; */
-}
-
-.chain .goods-list section {
-	/* grid-column-end: span 2; */
-	width: auto;
-	/* min-width: 100%; */
-	margin-left: var(--Row);
-	padding-left: calc(var(--Row) / 2);
-	margin-right: calc(-1 * var(--Row));
-	padding-right: var(--Row);
-	padding-bottom: 10px;
-	border-left: 1px solid currentColor;
-}
-
-.chain .goods-list section.local {
-	order: 5;
-	/* grid-row-start: 5; */
-	fill: var(--ColorLocal);
-	border-bottom: 1px solid currentColor;
-}
-
-.chain .agent:not(:first-of-type)>div:last-child::after {
-	content: "";
-	order: 1;
-}
-.chain .goods-list section.foreign {
-	order: 1;
-	/* grid-row-start: 1; */
-	fill: var(--ColorForeign);
-	border-top: 1px solid currentColor;
-	padding-bottom: 0px;
-	padding-top: 10px;
-}
-
-.chain .goods-list section.value {
-	order: 4;
-	border-bottom: 1px solid currentColor;
-	/* grid-row-start: 4; */
-}
-
-.chain article, .chain .product {
-	order: 3;
-	align-items: flex-end;
-	/* grid-row-start: 3; */
-}
-.chain article, .chain .amount, .chain .placeholder,
-.chain .goods-list section, .chain .product {
-	grid-column-start: calc(var(--link-position));
-}
-.chain .goods-list section {
-	grid-column-start: calc(var(--link-position) - 1);
-}
-
-.chain>div {
-	--SecurityRowCount: 0;
-	--SecurityColCount: 0;
-	grid-template-rows: auto;
-	grid-template-columns: auto;
-	grid-auto-flow: dense;
-	align-items: initial;
-	gap: var(--Row);
-	max-width: max-content;
-}
 
 .chain article:not(:first-child):last-child::after, .chain article:not(:last-child):first-child::before {
 	content: initial;
@@ -429,10 +347,6 @@ main > section > .diagram > div {
 
 link {
 	display: none !important;
-}
-
-.chain section[class]:empty {
-	border: none;
 }
 
 .chain * {
@@ -525,6 +439,45 @@ link {
 	display: none;
 }
 
+.chain .goods-list section {
+	/* grid-column-end: span 2; */
+	width: auto;
+	/* min-width: 100%; */
+	margin-left: var(--Row);
+	padding-left: calc(var(--Row) / 2);
+	margin-right: calc(-1 * var(--Row));
+	padding-right: var(--Row);
+	padding-bottom: 10px;
+	border-left: 1px solid currentColor;
+}
+
+.chain .goods-list section.local {
+	/* grid-row-start: 5; */
+	fill: var(--ColorLocal);
+	border-bottom: 1px solid currentColor;
+}
+
+.chain .agent:not(:first-of-type)>div:last-child::after {
+	content: "";
+}
+.chain .goods-list section.foreign {
+	/* grid-row-start: 1; */
+	fill: var(--ColorForeign);
+	border-top: 1px solid currentColor;
+	padding-bottom: 0px;
+	padding-top: 10px;
+}
+
+.chain .goods-list section.value {
+	border-bottom: 1px solid currentColor;
+	/* grid-row-start: 4; */
+}
+
+.chain article, .chain .product {
+	align-items: flex-end;
+	/* grid-row-start: 3; */
+}
+
 .chain .product>section:not(:empty):after {
 	content: "•";
 	position: absolute;
@@ -536,7 +489,249 @@ link {
 	margin-left: -.28125em;
 }
 
+.chain section[class]:empty {
+	border: none;
+}
+
 .chain .product>section.foreign:not(:empty):after {
 	bottom: 0;
 	top: auto;
+}
+
+/* Grille du diagramme --- */
+
+.chain>div {
+	--SecurityRowCount: 0;
+	--SecurityColCount: 0;
+	display: grid;
+	/* grid-template-rows: auto; */
+	/* grid-template-columns: auto; */
+	grid-auto-flow: dense;
+	align-items: initial;
+	gap: var(--Row);
+	max-width: max-content;
+}
+
+.chain>div>* {
+	/* grid-row-end: span 3; */
+	/* grid-row-start: 2; */
+	/* grid-column-start: calc(var(--link-position)); */
+	/* grid-column-end: span 3; */
+}
+
+
+.chain>div>*,
+.chain>div>*>div {
+	display: contents;
+}
+
+/* .chain article, .chain .amount, .chain .placeholder, */
+/* .chain .goods-list section, .chain .product { */
+/* 	grid-column-start: calc(var(--link-position)); */
+/* } */
+/* .chain .goods-list section { */
+/* 	grid-column-start: calc(var(--link-position) - 1); */
+/* } */
+
+/* /1* Ordre des éléments de diagramme --- *1/ */
+
+/* .chain .foreign, */
+/* .chain .agent:not(:first-of-type)>div:last-child::after { */
+/* 	order: 1; */
+/* } */
+
+/* .chain article, .chain .product { */
+/* 	order: 3; */
+/* } */
+
+/* .chain .local { */
+/* 	order: 5; */
+/* } */
+ 
+/* .chain .value, */
+/* .chain .paid { */
+/* 	order: 4; */
+/* } */
+
+/* ------ DIAGRAMME VERTICAL ---- */
+
+.chain>div {
+	--SecurityRowCount: 0;
+	--SecurityColCount: 0;
+	display: grid;
+	/* grid-template-rows: auto; */
+	/* grid-template-columns: auto; */
+	grid-auto-flow: column dense;
+	align-items: initial;
+	gap: var(--Row);
+	max-width: max-content;
+}
+
+.chain article, .chain .amount, .chain .placeholder,
+.chain .goods-list section, .chain .product, .chain .unknown-link {
+	grid-row-start: calc(var(--link-position));
+}
+.chain .goods-list section {
+	grid-row-start: calc(var(--link-position) - 1);
+}
+/* Ordre des éléments de diagramme --- */
+
+.chain .foreign,
+.chain .agent:not(:first-of-type)>div:last-child::after {
+	order: 4;
+}
+
+.chain article, .chain .product, .chain .unknown-link {
+	order: 3;
+}
+
+.chain .local {
+	order: 1;
+}
+ 
+.chain .value,
+.chain .paid {
+	order: 2;
+}
+
+.chain .link .amount {
+	align-items: flex-start;
+}
+
+.chain .amount::after {
+	bottom: auto;
+	top: -.75em;
+}
+
+.chain .amount {
+	padding-top: 10px;
+	padding-bottom: 0px;
+}
+
+.chain .goods-list section {
+	/* grid-column-end: span 2; */
+	width: auto;
+	/* min-width: 100%; */
+	/* margin-left: var(--Row); */
+	/* padding-left: calc(var(--Row) / 2); */
+	/* margin-right: calc(-1 * var(--Row)); */
+	margin: 0;
+	padding-right: var(--Row);
+	padding-bottom: 10px;
+	border-left: 1px solid currentColor;
+}
+
+.chain .goods-list section.local {
+	/* grid-row-start: 5; */
+	fill: var(--ColorLocal);
+	border-bottom: none;
+	border-top: 1px solid currentColor;
+}
+
+.chain .agent:not(:first-of-type)>div:last-child::after {
+	content: "";
+}
+.chain .goods-list section.foreign {
+	/* grid-row-start: 1; */
+	fill: var(--ColorForeign);
+	border-top: 1px solid currentColor;
+	padding-bottom: 0px;
+	padding-top: 10px;
+}
+
+.chain .goods-list section.value {
+	/* border-bottom: 1px solid currentColor; */
+	/* grid-row-start: 4; */
+}
+
+.chain article, .chain .product {
+	align-items: center;
+	/* grid-row-start: 3; */
+}
+
+.chain .product>section:not(:empty):after {
+	/* content: "•"; */
+	/* position: absolute; */
+	left: auto;
+	right: 0;
+	/* top: 0; */
+	/* text-align: center; */
+	/* display: block; */
+	/* line-height: 0; */
+	/* margin-left: -.28125em; */
+	margin-left: 0;
+	margin-right: -.28125em;
+}
+
+.chain section[class]:empty {
+	border: none;
+}
+
+.chain .product>section.foreign:not(:empty):after {
+	bottom: 0;
+	top: auto;
+}
+
+.chain h4 {
+	width: auto;
+}
+
+.chain .product {
+	flex-direction: column;
+}
+
+.chain .good.arrow {
+	height: initial;
+	min-height: initial;
+	max-height: initial;
+	border-left: var(--ArrowLine);
+	border-left-style: dotted;
+	min-width: 0;
+}
+
+.chain .link .amount {
+	justify-content: flex-start;
+}
+
+.chain .amount::after {
+	right: auto;
+	left: 0;
+}
+
+.chain .goods-list section.foreign:not(:empty) {
+	border-right: 1px solid currentColor;
+	border-left: none;
+}
+
+.chain .product > section.foreign:not(:empty)::after {
+	top: 0;
+	right: auto;
+	left: 0;
+	bottom: auto;
+}
+
+.chain .product .icon.beer {
+	position: relative;
+	left: -4%;
+}
+
+.chain .goods-list section {
+	padding: var(--Row);
+	padding-bottom: 0;
+	max-width: 65px;
+}
+
+.chain .agent:not(:first-child)>div:only-child::before {
+	content:"";
+	order: 1;
+	grid-column-end: span 2;
+}
+
+.chain .agent>div:only-child::after {
+	content: "";
+	order: 5;
+}
+
+.chain .agent:first-child article {
+	align-items: center;
 }
