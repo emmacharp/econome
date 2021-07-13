@@ -292,9 +292,9 @@
 		<diagram type="chain" links="5">
 			<agent type="consumer" name="Joey Joe Joe" />
 			<product type="beer" name="Bière" complete="" />
-			<agent type="retailer" name="Dépanneur Commun+" goods="" />
+			<agent type="retailer" name="Dépanneur Commun+" />
 			<product type="beer" name="Bière" />
-			<agent type="manufacturer" name="Entrepôts Correct" class="local" goods="" />
+			<agent type="manufacturer" name="Entrepôts Correct" class="local" />
 		</diagram>
 		<section>
 			<div class="grille">
@@ -321,14 +321,14 @@
 			<p>comme vous le savez déjà, brasse <span class="local">La Moyenne</span> depuis plus de vingt ans et ce, à votre grand plaisir, Joey Joe Joe.</p>
 		</header>
 
-		<diagram type="chain" links="5">
+		<diagram type="chain" links="4">
 			<agent type="consumer" name="Joey Joe Joe" />
 			<product type="beer" name="Bière" complete="" />
 			<agent type="retailer" name="Dépanneur Commun+" class="local" />
 			<product type="beer" name="Bière" />
 			<agent type="manufacturer" name="Entrepôts Correct" class="local" />
 			<product type="beer" name="Bière" />
-			<agent type="transformer" name="Brasserie Pâpire" class="active" />
+			<agent type="transformer" name="Brasserie Moyenne" class="local" goods="" />
 		</diagram>
 		<section>
 			<div class="grille">

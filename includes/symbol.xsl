@@ -28,8 +28,8 @@
 			</clipPath>
 			<defs>
 				<linearGradient id="gradient-local-foreign" x1="0" x2="0" y1="0" y2="1">
-					<stop offset="0%" stop-color="var(--ColorLocal)"/>
-					<stop offset="100%" stop-color="var(--ColorForeign)"/>
+					<stop offset="0%" stop-color="var(--ColorForeign)"/>
+					<stop offset="100%" stop-color="var(--ColorLocal)"/>
 				</linearGradient>
 			</defs>
 		</svg>

@@ -172,7 +172,7 @@
 }
 
 .chain .product .icon {
-	--IconHeight: calc(var(--Row) * 2 * var(--Size));
+	/* --IconHeight: calc(var(--Row) * 2 * var(--Size)); */
 }
 
 .chain .icon.consumer {
@@ -321,7 +321,7 @@
 	}
 
 	.chain .icon+* {
-		margin-left: calc(-1 * var(--Row) * var(--Size));
-		margin-right: calc(-1 * var(--Row) * var(--Size));
+		/* margin-left: calc(-1 * var(--Row) * var(--Size)); */
+		/* margin-right: calc(-1 * var(--Row) * var(--Size)); */
 	}
 /* } */

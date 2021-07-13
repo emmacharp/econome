@@ -17,28 +17,50 @@
 			<span class="unit"> $</span>
 		</span>
 	</xsl:template>
-
+	<xsl:template match="agent" mode="filler">
+		<xsl:if test="not(@local)">
+			<span class="placeholder local"></span>
+		</xsl:if>
+		<xsl:if test="not(@foreign)">
+			<span class="placeholder foreign"></span>
+		</xsl:if>
+		<xsl:if test="not(@value)">
+			<span class="placeholder value"></span>
+		</xsl:if>
+	</xsl:template>
 	<xsl:template match="diagram/agent">
 		<section class="link agent {@type} {@class}" style="--link-position: {count(preceding-sibling::*) + 1};">
 
 
 			<div>
-				<xsl:apply-templates select="@local|@value|@paid" />
+				<xsl:apply-templates select="@foreign|@value|@paid" />
+				<xsl:apply-templates select="." mode="filler"></xsl:apply-templates>
 				<article>
-					<xsl:if test="@goods">
 
-						<xsl:apply-templates select="." mode="include-once" />
-						<aside class="goods-list">
-							<input type="checkbox" name="trigger-goods-list" class="trigger-goods-list" />
-							<div hx-get="goods.html" hx-trigger="revealed" hx-select="#goods-list" hx-swap="outerHTML">
-							</div>
-						</aside>
-					</xsl:if>
 					<xsl:apply-templates select="ext:node-set($svg-symbols)//svg:symbol[generate-id() = generate-id(key('symbol-type', current()/@type)[1])]" />
 					<h4><xsl:apply-templates select="@name" /></h4>
 				</article>
-				<xsl:apply-templates select="@foreign" />
+				<xsl:apply-templates select="@local" />
 			</div>
+			<xsl:if test="@goods">
+				<xsl:apply-templates select="." mode="include-once" />
+				<aside class="goods-list">
+					<input type="checkbox" checked="" name="trigger-goods-list" class="trigger-goods-list" />
+					<div hx-trigger="load" hx-select=".product.{@type}" hx-swap="outerHTML">
+						<!-- TODO : nettoyer les sources de données -->	
+						<xsl:attribute name="hx-get">
+							<xsl:choose>
+								<xsl:when test="@type = 'transformer'">
+									<xsl:value-of select="'goods.html'" />
+								</xsl:when>
+								<xsl:otherwise>
+									<xsl:value-of select="'product.html'" />
+								</xsl:otherwise>
+							</xsl:choose>
+						</xsl:attribute>
+					</div>
+				</aside>
+			</xsl:if>
 		</section>
 	</xsl:template>
 
@@ -88,6 +110,12 @@
 						<xsl:value-of select="';'" />
 					</xsl:if>
 				</xsl:attribute>
+				<div>
+					<article>
+						<i class="icon {@type}"></i>
+						<h4><xsl:value-of select="@name" /></h4>
+					</article>
+				</div>
 				<hr>
 					<xsl:attribute name="class">
 						<xsl:text>good arrow </xsl:text>
@@ -101,13 +129,7 @@
 						</xsl:choose>
 					</xsl:attribute>
 				</hr>
-				<div>
-					<article>
-						<i class="icon {@type}"></i>
-						<h4><xsl:value-of select="@name" /></h4>
-					</article>
-				</div>
-				<hr class="good arrow to" />
+				<!-- <hr class="good arrow to" /> -->
 			</section>
 			<xsl:if test="@foreign">
 				<hr class="variable arrow from" />

@@ -1,35 +1,39 @@
-
-.chain [id=goods-list] {
-	width: max-content;
-	display: grid;
-	grid-gap: 2px;
-	grid-template-columns: repeat(5, 1fr);
-	padding: calc(var(--Row) * .5);
-}
-
-[id=goods-list] p {
+.chain .goods-list>.product {
 	display: contents;
 }
 
-[id=goods-list] p em {
+.chain .goods-list>.product>section {
+	width: max-content;
+	/* display: grid; */
+	/* gap: 7px; */
+	/* grid-template-columns: repeat(auto-fill, 25px); */
+	justify-content: flex-start;
+	width: 100%;
+	position: relative;
+	flex-wrap: wrap-reverse;
+}
+
+.goods-list>.product p {
+	display: contents;
+	--ScaleLevel: var(--Short);
+	--LineHeightFactor: .75;
+}
+
+.goods-list>.product p em {
 	font-style: normal;
 	/*width: 0;*/
 	display: inline-flex;
 	width: max-content;
-	max-width: 21em;
+	max-width: 100%;
 	z-index: 1;
 	position: absolute;
-	left: 100%;
-	top: 10px;
-	margin-left: 12px;
-	padding: 6px 12px;
-	background-color: hsl(266, 8%, 10%);
-	background-color: inherit;
-	color: hsl(266, 8%, 10%);
-	border-radius: 6px;
+	left: 0;
+	top: 100%;
+	margin-top: -3px;
+	padding: 3px;
+	background-color: white;
 	pointer-events: none;
-	border-bottom: 2px solid hsl(266, 8%, 10%);
-	font-size: 14px;
+	/* font-size: 14px; */
 	font-weight: 500;
 	/*color: white;*/
 	/*box-shadow: 0 0 2px hsl(266, 8%, 35%)*/
@@ -37,7 +41,7 @@
 
 }
 
-[id=goods-list] p:not(:hover) em {
+.goods-list>.product p:not(:hover) em {
 	opacity: 0
 }
 
@@ -46,55 +50,57 @@
 	background-color: mauve;
 }*/
 
-[id=goods-list] p:hover {
+.goods-list>.product p:hover {
 	filter: drop-shadow(0px 0px 20px hsl(266, 8%, 40%));
 }
 
-[id=goods-list] p:hover span {
-	background-color: hsla(var(--hue), calc(100% * var(--hue)), 76%, 1);
+.goods-list>.product p:hover span {
+	/* background-color: hsla(var(--hue), calc(100% * var(--hue)), 76%, 1); */
 	/*background-color: rgba(0,0,0,.2);*/
 	/*background-color: hsl(266, 8%, 10%);*/
-	border-radius: 1px;
+	/* border-radius: 1px; */
 	/*box-shadow: 0 0 0 5px hsl(266, 8%, 10%);*/
-	box-shadow: 0 0 0 5px hsla(var(--hue), calc(100% * var(--hue)), 76%, 1), 0 10px 0 0 hsl(266, 8%, 10%);
-	padding: 4px;
+	/* box-shadow: 0 0 0 5px hsla(var(--hue), calc(100% * var(--hue)), 76%, 1), 0 10px 0 0 hsl(266, 8%, 10%); */
+	/* padding: 4px; */
 	z-index: 1;
 }
 
-[id=goods-list]:hover p:not(:hover) span {
-	fill: hsl(266, 8%, 35%);
+.goods-list>.product:hover p:not(:hover) span {
+	/* fill: hsl(266, 8%, 35%); */
 }
 
-[id=goods-list] p:hover span {
+.goods-list>.product p:hover span {
 	/*mix-blend-mode: multiply;*/
-	fill: hsl(266, 8%, 35%);
+	/* fill: hsl(266, 8%, 35%); */
 	/*fill: hsla(var(--hue), calc(100% * var(--hue)), 76%, 1);*/
 }
 
-[id=goods-list] p:not(:hover) {
+.goods-list>.product p:not(:hover) {
 	transition-delay: 20ms;
 }
 
-[id=goods-list] p * {
+.goods-list>.product p * {
 	transition-delay: inherit;
 }
 
 
-[id=goods-list] span {
+.goods-list>.product span {
 	/*display: flex;*/
-	/*align-items: center;*/
-	width: 40px;
-	height: 40px;
+	align-items: center;
+	width: 25px;
+	height: 25px;
+	flex-shrink: 0;
+	/* font-size: 25px; */
 	/* color: hsl(var(--hue), 100%, 70%); */
 	color: var(--blue);
 	/* background-color: var(--yellow); */
-	position: relative;
-	border-radius: 2px;
-	padding: 5px;
-	box-sizing: border-box;
-	box-shadow: 0 0 0 0 rgba(0,0,0,.2);
-	fill: hsl(266, 8%, 35%);
-	fill: hsla(var(--hue), calc(100% * var(--hue)), 76%, 1);
+	position: static;
+	/* border-radius: 2px; */
+	/* box-sizing: border-box; */
+	padding: 3px;
+	/* box-shadow: 0 0 0 0 rgba(0,0,0,.2); */
+	/* fill: hsl(266, 8%, 35%); */
+	/* fill: hsla(var(--hue), calc(100% * var(--hue)), 76%, 1); */
 	margin: 0;
 
 }
@@ -133,18 +139,24 @@
 	background-color: var(--lt-red);
 }
 
-[id=goods-list] span:first-child {
+.goods-list>.product span:first-child {
 	border-top-left-radius: 2px;
 	border-bottom-left-radius: 2px;
 }
 
-[id=goods-list] span:last-child {
+.goods-list>.product span:last-child {
 	border-top-right-radius: 2px;
 	border-bottom-right-radius: 2px;
 }
 
 .chain .goods-list {
-	position: absolute;
-	bottom: 100%;
-	margin: var(--Row);
+	flex-direction: column;
+	display: contents;
+/* 	position: absolute; */
+/* 	right: 100%; */
+/* 	margin: var(--Row); */
+}
+
+.chain #goods-list>section:first-child {
+	order: -1;
 }
