@@ -147,21 +147,18 @@
 }
 
 .chain .product .icon {
-	--TotalAddedValue: calc(var(--LocalAddedValue, 0%) + var(--ForeignAddedValue, 0%));
+	--TotalAddedValue: calc(var(--NeutralAddedValue, 0%) + var(--LocalAddedValue, 0%) + var(--ForeignAddedValue, 0%));
 	width: calc(var(--IconHeight) * .75);
 	background-color: var(--ltst-primary);
 	background-image:
 		linear-gradient(to top,
-			var(--ColorForeign) 0,
-			var(--ColorForeign) var(--ForeignAddedValue, 0%),
-			var(--ColorLocal)  var(--ForeignAddedValue, 0%),
-			var(--ColorLocal) var(--TotalAddedValue, 0%),
-			transparent var(--TotalAddedValue, 0%), transparent 100%),
-		linear-gradient(to top,
-			var(--ltr-brown) 0,
-			var(--ltr-brown) var(--NeutralAddedValue, 0%),
-			var(--ltr-brown)  var(--NeutralAddedValue, 0%),
-			transparent var(--NeutralAddedValue, 0%), transparent 100%);
+			var(--purple) 0,
+			var(--purple) var(--NeutralAddedValue, 0%),
+			var(--ColorLocal) var(--NeutralAddedValue, 0%),
+			var(--ColorLocal) calc(var(--LocalAddedValue, 0%) + var(--NeutralAddedValue, 0%)),
+			var(--ColorForeign)  calc(var(--LocalAddedValue, 0%) + var(--NeutralAddedValue, 0%)),
+			var(--ColorForeign) var(--TotalAddedValue, 0%),
+			transparent var(--TotalAddedValue, 0%), transparent 100%);
 	clip-path: url(#beer-clip-path);
 }
 
