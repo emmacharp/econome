@@ -24,7 +24,7 @@
 		<xsl:if test="not(@foreign)">
 			<span class="placeholder foreign"></span>
 		</xsl:if>
-		<xsl:if test="not(@value)">
+		<xsl:if test="not(@value) and not(@paid)">
 			<span class="placeholder value"></span>
 		</xsl:if>
 	</xsl:template>
