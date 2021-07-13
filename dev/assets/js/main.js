@@ -10,8 +10,9 @@
 	const wikiDump = document.querySelector('#wikiDump');
 	const wikiCanonical = document.querySelector('#wikiCanonical');
 	const wiki = document.createElement('section');
+	const username = document.querySelector('#nom');
 
-	wikiDump.appendChild(wiki);
+	if (wikiDump) wikiDump.appendChild(wiki);
 
 // Get Parents helper function
 	// https://gomakethings.com/how-to-get-all-parent-elements-with-vanilla-javascript/
@@ -226,37 +227,38 @@ window.addEventListener('DOMContentLoaded', function() {
 		});
 	// });
 
-	wikiDump.addEventListener('click', function(event) {
-		let wikiLink = event.target.closest('a[href^="/wiki"]');
+	if (wikiDump) {
+		wikiDump.addEventListener('click', function(event) {
+			let wikiLink = event.target.closest('a[href^="/wiki"]');
 
-		if (!wikiLink) return;
-		fetchWikiContent(event);
-		event.preventDefault();
-	});
-
-	document.querySelector('#wikiViewerClose').addEventListener('click', function(event) {
-		wikiViewer.classList.remove('is-visible');
-	});
-
-	// Customizing username
-	document.querySelector('#nom').addEventListener('change', function(event) {
-		const	usernameInstances = document.querySelectorAll('.username');
-		const customUsername = event.target.value || event.target.getAttribute('placeholder');
-		usernameInstances.forEach((item) => {
-			item.innerHTML = customUsername;
+			if (!wikiLink) return;
+			fetchWikiContent(event);
+			event.preventDefault();
 		});
-	});
-	// Custom username for ajax diagrams (htmx)
-	document.body.addEventListener('htmx:beforeSwap', function(event) {
-		if(document.querySelector('#nom').value.length > 0) {
-			const customUsername = document.querySelector('#nom').value;
-			event.target.querySelectorAll('.username').forEach((item) => {
+
+		document.querySelector('#wikiViewerClose').addEventListener('click', function(event) {
+			wikiViewer.classList.remove('is-visible');
+		});
+	}
+	// Customizing username
+	if (username) {
+		document.querySelector('#nom').addEventListener('change', function(event) {
+			const	usernameInstances = document.querySelectorAll('.username');
+			const customUsername = event.target.value || event.target.getAttribute('placeholder');
+			usernameInstances.forEach((item) => {
 				item.innerHTML = customUsername;
 			});
-
-		}
-	});
-
+		});
+		// Custom username for ajax diagrams (htmx)
+		document.body.addEventListener('htmx:beforeSwap', function(event) {
+			if(document.querySelector('#nom').value.length > 0) {
+				const customUsername = document.querySelector('#nom').value;
+				event.target.querySelectorAll('.username').forEach((item) => {
+					item.innerHTML = customUsername;
+				});
+			}
+		});
+	}
 });
 
 })();
