@@ -45,3 +45,5 @@ x (B) 2021-01-05 Essayer la grille sur un div à l'aide de switches booléennes 
 2021-07-10 Afficher les infos (dollars et nom) des produits par dessus la quantité totale de la section. @maitrise +design
 (A) 2021-07-10 Tenter l'inversion du total de section et des symboles de produit @maitrise +design
 (A) 2021-07-11 Tenter d'inférer les sommes à mettre dans les attributs du diagramme (value, foreign, etc.) @maitrise +donnees
+(A) Essayer à la verticale avec order. @maitrise +design
+(A) Nettoyer ! @maitrise
