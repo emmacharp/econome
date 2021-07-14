@@ -7,6 +7,10 @@
  * à respecter les polices de caractères par défaut. */
 * { font-family: inherit; }
 
+/* Assurer qu'elles ne soient pas présentées 
+ * lorsqu'intégrées au contenu */
+link { display: none !important; }
+
 /* Rythme des contenus ----------------------- */
 
 :not(html, body, label, ul, ol)>*:not(link)+* { 
@@ -35,7 +39,7 @@ body { overscroll-behavior-y: none; }
 /* Style graphique préférable à celui du navigateur */
 hr {
 	line-height: 0;
-	height: 0; max-height: 0;
+	height: 0;
 	border: none; border-top: 2px solid currentColor;
 }
 
