@@ -2,8 +2,7 @@
 /* Adaptation de la typographie ----------------------- */
 
 	@media (max-width: 80em) { :root { --Scale: var(--MajorThird); } }
-	@media (min-width: 80em) and (max-width: 100em) { :root { --Scale: var(--PerfectFourth); } }
-	@media (min-width: 100em) { :root { --Scale: var(--AugmentedFourth); } }
+	@media (min-width: 100em) { :root { --Scale: var(--PerfectFourth); } }
 
 
 /* Typographie basée sur les polices système ----------------------- */
