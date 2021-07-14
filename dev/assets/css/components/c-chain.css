@@ -44,7 +44,7 @@
 }
 
 .chain .amount {
-	position: relative;
+	flex-direction: column;
 }
 
 .chain .product>section:not(:empty) {
@@ -60,31 +60,14 @@
 	top: 0;
 }
 
-.chain .amount::after {
-	content: "Biens intrants";
-	position: absolute;
-	bottom: -.5em;
-	font-size: 10px;
-	right: 0;
-	line-height: 1;
+.chain .amount small {
+	font-size: calc(var(--Row) / 3);
 	padding-left: calc(var(--Row) / 2);
-	background-color: white;
+	background-color: var(--ColorBg);
 	text-transform: uppercase;
 	white-space: nowrap;
 	z-index: 1;
-}
-
-.chain .amount.paid::after {
-	content: "Montant déboursé";
-}
-
-.chain .amount.value::after {
-	content: "Valeur ajoutée";
-}
-
-.chain .foreign.amount::after {
-	top: -.75em;
-	bottom: auto;
+	line-height: calc(var(--Row) / 2);
 }
 
 .chain .good.arrow {
