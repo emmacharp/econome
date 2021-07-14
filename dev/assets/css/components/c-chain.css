@@ -46,13 +46,4 @@
 	fill: currentColor;
 }
 
-.chain .unknown-link span {
-	--ScaleLevel: var(--Tallest);
-	border-radius: 50%;
-	height: calc(var(--Row) * 2 * var(--Size));
-	width: calc(var(--Row) * 2 * var(--Size));
-	padding: 2.5vw;
-	box-sizing: border-box;
-	flex-shrink: 0;
-	border: 4px solid var(--lt-primary);
 }
