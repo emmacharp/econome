@@ -121,8 +121,20 @@ exclude-result-prefixes="ext msxsl svg math">
 					<xsl:text>+</xsl:text>
 				</xsl:otherwise>
 			</xsl:choose>
-			<xsl:value-of select="." />
-			<span class="unit"> $</span>
+			<xsl:value-of select="concat(., ' $')" />
+			<small>
+				<xsl:choose>
+					<xsl:when test="name() = 'local' or name() = 'foreign'">
+						<xsl:text>Biens intrants</xsl:text>
+					</xsl:when>
+					<xsl:when test="name() = 'value'">
+						<xsl:text>Valeur ajoutée</xsl:text>
+					</xsl:when>	
+					<xsl:otherwise>
+						<xsl:text>Montant déboursé</xsl:text>
+					</xsl:otherwise>
+				</xsl:choose>
+			</small>
 		</span>
 	</xsl:template>
 	<xsl:template match="agent" mode="filler">
