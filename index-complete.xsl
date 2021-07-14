@@ -198,7 +198,7 @@ exclude-result-prefixes="ext msxsl svg math">
 				</xsl:choose>
 			</xsl:attribute>
 			<xsl:if test="@local|@value">
-				<hr class="variable arrow from" />
+				<!-- <hr class="variable arrow from" /> -->
 			</xsl:if>
 			<section class="{$state} product">
 				<xsl:attribute name="style">
@@ -240,7 +240,7 @@ exclude-result-prefixes="ext msxsl svg math">
 				<!-- <hr class="good arrow to" /> -->
 			</section>
 			<xsl:if test="@foreign">
-				<hr class="variable arrow from" />
+				<!-- <hr class="variable arrow from" /> -->
 			</xsl:if>
 		</div>
 	</xsl:template>

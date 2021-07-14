@@ -318,13 +318,21 @@ main>section>section div>form {
 }
 
 @media (min-height: 40em) and (min-width: 50em) {
-	main>section>.diagram,
-	main>section>.diagram>div {
+	main>section>article,
+	main>section>article>div {
 		width: min(120vh, 48vw);
 	}
 
-	main>section>.diagram>div {
+	main>section>article>div {
 		position: fixed;
+		top: 0;
+		bottom: 0;
 	}
+
+	main>section>article>div {
+		height: max-content;
+		margin: auto;
+	}
+
 }
 
