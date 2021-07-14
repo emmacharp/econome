@@ -23,6 +23,7 @@ jobs:
           sudo apt-get install rsync -y
           sudo apt-get install xsltproc -y
           rsync dev/index.xml build/
+          rsync dev/diagram.xml build/
           rsync dev/index.xsl build/
           rsync dev/symbols.svg build/
           rsync --recursive dev/includes build/
