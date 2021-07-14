@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="diagrams.xsl" ?>
+<root>
+	<diagram type="chain" links="4">
+		<agent type="consumer" name="Joey Joe Joe" paid="10" />
+		<product type="beer" name="Bière" complete="" value="44.4%" local="48.5%" foreign="7.1%" />
+		<agent type="retailer" name="Dépanneur Commun+" local="0.51" value="0.85" class="local" goods="" />
+		<product type="beer" name="Bière" local="35.1%" value="44.4%" foreign="7.1%" />
+		<agent type="manufacturer" name="Entrepôts Correct" class="local" local="0.15" value="0.26" goods="" />
+		<product type="beer" name="Bière" value="44.4%" local="31.9%" foreign="7.1%" />
+		<agent type="transformer" name="Brasserie Moyenne" class="local" value="1.90" local="1.29" foreign="0.71" goods="" />
+	</diagram>
+
+	<diagram type="chain" links="4">
+		<agent type="consumer" name="Joey Joe Joe" />
+		<product type="beer" name="Bière" complete=""/>
+		<agent type="retailer" name="Dépanneur Commun+"/>
+		<product type="beer" name="Bière" local="35.1%" value="44.4%" foreign="7.1%" />
+		<agent type="manufacturer" name="Entrepôts Correct" class="local" local="0.15" value="0.26" goods="" />
+		<product type="beer" name="Bière" value="44.4%" local="31.9%" foreign="7.1%" />
+		<agent type="transformer" name="Brasserie Moyenne" class="local" value="1.90" local="1.29" foreign="0.71" goods="" />
+	</diagram>
+	<diagram type="chain" links="3">
+		<agent type="consumer" name="Joey Joe Joe" />
+		<product type="beer" name="Bière" complete=""/>
+		<agent type="retailer" name="Dépanneur Commun+"/>
+		<product type="beer" name="Bière" value="44.4%" local="31.9%" foreign="7.1%" />
+		<agent type="transformer" name="Brasserie Moyenne" class="local" value="1.90" local="1.29" foreign="0.71" goods="" />
+	</diagram>
+	<diagram type="chain" links="4">
+		<agent type="consumer" name="Joey Joe Joe" paid="100" />
+		<product type="beer" name="Bière" complete="" value="44.4%"/>
+		<agent type="retailer" name="Dépanneur Commun+" goods="" />
+		<product type="beer" name="Bière" local="35.1%" value="44.4%" foreign="7.1%" />
+		<agent type="manufacturer" name="Entrepôts Correct" class="local"/>
+		<product type="beer" name="Bière" value="44.4%" local="31.9%" foreign="7.1%" />
+		<agent type="transformer" name="Brasserie Moyenne" class="local" value="1.90" local="1.29" foreign="0.71" />
+	</diagram>
+	<diagram type="chain" links="4">
+		<agent type="consumer" name="Joey Joe Joe" paid="10" />
+		<product type="beer" name="Bière" complete="" value="44.4%" local="48.5%" foreign="7.1%" />
+		<agent type="retailer" name="Dépanneur Commun+" local="0.51" value="0.85" class="local" goods="" />
+		<product type="beer" name="Bière" local="35.1%" value="44.4%" foreign="7.1%" />
+		<agent type="manufacturer" name="Entrepôts Correct" class="local" local="0.15" value="0.26" goods="" />
+		<product type="beer" name="Bière" value="44.4%" local="31.9%" foreign="7.1%" />
+		<agent type="transformer" name="Brasserie Moyenne" class="local" value="1.90" local="1.29" foreign="0.71" goods="" />
+	</diagram>
+	<diagram type="chain" links="4">
+		<agent type="consumer" name="Joey Joe Joe" />
+		<product type="beer" name="Bière" />
+		<agent type="retailer" name="Dépanneur Commun+" />
+		<product type="beer" name="Bière" />
+		<agent type="manufacturer" name="Entrepôts Correct" />
+		<product type="beer" name="Bière" />
+		<agent type="transformer" name="Brasserie Moyenne" />
+	</diagram>
+</root>
