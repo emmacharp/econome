@@ -3,6 +3,10 @@
 }
 
 .chain .goods-list>.product>section {
+	fill: currentColor;
+	padding: calc(var(--Row) / 2);
+	flex-direction: row-reverse;
+	align-content: flex-start;
 	flex-wrap: wrap-reverse;
 }
 
