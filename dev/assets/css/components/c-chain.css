@@ -189,64 +189,29 @@
 }
 
 /* ------ DIAGRAMME VERTICAL ---- */
-
 /* .chain>div { */
-/* 	grid-auto-flow: column dense; */
-/* } */
-
-/* .chain article, .chain .amount, .chain .placeholder, */
-/* .chain .goods-list section, .chain .product, .chain .unknown-link { */
-/* 	grid-column-start: initial; */
-/* 	grid-row-start: calc(var(--link-position)); */
-/* } */
-/* .chain .goods-list section { */
-/* 	grid-column-start: initial; */
-/* 	grid-row-start: calc(var(--link-position) - 1); */
+/* 	row-gap: var(--Row); */
+/* 	flex-direction: column; */
+/* 	justify-content: center; */
 /* } */
 
 
-/* /1* Ordre des éléments de diagramme --- *1/ */
-
-/* .chain .foreign, */
-/* .chain .agent:not(:first-of-type)>div:last-child::after { */
-/* 	order: 4; */
+/* .chain .goods-list .product>section { */
+/* 	margin-bottom: calc(-1 * var(--Row) * 1.5); */
+/* 	padding-bottom: calc(var(--Row) * 4); */
+/* 	border-bottom: 1px solid currentColor; */
 /* } */
 
-/* .chain article, .chain .product, .chain .unknown-link { */
-/* 	order: 3; */
-/* } */
-
-/* .chain .local { */
-/* 	order: 1; */
-/* } */
- 
-/* .chain .value, */
-/* .chain .paid { */
-/* 	order: 2; */
-/* } */
-
-/* .chain .goods-list section { */
-/* 	border-top: 1px solid currentColor; */
+/* .chain .goods-list .product>section:first-of-type { */
 /* 	border-left: 1px solid currentColor; */
+/* 	border-bottom-left-radius: 5px; */
 /* } */
 
-/* .chain .goods-list section.local { */
-/* 	border-bottom: none; */
+/* .chain .goods-list .product>section:last-of-type { */
+/* 	border-right: 1px solid currentColor; */
+/* 	border-bottom-right-radius: 5px; */
 /* } */
 
-/* .chain article, .chain .product { */
-/* 	align-items: center; */
-/* } */
-
-/* .chain .product>section:not(:empty):after { */
-/* 	left: auto; */
-/* 	right: 0; */
-/* 	margin-top: -.125em; */
-/* } */
-
-/* .chain h4 span { */
-/* 	width: auto; */
-/* } */
 
 /* .chain .product { */
 /* 	flex-direction: column; */
