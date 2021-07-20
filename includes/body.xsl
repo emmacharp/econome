@@ -7,7 +7,6 @@
 			<xsl:call-template name="main-content"/>
 			<xsl:apply-templates select="footer" />
 			<xsl:call-template name="wiki-viewer"/>
-			<xsl:call-template name="svg-elements"/>
 			<xsl:call-template name="scripts"/>	
 		</body>
 	</xsl:template>

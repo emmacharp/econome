@@ -2,10 +2,6 @@
 	display: none; /* SALE — Faudrait l'enlever dans le XSLT */
 }
 
-.chain .goods-list input {
-	display: none;
-}
-
 main>section {
 /* Cause un bug au défilement si fenêtre plus petite que contenu*/
 	/* content-visibility: auto; */
@@ -64,10 +60,6 @@ h1 .local {
 
 nav>ul>li:not(.is-complete)>a {
 	background-color: var(--ltr-primary);
-}
-
-.chain .foreign:not(.placeholder)~article svg {
-	fill: url('#gradient-local-foreign');
 }
 
 @media (orientation: landscape) {
@@ -173,4 +165,56 @@ main > section aside > div {
 
 main > section aside {
 	display: block;
+}
+
+.goods-list .toggle-subunits {
+	order: 1;
+}
+
+.goods-list .subunit>span {
+	order: 2;
+}
+
+.goods-list .subunit>span {
+	transition: 220ms var(--ease-out-back);	
+	transition-property: height, width, padding, opacity;
+}
+
+.goods-list .toggle-subunits:not(:checked)~.subunit>span,
+.goods-list .toggle-units:not(:checked)~p>span,
+.goods-list .toggle-units:not(:checked)~.toggle-subunits {
+	height: 0;
+	width: 0;
+	padding: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.goods-list [class*="toggle-"] {
+	font-size: .75em;
+}
+.goods-list section:not(:hover)>[class*="toggle-"] {
+	opacity: 0;
+	/* display: none; */
+}
+
+.goods-list .toggle-subunits {
+	margin-left: .5em;
+	margin-right: .5em;
+	position: relative;
+	top: -.5em;
+}
+
+.goods-list .toggle-units {
+	position: absolute;
+	left: 100%;
+	bottom: 3em;
+	margin-left: -.75em;
+	z-index: 2;
+	box-shadow: 0px 0px 0px 4px var(--ColorBg);
+	border-radius: 3px;
+}
+
+.goods-list .product>section {
+	position: relative;
 }

@@ -1,13 +1,17 @@
 nav a,
-.trigger-internal-nav::before,
-.trigger-goods-list:before,
 fieldset span,
 fieldset input,
 aside>details>*,
+[class*="toggle-"]::before,
 [data-wiki]:after,
 [id="wikiViewer"] [id="wikiViewerClose"]:after,
 fieldset input[type=radio]+span {
 	background-color: var(--ColorBgControls);
+}
+
+input[class*="toggle-"] {
+	-webkit-appearance: none;
+	appearance: none;
 }
 
 nav li.is-incomplete>a,
@@ -22,7 +26,7 @@ nav li.is-active~* a {
 	--ColorBgControls: var(--ltst-primary);
 }
 
-.trigger-internal-nav::before {
+.toggle-internal-nav::before {
 	--ColorBgControls: var(--ltr-primary);
 }
 
@@ -33,7 +37,7 @@ nav li.has-active li.is-complete:not(.is-active) a {
 
 nav li.is-complete>a,
 fieldset:valid,
-.trigger-goods-list.is-read,
+.toggle-units.is-read,
 [data-wiki].is-read {
 	--ColorBgControls: var(--lt-green);
 }
@@ -42,9 +46,10 @@ nav li.is-active>a {
 	--ColorBgControls: var(--lt-purple);
 }
 
-.chain .goods-list>input::before,
+[class^="toggle-"]::before,
 [id="wikiViewer"] [id="wikiViewerClose"]:after,
 [data-wiki]:after {
+	content: "";
 	font-weight: 700;
 	width: 1ch;
 	height: 1ch;
@@ -62,11 +67,19 @@ nav li.is-active>a {
 }
 
 [data-wiki]:after,
-.trigger-goods-list::before {
+.toggle-units::before {
 	content: '?';
 }
 
-.trigger-goods-list.is-read:before,
+.toggle-subunits::before {
+	content: "+";
+}
+
+.toggle-subunits:checked::before {
+	content: "-";
+}
+
+.toggle-units.is-read:before,
 [data-wiki].is-read:after {
 	content: "✓";
 }
@@ -76,8 +89,7 @@ aside>details>*,
 [data-wiki]:after,
 [id="wikiViewer"] [id="wikiViewerClose"]:after,
 fieldset input[type=radio]+span,
-.trigger-goods-list:before,
-.trigger-internal-nav::before {
+[class*="toggle-"]:before {
 	border-radius: .25em;
 	border: 1px solid var(--dk-yellow);
 	border-top-width: 1px;
@@ -86,7 +98,7 @@ fieldset input[type=radio]+span,
 }
 
 [data-wiki]:hover:after,
-.trigger-goods-list:hover:before,
+[class*="toggle-"]:hover:before,
 [id="wikiViewer"] [id="wikiViewerClose"]:hover:after,
 fieldset input[type=radio]:not(:checked)~span:hover {
 

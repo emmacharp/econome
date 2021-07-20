@@ -14,19 +14,21 @@
 		<html>
 			<head>
 				<meta charset="UTF-8"/>
+				<meta name="viewport" content="width=device-width, user-scalable=no"/>
 				<link rel="stylesheet" href="assets/css/components/c-chain.css" />
 				<xsl:call-template name="head-css" />
 				<style>
 					body { padding: var(--Row); }
+					body>section>article>* { padding: calc(var(--Row) * 2); }
+					body>section>article>*+* { border-top: 1px solid var(--ltst-primary); }
 				</style>
 			</head>
 			<body>
 				<section>
-					<article class="buying chain diagram" style="--total-chain-links: 4;">
+					<article class="buying chain diagram">
 						<xsl:apply-templates select="//diagram" mode="ajax-diagrams" />
 					</article>
 				</section>
-				<xsl:call-template name="svg-elements" />
 				<xsl:call-template name="scripts" />
 			</body>
 		</html>

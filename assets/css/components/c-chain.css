@@ -5,24 +5,18 @@
 	z-index: 2;
 }
 
-.chain>div {
-	display: grid;
-	grid-auto-flow: dense;
-	gap: var(--Row);
-	max-width: max-content;
-}
 
-/* Placeholder en absence de liste de produits */
-.chain .agent:not(:first-of-type)>div:last-child::after {
-	content: "";
-}
-
-.chain>div * {
+.chain * {
 	margin: 0;
 	display: flex;
 	color: var(--Color);
 }
 
+.chain>div {
+	align-items: center;
+	max-width: max-content;
+	flex-wrap: nowrap;
+}
 .chain>div>*,
 .chain>div>*>div {
 	display: contents;
@@ -45,65 +39,100 @@
 
 .chain .amount {
 	flex-direction: column;
+	z-index: 1;
+	margin-left: calc(var(--Row) / 4);
+	line-height: 1;
 }
 
-.chain .product>section:not(:empty) {
-	position: relative;
+.chain .amounts {
+	display: grid;
+	grid-template: 1fr / 1fr;
+	order: -1;
+	pointer-events: none;
 }
 
-.chain .product>section:not(:empty):after {
-	content: "•";
-	position: absolute;
-	text-align: center;
-	display: block;
-	line-height: 0;
-	top: 0;
+.chain .amounts>* {
+	grid-column-start: 1;
+	grid-row-start: 1;
 }
 
 .chain .amount small {
-	font-size: calc(var(--Row) / 3);
-	padding-left: calc(var(--Row) / 2);
+	font-size: calc(var(--Row) / 2);
 	background-color: var(--ColorBg);
-	text-transform: uppercase;
+	padding-left: calc(var(--Row) / 2);
+	font-weight: 600;
 	white-space: nowrap;
 	z-index: 1;
-	line-height: calc(var(--Row) / 2);
+	position: relative;
+	width: 0;
+	text-align: right;
+	align-items: flex-end;
+	justify-content: flex-end;
+	margin-top: calc(var(--Row) / 5);
 }
 
-.chain .good.arrow {
-	border-top-style: dotted;
-	flex: calc(100% - var(--Row)) 1 1;
-	margin-inline-start: var(--Row);
-	margin-inline-end: calc(-1 * var(--Row));
+.chain .amount:not(:first-child) {
+	opacity:0;
+}
+.chain .goods-list p:hover>* {
+	transform: scale(1.3);
+}
+.chain .goods-list p:hover~.amounts>:first-child {
+	opacity: 0;
+}
+
+.chain .goods-list>.product>section:hover>p:not(:hover)>* {
+	filter: grayscale(1);
+}
+
+.chain .goods-list p:nth-of-type(1):hover~.amounts>:nth-of-type(2),
+.chain .goods-list p:nth-of-type(2):hover~.amounts>:nth-of-type(3),
+.chain .goods-list p:nth-of-type(3):hover~.amounts>:nth-of-type(4),
+.chain .goods-list p:nth-of-type(4):hover~.amounts>:nth-of-type(5),
+.chain .goods-list p:nth-of-type(5):hover~.amounts>:nth-of-type(6),
+.chain .goods-list p:nth-of-type(6):hover~.amounts>:nth-of-type(7),
+.chain .goods-list p:nth-of-type(7):hover~.amounts>:nth-of-type(8),
+.chain .goods-list p:nth-of-type(8):hover~.amounts>:nth-of-type(9),
+.chain .goods-list p:nth-of-type(9):hover~.amounts>:nth-of-type(10),
+.chain .goods-list p:nth-of-type(10):hover~.amounts>:nth-of-type(11),
+.chain .goods-list p:nth-of-type(11):hover~.amounts>:nth-of-type(12),
+.chain .goods-list p:nth-of-type(12):hover~.amounts>:nth-of-type(13),
+.chain .goods-list p:nth-of-type(13):hover~.amounts>:nth-of-type(14),
+.chain .goods-list p:nth-of-type(14):hover~.amounts>:nth-of-type(15),
+.chain .goods-list p:nth-of-type(15):hover~.amounts>:nth-of-type(16),
+.chain .goods-list p:nth-of-type(16):hover~.amounts>:nth-of-type(17),
+.chain .goods-list p:nth-of-type(17):hover~.amounts>:nth-of-type(18),
+.chain .goods-list p:nth-of-type(18):hover~.amounts>:nth-of-type(19),
+.chain .goods-list p:nth-of-type(19):hover~.amounts>:nth-of-type(20),
+.chain .goods-list p:nth-of-type(20):hover~.amounts>:nth-of-type(21),
+.chain .goods-list p:nth-of-type(21):hover~.amounts>:nth-of-type(22),
+.chain .goods-list p:nth-of-type(22):hover~.amounts>:nth-of-type(23)
+{
+	opacity: 1;
 }
 
 .chain h4>span {
 	background-color: var(--ColorBg);
 }
 
-.chain section>div>article>svg+h4 {
+.chain svg+h4 {
 	margin-top: calc(var(--Row) / 2);
 }
 
-.chain section[class]:empty {
-	border: none;
-}
-
-
 .chain .product .icon {
 	--TotalAddedValue: calc(var(--NeutralAddedValue, 0%) + var(--LocalAddedValue, 0%) + var(--ForeignAddedValue, 0%));
-	width: calc(var(--IconHeight) * .75);
+	width: calc(var(--IconHeight) * .5);
 	background-color: var(--ltst-primary);
 	background-image:
 		linear-gradient(to top,
-			var(--purple) 0,
-			var(--purple) var(--NeutralAddedValue, 0%),
+			var(--lt-primary) 0,
+			var(--lt-primary) var(--NeutralAddedValue, 0%),
 			var(--ColorLocal) var(--NeutralAddedValue, 0%),
 			var(--ColorLocal) calc(var(--LocalAddedValue, 0%) + var(--NeutralAddedValue, 0%)),
 			var(--ColorForeign)  calc(var(--LocalAddedValue, 0%) + var(--NeutralAddedValue, 0%)),
 			var(--ColorForeign) var(--TotalAddedValue, 0%),
 			transparent var(--TotalAddedValue, 0%), transparent 100%);
-	clip-path: url(#beer-clip-path);
+	clip-path: url(../../../symbols.svg#beer-clip-path);
 }
 
 .chain .icon {
@@ -112,198 +141,116 @@
 	fill: currentColor;
 }
 
-/* ------ DIAGRAMME HORIZONTAL ---- */
-.chain .link .amount.foreign {
-	padding-bottom: 0;
-}
 
 .chain article {
-	text-align: right;
+	text-align: center;
+	background-color: var(--ColorBg);
+	position: relative;
+	z-index: 1;
 }
 
 .chain h4 span {
-	width: 0;
-	justify-content: flex-end;
+	width: min-content;
+	justify-content: center;
 }
 
 .chain .username {
-	width: auto;
+	width: max-content;
 }
 
-.chain article h4 {
-	height: calc(var(--Row) * .75);
+.chain .goods-list .product>section {
+	padding: calc(var(--Row) / 2);
 }
 
-.chain .agent:first-child article {
-	align-items: flex-start;
+/* ------ DIAGRAMME HORIZONTAL ---- */
+.chain>div {
+	column-gap: var(--Row);
 }
 
-
-.chain .agent:first-child .amount {
-	justify-content: flex-start;
+.chain .goods-list>.product {
+	flex-direction: column;
 }
 
-.chain .goods-list section {
-	margin-right: calc(-1 * var(--Row) / 2);
-	padding-right: var(--Row);
+.chain .goods-list .product>section {
+	margin-right: calc(-1 * var(--Row) * 1.5);
+	padding-right: calc(var(--Row) * 1.5);
+	border-right: 1px solid currentColor;
 	border-left: 1px solid currentColor;
 }
 
-.chain .goods-list section:not(:empty).local {
-	border-bottom: 1px solid currentColor;
-}
-
-.chain .goods-list section:not(:empty).foreign {
+.chain .goods-list .product>section:first-of-type {
 	border-top: 1px solid currentColor;
-	padding-bottom: 0;
+	border-top-right-radius: 5px;
 }
 
-.chain article, .chain .product {
-	align-items: flex-end;
-}
-
-.chain .product>section:not(:empty):after {
-	left: 0;
-	top: 0;
-	margin-left: -.28125em;
-}
-
-.chain .product>section.foreign:not(:empty):after {
-	bottom: 0;
-	top: auto;
-}
-
-/* Grille du diagramme --- */
-
-.chain article, .chain .amount, .chain .placeholder,
-.chain .goods-list section, .chain .product {
-	grid-column-start: calc(var(--link-position));
-}
-.chain .goods-list section {
-	grid-column-start: calc(var(--link-position) - 1);
-}
-
-/* Ordre des éléments de diagramme --- */
-
-.chain .foreign,
-.chain .agent:not(:first-of-type)>div:last-child::after {
-	order: 1;
-}
-
-.chain article, .chain .product {
-	order: 3;
-}
-
-.chain .local {
-	order: 5;
-}
- 
-.chain .value,
-.chain .paid {
-	order: 4;
+.chain .goods-list .product>section:last-of-type {
+	border-bottom: 1px solid currentColor;
+	border-bottom-right-radius: 5px;
 }
 
 /* ------ DIAGRAMME VERTICAL ---- */
+/* .chain>div { */
+/* 	row-gap: var(--Row); */
+/* 	flex-direction: column; */
+/* 	justify-content: center; */
+/* } */
+
+
+/* .chain .goods-list .product>section { */
+/* 	margin-bottom: calc(-1 * var(--Row) * 1.5); */
+/* 	padding-bottom: calc(var(--Row) * 4); */
+/* 	border-bottom: 1px solid currentColor; */
+/* } */
+
+/* .chain .goods-list .product>section:first-of-type { */
+/* 	border-left: 1px solid currentColor; */
+/* 	border-bottom-left-radius: 5px; */
+/* } */
+
+/* .chain .goods-list .product>section:last-of-type { */
+/* 	border-right: 1px solid currentColor; */
+/* 	border-bottom-right-radius: 5px; */
+/* } */
+
+/* ------ DIAGRAMME SILOS ---- */
 
 /* .chain>div { */
-/* 	grid-auto-flow: column dense; */
+	/* display: grid; */
+/* 	grid-auto-flow: column; */
+/* 	grid-row-gap: var(--Row); */
+/* 	justify-content: center; */
+/* 	justify-items: center; */
+/* 	align-content: center; */
+/* 	align-items: baseline; */
 /* } */
 
-/* .chain article, .chain .amount, .chain .placeholder, */
-/* .chain .goods-list section, .chain .product, .chain .unknown-link { */
-/* 	grid-column-start: initial; */
-/* 	grid-row-start: calc(var(--link-position)); */
-/* } */
-/* .chain .goods-list section { */
-/* 	grid-column-start: initial; */
-/* 	grid-row-start: calc(var(--link-position) - 1); */
+/* .chain .agent article { */
+/* 	justify-self: center; */
 /* } */
 
-
-/* /1* Ordre des éléments de diagramme --- *1/ */
-
-/* .chain .foreign, */
-/* .chain .agent:not(:first-of-type)>div:last-child::after { */
-/* 	order: 4; */
+/* .chain .goods-list .product { */
+/* 	grid-row-start: 2; */
+/* 	grid-column-end: span 3; */
 /* } */
 
-/* .chain article, .chain .product, .chain .unknown-link { */
-/* 	order: 3; */
+/* .chain>div>div>.product { */
+/* 	grid-row-end: span 2; */ 
 /* } */
 
-/* .chain .local { */
-/* 	order: 1; */
-/* } */
- 
-/* .chain .value, */
-/* .chain .paid { */
-/* 	order: 2; */
+/* .chain .goods-list .product>section { */
+/* 	margin-bottom: calc(-1 * var(--Row) * 1.5); */
+/* 	padding-bottom: calc(var(--Row) * 4); */
+/* 	border-bottom: 1px solid currentColor; */
 /* } */
 
-/* .chain .goods-list section { */
-/* 	border-top: 1px solid currentColor; */
+/* .chain .goods-list .product>section:first-of-type { */
 /* 	border-left: 1px solid currentColor; */
+/* 	border-bottom-left-radius: 5px; */
 /* } */
 
-/* .chain .goods-list section.local { */
-/* 	border-bottom: none; */
-/* } */
-
-/* .chain article, .chain .product { */
-/* 	align-items: center; */
-/* } */
-
-/* .chain .product>section:not(:empty):after { */
-/* 	left: auto; */
-/* 	right: 0; */
-/* 	margin-top: -.125em; */
-/* } */
-
-/* .chain h4 span { */
-/* 	width: auto; */
-/* } */
-
-/* .chain .product { */
-/* 	flex-direction: column; */
-/* } */
-
-/* .chain .good.arrow { */
-/* 	border-left: var(--ArrowLine); */
-/* 	border-left-style: dotted; */
-/* } */
-
-/* .chain .goods-list section.foreign:not(:empty) { */
+/* .chain .goods-list .product>section:last-of-type { */
 /* 	border-right: 1px solid currentColor; */
-/* 	border-left: none; */
+/* 	border-bottom-right-radius: 5px; */
 /* } */
 
-/* .chain .product > section.foreign:not(:empty)::after { */
-/* 	top: 0; */
-/* 	right: auto; */
-/* 	left: 0; */
-/* 	bottom: auto; */
-/* } */
 
-/* .chain .product .icon.beer { */
-/* 	position: relative; */
-/* 	left: -4%; */
-/* } */
-
-/* .chain .goods-list section { */
-/* 	padding-bottom: 0; */
-/* } */
-
-/* .chain .agent:not(:first-child)>div:only-child::before { */
-/* 	content:""; */
-/* 	order: 1; */
-/* 	grid-column-end: span 2; */
-/* } */
-
-/* .chain .agent>div:only-child::after { */
-/* 	content: ""; */
-/* 	order: 5; */
-/* } */
-
-/* .chain .agent:first-child article { */
-/* 	align-items: center; */
-/* } */
