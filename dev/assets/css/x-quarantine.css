@@ -2,10 +2,6 @@
 	display: none; /* SALE — Faudrait l'enlever dans le XSLT */
 }
 
-.chain .goods-list input {
-	display: none;
-}
-
 main>section {
 /* Cause un bug au défilement si fenêtre plus petite que contenu*/
 	/* content-visibility: auto; */
@@ -64,10 +60,6 @@ h1 .local {
 
 nav>ul>li:not(.is-complete)>a {
 	background-color: var(--ltr-primary);
-}
-
-.chain .foreign:not(.placeholder)~article svg {
-	fill: url('#gradient-local-foreign');
 }
 
 @media (orientation: landscape) {
