@@ -45,29 +45,37 @@
 
 .chain .amount {
 	flex-direction: column;
+	z-index: 1;
+	margin-left: calc(var(--Row) / 4);
+	line-height: 1;
 }
 
-.chain .product>section:not(:empty) {
-	position: relative;
+.chain .amounts {
+	display: grid;
+	grid-template: 1fr / 1fr;
+	order: -1;
+	pointer-events: none;
 }
 
-.chain .product>section:not(:empty):after {
-	content: "•";
-	position: absolute;
-	text-align: center;
-	display: block;
-	line-height: 0;
-	top: 0;
+.chain .amounts>* {
+	grid-column-start: 1;
+	grid-row-start: 1;
 }
 
 .chain .amount small {
-	font-size: calc(var(--Row) / 3);
-	padding-left: calc(var(--Row) / 2);
+	font-size: calc(var(--Row) / 2);
 	background-color: var(--ColorBg);
-	text-transform: uppercase;
+	padding-left: calc(var(--Row) / 2);
+	font-weight: 600;
 	white-space: nowrap;
 	z-index: 1;
-	line-height: calc(var(--Row) / 2);
+	position: relative;
+	width: 0;
+	text-align: right;
+	align-items: flex-end;
+	justify-content: flex-end;
+	margin-top: calc(var(--Row) / 5);
+}
 
 .chain .amount:not(:first-child) {
 	opacity:0;
