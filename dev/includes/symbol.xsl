@@ -8,8 +8,9 @@
 	<xsl:key name="symbol-type" match="svg:symbol" use="substring-after(@id, 'svg-')"/>
 
 	<xsl:template match="svg:symbol">
+		<xsl:param name="class" />
 		<xsl:param name="attr" select="@*[not(name() = 'id')]" />
-		<svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="{@viewBox}">
+		<svg xmlns="http://www.w3.org/2000/svg" class="{$class}" viewBox="{@viewBox}">
 			<xsl:apply-templates select="$attr" />
 			<use xlink:href="symbols.svg#{@id}"></use>
 		</svg>
