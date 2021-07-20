@@ -162,73 +162,30 @@
 	padding: calc(var(--Row) / 2);
 }
 
-.chain .agent:first-child article {
-	align-items: flex-start;
+/* ------ DIAGRAMME HORIZONTAL ---- */
+.chain>div {
+	column-gap: var(--Row);
 }
 
-
-.chain .agent:first-child .amount {
-	justify-content: flex-start;
+.chain .goods-list>.product {
+	flex-direction: column;
 }
 
-.chain .goods-list section {
-	margin-right: calc(-1 * var(--Row) / 2);
-	padding-right: var(--Row);
+.chain .goods-list .product>section {
+	margin-right: calc(-1 * var(--Row) * 1.5);
+	padding-right: calc(var(--Row) * 1.5);
+	border-right: 1px solid currentColor;
 	border-left: 1px solid currentColor;
 }
 
-.chain .goods-list section:not(:empty).local {
-	border-bottom: 1px solid currentColor;
-}
-
-.chain .goods-list section:not(:empty).foreign {
+.chain .goods-list .product>section:first-of-type {
 	border-top: 1px solid currentColor;
-	padding-bottom: 0;
+	border-top-right-radius: 5px;
 }
 
-.chain article, .chain .product {
-	align-items: flex-end;
-}
-
-.chain .product>section:not(:empty):after {
-	left: 0;
-	top: 0;
-	margin-left: -.28125em;
-}
-
-.chain .product>section.foreign:not(:empty):after {
-	bottom: 0;
-	top: auto;
-}
-
-/* Grille du diagramme --- */
-
-.chain article, .chain .amount, .chain .placeholder,
-.chain .goods-list section, .chain .product {
-	grid-column-start: calc(var(--link-position));
-}
-.chain .goods-list section {
-	grid-column-start: calc(var(--link-position) - 1);
-}
-
-/* Ordre des éléments de diagramme --- */
-
-.chain .foreign,
-.chain .agent:not(:first-of-type)>div:last-child::after {
-	order: 1;
-}
-
-.chain article, .chain .product {
-	order: 3;
-}
-
-.chain .local {
-	order: 5;
-}
- 
-.chain .value,
-.chain .paid {
-	order: 4;
+.chain .goods-list .product>section:last-of-type {
+	border-bottom: 1px solid currentColor;
+	border-bottom-right-radius: 5px;
 }
 
 /* ------ DIAGRAMME VERTICAL ---- */
