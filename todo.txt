@@ -47,3 +47,9 @@ x (B) 2021-01-05 Essayer la grille sur un div à l'aide de switches booléennes 
 (A) 2021-07-11 Tenter d'inférer les sommes à mettre dans les attributs du diagramme (value, foreign, etc.) @maitrise +donnees
 (A) Essayer à la verticale avec order. @maitrise +design
 (A) Nettoyer ! @maitrise
+(A) Enlever les « --link-position » si on peut finalement faire sans. @maitrise
+(A) Calculer les nombres à partir des produits *si* il n'y a pas de valeur aux attributs (value="" vs. value="776.8") @maitrise
+(B) 2021-07-18 Mettre un oeuf de paques dans la fiche du « Transporteur » @maitrise +experience
+(A) 2021-07-18 Partager l'espace dans le diagramme en fonction du nombre d'icônes qu'il y a. À générer en XSL. @maitrise +design
+(A) 2021-07-18 Donner l'option d'ouvrir au complet, de masquer, etc. à l'aide de valeur @goods @maitrise +experience
+(B) 2021-07-19 Essayer de générer les biens avec HTMX si jamais ça s'avère lourd. @maitrise +performance
