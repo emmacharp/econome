@@ -5,24 +5,18 @@
 	z-index: 2;
 }
 
-.chain>div {
-	display: grid;
-	grid-auto-flow: dense;
-	gap: var(--Row);
-	max-width: max-content;
-}
 
-/* Placeholder en absence de liste de produits */
-.chain .agent:not(:first-of-type)>div:last-child::after {
-	content: "";
-}
-
-.chain>div * {
+.chain * {
 	margin: 0;
 	display: flex;
 	color: var(--Color);
 }
 
+.chain>div {
+	align-items: center;
+	max-width: max-content;
+	flex-wrap: nowrap;
+}
 .chain>div>*,
 .chain>div>*>div {
 	display: contents;
@@ -91,11 +85,6 @@
 	filter: grayscale(1);
 }
 
-.chain .good.arrow {
-	border-top-style: dotted;
-	flex: calc(100% - var(--Row)) 1 1;
-	margin-inline-start: var(--Row);
-	margin-inline-end: calc(-1 * var(--Row));
 .chain .goods-list p:nth-of-type(1):hover~.amounts>:nth-of-type(2),
 .chain .goods-list p:nth-of-type(2):hover~.amounts>:nth-of-type(3),
 .chain .goods-list p:nth-of-type(3):hover~.amounts>:nth-of-type(4),
@@ -126,14 +115,9 @@
 	background-color: var(--ColorBg);
 }
 
-.chain section>div>article>svg+h4 {
+.chain svg+h4 {
 	margin-top: calc(var(--Row) / 2);
 }
-
-.chain section[class]:empty {
-	border: none;
-}
-
 
 .chain .product .icon {
 	--TotalAddedValue: calc(var(--NeutralAddedValue, 0%) + var(--LocalAddedValue, 0%) + var(--ForeignAddedValue, 0%));
@@ -157,26 +141,25 @@
 	fill: currentColor;
 }
 
-/* ------ DIAGRAMME HORIZONTAL ---- */
-.chain .link .amount.foreign {
-	padding-bottom: 0;
-}
 
 .chain article {
-	text-align: right;
+	text-align: center;
+	background-color: var(--ColorBg);
+	position: relative;
+	z-index: 1;
 }
 
 .chain h4 span {
-	width: 0;
-	justify-content: flex-end;
+	width: min-content;
+	justify-content: center;
 }
 
 .chain .username {
-	width: auto;
+	width: max-content;
 }
 
-.chain article h4 {
-	height: calc(var(--Row) * .75);
+.chain .goods-list .product>section {
+	padding: calc(var(--Row) / 2);
 }
 
 .chain .agent:first-child article {
