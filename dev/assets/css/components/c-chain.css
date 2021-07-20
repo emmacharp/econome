@@ -137,18 +137,18 @@
 
 .chain .product .icon {
 	--TotalAddedValue: calc(var(--NeutralAddedValue, 0%) + var(--LocalAddedValue, 0%) + var(--ForeignAddedValue, 0%));
-	width: calc(var(--IconHeight) * .75);
+	width: calc(var(--IconHeight) * .5);
 	background-color: var(--ltst-primary);
 	background-image:
 		linear-gradient(to top,
-			var(--purple) 0,
-			var(--purple) var(--NeutralAddedValue, 0%),
+			var(--lt-primary) 0,
+			var(--lt-primary) var(--NeutralAddedValue, 0%),
 			var(--ColorLocal) var(--NeutralAddedValue, 0%),
 			var(--ColorLocal) calc(var(--LocalAddedValue, 0%) + var(--NeutralAddedValue, 0%)),
 			var(--ColorForeign)  calc(var(--LocalAddedValue, 0%) + var(--NeutralAddedValue, 0%)),
 			var(--ColorForeign) var(--TotalAddedValue, 0%),
 			transparent var(--TotalAddedValue, 0%), transparent 100%);
-	clip-path: url(#beer-clip-path);
+	clip-path: url(../../../symbols.svg#beer-clip-path);
 }
 
 .chain .icon {
