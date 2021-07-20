@@ -20,18 +20,99 @@
 			<xsl:with-param name="attr" select="@*[not(name() = 'type')]" />
 		</xsl:apply-templates>
 	</xsl:template>
+	<xsl:template match="code" mode="symbol-chooser">
 
-	<xsl:template name="svg-elements">
-		<svg xmlns="http://www.w3.org/2000/svg" class="svg" style="position:absolute; width:0; height:0; overflow: hidden;">
-			<clipPath id="beer-clip-path" clipPathUnits="objectBoundingBox">
-				<path d="M0.121,0.791 c-0.033,0,-0.06,-0.02,-0.06,-0.044 l0,-0.277 c0,-0.024,0.027,-0.044,0.06,-0.044 l0.152,0 l0,-0.05 l-0.241,0 c-0.018,0,-0.032,0.01,-0.032,0.023 l0,0.418 c0,0.013,0.014,0.023,0.032,0.023 l0.241,0 l0,-0.05 l-0.152,0 m0.203,-0.642 l0.662,0 c-0.022,-0.04,-0.061,-0.053,-0.119,-0.052 c-0.03,-0.061,-0.094,-0.098,-0.184,-0.098 c-0.091,0,-0.15,0.035,-0.183,0.095 c-0.075,-0.017,-0.15,-0.004,-0.176,0.054 m-0.005,0.089 l0.681,0 l0,-0.049 l-0.681,0 l0,0.049 m0,0.076 l0.681,0 l0,-0.042 l-0.681,0 l0,0.042 m0.573,0.034 l0,0.493 l0.108,0 l0,-0.493 l-0.108,0 m-0.119,0.493 l0.073,0 l0,-0.493 l-0.073,0 l0,0.493 m0.227,0.11 l-0.681,0 l0,0.049 l0.681,0 l0,-0.049 m0,-0.076 l-0.681,0 l0,0.042 l0.681,0 l0,-0.042 m-0.407,-0.527 l0,0.493 l0.134,0 l0,-0.493 l-0.134,0 m-0.119,0 l0,0.493 l0.073,0 l0,-0.493 l-0.073,0 m-0.154,0 l0,0.493 l0.108,0 l0,-0.493 l-0.108,0"/>
-			</clipPath>
-			<defs>
-				<linearGradient id="gradient-local-foreign" x1="0" x2="0" y1="0" y2="1">
-					<stop offset="0%" stop-color="var(--ColorForeign)"/>
-					<stop offset="100%" stop-color="var(--ColorLocal)"/>
-				</linearGradient>
-			</defs>
-		</svg>
+		<xsl:choose>
+			<xsl:when test="contains(., 'MIN')">
+				<xsl:text>svg-minerals-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(., 'ALI')">
+				<xsl:text>svg-food-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(., 'IMM')">
+				<xsl:text>svg-building-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(., 'COT')">
+				<xsl:text>svg-contribution-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(., 'CON')">
+				<xsl:text>svg-construction-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(., 'REV')">
+				<xsl:text>svg-moneybag-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(., 'SAL')">
+				<xsl:text>svg-salary-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(., 'PRO')">
+				<xsl:text>svg-professional-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(., 'FIN')">
+				<xsl:text>svg-finance-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(., 'CUL')">
+				<xsl:text>svg-culture-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(., 'ADM')">
+				<xsl:text>svg-admin-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(., 'HEB')">
+				<xsl:text>svg-restaurant-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(. ,'PRM800000')">
+				<xsl:text>svg-money-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(. ,'PRM500000')">
+				<xsl:text>svg-worker-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(. ,'IMS551002')">
+				<xsl:text>svg-building-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(. ,'PRM600000')">
+				<xsl:text>svg-contribution-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(., 'MPS533000')">
+				<xsl:text>svg-copyright-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(., 'MPG322201')">
+				<xsl:text>svg-cardboard-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(., 'MPG332401')">
+				<xsl:text>svg-cap-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(., 'MPG311208')">
+				<xsl:text>svg-cereal-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(., 'MPS541800')">
+				<xsl:text>svg-advertising-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(., 'PRM400000')">
+				<xsl:text>svg-tax-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(., 'MPS722001')">
+				<xsl:text>svg-meal-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(., 'MPG327A02')">
+				<xsl:text>svg-bottle-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(., 'MPG311301')">
+				<xsl:text>svg-sugar-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(., 'MPS')">
+				<xsl:text>svg-truck-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(., 'ENE')">
+				<xsl:text>svg-electricity-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(., 'MPG')">
+				<xsl:text>svg-goods-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains(., 'PRM')">
+				<xsl:text>svg-contribution-symbol</xsl:text>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:text>svg-unknown-symbol</xsl:text>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 </xsl:stylesheet>
