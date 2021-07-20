@@ -288,10 +288,8 @@
     <ajout>217248</ajout>
   </produit>
   
-  <!-- <total> -->
-  <!--   <depense>875224</depense> -->
-  <!-- </total> -->
   <total>
     <depense>2235357</depense>
+    <!-- <depense>875224</depense> -->
   </total>
 </root>
