@@ -29,7 +29,6 @@
 						<xsl:apply-templates select="//diagram" mode="ajax-diagrams" />
 					</article>
 				</section>
-				<xsl:call-template name="svg-elements" />
 				<xsl:call-template name="scripts" />
 			</body>
 		</html>
