@@ -114,7 +114,7 @@ nav>ul>li.is-complete>a:before {
 	background-size: 140%;
 }
 
-.trigger-internal-nav {
+.toggle-internal-nav {
 	position: absolute;
 	-webkit-appearance: none;
 	appearance: none;
@@ -128,17 +128,17 @@ nav>ul>li.is-complete>a:before {
 }
 
 @media (min-height: 40em) and (min-width: 80em) {
-	.trigger-internal-nav {
+	.toggle-internal-nav {
 		position: fixed;
 	}
 	
-	.trigger-internal-nav::before {
+	.toggle-internal-nav::before {
 		margin-left: -.5rem;
 	} 
 }
 
 @media (min-height: 40em) and (min-width: 100em) {
-	.trigger-internal-nav::after {
+	.toggle-internal-nav::after {
 		content: "Menu";
 		font-weight: 900;
 		text-transform: uppercase;
@@ -148,7 +148,7 @@ nav>ul>li.is-complete>a:before {
 	}
 }
 
-.trigger-internal-nav::before {
+.toggle-internal-nav::before {
 	color: var(--brown);
 	align-items: center;
 	justify-content: center;
@@ -164,19 +164,19 @@ nav>ul>li.is-complete>a:before {
 	visibility: visible;
 }
 
-.trigger-internal-nav:checked::before {
+.toggle-internal-nav:checked::before {
 	content: "◀";
 }
 
-.trigger-internal-nav:checked::after {
+.toggle-internal-nav:checked::after {
 	color: var(--dk-brown);
 }
 
-.trigger-internal-nav:not(:checked)~nav ul * {
+.toggle-internal-nav:not(:checked)~nav ul * {
 	color: transparent;
 }
 
-.trigger-internal-nav:not(:checked)~nav header * {
+.toggle-internal-nav:not(:checked)~nav header * {
 	opacity: 0;
 }
 
@@ -206,13 +206,13 @@ nav details {
 		margin-right: .5rem;
 	}
 
-	.trigger-internal-nav:not(:checked)~nav {
+	.toggle-internal-nav:not(:checked)~nav {
 		width: calc(var(--Row) * 1.125);
 	}
 }
 
 @media (orientation: portrait) {
-	body>.trigger-internal-nav,
+	body>.toggle-internal-nav,
 	nav header {
 		display: none;
 	}
