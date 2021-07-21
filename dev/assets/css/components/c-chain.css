@@ -42,6 +42,7 @@
 	z-index: 1;
 	margin-left: calc(var(--Row) / 4);
 	line-height: 1;
+	white-space: nowrap;
 }
 
 .chain .amounts {
