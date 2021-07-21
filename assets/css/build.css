@@ -4,6 +4,7 @@
 @import "theme/t-config.css";
 @import "theme/t-setup.css";
 @import "theme/t-typography.css";
+@import "theme/t-controls.css";
 @import "theme/t-general.css";
 @import "theme/t-special.css";
 @import "components/c-arrows.css";
@@ -11,6 +12,8 @@
 @import "components/c-internal_nav.css";
 @import "components/c-wiki_viewer.css";
 @import "components/c-chain.css";
+@import "components/c-goods-list.css";
+@import "components/c-fieldset.css";
 @import "patterns/p-provenance.css";
 @import "patterns/p-auto_line-height.css";
 /* @import "patterns/p-section_visibiliy-transition.css"; */
