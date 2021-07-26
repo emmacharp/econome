@@ -70,10 +70,6 @@ nav ul li li>a:before {
 	text-align: center;
 	text-indent: -.25em;
 }
-nav ul li.is-complete li>a:before {
-	content: "•";
-	
-}
 
 nav li.is-complete>a:before {
 	background-image: none;
