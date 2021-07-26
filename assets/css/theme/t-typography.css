@@ -9,14 +9,14 @@
 /* Typographie basée sur les polices système ----------------------- */
 
 	:root { font-family: var(--BaseFontStack, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"); }
-	h1, h1+* { font-family: var(--TitleFontStack, "Avenir Next", "Helevetica Neue", "Helvetica", "Segoe UI"); }
+	h1, header>small:first-child { font-family: var(--TitleFontStack, "Avenir Next", "Helvetica Neue", "Helvetica", "Segoe UI"); }
 
 
 /* Distribution aux titres de l'échelle typographique ----------------------- */
 
-	h1 { --ScaleLevel: var(--Huge); --FontWeight: 700; }
-	h2 { --ScaleLevel: var(--Tallest); }
-	h3 { --ScaleLevel: var(--Tallest); }
+	h1 { --ScaleLevel: var(--Huger); --FontWeight: 700; }
+	h2 { --ScaleLevel: var(--Huge); }
+	h3 { --ScaleLevel: var(--Huge); }
 	h4 { --ScaleLevel: var(--Base); --FontWeight: 600; --LineHeightFactor: .75; }
 	h5 { --ScaleLevel: var(--Base); --LineHeightFactor: .75; }
 	h6 { --ScaleLevel: var(--Short); --LineHeightFactor: .75; }
@@ -30,15 +30,17 @@
 		--ScaleLevel: var(--Tall);
 	}
 
+	main>section>*>p:first-child:only-of-type,
 	main>section header,
 	main>section>p {
 		--FontWeight: 600;
 		--ScaleLevel: var(--Taller); }
 
-	main>section>aside,
-	main>section>section aside {
+	main>section aside {
 		--ScaleLevel: var(--Short);
-		--LineHeightFactor: .75; }
+		--FontWeight: 650;
+		--LineHeightFactor: .75;
+	}
 
 	body>aside h1,
 	body>aside h2,

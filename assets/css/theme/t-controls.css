@@ -7,6 +7,7 @@ aside>details>*,
 [id="wikiViewer"] [id="wikiViewerClose"]:after,
 fieldset input[type=radio]+span {
 	background-color: var(--ColorBgControls);
+	color: var(--Color);
 }
 
 input[class*="toggle-"] {
@@ -14,25 +15,27 @@ input[class*="toggle-"] {
 	appearance: none;
 }
 
-nav li.is-incomplete>a,
+nav li li.is-incomplete>a,
 .is-read fieldset:invalid,
 .is-read [data-wiki]:not(.is-read) {
 	--ColorBgControls: var(--lt-red);
+	--Color: var(--primary);
 }
 
 nav a,
 nav li.has-active~* a,
 nav li.is-active~* a {
-	--ColorBgControls: var(--ltst-primary);
+	/* --ColorBgControls: var(--ltst-primary); */
+	/* --Color: var(--primary); */
 }
 
 .toggle-internal-nav::before {
 	--ColorBgControls: var(--ltr-primary);
 }
 
-nav li.has-active li.is-complete:not(.is-active) a {
-	--ColorBgControls: var(--lt-yellow);
-}
+/* nav li.has-active li.is-complete:not(.is-active) a { */
+/* 	--ColorBgControls: var(--lt-yellow); */
+/* } */
 
 
 nav li.is-complete>a,
@@ -40,10 +43,12 @@ fieldset:valid,
 .toggle-units.is-read,
 [data-wiki].is-read {
 	--ColorBgControls: var(--lt-green);
+	--Color: var(--primary);
 }
 
-nav li.is-active>a {
-	--ColorBgControls: var(--lt-purple);
+nav li li.is-active>a {
+	--ColorBgControls: var(--lt-yellow);
+	--Color: var(--primary);
 }
 
 [class^="toggle-"]::before,

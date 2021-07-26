@@ -2,10 +2,9 @@
 /* (Opt-in. Valeurs complexes par défaut pour
 * limiter la prolifération des propriétés héritées) */
 
-	main>section>section,
 	main>section>article,
-	main>section aside svg,
-	main>section aside div,
+	main>section .intervention svg,
+	main>section .intervention div,
 	main>section .chain .icon,
 	main>section .chain .icon+*,
 	main>section .chain .arrow {
@@ -23,24 +22,29 @@
 /* Application « opt-in »
 	des propriétés transitionnées  ----------------------- */
 
-	main>section aside svg,
-	main>section aside div,
+	main>section .intervention svg,
 	main>section .chain .active .icon,
 	main>section .chain .active .arrow {
 		transform: var(--TransformVisible, scale(1)); }
 	main>section>section,
-	main>section aside div>*,
+	main>section .intervention div,
 	main>section>article,
 	main>section .chain .active .icon+* {
 		opacity: var(--OpacityVisible, 1); }
 
-	main>section.is-invisible aside svg,
-	main>section.is-invisible aside div,
+	main>section.is-active~section .intervention svg,
+	main>section.is-active~section .chain .active .icon,
+	main>section.is-active~section .chain .active .arrow,
+	main>section.is-invisible .intervention svg,
 	main>section.is-invisible .chain .active .icon,
 	main>section.is-invisible .chain .active .arrow {
 		transform: var(--TransformInvisible, scale(1)); }
+	main>section.is-active~section>section,
+	main>section.is-active~section .intervention div,
+	main>section.is-active~section [data-parallax],
+	main>section.is-active~section .chain .active .icon+*,
 	main>section.is-invisible>section,
-	main>section.is-invisible aside div *,
+	main>section.is-invisible .intervention div,
 	main>section.is-invisible [data-parallax],
 	main>section.is-invisible .chain .active .icon+* {
 		opacity: var(--OpacityInvisible, 0); }
@@ -50,10 +54,10 @@
 
 	/* Empêche le contenu de passer
 		par-dessus dans la transition */
-	main>section aside svg {
+	main>section .intervention svg {
 		z-index: 1; }
 	/* Origines de transformation particulières */
-	main>section aside div {
+	main>section .intervention div {
 		transform-origin: left center; }
 	main>section .chain .arrow {
 		transform-origin: right center; }
@@ -73,15 +77,11 @@
 		--LoadingDelay: 0ms; }
 
 	/* Éléments — Valeurs de base initiales */
-	main>section aside svg {
+	main>section .intervention svg {
 		--TransitionProperties: transform;
 		--SelfDuration: 120ms; }
-	main>section aside div {
-		--TransitionProperties: transform;
-		--SelfDuration: 320ms; }
-	main>section aside div>* {
+	main>section .intervention div {
 		--TransitionProperties: opacity;
-		--TimingFunction: var(--ease-out-quad);
 		--SelfDuration: 320ms; }
 	main>section .chain .icon {
 		--TransitionProperties: transform;
@@ -101,24 +101,22 @@
 		--SelfDelay: 160ms; }
 
 	/* Éléments — Valeurs spécifiques à l'apparition */
-	main>section.is-visible aside svg {
+	main>section.is-visible .intervention svg {
 		--TimingFunction: var(--ease-bounce-light);
-		--SelfDelay: 400ms; }
-	main>section.is-visible aside div {
-		--TimingFunction: var(--ease-out-back);
-		--SelfDelay: 600ms; }
-	main>section.is-visible aside div * {
-		--SelfDelay: 800ms; }
+		--SelfDelay: calc(400ms + 1ms * var(--needed-time) / 5); }
+	main>section.is-visible .intervention div {
+		--TimingFunction: var(--ease-out-quad);
+		--SelfDelay: calc(600ms + 1ms * var(--needed-time) / 5); }
 	main>section.is-visible .chain .arrow {
 		--SelfDelay: 200ms; }
 	main>section.is-visible .chain .icon+* {
 		--SelfDelay: 100ms; }
 
 	/* Éléments — Valeurs transitionnées à la disparition */
-	main>section aside svg {
+	main>section .intervention svg {
 		--TransformInvisible: scale(0); }
-	main>section aside div {
-		--TransformInvisible: scale(0, 1); }
+	main>section .intervention div {
+		--OpacityInvisible: 0; }
 	main>section .chain .icon {
 		--TransformInvisible: scale(0); }
 	main>section .chain .arrow {
@@ -142,14 +140,14 @@
 /* Choix d'animation au chargement de la page ----------------------- */
 
 		main>section>section,
-		main>section aside svg,
-		main>section aside div,
+		main>section .intervention svg,
+		main>section .intervention div,
 		main>section .chain .icon,
 		main>section .chain .arrow {
 			animation-name: var(--Keyframes, scale); }
 		main>section,
 		main>section>section,
-		main>section aside div>*,
+		main>section .intervention div>*,
 		main>section .chain .icon+* {
 			animation-name: var(--Keyframes, opacity); }
 

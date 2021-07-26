@@ -12,23 +12,28 @@
 	/* Holy Albatross. Voir Heydon Pickering :
 		(https://heydonworks.com/article/the-flexbox-holy-albatross/) */
 		div.grille {
-			--DivItemBasis: calc((84ch - 100%) * 999);
+			--DivItemBasis: calc((54ch - 100%) * 999);
 			--DivItemGrow: 1;
 			--DivItemGutter: var(--Row);
 			--DivItemMaxWidth: 100%;
+			width: auto;
 		}
 
 	/* Conteneur de prose ------------- */
 		div.prose {
 			--DivDisplay: block;
-			column-width: calc(var(--Row) * 10);
+			column-width: 25ch;
 			column-count: 2;
-			column-gap: var(--Row);
+			column-gap: calc(var(--Row) * 2);
 			/* --DivGutter: var(--Row); */
 		}
 
 		div.prose>* {
 			--DivItemGutter: 0;
+		}
+
+		div.prose>*+* {
+			margin-top: var(--Row);
 		}
 
 	/* Échaffaudage : propriétés et valeurs par défaut --------- */
@@ -56,8 +61,9 @@
 
 	/* 2. Rythme interne et gouttières ---- */
 		/* Marges universelles permettant
-		l'adaptation fluide */
-		div>* {
+			l'adaptation fluide. Les divs sans classes
+			sont exclus pour mieux gérer l'inclusion successive */
+		div>*:not(div:where(:not([class]))) {
 			margin-left:  var(--DivItemGutter, 0);
 			margin-top:  var(--DivItemGutter, 0);
 		}

@@ -10,7 +10,7 @@
 	<aside id="wikiViewer">
 		<div>
 			<header>
-				<h2>Conaissances complémentaires</h2>
+				<h2>Connaissances complémentaires</h2>
 				<button id="wikiViewerClose">Fermer</button>
 			</header>
 			<div id="wikiDump"></div>

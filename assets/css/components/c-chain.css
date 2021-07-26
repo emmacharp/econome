@@ -133,7 +133,7 @@
 			var(--ColorForeign)  calc(var(--LocalAddedValue, 0%) + var(--NeutralAddedValue, 0%)),
 			var(--ColorForeign) var(--TotalAddedValue, 0%),
 			transparent var(--TotalAddedValue, 0%), transparent 100%);
-	clip-path: url(../../../symbols.svg#beer-clip-path);
+	clip-path: url(#beer-clip-path);
 }
 
 .chain .icon {
@@ -216,9 +216,9 @@
 /* ------ DIAGRAMME SILOS ---- */
 
 /* .chain>div { */
-	/* display: grid; */
+/* 	display: grid; */
 /* 	grid-auto-flow: column; */
-/* 	grid-row-gap: var(--Row); */
+/* 	grid-gap: var(--Row); */
 /* 	justify-content: center; */
 /* 	justify-items: center; */
 /* 	align-content: center; */
@@ -227,11 +227,18 @@
 
 /* .chain .agent article { */
 /* 	justify-self: center; */
+/* 	text-align: right; */
+/* } */
+
+/* .chain .goods-list { */
 /* } */
 
 /* .chain .goods-list .product { */
 /* 	grid-row-start: 2; */
-/* 	grid-column-end: span 3; */
+/* 	grid-column-end: span 2; */
+/* 	flex-direction: column; */
+/* 	width: calc(100% + var(--Row) * 1.75); */
+/* 	justify-self: end; */
 /* } */
 
 /* .chain>div>div>.product { */
@@ -239,19 +246,19 @@
 /* } */
 
 /* .chain .goods-list .product>section { */
-/* 	margin-bottom: calc(-1 * var(--Row) * 1.5); */
-/* 	padding-bottom: calc(var(--Row) * 4); */
-/* 	border-bottom: 1px solid currentColor; */
+/* 	border-left: 1px solid currentColor; */
+/* 	padding-right: 0; */
+/* } */
+
+/* .chain .goods-list .product>section:nth-of-type(2) { */
+/* 	margin-top: -7em; */
+/* 	padding-top: 7em; */
 /* } */
 
 /* .chain .goods-list .product>section:first-of-type { */
-/* 	border-left: 1px solid currentColor; */
+/* 	order: 1; */
+/* 	border-bottom: 1px solid currentColor; */
 /* 	border-bottom-left-radius: 5px; */
-/* } */
-
-/* .chain .goods-list .product>section:last-of-type { */
-/* 	border-right: 1px solid currentColor; */
-/* 	border-bottom-right-radius: 5px; */
 /* } */
 
 
