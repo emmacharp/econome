@@ -43,7 +43,7 @@ fieldset span~span {
 }
 
 fieldset input[type=radio]+span {
-	padding: calc(var(--Row) / 4) var(--Row);
+	padding: calc(var(--Row) / 4) calc(var(--Row) / 2);
 }
 
 fieldset input[type=radio] {
@@ -67,6 +67,7 @@ fieldset div {
 fieldset p {
 	font-weight: 700;
 	flex-grow: 1;
+	flex-basis: 0;
 }
 
 fieldset:valid input[type=radio]:not(:hover):not(:checked)~span {
