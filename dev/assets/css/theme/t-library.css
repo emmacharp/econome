@@ -4,7 +4,7 @@
  * Se référer au bas de ce fichier pour la liste complète. */
 
 	:root {
-		--Row: calc(var(--RowFactor, 1.6125) * var(--RowUnit, 1rem));
+		--Row: calc(var(--RowFactor, 1.67125) * var(--RowUnit, 1rem));
 
 		--MajorSecond: 1.125;
 		--MajorThird: 1.250;
