@@ -29,7 +29,7 @@
 		
 		--LineHeight: calc(var(--alh-line_height, 1.5625) * var(--LineHeightFactor, 1) * var(--Size, 1)); }
 
-	h1, h2, p {
+	h1, h2, h3, p {
 		--is-3-rows: var(--magic-3);
 		--is-2_5-rows: calc(var(--magic-2_5) - (var(--switch-2_5)));
 	}
