@@ -13,8 +13,8 @@ link { display: none !important; }
 
 /* Rythme des contenus ----------------------- */
 
-:not(html, body, label, ul, ol)>*:not(link)+* { 
-margin-top: calc(var(--Row)); }
+:not(:where(html, body, label, ul, ol, p))>:not(:where(link))+* {
+	margin-top: calc(var(--Row)); }
 
 
 /* Restreindre les images aux dimensions
