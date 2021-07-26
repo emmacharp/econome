@@ -227,36 +227,7 @@
 
 		<div id="{$id}">
 			<xsl:apply-templates />
-			<xsl:call-template name="missing-chain-links">
-				<xsl:with-param name="missing-links" select="$missing-links" />
-				<xsl:with-param name="actual-chain-links" select="$actual-chain-links"/>
-				<xsl:with-param name="total-chain-links" select="$total-chain-links"/>
-			</xsl:call-template>
 		</div>
-	</xsl:template>
-
-	<xsl:template name="missing-chain-links">
-		<xsl:param name="missing-links" select="0" />
-		<xsl:param name="actual-chain-links" select="0"/>
-		<xsl:param name="total-chain-links" select="0"/>
-		<xsl:choose>
-			<xsl:when test="$missing-links > 0">
-				<xsl:call-template name="diagram-product">
-					<xsl:with-param name="actual-chain-links" select="$actual-chain-links"/>
-					<xsl:with-param name="total-chain-links" select="$total-chain-links"/>
-					<xsl:with-param name="missing-links" select="$missing-links"></xsl:with-param>
-				</xsl:call-template>
-				<div class="unknown-link">
-					<hr class="good arrow to" />
-					<span class="icon">?</span>
-				</div>
-				<xsl:call-template name="missing-chain-links">
-					<xsl:with-param name="actual-chain-links" select="$actual-chain-links"/>
-					<xsl:with-param name="total-chain-links" select="$total-chain-links"/>
-					<xsl:with-param name="missing-links" select="$missing-links - 1"></xsl:with-param>
-				</xsl:call-template>
-			</xsl:when>
-		</xsl:choose>
 	</xsl:template>
 </xsl:stylesheet>
 
