@@ -8,6 +8,8 @@
 /* Configuration maîtresse ----------------------- */
 
 	:root {
+		--dk-primary: #00020F;
+		--primary: #2D3044;
 		--lt-primary: #A4A391;
 		--ltr-primary: #D5D5D2;
 		--ltst-primary: #eaeae6;
@@ -16,21 +18,21 @@
 		--ltr-brown: #A4A391;
 		--dk-brown: #373409;
 		--blue: #2B46BD;
-		--lt-blue: #EAEEFD;
+		--lt-blue: #A0C5FF;
 		--red: #FF0003;
 		--lt-red: #ffceda;
 		--yellow: #FCFF9B;
 		--dk-yellow: #f7f360;
 		--purple: #ac00b1;
-		--tr-purple: #5F006C1F;
+		--tr-purple: #ED6BFF1F;
 		--lt-purple: #fceaff;
+		--ltr-purple: #C8CBF6;
 		--beige: #fffff7;
-		--dk-beige: #fdfbf0;
+		--dk-beige: #fdfff0;
 		--green: #c8ef8e;
 		--lt-green: #dfff5e;
 
-		--ColorBg: white;
-		--ColorText: var(--indigo);
+		--ColorBg: #fffdf0;
 		--ColorLocal: var(--blue);
 		--ColorForeign: var(--red);
 		--ColorSupport: var(--purple);
