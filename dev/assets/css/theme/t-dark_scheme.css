@@ -10,3 +10,23 @@
 /* aside { */
 /* 	filter: invert(.9); */
 /* } */
+
+html {
+	color: var(--ltr-purple);
+}
+
+nav a::before {
+	filter: invert(1);
+}
+
+nav a, nav li.has-active ~ * a, nav li.is-active ~ * a {
+	--ColorBgControls: var(--dk-primary);
+}
+
+:root {
+	--Color: var(--ltr-purple);
+	--ColorBg: var(--primary);
+	--ColorSupport: var(--lt-purple);
+	--ColorForeign: var(--lt-red);
+	--ColorLocal: var(--lt-blue);
+}
