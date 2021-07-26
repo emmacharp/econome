@@ -229,7 +229,7 @@
 		<xsl:variable name="total-chain-links" select="@links" />
 		<xsl:variable name="actual-chain-links" select="count(agent)" />
 		<xsl:variable name="missing-links" select="$total-chain-links - $actual-chain-links" />
-		<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))"></xsl:variable>
+		<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))" />
 
 		<div id="{$id}">
 			<xsl:apply-templates />
