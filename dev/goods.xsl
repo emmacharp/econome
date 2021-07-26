@@ -11,6 +11,7 @@ exclude-result-prefixes="ext msxsl">
 
 	<xsl:template match="depanneur|transport|entrepot|brasserie|depense|ajout|local|etranger" mode="product-creator">
 		<xsl:param name="relative" select="false()" />
+		<xsl:param name="subunits" select="false()" />
 		<xsl:variable name="node-name" select="local-name()" />
 		<xsl:variable name="number">
 			<xsl:choose>
@@ -33,7 +34,14 @@ exclude-result-prefixes="ext msxsl">
 			<xsl:value-of select="$coefficient * 100" />
 		</xsl:variable>
 		<xsl:variable name="rounded-per-cent">
-			<xsl:value-of select="ceiling($percentage)"/>
+			<xsl:choose>
+				<xsl:when test="$subunits = true()">
+					<xsl:value-of select="ceiling($percentage)"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="round($percentage)"/>
+				</xsl:otherwise>
+			</xsl:choose>
 		</xsl:variable>
 		<xsl:variable name="square-total">
 			<xsl:value-of select="$rounded-per-cent"/>
