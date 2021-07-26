@@ -20,7 +20,7 @@
 		<xsl:variable name="id" select="concat('id-', count(preceding-sibling::*))"></xsl:variable>
 		<xsl:variable name="wordcount" select="string-length(normalize-space(.)) - string-length(translate(normalize-space(.),' ','')) +1"/>
 		<xsl:variable name="needed-time" select="number($wordcount) div 1000 * 60000"/>
-		<section data-wordcount="{$wordcount}" data-needed-time="{$needed-time}">
+		<section data-wordcount="{$wordcount}" data-needed-time="{$needed-time}" style="--needed-time: {$needed-time};">
 			<xsl:apply-templates select="@*" />
 			<xsl:if test=".//h3">
 				<xsl:attribute name="id">
