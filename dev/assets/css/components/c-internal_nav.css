@@ -90,6 +90,10 @@ nav a::before {
 	background-image: var(--base64-book);
 }
 
+nav [data-type=observation]>a:before {
+	background-image: var(--base64-lightbulb);
+}
+
 nav [data-type=question]>a:before {
 	background-image: var(--base64-question);
 }
