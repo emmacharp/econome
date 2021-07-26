@@ -133,7 +133,7 @@
 			var(--ColorForeign)  calc(var(--LocalAddedValue, 0%) + var(--NeutralAddedValue, 0%)),
 			var(--ColorForeign) var(--TotalAddedValue, 0%),
 			transparent var(--TotalAddedValue, 0%), transparent 100%);
-	clip-path: url(../../../symbols.svg#beer-clip-path);
+	clip-path: url(#beer-clip-path);
 }
 
 .chain .icon {
