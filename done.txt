@@ -1,3 +1,33 @@
 x 2021-01-10 correction orthographique dans Vim. +vim @dev @config
 x 2021-01-10 Essayer le plugin Taboo pour renommer les tabs dans vim. https://github.com/gcmt/taboo.vim @config +vim
 x 2021-01-10 Sauvegarder des sessions +vim @config
+x 2021-07-26 Ajouter is-read au lien wiki déjà lu. Mettre crochet. @maitrise
+x 2021-07-26 Assurer la pleine opacité des formes lorsque la section est visible et au début de la fenêtre. @maitrise
+x 2021-07-26 Implémenter content-visibility à l'aide de target et not first-child. @maitrise
+x 2021-07-26 x (B) 2021-01-05 Essayer la grille sur un div à l'aide de switches booléennes en propriétés personnalisées (p. ex. var(--ON)) @maitrise
+x 2021-07-26 2021-01-06 Nettoyer le root en tentant de déclarer les propriétés personnalisées que lorsque nécessaire. Voir les easings. +performance @css @devtools @maitrise
+x 2021-07-26 Raffiner la sélection des éléments transitionnés pour nettoyer l'inspecteur. +performance @css @devtools @maitrise
+x 2021-07-26 2021-04-07 minifier tous les fichiers de theme... ou bien les ramener dans un seul fichier. @maitrise +performance
+x 2021-07-26 2021-04-09 Réunir tous les fichiers de theme initial. Éviter les requêtes trop nombreuses. +performance @maitrise
+x 2021-07-26 2021-04-17 Revoir la compilation CSS pour le thème et laisser les composantes charger leurs styles. +performance @xsl @css
+x 2021-07-26 2021-04-17 Intégrer les économistes +contenu @svg
+x 2021-07-26 2021-04-24 Diagramme à la diagonale @experience +css
+x 2021-07-26 2021-04-30 Essayer avec le produit côte-à-côte avec l'agent pour le diagramme à la diagonale @maitrise +ux +design
+x 2021-07-26 2021-05-25 Essayer la grille de biens produits dans la chaîne avec des emoji... @maitrise +design
+x 2021-07-26 2021-05-25 Demander à l'usager s'il a apprécié, s'il aimerait en avoir plus. @maitrise +ux
+x 2021-07-26 2021-05-25 Donner de une couleur locale ou étrangère aux agents de la chaîne, dès le début @maitrise +ux
+x 2021-07-26 2021-05-25 Essayer avec les marks à la droite, sortis de la nav @maitrise +design
+x 2021-07-26 2021-05-25 Utiliser des delais pour simuler l'attente de la lecture avant de faire parler Henri ou Emma @maitrise +ux
+x 2021-07-26 2021-07-02 Est-ce que ça vaut la peine de visualiser les intrants des maillons ? @maitrise +henri
+x 2021-07-26 2021-07-02 Observation #01 — On achète plus québécois qu'étranger. Les brasseries québécoises achètent plus à l'étranger qu'au Québec. En achetant plus localement, on achète plus à l'étranger. On importe plus @maitrise +contenu
+x 2021-07-26 2021-07-06 Créer les identifiants pour les grilles de biens économiques @maitrise +xsl
+x 2021-07-26 2021-07-06 Déplacer les derniers symboles SVG dans le fichier svg plutôt que xsl @maitrise +nettoyage
+x 2021-07-26 2021-07-10 Version verticale. @maitrise +design
+x 2021-07-26 2021-07-10 Animer ouverture et fermeture des sections en fonction du nombre d'éléments et de l'interaction de l'usager. @maitrise +design
+x 2021-07-26 2021-07-10 Tout aligner à droite @maitrise +design
+x 2021-07-26 2021-07-10 Tenter l'inversion du total de section et des symboles de produit @maitrise +design
+x 2021-07-26 Essayer à la verticale avec order. @maitrise +design
+x 2021-07-26 2021-07-18 Partager l'espace dans le diagramme en fonction du nombre d'icônes qu'il y a. À générer en XSL. @maitrise +design
+x 2021-07-26 2021-07-18 Donner l'option d'ouvrir au complet, de masquer, etc. à l'aide de valeur @goods @maitrise +experience
+x 2021-07-26 2021-07-19 Essayer de générer les biens avec HTMX si jamais ça s'avère lourd. @maitrise +performance
+x 2021-07-26 Enlever les « --link-position » si on peut finalement faire sans. @maitrise
