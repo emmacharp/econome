@@ -32,7 +32,7 @@
 		<xsl:text>local</xsl:text>
 	</xsl:template>
 
-	<xsl:template match="agent/@local|agent/@foreign|agent/@value|agent/@paid">
+	<xsl:template match="agent/@local|agent/@foreign|agent/@value|agent/@paid|agent/@total">
 		<xsl:param name="number" select="." />
 		<xsl:param name="name" select="name()" />
 		<span class="added amount">
@@ -63,6 +63,11 @@
 		</span>
 	</xsl:template>
 
+	<xsl:template match="@paid|@total" mode="class-generator">
+		<section class="{local-name()}">
+			<xsl:apply-templates select="." />
+		</section>
+	</xsl:template>
 
 	<xsl:template match="@value|@local|@foreign" mode="class-generator">
 		<xsl:variable name="is-transformer" select="boolean(ancestor::agent[@type = 'transformer'])" />
@@ -131,7 +136,7 @@
 
 	<xsl:template match="diagram/agent">
 		<section class="link agent {@type} {@class}">	
-			<xsl:if test="@goods|@paid|@value|@foreign|@local">
+			<xsl:if test="@goods|@paid|@value|@foreign|@local|@total">
 				<xsl:apply-templates select="." mode="include-once" />
 
 				<aside class="goods-list">
@@ -139,6 +144,7 @@
 						<xsl:apply-templates select="@foreign" mode="class-generator" />
 						<xsl:apply-templates select="@value" mode="class-generator" />
 						<xsl:apply-templates select="@local" mode="class-generator" />
+						<xsl:apply-templates select="@paid|@total" mode="class-generator" />
 					</section>
 				</aside>
 			</xsl:if>
