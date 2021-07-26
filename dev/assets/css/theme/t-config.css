@@ -7,6 +7,9 @@
 
 /* Configuration maîtresse ----------------------- */
 
+html {
+	color: var(--dk-brown);
+}
 	:root {
 		--dk-primary: #00020F;
 		--primary: #2D3044;
