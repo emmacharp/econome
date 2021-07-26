@@ -55,9 +55,6 @@
 					<xsl:when test="$name = 'value'">
 						<xsl:text>Valeur ajoutée</xsl:text>
 					</xsl:when>	
-					<xsl:otherwise>
-						<xsl:text>Montant déboursé</xsl:text>
-					</xsl:otherwise>
 				</xsl:choose>
 			</small>
 		</span>
@@ -93,25 +90,31 @@
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
+		<xsl:variable name="units" select="boolean(ancestor::agent/@goods)" />
+		<xsl:variable name="subunits" select="boolean(ancestor::agent/@goods = 'subunits')" />
 
 		<!-- TODO : nettoyer les données du Choose au complet -->
 		<section class="{local-name()}">
-			<input type="checkbox" checked="" name="show-units" class="toggle-units" />
-			<xsl:if test="ancestor::agent/@goods">
-				<input type="checkbox" name="show-subunits" class="toggle-subunits" />
-			</xsl:if>
+			<xsl:if test="$units">
+				<xsl:if test="$subunits">
+					<input type="checkbox" name="show-subunits" class="toggle-subunits" />
+				</xsl:if>
+				<input type="checkbox" checked="" name="show-units" class="toggle-units" />
 			<xsl:choose>
 				<xsl:when test="local-name() = 'value'">
 					<xsl:apply-templates select="ext:node-set($file)//produit[@type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes]" mode="product-creator">
 						<xsl:with-param name="relative" select="not($is-transformer)" />
+						<xsl:with-param name="subunits" select="$subunits" />
 					</xsl:apply-templates>
 				</xsl:when>
 				<xsl:otherwise>
 					<xsl:apply-templates select="ext:node-set($file)//produit[not(@type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes]" mode="product-creator">
 						<xsl:with-param name="relative" select="not($is-transformer)" />
+						<xsl:with-param name="subunits" select="$subunits" />
 					</xsl:apply-templates>
 				</xsl:otherwise>
 			</xsl:choose>
+			</xsl:if>
 			<section class="amounts">
 				<xsl:apply-templates select="." />
 				<xsl:choose>
