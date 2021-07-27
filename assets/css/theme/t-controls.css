@@ -22,11 +22,9 @@ nav li li.is-incomplete>a,
 	--Color: var(--primary);
 }
 
-nav a,
-nav li.has-active~* a,
-nav li.is-active~* a {
-	/* --ColorBgControls: var(--ltst-primary); */
-	/* --Color: var(--primary); */
+nav a {
+	--ColorBgControls: var(--ltst-primary);
+	--Color: var(--primary);
 }
 
 .toggle-internal-nav::before {

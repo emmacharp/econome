@@ -252,7 +252,12 @@ exclude-result-prefixes="ext msxsl svg math">
 			<xsl:if test="@goods|@paid|@value|@foreign|@local|@total">
 				<xsl:apply-templates select="." mode="include-once" />
 
-				<aside class="goods-list">
+				<aside>
+					<xsl:if test="@goods">
+						<xsl:attribute name="class">
+							goods-list
+						</xsl:attribute>
+					</xsl:if>
 					<section class="product {@type}">
 						<xsl:apply-templates select="@foreign" mode="class-generator" />
 						<xsl:apply-templates select="@value" mode="class-generator" />

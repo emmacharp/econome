@@ -15,7 +15,7 @@
 		align-items: baseline;
 		--ScaleLevel: var(--Short);
 		font-weight: 700;
-		z-index: 1;
+		z-index: 3;
 		counter-increment: numero-partie;
 	}
 

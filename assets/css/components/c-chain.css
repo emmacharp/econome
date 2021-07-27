@@ -159,7 +159,7 @@
 	width: max-content;
 }
 
-.chain .goods-list .product>section {
+.chain aside .product>section {
 	padding: calc(var(--Row) / 2);
 }
 
@@ -168,12 +168,12 @@
 	column-gap: var(--Row);
 }
 
-.chain .goods-list>.product {
+.chain aside>.product {
 	flex-direction: column;
 }
 
 .chain .goods-list .product>section {
-	margin-right: calc(-1 * var(--Row) * 1.5);
+	margin-right: calc(-1 * var(--Row) * 2);
 	padding-right: calc(var(--Row) * 1.5);
 	border-right: 1px solid currentColor;
 	border-left: 1px solid currentColor;

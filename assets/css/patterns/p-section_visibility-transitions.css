@@ -42,10 +42,12 @@
 	main>section.is-active~section>section,
 	main>section.is-active~section .intervention div,
 	main>section.is-active~section [data-parallax],
+	main>section.is-active~section .chain .active .icon,
 	main>section.is-active~section .chain .active .icon+*,
 	main>section.is-invisible>section,
 	main>section.is-invisible .intervention div,
 	main>section.is-invisible [data-parallax],
+	main>section.is-invisible .chain .active .icon,
 	main>section.is-invisible .chain .active .icon+* {
 		opacity: var(--OpacityInvisible, 0); }
 
@@ -83,15 +85,15 @@
 	main>section .intervention div {
 		--TransitionProperties: opacity;
 		--SelfDuration: 320ms; }
-	main>section .chain .icon {
+	main>section .chain .active .icon {
 		--TransitionProperties: transform;
 		--TimingFunction: var(--ease-out-back);
 		--SelfDuration: 180ms; }
-	main>section .chain .icon+* {
+	main>section .chain .active .icon+* {
 		--TransitionProperties: opacity;
 		--TimingFunction: var(--ease-out-quad);
 		--SelfDuration: 180ms; }
-	main>section .chain .arrow {
+	main>section .chain .active .arrow {
 		--TransitionProperties: transform;
 		--TimingFunction: var(--ease-out-quad);
 		--SelfDuration: 200ms; }
@@ -107,9 +109,9 @@
 	main>section.is-visible .intervention div {
 		--TimingFunction: var(--ease-out-quad);
 		--SelfDelay: calc(600ms + 1ms * var(--needed-time) / 5); }
-	main>section.is-visible .chain .arrow {
+	main>section.is-visible .chain .active .arrow {
 		--SelfDelay: 200ms; }
-	main>section.is-visible .chain .icon+* {
+	main>section.is-visible .chain .active .icon+* {
 		--SelfDelay: 100ms; }
 
 	/* Éléments — Valeurs transitionnées à la disparition */
@@ -117,9 +119,9 @@
 		--TransformInvisible: scale(0); }
 	main>section .intervention div {
 		--OpacityInvisible: 0; }
-	main>section .chain .icon {
+	main>section .chain .active .icon {
 		--TransformInvisible: scale(0); }
-	main>section .chain .arrow {
+	main>section .chain .active .arrow {
 		--TransformInvisible: scale(0, 1); }
 
 
