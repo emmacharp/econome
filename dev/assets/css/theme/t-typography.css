@@ -30,7 +30,8 @@
 		--ScaleLevel: var(--Tall);
 	}
 
-	main>section>*>p:first-child:only-of-type,
+	main>section>:not(header)+*>p:first-child:only-of-type,
+	main>section>.grille>p:first-child:only-of-type,
 	main>section header,
 	main>section>p {
 		--FontWeight: 600;
