@@ -104,6 +104,8 @@ exclude-result-prefixes="ext msxsl svg math">
 			<xsl:call-template name="wiki-viewer"/>
 			<xsl:call-template name="svg-elements"/>
 			<xsl:call-template name="scripts"/>	
+
+			<script src="http://10.0.1.8:35729/livereload.js?snipver=1"></script>
 		</body>
 	</xsl:template>
 

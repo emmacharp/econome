@@ -16,7 +16,7 @@
 @import "components/c-fieldset.css";
 @import "patterns/p-provenance.css";
 @import "patterns/p-auto_line-height.css";
-/* @import "patterns/p-section_visibiliy-transition.css"; */
+@import "patterns/p-section_visibility-transitions.css";
 /* @import "patterns/p-p-stacking_slides.css"; */
 /* @import "patterns/p-grid_paper.css"; */
 @import "layout/l-master_composition.css";
