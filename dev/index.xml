@@ -187,12 +187,9 @@
 				</aside>
 			</div>
 		</header>
-		<section>
-				<div>
-					<p>En achetant votre bière, vous mettez en branle toute une suite d’<i data-wiki="Agent_économique">agents</i> qui se partagent les rôles économiques nécessaires à votre consommation, Joey Joe Joe.</p>
-					<p><b>Reconstituons cette chaîne ensemble.</b></p>
+				<div class="prose">
+					<p>En achetant votre bière, vous mettez en branle toute une suite d’<i data-wiki="Agent_économique">agents</i> qui se partagent les rôles économiques nécessaires à votre consommation, Joey Joe Joe. Reconstituons cette chaîne ensemble.</p>
 				</div>
-		</section>
 	</section>
 	<h2>La chaîne économique</h2>
 	<section data-type="chaine">
