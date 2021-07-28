@@ -82,9 +82,8 @@ body>footer {
 	}
 }
 
-main {
-	flex: 1 1 0%;
-	padding: calc(var(--Row) * 2);
+p {
+	min-width: 30ch;
 }
 
 main>section aside {
@@ -154,10 +153,11 @@ main > section aside > svg[class*="cartoon"] {
 	height: calc(var(--Row) * 4.5);
 	float: left;
 	shape-outside: circle(55% at 50% 50%) padding-box;
-	margin-right: 20px;
-	margin-top: -20px;
+	margin-right: var(--Row);
+	margin-top: calc(-1 * var(--Row) * .5);
 	/* margin-left: -30px; */
-	padding: 30px;
+	padding-right: var(--Row);
+	padding-bottom: var(--Row);
 }
 main > section aside > div {
 	/* max-width: 30ch; */
@@ -222,23 +222,6 @@ main > section aside {
 /* main>section>:not(header)+div:last-child { */
 /* 	display: none; */
 /* } */
-
-main>section {
-	display: grid;
-	/* grid-template: repeat(auto-fill, minmax(1fr, 20ch)) / repeat(auto-fill, minmax(1fr, 20px)); */
-	grid-template: repeat(auto-fit, minmax(0,max-content)) / auto;
-	grid-auto-flow: row;
-	grid-auto-columns: auto;
-	align-content: center;
-	/* justify-items: center; */
-	column-gap: var(--Row);
-	row-gap: calc(var(--Row) * 2);
-}
-
-main>section+section {
-	border-top: 1px solid var(--ltr-primary);
-	margin-top: -1px;
-}
 
 /* main>section::after { */
 /* 	content: ""; */
@@ -369,10 +352,6 @@ main>section>header p:only-of-type {
 	transform-origin: center;
 }
 
-main>section~section {
-	margin-top: calc(var(--Row) * 4);
-}
-
 @keyframes pop {
 	0% {
 		transform: scale(0);
@@ -414,4 +393,41 @@ body>nav {
 	background-color: var(--ltst-primary);
 }
 
+@media (orientation: portrait) {
+	main>section {
+		padding: var(--Row);
+	}
+	nav a {
+		display: flex;
+	}
+}
 
+@media (orientation: landscape) {
+main>section {
+	display: grid;
+	/* grid-template: repeat(auto-fill, minmax(1fr, 20ch)) / repeat(auto-fill, minmax(1fr, 20px)); */
+	grid-template: repeat(auto-fit, minmax(0,max-content)) / auto;
+	grid-auto-flow: row;
+	grid-auto-columns: auto;
+	align-content: center;
+	/* justify-items: center; */
+	column-gap: var(--Row);
+	row-gap: calc(var(--Row) * 2);
+}
+
+main>section+section {
+	border-top: 1px solid var(--ltr-primary);
+	margin-top: -1px;
+}
+
+main>section~section {
+	margin-top: calc(var(--Row) * 4);
+}
+
+main {
+	flex: 1 1 0%;
+	padding: calc(var(--Row) * 2);
+}
+
+	
+}
