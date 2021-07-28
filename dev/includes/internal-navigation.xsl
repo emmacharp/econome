@@ -28,7 +28,7 @@
 			<li>
 				<xsl:apply-templates select="@*"/>
 				<a href="#{$id}">
-					<xsl:apply-templates select="header/*[name() = 'h2' or name() = 'h3']/text()" />
+					<xsl:apply-templates select="header//*[name() = 'h2' or name() = 'h3']//text()" />
 				</a>
 			</li>
 		</xsl:if>
