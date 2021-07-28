@@ -43,7 +43,7 @@ nav a {
 nav header {
 	padding-top: calc(var(--Row) * 2.3);
 	padding-bottom: calc(var(--Row) * .8);
-	background-color: var(--dk-beige);
+	/* background-color: var(--dk-beige); */
 }
 
 nav header span {
