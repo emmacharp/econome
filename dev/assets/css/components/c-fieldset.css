@@ -1,8 +1,10 @@
 fieldset {
 	border: none;
+	display: contents;
 }
 
-fieldset>*+* {
+fieldset>*+*,
+fieldset~fieldset>* {
 	margin-top: calc(var(--Row) / 2);
 }
 
