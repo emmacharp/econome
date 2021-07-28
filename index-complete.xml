@@ -156,9 +156,9 @@
 				<div class="grille">
 					<p>Acheter une caisse de Boréale chez Wal-Mart.</p>
 					<div class="grille">
-						<label><input type="radio" name="heineken" /><span class="local">Oui !</span></label>
-						<label><input type="radio" name="heineken" /><span class="foreign">Non !</span></label>
-						<label><input type="radio" name="heineken" /><span>Pas sûr...</span></label>
+						<label><input type="radio" name="boreale" /><span class="local">Oui !</span></label>
+						<label><input type="radio" name="boreale" /><span class="foreign">Non !</span></label>
+						<label><input type="radio" name="boreale" /><span>Pas sûr...</span></label>
 					</div>
 				</div>
 			</fieldset>
@@ -174,22 +174,20 @@
 	</section>
 	<section>
 		<header>
-			<div class="grille">
-				<div>
-					<h3>Le scénario de départ</h3>
-					<p>En ces moments de chaleur, Joey Joe Joe, rien n’étanche cette viscérale soif comme votre bière québécoise préférée : La Pâpire.</p>
-				</div>
-				<aside class="intervention">
-					<symbol type="henri" class="cartoon_henri animated" />
-					<div>
-						<p>La chaîne économique est le premier concept que nous abordons. Analyser la chaîne économique d’un achat, son parcours en quelque sorte, est nécessaire pour en comprendre les effets !</p>
-					</div>
-				</aside>
-			</div>
+			<h3>Le scénario de départ</h3>
+			<p>En ces moments de chaleur, Joey Joe Joe, rien n’étanche cette viscérale soif comme votre bière québécoise préférée : La Pâpire.</p>
 		</header>
-				<div class="prose">
-					<p>En achetant votre bière, vous mettez en branle toute une suite d’<i data-wiki="Agent_économique">agents</i> qui se partagent les rôles économiques nécessaires à votre consommation, Joey Joe Joe. Reconstituons cette chaîne ensemble.</p>
+		<div class="grille">
+			<div class="prose">
+				<p><b>En achetant votre bière, vous mettez en branle toute une suite d’<i data-wiki="Agent_économique">agents</i> qui se partagent les rôles économiques nécessaires à votre consommation, Joey Joe Joe. Reconstituons cette chaîne ensemble.</b></p>
+			</div>
+			<aside class="intervention">
+				<symbol type="henri" class="cartoon_henri animated" />
+				<div>
+					<p>La chaîne économique est le premier concept que nous abordons. Analyser la chaîne économique d’un achat, son parcours en quelque sorte, est nécessaire pour en comprendre les effets !</p>
 				</div>
+			</aside>
+		</div>
 	</section>
 	<h2>La chaîne économique</h2>
 	<section data-type="chaine">
@@ -199,7 +197,7 @@
 		</header>
 		<diagram type="chain">
 			<agent type="consumer" name="Joey Joe Joe" class="active" />
-			<product type="beer" name="La Pâpire" complete="" class="local" />
+			<product type="beer" name="La Pâpire" complete="" value="100%"  class="local" />
 		</diagram>
 		<section>
 			<div class="grille">
@@ -226,7 +224,7 @@
 
 		<diagram type="chain">
 			<agent type="consumer" name="Joey Joe Joe" />
-			<product type="beer" name="Bière" complete="" />
+			<product type="beer" name="Bière" complete="" value="100%" />
 			<agent type="retailer" name="Dépanneur Commun" class="local active" />
 		</diagram>
 
@@ -253,9 +251,9 @@
 		</header>
 		<diagram type="chain">
 			<agent type="consumer" name="Joey Joe Joe" />
-			<product type="beer" name="Bière" complete="" />
+			<product type="beer" name="Bière" complete="" value="100%" />
 			<agent type="retailer" name="Dépanneur Commun" />
-			<product type="beer" name="Bière" />
+			<product type="beer" name="Bière" value="86%" />
 			<agent type="manufacturer" name="Entrepôts Correct" class="local active" />
 		</diagram>
 			<div class="grille">
@@ -284,11 +282,11 @@
 
 		<diagram type="chain">
 			<agent type="consumer" name="Joey Joe Joe" />
-			<product type="beer" name="Bière" complete="" />
+			<product type="beer" name="Bière" complete="" value="100%" />
 			<agent type="retailer" name="Dépanneur Commun" class="local" />
-			<product type="beer" name="Bière" />
+			<product type="beer" name="Bière" value="86%" />
 			<agent type="manufacturer" name="Entrepôts Correct" class="local" />
-			<product type="beer" name="Bière" />
+			<product type="beer" name="Bière" value="81%" />
 			<agent type="transformer" name="Brasserie Moyenne" class="local" />
 		</diagram>
 		<section>
@@ -345,30 +343,27 @@
 			<h3>Le périple du 10 $ à Joey Joe Joe</h3>
 			<p>Imaginons que vous dépensez 10 grosses piastres pour acheter votre caisse de Pâpire au dépanneur Commun.</p>
 		</header>
+		<div class="prose">
+			<p><b>Ce 10$, c’est la valeur qui est accordée à la Pâpire, valeur que vous-même considérez minimalement égale à 10 $... puisque vous l’échangez pour la Pâpire.</b></p>
+		</div>
 		<diagram type="chain">
 			<agent type="consumer" name="Joey Joe Joe" paid="10" />
-			<product type="beer" name="Bière" />
+			<product type="beer" name="Bière" complete="" value="100%" />
 			<agent type="retailer" name="Dépanneur Commun" />
-			<product type="beer" name="Bière" />
+			<product type="beer" name="Bière" value="86%" />
 			<agent type="manufacturer" name="Entrepôts Correct" />
-			<product type="beer" name="Bière" />
+			<product type="beer" name="Bière" value="81%" />
 			<agent type="transformer" name="Brasserie Moyenne" />
 		</diagram>
-		<div class="grille">
-			<div class="prose">
-				<p><b>Ce 10$, c’est la valeur qui est accordée à la Pâpire, valeur que vous-même considérez minimalement égale à 10 $... puisque vous l’échangez pour la Pâpire.</b></p>
+		<aside class="intervention">
+			<symbol type="henri" class="cartoon_henri animated" />
+			<div>
+				<q><b>Humhum.</b> C’est un peu plus compliqué que ça quand même, mais c’est suffisant pour l’usage que nous en faisons ici.</q>
 			</div>
-			<aside class="intervention">
-				<symbol type="henri" class="cartoon_henri animated" />
-				<div>
-					<q><b>Humhum.</b> C’est un peu plus compliqué que ça quand même, mais c’est suffisant pour l’usage que nous en faisons ici.</q>
-				</div>
-			</aside>
-		</div>
+		</aside>
 	</section>
 	<section>
 		<header>
-
 			<p>Voyez ci-bas, Joey Joe Joe, comment votre 10 $ parcoure la chaîne. Chaque agent s’en garde une partie.</p>
 		</header>
 
@@ -378,24 +373,18 @@
 			<product type="beer" name="Bière" complete="" value="100%" />
 			<agent type="retailer" name="Dépanneur Commun" total="1.36" />
 			<product type="beer" name="Bière" value="86%" />
-			<agent type="manufacturer" name="Entrepôts Correct" total="0.51" class="active" />
+			<agent type="manufacturer" name="Entrepôts Correct" total="0.51" />
 			<product type="beer" name="Bière" value="81%" />
 			<agent type="transformer" name="Brasserie Moyenne" total="3.90" />
 		</diagram>
 
-		<section>
-			<div class="grille">
-				<div class="prose">
-					<p><b>Mais est-ce que c’est ça, la valeur ajoutée, la partie que chaque agent de la chaîne garde pour lui, vous demandez-vous Joey Joe Joe ?</b></p>
-				</div>
-				<aside class="intervention">
-					<symbol type="henri" class="cartoon_henri animated" />
-					<div>
-						<p>Pas tout à fait, mais presque ! Il s’agit du revenu.</p>
-					</div>
-				</aside>
+		<aside class="intervention">
+			<symbol type="henri" class="cartoon_henri animated" />
+			<div>
+				<p>« Mais est-ce que c’est ça, la valeur ajoutée, la partie que chaque agent de la chaîne garde pour lui ? », vous demandez-vous Joey Joe Joe.</p>
+				<p>Pas tout à fait, mais presque ! Il s’agit du revenu.</p>
 			</div>
-		</section>
+		</aside>
 	</section>
 	
 	<section>
@@ -620,14 +609,14 @@
 					</div>
 				</fieldset>
 			</form>
-			<aside class="intervention">
-				<symbol type="henri" class="cartoon_henri animated" />
-				<div>
-					<p><b>Mais encore, les arbitrages exposés ci-haut, ne s’appliquent pas que du côté de la production bière, loin de là ! Bien au contraire, les dynamiques économiques abordées se déclencheront (à intensité variable) dans toute l’économie locale.</b></p>
-					<p>Les limites de la production locale (et donc de la consommation locale) s’étendent à tout type d’achat de bien ou service.</p>
-				</div>
-			</aside>
 		</div>
+		<aside class="intervention">
+			<symbol type="henri" class="cartoon_henri animated" />
+			<div>
+				<p>Mais encore, les arbitrages exposés ci-haut, ne s’appliquent pas que du côté de la production bière, loin de là ! Bien au contraire, les dynamiques économiques abordées se déclencheront (à intensité variable) dans toute l’économie locale.</p>
+				<p>Les limites de la production locale (et donc de la consommation locale) s’étendent à tout type d’achat de bien ou service.</p>
+			</div>
+		</aside>
 	</section>
 	<section data-type="observation">
 		<header>

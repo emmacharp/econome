@@ -296,8 +296,8 @@ body>main>* {
 
 }
 
-.prose>*:only-of-type {
-	display: inline-block;
+.prose>*:only-child {
+	column-span: all;
 }
 
 .chain>div {
@@ -353,8 +353,9 @@ main>section .prose:last-child {
 main>section>section>p:first-child:only-of-type,
 main>section>section>div>p:first-child:only-of-type,
 main>section>div>p:first-child:only-of-type,
-main>section>header h3+p {
-	max-width: 36ch;
+main>section>header h3+p,
+main>section>header p:only-of-type {
+	max-width: 42ch;
 }
 
 .chain .active svg,
@@ -399,6 +400,18 @@ fieldset p {
 	flex-basis: 0;
 	flex-shrink: 1;
 	margin-right: auto;
+}
+
+main>section>article+aside {
+	margin-left: auto;
+}
+
+main>section>form>fieldset~fieldset>*:first-child {
+	margin-top: calc(var(--Row) * 2.5);
+}
+
+body>nav {
+	background-color: var(--ltst-primary);
 }
 
 
