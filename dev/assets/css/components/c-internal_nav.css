@@ -33,7 +33,7 @@ nav a {
 	text-decoration: none;
 	position: relative;
 	margin: 0;
-	display: flex;
+	display: block;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
