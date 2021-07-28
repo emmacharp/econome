@@ -45,7 +45,7 @@ fieldset:valid,
 }
 
 nav li li.is-active>a {
-	--ColorBgControls: var(--lt-yellow);
+	--ColorBgControls: var(--yellow);
 	--Color: var(--primary);
 }
 
