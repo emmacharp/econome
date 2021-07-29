@@ -14,7 +14,6 @@
 				<details>
 					<summary><span>En savoir plus sur Econome</span></summary>
 					<p>Econome c'est une initiative de commnuication économique populaire. Comme d'autres <i data-wiki="Otto_Neurath">avant nous</i>, nous espérons informer le public dans ses prises de décision politiques grâce à l'exposition de faits économiques.</p>
-					<p>Econome veut éclairer les enjeux économiques contemporains s'en pour autant prendre position. C'est au public que revient la décision.</p>
 				</details>
 			</header>
 			<ul>

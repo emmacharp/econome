@@ -4,7 +4,7 @@
 	html { 
 		line-height: var(--RowFactor, 1.67125);
 		font-size: var(--FontSize, clamp(13px, 1.1vmax, 18px));
-		color: var(--Color, var(--ColorText)); }
+		color: var(--Color, initial); }
 
 /* Contexte du corps de la page */
 	body {
@@ -16,8 +16,7 @@
 	select, input, textarea,
 	p, ul, ol, a, q, cite, span, small, th, td,
 	h1, h2, h3, h4, h5, h6 {
-		--FontSize: calc(var(--Size, 1) * var(--ScaleLevel, 1) * var(--FontFactor, 1) * var(--FontUnit, 1em));
-	}
+		--FontSize: calc(var(--Size, 1) * var(--ScaleLevel, 1) * var(--FontFactor, 1) * var(--FontUnit, 1em)); }
 
 	select, input, textarea,
 	p, ul, ol, a, q, cite, span, small, th, td,
@@ -39,11 +38,9 @@
 		font-weight: inherit; }
 
 	strong, b {
-		font-weight: 500;
-	}
+		font-weight: 500; }
 
 
 /* Permettre aux icônes de recevoir la couleur contextuelle */
 	i {
-		fill: var(--Color, inherit);
-	}
+		fill: var(--Color, inherit); }

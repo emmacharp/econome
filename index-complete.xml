@@ -135,7 +135,7 @@
 			<fieldset>
 				<div class="grille">
 					<p>Acheter une caisse de Heineken au dépanneur du coin.</p>
-					<div class="grille">
+					<div>
 						<label><input type="radio" name="heineken" /><span class="local">Oui !</span></label>
 						<label><input type="radio" name="heineken" /><span class="foreign">Non !</span></label>
 						<label><input type="radio" name="heineken" /><span>Pas sûr...</span></label>
@@ -145,7 +145,7 @@
 			<fieldset>
 				<div class="grille">
 					<p>Acheter une pinte de Guinness à votre bar préféré.</p>
-					<div class="grille">
+					<div>
 						<label><input type="radio" name="guinness" /><span class="local">Oui !</span></label>
 						<label><input type="radio" name="guinness" /><span class="foreign">Non !</span></label>
 						<label><input type="radio" name="guinness" /><span>Pas sûr...</span></label>
@@ -155,7 +155,7 @@
 			<fieldset>
 				<div class="grille">
 					<p>Acheter une caisse de Boréale chez Wal-Mart.</p>
-					<div class="grille">
+					<div>
 						<label><input type="radio" name="boreale" /><span class="local">Oui !</span></label>
 						<label><input type="radio" name="boreale" /><span class="foreign">Non !</span></label>
 						<label><input type="radio" name="boreale" /><span>Pas sûr...</span></label>

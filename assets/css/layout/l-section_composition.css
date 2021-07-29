@@ -43,23 +43,6 @@ main>section [data-parallax] {
 	transition: none;
 }
 
-main>section>:not(header)+div:last-child>svg {
-	color: var(--Color);
-	fill: var(--Color);
-	height: var(--Height);
-	width: var(--Width);
-	mix-blend-mode: multiply; /* ATTENTION ! performance : utiliser avec conteneur parent « isolation » */
-	position: absolute;
-	top: var(--Top, 0);
-	right: var(--Right, 0);
-}
-
-.basket {
-	--Height: clamp(500px, 200vh, 1400px);
-	--Width: clamp(200px, 50vw, 800px);
-}
-
-
 main>section>aside {
 	margin: 0;
 	font-weight: 500;

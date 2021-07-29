@@ -1,6 +1,4 @@
-
-
-.chain .goods-list>.product>section {
+.goods-list>.product>section {
 	fill: currentColor;
 	padding-bottom: calc(var(--Row) / 2);
 	flex-direction: row-reverse;
@@ -11,54 +9,19 @@
 
 .goods-list>.product p {
 	display: contents;
-	--ScaleLevel: var(--Short);
-	--LineHeightFactor: .75;
 }
 
-.goods-list>.product p em {
-	font-style: normal;
-	display: inline-flex;
-	width: max-content;
-	max-width: 100%;
-	z-index: 1;
-	position: absolute;
-	left: 0;
-	top: 100%;
-	margin-top: -3px;
-	padding: 3px;
-	background-color: white;
-	pointer-events: none;
-	font-weight: 500;
-}
-
-.goods-list>.product p:not(:hover) em {
-	opacity: 0
-}
-
-.goods-list>.product p:hover {
-	filter: drop-shadow(0px 0px 20px hsl(266, 8%, 40%));
-}
-
-.goods-list>.product p:hover span {
-	z-index: 1;
-}
-
-.goods-list>.product p:not(:hover) {
+.goods-list>.product p:not(:hover) * {
 	transition-delay: 20ms;
-}
-
-.goods-list>.product p * {
-	transition-delay: inherit;
 }
 
 .goods-list>.product p>span {
 	align-items: flex-end;
-	width: 25px;
-	height: 25px;
+	width: var(--Row);
+	height: var(--Row);
 	flex-shrink: 0;
-	color: var(--blue);
 	position: static;
-	padding: 3px;
+	padding: 1px;
 	margin: 0;
 }
 
@@ -67,50 +30,10 @@
 	width: 100%;
 }
 
-.chain .goods-list>input {
-	-webkit-appearance: none;
-	appearance: none;
-	display: flex;
-	z-index: 1;
-	align-items: center;
-	justify-content: flex-start;
-	visibility: hidden;
-	position: absolute;
-	top: 100%;
-}
 
-.chain .goods-list>input:not(:checked)~div {
+.goods-list .toggle-units:not(:checked)~p,
+.goods-list .toggle-units:not(:checked)~.toggle-subunits {
 	pointer-events: none;
 	opacity: 0;
 	transform-origin: bottom center;
 }
-
-.chain .goods-list>input::before {
-	visibility: visible;
-	margin-top: calc(1px - var(--Row) * .5);
-}
-
-.chain .goods-list>input:checked::before {
-	content: "x";
-	background-color: var(--lt-red);
-}
-
-/* .goods-list>.product span:first-child { */
-/* 	border-top-left-radius: 2px; */
-/* 	border-bottom-left-radius: 2px; */
-/* } */
-
-/* .goods-list>.product span:last-child { */
-/* 	border-top-right-radius: 2px; */
-/* 	border-bottom-right-radius: 2px; */
-/* } */
-
-.chain .goods-list {
-	flex-direction: column;
-	display: contents;
-}
-
-.chain #goods-list>section:first-child {
-	order: -1;
-}
-

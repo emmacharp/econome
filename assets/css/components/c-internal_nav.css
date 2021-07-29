@@ -3,9 +3,10 @@
 	se retrouve dans « l-master_composition.css » */
 
 nav {
-	background-color: var(--ltst-primary);
+	background-color: var(--ColorBgAlt);
 	display: flex;
-	overflow: auto;
+	overflow-y: auto;
+	overflow-x: hidden;
 	scrollbar-width: none;
 }
 
@@ -17,7 +18,7 @@ nav ul {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
-	--LineHeightFactor: .75;
+	line-height: 1;
 }
 
 nav a,
@@ -26,14 +27,13 @@ nav header {
 }
 
 nav header>*+* {
-	margin-top: calc(var(--Row) * .25);
+	margin-top: calc(var(--Row) * .125);
 }
 
 nav a {
+	display: block;
 	text-decoration: none;
 	position: relative;
-	margin: 0;
-	display: block;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
@@ -41,30 +41,23 @@ nav a {
 }
 
 nav header {
-	padding-top: calc(var(--Row) * 2.3);
-	padding-bottom: calc(var(--Row) * .8);
-	/* background-color: var(--dk-beige); */
+	padding-top: calc(var(--Row) * 3);
+	padding-bottom: var(--Row);
 }
 
 nav header span {
-	font-size: .7125em;
+	font-size: .75em;
 	font-weight: 600;
 }
 
 nav header strong {
-	padding: .1825em .325em;
 	text-transform: uppercase;
-	border-radius: 3px;
 	font-weight:800;
-	background-color: var(--dk-brown);
-	color: var(--beige);
 	margin-right: .25em;
-	text-shadow: 0px 2px 0px var(--brown);
 }
 
 nav ul li li>a:before {
 	font-weight: 700;
-	color: var(--dk-brown);
 	line-height: 1;
 	vertical-align: top;
 	text-align: center;
@@ -123,7 +116,7 @@ nav>ul>li.is-complete>a:before {
 	align-items: center;
 	justify-content: flex-start;
 	visibility: hidden;
-	top: calc(var(--Row) * .9875);
+	top: calc(var(--Row) * .875);
 	left: var(--Row);
 }
 
@@ -143,13 +136,11 @@ nav>ul>li.is-complete>a:before {
 		font-weight: 900;
 		text-transform: uppercase;
 		font-size: 12px;
-		color: var(--lt-primary);
 		visibility: visible;
 	}
 }
 
 .toggle-internal-nav::before {
-	color: var(--brown);
 	align-items: center;
 	justify-content: center;
 	content: "▶";
@@ -168,21 +159,12 @@ nav>ul>li.is-complete>a:before {
 	content: "◀";
 }
 
-.toggle-internal-nav:checked::after {
-	color: var(--dk-brown);
-}
-
 .toggle-internal-nav:not(:checked)~nav ul * {
 	color: transparent;
 }
 
 .toggle-internal-nav:not(:checked)~nav header * {
 	opacity: 0;
-}
-
-nav details {
-	--ScaleLevel: var(--Short);
-	--LineHeightFactor: .75;
 }
 
 @media (orientation: landscape) {

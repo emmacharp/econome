@@ -14,12 +14,12 @@
 
 [id="wikiViewer"]>div {
 	max-width: 80ch;
-	background-color: var(--beige);
+	background-color: var(--ColorLtBg);
 	margin: calc(var(--Row) * 2.5) var(--Row);
 	margin-left: auto;
 	transition-duration: 400ms;
 	border-radius: 5px;
-	border: 1px solid var(--ltr-primary);
+	border: 1px solid var(--ColorLines);
 	box-shadow: 0px 4px 14px 1px rgba(0,0,0,.05);
 	display: flex;
 	flex-direction: column;
@@ -32,11 +32,11 @@
 }
 
 [id="wikiViewer"]>div>header {
-	border-bottom: 1px solid var(--ltr-primary);
+	border-bottom: 1px solid var(--ColorLines);
 }
 
 [id="wikiViewer"]>div>footer {
-	border-top: 1px solid var(--ltr-primary);
+	border-top: 1px solid var(--ColorLines);
 	--ScaleLevel: var(--Short);
 }
 [id="wikiViewer"]>div>header>*,
@@ -76,7 +76,7 @@
 }
 
 [id="wikiViewer"] a {
-	color: var(--brown);
+	color: var(--ColorDk);
 	text-decoration: none;
 }
 
@@ -134,12 +134,6 @@ p [data-wiki]:after {
 	display: none;
 }
 
-/* [id="wikiViewer"] .bandeau-container+*, */
-/* [id="wikiViewer"] input+*, */
-/* [id="wikiViewer"] .mw-editsection+* { */
-/* 	margin-top: 0; */
-/* } */
-
 [id="wikiViewer"] .toc,
 [id="wikiViewer"] .references-small,
 [id="wikiViewer"] .references-small~ul,
@@ -181,9 +175,6 @@ p [data-wiki]:after {
 }
 
 [id="wikiViewer"] [class*="infobox"] {
-	margin-bottom: var(--Row);
-	padding: calc(var(--Row) / 2);
-   background-color: var(--dk-beige);
 }
 
 [id="wikiViewer"] .infobox img {
@@ -239,8 +230,11 @@ p [data-wiki]:after {
 		float: right;
 		clear: right;
 		width: 18em;
-		margin: 0;
 		margin-left: calc(var(--Row) * 2);
+		margin-bottom: var(--Row);
+		padding-left: var(--Row);
+		padding-top: var(--Row);
+		border-left: 1px solid var(--ColorLines);
 
 	}
 }

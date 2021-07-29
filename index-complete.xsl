@@ -72,16 +72,13 @@ exclude-result-prefixes="ext msxsl svg math">
 		<link rel="stylesheet" href="assets/css/theme/t-controls.css"/>
 
 		<!-- <link rel="stylesheet" href="assets/css/theme/t-dark_scheme.css" media="screen and (prefers-color-scheme: dark)" /> -->
-		<link rel="stylesheet" href="assets/css/components/c-arrows.css"/>
-		<!-- <link rel="stylesheet" href="assets/css/components/c-cartoon_characters.css" /> -->
+		<link rel="stylesheet" href="assets/css/components/c-cartoon_characters.css" />
 
 		<link rel="stylesheet" href="assets/css/patterns/p-provenance.css"/>
 		<link rel="stylesheet" href="assets/css/patterns/p-auto_line-height.css"/>
 		<link rel="stylesheet" href="assets/css/patterns/p-section_visibility-transitions.css" />
-		<!-- <link rel="stylesheet" href="assets/css/patterns/p-stacking_slides.css"/> -->
 
 		<link rel="stylesheet" href="assets/css/layout/l-master_composition.css"/>
-		<!-- <link rel="stylesheet" href="assets/css/x-dev.css"/> -->
 		</xsl:template>
 
 		<xsl:template name="body-css">
@@ -97,15 +94,12 @@ exclude-result-prefixes="ext msxsl svg math">
 
 	<xsl:template match="root" mode="body" name="body">
 		<body>
-			<!-- <xsl:call-template name="grid-paper-pattern" /> -->
 			<xsl:call-template name="internal-navigation"/>
 			<xsl:call-template name="main-content"/>
 			<xsl:apply-templates select="footer" />
 			<xsl:call-template name="wiki-viewer"/>
 			<xsl:call-template name="svg-elements"/>
 			<xsl:call-template name="scripts"/>	
-
-			<!-- <script src="http://10.0.1.8:35729/livereload.js?snipver=1"></script> -->
 		</body>
 	</xsl:template>
 
@@ -206,10 +200,10 @@ exclude-result-prefixes="ext msxsl svg math">
 		<!-- TODO : nettoyer les données du Choose au complet -->
 		<section class="{local-name()}">
 			<xsl:if test="$units">
+				<input type="checkbox" checked="" name="show-units" class="toggle-units" />
 				<xsl:if test="$subunits">
 					<input type="checkbox" name="show-subunits" class="toggle-subunits" />
 				</xsl:if>
-				<input type="checkbox" checked="" name="show-units" class="toggle-units" />
 			<xsl:choose>
 				<xsl:when test="local-name() = 'value'">
 					<xsl:apply-templates select="ext:node-set($file)//produit[@type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes]" mode="product-creator">
@@ -250,8 +244,6 @@ exclude-result-prefixes="ext msxsl svg math">
 	<xsl:template match="diagram/agent">
 		<section class="link agent {@type} {@class}">	
 			<xsl:if test="@goods|@paid|@value|@foreign|@local|@total">
-				<xsl:apply-templates select="." mode="include-once" />
-
 				<aside>
 					<xsl:if test="@goods">
 						<xsl:attribute name="class">
@@ -325,13 +317,6 @@ exclude-result-prefixes="ext msxsl svg math">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
 				<link rel="stylesheet" href="assets/css/components/c-chain.css"/>
-			</xsl:with-param>
-		</xsl:call-template>
-	</xsl:template>
-
-	<xsl:template match="agent[@goods and not(preceding::agent[@goods])]" mode="include-once">
-		<xsl:call-template name="body-css">
-			<xsl:with-param name="content">
 				<link rel="stylesheet" href="assets/css/components/c-goods-list.css"/>
 			</xsl:with-param>
 		</xsl:call-template>
@@ -420,7 +405,6 @@ exclude-result-prefixes="ext msxsl svg math">
 				<details>
 					<summary><span>En savoir plus sur Econome</span></summary>
 					<p>Econome c'est une initiative de commnuication économique populaire. Comme d'autres <i data-wiki="Otto_Neurath">avant nous</i>, nous espérons informer le public dans ses prises de décision politiques grâce à l'exposition de faits économiques.</p>
-					<p>Econome veut éclairer les enjeux économiques contemporains s'en pour autant prendre position. C'est au public que revient la décision.</p>
 				</details>
 			</header>
 			<ul>

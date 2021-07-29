@@ -7,7 +7,6 @@ aside>details>*,
 [id="wikiViewer"] [id="wikiViewerClose"]:after,
 fieldset input[type=radio]+span {
 	background-color: var(--ColorBgControls);
-	color: var(--Color);
 }
 
 input[class*="toggle-"] {
@@ -24,17 +23,11 @@ nav li li.is-incomplete>a,
 
 nav a {
 	--ColorBgControls: var(--ltst-primary);
-	--Color: var(--primary);
 }
 
 .toggle-internal-nav::before {
 	--ColorBgControls: var(--ltr-primary);
 }
-
-/* nav li.has-active li.is-complete:not(.is-active) a { */
-/* 	--ColorBgControls: var(--lt-yellow); */
-/* } */
-
 
 nav li.is-complete>a,
 fieldset:valid,
@@ -62,7 +55,6 @@ nav li li.is-active>a {
 	flex-shrink: 0;
 	justify-content: center;
 	padding: .5ch;
-	vertical-align: text-top;
 }
 
 [id="wikiViewer"] [id="wikiViewerClose"]:after {

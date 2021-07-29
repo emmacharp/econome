@@ -37,6 +37,7 @@
 		--FontWeight: 600;
 		--ScaleLevel: var(--Taller); }
 
+	nav details,
 	main>section aside {
 		--ScaleLevel: var(--Short);
 		--FontWeight: 650;
