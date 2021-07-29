@@ -96,10 +96,10 @@
 		<!-- TODO : nettoyer les données du Choose au complet -->
 		<section class="{local-name()}">
 			<xsl:if test="$units">
+				<input type="checkbox" checked="" name="show-units" class="toggle-units" />
 				<xsl:if test="$subunits">
 					<input type="checkbox" name="show-subunits" class="toggle-subunits" />
 				</xsl:if>
-				<input type="checkbox" checked="" name="show-units" class="toggle-units" />
 			<xsl:choose>
 				<xsl:when test="local-name() = 'value'">
 					<xsl:apply-templates select="ext:node-set($file)//produit[@type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes]" mode="product-creator">
