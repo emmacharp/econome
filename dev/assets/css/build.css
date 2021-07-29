@@ -7,8 +7,7 @@
 @import "theme/t-controls.css";
 @import "theme/t-general.css";
 @import "theme/t-special.css";
-@import "components/c-arrows.css";
-@import "components/c-cartoon-characters.css";
+@import "components/c-cartoon_characters.css";
 @import "components/c-internal_nav.css";
 @import "components/c-wiki_viewer.css";
 @import "components/c-chain.css";
@@ -20,4 +19,3 @@
 @import "layout/l-master_composition.css";
 @import "layout/l-section_composition.css";
 @import "x-quarantine.css";
-/* @import "x-dev.css"; */
