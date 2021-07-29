@@ -25,3 +25,5 @@
 (B) 2021-07-18 Mettre un oeuf de paques dans la fiche du « Transporteur » @maitrise +experience
 (B) 2021-07-23 Essayer en séquence hauteur > largeur l'animation d'ouverture de la liste de biens @maitrise +design
 (A) 2021-07-23 Gérer l'apparition des éléments de la chaîne en animation plutôt qu'en transition. Une dimension à la fois. @maitrise +design
+(A) 2021-07-28 Arranger l'adaptation du diagramme. Défilement horizontal et réarrangement. @maitrise +design
+(A) 2021-07-28 Remplacer les icônes temporaires. @maitrise +design
