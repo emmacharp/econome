@@ -134,12 +134,6 @@ p [data-wiki]:after {
 	display: none;
 }
 
-/* [id="wikiViewer"] .bandeau-container+*, */
-/* [id="wikiViewer"] input+*, */
-/* [id="wikiViewer"] .mw-editsection+* { */
-/* 	margin-top: 0; */
-/* } */
-
 [id="wikiViewer"] .toc,
 [id="wikiViewer"] .references-small,
 [id="wikiViewer"] .references-small~ul,
@@ -181,9 +175,6 @@ p [data-wiki]:after {
 }
 
 [id="wikiViewer"] [class*="infobox"] {
-	margin-bottom: var(--Row);
-	padding: calc(var(--Row) / 2);
-   background-color: var(--dk-beige);
 }
 
 [id="wikiViewer"] .infobox img {
