@@ -24,6 +24,7 @@
 
 .chain article {
 	flex-direction: column;
+	background-color: var(--ColorBg);
 }
 
 .chain .amount {
@@ -123,11 +124,11 @@
 .chain .product .icon {
 	--TotalAddedValue: calc(var(--NeutralAddedValue, 0%) + var(--LocalAddedValue, 0%) + var(--ForeignAddedValue, 0%));
 	width: calc(var(--IconHeight) * .5);
-	background-color: var(--ltst-primary);
+	background-color: var(--ColorBgAlt);
 	background-image:
 		linear-gradient(to top,
-			var(--lt-primary) 0,
-			var(--lt-primary) var(--NeutralAddedValue, 0%),
+			var(--Color) 0,
+			var(--Color) var(--NeutralAddedValue, 0%),
 			var(--ColorLocal) var(--NeutralAddedValue, 0%),
 			var(--ColorLocal) calc(var(--LocalAddedValue, 0%) + var(--NeutralAddedValue, 0%)),
 			var(--ColorForeign)  calc(var(--LocalAddedValue, 0%) + var(--NeutralAddedValue, 0%)),

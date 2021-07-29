@@ -24,7 +24,7 @@
 		display: block;
 		flex-basis: 0;
 		flex-grow: 1;
-		border-bottom: 1px solid var(--ltr-brown);
+		border-bottom: 1px solid var(--ColorLines);
 		margin-left: .25em;
 	}
 

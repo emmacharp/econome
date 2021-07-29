@@ -7,9 +7,6 @@
 
 /* Configuration maîtresse ----------------------- */
 
-html {
-	color: var(--dk-brown);
-}
 	:root {
 		--dk-primary: #00020F;
 		--primary: #2D3044;
@@ -25,6 +22,7 @@ html {
 		--red: #FF0003;
 		--lt-red: #ffceda;
 		--yellow: #FCFF9B;
+		--lt-yellow: #fffdf0;
 		--dk-yellow: #f7f360;
 		--purple: #ac00b1;
 		--tr-purple: #ED6BFF1F;
@@ -35,10 +33,17 @@ html {
 		--green: #c8ef8e;
 		--lt-green: #dfff5e;
 
-		--ColorBg: #fffdf0;
+		--Color: var(--brown);
+		--ColorDk: var(--dk-primary);
+		--ColorBg: var(--lt-yellow);
+		--ColorLtBg: var(--beige);
+		--ColorBgAlt: var(--ltst-primary);
+		--ColorLtBgAlt: var(--dk-beige);
+		--ColorLines: var(--ltr-primary);
 		--ColorLocal: var(--blue);
 		--ColorForeign: var(--red);
 		--ColorSupport: var(--purple);
+		--ColorLtSupport: var(--lt-purple);
 		--ColorAccent: var(--yellow);
 		--ColorDkAccent: var(--dk-yellow);
 		--ColorBgControls: var(--ColorAccent);

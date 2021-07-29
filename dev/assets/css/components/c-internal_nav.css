@@ -3,7 +3,7 @@
 	se retrouve dans « l-master_composition.css » */
 
 nav {
-	background-color: var(--ltst-primary);
+	background-color: var(--ColorBgAlt);
 	display: flex;
 	overflow: auto;
 	scrollbar-width: none;
