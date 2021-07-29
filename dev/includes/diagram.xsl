@@ -140,8 +140,6 @@
 	<xsl:template match="diagram/agent">
 		<section class="link agent {@type} {@class}">	
 			<xsl:if test="@goods|@paid|@value|@foreign|@local|@total">
-				<xsl:apply-templates select="." mode="include-once" />
-
 				<aside>
 					<xsl:if test="@goods">
 						<xsl:attribute name="class">
@@ -215,13 +213,6 @@
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
 				<link rel="stylesheet" href="assets/css/components/c-chain.css"/>
-			</xsl:with-param>
-		</xsl:call-template>
-	</xsl:template>
-
-	<xsl:template match="agent[@goods and not(preceding::agent[@goods])]" mode="include-once">
-		<xsl:call-template name="body-css">
-			<xsl:with-param name="content">
 				<link rel="stylesheet" href="assets/css/components/c-goods-list.css"/>
 			</xsl:with-param>
 		</xsl:call-template>
