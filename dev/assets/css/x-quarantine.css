@@ -83,7 +83,7 @@ body>footer {
 }
 
 p {
-	min-width: 30ch;
+	/* min-width: 30ch; */
 }
 
 main>section aside {
@@ -244,13 +244,6 @@ main>section>:not(article)  {
 }
 
 
-
-main>section>* {
-	align-self: baseline;
-	align-items: baseline;
-	align-content: baseline;
-}
-
 main>section>header {
 	/* justify-self: center; */
 }
@@ -289,19 +282,45 @@ body>main>* {
 	/* justify-self: end; */
 }
 
+
+@media (orientation: landscape) {
+
 .chain {
 	justify-self: center;
 }
 
-main>section>article {
-	margin-left: calc(-1 var(--Row) * 2);
-	margin-right: calc(-1 var(--Row) * 4);
+
+.chain {
+	margin-left: calc(-1 * var(--Row));
+	margin-right: calc(-1 * var(--Row));
+	overflow: auto;
+	max-width: 100%;
+}
+	.chain {
+		margin-left: calc(-1 var(--Row) * 2);
+		margin-right: calc(-1 var(--Row) * 4);
+	}
+	.chain>div {
+		margin-left: calc(var(--Row) * 2);
+		margin-right: calc(var(--Row) * 4);
+	}
+
+.chain * {
+	display: inline-flex;
 }
 
-main>section>article>div {
-	margin-left: calc(var(--Row) * 2);
-	margin-right: calc(var(--Row) * 4);
+.chain>div {
+	margin-left: calc(var(--Row));
+	margin-right: calc(var(--Row));
 }
+}
+
+@media (max-width: 50ch) {
+	.chain {
+		/* --Size: .6; */
+	}
+}
+
 
 /* Compositions automatiques en fonction du contenu (concept..) */
 
@@ -390,12 +409,17 @@ main>section>form>fieldset~fieldset>*:first-child {
 }
 
 body>nav {
-	background-color: var(--ltst-primary);
+	/* background-color: var(--ltst-primary); */
 }
 
 @media (orientation: portrait) {
 	main>section {
-		padding: var(--Row);
+		padding: var(--Row) 0;
+	}
+	main>section>* {
+		padding-left: var(--Row);
+		padding-right: var(--Row);
+		box-sizing: border-box;
 	}
 	nav a {
 		display: flex;
@@ -428,14 +452,23 @@ main {
 	flex: 1 1 0%;
 	padding: calc(var(--Row) * 2);
 }
+
+main>section {
+	align-items: baseline;
+}
+
+
+
+
+main>section>* {
+	align-self: baseline;
+	align-items: baseline;
+	align-content: baseline;
+}
 }
 
 main>section:not(.is-visible) [class*="cartoon"] {
 	display: none;
-}
-
-main>section {
-	align-items: baseline;
 }
 
 main>section * {
