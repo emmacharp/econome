@@ -175,12 +175,15 @@
 /* 	row-gap: var(--Row); */
 /* 	flex-direction: column; */
 /* 	justify-content: center; */
+/* 	margin: auto; */
 /* } */
-
+/* .chain .goods-list { */
+/* 	align-items: flex-end; */
+/* } */
 
 /* .chain .goods-list .product>section { */
 /* 	margin-bottom: calc(-1 * var(--Row) * 1.5); */
-/* 	padding-bottom: calc(var(--Row) * 4); */
+/* 	padding-bottom: calc(var(--Row) * 1); */
 /* 	border-bottom: 1px solid currentColor; */
 /* } */
 
