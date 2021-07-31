@@ -15,8 +15,8 @@
 			</header>
 			<div id="wikiDump"></div>
 			<footer>
-				<span>Contenu provenant de Wikipedia.</span>
-				<a id="wikiCanonical" rel="canonical" target="_blank" href="#">Visiter la page officielle</a
+				<span>Contenu de Wikipedia.</span>
+				<a id="wikiCanonical" rel="canonical" target="_blank" href="#">Visiter la page</a
 				></footer>
 		</div>
 	</aside>
