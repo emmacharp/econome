@@ -48,7 +48,14 @@
 		--ColorLtSupport: var(--lt-purple);
 		--ColorAccent: var(--yellow);
 		--ColorDkAccent: var(--dk-yellow);
-		--ColorBgControls: var(--ColorAccent);
+		--ColorBgControls: var(--yellow);
+		--ColorControls: var(--purple);
+		--ColorBgComplete: var(--lt-green);
+		--ColorBgIncomplete: var(--lt-red);
+		--ColorBgActive: var(--yellow);
+		--ColorComplete: var(--dk-green);
+		--ColorIncomplete: var(--dk-red);
+		--ColorActive: var(--dk-yellow);
 	}
 
 /* Propriétés supplémentaires configurables */
