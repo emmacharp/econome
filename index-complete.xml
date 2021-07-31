@@ -111,7 +111,7 @@
 			</div>
 		</section>
 </section>
-<section data-type="observation">
+<section type="observation">
 	<header>
 		<h3>Fait économique #01</h3>
 	</header>
@@ -125,7 +125,7 @@
 		</aside>
 	</div>
 </section>
-<section data-type="question">
+<section type="question">
 	<header>
 		<h3>Une p’tite question pour commencer...</h3>
 		<p>Selon vous, les achats suivants constitueraient-ils des achats locaux ?</p>
@@ -190,7 +190,7 @@
 		</div>
 	</section>
 	<h2>La chaîne économique</h2>
-	<section data-type="chaine">
+	<section type="chaine">
 		<header>
 			<h3>Vous, Joey Joe Joe</h3>
 			<p>êtes assoiffé. Vous rêvez d’une bonne Pâpire, bien froide.</p>
@@ -215,7 +215,7 @@
 			</div>
 		</section>
 	</section>
-	<section data-type="chaine">
+	<section type="chaine">
 		<header>
 
 			<h3>Le dépanneur <span class="local">Commun</span></h3>
@@ -243,7 +243,7 @@
 			</aside>
 		</div>
 	</section>
-	<section data-type="chaine">
+	<section type="chaine">
 		<header>
 
 			<h3>Les <span class="local">Entrepôts Correct</span> inc.</h3>
@@ -273,7 +273,7 @@
 
 			</div>
 		</section>
-	<section data-type="chaine">
+	<section type="chaine">
 		<header>
 
 			<h3>La brasserie <span class="local">Moyenne</span></h3>
@@ -322,7 +322,7 @@
 			</div>
 		</section>
 	</section>
-	<section data-type="observation">
+	<section type="observation">
 		<header>
 			<h3>Fait économique #02</h3>
 		</header>
@@ -444,7 +444,7 @@
 			<agent type="transformer" name="Brasserie Moyenne" value="1.90" local="1.29" foreign="0.71" goods="subunits" />
 		</diagram>
 	</section>
-	<section data-type="observation">
+	<section type="observation">
 		<header>
 			<h3>Fait économique #03</h3>
 		</header>
@@ -618,7 +618,7 @@
 			</div>
 		</aside>
 	</section>
-	<section data-type="observation">
+	<section type="observation">
 		<header>
 			<h3>Fait économique #04</h3>
 			<p>Il est nous est impossible de produire localement l’entièreté des biens et services que nous consommons sans perturbations majeures.</p>
@@ -670,7 +670,7 @@
 			</aside>
 		</div>
 	</section>
-	<section data-type="observation">
+	<section type="observation">
 		<header>
 			<h3>Fait économique #05</h3>
 			<p>La rareté des ressources économiques doit nous porter à en optimiser l’usage.</p>
@@ -737,7 +737,7 @@
 			</div>
 		</section>
 	</section>
-	<section data-type="observation">
+	<section type="observation">
 		<header>
 			<h3>Fait économique #final final, promis</h3>
 		</header>

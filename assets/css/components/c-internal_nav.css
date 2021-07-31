@@ -5,9 +5,10 @@
 nav {
 	background-color: var(--ColorBgAlt);
 	display: flex;
-	overflow-y: auto;
-	overflow-x: hidden;
 	scrollbar-width: none;
+
+	--Color: var(--ColorControls);
+	fill: var(--ColorControls);
 }
 
 nav::-webkit-scrollbar {
@@ -67,44 +68,37 @@ nav ul li li>a:before {
 nav li.is-complete>a:before {
 	background-image: none;
 	content: "✓";
-	font-size: clamp(16px, 1rem, .8em);
-	line-height: 120%;
+	font-size: 1.125em;
+	line-height: 110%;
+	position: absolute;
+	color: var(--ColorComplete);
+	text-indent: .06125em;
+	font-weight: 900;
 }
 
-nav a::before {
-	content: "";
-	display: inline-block;
-	flex-shrink: 0;
-	z-index: 1;
-	position: relative;
-	align-self: center;
-	background-repeat: no-repeat;
-	background-size: 90%;
-	background-image: var(--base64-book);
+
+nav li.is-complete>a,
+fieldset:valid,
+.toggle-units.is-read,
+[data-wiki].is-read {
+	background-color: var(--ColorBgComplete);
+	fill: var(--ColorComplete);
 }
 
-nav [data-type=observation]>a:before {
-	background-image: var(--base64-lightbulb);
+nav li.is-complete>a>svg {
+	opacity: 0;
 }
 
-nav [data-type=question]>a:before {
-	background-image: var(--base64-question);
+nav li li.is-incomplete>a,
+.is-read fieldset:invalid,
+.is-read [data-wiki]:not(.is-read) {
+	background-color: var(--ColorBgIncomplete);
+	fill: var(--ColorIncomplete);
 }
 
-nav [data-type=chaine]>a:before {
-	background-image: var(--base64-chain-link);
-}
-
-nav>ul>li>a:before {
-	background-image: var(--base64-mark);
-	background-size: 125%;
-	background-position: -.125rem -.125rem;
-}
-
-nav>ul>li.is-complete>a:before {
-	background-image: var(--base64-thumb);
-	background-position: 70% center;
-	background-size: 140%;
+nav li li.is-active>a {
+	background-color: var(--ColorBgActive);
+	fill: var(--ColorActive);
 }
 
 .toggle-internal-nav {
@@ -182,7 +176,7 @@ nav>ul>li.is-complete>a:before {
 		padding-left: calc(var(--Row) * .25);
 	}
 
-	nav a::before {
+	nav a>svg {
 		width: 1.25rem;
 		height: 1.125rem;
 		margin-right: .5rem;
@@ -216,7 +210,7 @@ nav>ul>li.is-complete>a:before {
 		justify-content: center;
 	}
 
-	nav a::before {
+	nav a>svg {
 		width: 1.75rem;
 		height: 1.75rem;
 	}

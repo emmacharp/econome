@@ -418,6 +418,10 @@ exclude-result-prefixes="ext msxsl svg math">
 			<li>
 				<xsl:apply-templates select="@*"/>
 				<a href="#{$id}">
+					<xsl:variable name="chosen-symbol">
+						<xsl:apply-templates select="." mode="symbol-chooser" />
+					</xsl:variable>
+					<xsl:apply-templates select="ext:node-set($svg-symbols)//svg:symbol[@id = $chosen-symbol]" />
 					<xsl:apply-templates select="header//*[name() = 'h2' or name() = 'h3']//text()" />
 				</a>
 			</li>
@@ -429,6 +433,10 @@ exclude-result-prefixes="ext msxsl svg math">
 		<li>
 			<xsl:apply-templates select="@*"/>
 			<a href="#{$id}">
+					<xsl:variable name="chosen-symbol">
+						<xsl:apply-templates select="." mode="symbol-chooser" />
+					</xsl:variable>
+					<xsl:apply-templates select="ext:node-set($svg-symbols)//svg:symbol[@id = $chosen-symbol]" />
 				<xsl:apply-templates select="text()" />
 			</a>
 			<ul>
@@ -520,6 +528,25 @@ exclude-result-prefixes="ext msxsl svg math">
 		<xsl:apply-templates select="ext:node-set($svg-symbols)//svg:symbol[generate-id() = generate-id(key('symbol-type', current()/@type)[1])]">
 			<xsl:with-param name="attr" select="@*[not(name() = 'type')]" />
 		</xsl:apply-templates>
+	</xsl:template>
+	<xsl:template match="h2" mode="symbol-chooser">
+		<xsl:text>svg-bookmark-symbol</xsl:text>
+	</xsl:template>
+	<xsl:template match="section" mode="symbol-chooser">
+		<xsl:choose>
+			<xsl:when test="@type = 'observation'">
+				<xsl:text>svg-lightbulb-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="@type ='question'">
+				<xsl:text>svg-question-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="@type ='chaine'">
+				<xsl:text>svg-chainlink-symbol</xsl:text>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:text>svg-book-symbol</xsl:text>
+			</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 	<xsl:template match="code" mode="symbol-chooser">
 
@@ -663,8 +690,8 @@ exclude-result-prefixes="ext msxsl svg math">
 			</header>
 			<div id="wikiDump"></div>
 			<footer>
-				<span>Contenu provenant de Wikipedia.</span>
-				<a id="wikiCanonical" rel="canonical" target="_blank" href="#">Visiter la page officielle</a
+				<span>Contenu de Wikipedia.</span>
+				<a id="wikiCanonical" rel="canonical" target="_blank" href="#">Visiter la page</a
 				></footer>
 		</div>
 	</aside>

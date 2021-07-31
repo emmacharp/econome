@@ -1,38 +1,18 @@
-/* html { */
-/* 	background-color: #eee; */
-/* 	filter: invert(1); */
+/* :root { */
+/* 	--Color: var(--ltr-purple); */
+/* 	--ColorDk: var(--lt-purple); */
+/* 	--ColorLtBg: var(--lt-primary); */
+/* 	--ColorBgAlt: var(--ltr-purple); */
+/* 	--ColorLtBgAlt: var(--brown); */
+/* 	--ColorLines: var(--ltr-purple); */
+/* 	--ColorSupport: var(--dk-beige); */
+/* 	--ColorLtSupport: var(--beige); */
+/* 	--ColorAccent: var(--dk-yellow); */
+/* 	--ColorDkAccent: var(--dk-yellow); */
+/* 	--ColorBgControls: var(--ColorAccent); */
+/* 	--ColorBg: var(--primary); */
+/* 	--ColorSupport: var(--lt-purple); */
+/* 	--ColorForeign: var(--lt-red); */
+/* 	--ColorLocal: var(--lt-blue); */
+/* 	--ColorControls: var(--dk-primary); */
 /* } */
-
-/* .local, .foreign, aside { */
-/* 	filter: invert(1); */
-/* } */
-
-/* aside { */
-/* 	filter: invert(.9); */
-/* } */
-
-nav a::before {
-	filter: invert(1);
-}
-
-nav a, nav li.has-active ~ * a, nav li.is-active ~ * a {
-	--ColorBgControls: var(--dk-primary);
-}
-
-:root {
-	--Color: var(--ltr-purple);
-	--ColorDk: var(--lt-purple);
-	--ColorLtBg: var(--lt-primary);
-	--ColorBgAlt: var(--dk-brown);
-	--ColorLtBgAlt: var(--brown);
-	--ColorLines: var(--ltr-purple);
-	--ColorSupport: var(--dk-beige);
-	--ColorLtSupport: var(--beige);
-	--ColorAccent: var(--dk-yellow);
-	--ColorDkAccent: var(--dk-yellow);
-	--ColorBgControls: var(--ColorAccent);
-	--ColorBg: var(--primary);
-	--ColorSupport: var(--lt-purple);
-	--ColorForeign: var(--lt-red);
-	--ColorLocal: var(--lt-blue);
-}

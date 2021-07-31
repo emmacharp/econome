@@ -21,6 +21,25 @@
 			<xsl:with-param name="attr" select="@*[not(name() = 'type')]" />
 		</xsl:apply-templates>
 	</xsl:template>
+	<xsl:template match="h2" mode="symbol-chooser">
+		<xsl:text>svg-bookmark-symbol</xsl:text>
+	</xsl:template>
+	<xsl:template match="section" mode="symbol-chooser">
+		<xsl:choose>
+			<xsl:when test="@type = 'observation'">
+				<xsl:text>svg-lightbulb-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="@type ='question'">
+				<xsl:text>svg-question-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="@type ='chaine'">
+				<xsl:text>svg-chainlink-symbol</xsl:text>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:text>svg-book-symbol</xsl:text>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
 	<xsl:template match="code" mode="symbol-chooser">
 
 		<xsl:choose>

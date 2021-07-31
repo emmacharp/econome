@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ext="http://exslt.org/common" xmlns:serif="http://www.serif.com/" exclude-result-prefixes="ext svg">
 	<xsl:template name="internal-navigation">
 		<input type="checkbox" class="toggle-internal-nav" />
 		<xsl:call-template name="body-css">
@@ -27,6 +27,10 @@
 			<li>
 				<xsl:apply-templates select="@*"/>
 				<a href="#{$id}">
+					<xsl:variable name="chosen-symbol">
+						<xsl:apply-templates select="." mode="symbol-chooser" />
+					</xsl:variable>
+					<xsl:apply-templates select="ext:node-set($svg-symbols)//svg:symbol[@id = $chosen-symbol]" />
 					<xsl:apply-templates select="header//*[name() = 'h2' or name() = 'h3']//text()" />
 				</a>
 			</li>
@@ -38,6 +42,10 @@
 		<li>
 			<xsl:apply-templates select="@*"/>
 			<a href="#{$id}">
+					<xsl:variable name="chosen-symbol">
+						<xsl:apply-templates select="." mode="symbol-chooser" />
+					</xsl:variable>
+					<xsl:apply-templates select="ext:node-set($svg-symbols)//svg:symbol[@id = $chosen-symbol]" />
 				<xsl:apply-templates select="text()" />
 			</a>
 			<ul>
