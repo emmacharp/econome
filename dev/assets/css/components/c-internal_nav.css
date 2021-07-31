@@ -5,9 +5,10 @@
 nav {
 	background-color: var(--ColorBgAlt);
 	display: flex;
-	overflow-y: auto;
-	overflow-x: hidden;
 	scrollbar-width: none;
+
+	--Color: var(--ColorControls);
+	fill: var(--ColorControls);
 }
 
 nav::-webkit-scrollbar {
