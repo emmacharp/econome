@@ -196,48 +196,53 @@
 /* } */
 
 /* ------ DIAGRAMME SILOS ---- */
+/* .chain { */
+/* 	overflow-x: auto; */
+/* } */
 
 /* .chain>div { */
 /* 	display: grid; */
 /* 	grid-auto-flow: column; */
 /* 	grid-gap: var(--Row); */
-/* 	justify-content: center; */
-/* 	justify-items: center; */
 /* 	align-content: center; */
-/* 	align-items: baseline; */
+/* 	align-items: start; */
 /* } */
 
 /* .chain .agent article { */
 /* 	justify-self: center; */
 /* 	text-align: right; */
+/* 	align-items: end; */
 /* } */
 
 /* .chain .goods-list { */
 /* } */
 
-/* .chain .goods-list .product { */
+/* .chain .agent>aside { */
 /* 	grid-row-start: 2; */
 /* 	grid-column-end: span 2; */
-/* 	flex-direction: column; */
 /* 	width: calc(100% + var(--Row) * 1.75); */
 /* 	justify-self: end; */
+/* } */
+
+/* .chain .agent .product { */
+/* 	flex-direction: column; */
 /* } */
 
 /* .chain>div>div>.product { */
 /* 	grid-row-end: span 2; */ 
 /* } */
 
-/* .chain .goods-list .product>section { */
+/* .chain .agent .product>section { */
 /* 	border-left: 1px solid currentColor; */
 /* 	padding-right: 0; */
 /* } */
 
-/* .chain .goods-list .product>section:nth-of-type(2) { */
+/* .chain .agent .product>section:nth-of-type(2) { */
 /* 	margin-top: -7em; */
 /* 	padding-top: 7em; */
 /* } */
 
-/* .chain .goods-list .product>section:first-of-type { */
+/* .chain .agent .product>section:first-of-type { */
 /* 	order: 1; */
 /* 	border-bottom: 1px solid currentColor; */
 /* 	border-bottom-left-radius: 5px; */
