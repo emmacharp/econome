@@ -21,9 +21,10 @@
 		--lt-blue: #A0C5FF;
 		--red: #FF0003;
 		--lt-red: #ffceda;
+		--dk-red: #d00058;
 		--yellow: #FCFF9B;
 		--lt-yellow: #fffdf0;
-		--dk-yellow: #f7f360;
+		--dk-yellow: #848000;
 		--purple: #ac00b1;
 		--tr-purple: #ED6BFF1F;
 		--lt-purple: #fceaff;
@@ -32,6 +33,7 @@
 		--dk-beige: #fdfff0;
 		--green: #c8ef8e;
 		--lt-green: #dfff5e;
+		--dk-green: #2ca800;
 
 		--Color: var(--brown);
 		--ColorDk: var(--dk-primary);
