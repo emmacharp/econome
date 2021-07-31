@@ -48,3 +48,8 @@
 	body>aside h2,
 	body>aside h3 {
 		--ScaleLevel: var(--Base); }
+	
+	body>aside>div>header>*,
+	body>aside>div>footer>* {
+		--ScaleLevel: var(--Short);
+		--LineHeightFactor: .75; }
