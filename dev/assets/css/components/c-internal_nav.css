@@ -148,10 +148,6 @@ nav li li.is-active>a {
 	content: "◀";
 }
 
-.toggle-internal-nav:not(:checked)~nav ul * {
-	color: transparent;
-}
-
 .toggle-internal-nav:not(:checked)~nav header * {
 	opacity: 0;
 }
