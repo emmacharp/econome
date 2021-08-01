@@ -43,55 +43,6 @@ main>section [data-parallax] {
 	transition: none;
 }
 
-main>section>aside {
-	margin: 0;
-	font-weight: 500;
-}
-
-main>section aside {
-	display: flex;
-}
-
-main>section aside div>*+* {
-	margin-top: calc(var(--Row) * .5);
-}
-
-main>section>aside q::first-line {
-	font-weight: 700;
-}
-
-main>section>aside q+cite {
-	margin-top: calc(var(--Row) * .25);
-}
-
-main>section>aside>div>cite {
-	font-weight: 400;
-	--ScaleLevel: var(--Base);
-}
-main>section aside>div {
-	margin: 0;
-}
-
-main>section aside>div {
-	padding-left: calc(var(--Row) * 1.25);
-	margin: 0;
-	color: var(--ColorSupport);
-	--DivDisplay: block;
-}
-
-main>section aside>div>* {
-	display: block;
-}
-
-main>section aside>svg[class*="cartoon"] {
-	position: relative;
-	z-index: 1;
-	height: calc(var(--Row) * 3);
-	margin-right: calc(-1 * var(--Row) * .75);
-	flex-shrink: 0;
-	align-self: center;
-}
-
 main>section>section>h2 {
 	display: block;
 	column-span: all;
@@ -132,14 +83,6 @@ aside details[open] summary:after {
 	height: 10px;
 	background-color: inherit;
 	left: -1px;
-}
-
-main>section>section aside>div {
-	--Color: var(--ColorSupport);
-}
-
-main>section>section *:not(header)+*~aside {
-	flex-grow: 2;
 }
 
 main>section>section>.grille {
