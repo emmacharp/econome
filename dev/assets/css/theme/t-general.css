@@ -58,7 +58,7 @@ p>em { font-style: italic; }
 
 /* Largeur maximale générique 
  * pour quelconque paragraphe */
-p { max-width: 65ch; }
+p { max-width: 65ch; min-width: 24ch; }
 
 /* Désactiver le délai sur iOS 
  * lorsqu'on tape sur un élément */
