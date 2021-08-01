@@ -182,17 +182,9 @@ body>main>* {
 /* 	padding-top: var(--Row); */
 /* } */
 
-.prose {
-	max-width: 80ch;
-}
-
 .prose>*>* {
 	/* display: inline-block; */
 
-}
-
-.prose>*:only-child {
-	column-span: all;
 }
 
 .chain>div {
