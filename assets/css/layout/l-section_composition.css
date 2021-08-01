@@ -11,21 +11,6 @@
 
 
 @media (max-height: 40em) and (max-width: 50em) {
-	main>section>aside {
-		position: relative;
-		align-self: stretch;
-		margin: 0;
-		margin-bottom: var(--Row);
-		top: 0;
-		max-width: initial;
-		flex-shrink: 0;
-	}
-
-	main>section>:not(header):not(article):not(aside) {
-		order: 2;
-	}
-
-
 	main>section>aside>details {
 		margin: 0;
 		width: 100%;
@@ -38,65 +23,6 @@
 	}
 }
 
-main>section [data-parallax] {
-	transform: translate3d(0, calc( var(--scrollParallax) * 1px ), 0);
-	transition: none;
-}
-
-main>section>aside {
-	margin: 0;
-	font-weight: 500;
-}
-
-main>section aside {
-	display: flex;
-}
-
-main>section aside div>*+* {
-	margin-top: calc(var(--Row) * .5);
-}
-
-main>section>aside q::first-line {
-	font-weight: 700;
-}
-
-main>section>aside q+cite {
-	margin-top: calc(var(--Row) * .25);
-}
-
-main>section>aside>div>cite {
-	font-weight: 400;
-	--ScaleLevel: var(--Base);
-}
-main>section aside>div {
-	margin: 0;
-}
-
-main>section aside>div {
-	padding-left: calc(var(--Row) * 1.25);
-	margin: 0;
-	color: var(--ColorSupport);
-	--DivDisplay: block;
-}
-
-main>section aside>div>* {
-	display: block;
-}
-
-main>section aside>svg[class*="cartoon"] {
-	position: relative;
-	z-index: 1;
-	height: calc(var(--Row) * 3);
-	margin-right: calc(-1 * var(--Row) * .75);
-	flex-shrink: 0;
-	align-self: center;
-}
-
-main>section>section>h2 {
-	display: block;
-	column-span: all;
-	--ScaleLevel: var(--Base);
-}
 main>section p>b:only-child {
 	font-size: 1.4125em;
 	display: block;
@@ -134,49 +60,20 @@ aside details[open] summary:after {
 	left: -1px;
 }
 
-main>section>section aside>div {
-	--Color: var(--ColorSupport);
-}
-
-main>section>section *:not(header)+*~aside {
-	flex-grow: 2;
-}
-
-main>section>section>.grille {
-	--DivItemGutter: calc(var(--Row) * 2);
-}
-
-main>h2,
-main>section>section header>h2,
-main>section>section header>h3 {
+main>h2 {
 	--ScaleLevel: var(--Short);
 	color: inherit;
 	line-height: calc(var(--Row) * .5);
 }
 
-main>section>section div header {
-	min-width: calc(var(--Row) * 5);
-	flex-shrink: 0;
-	flex-grow: 0;
-}
-main>section>section div header>*:last-child,
-main>section>header>small:first-child {
-	display: flex;
-	align-items: baseline;
-}
-
 main>section>section div div {
-	flex-grow: 4;
+	flex-grow: 1;
 }
 
-main>section>section div div~section,
-main>section>section div div~* {
-	flex-grow: 4;
+main>section>section div>form {
+	flex-grow: 2;
 }
 
-main>section h1 {
-	max-width: 26ch;
-}
 aside details {
 	max-width: 100%;
 	margin-top: calc(-1 * var(--Row) * 2.325);
@@ -191,6 +88,6 @@ main>section>p:only-of-type {
 	margin-bottom: auto;
 }
 
-main>section>section div>form {
-	flex-grow: 6;
+main>section aside {
+	max-width: 50ch;
 }

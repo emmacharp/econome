@@ -13,7 +13,7 @@ link { display: none !important; }
 
 /* Rythme des contenus ----------------------- */
 
-:not(:where(html, body, label, ul, ol, p))>:not(:where(link))+* {
+:not(:where(html, body, label, ul, ol, p, a, span))>:not(:where(link))+* {
 	margin-top: calc(var(--Row)); }
 
 
@@ -58,7 +58,7 @@ p>em { font-style: italic; }
 
 /* Largeur maximale générique 
  * pour quelconque paragraphe */
-p { max-width: 65ch; }
+p { max-width: 65ch; min-width: 24ch; }
 
 /* Désactiver le délai sur iOS 
  * lorsqu'on tape sur un élément */

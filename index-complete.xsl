@@ -451,7 +451,9 @@ exclude-result-prefixes="ext msxsl svg math">
 			<xsl:apply-templates mode="main-content" />
 		</main>
 	</xsl:template>
+
 	<xsl:template match="*" mode="include-once"></xsl:template>
+
 	<xsl:template match="section[not(preceding::section)]" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
@@ -459,6 +461,15 @@ exclude-result-prefixes="ext msxsl svg math">
 			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
+
+	<xsl:template match="aside[@class='intervention'][not(preceding::aside[@class='intervention'])]" mode="include-once">
+		<xsl:call-template name="body-css">
+			<xsl:with-param name="content">
+				<link rel="stylesheet" href="assets/css/components/c-intervention.css"/>
+			</xsl:with-param>
+		</xsl:call-template>
+	</xsl:template>
+
 	<xsl:template match="*" mode="main-content"/>
 	<xsl:template match="section" mode="main-content">
 		<xsl:apply-templates select="." mode="include-once"/>
@@ -472,6 +483,7 @@ exclude-result-prefixes="ext msxsl svg math">
 					<xsl:value-of select="$id"/>
 				</xsl:attribute>
 			</xsl:if>
+			<xsl:apply-templates select=".//aside" mode="include-once"/>
 			<xsl:apply-templates/>
 		</section>
 	</xsl:template>

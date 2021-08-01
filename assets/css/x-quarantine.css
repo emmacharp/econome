@@ -1,19 +1,3 @@
-.chain div:not([class])+.unknown-link hr {
-	display: none; /* SALE — Faudrait l'enlever dans le XSLT */
-}
-
-main>section {
-/* Cause un bug au défilement si fenêtre plus petite que contenu*/
-	/* content-visibility: auto; */
-	/* contain: content; */
-}
-
-main>section>:not(header)+div:last-child,
-main>section>article>div {
-	/* contain: strict; */
-}
-
-.has-js [data-parallax],
 .has-js body>nav {
 	animation: opacity 1200ms 400ms;
 	animation-fill-mode: both;
@@ -34,14 +18,6 @@ main>section>article>div {
 	--purple: #7a0098;
 }
 
-main>section>section div header>* {
-	margin-top: 0;
-}
-
-main>section>section section header {
-	align-self: flex-end;
-}
-
 .sitename {
 	font-weight: 900;
 	text-transform: uppercase;
@@ -49,84 +25,9 @@ main>section>section section header {
 	display: inline-block;
 }
 
-h1+p {
-	/* font-weight: 700; */
-	/* margin-top: calc(var(--Row) * .25); */
-}
-
-h1 .local {
+h1 span {
 	white-space: nowrap;
 }
-
-nav>ul>li:not(.is-complete)>a {
-	/* background-color: var(--ltr-primary); */
-}
-
-@media (orientation: landscape) {
-	body {
-		flex-wrap: wrap;
-	}
-
-}
-
-body>footer {
-	padding: var(--Row);
-	padding-left: calc(var(--Row) * 4);
-	flex: 0 0 100%;
-	box-sizing: border-box;
-}
-
-@media (orientation: portrait) {
-	body>footer {
-		display: none;
-	}
-}
-
-p {
-	/* min-width: 30ch; */
-}
-
-main>section aside {
-	/* position: fixed; */
-	/* top: auto; */
-	/* bottom: calc(var(--Row) * 3); */
-	/* left: max(calc(100% - 120vh), calc(100% - 52vw)); */
-	/* --Size: 1.25; */
-	max-width: 50ch;
-	/* z-index: 3; */
-}
-
-/* main>section:not(.is-visible)>article~section aside { */
-/* 	opacity: 0; */
-/* 	pointer-events: none; */
-/* } */
-
-main>section>article~section>*,
-main>section>section:only-of-type:not(:last-child) {
-	/* max-width: 80ch; */
-}
-
-/* main>section>figure { */
-/* 	/1* position: fixed; *1/ */
-/* 	right: var(--Row); */
-/* 	top: 50%; */
-/* 	height: 0; */
-/* 	display: flex; */
-/* 	flex-direction: column; */
-/* 	align-items: center; */
-/* 	justify-content: center; */
-/* 	--Size: .5; */
-/* } */
-
-/* main>section>figure>img { */
-/* 	max-width: 40vw; */
-/* 	max-height: 50vh; */
-/* 	display: block; */
-/* } */
-
-/* main>section:not(.is-active)>figure { */
-/* 	opacity: 0; */
-/* } */
 
 strong {
 	background-color: var(--tr-purple);
@@ -137,151 +38,9 @@ mark {
 	background-color: var(--yellow);
 }
 
-main>h2 {
-	padding-bottom: 0;
-}
-
 main > section p > b:only-child {
 	font-size: 1.3125em;
 }
-
-html {
-	-moz-osx-font-smoothing: grayscale;
-}
-
-main > section aside > svg[class*="cartoon"] {
-	height: calc(var(--Row) * 4.5);
-	float: left;
-	shape-outside: circle(55% at 50% 50%) padding-box;
-	margin-right: calc(var(--Row) / 2);
-	margin-top: calc(-1 * var(--Row) * .5);
-	/* margin-left: -30px; */
-	padding-right: calc(var(--Row) / 2);
-	padding-bottom: var(--Row);
-}
-main > section aside > div {
-	/* max-width: 30ch; */
-}
-
-main > section aside {
-	display: block;
-}
-
-.goods-list .toggle-subunits {
-	order: 1;
-}
-
-.goods-list .subunit>span {
-	order: 2;
-}
-
-.goods-list .subunit>span {
-	transition: 220ms var(--ease-out-back);	
-	transition-property: height, width, padding, opacity;
-}
-
-.goods-list .toggle-subunits:not(:checked)~.subunit>span,
-.goods-list .toggle-units:not(:checked)~p>span,
-.goods-list .toggle-units:not(:checked)~.toggle-subunits {
-	height: 0;
-	width: 0;
-	padding: 0;
-	opacity: 0;
-	pointer-events: none;
-}
-
-.goods-list [class*="toggle-"] {
-	font-size: .75em;
-}
-.goods-list section:not(:hover)>[class*="toggle-"] {
-	opacity: 0;
-	/* display: none; */
-}
-
-.goods-list .toggle-subunits {
-	margin-left: .5em;
-	margin-right: .5em;
-	position: relative;
-	top: -.5em;
-}
-
-.goods-list .toggle-units {
-	position: absolute;
-	left: 100%;
-	bottom: 3em;
-	margin-left: -.75em;
-	z-index: 2;
-	box-shadow: 0px 0px 0px 4px var(--ColorBg);
-	border-radius: 3px;
-}
-
-.goods-list .product>section {
-	position: relative;
-}
-
-/* main>section>:not(header)+div:last-child { */
-/* 	display: none; */
-/* } */
-
-/* main>section::after { */
-/* 	content: ""; */
-/* 	display: block; */
-/* 	height: 0; */
-/* 	width: 100%; */
-/* 	border-bottom: 1px solid var(--brown); */
-/* 	margin-bottom: -1px; */
-/* } */
-
-main>section>* {
-	/* margin: 0; */
-}
-
-main>section>:not(article)  {
-	/* grid-column-end: span 3; */
-	/* max-width: 90ch; */
-	/* justify-self: center; */
-	width: 100%;
-}
-
-
-main>section>header {
-	/* justify-self: center; */
-}
-
-body>main>* {
-	/* padding-right: calc(var(--Row) * 4); */	
-	max-width: 85rem;
-	margin-left: auto;
-	margin-right: auto;
-	box-sizing: border-box;
-}
-
-/* .prose>* { */
-/* 	display: inline-block; */
-/* 	page-break-inside: avoid; */
-/* 	margin-top: 0; */
-/* 	padding-top: var(--Row); */
-/* } */
-
-.prose {
-	max-width: 80ch;
-}
-
-.prose>*>* {
-	/* display: inline-block; */
-
-}
-
-.prose>*:only-child {
-	column-span: all;
-}
-
-.chain>div {
-	/* justify-content: space-between; */
-	/* max-width: initial; */
-	/* justify-self: end; */
-}
-
 
 @media (orientation: landscape) {
 
@@ -294,11 +53,11 @@ body>main>* {
 	margin-left: calc(-1 * var(--Row));
 	margin-right: calc(-1 * var(--Row));
 	overflow: auto;
-	max-width: 100%;
+	max-width: 90vw;
 }
 	.chain {
-		margin-left: calc(-1 var(--Row) * 2);
-		margin-right: calc(-1 var(--Row) * 4);
+		margin-left: calc(-1 * var(--Row) * 2);
+		margin-right: calc(-1 * var(--Row) * 4);
 	}
 	.chain>div {
 		margin-left: calc(var(--Row) * 2);
@@ -321,28 +80,6 @@ body>main>* {
 	}
 }
 
-
-/* Compositions automatiques en fonction du contenu (concept..) */
-
-/* main>section>header:nth-last-child(3), */
-/* main>section>section:nth-last-child(2):nth-child(2) { */
-/* 	grid-row: 1; */
-/* } */
-
-/* main>section>header:nth-last-child(3)>* { */
-/* 	max-width: 15ch; */
-/* 	justify-self: start; */
-/* } */
-
-/* main>section>article:last-child, */
-/* main>section>article:nth-child(2):nth-last-child(2) { */
-/* 	grid-column-end: span 2; */
-/* } */
-
-/* main > section > header:nth-last-child(3) p { */
-/* 	max-width: 26ch; */
-/* } */
-
 main>section div p:only-of-type,
 main>section .prose:not(:only-child) {
 	margin-right: auto;
@@ -360,38 +97,11 @@ main>section>header p:only-of-type {
 	max-width: 42ch;
 }
 
-/* .chain .active svg, */
-/* .chain .active h4, */
-/* .chain .active aside { */
-/* 	animation-name: pop; */
-/* 	animation-delay: 400ms; */
-/* 	animation-fill-mode: both; */
-/* 	animation-duration: 200ms; */
-/* 	animation-timing-function: var(--ease-out-quad); */
-/* 	transform-origin: center; */
-/* } */
-
-/* @keyframes pop { */
-/* 	0% { */
-/* 		transform: scale(0); */
-/* 	} */
-
-/* 	100% { */
-/* 		transform: scale(1); */
-/* 	} */
-/* } */
-
-
 fieldset + fieldset {
 	margin-top: calc(var(--Row) * 2);
 }
 fieldset p~div {
-	/* flex-wrap: nowrap; */
 	max-width: max-content;
-}
-
-fieldset div {
-	/* justify-content: space-between; */
 }
 
 fieldset p {
@@ -408,10 +118,6 @@ main>section>form>fieldset~fieldset>*:first-child {
 	margin-top: calc(var(--Row) * 2.5);
 }
 
-body>nav {
-	/* background-color: var(--ltst-primary); */
-}
-
 @media (orientation: portrait) {
 	main>section {
 		padding: var(--Row) 0;
@@ -424,17 +130,26 @@ body>nav {
 	nav a {
 		display: flex;
 	}
+	main>section>:first-child {
+		margin-top: auto;
+	}
+
+	main>section>:last-child {
+		margin-bottom: auto;
+	}
+
+	main>section>*+* {
+		/* margin-top: calc(var(--Row)); */
+	}
 }
 
 @media (orientation: landscape) {
 main>section {
 	display: grid;
-	/* grid-template: repeat(auto-fill, minmax(1fr, 20ch)) / repeat(auto-fill, minmax(1fr, 20px)); */
 	grid-template: repeat(auto-fit, minmax(0,max-content)) / auto;
 	grid-auto-flow: row;
 	grid-auto-columns: auto;
 	align-content: center;
-	/* justify-items: center; */
 	column-gap: var(--Row);
 	row-gap: calc(var(--Row) * 2);
 }
@@ -458,8 +173,8 @@ main>section {
 }
 
 
-form {
-	--DivItemGutter: calc(var(--Row));
+
+
 }
 
 main>section>* {
@@ -467,12 +182,14 @@ main>section>* {
 	align-items: baseline;
 	align-content: baseline;
 }
+
+form {
+	align-items: baseline;
 }
 
-main>section:not(.is-visible) [class*="cartoon"] {
+form {
+	--DivItemGutter: calc(var(--Row));
+}
+main>section:not(.is-visible) .intervention {
 	display: none;
-}
-
-main>section * {
-	align-items: inherit;
 }

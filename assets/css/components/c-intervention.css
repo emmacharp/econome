@@ -1,0 +1,25 @@
+.intervention div>*+* {
+	margin-top: calc(var(--Row) * .5);
+}
+
+.intervention q::first-line {
+	font-weight: 700;
+}
+
+.intervention q+cite {
+	margin-top: calc(var(--Row) * .25);
+}
+
+.intervention>div {
+	--DivDisplay: block;
+}
+
+.intervention>svg[class*="cartoon"] {
+	height: calc(var(--Row) * 4.5);
+	float: left;
+	shape-outside: circle(55% at 50% 50%) padding-box;
+	margin-right: calc(var(--Row) / 2);
+	margin-top: calc(-1 * var(--Row) * .5);
+	padding-right: calc(var(--Row) / 2);
+	padding-bottom: var(--Row);
+}

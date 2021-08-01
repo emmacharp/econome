@@ -38,7 +38,12 @@ nav a {
 	text-overflow: ellipsis;
 	overflow: hidden;
 	box-sizing: border-box;
-	fill: currentColor;
+	color: var(--ColorControls);
+	background-color: var(--ColorBgControls);
+}
+
+nav svg {
+	fill: var(--ColorControls);
 }
 
 nav header {
@@ -57,18 +62,11 @@ nav header strong {
 	margin-right: .25em;
 }
 
-nav ul li li>a:before {
-	font-weight: 700;
-	line-height: 1;
-	vertical-align: top;
-	text-align: center;
-	text-indent: -.25em;
-}
 
 nav li.is-complete>a:before {
 	background-image: none;
 	content: "✓";
-	font-size: 1.125em;
+	font-size: var(--Row);
 	line-height: 110%;
 	position: absolute;
 	color: var(--ColorComplete);
@@ -78,8 +76,8 @@ nav li.is-complete>a:before {
 
 
 nav li.is-complete>a {
-	background-color: var(--ColorBgComplete);
-	color: var(--ColorComplete);
+	--ColorBgControls: var(--ColorBgComplete);
+	--ColorControls: var(--ColorComplete);
 }
 
 nav li.is-complete>a>svg {
@@ -87,13 +85,13 @@ nav li.is-complete>a>svg {
 }
 
 nav li li.is-incomplete>a {
-	background-color: var(--ColorBgIncomplete);
-	color: var(--ColorIncomplete);
+	--ColorBgControls: var(--ColorBgIncomplete);
+	--ColorControls: var(--ColorIncomplete);
 }
 
 nav li li.is-active>a {
-	background-color: var(--ColorBgActive);
-	color: var(--ColorActive);
+	--ColorBgControls: var(--ColorBgActive);
+	--ColorControls: var(--ColorActive);
 }
 
 .toggle-internal-nav {
@@ -197,12 +195,13 @@ nav li li.is-active>a {
 		height: calc(var(--Row) * 1.75);
 		padding: 0;
 		font-size: 0;
+		color: transparent;
 		align-items: center;
 		justify-content: center;
 	}
 
 	nav a>svg {
-		width: 1.75rem;
-		height: 1.75rem;
+		width: var(--Row);
+		height: var(--Row);
 	}
 }

@@ -1,5 +1,4 @@
 @import "utilities/u-superdiv.css";
-@import "theme/t-dark_scheme.css";
 @import "theme/t-library.css";
 @import "theme/t-config.css";
 @import "theme/t-setup.css";
@@ -7,6 +6,7 @@
 @import "theme/t-controls.css";
 @import "theme/t-general.css";
 @import "theme/t-special.css";
+@import "components/c-intervention.css";
 @import "components/c-cartoon_characters.css";
 @import "components/c-internal_nav.css";
 @import "components/c-wiki_viewer.css";
