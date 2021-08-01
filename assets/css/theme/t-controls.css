@@ -1,45 +1,27 @@
-nav a,
 fieldset span,
 fieldset input,
 aside>details>*,
-[class*="toggle-"]::before,
-[data-wiki]:after,
-[id="wikiViewer"] [id="wikiViewerClose"]:after,
 fieldset input[type=radio]+span {
 	background-color: var(--ColorBgControls);
+	--Color: var(--ColorControls);
+}
+
+
+fieldset:valid,
+.toggle-units.is-read,
+[data-wiki].is-read {
+	--ColorBgControls: var(--ColorBgComplete);
+	--ColorControls: var(--ColorComplete);
+}
+
+.is-read fieldset:invalid,
+.is-read [data-wiki]:not(.is-read) {
+	--ColorBgControls: var(--ColorBgIncomplete);
 }
 
 input[class*="toggle-"] {
 	-webkit-appearance: none;
 	appearance: none;
-}
-
-nav li li.is-incomplete>a,
-.is-read fieldset:invalid,
-.is-read [data-wiki]:not(.is-read) {
-	--ColorBgControls: var(--lt-red);
-	--Color: var(--primary);
-}
-
-nav a {
-	--ColorBgControls: var(--ltst-primary);
-}
-
-.toggle-internal-nav::before {
-	--ColorBgControls: var(--ltr-primary);
-}
-
-nav li.is-complete>a,
-fieldset:valid,
-.toggle-units.is-read,
-[data-wiki].is-read {
-	--ColorBgControls: var(--lt-green);
-	--Color: var(--primary);
-}
-
-nav li li.is-active>a {
-	--ColorBgControls: var(--yellow);
-	--Color: var(--primary);
 }
 
 [class^="toggle-"]::before,
@@ -75,7 +57,7 @@ nav li li.is-active>a {
 }
 
 .toggle-units.is-read:before,
-[data-wiki].is-read:after {
+[data-wiki].is-read:not(:hover):after {
 	content: "✓";
 }
 
@@ -84,12 +66,16 @@ aside>details>*,
 [data-wiki]:after,
 [id="wikiViewer"] [id="wikiViewerClose"]:after,
 fieldset input[type=radio]+span,
-[class*="toggle-"]:before {
-	border-radius: .25em;
-	border: 1px solid var(--dk-yellow);
+[class*="toggle-"]:before,
+.toggle-internal-nav::before {
+	background-color: var(--ColorBgControls);
+	border-radius: 3px;
+	border: 1px solid var(--ColorActive);
 	border-top-width: 1px;
 	border-bottom-width: 2px;
-	box-shadow: 0 1px 2px  var(--purple);
+	box-shadow: 0 1px 2px  var(--ColorBgAlt);
+	color: var(--ColorControls);
+	fill: var(--ColorControls);
 }
 
 [data-wiki]:hover:after,
@@ -97,15 +83,13 @@ fieldset input[type=radio]+span,
 [id="wikiViewer"] [id="wikiViewerClose"]:hover:after,
 fieldset input[type=radio]:not(:checked)~span:hover {
 
-	--ColorBgControls: var(--lt-purple);
-	border-color: var(--lt-yellow);
+	background-color: var(--ColorAccent);
+	/* border-color: var(--lt-yellow); */
 }
 
-fieldset input[type=radio]:checked~span,
-[data-wiki].is-read:after {
+fieldset input[type=radio]:checked~span {
 	box-shadow: inset 0 1px 2px  var(--purple);
 	top: 2px;
 	border-top-width: 2px;
 	border-bottom-width: 1px;
 }
-
