@@ -13,7 +13,7 @@ link { display: none !important; }
 
 /* Rythme des contenus ----------------------- */
 
-:not(:where(html, body, label, ul, ol, p))>:not(:where(link))+* {
+:not(:where(html, body, label, ul, ol, p, a, span))>:not(:where(link))+* {
 	margin-top: calc(var(--Row)); }
 
 
