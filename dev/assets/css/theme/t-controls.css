@@ -1,45 +1,27 @@
-nav a,
 fieldset span,
 fieldset input,
 aside>details>*,
-[class*="toggle-"]::before,
-[data-wiki]:after,
-[id="wikiViewer"] [id="wikiViewerClose"]:after,
 fieldset input[type=radio]+span {
 	background-color: var(--ColorBgControls);
+	--Color: var(--ColorControls);
+}
+
+
+fieldset:valid,
+.toggle-units.is-read,
+[data-wiki].is-read {
+	--ColorBgControls: var(--ColorBgComplete);
+	--ColorControls: var(--ColorComplete);
+}
+
+.is-read fieldset:invalid,
+.is-read [data-wiki]:not(.is-read) {
+	--ColorBgControls: var(--ColorBgIncomplete);
 }
 
 input[class*="toggle-"] {
 	-webkit-appearance: none;
 	appearance: none;
-}
-
-nav li li.is-incomplete>a,
-.is-read fieldset:invalid,
-.is-read [data-wiki]:not(.is-read) {
-	--ColorBgControls: var(--lt-red);
-	--Color: var(--primary);
-}
-
-nav a {
-	--ColorBgControls: var(--ltst-primary);
-}
-
-.toggle-internal-nav::before {
-	--ColorBgControls: var(--ltr-primary);
-}
-
-nav li.is-complete>a,
-fieldset:valid,
-.toggle-units.is-read,
-[data-wiki].is-read {
-	--ColorBgControls: var(--lt-green);
-	--Color: var(--primary);
-}
-
-nav li li.is-active>a {
-	--ColorBgControls: var(--yellow);
-	--Color: var(--primary);
 }
 
 [class^="toggle-"]::before,

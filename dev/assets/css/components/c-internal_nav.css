@@ -77,28 +77,23 @@ nav li.is-complete>a:before {
 }
 
 
-nav li.is-complete>a,
-fieldset:valid,
-.toggle-units.is-read,
-[data-wiki].is-read {
+nav li.is-complete>a {
 	background-color: var(--ColorBgComplete);
-	fill: var(--ColorComplete);
+	color: var(--ColorComplete);
 }
 
 nav li.is-complete>a>svg {
 	opacity: 0;
 }
 
-nav li li.is-incomplete>a,
-.is-read fieldset:invalid,
-.is-read [data-wiki]:not(.is-read) {
+nav li li.is-incomplete>a {
 	background-color: var(--ColorBgIncomplete);
-	fill: var(--ColorIncomplete);
+	color: var(--ColorIncomplete);
 }
 
 nav li li.is-active>a {
 	background-color: var(--ColorBgActive);
-	fill: var(--ColorActive);
+	color: var(--ColorActive);
 }
 
 .toggle-internal-nav {
