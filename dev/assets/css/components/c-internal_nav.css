@@ -8,7 +8,6 @@ nav {
 	scrollbar-width: none;
 
 	--Color: var(--ColorControls);
-	fill: var(--ColorControls);
 }
 
 nav::-webkit-scrollbar {
@@ -39,6 +38,7 @@ nav a {
 	text-overflow: ellipsis;
 	overflow: hidden;
 	box-sizing: border-box;
+	fill: currentColor;
 }
 
 nav header {
