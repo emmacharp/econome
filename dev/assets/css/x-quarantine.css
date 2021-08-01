@@ -458,7 +458,9 @@ main>section {
 }
 
 
-
+form {
+	--DivItemGutter: calc(var(--Row));
+}
 
 main>section>* {
 	align-self: baseline;
