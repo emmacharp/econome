@@ -206,11 +206,6 @@ p [data-wiki]:after {
 }
 
 @media (max-width: 60em) {
-	[id=wikiViewer]>div>header,
-	[ud=wikiViewer]>div>footer {
-		--Size: .7;
-	}
-
 	[id="wikiViewer"]>div {
 		max-width: 100%;
 		height: 100%;
