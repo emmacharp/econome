@@ -62,25 +62,6 @@ nav>ul>li:not(.is-complete)>a {
 	/* background-color: var(--ltr-primary); */
 }
 
-@media (orientation: landscape) {
-	body {
-		flex-wrap: wrap;
-	}
-
-}
-
-body>footer {
-	padding: var(--Row);
-	padding-left: calc(var(--Row) * 4);
-	flex: 0 0 100%;
-	box-sizing: border-box;
-}
-
-@media (orientation: portrait) {
-	body>footer {
-		display: none;
-	}
-}
 
 p {
 	/* min-width: 30ch; */
