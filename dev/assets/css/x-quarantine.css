@@ -149,16 +149,6 @@ html {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-main > section aside > svg[class*="cartoon"] {
-	height: calc(var(--Row) * 4.5);
-	float: left;
-	shape-outside: circle(55% at 50% 50%) padding-box;
-	margin-right: calc(var(--Row) / 2);
-	margin-top: calc(-1 * var(--Row) * .5);
-	/* margin-left: -30px; */
-	padding-right: calc(var(--Row) / 2);
-	padding-bottom: var(--Row);
-}
 main > section aside > div {
 	/* max-width: 30ch; */
 }
