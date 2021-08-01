@@ -82,9 +82,7 @@ fieldset input[type=radio]+span,
 [class*="toggle-"]:hover:before,
 [id="wikiViewer"] [id="wikiViewerClose"]:hover:after,
 fieldset input[type=radio]:not(:checked)~span:hover {
-
 	background-color: var(--ColorAccent);
-	/* border-color: var(--lt-yellow); */
 }
 
 fieldset input[type=radio]:checked~span {
