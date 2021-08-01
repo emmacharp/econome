@@ -106,7 +106,7 @@
 	}
 
 	main>section {
-		min-height: calc(100vh - var(--V_GridUnitRest, 0vh));
+		min-height: 100vh;
 	}
 	
 	body>nav {
