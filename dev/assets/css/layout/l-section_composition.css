@@ -88,3 +88,6 @@ main>section>p:only-of-type {
 	margin-bottom: auto;
 }
 
+main>section aside {
+	max-width: 50ch;
+}

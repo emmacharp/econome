@@ -67,16 +67,6 @@ p {
 	/* min-width: 30ch; */
 }
 
-main>section aside {
-	/* position: fixed; */
-	/* top: auto; */
-	/* bottom: calc(var(--Row) * 3); */
-	/* left: max(calc(100% - 120vh), calc(100% - 52vw)); */
-	/* --Size: 1.25; */
-	max-width: 50ch;
-	/* z-index: 3; */
-}
-
 /* main>section:not(.is-visible)>article~section aside { */
 /* 	opacity: 0; */
 /* 	pointer-events: none; */
