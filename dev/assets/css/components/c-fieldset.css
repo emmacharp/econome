@@ -60,7 +60,7 @@ fieldset input[type=radio] {
 }
 
 fieldset p {
-	font-weight: 700;
+	font-weight: 600;
 	flex-grow: 1;
 	flex-basis: 0;
 }
