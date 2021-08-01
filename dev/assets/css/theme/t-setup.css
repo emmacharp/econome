@@ -43,4 +43,4 @@
 
 /* Permettre aux icônes de recevoir la couleur contextuelle */
 	i {
-		fill: var(--Color, inherit); }
+		fill: currentColor; }
