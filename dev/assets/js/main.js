@@ -190,9 +190,12 @@ const fetchWikiContent = (event) => {
 			}
 
 			wikiContent = wikiContent.replace(/(style=".+?")/gm, '');
-			wikiCanonical.setAttribute('href', `https://fr.wikipedia.org/wiki/${wikiPage}`);
-			wiki.innerHTML = wikiContent;
 
+			// Sanitize HTML (snyk vulnerability)
+			const sanitizedWikiContent = DOMPurify.sanitize(wikiContent);
+			wiki.innerHTML = sanitizedWikiContent;
+
+			wikiCanonical.setAttribute('href', `https://fr.wikipedia.org/wiki/${wikiPage}`);
 			if(!wikiViewer.classList.contains('is-visible')){
 				wikiViewer.classList.add('is-visible');
 			}
