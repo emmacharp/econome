@@ -27,3 +27,4 @@
 (A) 2021-07-23 Gérer l'apparition des éléments de la chaîne en animation plutôt qu'en transition. Une dimension à la fois. @maitrise +design
 (A) 2021-07-28 Arranger l'adaptation du diagramme. Défilement horizontal et réarrangement. @maitrise +design
 (A) 2021-07-28 Remplacer les icônes temporaires. @maitrise +design
+(B) 2021-08-24 essayer scroll-snap-stop pour éviter de passer outre certaines sections. @maitrise @design
