@@ -8,7 +8,7 @@
 /* Configuration maîtresse ----------------------- */
 
 	:root {
-		--dk-primary: #00020F;
+		--dk-primary: #20233C;
 		--primary: #2D3044;
 		--lt-primary: #A4A391;
 		--ltr-primary: #D5D5D2;
@@ -21,10 +21,10 @@
 		--lt-blue: #A0C5FF;
 		--red: #FF0003;
 		--lt-red: #ffceda;
-		--dk-red: #d00058;
+		--dk-red: #721E42;
 		--yellow: #FCFF9B;
 		--lt-yellow: #fffdf0;
-		--dk-yellow: #848000;
+		--dk-yellow: #99804D;
 		--purple: #ac00b1;
 		--tr-purple: #ED6BFF1F;
 		--lt-purple: #fceaff;
@@ -33,7 +33,7 @@
 		--dk-beige: #fdfff0;
 		--green: #c8ef8e;
 		--lt-green: #dfff5e;
-		--dk-green: #2ca800;
+		--dk-green: #729764;
 
 		--Color: var(--brown);
 		--ColorDk: var(--dk-primary);
@@ -46,13 +46,13 @@
 		--ColorForeign: var(--red);
 		--ColorSupport: var(--purple);
 		--ColorLtSupport: var(--lt-purple);
-		--ColorAccent: var(--yellow);
+		--ColorAccent: var(--lt-purple);
 		--ColorDkAccent: var(--dk-yellow);
 		--ColorBgControls: var(--yellow);
-		--ColorControls: var(--purple);
+		--ColorControls: var(--lt-brown);
 		--ColorBgComplete: var(--lt-green);
 		--ColorBgIncomplete: var(--lt-red);
-		--ColorBgActive: var(--yellow);
+		--ColorBgActive: var(--lt-purple);
 		--ColorComplete: var(--dk-green);
 		--ColorIncomplete: var(--dk-red);
 		--ColorActive: var(--dk-yellow);
