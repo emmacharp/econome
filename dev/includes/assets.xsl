@@ -27,7 +27,8 @@
 		</xsl:template>
 
 		<xsl:template name="scripts">
-			<script src="assets/js/htmx.min.js"></script>
+			<script src="assets/js/htmx.min.js" defer="defer"></script>
+			<script src="assets/js/purify.min.js" defer="defer"></script>
 			<script src="assets/js/main.js" defer="defer"></script>
 			<link rel="stylesheet" href="assets/css/x-quarantine.css"/>
 		</xsl:template>
