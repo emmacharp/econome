@@ -30,7 +30,7 @@ h1 span {
 }
 
 strong {
-	background-color: var(--tr-purple);
+	background-color: var(--ColorBgAlt);
 	font-weight: 500;
 }
 
@@ -119,6 +119,10 @@ main>section>form>fieldset~fieldset>*:first-child {
 }
 
 @media (orientation: portrait) {
+	main {
+		overflow-y: hidden;
+	}
+
 	main>section {
 		padding: var(--Row) 0;
 	}
@@ -140,6 +144,10 @@ main>section>form>fieldset~fieldset>*:first-child {
 
 	main>section>*+* {
 		/* margin-top: calc(var(--Row)); */
+	}
+
+	section[id] {
+		scroll-snap-stop: always;
 	}
 }
 
@@ -178,7 +186,7 @@ main>section {
 }
 
 main>section>* {
-	align-self: baseline;
+	/* align-self: baseline; */
 	align-items: baseline;
 	align-content: baseline;
 }
@@ -191,5 +199,9 @@ form {
 	--DivItemGutter: calc(var(--Row));
 }
 main>section:not(.is-visible) .intervention {
+	display: none;
+}
+
+nav>ul>li>a {
 	display: none;
 }
