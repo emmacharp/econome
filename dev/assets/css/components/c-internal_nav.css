@@ -3,11 +3,10 @@
 	se retrouve dans « l-master_composition.css » */
 
 nav {
-	background-color: var(--ColorBgAlt);
+	background-color: var(--ColorBgControls);
 	display: flex;
 	scrollbar-width: none;
 
-	--Color: var(--ColorControls);
 }
 
 nav::-webkit-scrollbar {
@@ -66,12 +65,12 @@ nav header strong {
 nav li.is-complete>a:before {
 	background-image: none;
 	content: "✓";
-	font-size: var(--Row);
-	line-height: 110%;
+	font-size: calc(var(--Row) * .625);
+	line-height: 120%;
 	position: absolute;
-	color: var(--ColorComplete);
+	color: var(--ColorControls);
 	text-indent: .06125em;
-	font-weight: 900;
+	font-weight: 700;
 }
 
 
@@ -89,7 +88,8 @@ nav li li.is-incomplete>a {
 	--ColorControls: var(--ColorIncomplete);
 }
 
-nav li li.is-active>a {
+nav ul:not(:hover) li li.is-active>a,
+nav li li a:hover {
 	--ColorBgControls: var(--ColorBgActive);
 	--ColorControls: var(--ColorActive);
 }
