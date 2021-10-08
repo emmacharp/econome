@@ -4,30 +4,30 @@
 	<!-- TODO : produire les styles -->
 	<section>
 		<header>
-			<h1>Pourquoi <span class="local">acheter local<i> <symbol type="basket" /></i></span> ?</h1>
-			<p>Un exposé Econome de l'enjeu économique caché derrière les slogans.</p>
+			<h1>Pourquoi<br/><span class="local">acheter local<i> <symbol type="basket" /></i></span> ?</h1>
+			<p>Un exposé Econome</p>
 		</header>
 		<section>
 			<div class="prose">
-				<p><b>Et parce que nous tous, citoyens et consommateurs, devrions être outillés pour prendre aux mieux nos décisions économiques quotidiennes. </b></p>
-				<p>C'est dans cet esprit de <i data-wiki="Rationalité" data-sections="4">rationalité</i> que vous sera exposé ci-bas <strong>l'achat local en tant qu'enjeu économique.</strong></p>
+				<p><b>L'achat local, en tant que comportement de consommation, est un enjeu économique. Comme tout autre, nous devons le raisonner en termes d'alternatives, de gain et de perte, de gagnants et de perdants.</b></p>
+				<p>Et ni les campagnes publicitaires, les slogans ou lignes de presse actuels ne nous aident, nous, public de consommateurs, travailleurs et citoyens, à aborder l'enjeu de l'achat local de manière <i data-wiki="Rationalité" data-sections="4">rationnelle.</i></p>
+				<p>Pourquoi acheter local, donc ? Certainement pas pour « faire rouler l'économie ». Suivez-nous jusqu'en bas et vous comprendrez pourquoi. Pourquoi il faut aller au-delà des slogans. Pourquoi il nous faut faire des choix efficaces.</p>
 			</div>
 		</section>
 	</section>
 	<h2>Introduction</h2>
 	<section>
 		<header>
-			<p>Ah la la. Où sont nos manières ? Présentons-nous, avant tout.</p>
+			<p>Mais oups. Ah la la. Où sont nos manières ? Présentons-nous, avant tout.</p>
 		</header>
 		<section>
 			<div class="grille">
 				<div class="prose">
-					<p><b>Nous sommes deux amis espérant faire de l’analyse économique un moyen d'éclairer nos décisions communes.</b></p>
-					<p>Nous exposons les implications économiques de nos décisions sans toutefois ne prescrire de marche à suivre. Il revient au public lui-même de <em>se faire une tête</em>, comme on dit.</p>
+					<p><b>Nous sommes deux amis espérant faire de l’analyse économique un moyen d'informer nos décisions communes.</b></p>
+					<p>Nous exposons faits et implications économiques sans toutefois ne prescrire de marche à suivre. Il revient au public lui-même de <em>se faire une tête</em>, comme on dit.</p>
 				</div>
 				<aside class="intervention">
 					<symbol type="emma" class="cartoon_emma animated" />
-
 					<div>
 						<p><b>Hello !</b></p>
 						<p>Je m’appelle Marc-André et je suis le concepteur de Econome. J’interviendrai ici et là pour illustrer certains aspects de l'exposé.</p>
@@ -42,7 +42,7 @@
 				</aside>
 			</div>
 		</section>
-		
+
 	</section>
 	<section type="question">
 		<header>
@@ -86,15 +86,14 @@
 	<section>
 		<header>
 			<h3>Bon. Une bonne chose de faite.</h3>
-			<p>Commençons maintenant par le début... Comment définit-on <span class="local">achat local</span> ?</p>
+			<p>Ravis que vous soyez des nôtres, Joey Joe Joe. Commençons maintenant notre exposé par le début... Comment définit-on <span class="local">achat local</span> ?</p>
 		</header>
 		<section>
 			<div class="grille">
 				<div class="prose">
 					<p><b>On parle publiquement d’achat local lorsqu’on magasine à la <span class="local">boutique du coin</span> plutôt que sur <span class="foreign">Amazon</span>. Ou bien lorsqu’on choisit une <span class="local">bière du Québec</span> plutôt qu’un <span class="foreign">vin de l’Ontario</span>.</b></p>
-					<p>Peu importe la variante, lorsqu'il est question d'acheter localement sur la place publique, il va de soi qu'il s'agisse d'une <strong>augmentation de notre quantité actuelle d'achats locaux</strong>.</p>
-					<p>Augmenter la « part locale » de votre consommation d'un bien choisi, Joey Joe Joe, produira divers effets sur toute l’activité économique, locale et nationale. Pour consommer localement de manière efficace, il nous faut comprendre que nos changements de consommation se répercutent partout dans l'économie. Et pourquoi devrait-on consommer de manière efficace ?</p>
-					<p><b>Parce que l’achat local, c’est un moyen. Un moyen d’arriver à un objectif.</b></p>
+					<p>D'un côté comme de l'autre, une augmentation de notre quantité actuelle d'achats locaux est implicite.</p>
+					<p>Augmenter la « part locale » de votre consommation, Joey Joe Joe modifie l’activité économique, locale et nationale. Pour consommer localement de manière efficace, il nous faut comprendre que nos changements de consommation se répercutent partout dans l'économie.</p>
 				</div>
 				<aside class="intervention">
 					<symbol type="emma" class="cartoon_emma animated" />
@@ -109,68 +108,54 @@
 				</aside>
 			</div>
 		</section>
-</section>
-<section type="observation">
-	<header>
-		<h3>Fait économique #01</h3>
-	</header>
-	<div class="grille">
-		<p>Toute action économique est un moyen d’atteindre un objectif. Même l'action d'acheter localement.</p>
-		<aside class="intervention">
-			<div>
-				<q>Il faut acheter québécois, il faut acheter local, c’est important pour nos entreprises québécoises, et puis c’est important pour nos travailleurs/travailleuses québécois de ces entreprises-là.</q>
-				<cite>François Legault, Premier Ministre du Québec</cite>
-			</div>
-		</aside>
-	</div>
-</section>
-<section type="question">
-	<header>
-		<h3>Avant de commencer...</h3>
-		<p>Selon vous, Joey Joe Joe, les achats suivants constitueraient-ils des achats locaux ?</p>
-	</header>
-	<div class="grille">
-		<form>
-			<fieldset>
-				<div class="grille">
-					<p>Acheter une caisse de Heineken au dépanneur du coin.</p>
-					<div>
-						<label><input type="radio" name="heineken" /><span class="local">Oui !</span></label>
-						<label><input type="radio" name="heineken" /><span class="foreign">Non !</span></label>
-						<label><input type="radio" name="heineken" /><span>Pas sûr...</span></label>
+	</section>
+	
+	<section type="question">
+		<header>
+			<h3>Avant de commencer...</h3>
+			<p>Selon vous, Joey Joe Joe, les achats suivants constitueraient-ils des achats locaux ?</p>
+		</header>
+		<div class="grille">
+			<form>
+				<fieldset>
+					<div class="grille">
+						<p>Acheter une caisse de Heineken au dépanneur du coin.</p>
+						<div>
+							<label><input type="radio" name="heineken" /><span class="local">Oui !</span></label>
+							<label><input type="radio" name="heineken" /><span class="foreign">Non !</span></label>
+							<label><input type="radio" name="heineken" /><span>Pas sûr...</span></label>
+						</div>
 					</div>
-				</div>
-			</fieldset>
-			<fieldset>
-				<div class="grille">
-					<p>Acheter une pinte de Guinness à votre bar préféré.</p>
-					<div>
-						<label><input type="radio" name="guinness" /><span class="local">Oui !</span></label>
-						<label><input type="radio" name="guinness" /><span class="foreign">Non !</span></label>
-						<label><input type="radio" name="guinness" /><span>Pas sûr...</span></label>
+				</fieldset>
+				<fieldset>
+					<div class="grille">
+						<p>Acheter une pinte de Guinness à votre bar préféré.</p>
+						<div>
+							<label><input type="radio" name="guinness" /><span class="local">Oui !</span></label>
+							<label><input type="radio" name="guinness" /><span class="foreign">Non !</span></label>
+							<label><input type="radio" name="guinness" /><span>Pas sûr...</span></label>
+						</div>
 					</div>
-				</div>
-			</fieldset>
-			<fieldset>
-				<div class="grille">
-					<p>Acheter une caisse de Boréale chez Wal-Mart.</p>
-					<div>
-						<label><input type="radio" name="boreale" /><span class="local">Oui !</span></label>
-						<label><input type="radio" name="boreale" /><span class="foreign">Non !</span></label>
-						<label><input type="radio" name="boreale" /><span>Pas sûr...</span></label>
+				</fieldset>
+				<fieldset>
+					<div class="grille">
+						<p>Acheter une caisse de Boréale chez Wal-Mart.</p>
+						<div>
+							<label><input type="radio" name="boreale" /><span class="local">Oui !</span></label>
+							<label><input type="radio" name="boreale" /><span class="foreign">Non !</span></label>
+							<label><input type="radio" name="boreale" /><span>Pas sûr...</span></label>
+						</div>
 					</div>
-				</div>
-			</fieldset>
-		</form>
-		<aside class="intervention">
+				</fieldset>
+			</form>
+			<aside class="intervention">
 
-			<symbol type="emma" class="cartoon_emma animated" />
-			<div>
-			<p>C'est pas si simple, non ? Il me semble qu'il y a toujours un peu de « local » dans ces achats... OK. Essayons de démêler tout ça.</p>
-				<!-- <p>Vous l’aurez compris, nous utiliserons notre consommation québécoise de bière comme cas d’exposition. Donc, tant mieux si vous aimez la bière... Sinon, pourriez-vous faire semblant ? Henri et moi vous en serions reconnaissants...</p> -->
-			</div>
-		</aside>
-	</div>
+				<symbol type="emma" class="cartoon_emma animated" />
+				<div>
+					<p>C'est pas si simple, non ? Il me semble qu'il y a toujours un peu de « local » dans ces achats... OK. Essayons de démêler tout ça.</p>
+				</div>
+			</aside>
+		</div>
 	</section>
 	<section>
 		<header>
@@ -181,7 +166,7 @@
 			<div class="prose">
 				<p><b>Hum hum... bon.</b></p>
 				<p>Il faut beau, il fait chaud et vous, Joey Joe Joe, avez soif. Et rien n’étanche cette soif comme votre bière québécoise préférée : La Pâpire.</p>
-				<p>Quand vous achetez une caisse de Pâpire, vous mettez en branle toute une chaîne d’<i data-wiki="Agent_économique">agents</i> qui se partagent les rôles économiques nécessaires à votre consommation. Reconstituons donc cette chaîne ensemble, Joey Joe Joe !</p>
+				<p>Quand vous achetez une caisse de Pâpire, vous mettez en branle toute une chaîne d’<i data-wiki="Agent_économique">agents économiques</i> nécessaires à votre consommation. Reconstituons donc cette chaîne ensemble, Joey Joe Joe !</p>
 			</div>
 			<aside class="intervention">
 				<symbol type="henri" class="cartoon_henri animated" />
@@ -194,91 +179,9 @@
 	<h2>La chaîne économique</h2>
 	<section type="chaine">
 		<header>
-			<h3>Vous, Joey Joe Joe</h3>
-			<p>êtes assoiffé. Vous rêvez d’une bonne Pâpire, bien froide.</p>
+			<h3>Joey Joe Joe et sa Pâpire</h3>
+			<p>Une histoire économique locale</p>
 		</header>
-		<diagram type="chain">
-			<agent type="consumer" name="Joey Joe Joe" class="active" />
-			<product type="beer" name="La Pâpire" complete="" value="100%"  class="local" />
-		</diagram>
-		<section>
-			<div class="grille">
-				<div class="prose">
-					<p><b>En tant que <i data-wiki="Consommateur" data-sections="2">consommateur</i>, La façon dont vous allez acheter &amp; consommer votre bière détermine la constitution complète de la chaîne économique que vous mettez en branle.</b></p>
-				</div>
-				<aside class="intervention">
-					<symbol type="henri" class="cartoon_henri animated" />
-					<div>
-						<p>Tous les chiffres utilisés dans le reste de notre exposé proviennent de Statistiques Canada et représentent <strong>en moyenne</strong> 😉  l’industrie brassicole québécoise.</p>
-					</div>
-				</aside>
-			</div>
-		</section>
-	</section>
-	<section type="chaine">
-		<header>
-
-			<h3>Le dépanneur <span class="local">Commun</span></h3>
-			<p>au coin de votre rue, détient toujours une quantité suffisante de <span class="local">🍺 Pâpire.</span></p>
-		</header>	
-
-		<diagram type="chain">
-			<agent type="consumer" name="Joey Joe Joe" />
-			<product type="beer" name="Bière" complete="" value="100%" />
-			<agent type="retailer" name="Dépanneur Commun" class="local active" />
-		</diagram>
-
-		<div class="grille">
-			<div class="prose">
-				<p><b>Le dépanneur joue le rôle du <i data-wiki="Commerce_de_détail">détaillant</i>. Il stocke une certaine quantité de Pâpire pour la vendre à de fins <em>connoisseurs</em> comme vous, Joey Joe Joe.</b></p>
-				<!-- <p>Le détaillant amène <i data-wiki="Bien_(économie)">le bien de consommation</i> — votre Pâpire — d’un point A à un point B. Sans le détaillant, votre bière vous serait difficilement accessible !</p> -->
-				<p>Votre Pâpire n’apparaît toutefois pas d’elle-même dans les réfrigérateurs de votre dépanneur Commun. Il doit effectivement s’approvisionner quelque part...</p>
-			</div>
-			<aside class="intervention">
-
-				<symbol type="henri" class="cartoon_henri animated" />
-				<div>
-					<p>Juste pour être certain : oui, Marc-andré et moi utilisons notre consommation sociale de bière comme exemple. Mais le raisonnement que nous développons ensemble <em>s’applique à tout type de consommation</em>. Certainement pas juste à la bière !</p>
-				</div>
-			</aside>
-		</div>
-	</section>
-	<section type="chaine">
-		<header>
-
-			<h3>Les <span class="local">Entrepôts Correct</span> inc.</h3>
-			<p>reçoit, entrepose puis transporte plusieurs palettes de Pâpire.</p>
-		</header>
-		<diagram type="chain">
-			<agent type="consumer" name="Joey Joe Joe" />
-			<product type="beer" name="Bière" complete="" value="100%" />
-			<agent type="retailer" name="Dépanneur Commun" />
-			<product type="beer" name="Bière" value="86%" />
-			<agent type="manufacturer" name="Entrepôts Correct" class="local active" />
-		</diagram>
-			<div class="grille">
-				<div class="prose">
-					<p><b>Les Entrepôts Correct inc. combine ici les rôles de <i data-wiki="Commerce_de_gros">grossiste</i> et de <i data-wiki="Le_Transporteur" class="easter">transporteur</i>.</b></p>
-					<p>Le grossiste, comme le détaillant avant lui, s’assure que votre Pâpire soit distribué d'un point A à un point B. Il entrepose de vastes quantités de <i data-wiki="Bien_(économie)">biens de consommation</i> et permet ainsi une production élargie.</p>
-
-					<p>Justement, parlant de <strong>production</strong>...</p>
-				</div>
-				<aside class="intervention">
-					<symbol type="emma" class="cartoon_emma animated" />
-					<div>
-						<p>Sans les Entrepôts Correct, le dépanneur Commun serait inondé de Pâpire et ne pourrait plus vous offrir les bonnes pinottes accompagnant si bien votre Pâpire. <em>Huuummmm... De la bière pis des pinoooottes</em>.</p>
-					</div>
-				</aside>
-
-			</div>
-		</section>
-	<section type="chaine">
-		<header>
-
-			<h3>La brasserie <span class="local">Moyenne</span></h3>
-			<p>brasse <span class="local">La Pâpire</span> à votre grand plaisir, Joey Joe Joe.</p>
-		</header>
-
 		<diagram type="chain">
 			<agent type="consumer" name="Joey Joe Joe" />
 			<product type="beer" name="Bière" complete="" value="100%" />
@@ -290,31 +193,67 @@
 		</diagram>
 		<section>
 			<div class="grille">
-				<div class="prose">
+				<article>
+					<h4>Vous, Joey Joe Joe</h4>
+					<p>êtes assoiffé. Vous rêvez d’une bonne Pâpire, bien froide.</p>
+					<p><b>En tant que <i data-wiki="Consommateur" data-sections="2">consommateur</i>, la façon dont vous allez acheter et consommer votre bière détermine la constitution complète de la chaîne économique que vous mettez en branle.</b></p>
+				</article>
+				<article>
+					<h4>Le dépanneur <span class="local">Commun</span></h4>
+					<p>au coin de votre rue, détient toujours une quantité suffisante de <span class="local">🍺 Pâpire.</span></p>
+					<p><b>Le dépanneur, en tant que <i data-wiki="Commerce_de_détail">détaillant</i>, stocke une certaine quantité de Pâpire pour la vendre à de fins <em>connoisseurs</em> comme vous, Joey Joe Joe.</b></p>
+					<p>Votre Pâpire n’apparaît toutefois pas d’elle-même dans les réfrigérateurs de votre dépanneur Commun. Il doit effectivement s’approvisionner quelque part...</p>
+
+				</article>
+				<article>
+					<h4>Les <span class="local">Entrepôts Correct</span> inc.</h4>
+					<p>reçoit, entrepose puis transporte plusieurs palettes de Pâpire.</p>
+					<p><b>Les Entrepôts Correct inc., en tant que <i data-wiki="Commerce_de_gros">grossiste</i> et <i data-wiki="Le_Transporteur" class="easter">transporteur</i> s’assure que votre Pâpire soit distribuée d'un point A à un point B. Un peu comme le dépanneur Commun au final. Mais contrairement à lui, le grossiste entrepose de vastes quantités de <i data-wiki="Bien_(économie)">biens de consommation</i> et permet ainsi une production élargie. Justement, parlant de <strong>production</strong>...</b></p>
+				</article>
+				<article>
+					<h4>La brasserie <span class="local">Moyenne</span></h4>
+					<p>brasse <span class="local">La Pâpire</span> à votre grand plaisir, Joey Joe Joe.</p>
 					<p><b>La brasserie Moyenne est le transformateur de notre chaîne.</b> </p>
 					<p>Le transformateur est un agent fondamental, celui qui se procure les <i data-wiki="Consommation_intermédiaire" data-sections="0">biens intermédiaires</i> et les transforme en biens de consommation. <strong>Bref, sans brasserie, pas de bonne bière !</strong> </p>
-				</div>
+				</article>
+			</div>
+
+		</section>
+		<aside class="intervention">
+			<symbol type="henri" class="cartoon_henri animated" />
+			<div>
+				<p>Tous les chiffres utilisés dans notre exposé proviennent de Statistiques Canada et représentent <strong>en moyenne</strong> 😉 l'activité brassicole (et économique !) québécoise.</p>
+			</div>
+		</aside>
 				<aside class="intervention">
 					<symbol type="henri" class="cartoon_henri animated" />
 					<div>
-						<p>Dépendant de vos habitudes de consommation, la brasserie Moyenne peut endosser plusieurs rôles de la chaîne. Prendre une bière sur place, à la brasserie, lui fait aussi endosser le rôle de détaillant écartant complètement de la chaîne le pauvre dépanneur Commun.</p>
+						<p>Dépendant de vos habitudes de consommation, la brasserie Moyenne peut endosser plusieurs rôles de la chaîne. Prendre une bière sur place, à la brasserie, lui fait aussi endosser le rôle de détaillant... écartant complètement de la chaîne le pauvre dépanneur Commun !</p>
 					</div>
 				</aside>
+		<aside class="intervention">
+
+			<symbol type="henri" class="cartoon_henri animated" />
+			<div>
+				<p>Juste pour être certain : oui, Marc-andré et moi utilisons notre consommation sociale de bière comme exemple. Mais le raisonnement que nous développons ensemble <em>s’applique à tout type de consommation</em>. Certainement pas juste à la bière !</p>
 			</div>
-		</section>
+		</aside>
 	</section>
+
 	<section>
 		<header>
-			<p>La chaîne économique s’avère être la colonne vertébrale de votre consommation, Joey Joe Joe. C’est dans chacun de ses maillons que la valeur de votre bière est créée.</p>
+			<p>La chaîne économique s’avère être la colonne vertébrale de votre consommation, Joey Joe Joe. C’est dans chacun de ses maillons que la valeur de votre bière est ajoutée.</p>
 		</header>
 		<diagram type="chain">
+			<agent type="consumer" name="Joey Joe Joe" />
+			<product type="beer" name="Bière" complete="" value="100%" />
 			<agent type="retailer" name="Dépanneur Commun" class="local" />
-			<product type="beer" name="Bière" />
+			<product type="beer" name="Bière" value="86%" />
 			<agent type="manufacturer" name="Entrepôts Correct" class="local" />
-			<product type="beer" name="Bière" />
+			<product type="beer" name="Bière" value="81%" />
 			<agent type="transformer" name="Brasserie Moyenne" class="local" />
 		</diagram>
-			<section>
+		<section>
 			<div class="prose">
 				<p><b>La <i data-wiki="Valeur_ajoutée" data-sections="1"><strong>valeur ajoutée</strong></i> est le deuxième concept primordial à une compréhension rationnelle de notre acte de consommation locale.</b></p>
 				<p>La valeur ajoutée représente la trace économique de chacun des agents de la chaîne. Grâce à elle, nous pouvons évaluer quelle part de votre satisfaction repose sur quelles épaules et beaucoup plus encore.</p>
@@ -323,7 +262,7 @@
 	</section>
 	<section type="observation">
 		<header>
-			<h3>Fait économique #02</h3>
+			<h3>💡 Fait économique #02</h3>
 		</header>
 		<div class="grille">
 			<p>La chaîne de valeur mise en branle par un achat est aussi importante que l’achat en tant que tel.</p>
@@ -363,7 +302,7 @@
 	</section>
 	<section>
 		<header>
-			<p>Voyez ci-bas comment votre 10 $ parcoure la chaîne. Chaque agent s’en garde une partie.</p>
+			<p>Voyez ci-bas comment votre 10 $ parcoure la chaîne. Chaque agent s’en garde une partie. Cette partie, c'est la valeur ajoutée par son activité économique.</p>
 		</header>
 
 
@@ -377,33 +316,24 @@
 			<agent type="transformer" name="Brasserie Moyenne" total="3.90" />
 		</diagram>
 
-		<aside class="intervention">
-			<symbol type="henri" class="cartoon_henri animated" />
-			<div>
-				<p>« Mais est-ce que c’est ça, la valeur ajoutée, la partie que chaque agent de la chaîne garde pour lui ? », vous demandez-vous Joey Joe Joe.</p>
-				<p>Pas tout à fait, mais presque ! Il s’agit du revenu.</p>
-			</div>
-		</aside>
+		<p>En achetant 10 $ de Pâpire, vous achetez 10 $ de valeur ajoutée par les agents « maillons » de la chaîne.</p>
 	</section>
-	
+
 	<section type="chaine">
 		<header>
-			<p>Le revenu se décompose en valeur ajoutée, oui, mais aussi en <i data-wiki="Intrant">intrants</i>.</p>
+			<p>Chacun des agents de la chaîne ajoute sa part de valeur à la Pâpire de deux façons. D'une part elle crée de la valeur et de l'autre, elle en achète. Chacun achète de la valeur créée par d'autres, exactement comme vous, Joey Joe Joe. .</p>
 		</header>
 		<div class="grille">
 			<div class="prose">
-				<p><b>Arrêtons-nous un instant pour regarder notre chaîne de valeur complétée. Plusieurs réalités économiques importantes y apparaissent.</b></p>
-				<p>Notamment, il devient clair que :</p>
-				<ol>
-					<li><strong>tous les agents économiques ne se partagent pas également les revenus.</strong> et que ; </li>
-					<li>finalement, votre achat, Joey Joe Joe, <strong>devient l’achat de la chaîne de valeur au complet</strong>.</li>
-				</ol>
-				<p>Et c’est là où ça devient intéressant...</p>
+				<p><b>La valeur que vous achetez est considérée comme un « bien de consommation » alors que la valeur achetée par la brasserie Moyenne, elle, est considérée comme un « <i data-wiki="Intrant">bien intrant</i> ».</b></p>
+				<p>Finalement, votre achat, Joey Joe Joe, contient aussi tous les achats faits par la chaîne économique. Pour que la valeur que vous achetez soit locale, il faut que la valeur que le dépanneur Commun et la brasserie Moyenne achètent soit locale, elle aussi. Pour acheter local, il faut produire local.</p>
+				<p>Plus il y aura de valeur ajoutée produite localement, le plus haut sera le degré de localité de votre achat.</p>
 			</div>
+
 			<aside class="intervention">
 				<symbol type="henri" class="cartoon_henri animated" />
 				<div>
-					<p>Pour aborder l’achat local de manière rationnelle, il nous faut le faire en termes de valeur ajoutée.</p>
+					<p>Pourquoi utiliser la <strong>provenance de la valeur ajoutée</strong> plutôt que la provenance des agents ? Car des agents locaux peuvent acheter de la valeur produite à l’étranger (les importations !) ou à l'inverse, produire de la valeur localement et la vendre à l'étranger (les exportations !).</p>
 				</div>
 			</aside>
 		</div>
@@ -417,32 +347,7 @@
 			<agent type="transformer" name="Brasserie Moyenne" value="1.90" local="2.00" />
 		</diagram>
 	</section>
-	<section type="chaine">
-		<header>
-			<p>Car ultimement votre achat, Joey Joe Joe, se décompose dans la chaîne en bien intermédiaires qui peuvent être ou bien <span class="local">locaux</span>, ou bien <span class="foreign">étrangers</span>.</p>
-		</header>
-		<div class="grille">
-			<div class="prose">
-				<p><b>Plus il y aura de valeur ajoutée et d’intrants produits qui soient locaux, le plus haut sera le <strong>degré de localité</strong> de votre achat.</b></p>
-				<p>Effectivement, Joey Joe Joe, le meilleur indicateur du degré de localité c’est <strong>la provenance de la valeur ajoutée de votre achat</strong>. </p>
-			</div>
-			<aside class="intervention">
-				<symbol type="henri" class="cartoon_henri animated" />
-				<div>
-					<p>Pourquoi utiliser la <strong>provenance de la valeur ajoutée</strong> plutôt que la provenance des agents ? Car des agents locaux peuvent acheter de la valeur produite à l’étranger (les importations !) ou à l'inverse, produire de la valeur localement et la vendre à l'étranger (les exportations !).</p>
-				</div>
-			</aside>
-		</div>
-		<diagram type="chain">
-			<agent type="consumer" name="Joey Joe Joe" paid="10" />
-			<product type="beer" name="Bière" complete="" local="93%" foreign="7%" />
-			<agent type="retailer" name="Dépanneur Commun" local="0.51" value="0.85" goods="subunits" />
-			<product type="beer" name="Bière" local="79%" foreign="7%" />
-			<agent type="manufacturer" name="Entrepôts Correct" value="0.26" local="0.15" goods="subunits" />
-			<product type="beer" name="Bière" local="75%" foreign="7%" />
-			<agent type="transformer" name="Brasserie Moyenne" value="1.90" local="1.29" foreign="0.71" goods="subunits" />
-		</diagram>
-	</section>
+
 	<section type="observation">
 		<header>
 			<h3>Fait économique #03</h3>
@@ -457,283 +362,183 @@
 			</aside>
 		</div>
 	</section>
-	<h2>Optimiser l’achat local</h2>
+	<h2>Les ressources économiques</h2>
 	<section type="question">
-		<header>
-			<h3>La locale — 100% québécoise</h3>
-			<p><span class="local">Acheter local</span>, nous l’avons dit, implique une <strong>augmentation du degré de localité de votre consommation</strong>. Présentement, la brasserie québécoise Moyenne présente un degré de localité de 73%.</p>
-		</header>
-		<section>
-			<div class="grille">
-				<p><b>Pourrions-nous, selon vous, <i data-wiki="Incitation_économique">inciter</i> la brasserie Moyenne à développer La locale, bière dont le degré de localité serait de 100% ?</b></p>
-				<form>
-					<fieldset>
-						<div class="grille">
-							<label>
-								<input type="radio" value="oui" />
-								<span>Oui !</span>
-							</label>
-							<label>
-								<input type="radio" value="non" />
-								<span>Non !</span>
-							</label>
-						</div>
-					</fieldset>
-				</form>
-			</div>
-		</section>
-	</section>
-	<section>
-		<header>
-			<p>Désolé, Joey Joe Joe. D’emblée, nous sommes obligés de dire non.</p>
-		</header>
-		<section>
-			<div class="prose">
-				<p>Certains biens intermédiaires, nécessaires à votre consommation de bière, ne peuvent être produits au Québec, tout simplement parce que la matière première est indisponible ici.</p>
-				<p>Cette contrainte matérielle porte le degré maximum de localité possible à 90%. Nous pouvons donc espérer un gain de 17% de localité pour notre Locale.</p>
-			</div>
-		</section>
-	</section>
-	<section>
-		<header>
-			<h3>La locale : <s>100%</s> 90% québécoise</h3>
-			<p>Voyons les implications de ce changement de comportement économique.</p>
-		</header>
+
 		<div class="grille">
-			<div class="prose">
-				<p>Premièrement, toute valeur ajoutée l’est par la main-d’œuvre, par les travailleurs et travailleuses donc. Cette valeur se traduit, entre autres, en salaire.</p>
-				<p>Pour atteindre notre objectif de localité, il nous faut donc ajouter de la main d’œuvre locale aux maillons de notre chaîne de valeur économique.</p>
-			</div>
-			<aside class="intervention">
-				<symbol type="henri" class="cartoon_henri animated" />
-				<div>
-					<p>Combien de travailleurs et travailleuses nous faudrait-il ajouter à notre production locale de bière pour atteindre notre 90% de localité ?</p>
-					<p><b>Possiblement trop...</b></p>
-				</div>
-			</aside>
-		</div>
-	</section>
-	<section>
-		<header>
-			<h3>Tout est question de ressources, Joey Joe Joe.</h3>
-			<p>Et le fait est que les travailleur.e.s du Québec sont tout autant ressource économique que le houblon ou l’eau nécessaire à la production de la Locale.</p>
-		</header>
-		<div class="grille">
-			<div class="prose">
-				<p><b>Il s’agit de surcroît d’une ressource, rare. Très rare même.</b></p>
-				<p>La rareté de la main-d’œuvre locale implique qu’on doive la débaucher, c’est-à-dire, la soutirer d’autres industries, qui elles se retrouveront à leur tour en pénurie de main-d’œuvre... Perpétuant un cycle de pénurie.</p>
-				<p>Ce qui a un effet notable sur...</p>
-			</div>
-		<aside class="intervention">
-			<symbol type="henri" class="cartoon_henri animated" />
-			<div>
-				<p><a href="https://www.journaldequebec.com/2021/04/10/un-peu-moins-de-150000-postes-vacants" target="_blank">Plusieurs</a> <a href="https://www.lesaffaires.com/dossier/signaux-forts/penurie-de-main-det8217oeuvre--la-deuxieme-vague/623445" target="_blank">parlent</a> de <a href="https://www.ledevoir.com/opinion/idees/598739/idees-a-propos-de-la-penurie-de-main-d-oeuvre" target="_blank">pénurie</a> de <a href="https://ici.radio-canada.ca/nouvelle/1790287/penurie-main-oeuvre-richesse-appauvrissement-economie-emploi-salaires" target="_blank">main-d’œuvre</a> même.</p>
-				<p>Raison de plus alors pour nous assurer d’<i data-wiki="Allocation_des_ressources">allouer cette ressource</i> de manière efficace !</p>
-			</div>
-		</aside>
-		</div>
-	</section>
-	<section type="chaine">
-		<header>
-			<h3><span class="local">La Locale</span> <br /> 90% québécoise, 25 % plus chère</h3>
-			<div class="grille">
-				<p>Plus nous augmentons la demande de main-d’œuvre locale, plus celle-ci devra être chère payée pour se déplacer et produire.</p>
-			</div>
-		</header>
-		<diagram type="chain">
-			<agent type="consumer" name="Joey Joe Joe" paid="12.50" />
-			<product type="beer" name="La Locale" complete="" local="100%"  />
-	 		<agent type="retailer" name="Dépanneur Commun" class="local" local="0.51" value="0.85" goods="subunits" />
-			<product type="beer" name="Bière" local="86%" />
-			<agent type="manufacturer" name="Entrepôts Correct" class="local" value="0.26" local="0.15" goods="subunits" />
-			<product type="beer" name="Bière" local="82%" />
-			<agent type="transformer" name="Brasserie Moyenne" value="3.90" local="3.00" class="local" goods="subunits" />
-		</diagram>
-		<div class="grille">
-			<div class="prose">
-				<p><b>Une surenchère salariale s’enclenche. Et bien que nous soyons tout un chacun heureux d’être mieux rémunéré pour notre production de valeur en tant que travailleur(r/se)s, il faut considérer l’envers de la médaille : <strong>une hausse proportionnelle des prix</strong>.</b></p>
-				<p>Effectivement, le prix que vous devez payer pour votre Locale, Joey Joe Joe est 25% plus élevé que ce que vous déboursiez pour votre Pâpire. Plus important encore, <strong>la hausse des prix ainsi déclenchée se transmettra tranquillement d’une industrie à l’autre</strong>. On parlera alors de <strong>hausse du niveau général de prix</strong>. Certains appellent cela <i data-wiki="Inflation">inflation</i>.</p>
-				<p><b>Mais, est-ce que cette hausse du niveau général des prix est inévitable ? N’y aurait-il pas de moyen pour l’éviter ?</b></p>
-			</div>
-			<aside class="intervention">
-				<symbol type="henri" class="cartoon_henri animated" />
-				<div>
-					<p>La hausse des prix, conséquence de la pression accrue sur la main d’œuvre locale viendra annuler l’augmentation des salaires.</p>
-					<p>Et donc, aucun bénéfice économique n’est gagné. L’économie tourne... dans le vide.</p>
-				</div>
-			</aside>
-		</div>
-	</section>
-	<section type="chaine">
-		<header>
-			<h3>La Locale : 75% québécoise, 25% étrangère</h3>
-				<p>Pour éviter la surenchère salariale, il faut <i data-wiki="Offre_et_demande">équilibrer l’offre et la demande</i> de travailleurs locaux.</p>
-		</header>
-		<div class="grille">
-			<div class="prose">
-				<p>En produisant La Locale, la demande de travailleurs locaux augmente mais l’offre de travailleurs locaux reste pour sa part inchangée (ça prend tout un moment produire de nouveaux travailleurs !). C’est pourquoi, pour produire La Locale sans faire pression sur le niveau général des prix, il nous faut ultimement... <strong>Importer des travailleurs.</strong></p>
-				<p>Vous avez bien lu, oui. Pour produire localement une plus grande quantité de biens tout en évitant de hausser les prix, il nous faut importer de la main-d’œuvre.</p>
-			</div>
-			<aside class="intervention">
-				<symbol type="emma" class="cartoon_emma animated" />
-				<div>
-					<p>Vous savez, Joey Joe Joe, l’importation de main-d’œuvre que nous projetons ici est déjà largement utilisée par les maraîchers locaux. Et les restaurateurs aimeraient par ailleurs y avoir tout autant accès.</p>
-				</div>
-			</aside>
-		</div>
-		<diagram type="chain">
-			<agent type="consumer" name="Joey Joe Joe" paid="10" />
-			<product type="beer" name="La moins Locale" complete="" local="87%" foreign="13%"  />
-			<agent type="retailer" name="Dépanneur Commun" class="local" local="0.51" value="0.85" goods="subunits" />
-			<product type="beer" name="Bière" local="73%" foreign="13%" />
-			<agent type="manufacturer" name="Entrepôts Correct" class="local" value="0.26" local="0.15" goods="subunits" />
-			<product type="beer" name="Bière" local="69%" foreign="13%" />
-			<agent type="transformer" name="Brasserie Moyenne" value="1.40" local="1.29" foreign="1.21" class="local" goods="subunits" />
-		</diagram>
-	</section>
-	<section>
-		<div class="grille">
-			<p>À la lumière du scénario précédent, croyez-vous Joey Joe Joe qu’il soit toujours avantageux de transformer votre Pâpire en Locale ?</p>
+			<p><b>Pourrions-nous, selon vous, <i data-wiki="Incitation_économique">inciter</i> la brasserie Moyenne à développer La locale, bière dont le degré de localité serait de 100% ?</b></p>
 			<form>
 				<fieldset>
 					<div class="grille">
 						<label>
-							<input type="radio" name="avantageux" value="oui" />
+							<input type="radio" value="oui" />
 							<span>Oui !</span>
 						</label>
 						<label>
-							<input type="radio" name="avantageux" value="non" />
+							<input type="radio" value="non" />
 							<span>Non !</span>
 						</label>
 					</div>
 				</fieldset>
 			</form>
 		</div>
-		<aside class="intervention">
-			<symbol type="henri" class="cartoon_henri animated" />
-			<div>
-				<p>Mais encore, les arbitrages exposés ci-haut, ne s’appliquent pas que du côté de la production bière, loin de là ! Bien au contraire, les dynamiques économiques abordées se déclencheront (à intensité variable) dans toute l’économie locale.</p>
-				<p>Les limites de la production locale (et donc de la consommation locale) s’étendent à tout type d’achat de bien ou service.</p>
-			</div>
-		</aside>
 	</section>
-	<section type="observation">
-		<header>
-			<h3>Fait économique #04</h3>
-			<p>Il est nous est impossible de produire localement l’entièreté des biens et services que nous consommons sans perturbations majeures.</p>
-		</header>
-	</section>
+
 	<section>
 		<header>
-			<h3>Accepter les limites de l’achat local</h3>
-			<p>nous impose de <strong>rationaliser notre rapport à ce comportement économique</strong>. Pour ce faire, nous pouvons utiliser d’autres outils de l’analyse économique.</p>
+			<h3>De la Pâpire à la Locale</h3>
+			<p>La valeur ajoutée est toujours ultimement produite par la main d'œuvre, les travailleurs. Les travailleurs, comme vous et nous Joey Joe Joe, sont une ressource économique fondamentale. Pour le bien de l'exposé, écartons de notre démonstration toute autre ressource (houblon, métaux, etc.) et focalisons exclusivement sur les travailleurs.</p>
 		</header>
-		<section>
-			<div class="grille">
-				<section>
-					<h4><i data-wiki="Coût_d%27opportunité">Le coût d’opportunité</i></h4>
-					<ul>
-						<li>Quelle valeur est produite par notre achat ? </li>
-						<li>Pourrait-on générer une plus grande valeur ajoutée en produisant autre chose ? </li>
-						<li>Quelle est la plus grande valeur ajoutée à laquelle nous renonçons en produisant une plus grande quantité de bière ?</li>
-					</ul>
-				</section>
-				<section>
-					<h4><i data-wiki="Microéconomie" data-sections="9">L’optimisation</i></h4>
-					<ul>
-						<li>Quand est-ce que la croissance de la brasserie Moyenne va causer plus de problèmes que de valeur ?</li>
-						<li>Qu’elle coûtera plus cher à agrandir qu’elle n’apportera une fois agrandie ?</li>
-						<li>Quand deviendra-t-il préférable de produire autre chose que de La Locale ?</li>
-					</ul>
-				</section>
-				<section>
-					<h4><i data-wiki="Productivité">La productivité</i></h4>
-					<ul>
-						<li>Quelle quantité de ressources (main-d’œuvre et machines) est nécessaire pour ajouter une valeur de 10 $ en bière ?</li>
-						<li>En quoi ce ratio se compare-t-il avec les autres industries ?</li>
-						<li>Y a-t-il possibilité d’améliorer la productivité en investissant directement dans la brasserie Moyenne grâce une demande accrue de Locale ou de Pâpire ?</li>
-					</ul>
-				</section>
-			</div>
-		</section>
 		<div class="grille">
 			<div class="prose">
-				<p><b>Les outils analytiques ci-haut permettent d’économiser notre recours à la production locale.</b></p>
-				<p>Ils peuvent nous aider à décider comment, où et quoi acheter. Mais l’économie étant une science des moyens, encore faut-il savoir <strong>pourquoi</strong> il nous est important d’acheter localement.</p>
+				<p>Pour produire la Locale, 100% travaillée ici, il nous faut donc ajouter de la main d’œuvre locale aux maillons de notre chaîne économique. Tout ce qui est rouge ci-bas doit devenir bleu. </p>
+				<p>Avons-nous suffisament de travailleurs locaux pour supporter la chaîne complète de notre Locale ? Voilà une question pertinente à se poser ! Car en économie, tout est question de ressources. Des ressources qui sont rares et peuvent être allouées à différents usages. Comme vous dans votre rôle de travailleur, Joey Joe Joe !</p>
 			</div>
+			<p>C'est pourquoi notre chaîne de production de Locale ne peut être analysée de manière isolée. Les travailleurs alloués à sa production ne peuvent plus dès lors être alloués ailleurs.</p>
 			<aside class="intervention">
-				<symbol type="henri" class="cartoon_henri animated" />
+				<symbol type="emma" class="cartoon_henri animated" />
 				<div>
-					<p>Augmenter notre consommation de biens dont la valeur ajoutée est produite localement implique l’usage exclusif de ressources rares qui pourraient être allouées ailleurs. Cette réalité économique inéluctable <em>appelle à l’optimisation et non la maximisation</em> de notre consommation de biens locaux.</p>
+					<p>Si Henri et moi produisions du houblon québécois pour fournir la Locale, Henri ne pourrait plus produire de modèles économiques et je ne pourrais plus produire d'expériences interactives prétentieuses.
+</p>
 				</div>
 			</aside>
 		</div>
 	</section>
+
+	<section type="observation">
+		<header>
+			<h3>Fait économique #04</h3>
+		</header>
+		<div class="grille">
+			<p>Lorsqu'on alloue une ressource à un usage choisi, on exclut tous les autres usages possibles. On appelle ce principe économique, le coût d'opportunité.</p>
+			<aside class="intervention">
+				<symbol type="henri" class="cartoon_henri animated" />
+				<div>
+					<p>Le coût d'opportunité d'une ressource devient d'autant plus important que la ressource est rare. Et c'est le cas des travailleurs comme vous et nous Joey Joe Joe.</p>
+				</div>
+			</aside>
+		</div>
+	</section>
+	<section>
+		<header>
+			<h3>À quel point les travailleurs locaux sont-ils rares ?</h3>
+			<p>Regardez ci-bas, Joey Joe Joe. Les travailleurs sont en quantité insuffisante pour pouvoir produire localement tout ce que nous consommons.</p>
+		</header>
+		<p>DIAGRAMME CARRÉS DE TRAVAILLEURS LOCAUX ET ÉTRANGERS DANS L'ÉCONOMIE</p>
+		<p>La pénurie de main-d’œuvre locale implique qu’on doive la soutirer d’autres entreprises voire d'autres industries qui perpétueront à leur tour le cycle de pénurie. Une hausse substantielle du niveau général des prix en est une conséquence directe. Certains appelleraient cela « inflation ». </p>
+		<aside class="intervention">
+			<symbol type="henri" class="cartoon_henri animated" />
+			<div>
+				<p>Ce contexte de pénurie rend nos concitoyens travailleurs d'autant plus précieux. Il nous faut bien choisir comment les utiliser pour en profiter pleinement !</p>
+			</div>
+		</aside>
+	</section>
+	<section>
+		<header>
+			<h3>Revenons maintenant à notre bière Locale.</h3>
+			<p>À la lumière du contexte de pénurie de main-d'œuvre actuel, nous tous, consommateurs, travailleurs et citoyens, devons-nous demander : Que voulons-nous <span class="local">produire localement</span> ? Que voulons-nous <span class="foreign">acheter de l'étranger</span> ?</p>
+		</header>
+		<p>Ces deux questions forment ce qu'on appelle l'arbitrage économique.</p>
+
+	</section>
 	<section type="observation">
 		<header>
 			<h3>Fait économique #05</h3>
-			<p>La rareté des ressources économiques doit nous porter à en optimiser l’usage.</p>
 		</header>
-	</section>
-	<h2>Les objectifs de l’achat local</h2>
-	<section>
-		<header>
-			<h3>Pourquoi, donc, acheter localement ?</h3>
-				<p>L’achat local est un moyen d’atteindre nos fins et objectifs. Et en aucun cas devriez-vous en faire une objectif en soi, Joey Joe Joe.</p>
-		</header>
-		<section>
-			<div class="grille">
-				<article>
-					<p><b>Économiser en fonction de nos objectifs est nécessaire pour les atteindre efficacement.</b></p>
-					<p>Mais encore, vos objectifs, Joey Joe Joe, s’ils sont multiples, pourraient aller à l’encontre les uns des autres. Il faut à ce moment prioriser. Voici quelques objectifs pouvant, en certains cas, faire de l’achat local un moyen.</p>
-				</article>
-				<aside class="intervention">
-					<symbol type="henri" class="cartoon_henri animated" />
-					<div>
-						<p>Il faut bien assortir les moyens utilisés à nos objectifs. Surtout que certains moyens pourraient à la fois contribuer d’un côté et nuire de l’autre. Accueillir une cimenterie enrichira probablement les agents locaux à la hauteur de son empreinte écologique.</p>
-					</div>
-				</aside>
-			</div>
-			<div class="grille">
-				<article>
-					<h4>Enrichir les agents locaux</h4>
-					<p><b>Les entreprises locales et leurs investisseur.e.s en bénéficieront particulièrement.</b></p>
-					<p>Cet objectif repose sur la <strong>distribution</strong> locale de la valeur ajoutée. Si tel est votre objectif, Joey Joe Joe, vous feriez bien de laisser des entreprises à <em>propriété locale</em> produire là où le coût est le plus bas, sachant que la valeur ajoutée à l’étranger sera rapatriée ici, localement. </p>
-				</article>
-				<article>
-					<h4>Diminuer l’empreinte écologique</h4>
-					<p><b>L’écosystème environnemental et le citoyen en bénéficieront particulièrement.</b></p>
-					<p>Cet objectif repose sur la <strong>production</strong> de la valeur ajoutée et de son transport dans la chaîne. Il implique une analyse complexe de la pollution engendrée par la consommation finale. Il faut inspecter la chaîne économique complète et minimiser les externalités environnementales (les GES en sont un bon exemple). Il n’est pas dit que cet objectif sera toujours bien servi par un mouvement de consommation locale. Certains biens pourraient laisser une moindre empreinte tout en étant produits à l’étranger. D’autres devraient être simplement rejetés.</p>
-				</article>
-				<article>
-					<h4>Créer des emplois</h4>
-					<p><b>L’État et les travailleur.se.s en bénéficieront particulièrement.</b></p>
-					<p>Cet objectif repose aussi sur la <strong>production</strong> de la valeur ajoutée. Il demande qu’on choisisse les biens locaux étant les plus intensifs en termes de main-d’œuvre. Une usine de voitures Tesla entièrement robotisée s’installant à Pointe-aux-Trembles ne contribuera pas à l’atteinte de votre objectif, Joey Joe Joe. Ceci dit, considérant le marché du travail actuel, il serait mal-avisé de maintenir cet objectif en priorité.</p>
-				</article>
-				<article>
-					<h4>Augmenter la productivité</h4>
-					<p><b>L’État et les grandes entreprises en bénéficieront particulièrement.</b></p>
-					<p>Toujours en termes de <strong>production</strong> de la valeur ajoutée, mais cette fois-ci, il serait très certainement bénéfique d’implanter une usine Tesla, entièrement automatisée. La quantité de valeur ajoutée par un seul travailleur Tesla n’est sans commune mesure à la valeur ajoutée par un travailleur des champs. Créer des emplois et augmenter la productivité ne font généralement bon ménage.</p>
-				</article>
-			</div>
-		</section>
+		<div class="grille">
+			<p>L'arbitrage est une réalité économique inévitable. Et pour bien arbitrer il faut évaluer à la fois ce qu'on choisi et ce qu'on exclut de par nos décisions.</p>
+			<aside class="intervention">
+				<symbol type="henri" class="cartoon_henri animated" />
+				<div>
+					<p><a href="https://www.journaldequebec.com/2021/04/10/un-peu-moins-de-150000-postes-vacants" target="_blank">Plusieurs</a> <a href="https://www.lesaffaires.com/dossier/signaux-forts/penurie-de-main-det8217oeuvre--la-deuxieme-vague/623445" target="_blank">parlent</a> de <a href="https://www.ledevoir.com/opinion/idees/598739/idees-a-propos-de-la-penurie-de-main-d-oeuvre" target="_blank">pénurie</a> de <a href="https://ici.radio-canada.ca/nouvelle/1790287/penurie-main-oeuvre-richesse-appauvrissement-economie-emploi-salaires" target="_blank">main-d’œuvre</a> même.</p>
+					<p>Raison de plus alors pour nous assurer d’<i data-wiki="Allocation_des_ressources">allouer cette ressource</i> de manière efficace !</p>
+				</div>
+			</aside>
+		</div>
 	</section>
 	<section>
 		<header>
-			<h3>Et alors, comment rationaliser l’achat local ?</h3>
-				<p>Changer vos comportements de consommation, Joey Joe Joe, ne sera toujours au final qu’un moyen d’atteindre un objectif.</p>
+			<h3>« Que voulons-nous <span class="local">produire localement</span> ? Que voulons-nous <span class="foreign">acheter de l'étranger</span> ? », disions-nous.</h3>
+		</header>
+		<p>L'issue de cet arbitrage économique dépend ultimement de la question coiffant cet exposé...</p>
+	</section>
+	<section>
+		<header>
+			<h3>Pourquoi, donc, acheter local ?</h3>
+			<p>Acheter local est un moyen. Un moyen économique d’atteindre nos objectifs. Comme tout autre moyen économique, en aucun cas ne devrait-il être perçu comme un objectif en soi.</p>
+		</header>
+	</section>
+<section type="observation">
+		<header>
+			<h3>Fait économique #01</h3>
+		</header>
+		<div class="grille">
+			<p>Toute action économique est un moyen d’atteindre un objectif. Même l'action d'acheter local.</p>
+			<aside class="intervention">
+				<div>
+					<q>Il faut acheter québécois, il faut acheter local, c’est important pour nos entreprises québécoises, et puis c’est important pour nos travailleurs/travailleuses québécois de ces entreprises-là.</q>
+					<cite>François Legault, Premier Ministre du Québec</cite>
+				</div>
+			</aside>
+		</div>
+	</section>
+	<section>
+		<header>
+			<p>Économiser en fonction de nos objectifs est nécessaire pour les atteindre efficacement. Voici quelques objectifs pouvant, en certains cas, faire de l’achat local un moyen.</p>
+		</header>
+		<aside class="intervention">
+			<symbol type="henri" class="cartoon_henri animated" />
+			<div>
+				<p>Mais encore, vos objectifs, Joey Joe Joe, s’ils sont multiples, pourraient aller à l’encontre les uns des autres. Accueillir une cimenterie enrichira probablement les agents locaux à la hauteur de son empreinte écologique. Il faudra à ce moment prioriser !</p>
+			</div>
+		</aside>
+
+		<div class="grille">
+			<article>
+				<h4>Enrichir les agents locaux</h4>
+				<p><b>Les entreprises locales et leurs investisseur.e.s en bénéficieront particulièrement.</b></p>
+				<p>Cet objectif repose sur la <strong>distribution</strong> locale de la valeur ajoutée. Si tel est votre objectif, Joey Joe Joe, vous feriez bien de laisser des entreprises à <em>propriété locale</em> produire là où le coût est le plus bas, sachant que la valeur ajoutée à l’étranger sera rapatriée ici, localement. </p>
+			</article>
+			<article>
+				<h4>Diminuer l’empreinte écologique</h4>
+				<p><b>L’écosystème environnemental et le citoyen en bénéficieront particulièrement.</b></p>
+				<p>Cet objectif repose sur la <strong>production</strong> de la valeur ajoutée et de son transport dans la chaîne. Il implique une analyse complexe de la pollution engendrée par la consommation finale. Il faut inspecter la chaîne économique complète et minimiser les externalités environnementales (les GES en sont un bon exemple). Il n’est pas dit que cet objectif sera toujours bien servi par un mouvement de consommation locale. Certains biens pourraient laisser une moindre empreinte tout en étant produits à l’étranger. D’autres devraient être simplement rejetés.</p>
+			</article>
+			<article>
+				<h4>Créer des emplois</h4>
+				<p><b>L’État et les travailleur.se.s en bénéficieront particulièrement.</b></p>
+				<p>Cet objectif repose aussi sur la <strong>production</strong> de la valeur ajoutée. Il demande qu’on choisisse les biens locaux étant les plus intensifs en termes de main-d’œuvre. Une usine de voitures Tesla entièrement robotisée s’installant à Pointe-aux-Trembles ne contribuera pas à l’atteinte de votre objectif, Joey Joe Joe. Ceci dit, considérant le marché du travail actuel, il serait mal-avisé de maintenir cet objectif en priorité.</p>
+			</article>
+			<article>
+				<h4>Augmenter la productivité</h4>
+				<p><b>L’État et les grandes entreprises en bénéficieront particulièrement.</b></p>
+				<p>Toujours en termes de <strong>production</strong> de la valeur ajoutée, mais cette fois-ci, il serait très certainement bénéfique d’implanter une usine Tesla, entièrement automatisée. La quantité de valeur ajoutée par un seul travailleur Tesla n’est sans commune mesure à la valeur ajoutée par un travailleur des champs. Créer des emplois et augmenter la productivité ne font généralement bon ménage.</p>
+			</article>
+		</div>
+	</section>
+	<section>
+		<header>
+			<h3>Une fois votre objectif choisi, Joey Joe Joe</h3>
+			<p>il vous faut trouver réponses à certaines questions importantes.</p>
 		</header>
 		<section>
 			<div class="grille">
-				<p><b>Il faut que cet objectif soit clair et explicite. À la lumière de celui-ci, il vous faut chercher certaines informations importantes. Parmi celles-ci :</b></p>
+				<p><b>Sans être exhaustif, en voici plusieurs :</b></p>
 				<ul>
 					<li>À quoi ressemble la chaîne économique de mon achat ?</li>
 					<li>Quelle est la répartition de la valeur ajoutée parmi les agents de la chaîne ?</li>
-					<li>Où la valeur ajoutée est-elle distribuée ? En salaire aux travailleurs locaux ? En dividendes aux investisseurs étrangers ?</li>
+					<li>Où et à qui la valeur ajoutée est-elle distribuée ?</li>
 					<li>Qui gagne graçe à mon changement de comportement ? Qui perd ?</li>
-					<li>Comment aurions-nous pu allouer les mêmes ressources ? À quoi renonçons-nous de plus valable en produisant localement plus de bière ?</li>
+					<li>Comment aurions-nous pu allouer les mêmes ressources ? </li>
+					<li>À quoi renonçons-nous de plus valable en produisant localement plus de bière ?</li>
 				</ul>
 			</div>
+			<aside class="intervention">
+				<symbol type="emma" class="cartoon_henri animated" />
+				<div>
+					<p>HA ! J'avais hâte d'arriver ici. Poser de bonnes questions est primordial, Joey Joe Joe ! Parce que quand on pose de mauvaises questions, on se ramasse avec « faire rouler l'économie » comme réponse. Pis ça, ça veut juste rien dire !</p>
+				</div>
+			</aside>
 		</section>
 	</section>
 	<section type="observation">
@@ -741,7 +546,7 @@
 			<h3>Fait économique #final final, promis</h3>
 		</header>
 		<div class="grille">
-			<p>Pour rationaliser notre rapport à l’achat local, il nous faut poser les bonnes questions.</p>
+			<p>Pour bien choisir nos moyens économiques, il nous faut être informé. Et pour être informé, il nous faut poser les bonnes questions.</p>
 			<aside class="intervention">
 				<symbol type="robinson" class="cartoon_robinson animated" />
 				<div>
@@ -758,10 +563,12 @@
 		</header>
 		<section>
 			<div class="grille">
-				<p><b>Premièrement, il va sans dire que ce n’est pas à vous de répondre à ces questions... C’est ce à quoi servent les économistes !</b></p>
-				<p>Non, Joey Joe Joe. Votre rôle à vous, pour la suite, c’est de poser les questions et en exiger les réponses. Demandez plus de vos représentants, de vos élus, de vos journalistes. C’est à eux (et Henri) de procurer les bonnes réponses à ces questions. C’est à nous tous de les y inciter pour que nous, le public, puissions mieux décider.</p>
+				<p><b>Votre rôle à vous, pour la suite, c’est de poser les bonnes questions et en exiger les bonnes réponses.</b></p>
+				<p>Demandez plus de vos représentants, de vos élus, de vos journalistes, Joey Joe Joe ! Nous ne pouvons nous contenter de « faire rouler l'économie » ou « d'encourager les entreprises locales ». Nous devons faire des choix. Si nous ne décidons pas ensemble vers où l'économie roule-t-elle et quel type d'entreprises nous voulons encourager, d'autres intéressés le feront pour nous. </p>
+				<p>Et il n'est pas dit que leurs intérêts seront alignés aux nôtres, en tant que consommateurs, travailleurs et citoyens.</p>
 			</div>
-				<p><b>Soyons économes.</b></p>
+			<p>Achetons local pour les bonnes raisons.<br />
+				<b>Soyons économes.</b></p>
 			<cite>— Marc-André &amp; Henri</cite>
 		</section>
 	</section>
