@@ -50,7 +50,7 @@
 			<small>
 				<xsl:choose>
 					<xsl:when test="$name = 'local' or $name = 'foreign'">
-						<xsl:text>Biens intrants</xsl:text>
+						<xsl:text>Valeur achetée</xsl:text>
 					</xsl:when>
 					<xsl:when test="$name = 'value'">
 						<xsl:text>Valeur ajoutée</xsl:text>
