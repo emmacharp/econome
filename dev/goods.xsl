@@ -10,6 +10,7 @@ exclude-result-prefixes="ext msxsl">
 	<xsl:key name="class-aggregate" match="produit" use="classe"/>
 
 	<xsl:template match="depanneur|transport|entrepot|brasserie|depense|ajout|local|etranger" mode="product-creator">
+	<xsl:template match="*" mode="product-creator" priority="-1" />
 		<xsl:param name="relative" select="false()" />
 		<xsl:param name="subunits" select="false()" />
 		<xsl:param name="code" select="ancestor::produit/code" />
