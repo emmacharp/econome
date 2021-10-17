@@ -5,6 +5,7 @@
 
 	<xsl:variable name="product-file" select="document('product.xml', /)" />
 	<xsl:variable name="goods-file" select="document('goods.xml', /)" />
+	<xsl:variable name="macro-file" select="document('macro.xml', /)" />
 
 	<xsl:template match="@type" mode="data-translator">
 		<xsl:choose>
