@@ -12,6 +12,7 @@ exclude-result-prefixes="ext msxsl">
 	<xsl:template match="depanneur|transport|entrepot|brasserie|depense|ajout|local|etranger" mode="product-creator">
 		<xsl:param name="relative" select="false()" />
 		<xsl:param name="subunits" select="false()" />
+		<xsl:param name="code" select="ancestor::produit/code" />
 		<xsl:variable name="node-name" select="local-name()" />
 		<xsl:variable name="number">
 			<xsl:choose>
@@ -49,6 +50,7 @@ exclude-result-prefixes="ext msxsl">
 		<xsl:apply-templates select="ancestor::produit[1]" mode="percentage-squares">
 			<xsl:with-param name="square-total" select="$square-total" />
 			<xsl:with-param name="percentage" select="$percentage" />
+			<xsl:with-param name="code" select="$code" />
 		</xsl:apply-templates>
 	</xsl:template>
 
@@ -56,9 +58,12 @@ exclude-result-prefixes="ext msxsl">
 		<xsl:param name="index" select="1" />
 		<xsl:param name="total" select="20" />
 		<xsl:param name="label" />
+		<xsl:param name="code" select="code" />
 
 		<xsl:variable name="chosen-symbol">
-			<xsl:apply-templates select="code" mode="symbol-chooser" />
+			<xsl:call-template name="symbol-chooser">
+				<xsl:with-param name="code" select="$code" />
+				</xsl:call-template>
 		</xsl:variable>
 		<span>
 			<xsl:apply-templates select="ext:node-set($svg-symbols)//svg:symbol[@id = $chosen-symbol]" />
@@ -72,6 +77,7 @@ exclude-result-prefixes="ext msxsl">
 				<xsl:with-param name="index" select="$index + 1"/>
 				<xsl:with-param name="total" select="$total"/>
 				<xsl:with-param name="label" select="$label"/>
+				<xsl:with-param name="code" select="$code" />
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
@@ -131,8 +137,9 @@ exclude-result-prefixes="ext msxsl">
 	<xsl:template match="produit" mode="percentage-squares">
 		<xsl:param name="square-total" select="0" />
 		<xsl:param name="percentage" select="0" />
+		<xsl:param name="code" select="code" />
 		<xsl:if test="$square-total &gt; 0">
-			<p data-code="{code}" debug="{$percentage}">
+			<p data-code="{$code}" debug="{$percentage}">
 				<xsl:if test="$percentage &lt; 0.1">
 					<xsl:attribute name="class">
 						<xsl:text>subunit</xsl:text>
@@ -140,6 +147,7 @@ exclude-result-prefixes="ext msxsl">
 				</xsl:if>
 				<xsl:call-template name="span-generator">
 					<xsl:with-param name="total" select="$square-total"/>	
+					<xsl:with-param name="code" select="$code" />
 				</xsl:call-template>
 			</p>
 		</xsl:if>
