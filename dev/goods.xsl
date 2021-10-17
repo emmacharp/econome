@@ -110,7 +110,7 @@ exclude-result-prefixes="ext msxsl">
 			<xsl:value-of select="ceiling($percentage)" />
 		</xsl:variable>
 		<xsl:variable name="dollar-amount">
-			<xsl:value-of select="$coefficient * 10"></xsl:value-of>
+			<xsl:value-of select="$coefficient * 10" />
 		</xsl:variable>
 		<xsl:variable name="final-amount">
 			<xsl:choose>
