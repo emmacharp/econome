@@ -1,3 +1,5 @@
+(A) Message à propos des fenêtes plus larges sur mobile @experience
+(A) Mettre la légende da visualisation (p. ex. chaque bonhomme égale 400000 travailleurs). @experience
 (A) Styles conditionnels à la charge de la batterie (Battery API) +performance @js @maitrise
 (B) Assurer le fonctionnement de la navigation clavier et des tabulations. @maitrise
 (C) Intégrer « Plausible » comme analytics. @maitrise
