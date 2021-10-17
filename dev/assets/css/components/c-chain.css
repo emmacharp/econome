@@ -116,8 +116,8 @@
 	background-color: var(--ColorBgAlt);
 	background-image:
 		linear-gradient(to top,
-			var(--Color) 0,
-			var(--Color) var(--NeutralAddedValue, 0%),
+			currentColor 0,
+			currentColor var(--NeutralAddedValue, 0%),
 			var(--ColorLocal) var(--NeutralAddedValue, 0%),
 			var(--ColorLocal) calc(var(--LocalAddedValue, 0%) + var(--NeutralAddedValue, 0%)),
 			var(--ColorForeign)  calc(var(--LocalAddedValue, 0%) + var(--NeutralAddedValue, 0%)),
