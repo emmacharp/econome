@@ -12,20 +12,20 @@ exclude-result-prefixes="ext msxsl">
 	<xsl:template match="*" mode="product-creator" priority="-1" />
 	<xsl:template match="depanneur|transport|entrepot|brasserie|depense|ajout|local|etranger|disponible" mode="product-creator">
 		<xsl:param name="relative" select="false()" />
+		<xsl:param name="multiplier" select="1" />
 		<xsl:param name="subunits" select="false()" />
 		<xsl:param name="code" select="ancestor::produit/code" />
 		<xsl:variable name="node-name" select="local-name()" />
 		<xsl:variable name="number">
 			<xsl:choose>
 				<xsl:when test="$relative = true()">
-					<xsl:value-of select=". div /root/total/*[local-name() = $node-name] * /root/donnees/*[local-name() = $node-name]" />
+					<xsl:value-of select=". div /root/total/*[local-name() = $node-name] * /root/donnees/*[local-name() = $node-name] * $multiplier" />
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:value-of select="." />
+					<xsl:value-of select=". * $multiplier" />
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-		
 		<xsl:variable name="total">
 			<xsl:value-of select="/root/total/depense" />
 		</xsl:variable>
