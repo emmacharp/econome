@@ -39,8 +39,7 @@ mark {
 	background-color: var(--yellow);
 }
 
-main > section p > b {
-	/* font-size: 1.25em; */
+strong, b {
 	font-weight: 500;
 }
 
