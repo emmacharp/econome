@@ -39,60 +39,6 @@ mark {
 	background-color: var(--yellow);
 }
 
-.prose>* {
-	font-weight: 300;
-}
-
-.chain>div {
-	justify-content: space-evenly;
-	display: flex;
-	max-width: initial;
-}
-
-
-nav>ul>li>a {
-	display: none;
-}
-
-div.prose {
-	/* max-width: 100ch; */
-}
-
-div.prose {
-	--DivDisplay: block;
-	max-width: 70ch;
-	/* column-width: initial; */
-	column-count: 2;
-	column-gap: calc(var(--Row) * 1);
-}
-
-main>h2 {
-	align-self: stretch;
-	margin: initial;
-	text-align: center;
-	/* display: initial; */
-	text-shadow: -2px -2px 0 var(--ColorBg), 2px 2px 0 var(--ColorBg),
-					 -4px -4px 0 var(--ColorBg), 4px 4px 0 var(--ColorBg);
-}
-
-main>h2:after {
-	/* margin: initial; */
-	margin-top: -.25em;
-	/* position: relative; */
-	/* z-index: -1; */
-}
-
-/* .intervention { */
-/* 	position: fixed; */
-/* 	bottom: var(--Row); */
-/* 	right: var(--Row); */
-/* } */
-
-/* body > main > * { */
-/* 	max-width: initial; */
-/* } */
-
-
 [type="observation"]>header>h3:before {
 	content: "💡";
 	/* display: block; */
@@ -101,27 +47,16 @@ main>h2:after {
 	margin-right: var(--Row);
 }
 
-h1 {
-	/* --LineHeightFactor: 1.5; */
-}
-/* Pour superdiv */
-
-
-.grille>article>p {
-	/* --ScaleLevel: var(--Short); */
-	/* --LineHeightFactor: .75; */
-}
-
 main>section>aside {
 	position: sticky;
-	bottom: calc(var(--Row) * 1);
-	/* margin-left: auto; */
+	bottom: 0;
+	margin-right: auto;
 	order: 1;
 	z-index: 4;
 	justify-self: start;
 }
 
-main>section>aside>div {
+.intervention>div {
 	background-color: var(--ColorBg);
 }
 
@@ -160,8 +95,6 @@ main>section>aside>div {
 }
 
 .diagram.goods-list {
-	/* max-width: 80ch; */
-	/* align-items: center; */
 	justify-self: center;
 	pointer-events: none;
 	transform: translateZ(1px);
@@ -184,10 +117,6 @@ main>section>aside>div {
 }
 
 .diagram.goods-list h4 {
-	/* position: absolute; */
-	/* bottom: 100%; */
-	/* left: 0; */
-	/* right: 0; */
 	text-align: center;
     grid-column: 1 / 99; /* Nombre ridicule pour toujours aller jusqu'au bout. ne peut pas utiliser de GAP ! */
 	 grid-row: 2;
@@ -195,26 +124,15 @@ main>section>aside>div {
 	 pointer-events: none;
 	 margin-top: calc(var(--Row) * .5);
 	 margin-bottom: calc(var(--Row) * .5);
-    /* margin: calc(var(--Row) * .5); */
 }
 
 .diagram.goods-list section:not(:hover)>h4 {
 	color: transparent;
 }
 
-/* .goods-list p>span { */
-/* 	display: block; */
-/* } */
-
 .diagram.goods-list>div {
 	/* Ne peut pas utiliser de gap à cause du placement du h4 */
 	display: grid;
-	/* grid-template-columns: repeat(auto-fill, var(--Row)); */
-	/* grid-auto-flow: column dense; */
-	/* grid-auto-rows: auto; */
-	/* align-content: center; */
-	/* grid-column-gap: calc(var(--Row)); */
-	/* grid-auto-columns: var(--Row); */
 }
 
 .diagram.goods-list .product {
@@ -248,12 +166,9 @@ main>section>aside>div {
 
 .diagram.goods-list section>div {
 	justify-content: space-around;
+	align-content: baseline;
 }
 
 .diagram.goods-list:hover section:not(:hover) svg {
 	color: var(--ltr-primary);
-}
-
-.diagram.goods-list section:hover svg {
-	/* transform: scale(1.1); */
 }
