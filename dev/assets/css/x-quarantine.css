@@ -39,10 +39,6 @@ mark {
 	background-color: var(--yellow);
 }
 
-strong, b {
-	font-weight: 500;
-}
-
 .prose>* {
 	font-weight: 300;
 }
