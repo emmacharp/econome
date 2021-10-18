@@ -66,12 +66,10 @@ exclude-result-prefixes="ext msxsl">
 				<xsl:with-param name="code" select="$code" />
 				</xsl:call-template>
 		</xsl:variable>
-		<span>
 			<xsl:apply-templates select="ext:node-set($svg-symbols)//svg:symbol[@id = $chosen-symbol]" />
 			<xsl:if test="$index = $total">
 				<xsl:copy-of select="$label"/>
 			</xsl:if>
-		</span>
 
 		<xsl:if test="not($index = $total)">
 			<xsl:call-template name="span-generator">
@@ -140,7 +138,7 @@ exclude-result-prefixes="ext msxsl">
 		<xsl:param name="percentage" select="0" />
 		<xsl:param name="code" select="code" />
 		<xsl:if test="$square-total &gt; 0">
-			<p data-code="{$code}" debug="{$percentage}">
+			<div data-code="{$code}">
 				<xsl:if test="$percentage &lt; 0.1">
 					<xsl:attribute name="class">
 						<xsl:text>subunit</xsl:text>
@@ -150,7 +148,7 @@ exclude-result-prefixes="ext msxsl">
 					<xsl:with-param name="total" select="$square-total"/>	
 					<xsl:with-param name="code" select="$code" />
 				</xsl:call-template>
-			</p>
+			</div>
 		</xsl:if>
 	</xsl:template>
 

@@ -118,6 +118,7 @@
 			</xsl:if>
 			<section class="amounts">
 				<xsl:apply-templates select="." />
+				<xsl:if test="ancestor::agent[@goods]">
 				<xsl:choose>
 					<xsl:when test="local-name() = 'value'">
 						<xsl:apply-templates select="ext:node-set($file)//produit[@type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
@@ -134,6 +135,7 @@
 						</xsl:apply-templates>
 					</xsl:otherwise>
 				</xsl:choose>
+				</xsl:if>
 			</section>
 		</section>
 	</xsl:template>
@@ -144,7 +146,7 @@
 				<aside>
 					<xsl:if test="@goods">
 						<xsl:attribute name="class">
-							goods-list
+									<xsl:text disable-output-escaping="yes">goods-list</xsl:text>
 						</xsl:attribute>
 					</xsl:if>
 					<section class="product {@type}">
@@ -155,7 +157,6 @@
 					</section>
 				</aside>
 			</xsl:if>
-			<div>
 				<article>
 
 					<xsl:apply-templates select="ext:node-set($svg-symbols)//svg:symbol[generate-id() = generate-id(key('symbol-type', current()/@type)[1])]">
@@ -163,7 +164,6 @@
 					</xsl:apply-templates>
 					<h4><xsl:apply-templates select="@name" /></h4>
 				</article>
-			</div>
 		</section>
 	</xsl:template>
 
@@ -180,7 +180,6 @@
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-		<div>
 			<section class="{$state} product">
 				<xsl:attribute name="style">
 					<xsl:if test="@local">
@@ -199,15 +198,12 @@
 						<xsl:value-of select="';'" />
 					</xsl:if>
 				</xsl:attribute>
-				<div>
 					<article>
 						<i class="icon {@type}"></i>
 						<h4><xsl:value-of select="@name" /></h4>
 					</article>
-				</div>
 				<hr class="good arrow" />
 			</section>
-		</div>
 	</xsl:template>
 
 	<!-- <xsl:template match="diagram[@type = 'macro']"> -->
@@ -256,23 +252,7 @@
 														</xsl:otherwise>
 											</xsl:choose>
 								</xsl:variable>
-								<!-- <xsl:variable name="odd-counter"> -->
-								<!-- 			<xsl:choose> -->
-								<!-- 						<xsl:when test="$column-counter &gt; 1 and $column-counter &lt; 3"> -->
-								<!-- 									<xsl:value-of select="3"></xsl:value-of> -->
-								<!-- 						</xsl:when> -->
-								<!-- 						<xsl:when test="$column-counter &gt; 3 and $column-counter &lt; 9"> -->
-								<!-- 									<xsl:value-of select="6"></xsl:value-of> -->
-								<!-- 						</xsl:when> -->
-								<!-- 						<xsl:when test="$column-counter &gt; 9"> -->
-								<!-- 									<xsl:value-of select="9"></xsl:value-of> -->
-								<!-- 						</xsl:when> -->
-								<!-- 						<xsl:otherwise> -->
-								<!-- 									<xsl:value-of select="$column-counter"></xsl:value-of> -->
-								<!-- 						</xsl:otherwise> -->
-								<!-- 			</xsl:choose> -->
-								<!-- </xsl:variable> -->
-										<section style="--column-counter: {ceiling($column-counter)}">
+								<section style="--column-counter: {ceiling($column-counter)}">
 							<h4><xsl:value-of select="titre" /></h4>
 							
 							<div class="product">

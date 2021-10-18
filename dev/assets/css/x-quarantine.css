@@ -434,9 +434,9 @@ div.prose {
 	color: transparent;
 }
 
-.goods-list p>span {
-	display: block;
-}
+/* .goods-list p>span { */
+/* 	display: block; */
+/* } */
 
 .diagram.goods-list>div {
 	/* Ne peut pas utiliser de gap à cause du placement du h4 */
@@ -468,7 +468,7 @@ div.prose {
 	grid-column: span var(--column-counter);
 }
 
-.diagram.goods-list .worker p>span {
+.diagram.goods-list .worker svg {
 	align-items: flex-end;
 	width: calc(var(--Row) / 2);
 	height: auto;
