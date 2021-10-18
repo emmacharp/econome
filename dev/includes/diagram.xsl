@@ -210,6 +210,11 @@
 		</div>
 	</xsl:template>
 
+	<!-- <xsl:template match="diagram[@type = 'macro']"> -->
+	<!-- 	<xsl:apply-templates select="ext:node-set($macro-file)//produit" mode="product-creator"> -->
+	<!-- 	</xsl:apply-templates> -->
+	<!-- </xsl:template> -->
+
 	<xsl:template match="diagram[not(preceding::diagram)]" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
@@ -232,7 +237,78 @@
 		<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))" />
 
 		<div id="{$id}">
-			<xsl:apply-templates />
+			<xsl:choose>
+				<xsl:when test="@type = 'goods-list'">
+					<xsl:for-each select="ext:node-set($macro-file)//produit[local|etranger]">
+								<xsl:variable name="prod-factor" select="ceiling((prod-local + prod-etranger) div 10000)" />
+								<xsl:variable name="worker-factor" select="ceiling((local + etranger) div 100000)" />
+								<xsl:variable name="column-counter">
+											<xsl:choose>
+														<xsl:when test="$prod-factor &gt; worker-factor">
+																		<xsl:value-of select="$prod-factor" />
+														</xsl:when>
+														<xsl:otherwise>
+																	<xsl:value-of select="$worker-factor" />
+														</xsl:otherwise>
+											</xsl:choose>
+								</xsl:variable>
+								<!-- <xsl:variable name="odd-counter"> -->
+								<!-- 			<xsl:choose> -->
+								<!-- 						<xsl:when test="$column-counter &gt; 1 and $column-counter &lt; 3"> -->
+								<!-- 									<xsl:value-of select="3"></xsl:value-of> -->
+								<!-- 						</xsl:when> -->
+								<!-- 						<xsl:when test="$column-counter &gt; 3 and $column-counter &lt; 9"> -->
+								<!-- 									<xsl:value-of select="6"></xsl:value-of> -->
+								<!-- 						</xsl:when> -->
+								<!-- 						<xsl:when test="$column-counter &gt; 9"> -->
+								<!-- 									<xsl:value-of select="9"></xsl:value-of> -->
+								<!-- 						</xsl:when> -->
+								<!-- 						<xsl:otherwise> -->
+								<!-- 									<xsl:value-of select="$column-counter"></xsl:value-of> -->
+								<!-- 						</xsl:otherwise> -->
+								<!-- 			</xsl:choose> -->
+								<!-- </xsl:variable> -->
+										<section style="--column-counter: {round($column-counter)}">
+							<h4><xsl:value-of select="titre" /></h4>
+							
+							<div class="product">
+								<div class="local">
+									<xsl:apply-templates select="local" mode="product-creator">
+										<xsl:with-param name="multiplier" select="10 div emploi-ratio" />
+									</xsl:apply-templates>
+								</div>
+								<div class="foreign">
+									<xsl:apply-templates select="etranger" mode="product-creator">
+										<xsl:with-param name="multiplier" select="10 div emploi-ratio" />
+									</xsl:apply-templates>
+								</div>
+							</div>
+							<div class="worker">
+								<div class="local">
+									<xsl:apply-templates select="local" mode="product-creator">
+										<xsl:with-param name="multiplier" select="3" />
+										<xsl:with-param name="code" select="'WOR'" />
+									</xsl:apply-templates>
+								</div>
+								<div class="foreign">
+									<xsl:apply-templates select="etranger" mode="product-creator">
+										<xsl:with-param name="multiplier" select="3" />
+										<xsl:with-param name="code" select="'WOR'" />
+									</xsl:apply-templates>
+								</div>
+							</div>
+						</section>
+					</xsl:for-each>
+					<div class="available">
+						<xsl:apply-templates select="ext:node-set($macro-file)//disponible" mode="product-creator">
+							<xsl:with-param name="multiplier" select="3" />
+						</xsl:apply-templates>
+					</div>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:apply-templates />
+				</xsl:otherwise>
+			</xsl:choose>
 		</div>
 	</xsl:template>
 </xsl:stylesheet>
