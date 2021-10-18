@@ -40,95 +40,101 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
-	<xsl:template match="code" mode="symbol-chooser">
-
+	<xsl:template match="code" mode="symbol-chooser" name="symbol-chooser">
+		<xsl:param name="code" select="." />
 		<xsl:choose>
-			<xsl:when test="contains(., 'MIN')">
+			<xsl:when test="contains($code, 'MIN')">
 				<xsl:text>svg-minerals-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'ALI')">
+			<xsl:when test="contains($code, 'ALI')">
 				<xsl:text>svg-food-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'IMM')">
+			<xsl:when test="contains($code, 'IMM') or contains($code ,'IMS551002')">
 				<xsl:text>svg-building-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'COT')">
+			<xsl:when test="contains($code, 'PRM') or contains($code, 'COT') or contains($code ,'PRM600000')">
 				<xsl:text>svg-contribution-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'CON')">
+			<xsl:when test="contains($code, 'CON')">
 				<xsl:text>svg-construction-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'REV')">
+			<xsl:when test="contains($code, 'REV')">
 				<xsl:text>svg-moneybag-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'SAL')">
+			<xsl:when test="contains($code, 'SAL')">
 				<xsl:text>svg-salary-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'PRO')">
+			<xsl:when test="contains($code, 'PRO')">
 				<xsl:text>svg-professional-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'FIN')">
+			<xsl:when test="contains($code, 'FIN')">
 				<xsl:text>svg-finance-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'CUL')">
+			<xsl:when test="contains($code, 'CUL')">
 				<xsl:text>svg-culture-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'ADM')">
+			<xsl:when test="contains($code, 'ADM')">
 				<xsl:text>svg-admin-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'HEB')">
+			<xsl:when test="contains($code, 'HEB')">
 				<xsl:text>svg-restaurant-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(. ,'PRM800000')">
+			<xsl:when test="contains($code ,'PRM800000')">
 				<xsl:text>svg-money-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(. ,'PRM500000')">
+			<xsl:when test="contains($code, 'WOR') or contains(. ,'PRM500000')">
 				<xsl:text>svg-worker-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(. ,'IMS551002')">
-				<xsl:text>svg-building-symbol</xsl:text>
-			</xsl:when>
-			<xsl:when test="contains(. ,'PRM600000')">
-				<xsl:text>svg-contribution-symbol</xsl:text>
-			</xsl:when>
-			<xsl:when test="contains(., 'MPS533000')">
+			<xsl:when test="contains($code, 'MPS533000')">
 				<xsl:text>svg-copyright-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'MPG322201')">
+			<xsl:when test="contains($code, 'FAB') or contains($code, 'MPG322201')">
 				<xsl:text>svg-cardboard-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'MPG332401')">
+			<xsl:when test="contains($code, 'MPG332401')">
 				<xsl:text>svg-cap-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'MPG311208')">
+			<xsl:when test="contains($code, 'AGRI') or contains($code, 'MPG311208')">
 				<xsl:text>svg-cereal-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'MPS541800')">
+			<xsl:when test="contains($code, 'AUT') or contains($code, 'MPS541800')">
 				<xsl:text>svg-advertising-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'PRM400000')">
+			<xsl:when test="contains($code, 'ETA') or contains($code, 'PRM400000')">
 				<xsl:text>svg-tax-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'MPS722001')">
+			<xsl:when test="contains($code, 'MPS722001')">
 				<xsl:text>svg-meal-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'MPG327A02')">
+			<xsl:when test="contains($code, 'MPG327A02')">
 				<xsl:text>svg-bottle-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'MPG311301')">
+			<xsl:when test="contains($code, 'MPG311301')">
 				<xsl:text>svg-sugar-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'MPS')">
+			<xsl:when test="contains($code, 'TRA') or contains($code, 'MPS')">
 				<xsl:text>svg-truck-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'ENE')">
+			<xsl:when test="contains($code, 'ENE')">
 				<xsl:text>svg-electricity-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'MPG')">
+			<xsl:when test="contains($code, 'MPG')">
 				<xsl:text>svg-goods-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'PRM')">
-				<xsl:text>svg-contribution-symbol</xsl:text>
+			<xsl:when test="contains($code, 'GRO')">
+				<xsl:text>svg-warehouse-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains($code, 'DET')">
+				<xsl:text>svg-retail-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains($code, 'SAN')">
+				<xsl:text>svg-health-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains($code, 'ART')">
+				<xsl:text>svg-show-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains($code, 'ENS')">
+				<xsl:text>svg-school-symbol</xsl:text>
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:text>svg-unknown-symbol</xsl:text>

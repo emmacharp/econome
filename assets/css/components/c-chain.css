@@ -5,7 +5,6 @@
 
 .chain>div {
 	align-items: center;
-	max-width: max-content;
 	flex-wrap: nowrap;
 }
 
@@ -116,8 +115,8 @@
 	background-color: var(--ColorBgAlt);
 	background-image:
 		linear-gradient(to top,
-			var(--Color) 0,
-			var(--Color) var(--NeutralAddedValue, 0%),
+			currentColor 0,
+			currentColor var(--NeutralAddedValue, 0%),
 			var(--ColorLocal) var(--NeutralAddedValue, 0%),
 			var(--ColorLocal) calc(var(--LocalAddedValue, 0%) + var(--NeutralAddedValue, 0%)),
 			var(--ColorForeign)  calc(var(--LocalAddedValue, 0%) + var(--NeutralAddedValue, 0%)),
@@ -142,7 +141,6 @@
 }
 
 /* ------ DIAGRAMME HORIZONTAL ---- */
-/* @media (orientation: landscape) { */ 
 	.chain>div {
 		column-gap: var(--Row);
 	}
@@ -167,10 +165,9 @@
 		border-bottom: 1px solid currentColor;
 		border-bottom-right-radius: 5px;
 	}
-/* } */
 
 /* ------ DIAGRAMME VERTICAL ---- */
-/* @media (orientation: portrait) { */
+/* @media (max-width: 100ch) { */
 /* .chain>div { */
 /* 	row-gap: var(--Row); */
 /* 	flex-direction: column; */

@@ -2,8 +2,7 @@
 /* Adaptation de la typographie ----------------------- */
 
 	@media (max-width: 60em) { :root { --Scale: var(--MinorThird); } }
-	@media (min-width: 60em) and (max-width: 100em) { :root { --Scale: var(--PerfectFourth); } }
-	@media (min-width: 100em) { :root { --Scale: var(--AugmentedFourth); } }
+	@media (min-width: 60em) { :root { --Scale: var(--PerfectFourth); } }
 
 
 /* Typographie basée sur les polices système ----------------------- */
@@ -16,31 +15,27 @@
 
 	h1 { --ScaleLevel: var(--Huger); --FontWeight: 700; }
 	h2 { --ScaleLevel: var(--Huge); }
-	h3 { --ScaleLevel: var(--Huge); }
+	h3 { --ScaleLevel: var(--Huge); --FontWeight: 600; }
 	h4 { --ScaleLevel: var(--Base); --FontWeight: 600; --LineHeightFactor: .75; }
 	h5 { --ScaleLevel: var(--Base); --LineHeightFactor: .75; }
 	h6 { --ScaleLevel: var(--Short); --LineHeightFactor: .75; }
 
 
-/* Styles typograhpiques particuliers -----------------------  */
+/* Styles typographiques particuliers -----------------------  */
 
 
-	main>section>form p:only-of-type {
-		--FontWeight: 600;
-		--ScaleLevel: var(--Tall);
+	main>section>p,
+  	main>section form p	{
+		--ScaleLevel: var(--Taller);
 	}
 
-	main>section>:not(header)+*>p:first-child:only-of-type,
-	main>section>.grille>p:first-child:only-of-type,
-	main>section header,
-	main>section>p {
-		--FontWeight: 600;
+	main>section header {
+		--FontWeight: 500;	
 		--ScaleLevel: var(--Taller); }
 
 	nav details,
 	main>section aside {
 		--ScaleLevel: var(--Short);
-		--FontWeight: 650;
 		--LineHeightFactor: .75;
 	}
 
@@ -53,3 +48,12 @@
 	body>aside>div>footer>* {
 		--ScaleLevel: var(--Short);
 		--LineHeightFactor: .75; }
+
+	strong, b {
+		font-weight: 500;
+	}
+
+	.prose>* {
+		font-weight: 300;
+	}
+

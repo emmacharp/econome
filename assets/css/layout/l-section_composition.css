@@ -1,3 +1,26 @@
+@media all {
+	main>section {
+		display: grid;
+		grid-template: repeat(auto-fit, minmax(0,max-content)) / auto;
+		row-gap: calc(var(--Row) * 2);
+	}
+
+	main>section>header>h3 {
+		max-width: 30ch;
+	}
+
+	main>section>header>p,
+	main>section>p {
+		max-width: 40ch;
+	}
+
+	main > section>aside {
+		max-width: 50ch;
+	}
+
+
+}
+
 @media (orientation: portrait) {
 	main>section {
 		display: flex;
@@ -23,9 +46,33 @@
 	}
 }
 
-main>section p>b:only-child {
-	font-size: 1.4125em;
-	display: block;
+@media (min-width: 80em) {
+
+	main>section>*,
+	main>section>header>* {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	main>section>header,
+	main>section form p,
+	main>section>p {
+
+		text-align: center;
+	}
+
+	main>section>header,
+	main>section>form,
+	main>section>p {
+		justify-self: center;
+	}
+
+}
+
+@media (min-height: 50em) {
+	main>section {
+		align-content: center;
+	}
 }
 
 aside>details>* {

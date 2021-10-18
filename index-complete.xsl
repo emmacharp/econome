@@ -87,7 +87,8 @@ exclude-result-prefixes="ext msxsl svg math">
 		</xsl:template>
 
 		<xsl:template name="scripts">
-			<script src="assets/js/htmx.min.js"></script>
+			<script src="assets/js/htmx.min.js" defer="defer"></script>
+			<script src="assets/js/purify.min.js" defer="defer"></script>
 			<script src="assets/js/main.js" defer="defer"></script>
 			<link rel="stylesheet" href="assets/css/x-quarantine.css"/>
 		</xsl:template>
@@ -109,6 +110,7 @@ exclude-result-prefixes="ext msxsl svg math">
 
 	<xsl:variable name="product-file" select="document('product.xml', /)" />
 	<xsl:variable name="goods-file" select="document('goods.xml', /)" />
+	<xsl:variable name="macro-file" select="document('macro.xml', /)" />
 
 	<xsl:template match="@type" mode="data-translator">
 		<xsl:choose>
@@ -154,7 +156,7 @@ exclude-result-prefixes="ext msxsl svg math">
 			<small>
 				<xsl:choose>
 					<xsl:when test="$name = 'local' or $name = 'foreign'">
-						<xsl:text>Biens intrants</xsl:text>
+						<xsl:text>Valeur achetée</xsl:text>
 					</xsl:when>
 					<xsl:when test="$name = 'value'">
 						<xsl:text>Valeur ajoutée</xsl:text>
@@ -221,6 +223,7 @@ exclude-result-prefixes="ext msxsl svg math">
 			</xsl:if>
 			<section class="amounts">
 				<xsl:apply-templates select="." />
+				<xsl:if test="ancestor::agent[@goods]">
 				<xsl:choose>
 					<xsl:when test="local-name() = 'value'">
 						<xsl:apply-templates select="ext:node-set($file)//produit[@type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
@@ -237,6 +240,7 @@ exclude-result-prefixes="ext msxsl svg math">
 						</xsl:apply-templates>
 					</xsl:otherwise>
 				</xsl:choose>
+				</xsl:if>
 			</section>
 		</section>
 	</xsl:template>
@@ -247,7 +251,7 @@ exclude-result-prefixes="ext msxsl svg math">
 				<aside>
 					<xsl:if test="@goods">
 						<xsl:attribute name="class">
-							goods-list
+									<xsl:text disable-output-escaping="yes">goods-list</xsl:text>
 						</xsl:attribute>
 					</xsl:if>
 					<section class="product {@type}">
@@ -258,7 +262,6 @@ exclude-result-prefixes="ext msxsl svg math">
 					</section>
 				</aside>
 			</xsl:if>
-			<div>
 				<article>
 
 					<xsl:apply-templates select="ext:node-set($svg-symbols)//svg:symbol[generate-id() = generate-id(key('symbol-type', current()/@type)[1])]">
@@ -266,7 +269,6 @@ exclude-result-prefixes="ext msxsl svg math">
 					</xsl:apply-templates>
 					<h4><xsl:apply-templates select="@name" /></h4>
 				</article>
-			</div>
 		</section>
 	</xsl:template>
 
@@ -283,7 +285,6 @@ exclude-result-prefixes="ext msxsl svg math">
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-		<div>
 			<section class="{$state} product">
 				<xsl:attribute name="style">
 					<xsl:if test="@local">
@@ -302,16 +303,18 @@ exclude-result-prefixes="ext msxsl svg math">
 						<xsl:value-of select="';'" />
 					</xsl:if>
 				</xsl:attribute>
-				<div>
 					<article>
 						<i class="icon {@type}"></i>
 						<h4><xsl:value-of select="@name" /></h4>
 					</article>
-				</div>
 				<hr class="good arrow" />
 			</section>
-		</div>
 	</xsl:template>
+
+	<!-- <xsl:template match="diagram[@type = 'macro']"> -->
+	<!-- 	<xsl:apply-templates select="ext:node-set($macro-file)//produit" mode="product-creator"> -->
+	<!-- 	</xsl:apply-templates> -->
+	<!-- </xsl:template> -->
 
 	<xsl:template match="diagram[not(preceding::diagram)]" mode="include-once">
 		<xsl:call-template name="body-css">
@@ -325,7 +328,7 @@ exclude-result-prefixes="ext msxsl svg math">
 	<xsl:template match="diagram">
 		<xsl:apply-templates select="." mode="include-once" />
 		<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))"></xsl:variable>
-		<article class="buying chain diagram" hx-get="diagrams.html" hx-select="#{$id}" hx-trigger="intersect"></article>
+		<article class="buying {@type} diagram" hx-get="diagrams.html" hx-select="#{$id}" hx-trigger="intersect"></article>
 	</xsl:template>
 
 	<xsl:template match="diagram" priority="1" mode="ajax-diagrams">
@@ -335,7 +338,66 @@ exclude-result-prefixes="ext msxsl svg math">
 		<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))" />
 
 		<div id="{$id}">
-			<xsl:apply-templates />
+			<xsl:choose>
+				<xsl:when test="@type = 'goods-list'">
+					<xsl:for-each select="ext:node-set($macro-file)//produit[local|etranger|disponible]">
+								<xsl:variable name="prod-factor" select="ceiling((prod-local + prod-etranger) div 10000)" />
+								<xsl:variable name="worker-factor" select="ceiling((local + etranger) div 100000)" />
+								<xsl:variable name="available-factor" select="ceiling((local + etranger) div 100000)" />
+								<xsl:variable name="column-counter">
+											<xsl:choose>
+														<xsl:when test="disponible">
+																	<xsl:value-of select="ceiling(disponible div 100000)"></xsl:value-of>
+															</xsl:when>
+														<xsl:when test="$prod-factor &gt; worker-factor">
+																		<xsl:value-of select="$prod-factor" />
+														</xsl:when>
+														<xsl:otherwise>
+																	<xsl:value-of select="$worker-factor" />
+														</xsl:otherwise>
+											</xsl:choose>
+								</xsl:variable>
+								<section style="--column-counter: {ceiling($column-counter)}">
+							<h4><xsl:value-of select="titre" /></h4>
+							
+							<div class="product">
+								<div class="local">
+									<xsl:apply-templates select="local" mode="product-creator">
+										<xsl:with-param name="multiplier" select="10 div emploi-ratio" />
+									</xsl:apply-templates>
+								</div>
+								<div class="foreign">
+									<xsl:apply-templates select="etranger" mode="product-creator">
+										<xsl:with-param name="multiplier" select="10 div emploi-ratio" />
+									</xsl:apply-templates>
+								</div>
+							</div>
+							<div class="worker">
+								<div class="local">
+									<xsl:apply-templates select="local" mode="product-creator">
+										<xsl:with-param name="multiplier" select="3" />
+										<xsl:with-param name="code" select="'WOR'" />
+									</xsl:apply-templates>
+								</div>
+								<div class="foreign">
+									<xsl:apply-templates select="etranger" mode="product-creator">
+										<xsl:with-param name="multiplier" select="3" />
+										<xsl:with-param name="code" select="'WOR'" />
+									</xsl:apply-templates>
+								</div>
+							</div>
+							<div class="worker available">
+										<xsl:apply-templates select="disponible" mode="product-creator">
+													<xsl:with-param name="multiplier" select="3" />
+										</xsl:apply-templates>
+							</div>
+						</section>
+					</xsl:for-each>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:apply-templates />
+				</xsl:otherwise>
+			</xsl:choose>
 		</div>
 	</xsl:template>
 
@@ -408,7 +470,7 @@ exclude-result-prefixes="ext msxsl svg math">
 				</details>
 			</header>
 			<ul>
-				<xsl:apply-templates select="/root/h2" mode="internal-navigation" />
+				<xsl:apply-templates select="/root/section" mode="internal-navigation" />
 			</ul>
 		</nav>
 	</xsl:template>
@@ -426,7 +488,6 @@ exclude-result-prefixes="ext msxsl svg math">
 				</a>
 			</li>
 		</xsl:if>
-		<xsl:apply-templates select="following-sibling::*[1][name() = 'section']" mode="internal-navigation"/>
 	</xsl:template>
 	<xsl:template match="h2" mode="internal-navigation">
 		<xsl:variable name="id" select="concat('id-', count(preceding-sibling::*))"></xsl:variable>
@@ -560,95 +621,101 @@ exclude-result-prefixes="ext msxsl svg math">
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
-	<xsl:template match="code" mode="symbol-chooser">
-
+	<xsl:template match="code" mode="symbol-chooser" name="symbol-chooser">
+		<xsl:param name="code" select="." />
 		<xsl:choose>
-			<xsl:when test="contains(., 'MIN')">
+			<xsl:when test="contains($code, 'MIN')">
 				<xsl:text>svg-minerals-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'ALI')">
+			<xsl:when test="contains($code, 'ALI')">
 				<xsl:text>svg-food-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'IMM')">
+			<xsl:when test="contains($code, 'IMM') or contains($code ,'IMS551002')">
 				<xsl:text>svg-building-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'COT')">
+			<xsl:when test="contains($code, 'PRM') or contains($code, 'COT') or contains($code ,'PRM600000')">
 				<xsl:text>svg-contribution-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'CON')">
+			<xsl:when test="contains($code, 'CON')">
 				<xsl:text>svg-construction-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'REV')">
+			<xsl:when test="contains($code, 'REV')">
 				<xsl:text>svg-moneybag-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'SAL')">
+			<xsl:when test="contains($code, 'SAL')">
 				<xsl:text>svg-salary-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'PRO')">
+			<xsl:when test="contains($code, 'PRO')">
 				<xsl:text>svg-professional-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'FIN')">
+			<xsl:when test="contains($code, 'FIN')">
 				<xsl:text>svg-finance-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'CUL')">
+			<xsl:when test="contains($code, 'CUL')">
 				<xsl:text>svg-culture-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'ADM')">
+			<xsl:when test="contains($code, 'ADM')">
 				<xsl:text>svg-admin-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'HEB')">
+			<xsl:when test="contains($code, 'HEB')">
 				<xsl:text>svg-restaurant-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(. ,'PRM800000')">
+			<xsl:when test="contains($code ,'PRM800000')">
 				<xsl:text>svg-money-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(. ,'PRM500000')">
+			<xsl:when test="contains($code, 'WOR') or contains(. ,'PRM500000')">
 				<xsl:text>svg-worker-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(. ,'IMS551002')">
-				<xsl:text>svg-building-symbol</xsl:text>
-			</xsl:when>
-			<xsl:when test="contains(. ,'PRM600000')">
-				<xsl:text>svg-contribution-symbol</xsl:text>
-			</xsl:when>
-			<xsl:when test="contains(., 'MPS533000')">
+			<xsl:when test="contains($code, 'MPS533000')">
 				<xsl:text>svg-copyright-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'MPG322201')">
+			<xsl:when test="contains($code, 'FAB') or contains($code, 'MPG322201')">
 				<xsl:text>svg-cardboard-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'MPG332401')">
+			<xsl:when test="contains($code, 'MPG332401')">
 				<xsl:text>svg-cap-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'MPG311208')">
+			<xsl:when test="contains($code, 'AGRI') or contains($code, 'MPG311208')">
 				<xsl:text>svg-cereal-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'MPS541800')">
+			<xsl:when test="contains($code, 'AUT') or contains($code, 'MPS541800')">
 				<xsl:text>svg-advertising-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'PRM400000')">
+			<xsl:when test="contains($code, 'ETA') or contains($code, 'PRM400000')">
 				<xsl:text>svg-tax-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'MPS722001')">
+			<xsl:when test="contains($code, 'MPS722001')">
 				<xsl:text>svg-meal-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'MPG327A02')">
+			<xsl:when test="contains($code, 'MPG327A02')">
 				<xsl:text>svg-bottle-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'MPG311301')">
+			<xsl:when test="contains($code, 'MPG311301')">
 				<xsl:text>svg-sugar-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'MPS')">
+			<xsl:when test="contains($code, 'TRA') or contains($code, 'MPS')">
 				<xsl:text>svg-truck-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'ENE')">
+			<xsl:when test="contains($code, 'ENE')">
 				<xsl:text>svg-electricity-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'MPG')">
+			<xsl:when test="contains($code, 'MPG')">
 				<xsl:text>svg-goods-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains(., 'PRM')">
-				<xsl:text>svg-contribution-symbol</xsl:text>
+			<xsl:when test="contains($code, 'GRO')">
+				<xsl:text>svg-warehouse-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains($code, 'DET')">
+				<xsl:text>svg-retail-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains($code, 'SAN')">
+				<xsl:text>svg-health-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains($code, 'ART')">
+				<xsl:text>svg-show-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains($code, 'ENS')">
+				<xsl:text>svg-school-symbol</xsl:text>
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:text>svg-unknown-symbol</xsl:text>

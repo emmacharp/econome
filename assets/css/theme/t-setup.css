@@ -3,7 +3,7 @@
 /* Appliquer les styles typographiques de base */
 	html { 
 		line-height: var(--RowFactor, 1.67125);
-		font-size: var(--FontSize, clamp(13px, 1.1vmax, 19px));
+		font-size: var(--FontSize, clamp(13px, 1.2vmax, 20px));
 		color: var(--Color, initial); }
 
 /* Contexte du corps de la page */
@@ -36,9 +36,6 @@
 		font-size: inherit;
 		font-style: inherit;
 		font-weight: inherit; }
-
-	strong, b {
-		font-weight: 500; }
 
 
 /* Permettre aux icônes de recevoir la couleur contextuelle */

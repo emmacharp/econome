@@ -17,7 +17,7 @@
 				</details>
 			</header>
 			<ul>
-				<xsl:apply-templates select="/root/h2" mode="internal-navigation" />
+				<xsl:apply-templates select="/root/section" mode="internal-navigation" />
 			</ul>
 		</nav>
 	</xsl:template>
@@ -35,7 +35,6 @@
 				</a>
 			</li>
 		</xsl:if>
-		<xsl:apply-templates select="following-sibling::*[1][name() = 'section']" mode="internal-navigation"/>
 	</xsl:template>
 	<xsl:template match="h2" mode="internal-navigation">
 		<xsl:variable name="id" select="concat('id-', count(preceding-sibling::*))"></xsl:variable>

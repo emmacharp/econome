@@ -5,6 +5,7 @@
 
 	<xsl:variable name="product-file" select="document('product.xml', /)" />
 	<xsl:variable name="goods-file" select="document('goods.xml', /)" />
+	<xsl:variable name="macro-file" select="document('macro.xml', /)" />
 
 	<xsl:template match="@type" mode="data-translator">
 		<xsl:choose>
@@ -50,7 +51,7 @@
 			<small>
 				<xsl:choose>
 					<xsl:when test="$name = 'local' or $name = 'foreign'">
-						<xsl:text>Biens intrants</xsl:text>
+						<xsl:text>Valeur achetée</xsl:text>
 					</xsl:when>
 					<xsl:when test="$name = 'value'">
 						<xsl:text>Valeur ajoutée</xsl:text>
@@ -117,6 +118,7 @@
 			</xsl:if>
 			<section class="amounts">
 				<xsl:apply-templates select="." />
+				<xsl:if test="ancestor::agent[@goods]">
 				<xsl:choose>
 					<xsl:when test="local-name() = 'value'">
 						<xsl:apply-templates select="ext:node-set($file)//produit[@type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
@@ -133,6 +135,7 @@
 						</xsl:apply-templates>
 					</xsl:otherwise>
 				</xsl:choose>
+				</xsl:if>
 			</section>
 		</section>
 	</xsl:template>
@@ -143,7 +146,7 @@
 				<aside>
 					<xsl:if test="@goods">
 						<xsl:attribute name="class">
-							goods-list
+									<xsl:text disable-output-escaping="yes">goods-list</xsl:text>
 						</xsl:attribute>
 					</xsl:if>
 					<section class="product {@type}">
@@ -154,7 +157,6 @@
 					</section>
 				</aside>
 			</xsl:if>
-			<div>
 				<article>
 
 					<xsl:apply-templates select="ext:node-set($svg-symbols)//svg:symbol[generate-id() = generate-id(key('symbol-type', current()/@type)[1])]">
@@ -162,7 +164,6 @@
 					</xsl:apply-templates>
 					<h4><xsl:apply-templates select="@name" /></h4>
 				</article>
-			</div>
 		</section>
 	</xsl:template>
 
@@ -179,7 +180,6 @@
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-		<div>
 			<section class="{$state} product">
 				<xsl:attribute name="style">
 					<xsl:if test="@local">
@@ -198,16 +198,18 @@
 						<xsl:value-of select="';'" />
 					</xsl:if>
 				</xsl:attribute>
-				<div>
 					<article>
 						<i class="icon {@type}"></i>
 						<h4><xsl:value-of select="@name" /></h4>
 					</article>
-				</div>
 				<hr class="good arrow" />
 			</section>
-		</div>
 	</xsl:template>
+
+	<!-- <xsl:template match="diagram[@type = 'macro']"> -->
+	<!-- 	<xsl:apply-templates select="ext:node-set($macro-file)//produit" mode="product-creator"> -->
+	<!-- 	</xsl:apply-templates> -->
+	<!-- </xsl:template> -->
 
 	<xsl:template match="diagram[not(preceding::diagram)]" mode="include-once">
 		<xsl:call-template name="body-css">
@@ -221,7 +223,7 @@
 	<xsl:template match="diagram">
 		<xsl:apply-templates select="." mode="include-once" />
 		<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))"></xsl:variable>
-		<article class="buying chain diagram" hx-get="diagrams.html" hx-select="#{$id}" hx-trigger="intersect"></article>
+		<article class="buying {@type} diagram" hx-get="diagrams.html" hx-select="#{$id}" hx-trigger="intersect"></article>
 	</xsl:template>
 
 	<xsl:template match="diagram" priority="1" mode="ajax-diagrams">
@@ -231,7 +233,66 @@
 		<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))" />
 
 		<div id="{$id}">
-			<xsl:apply-templates />
+			<xsl:choose>
+				<xsl:when test="@type = 'goods-list'">
+					<xsl:for-each select="ext:node-set($macro-file)//produit[local|etranger|disponible]">
+								<xsl:variable name="prod-factor" select="ceiling((prod-local + prod-etranger) div 10000)" />
+								<xsl:variable name="worker-factor" select="ceiling((local + etranger) div 100000)" />
+								<xsl:variable name="available-factor" select="ceiling((local + etranger) div 100000)" />
+								<xsl:variable name="column-counter">
+											<xsl:choose>
+														<xsl:when test="disponible">
+																	<xsl:value-of select="ceiling(disponible div 100000)"></xsl:value-of>
+															</xsl:when>
+														<xsl:when test="$prod-factor &gt; worker-factor">
+																		<xsl:value-of select="$prod-factor" />
+														</xsl:when>
+														<xsl:otherwise>
+																	<xsl:value-of select="$worker-factor" />
+														</xsl:otherwise>
+											</xsl:choose>
+								</xsl:variable>
+								<section style="--column-counter: {ceiling($column-counter)}">
+							<h4><xsl:value-of select="titre" /></h4>
+							
+							<div class="product">
+								<div class="local">
+									<xsl:apply-templates select="local" mode="product-creator">
+										<xsl:with-param name="multiplier" select="10 div emploi-ratio" />
+									</xsl:apply-templates>
+								</div>
+								<div class="foreign">
+									<xsl:apply-templates select="etranger" mode="product-creator">
+										<xsl:with-param name="multiplier" select="10 div emploi-ratio" />
+									</xsl:apply-templates>
+								</div>
+							</div>
+							<div class="worker">
+								<div class="local">
+									<xsl:apply-templates select="local" mode="product-creator">
+										<xsl:with-param name="multiplier" select="3" />
+										<xsl:with-param name="code" select="'WOR'" />
+									</xsl:apply-templates>
+								</div>
+								<div class="foreign">
+									<xsl:apply-templates select="etranger" mode="product-creator">
+										<xsl:with-param name="multiplier" select="3" />
+										<xsl:with-param name="code" select="'WOR'" />
+									</xsl:apply-templates>
+								</div>
+							</div>
+							<div class="worker available">
+										<xsl:apply-templates select="disponible" mode="product-creator">
+													<xsl:with-param name="multiplier" select="3" />
+										</xsl:apply-templates>
+							</div>
+						</section>
+					</xsl:for-each>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:apply-templates />
+				</xsl:otherwise>
+			</xsl:choose>
 		</div>
 	</xsl:template>
 </xsl:stylesheet>

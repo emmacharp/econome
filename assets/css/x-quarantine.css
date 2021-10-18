@@ -21,8 +21,9 @@
 .sitename {
 	font-weight: 900;
 	text-transform: uppercase;
-	font-size: .73125em;
+	font-size: .78125em;
 	display: inline-block;
+	margin-left: .125em;
 }
 
 h1 span {
@@ -30,7 +31,7 @@ h1 span {
 }
 
 strong {
-	background-color: var(--tr-purple);
+	background-color: var(--ColorBgAlt);
 	font-weight: 500;
 }
 
@@ -38,158 +39,136 @@ mark {
 	background-color: var(--yellow);
 }
 
-main > section p > b:only-child {
-	font-size: 1.3125em;
+[type="observation"]>header>h3:before {
+	content: "💡";
+	/* display: block; */
+	font-size: 1em;
+	line-height: 1;
+	margin-right: var(--Row);
 }
 
-@media (orientation: landscape) {
+main>section>aside {
+	position: sticky;
+	bottom: 0;
+	margin-right: auto;
+	order: 1;
+	z-index: 4;
+	justify-self: start;
+}
 
-.chain {
+.intervention>div {
+	background-color: var(--ColorBg);
+}
+
+.intervention > svg[class*="cartoon"] {
+	height: calc(var(--Row) * 3.5);	
+	shape-outside: circle(62.49% at 41.44% 51.66%) padding-box;
+	position: relative;
+}
+
+.intervention:not(:hover)>svg+* {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.intervention:hover>svg+* {
+	transition-delay: 0ms;
+}
+
+.intervention:not(:hover)>svg+* {
+	transition-delay: 100ms;
+}
+
+:root {
+	--Color: var(--primary);
+	--ColorActive: var(--primary);
+	--ColorBgActive: var(--ltst-primary);
+}
+
+.diagram {
+	--Color: var(--ltr-brown);
+	color: var(--Color);
+	max-width: 100%;
+	box-sizing: border-box;
+	overflow: auto;
 	justify-self: center;
 }
 
-
-.chain {
-	margin-left: calc(-1 * var(--Row));
-	margin-right: calc(-1 * var(--Row));
-	overflow: auto;
-	max-width: 90vw;
+.diagram.goods-list {
+	justify-self: center;
+	pointer-events: none;
+	transform: translateZ(1px);
 }
-	.chain {
-		margin-left: calc(-1 * var(--Row) * 2);
-		margin-right: calc(-1 * var(--Row) * 4);
-	}
-	.chain>div {
-		margin-left: calc(var(--Row) * 2);
-		margin-right: calc(var(--Row) * 4);
-	}
 
-.chain * {
+.diagram.goods-list>div {
+	flex-wrap: nowrap;
+	position: relative;
+}
+
+.diagram.goods-list>div>section {
 	display: inline-flex;
+	flex-wrap: wrap;
+	pointer-events: all;
+
+}
+.diagram.goods-list>div>section,
+.diagram.goods-list>div>section>div>div {
+	display: contents;
 }
 
-.chain>div {
-	margin-left: calc(var(--Row));
-	margin-right: calc(var(--Row));
-}
-}
-
-@media (max-width: 50ch) {
-	.chain {
-		/* --Size: .6; */
-	}
+.diagram.goods-list h4 {
+	text-align: center;
+    grid-column: 1 / 99; /* Nombre ridicule pour toujours aller jusqu'au bout. ne peut pas utiliser de GAP ! */
+	 grid-row: 2;
+	 color: var(--dk-primary);
+	 pointer-events: none;
+	 margin-top: calc(var(--Row) * .5);
+	 margin-bottom: calc(var(--Row) * .5);
 }
 
-main>section div p:only-of-type,
-main>section .prose:not(:only-child) {
-	margin-right: auto;
+.diagram.goods-list section:not(:hover)>h4 {
+	color: transparent;
 }
 
-main>section .prose:last-child {
-	margin-left: auto;
-}
-
-main>section>section>p:first-child:only-of-type,
-main>section>section>div>p:first-child:only-of-type,
-main>section>div>p:first-child:only-of-type,
-main>section>header h3+p,
-main>section>header p:only-of-type {
-	max-width: 42ch;
-}
-
-fieldset + fieldset {
-	margin-top: calc(var(--Row) * 2);
-}
-fieldset p~div {
-	max-width: max-content;
-}
-
-fieldset p {
-	flex-basis: 0;
-	flex-shrink: 1;
-	margin-right: auto;
-}
-
-main>section>article+aside {
-	margin-left: auto;
-}
-
-main>section>form>fieldset~fieldset>*:first-child {
-	margin-top: calc(var(--Row) * 2.5);
-}
-
-@media (orientation: portrait) {
-	main>section {
-		padding: var(--Row) 0;
-	}
-	main>section>* {
-		padding-left: var(--Row);
-		padding-right: var(--Row);
-		box-sizing: border-box;
-	}
-	nav a {
-		display: flex;
-	}
-	main>section>:first-child {
-		margin-top: auto;
-	}
-
-	main>section>:last-child {
-		margin-bottom: auto;
-	}
-
-	main>section>*+* {
-		/* margin-top: calc(var(--Row)); */
-	}
-}
-
-@media (orientation: landscape) {
-main>section {
+.diagram.goods-list>div {
+	/* Ne peut pas utiliser de gap à cause du placement du h4 */
 	display: grid;
-	grid-template: repeat(auto-fit, minmax(0,max-content)) / auto;
-	grid-auto-flow: row;
-	grid-auto-columns: auto;
-	align-content: center;
-	column-gap: var(--Row);
-	row-gap: calc(var(--Row) * 2);
 }
 
-main>section+section {
-	border-top: 1px solid var(--ltr-primary);
-	margin-top: -1px;
+.diagram.goods-list .product {
+	order: -1;
+	grid-row-start: 1;
+	align-self: end;
+	flex-wrap: wrap-reverse;
+	grid-column: span var(--column-counter);
+}
+.diagram.goods-list .worker {
+	order: 1;
+	grid-row-start: 3;
+	grid-column: span var(--column-counter);
 }
 
-main>section~section {
-	margin-top: calc(var(--Row) * 4);
+.diagram.goods-list .available {
+	grid-row-start: 3;
+	order: 2;
+	grid-column: span var(--column-counter);
 }
 
-main {
-	flex: 1 1 0%;
-	padding: calc(var(--Row) * 2);
+.diagram.goods-list .worker svg {
+	align-items: flex-end;
+	width: calc(var(--Row) / 2);
+	height: auto;
+	flex-shrink: 0;
+	position: static;
+	padding: 2px;
+	margin: 0;
 }
 
-main>section {
-	align-items: baseline;
-}
-
-
-
-
-}
-
-main>section>* {
-	align-self: baseline;
-	align-items: baseline;
+.diagram.goods-list section>div {
+	justify-content: space-around;
 	align-content: baseline;
 }
 
-form {
-	align-items: baseline;
-}
-
-form {
-	--DivItemGutter: calc(var(--Row));
-}
-main>section:not(.is-visible) .intervention {
-	display: none;
+.diagram.goods-list:hover section:not(:hover) svg {
+	color: var(--ltr-primary);
 }
