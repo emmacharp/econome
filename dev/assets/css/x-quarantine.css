@@ -385,6 +385,10 @@ div.prose {
 .diagram {
 	--Color: var(--ltr-brown);
 	color: var(--Color);
+	max-width: 100%;
+	box-sizing: border-box;
+	overflow: auto;
+	justify-self: center;
 }
 
 .diagram.goods-list {
@@ -417,7 +421,7 @@ div.prose {
 	/* left: 0; */
 	/* right: 0; */
 	text-align: center;
-    grid-column: 1; /* Nombre ridicule pour toujours aller jusqu'au bout */
+    grid-column: 1 / 99; /* Nombre ridicule pour toujours aller jusqu'au bout. ne peut pas utiliser de GAP ! */
 	 grid-row: 2;
 	 color: var(--dk-primary);
 	 pointer-events: none;
@@ -435,6 +439,7 @@ div.prose {
 }
 
 .diagram.goods-list>div {
+	/* Ne peut pas utiliser de gap à cause du placement du h4 */
 	display: grid;
 	/* grid-template-columns: repeat(auto-fill, var(--Row)); */
 	/* grid-auto-flow: column dense; */
@@ -478,10 +483,9 @@ div.prose {
 }
 
 .diagram.goods-list:hover section:not(:hover) svg {
-	filter: grayscale(1);
-	opacity: .4;
+	color: var(--ltr-primary);
 }
 
 .diagram.goods-list section:hover svg {
-	transform: scale(1.1);
+	/* transform: scale(1.1); */
 }
