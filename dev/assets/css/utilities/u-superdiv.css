@@ -96,7 +96,11 @@
 			--DivItemGrow: initial;
 		}
 
-	/* 4. Dimensions des enfants & contenus ---- */
+		div {
+			margin: initial;
+		}
+
+		/* 4. Dimensions des enfants & contenus ---- */
 		/* Dimension minimale de tout enfant.
 			Permet l'adaptation. Peut être ajusté */
 		/* div>* { */
