@@ -53,14 +53,6 @@ strong, b {
 	max-width: initial;
 }
 
-fieldset + fieldset {
-	margin-top: calc(var(--Row) * 2);
-}
-
-fieldset p~div {
-	justify-content: center;
-}
-
 main>section>article+aside {
 	margin-left: auto;
 }
@@ -134,15 +126,6 @@ main>section>article+aside {
 main>section>* {
 	align-items: baseline;
 	align-content: baseline;
-}
-
-/* form { */
-/* 	align-items: baseline; */
-/* } */
-
-form {
-	--DivItemGutter: calc(var(--Row));
-	text-align: center;
 }
 
 nav>ul>li>a {

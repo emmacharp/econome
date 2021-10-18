@@ -1,11 +1,11 @@
 fieldset {
 	border: none;
-	display: contents;
+	--DivItemGutter: calc(var(--Row) * .5);
+	text-align: center;
 }
 
-fieldset>*+*,
-fieldset~fieldset>* {
-	margin-top: calc(var(--Row) / 2);
+* + fieldset {
+	margin-top: calc(var(--Row) * 2);
 }
 
 fieldset label {
@@ -59,10 +59,8 @@ fieldset input[type=radio] {
 	z-index: -1;
 }
 
-fieldset p {
-	font-weight: 600;
-	flex-grow: 1;
-	flex-basis: 0;
+fieldset p~div {
+	justify-content: center;
 }
 
 fieldset:valid input[type=radio]:not(:hover):not(:checked)~span {
