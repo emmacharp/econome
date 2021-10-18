@@ -43,93 +43,26 @@ strong, b {
 	font-weight: 500;
 }
 
-main > section .prose p:first-of-type::first-line {
-	/* font-size: 1.3125em; */
-}
-
 .prose>* {
 	font-weight: 300;
-	/* font-size: 18px !important; */
-}
-
-@media (orientation: landscape) {
-
-/* .chain { */
-/* 	justify-self: center; */
-/* } */
-
-
-/* .chain { */
-/* 	margin-left: calc(-1 * var(--Row)); */
-/* 	margin-right: calc(-1 * var(--Row)); */
-/* 	overflow: auto; */
-/* 	max-width: 90vw; */
-/* } */
-/* 	.chain { */
-/* 		margin-left: calc(-1 * var(--Row) * 2); */
-/* 		margin-right: calc(-1 * var(--Row) * 4); */
-/* 	} */
-/* 	.chain>div { */
-/* 		margin-left: calc(var(--Row) * 2); */
-/* 		margin-right: calc(var(--Row) * 4); */
-/* 	} */
-
-.chain * {
-	display: inline-flex;
 }
 
 .chain>div {
-	/* margin-left: calc(var(--Row)); */
-	/* margin-right: calc(var(--Row)); */
 	justify-content: space-evenly;
 	display: flex;
 	max-width: initial;
-}
-}
-
-/* @media (max-width: 50ch) { */
-	.chain {
-		/* --Size: .6; */
-	}
-/* } */
-
-/* main>section div p:only-of-type, */
-/* main>section .prose:not(:only-child) { */
-/* 	margin-right: auto; */
-/* } */
-
-/* main>section .prose:last-child { */
-/* 	margin-left: auto; */
-/* } */
-
-main>section>section>p:first-child:only-of-type,
-main>section>section>div>p:first-child:only-of-type,
-main>section>div>p:first-child:only-of-type,
-main>section>header h3+p,
-main>section>header p:only-of-type {
-	/* max-width: 42ch; */
 }
 
 fieldset + fieldset {
 	margin-top: calc(var(--Row) * 2);
 }
-fieldset p~div {
-	/* max-width: max-content; */
-	justify-content: center;
-}
 
-fieldset p {
-	/* flex-basis: 0; */
-	/* flex-shrink: 1; */
-	/* margin-right: auto; */
+fieldset p~div {
+	justify-content: center;
 }
 
 main>section>article+aside {
 	margin-left: auto;
-}
-
-main>section>form>fieldset~fieldset>*:first-child {
-	margin-top: calc(var(--Row) * 2.5);
 }
 
 @media (orientation: portrait) {
@@ -182,16 +115,13 @@ main>section>form>fieldset~fieldset>*:first-child {
 		justify-self: center;
 	}
 
-	main>section+section {
-		/* border-top: 1px solid var(--ltr-primary); */
-		/* margin-top: -1px; */
-	}
-
 	main>section~section {
 		margin-top: calc(var(--Row) * 4);
 	}
 
 	main {
+		display: flex;
+		flex-direction: column;
 		flex: 1 1 0%;
 		padding: calc(var(--Row) * 2);
 	}
@@ -199,42 +129,30 @@ main>section>form>fieldset~fieldset>*:first-child {
 	main>section {
 		align-items: baseline;
 	}
-
-
-
-
 }
 
 main>section>* {
-	/* align-self: baseline; */
 	align-items: baseline;
 	align-content: baseline;
 }
 
-form {
-	align-items: baseline;
-}
+/* form { */
+/* 	align-items: baseline; */
+/* } */
 
 form {
 	--DivItemGutter: calc(var(--Row));
 	text-align: center;
-}
-main>section:not(.is-visible) .intervention {
-	/* display: none; */
 }
 
 nav>ul>li>a {
 	display: none;
 }
 
-main {
-	display: flex;
-	flex-direction: column;
-}
 
-main>section {
-	margin: initial;
-}
+/* main>section { */
+/* 	margin: initial; */
+/* } */
 
 main>section>header {
 	text-align: center;
@@ -247,20 +165,48 @@ main>section .prose {
 	margin-right: auto;
 }
 
+main>section form p,
+main>section>p {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.prose {
+	/* max-width: 100ch; */
+}
+
+main>section .prose {
+	width: max-content;
+	width: 100%;
+}
+
+main>section .prose>p:only-child {
+	max-width: 40ch;
+}
+
+div.prose {
+	--DivDisplay: block;
+	max-width: 70ch;
+	/* column-width: initial; */
+	column-count: 2;
+	column-gap: calc(var(--Row) * 1);
+}
+
 main>h2 {
 	align-self: stretch;
 	margin: initial;
 	text-align: center;
-	display: initial;
+	/* display: initial; */
 	text-shadow: -2px -2px 0 var(--ColorBg), 2px 2px 0 var(--ColorBg),
 					 -4px -4px 0 var(--ColorBg), 4px 4px 0 var(--ColorBg);
 }
 
 main>h2:after {
-	margin: initial;
-	margin-top: -.5em;
-	position: relative;
-	z-index: -1;
+	/* margin: initial; */
+	margin-top: -.25em;
+	/* position: relative; */
+	/* z-index: -1; */
 }
 
 /* .intervention { */
@@ -269,11 +215,13 @@ main>h2:after {
 /* 	right: var(--Row); */
 /* } */
 
-body > main > * {
-	max-width: initial;
-}
+/* body > main > * { */
+/* 	max-width: initial; */
+/* } */
+
+
 main>section>header>h3 {
-	max-width: 25ch;
+	max-width: 30ch;
 }
 
 main>section>header>p,
@@ -298,9 +246,7 @@ h1 {
 	/* --LineHeightFactor: 1.5; */
 }
 /* Pour superdiv */
-div {
-	margin: initial;
-}
+
 
 .grille>article>p {
 	/* --ScaleLevel: var(--Short); */
@@ -347,33 +293,7 @@ header>*+* {
 	/* margin-top: calc(var(--Row) / 2); */
 }
 
-main>section form p,
-main>section>p {
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-}
 
-div.prose {
-	/* max-width: 100ch; */
-}
-
-main>section .prose {
-	width: max-content;
-	width: 100%;
-}
-
-main>section .prose>p:only-child {
-	max-width: 40ch;
-}
-
-div.prose {
-	--DivDisplay: block;
-	max-width: 70ch;
-	column-width: initial;
-	column-count: 2;
-	column-gap: calc(var(--Row) * 1);
-}
 
 :root {
 	--Color: var(--primary);
