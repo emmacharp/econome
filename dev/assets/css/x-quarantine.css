@@ -70,9 +70,6 @@ main>section>article+aside {
 		padding-right: var(--Row);
 		box-sizing: border-box;
 	}
-	nav a {
-		display: flex;
-	}
 	main>section>:first-child {
 		margin-top: auto;
 	}
@@ -105,17 +102,6 @@ main>section>article+aside {
 	main>section>form,
 	main>section>p {
 		justify-self: center;
-	}
-
-	main>section~section {
-		margin-top: calc(var(--Row) * 4);
-	}
-
-	main {
-		display: flex;
-		flex-direction: column;
-		flex: 1 1 0%;
-		padding: calc(var(--Row) * 2);
 	}
 
 	main>section {
