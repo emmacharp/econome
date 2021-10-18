@@ -239,11 +239,15 @@
 		<div id="{$id}">
 			<xsl:choose>
 				<xsl:when test="@type = 'goods-list'">
-					<xsl:for-each select="ext:node-set($macro-file)//produit[local|etranger]">
+					<xsl:for-each select="ext:node-set($macro-file)//produit[local|etranger|disponible]">
 								<xsl:variable name="prod-factor" select="ceiling((prod-local + prod-etranger) div 10000)" />
 								<xsl:variable name="worker-factor" select="ceiling((local + etranger) div 100000)" />
+								<xsl:variable name="available-factor" select="ceiling((local + etranger) div 100000)" />
 								<xsl:variable name="column-counter">
 											<xsl:choose>
+														<xsl:when test="disponible">
+																	<xsl:value-of select="ceiling(disponible div 100000)"></xsl:value-of>
+															</xsl:when>
 														<xsl:when test="$prod-factor &gt; worker-factor">
 																		<xsl:value-of select="$prod-factor" />
 														</xsl:when>
@@ -268,7 +272,7 @@
 								<!-- 						</xsl:otherwise> -->
 								<!-- 			</xsl:choose> -->
 								<!-- </xsl:variable> -->
-										<section style="--column-counter: {round($column-counter)}">
+										<section style="--column-counter: {ceiling($column-counter)}">
 							<h4><xsl:value-of select="titre" /></h4>
 							
 							<div class="product">
@@ -297,13 +301,13 @@
 									</xsl:apply-templates>
 								</div>
 							</div>
+							<div class="worker available">
+										<xsl:apply-templates select="disponible" mode="product-creator">
+													<xsl:with-param name="multiplier" select="3" />
+										</xsl:apply-templates>
+							</div>
 						</section>
 					</xsl:for-each>
-					<div class="available">
-						<xsl:apply-templates select="ext:node-set($macro-file)//disponible" mode="product-creator">
-							<xsl:with-param name="multiplier" select="3" />
-						</xsl:apply-templates>
-					</div>
 				</xsl:when>
 				<xsl:otherwise>
 					<xsl:apply-templates />
