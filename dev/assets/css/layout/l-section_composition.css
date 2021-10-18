@@ -23,11 +23,6 @@
 	}
 }
 
-main>section p>b:only-child {
-	font-size: 1.4125em;
-	display: block;
-}
-
 aside>details>* {
 	padding: calc(var(--Row) * .25) calc(var(--Row) * .5);
 	line-height: 1;
