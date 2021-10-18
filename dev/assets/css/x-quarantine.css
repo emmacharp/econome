@@ -53,105 +53,13 @@ strong, b {
 	max-width: initial;
 }
 
-main>section>article+aside {
-	margin-left: auto;
-}
-
-@media (orientation: portrait) {
-	main {
-		overflow-y: hidden;
-	}
-
-	main>section {
-		padding: var(--Row) 0;
-	}
-	main>section>* {
-		padding-left: var(--Row);
-		padding-right: var(--Row);
-		box-sizing: border-box;
-	}
-	main>section>:first-child {
-		margin-top: auto;
-	}
-
-	main>section>:last-child {
-		margin-bottom: auto;
-	}
-
-	main>section>*+* {
-		/* margin-top: calc(var(--Row)); */
-	}
-
-	section[id] {
-		scroll-snap-stop: always;
-	}
-}
-
-@media (orientation: landscape) {
-	main>section {
-		display: grid;
-		grid-template: repeat(auto-fit, minmax(0,max-content)) / auto;
-		grid-auto-flow: row;
-		grid-auto-columns: auto;
-		column-gap: var(--Row);
-		row-gap: calc(var(--Row) * 2);
-		align-content: center;
-	}
-
-	main>section>header,
-	main>section>form,
-	main>section>p {
-		justify-self: center;
-	}
-
-	main>section {
-		align-items: baseline;
-	}
-}
-
-main>section>* {
-	align-items: baseline;
-	align-content: baseline;
-}
 
 nav>ul>li>a {
 	display: none;
 }
 
-
-/* main>section { */
-/* 	margin: initial; */
-/* } */
-
-main>section>header {
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-main>section .prose {
-	margin-left: auto;
-	margin-right: auto;
-}
-
-main>section form p,
-main>section>p {
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 div.prose {
 	/* max-width: 100ch; */
-}
-
-main>section .prose {
-	width: max-content;
-	width: 100%;
-}
-
-main>section .prose>p:only-child {
-	max-width: 40ch;
 }
 
 div.prose {
@@ -189,20 +97,6 @@ main>h2:after {
 /* } */
 
 
-main>section>header>h3 {
-	max-width: 30ch;
-}
-
-main>section>header>p,
-main>section>p {
-	max-width: 40ch;
-}
-
-main>section>header>* {
-	margin-left: auto;
-	margin-right: auto;
-}
-
 [type="observation"]>header>h3:before {
 	content: "💡";
 	/* display: block; */
@@ -235,10 +129,6 @@ main>section>aside>div {
 	background-color: var(--ColorBg);
 }
 
-main > section>aside {
-	max-width: 50ch;
-}
-
 .intervention > svg[class*="cartoon"] {
 	height: calc(var(--Row) * 3.5);	
 	shape-outside: circle(62.49% at 41.44% 51.66%) padding-box;
@@ -257,12 +147,6 @@ main > section>aside {
 .intervention:not(:hover)>svg+* {
 	transition-delay: 100ms;
 }
-
-header>*+* {
-	/* margin-top: calc(var(--Row) / 2); */
-}
-
-
 
 :root {
 	--Color: var(--primary);
