@@ -5,7 +5,6 @@
 
 .chain>div {
 	align-items: center;
-	max-width: max-content;
 	flex-wrap: nowrap;
 }
 
