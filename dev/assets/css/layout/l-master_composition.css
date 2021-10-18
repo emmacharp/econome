@@ -5,7 +5,7 @@
 	}
 
 	body>main>* {
-		max-width: 85rem;
+		/* max-width: 85rem; */
 		margin-left: auto;
 		margin-right: auto;
 		box-sizing: border-box;
@@ -16,9 +16,9 @@
 		top: 0;
 		left: 0;
 		padding-top: var(--Row);
-		margin-bottom: calc(var(--Row) * 2);
+		/* margin-bottom: calc(var(--Row) * 2); */
 		background-color: var(--ColorBg);
-		display: flex;
+		/* display: flex; */
 		align-items: baseline;
 		--ScaleLevel: var(--Short);
 		font-weight: 700;
@@ -32,7 +32,7 @@
 		flex-basis: 0;
 		flex-grow: 1;
 		border-bottom: 1px solid var(--ColorLines);
-		margin-left: .25em;
+		/* margin-left: .25em; */
 	}
 
 	main>h2:before {
@@ -40,9 +40,11 @@
 	} 
 
 	main>section {
+		box-sizing: border-box;
 		position: relative;
 		padding-top: calc(var(--Row) * 4);
 		padding-bottom: calc(var(--Row) * 4);
+		margin: 0;
 	}
 
 	main>section:not(.is-active)>aside {
