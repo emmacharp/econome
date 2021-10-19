@@ -47,38 +47,6 @@ mark {
 	margin-right: var(--Row);
 }
 
-main>section>aside {
-	position: sticky;
-	bottom: 0;
-	margin-right: auto;
-	order: 1;
-	z-index: 4;
-	justify-self: start;
-}
-
-.intervention>div {
-	background-color: var(--ColorBg);
-}
-
-.intervention > svg[class*="cartoon"] {
-	height: calc(var(--Row) * 3.5);	
-	shape-outside: circle(62.49% at 41.44% 51.66%) padding-box;
-	position: relative;
-}
-
-.intervention:not(:hover)>svg+* {
-	opacity: 0;
-	pointer-events: none;
-}
-
-.intervention:hover>svg+* {
-	transition-delay: 0ms;
-}
-
-.intervention:not(:hover)>svg+* {
-	transition-delay: 100ms;
-}
-
 :root {
 	--Color: var(--primary);
 	--ColorActive: var(--primary);
