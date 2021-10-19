@@ -7,7 +7,7 @@
 		</main>
 	</xsl:template>
 
-	<xsl:template match="*" mode="include-once"></xsl:template>
+	<xsl:template match="*|@*" mode="include-once"></xsl:template>
 
 	<xsl:template match="section[not(preceding::section)]" mode="include-once">
 		<xsl:call-template name="body-css">
@@ -46,7 +46,9 @@
 	<xsl:template match="h2" mode="main-content">
 		<xsl:variable name="id" select="concat('id-', count(preceding-sibling::*))"></xsl:variable>
 		<h2 id="{$id}">
-			<xsl:apply-templates />
+			<span>
+				<xsl:apply-templates />
+			</span>
 		</h2>
 	</xsl:template>
 
