@@ -202,7 +202,6 @@
 				<i class="icon {@type}"></i>
 				<h4><xsl:value-of select="@name" /></h4>
 			</article>
-			<hr class="good arrow" />
 		</section>
 	</xsl:template>
 
