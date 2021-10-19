@@ -19,22 +19,22 @@
 			<h3>Mais bon...</h3>
 			<p>Où sont nos manières ? Présentons-nous, avant tout.</p>
 		</header>
-			<div class="grille">
-				<aside>
-					<symbol type="emma" class="cartoon_emma animated" />
-					<div>
-						<p><b>Hello !</b></p>
-						<p>Je m’appelle Marc-André et je suis le concepteur de Econome. J’interviendrai ici et là pour illustrer certains aspects de l'exposé.</p>
-					</div>
-				</aside>
-				<aside>
-					<symbol type="henri" class="cartoon_henri animated" />
-					<div>
-						<p><b>Bonjour !</b></p>
-						<p>Alors moi, c’est Henri. Je suis l’économiste de l’équipe. Je serai là pour résumer ou expliquer les concepts importants.</p>
-					</div>
-				</aside>
-			</div>
+		<div>
+			<aside class="intervention">
+				<symbol type="emma" class="cartoon_emma animated" />
+				<div>
+					<p><b>Hello !</b></p>
+					<p>Je m’appelle Marc-André et je suis le concepteur de Econome. J’interviendrai ici et là pour illustrer certains aspects de l'exposé.</p>
+				</div>
+			</aside>
+			<aside class="intervention">
+				<symbol type="henri" class="cartoon_henri animated" />
+				<div>
+					<p><b>Bonjour !</b></p>
+					<p>Alors moi, c’est Henri. Je suis l’économiste de l’équipe. Je serai là pour résumer ou expliquer les concepts importants.</p>
+				</div>
+			</aside>
+		</div>
 				<div class="prose">
 					<p><b>Nous sommes deux amis espérant faire de l’analyse économique un moyen d'informer nos décisions communes.</b></p>
 					<p>Nous exposons faits et implications économiques sans toutefois ne prescrire de marche à suivre. </p>
