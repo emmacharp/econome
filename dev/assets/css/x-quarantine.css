@@ -66,3 +66,7 @@ mark {
 .prose p {
 	hyphens: auto;
 }
+
+.diagram>.goods-list {
+	min-width: calc(var(--Row) * 40);
+}
