@@ -48,6 +48,11 @@
 	body>aside>div>footer>* {
 		--ScaleLevel: var(--Short);
 		--LineHeightFactor: .75; }
+	
+	main>h2 {
+		--ScaleLevel: var(--Short);
+		--FontWeight: 700;
+	}
 
 	strong, b {
 		font-weight: 500;
