@@ -5,6 +5,7 @@ xmlns:svg="http://www.w3.org/2000/svg"
 xmlns:xlink="http://www.w3.org/1999/xlink"
 xmlns:msxsl="urn:schemas-microsoft-com:xslt"
 xmlns:ext="http://exslt.org/common"
+xmlns:str="http://exslt.org/strings"
 xmlns:math="http://exslt.org/math"
 exclude-result-prefixes="ext msxsl svg math">
 
@@ -28,6 +29,16 @@ exclude-result-prefixes="ext msxsl svg math">
 		<xsl:copy>
 			<xsl:apply-templates select="@*|node()" />
 		</xsl:copy>
+	</xsl:template>
+
+	<xsl:template match="text()">
+			<xsl:for-each select="str:tokenize(., ' ')">
+				<xsl:value-of select="."/> 
+				<xsl:choose>
+					<xsl:when test="position() = last() - 1"><xsl:text>&#160;</xsl:text></xsl:when>
+					<xsl:otherwise><xsl:text> </xsl:text></xsl:otherwise>
+				</xsl:choose>
+			</xsl:for-each>
 	</xsl:template>
 
 	<xsl:template match="text()[contains(.,'Joey Joe Joe')]">
