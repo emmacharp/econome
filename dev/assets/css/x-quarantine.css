@@ -47,11 +47,6 @@ mark {
 	margin-right: var(--Row);
 }
 
-:root {
-	--Color: var(--primary);
-	--ColorActive: var(--primary);
-	--ColorBgActive: var(--ltst-primary);
-}
 
 .diagram {
 	--Color: var(--ltr-brown);
