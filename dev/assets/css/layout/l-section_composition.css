@@ -15,7 +15,8 @@
 		justify-self: start;
 	}
 
-	main>section>header>h3 {
+	main>section>header>h3,
+  	main>section fieldset p {
 		max-width: 30ch;
 	}
 
@@ -59,7 +60,8 @@
 @media (min-width: 80em) {
 
 	main>section>*,
-	main>section>header>* {
+	main>section>header>*,
+	main>section form p	{
 		margin-left: auto;
 		margin-right: auto;
 	}

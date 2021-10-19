@@ -23,9 +23,11 @@
 
 /* Styles typographiques particuliers -----------------------  */
 
-
-	main>section>p,
   	main>section form p	{
+		--ScaleLevel: var(--Tall);
+	}
+
+	main>section>p {
 		--ScaleLevel: var(--Taller);
 	}
 

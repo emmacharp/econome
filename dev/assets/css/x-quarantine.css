@@ -13,9 +13,12 @@
 }
 
 :root {
-	--purple: #ac00b1;
 	--purple: #641677;
 	--purple: #7a0098;
+}
+
+.username {
+	white-space: nowrap;
 }
 
 .sitename {
@@ -54,6 +57,12 @@ mark {
 	max-width: 100%;
 	box-sizing: border-box;
 	overflow: auto;
-	justify-self: center;
 }
 
+.chain>div {
+	justify-content: space-evenly;
+}
+
+.prose p {
+	hyphens: auto;
+}
