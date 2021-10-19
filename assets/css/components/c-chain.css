@@ -26,6 +26,10 @@
 	justify-content: center;
 }
 
+.chain section.link:first-of-type>article {
+	order: -1;
+}
+
 .chain .amounts {
 	display: grid;
 	grid-template: 1fr / 1fr;
@@ -43,7 +47,6 @@
 	font-size: var(--Row); /* Devrait être lié aux dimensions des icônes de bien */
 	align-items: flex-end;
 	flex-direction: column;
-	margin-left: calc(var(--Row) / 4);
 	line-height: 1;
 	white-space: nowrap;
 }

@@ -96,7 +96,8 @@
 }
 
 [data-wiki]:after {
-	font-size: .76125em;
+	font-size: clamp(13px, .76125em, 20px);
+	vertical-align: middle;
 }
 
 :not(p):not(b)>[data-wiki]:after {

@@ -13,9 +13,12 @@
 }
 
 :root {
-	--purple: #ac00b1;
 	--purple: #641677;
 	--purple: #7a0098;
+}
+
+.username {
+	white-space: nowrap;
 }
 
 .sitename {
@@ -47,43 +50,6 @@ mark {
 	margin-right: var(--Row);
 }
 
-main>section>aside {
-	position: sticky;
-	bottom: 0;
-	margin-right: auto;
-	order: 1;
-	z-index: 4;
-	justify-self: start;
-}
-
-.intervention>div {
-	background-color: var(--ColorBg);
-}
-
-.intervention > svg[class*="cartoon"] {
-	height: calc(var(--Row) * 3.5);	
-	shape-outside: circle(62.49% at 41.44% 51.66%) padding-box;
-	position: relative;
-}
-
-.intervention:not(:hover)>svg+* {
-	opacity: 0;
-	pointer-events: none;
-}
-
-.intervention:hover>svg+* {
-	transition-delay: 0ms;
-}
-
-.intervention:not(:hover)>svg+* {
-	transition-delay: 100ms;
-}
-
-:root {
-	--Color: var(--primary);
-	--ColorActive: var(--primary);
-	--ColorBgActive: var(--ltst-primary);
-}
 
 .diagram {
 	--Color: var(--ltr-brown);
@@ -91,84 +57,16 @@ main>section>aside {
 	max-width: 100%;
 	box-sizing: border-box;
 	overflow: auto;
-	justify-self: center;
 }
 
-.diagram.goods-list {
-	justify-self: center;
-	pointer-events: none;
-	transform: translateZ(1px);
+.chain>div {
+	justify-content: space-evenly;
 }
 
-.diagram.goods-list>div {
-	flex-wrap: nowrap;
-	position: relative;
+.prose p {
+	hyphens: auto;
 }
 
-.diagram.goods-list>div>section {
-	display: inline-flex;
-	flex-wrap: wrap;
-	pointer-events: all;
-
-}
-.diagram.goods-list>div>section,
-.diagram.goods-list>div>section>div>div {
-	display: contents;
-}
-
-.diagram.goods-list h4 {
-	text-align: center;
-    grid-column: 1 / 99; /* Nombre ridicule pour toujours aller jusqu'au bout. ne peut pas utiliser de GAP ! */
-	 grid-row: 2;
-	 color: var(--dk-primary);
-	 pointer-events: none;
-	 margin-top: calc(var(--Row) * .5);
-	 margin-bottom: calc(var(--Row) * .5);
-}
-
-.diagram.goods-list section:not(:hover)>h4 {
-	color: transparent;
-}
-
-.diagram.goods-list>div {
-	/* Ne peut pas utiliser de gap à cause du placement du h4 */
-	display: grid;
-}
-
-.diagram.goods-list .product {
-	order: -1;
-	grid-row-start: 1;
-	align-self: end;
-	flex-wrap: wrap-reverse;
-	grid-column: span var(--column-counter);
-}
-.diagram.goods-list .worker {
-	order: 1;
-	grid-row-start: 3;
-	grid-column: span var(--column-counter);
-}
-
-.diagram.goods-list .available {
-	grid-row-start: 3;
-	order: 2;
-	grid-column: span var(--column-counter);
-}
-
-.diagram.goods-list .worker svg {
-	align-items: flex-end;
-	width: calc(var(--Row) / 2);
-	height: auto;
-	flex-shrink: 0;
-	position: static;
-	padding: 2px;
-	margin: 0;
-}
-
-.diagram.goods-list section>div {
-	justify-content: space-around;
-	align-content: baseline;
-}
-
-.diagram.goods-list:hover section:not(:hover) svg {
-	color: var(--ltr-primary);
+.diagram>.goods-list {
+	min-width: calc(var(--Row) * 40);
 }

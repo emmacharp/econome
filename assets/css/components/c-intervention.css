@@ -11,15 +11,20 @@
 }
 
 .intervention>div {
-	--DivDisplay: block;
+	display: block;
+	background-color: var(--ColorBg);
+	text-align: var(--MasterAlignment, left);
 }
 
 .intervention>svg[class*="cartoon"] {
-	height: calc(var(--Row) * 4.5);
-	float: left;
-	shape-outside: circle(55% at 50% 50%) padding-box;
+	height: calc(var(--Row) * 3.5);
+	float: var(--MasterAlignment, left);
+	shape-outside: circle(62.49% at 41.44% 51.66%) padding-box;
+	margin-left: calc(var(--Row) / 2);
 	margin-right: calc(var(--Row) / 2);
 	margin-top: calc(-1 * var(--Row) * .5);
 	padding-right: calc(var(--Row) / 2);
+	padding-left: calc(var(--Row) / 2);
 	padding-bottom: var(--Row);
+	position: relative;
 }

@@ -4,7 +4,7 @@
 		background-color: var(--ColorBg);
 	}
 
-	main>* {
+	main>section {
 		margin-left: auto;
 		margin-right: auto;
 		box-sizing: border-box;
@@ -17,24 +17,32 @@
 		padding-top: var(--Row);
 		background-color: var(--ColorBg);
 		align-items: baseline;
-		--ScaleLevel: var(--Short);
-		--FontWeight: 700;
+		text-align: center;
+		line-height: calc(var(--Row) * .5);
 		z-index: 3;
+		display: flex;
 		counter-increment: numero-partie;
-		text-shadow: -2px -2px 0 var(--ColorBg), 2px 2px 0 var(--ColorBg),
-						 -4px -4px 0 var(--ColorBg), 4px 4px 0 var(--ColorBg);
 	}
 
-	main>h2:after {
-		content: '';
-		display: block;
-		flex-basis: 0;
-		flex-grow: 1;
-		border-bottom: 1px solid var(--ColorLines);
+	main>h2>span {
+		background-color: inherit;
+		flex-shrink: 0;
+		padding-left: calc(var(--Row) * .5);
+		padding-right: calc(var(--Row) * .5);
+		padding-bottom: .1em;
 		margin-top: -.25em;
 	}
 
-	main>h2:before {
+	main>h2:before,
+	main>h2:after	{
+		content: '';
+		display: block;
+		flex-basis: 0px;
+		flex-grow: 1;
+		border-bottom: 1px solid var(--ColorLines);
+	}
+
+	main>h2>span:before {
 		content: "Partie " counter(numero-partie) " — ";
 	} 
 

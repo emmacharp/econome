@@ -23,9 +23,11 @@
 
 /* Styles typographiques particuliers -----------------------  */
 
-
-	main>section>p,
   	main>section form p	{
+		--ScaleLevel: var(--Tall);
+	}
+
+	main>section>p {
 		--ScaleLevel: var(--Taller);
 	}
 
@@ -48,6 +50,11 @@
 	body>aside>div>footer>* {
 		--ScaleLevel: var(--Short);
 		--LineHeightFactor: .75; }
+	
+	main>h2 {
+		--ScaleLevel: var(--Short);
+		--FontWeight: 700;
+	}
 
 	strong, b {
 		font-weight: 500;

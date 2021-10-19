@@ -59,17 +59,15 @@ fieldset input[type=radio] {
 	z-index: -1;
 }
 
+fieldset p~p {
+	margin-top: calc(var(--Row) * 2);
+}
+
 fieldset p~div {
 	justify-content: center;
 }
 
 fieldset:valid input[type=radio]:not(:hover):not(:checked)~span {
 	background-color: var(--ltst-primary);
+	color: var(--lt-primary);
 }
-
-fieldset input[type=radio]:checked~span[class] {
-	background-color: currentColor;
-	background-image: linear-gradient(#ffffffe0 0, #ffffffe0 100%);
-	background-blend-mode: hard-light;
-}
-

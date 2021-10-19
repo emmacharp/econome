@@ -23,13 +23,14 @@
 		div.prose {
 			--DivDisplay: block;
 			max-width: 70ch;
-			column-width: 25ch;
+			column-width: 30ch;
 			column-count: 2;
 			column-gap: var(--Row);
 		}
 
 		div.prose>* {
 			--DivItemGutter: 0;
+			--DivItemMaxWidth: 22ch;
 		}
 
 		div.prose>*+* {
@@ -38,7 +39,7 @@
 
 		.prose>*:only-child {
 			column-span: all;
-			max-width: 40ch;
+			--DivItemMaxWidth: 40ch;
 		}
 
 	/* Échaffaudage : propriétés et valeurs par défaut --------- */
