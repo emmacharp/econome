@@ -5,6 +5,16 @@
 		row-gap: calc(var(--Row) * 2);
 	}
 
+	main>section>aside {
+		position: sticky;
+		bottom: 0;
+		margin-right: auto;
+		order: 1;
+		z-index: 4;
+		margin-left: 0;
+		justify-self: start;
+	}
+
 	main>section>header>h3 {
 		max-width: 30ch;
 	}
@@ -66,7 +76,10 @@
 	main>section>p {
 		justify-self: center;
 	}
-
+	
+	main>section>aside {
+		bottom: calc(var(--Row) * 2);
+	}
 }
 
 @media (min-height: 50em) {
@@ -107,12 +120,6 @@ aside details[open] summary:after {
 	left: -1px;
 }
 
-main>h2 {
-	--ScaleLevel: var(--Short);
-	color: inherit;
-	line-height: calc(var(--Row) * .5);
-}
-
 main>section>section div div {
 	flex-grow: 1;
 }
@@ -137,4 +144,21 @@ main>section>p:only-of-type {
 
 main>section aside {
 	max-width: 50ch;
+}
+
+main>section>* aside:not(:only-of-type):first-of-type {
+	--MasterAlignment: right;
+}
+
+main>section>aside.intervention:not(:hover)>svg+* {
+	opacity: 0;
+	pointer-events: none;
+}
+
+main>section>aside.intervention:hover>svg+* {
+	transition-delay: 0ms;
+}
+
+main>section>aside.intervention:not(:hover)>svg+* {
+	transition-delay: 100ms;
 }
