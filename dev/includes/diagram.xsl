@@ -33,7 +33,7 @@
 		<xsl:text>local</xsl:text>
 	</xsl:template>
 
-	<xsl:template match="agent/@local|agent/@foreign|agent/@value|agent/@paid|agent/@total">
+	<xsl:template match="agent/@local|agent/@foreign|agent/@value|agent/@bought|agent/@paid|agent/@total">
 		<xsl:param name="number" select="." />
 		<xsl:param name="name" select="name()" />
 		<span class="added amount">
@@ -50,12 +50,15 @@
 			</span>
 			<small>
 				<xsl:choose>
-					<xsl:when test="$name = 'local' or $name = 'foreign'">
+					<xsl:when test="$name = 'local' or $name = 'foreign' or $name = 'bought'">
 						<xsl:text>Valeur achetée</xsl:text>
 					</xsl:when>
+					<xsl:when test="$name = 'value' and (ancestor::agent/@local or ancestor::agent/@foreign or ancestor::agent/@bought)">
+						<xsl:text>Valeur créée</xsl:text>
+					</xsl:when>	
 					<xsl:when test="$name = 'value'">
 						<xsl:text>Valeur ajoutée</xsl:text>
-					</xsl:when>	
+					</xsl:when>
 				</xsl:choose>
 			</small>
 		</span>
@@ -67,7 +70,7 @@
 		</section>
 	</xsl:template>
 
-	<xsl:template match="@value|@local|@foreign" mode="class-generator">
+	<xsl:template match="@value|@bought|@local|@foreign" mode="class-generator">
 		<xsl:variable name="is-transformer" select="boolean(ancestor::agent[@type = 'transformer'])" />
 
 		<xsl:variable name="nodes">
@@ -142,7 +145,7 @@
 
 	<xsl:template match="diagram/agent">
 		<section class="link agent {@type} {@class}">	
-			<xsl:if test="@goods|@paid|@value|@foreign|@local|@total">
+			<xsl:if test="@goods|@paid|@value|@foreign|@local|@total|@bought">
 				<aside>
 					<xsl:if test="@goods">
 						<xsl:attribute name="class">
@@ -152,6 +155,7 @@
 					<section class="product {@type}">
 						<xsl:apply-templates select="@foreign" mode="class-generator" />
 						<xsl:apply-templates select="@value" mode="class-generator" />
+						<xsl:apply-templates select="@bought" mode="class-generator" />
 						<xsl:apply-templates select="@local" mode="class-generator" />
 						<xsl:apply-templates select="@paid|@total" mode="class-generator" />
 					</section>
