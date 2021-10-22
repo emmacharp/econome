@@ -96,9 +96,12 @@
 		</xsl:variable>
 		<xsl:variable name="units" select="boolean(ancestor::agent/@goods)" />
 		<xsl:variable name="subunits" select="boolean(ancestor::agent/@goods = 'subunits')" />
+		<xsl:variable name="column-counter">
+			<xsl:apply-templates select="." mode="goods-counter"></xsl:apply-templates>
+		</xsl:variable>
 
 		<!-- TODO : nettoyer les données du Choose au complet -->
-		<section class="{local-name()}">
+		<section class="{local-name()}" style="--columns-counter: {$column-counter}">
 			<xsl:if test="$units">
 				<input type="checkbox" checked="" name="show-units" class="toggle-units" />
 				<xsl:if test="$subunits">
