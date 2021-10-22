@@ -292,7 +292,7 @@
 	<xsl:template match="diagram">
 		<xsl:apply-templates select=".|@type" mode="include-once" />
 		<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))"></xsl:variable>
-		<article class="buying {@type} diagram" hx-get="diagrams.html" hx-select="#{$id}" hx-trigger="intersect"></article>
+		<article class="{@type} diagram" hx-get="diagrams.html" hx-select="#{$id}" hx-trigger="intersect"></article>
 	</xsl:template>
 
 	<xsl:template match="diagram[@type = 'chain']" mode="ajax-diagrams">
