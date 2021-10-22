@@ -9,6 +9,36 @@ exclude-result-prefixes="ext msxsl">
 
 	<xsl:key name="class-aggregate" match="produit" use="classe"/>
 
+	<xsl:template match="depanneur|transport|entrepot|brasserie|depense|ajout|local|etranger|disponible" mode="goods-counter">
+
+		<xsl:param name="number" select="." />
+		<xsl:param name="rounded" select="false()" />
+		<xsl:variable name="total">
+			<xsl:value-of select="/root/total/depense" />
+		</xsl:variable>
+		<xsl:variable name="coefficient">
+			<xsl:value-of select="format-number($number div $total, '#.#####')"/>
+		</xsl:variable>
+		<xsl:variable name="percentage">
+			<xsl:value-of select="$coefficient * 100" />
+		</xsl:variable>
+		<xsl:choose>
+			<xsl:when test="$rounded">
+				<xsl:choose>
+					<xsl:when test="$percentage &lt; 1">
+						<xsl:value-of select="ceiling($percentage)"/>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="round($percentage)"/>
+					</xsl:otherwise>
+				</xsl:choose>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="$percentage" />
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
+
 	<xsl:template match="*" mode="product-creator" priority="-1" />
 	<xsl:template match="depanneur|transport|entrepot|brasserie|depense|ajout|local|etranger|disponible" mode="product-creator">
 		<xsl:param name="relative" select="false()" />
@@ -26,27 +56,17 @@ exclude-result-prefixes="ext msxsl">
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-		<xsl:variable name="total">
-			<xsl:value-of select="/root/total/depense" />
-		</xsl:variable>
-		<xsl:variable name="coefficient">
-			<xsl:value-of select="format-number($number div $total, '#.#####')"/>
+
+		<xsl:variable name="square-total">
+			<xsl:apply-templates select="." mode="goods-counter">
+				<xsl:with-param name="number" select="$number"></xsl:with-param>
+				<xsl:with-param name="rounded" select="true()"></xsl:with-param>
+			</xsl:apply-templates>
 		</xsl:variable>
 		<xsl:variable name="percentage">
-			<xsl:value-of select="$coefficient * 100" />
-		</xsl:variable>
-		<xsl:variable name="rounded-per-cent">
-			<xsl:choose>
-				<xsl:when test="$subunits = true()">
-					<xsl:value-of select="ceiling($percentage)"/>
-				</xsl:when>
-				<xsl:otherwise>
-					<xsl:value-of select="round($percentage)"/>
-				</xsl:otherwise>
-			</xsl:choose>
-		</xsl:variable>
-		<xsl:variable name="square-total">
-			<xsl:value-of select="$rounded-per-cent"/>
+			<xsl:apply-templates select="." mode="goods-counter">
+				<xsl:with-param name="number" select="$number"></xsl:with-param>
+			</xsl:apply-templates>
 		</xsl:variable>
 		<xsl:apply-templates select="ancestor::produit[1]" mode="percentage-squares">
 			<xsl:with-param name="square-total" select="$square-total" />
