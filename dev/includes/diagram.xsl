@@ -219,15 +219,23 @@
 		<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))" />
 
 		<div id="{$id}" class="goods-list">
-			<xsl:for-each select="ext:node-set($macro-file)//produit[local|etranger|disponible]">
+			<xsl:for-each select="ext:node-set($macro-file)//produit[disponible]">
+				<xsl:variable name="column-counter" select="ceiling(disponible div 100000)"></xsl:variable>
+				<section class="worker available" style="--column-counter: {ceiling($column-counter)}">
+					<h4><span><xsl:value-of select="titre" /></span></h4>
+					<div>
+						<xsl:apply-templates select="disponible" mode="product-creator">
+							<xsl:with-param name="multiplier" select="3" />
+						</xsl:apply-templates>
+					</div>
+				</section>
+			</xsl:for-each>
+			<xsl:for-each select="ext:node-set($macro-file)//produit[local|etranger]">
 				<xsl:variable name="prod-factor" select="ceiling((prod-local + prod-etranger) div 10000)" />
 				<xsl:variable name="worker-factor" select="ceiling((local + etranger) div 100000)" />
 				<xsl:variable name="available-factor" select="ceiling((local + etranger) div 100000)" />
 				<xsl:variable name="column-counter">
 					<xsl:choose>
-						<xsl:when test="disponible">
-							<xsl:value-of select="ceiling(disponible div 100000)"></xsl:value-of>
-						</xsl:when>
 						<xsl:when test="$prod-factor &gt; worker-factor">
 							<xsl:value-of select="$prod-factor" />
 						</xsl:when>
@@ -237,7 +245,7 @@
 					</xsl:choose>
 				</xsl:variable>
 				<section style="--column-counter: {ceiling($column-counter)}">
-					<h4><xsl:value-of select="titre" /></h4>
+					<h4><span><xsl:value-of select="titre" /></span></h4>
 
 					<div class="product">
 						<div class="local">
@@ -265,11 +273,7 @@
 							</xsl:apply-templates>
 						</div>
 					</div>
-					<div class="worker available">
-						<xsl:apply-templates select="disponible" mode="product-creator">
-							<xsl:with-param name="multiplier" select="3" />
-						</xsl:apply-templates>
-					</div>
+
 				</section>
 			</xsl:for-each>
 		</div>
