@@ -101,8 +101,11 @@
 		</xsl:variable>
 
 		<!-- TODO : nettoyer les données du Choose au complet -->
-		<section class="{local-name()}" style="--columns-counter: {$column-counter}">
+		<section class="{local-name()}">
 			<xsl:if test="$units">
+				<xsl:attribute name="style">
+					<xsl:value-of select="'--columns-counter: {$column-counter}'" />
+				</xsl:attribute>
 				<input type="checkbox" checked="" name="show-units" class="toggle-units" />
 				<xsl:if test="$subunits">
 					<input type="checkbox" name="show-subunits" class="toggle-subunits" />
