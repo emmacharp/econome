@@ -30,3 +30,6 @@
 (A) 2021-07-28 Arranger l'adaptation du diagramme. Défilement horizontal et réarrangement. @maitrise +design
 (A) 2021-07-28 Remplacer les icônes temporaires. @maitrise +design
 (B) 2021-08-24 essayer scroll-snap-stop pour éviter de passer outre certaines sections. @maitrise @design
+(B) Enlever les elements vides dans les diagrammes. @maitrise +propre
+(B) Essayer les émoticones pour tout ce qui est section @maitrise @experience
+2021-10-24 vérifier la véracité des chiffres... chiffres qui concordent, siouplait. @maitrise +experience
