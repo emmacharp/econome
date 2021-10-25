@@ -98,7 +98,7 @@ nav li a:hover {
 	position: absolute;
 	-webkit-appearance: none;
 	appearance: none;
-	z-index: 4;
+	z-index: 5;
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
