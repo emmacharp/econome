@@ -22,7 +22,7 @@
 
 	main>section>header>p,
 	main>section>p {
-		max-width: 40ch;
+		max-width: 45ch;
 	}
 
 	main > section>aside {
@@ -43,36 +43,22 @@
 	}
 }
 
+@media (min-width: 70ch) {
 
-@media (max-height: 40em) and (max-width: 50em) {
-	main>section>aside>details {
-		margin: 0;
-		width: 100%;
-		margin-top: var(--Row);
-	}
-
-	main>section>aside>details>summary~* {
-		position: initial;
-		top: initial;
-	}
-}
-
-@media (min-width: 80em) {
-
-	main>section>*,
 	main>section>header>*,
-	main>section form p	{
+	main>section form p {
 		margin-left: auto;
 		margin-right: auto;
 	}
 
 	main>section>header,
-	main>section form p,
+	main>section fieldset,
 	main>section>p {
 
 		text-align: center;
 	}
 
+	main>section>div,
 	main>section>header,
 	main>section>form,
 	main>section>p {
@@ -84,7 +70,7 @@
 	}
 }
 
-@media (min-height: 50em) {
+@media (min-height: 30em) {
 	main>section {
 		align-content: center;
 	}
@@ -142,10 +128,6 @@ aside details[open] {
 main>section>p:only-of-type {
 	margin-top: auto;
 	margin-bottom: auto;
-}
-
-main>section aside {
-	max-width: 50ch;
 }
 
 main>section>* aside:not(:only-of-type):first-of-type {
