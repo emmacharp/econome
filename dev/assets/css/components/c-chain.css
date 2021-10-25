@@ -171,18 +171,6 @@
 	.chain .goods-list .product>section {
 		margin-right: calc(-1 * var(--Row) * 2);
 		padding-right: calc(var(--Row) * 1.5);
-		border-right: 1px solid currentColor;
-		border-left: 1px solid currentColor;
-	}
-
-	.chain .goods-list .product>section:first-of-type {
-		border-top: 1px solid currentColor;
-		border-top-right-radius: 5px;
-	}
-
-	.chain .goods-list .product>section:last-of-type {
-		border-bottom: 1px solid currentColor;
-		border-bottom-right-radius: 5px;
 	}
 
 /* ------ DIAGRAMME VERTICAL ---- */
