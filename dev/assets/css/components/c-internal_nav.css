@@ -83,13 +83,13 @@ nav li.is-complete>a>svg {
 	opacity: 0;
 }
 
-nav li li.is-incomplete>a {
+nav li.is-incomplete>a {
 	--ColorBgControls: var(--ColorBgIncomplete);
 	--ColorControls: var(--ColorIncomplete);
 }
 
-nav ul:not(:hover) li li.is-active>a,
-nav li li a:hover {
+nav ul:not(:hover) li.is-active>a,
+nav li a:hover {
 	--ColorBgControls: var(--ColorBgActive);
 	--ColorControls: var(--ColorActive);
 }
