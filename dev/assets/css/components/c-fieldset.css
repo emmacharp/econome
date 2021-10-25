@@ -71,3 +71,12 @@ fieldset:valid input[type=radio]:not(:hover):not(:checked)~span {
 	background-color: var(--ltst-primary);
 	color: var(--lt-primary);
 }
+
+fieldset textarea {
+	width: 100%;
+	max-width: 50ch;
+	padding: calc(var(--Row) * .5);
+	border: 1px solid var(--ColorLtSupport);
+	border-radius: 8px;
+	font-weight: 300;
+}
