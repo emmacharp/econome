@@ -131,7 +131,7 @@
 	<section>
 		<header>
 			<h3>Le scénario d'analyse</h3>
-			<p>Rien de mieux qu'un scénario pour comprendre...</p>
+			<p>Rien de mieux qu'un exemple pour comprendre...</p>
 		</header>
 			<div class="prose">
 				<p><b>Humhum.</b></p>
@@ -204,21 +204,21 @@
 		</div>
 		<p>La chaîne économique supporte votre achat, Joey Joe Joe.</p>
 		<div class="prose">
-			<p><b>C’est toute la valeur de votre Pâpire qui y est ajoutée .La <i data-wiki="Valeur_ajoutée" data-sections="1">valeur ajoutée</i> est le deuxième concept primordial à une compréhension rationnelle de notre acte de consommation locale.</b></p>
+			<p><b>C’est toute la valeur de votre Pâpire qui y est ajoutée. La <i data-wiki="Valeur_ajoutée" data-sections="1">valeur ajoutée</i> est le deuxième concept primordial à une compréhension rationnelle de notre acte de consommation locale.</b></p>
 			<p>La valeur ajoutée représente la trace économique de chacun des agents de la chaîne. Grâce à elle, nous pouvons évaluer quelle part de votre <i data-wiki="Utilité_(économie)">satisfaction</i> repose sur quelles épaules et beaucoup plus encore.</p>
 		</div>
-		<aside class="intervention">
-			<symbol type="henri" class="cartoon_henri animated" />
-			<div>
-				<p>Tous les chiffres utilisés dans notre exposé proviennent de Statistiques Canada et représentent <strong>en moyenne</strong> 😉 l'activité brassicole (et économique !) québécoise.</p>
-			</div>
-		</aside>
 		<!-- <aside class="intervention"> -->
 		<!-- 	<symbol type="henri" class="cartoon_henri animated" /> -->
 		<!-- 	<div> -->
-		<!-- 		<p>Dépendant de vos habitudes de consommation, la brasserie Moyenne peut endosser plusieurs rôles de la chaîne. Prendre une bière sur place, à la brasserie, lui fait aussi endosser le rôle de détaillant... écartant complètement de la chaîne le pauvre dépanneur Commun !</p> -->
+		<!-- 		<p>Tous les chiffres utilisés dans notre exposé proviennent de Statistiques Canada et représentent <strong>en moyenne</strong> 😉 l'activité brassicole (et économique !) québécoise.</p> -->
 		<!-- 	</div> -->
 		<!-- </aside> -->
+		<aside class="intervention">
+			<symbol type="henri" class="cartoon_henri animated" />
+			<div>
+				<p>Dépendant de vos habitudes de consommation, la brasserie Moyenne peut endosser plusieurs rôles de la chaîne. Prendre une bière sur place, à la brasserie, lui fait aussi endosser le rôle de détaillant... écartant complètement de la chaîne le pauvre dépanneur Commun !</p>
+			</div>
+		</aside>
 		<!-- <aside class="intervention"> -->
 
 		<!-- 	<symbol type="henri" class="cartoon_henri animated" /> -->
@@ -233,7 +233,7 @@
 			<h3>La valeur ajoutée</h3>
 			<small>Fait économique #02</small>
 		</header>
-		<p>Pour évaluer répercussions économique d'un achat, il faut considérer qui et quoi ajoute la valeur.</p>
+		<p>Pour évaluer les répercussions économique d'un achat, il faut considérer qui et quoi ajoute la valeur.</p>
 		<aside class="intervention">
 			<symbol type="neurath" class="cartoon_neurath animated" />
 			<div>
@@ -249,21 +249,19 @@
 			<small>Le périple du 10 $ à Joey Joe Joe</small>
 		</header>
 		<div class="prose">
-			<p><b>Imaginons que vous dépensez 10 $ Pâpire au dépanneur Commun.</b></p>
-			<p>Ce 10 $ sera distribué à travers la chaîne. Chaque agent s'en garde une partie. Cette partie, c'est la valeur ajoutée par son activité économique.</p>
+			<p><b>Imaginons que vous dépensez 10 $ (hors-taxes) pour de la bière Pâpire au dépanneur Commun.</b> Ce 10 $ sera distribué à travers la chaîne. Chaque agent s'en garde une partie. Cette partie, c'est la valeur ajoutée par son activité économique.</p>
 		</div>
 		<diagram type="chain">
 			<agent type="consumer" name="Joey Joe Joe" paid="10" />
 			<product type="beer" name="Bière" complete="" value="100%" />
-			<agent type="retailer" name="Dépanneur Commun" value="1.36" goods="" />
-			<product type="beer" name="Bière" value="86%" />
-			<agent type="manufacturer" name="Entrepôts Correct" value="0.51" goods="" />
-			<product type="beer" name="Bière" value="81%" />
-			<agent type="transformer" name="Brasserie Moyenne" value="3.90" goods="" />
+			<agent type="retailer" name="Dépanneur Commun" added="1.80" goods="" />
+			<product type="beer" name="Bière" value="82%" />
+			<agent type="manufacturer" name="Entrepôts Correct" added="0.62" goods="" />
+			<product type="beer" name="Bière" value="74.8%" />
+			<agent type="transformer" name="Brasserie Moyenne" added="7.48" goods="" />
 		</diagram>
 		<div class="prose">
-			<p>En achetant 10 $ de Pâpire, vous achetez 10 $ de valeur ajoutée par la chaîne. Et comment cette « valeur » est-elle ajoutée, vous demandez-vous, Joey Joe Joe.</p>
-			<p>Bon point.</p>
+			<p>En achetant 10 $ de Pâpire, vous achetez 10 $ de valeur ajoutée par la chaîne. Et comment cette « valeur » est-elle ajoutée, vous demandez-vous, Joey Joe Joe.<br />Bon point.</p>
 		</div>
 		<aside class="intervention">
 			<symbol type="henri" class="cartoon_henri animated" />
@@ -280,11 +278,11 @@
 		<diagram type="chain">
 			<agent type="consumer" name="Joey Joe Joe" paid="10" />
 			<product type="beer" name="Bière" complete="" value="100%"  />
-			<agent type="retailer" name="Dépanneur Commun" bought="0.51" value="0.85" goods="" />
-			<product type="beer" name="Bière" value="86%" />
-			<agent type="manufacturer" name="Entrepôts Correct" value="0.26" bought="0.15" goods="" />
+			<agent type="retailer" name="Dépanneur Commun" bought="0.66" value="1.14" goods="" />
 			<product type="beer" name="Bière" value="82%" />
-			<agent type="transformer" name="Brasserie Moyenne" value="1.90" bought="2.00" goods="" />
+			<agent type="manufacturer" name="Entrepôts Correct" value="0.39" bought="0.23" goods="" />
+			<product type="beer" name="Bière" value="74.8%" />
+			<agent type="transformer" name="Brasserie Moyenne" value="4.96" bought="2.52" goods="" />
 		</diagram>
 
 				<!-- <p>La valeur que vous achetez est considérée comme un « <i data-wiki="Bien_(économie)">bien de consommation</i> » alors que la valeur achetée par la brasserie Moyenne, elle, est considérée comme un « <i data-wiki="Intrant">bien intrant</i> ».</p> -->
@@ -336,21 +334,21 @@
 	<section type="chaine">
 		<header>
 			<h3>De la Pâpire à la Locale</h3>
-			<p>La valeur ajoutée est toujours ultimement produite par la main d'œuvre, une ressource économique fondamentale.</p>
+			<p>La valeur ajoutée est toujours ultimement produite par la main-d'œuvre, une ressource économique fondamentale.</p>
 		</header>
 		<div class="prose">
-			<p><b>Pour simplifier l'exposé donc, focalisons exclusivement sur cette main d'œuvre</b> et écartons de notre démonstration toute autre ressource (houblon, métaux, eau, etc.).</p>
+			<p><b>Pour simplifier l'exposé donc, focalisons exclusivement sur cette main-d'œuvre</b> et écartons de notre démonstration toute autre ressource (houblon, métaux, eau, etc.).</p>
 			<p>Pour produire la Locale, 100% travaillée ici, il nous faut donc ajouter de la main d’œuvre locale aux maillons de notre chaîne économique. Tout ce qui est rouge ci-bas doit devenir bleu. </p>
 		</div>
 
 		<diagram type="chain">
 			<agent type="consumer" name="Joey Joe Joe" paid="10" />
 			<product type="beer" name="La moins Locale" complete="" local="87%" foreign="13%"  />
-			<agent type="retailer" name="Dépanneur Commun" local="0.51" value="0.85" goods="subunits" />
+			<agent type="retailer" name="Dépanneur Commun" bought="0.66" value="1.14" goods="subunits" />
 			<product type="beer" name="Bière" local="73%" foreign="13%" />
-			<agent type="manufacturer" name="Entrepôts Correct" value="0.26" local="0.15" goods="subunits" />
+			<agent type="manufacturer" name="Entrepôts Correct" value="0.39" bought="0.23" goods="subunits" />
 			<product type="beer" name="Bière" local="69%" foreign="13%" />
-			<agent type="transformer" name="Brasserie Moyenne" value="1.40" local="1.29" foreign="1.21" goods="subunits" />
+			<agent type="transformer" name="Brasserie Moyenne" value="4.96" local="1.30" foreign="1.22" goods="subunits" />
 		</diagram>
 		<div class="prose">
 
@@ -384,11 +382,11 @@
 	</section>
 	<section type="chaine">
 		<header>
-			<h3>La main d'œuvre est limitée</h3>
+			<h3>La main-d'œuvre est limitée</h3>
 			<small>Comme toute autre ressource...</small>
 		</header>
 		<div class="prose">
-			<p>La main-d'œuvre locale est-elle effectivement rare ? En fait, regardez ci-bas, Joey Joe Joe. La main d'œuvre disponible est en quantité insuffisante pour pouvoir produire localement tout ce que nous consommons.</p>
+			<p>La main-d'œuvre locale est-elle effectivement rare ? En fait, regardez ci-bas, Joey Joe Joe. La main-d'œuvre disponible est en quantité insuffisante pour pouvoir produire localement tout ce que nous consommons.</p>
 			<p><b>La pénurie de main-d’œuvre locale implique qu’on doive la soutirer d’autres entreprises voire d'autres industries qui perpétueront à leur tour le cycle de pénurie.</b></p>
 			<p>Une hausse substantielle du niveau général des prix en est une conséquence directe. Certains appelleraient cela « inflation ». </p>
 		</div>
