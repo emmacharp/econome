@@ -87,16 +87,15 @@
 [id=wikiViewer] [id="wikiViewerClose"] {
 	border: 0;
 	background: none;
+	font-size: 0;
 }
 
 [id="wikiViewer"] [id="wikiViewerClose"]:after {
-	margin-left: 1.5em;
-	margin-right: calc(-1 * var(--Row) / 2);
-	font-size: 1.25em;
+	font-size: 1.25rem;
 }
 
 [data-wiki]:after {
-	font-size: clamp(13px, .76125em, 20px);
+	font-size: clamp(8px, .76125em, 20px);
 	vertical-align: middle;
 }
 
@@ -107,8 +106,9 @@
 }
 
 p [data-wiki]:after {
-	margin-left: .5em;
+	margin-left: .5ch;
 	margin-right: .5em;
+	margin-top: -.125em;
 	
 }
 
