@@ -36,14 +36,7 @@ exclude-result-prefixes="ext msxsl">
 		</xsl:variable>
 		<xsl:choose>
 			<xsl:when test="$rounded">
-				<!-- <xsl:choose> -->
-					<!-- <xsl:when test="$percentage &lt; 1"> -->
-						<!-- <xsl:value-of select="ceiling($percentage)"/> -->
-					<!-- </xsl:when> -->
-					<!-- <xsl:otherwise> -->
-						<xsl:value-of select="round($computed-number)"/>
-					<!-- </xsl:otherwise> -->
-				<!-- </xsl:choose> -->
+				<xsl:value-of select="round($computed-number)"/>
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:value-of select="$computed-number" />
