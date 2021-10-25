@@ -33,3 +33,5 @@
 (B) Enlever les elements vides dans les diagrammes. @maitrise +propre
 (B) Essayer les émoticones pour tout ce qui est section @maitrise @experience
 2021-10-24 vérifier la véracité des chiffres... chiffres qui concordent, siouplait. @maitrise +experience
+(A) Nettoyer les svg de navigation remplacés par les emojis. @maitrise +hygiene
+(A) Finir de sélectionner les icônes. @maitrise +recherche
