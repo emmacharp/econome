@@ -32,9 +32,11 @@ fieldset input:-webkit-autofill {
 	background-color: var(--ColorBgControls) !important;
 	box-shadow: inset 0 0 0 100px var(--ColorBgControls);
 }
-
+fieldset input[type="text"] {
+	border-radius: 0px 5px 5px 0px;
+}
 fieldset span {
-	border-radius: 5px 0 0 0;
+	border-radius: 5px 0 0 5px;
 }
 
 fieldset span~span {
