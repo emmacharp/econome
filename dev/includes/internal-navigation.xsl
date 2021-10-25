@@ -13,7 +13,7 @@
 				<p><xsl:value-of select="//h1"></xsl:value-of></p>
 				<details>
 					<summary><span>En savoir plus sur Econome</span></summary>
-					<p>Econome c'est une initiative de commnuication économique populaire. Comme d'autres <i data-wiki="Otto_Neurath">avant nous</i>, nous espérons informer le public dans ses prises de décision politiques grâce à l'exposition de faits économiques.</p>
+					<p>Econome c'est une initiative de commnuication économique populaire. Comme d'autres <i data-wiki="Isotype_(pictogramme)">avant nous</i>, nous espérons informer le public dans ses prises de décision politiques grâce à l'exposition de faits économiques.</p>
 				</details>
 			</header>
 			<ul>
