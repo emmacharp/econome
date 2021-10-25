@@ -24,14 +24,14 @@ exclude-result-prefixes="ext msxsl">
 		</xsl:variable>
 		<xsl:choose>
 			<xsl:when test="$rounded">
-				<xsl:choose>
-					<xsl:when test="$percentage &lt; 1">
-						<xsl:value-of select="ceiling($percentage)"/>
-					</xsl:when>
-					<xsl:otherwise>
+				<!-- <xsl:choose> -->
+					<!-- <xsl:when test="$percentage &lt; 1"> -->
+						<!-- <xsl:value-of select="ceiling($percentage)"/> -->
+					<!-- </xsl:when> -->
+					<!-- <xsl:otherwise> -->
 						<xsl:value-of select="round($percentage)"/>
-					</xsl:otherwise>
-				</xsl:choose>
+					<!-- </xsl:otherwise> -->
+				<!-- </xsl:choose> -->
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:value-of select="$percentage" />
@@ -158,8 +158,14 @@ exclude-result-prefixes="ext msxsl">
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-		<xsl:if test="$rounded-percent &gt; 0">
-			<span class="added amount">
+		<xsl:variable name="counted-goods">
+			<xsl:apply-templates select="*[local-name() = $node-name]" mode="goods-counter">
+				<xsl:with-param name="number" select="$number"></xsl:with-param>
+				<xsl:with-param name="rounded" select="true()"></xsl:with-param>
+			</xsl:apply-templates>
+		</xsl:variable>
+		<xsl:if test="$counted-goods &gt; 0">
+			<span data-code="{code}" class="added amount" debug="{$counted-goods} {$rounded-percent} {$node-name} {/root/total/*[local-name() = $node-name]} {/root/donnees/*[local-name() = $node-name]} {*[local-name() = $node-name]} {$total} {$number} {$total-added} {$coefficient}">
 				<span>
 					<xsl:value-of select="$final-amount" />
 				</span>
