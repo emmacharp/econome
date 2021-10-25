@@ -30,7 +30,7 @@
 	 margin-bottom: calc(var(--Row) * .5);
 }
 
-.diagram.macro section:not(:hover)>h4 {
+.diagram.macro section:not(:hover) span {
 	color: transparent;
 }
 
