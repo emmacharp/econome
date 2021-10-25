@@ -29,11 +29,14 @@
 	<xsl:template match="@value" mode="data-translator">
 		<xsl:text>ajout</xsl:text>
 	</xsl:template>
+	<xsl:template match="@bought|@added" mode="data-translator">
+		<xsl:text>depense</xsl:text>
+	</xsl:template>
 	<xsl:template match="@local" mode="data-translator">
 		<xsl:text>local</xsl:text>
 	</xsl:template>
 
-	<xsl:template match="agent/@local|agent/@foreign|agent/@value|agent/@bought|agent/@paid|agent/@total">
+	<xsl:template match="agent/@local|agent/@foreign|agent/@value|agent/@bought|agent/@paid|agent/@total|agent/@added">
 		<xsl:param name="number" select="." />
 		<xsl:param name="name" select="name()" />
 		<span class="added amount">
@@ -56,7 +59,7 @@
 					<xsl:when test="$name = 'value' and (ancestor::agent/@local or ancestor::agent/@foreign or ancestor::agent/@bought)">
 						<xsl:text>Valeur créée</xsl:text>
 					</xsl:when>	
-					<xsl:when test="$name = 'value'">
+					<xsl:when test="$name = 'value' or $name = 'added'">
 						<xsl:text>Valeur ajoutée</xsl:text>
 					</xsl:when>
 				</xsl:choose>
@@ -70,7 +73,7 @@
 		</section>
 	</xsl:template>
 
-	<xsl:template match="@value|@bought|@local|@foreign" mode="class-generator">
+	<xsl:template match="@added|@value|@bought|@local|@foreign" mode="class-generator">
 		<xsl:variable name="is-transformer" select="boolean(ancestor::agent[@type = 'transformer'])" />
 
 		<xsl:variable name="nodes">
@@ -117,6 +120,18 @@
 							<xsl:with-param name="subunits" select="$subunits" />
 						</xsl:apply-templates>
 					</xsl:when>
+					<xsl:when test="local-name() = 'added'">
+						<xsl:apply-templates select="ext:node-set($file)//produit[generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes or local-name() = 'depense']" mode="product-creator">
+							<xsl:with-param name="relative" select="not($is-transformer)" />
+							<xsl:with-param name="subunits" select="$subunits" />
+						</xsl:apply-templates>
+					</xsl:when>
+					<xsl:when test="local-name() = 'bought'">
+						<xsl:apply-templates select="ext:node-set($file)//produit[not(@type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes or local-name() = 'depense']" mode="product-creator">
+							<xsl:with-param name="relative" select="not($is-transformer)" />
+							<xsl:with-param name="subunits" select="$subunits" />
+						</xsl:apply-templates>
+					</xsl:when>
 					<xsl:otherwise>
 						<xsl:apply-templates select="ext:node-set($file)//produit[not(@type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes]" mode="product-creator">
 							<xsl:with-param name="relative" select="not($is-transformer)" />
@@ -131,6 +146,13 @@
 					<xsl:choose>
 						<xsl:when test="local-name() = 'value'">
 							<xsl:apply-templates select="ext:node-set($file)//produit[@type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
+								<xsl:with-param name="node-name" select="$nodes" />
+								<xsl:with-param name="relative" select="not($is-transformer)" />
+								<xsl:with-param name="total-dollars" select="." />
+							</xsl:apply-templates>
+						</xsl:when>
+						<xsl:when test="local-name() = 'added'">
+							<xsl:apply-templates select="ext:node-set($file)//produit[generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
 								<xsl:with-param name="node-name" select="$nodes" />
 								<xsl:with-param name="relative" select="not($is-transformer)" />
 								<xsl:with-param name="total-dollars" select="." />
@@ -151,7 +173,7 @@
 
 	<xsl:template match="diagram/agent">
 		<section class="link agent {@type} {@class}">	
-			<xsl:if test="@goods|@paid|@value|@foreign|@local|@total|@bought">
+			<xsl:if test="@goods|@paid|@value|@foreign|@local|@total|@bought|@added">
 				<aside>
 					<xsl:if test="@goods">
 						<xsl:attribute name="class">
@@ -159,6 +181,7 @@
 						</xsl:attribute>
 					</xsl:if>
 					<section class="product {@type}">
+						<xsl:apply-templates select="@added" mode="class-generator" />
 						<xsl:apply-templates select="@foreign" mode="class-generator" />
 						<xsl:apply-templates select="@value" mode="class-generator" />
 						<xsl:apply-templates select="@bought" mode="class-generator" />
