@@ -62,7 +62,8 @@ fieldset p~p {
 	margin-top: calc(var(--Row) * 2);
 }
 
-fieldset p~div {
+fieldset div {
+	display: inline-flex;
 	justify-content: center;
 }
 
