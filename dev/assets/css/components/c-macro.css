@@ -1,9 +1,3 @@
-.diagram.macro {
-	justify-self: center;
-	pointer-events: none;
-	transform: translateZ(1px);
-}
-
 .diagram.macro>div {
 	flex-wrap: nowrap;
 	position: relative;
