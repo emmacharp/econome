@@ -115,15 +115,17 @@ nav li a:hover {
 	.toggle-internal-nav::before {
 		margin-left: -.5rem;
 	} 
-}
 
-@media (min-height: 40em) and (min-width: 100em) {
 	.toggle-internal-nav::after {
-		content: "Menu";
 		font-weight: 900;
 		text-transform: uppercase;
 		font-size: 12px;
 		visibility: visible;
+	}
+
+	.toggle-internal-nav:not(:checked):after {
+		background-color: var(--ColorBg);
+		content: "Menu";
 	}
 }
 
