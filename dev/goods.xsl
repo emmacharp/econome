@@ -13,6 +13,8 @@ exclude-result-prefixes="ext msxsl">
 
 		<xsl:param name="number" select="." />
 		<xsl:param name="rounded" select="false()" />
+		<xsl:param name="subunits" select="false()" />
+
 		<xsl:variable name="total">
 			<xsl:value-of select="/root/total/depense" />
 		</xsl:variable>
@@ -22,6 +24,16 @@ exclude-result-prefixes="ext msxsl">
 		<xsl:variable name="percentage">
 			<xsl:value-of select="$coefficient * 100" />
 		</xsl:variable>
+		<xsl:variable name="computed-number">
+			<xsl:choose>
+				<xsl:when test="$subunits and $percentage &lt; 1">
+					<xsl:value-of select="ceiling($percentage)" />
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="$percentage" />
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
 		<xsl:choose>
 			<xsl:when test="$rounded">
 				<!-- <xsl:choose> -->
@@ -29,12 +41,12 @@ exclude-result-prefixes="ext msxsl">
 						<!-- <xsl:value-of select="ceiling($percentage)"/> -->
 					<!-- </xsl:when> -->
 					<!-- <xsl:otherwise> -->
-						<xsl:value-of select="round($percentage)"/>
+						<xsl:value-of select="round($computed-number)"/>
 					<!-- </xsl:otherwise> -->
 				<!-- </xsl:choose> -->
 			</xsl:when>
 			<xsl:otherwise>
-				<xsl:value-of select="$percentage" />
+				<xsl:value-of select="$computed-number" />
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
@@ -60,6 +72,7 @@ exclude-result-prefixes="ext msxsl">
 		<xsl:variable name="square-total">
 			<xsl:apply-templates select="." mode="goods-counter">
 				<xsl:with-param name="number" select="$number"></xsl:with-param>
+				<xsl:with-param name="subunits" select="$subunits"></xsl:with-param>
 				<xsl:with-param name="rounded" select="true()"></xsl:with-param>
 			</xsl:apply-templates>
 		</xsl:variable>
@@ -104,6 +117,7 @@ exclude-result-prefixes="ext msxsl">
 	<xsl:template match="produit" mode="class-item">
 		<xsl:param name="node-name" select="'depense'" />
 		<xsl:param name="relative" select="false()" />
+		<xsl:param name="subunits" select="false()" />
 		<xsl:param name="total-dollars" />
 
 		<xsl:variable name="number">
@@ -161,6 +175,7 @@ exclude-result-prefixes="ext msxsl">
 		<xsl:variable name="counted-goods">
 			<xsl:apply-templates select="*[local-name() = $node-name]" mode="goods-counter">
 				<xsl:with-param name="number" select="$number"></xsl:with-param>
+				<xsl:with-param name="subunits" select="$subunits"></xsl:with-param>
 				<xsl:with-param name="rounded" select="true()"></xsl:with-param>
 			</xsl:apply-templates>
 		</xsl:variable>
