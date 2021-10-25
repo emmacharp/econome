@@ -26,16 +26,15 @@
 		--ScaleLevel: var(--Tall);
 	}
 
+	main>section header>p,
 	main>section>p {
 		--ScaleLevel: var(--Taller);
 	}
 
 	main>section header {
-		--FontWeight: 500;	
-		--ScaleLevel: var(--Taller); }
+		--FontWeight: 500; }
 
-	nav details,
-	main>section aside {
+	nav details {
 		--ScaleLevel: var(--Short);
 		--LineHeightFactor: .75;
 	}
@@ -56,10 +55,10 @@
 	}
 
 	strong, b {
-		font-weight: 500;
+		--FontWeight: 500;
 	}
 
-	.prose>* {
-		font-weight: 300;
+	p {
+		--FontWeight: 300;
 	}
 
