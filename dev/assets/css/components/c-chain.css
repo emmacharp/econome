@@ -67,10 +67,10 @@
 }
 
 .chain .amount:not(:first-child),
-.chain .goods-list p:hover~.amounts>:first-child {
+.chain .goods-list div:hover~.amounts>:first-child {
 	opacity:0;
 }
-.chain .goods-list p:hover>* {
+.chain .goods-list div:hover>* {
 	transform: scale(1.3);
 }
 
