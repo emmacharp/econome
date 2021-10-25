@@ -37,6 +37,10 @@
 		font-style: inherit;
 		font-weight: inherit; }
 
+/* Intégrer les balises de graisse dans le système typographique */
+	strong, b {
+		font-weight: var(--FontWeight, 600);
+	}
 
 /* Permettre aux icônes de recevoir la couleur contextuelle */
 	i {
