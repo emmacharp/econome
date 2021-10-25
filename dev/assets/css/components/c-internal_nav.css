@@ -61,19 +61,6 @@ nav header strong {
 	margin-right: .25em;
 }
 
-
-nav li.is-complete>a:before {
-	background-image: none;
-	content: "✓";
-	font-size: calc(var(--Row) * .625);
-	line-height: 120%;
-	position: absolute;
-	color: var(--ColorControls);
-	text-indent: .06125em;
-	font-weight: 700;
-}
-
-
 nav li.is-complete>a {
 	--ColorBgControls: var(--ColorBgComplete);
 	--ColorControls: var(--ColorComplete);
