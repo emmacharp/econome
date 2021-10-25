@@ -49,7 +49,7 @@ exclude-result-prefixes="ext msxsl">
 		<xsl:variable name="number">
 			<xsl:choose>
 				<xsl:when test="$relative = true()">
-					<xsl:value-of select=". div /root/total/*[local-name() = $node-name] * /root/donnees/*[local-name() = $node-name] * $multiplier" />
+					<xsl:value-of select=". * (/root/donnees/*[local-name() = $node-name] div /root/total/*[local-name() = $node-name]) * $multiplier" />
 				</xsl:when>
 				<xsl:otherwise>
 					<xsl:value-of select=". * $multiplier" />
@@ -109,7 +109,7 @@ exclude-result-prefixes="ext msxsl">
 		<xsl:variable name="number">
 			<xsl:choose>
 				<xsl:when test="$relative = true()">
-					<xsl:value-of select="*[local-name() = $node-name] div /root/total/*[local-name() = $node-name] * /root/donnees/*[local-name() = $node-name]" />
+					<xsl:value-of select="*[local-name() = $node-name] * (/root/donnees/*[local-name() = $node-name] div /root/total/*[local-name() = $node-name])" />
 				</xsl:when>
 				<xsl:otherwise>
 					<xsl:value-of select="*[local-name() = $node-name]" />
@@ -117,7 +117,14 @@ exclude-result-prefixes="ext msxsl">
 			</xsl:choose>
 		</xsl:variable>
 		<xsl:variable name="total">
-			<xsl:value-of select="/root/total/depense" />
+			<xsl:choose>
+				<xsl:when test="/root/donnees">
+					<xsl:value-of select="/root/donnees/*[local-name() = $node-name]"></xsl:value-of>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="/root/total/brasserie" />
+				</xsl:otherwise>
+			</xsl:choose>
 		</xsl:variable>
 		<xsl:variable name="coefficient">
 			<xsl:value-of select="format-number($number div $total, '#.#####')"/>
@@ -126,10 +133,20 @@ exclude-result-prefixes="ext msxsl">
 			<xsl:value-of select="$coefficient * 100" />
 		</xsl:variable>
 		<xsl:variable name="rounded-percent">
-			<xsl:value-of select="ceiling($percentage)" />
+			<xsl:value-of select="round($percentage)" />
+		</xsl:variable>
+		<xsl:variable name="total-added">
+			<xsl:choose>
+				<xsl:when test="/root/donnees">
+					<xsl:value-of select="/root/donnees/*[local-name() = $node-name] div /root/total/depense"></xsl:value-of>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="/root/total/brasserie div /root/total/depense"></xsl:value-of>
+				</xsl:otherwise>
+			</xsl:choose>
 		</xsl:variable>
 		<xsl:variable name="dollar-amount">
-			<xsl:value-of select="$coefficient * 10" />
+			<xsl:value-of select="$coefficient * $total-added * 10" />
 		</xsl:variable>
 		<xsl:variable name="final-amount">
 			<xsl:choose>
