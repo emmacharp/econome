@@ -5,8 +5,9 @@
 	flex-wrap: wrap-reverse;
 }
 
-.goods-list [data-code] {
+.goods-list div[data-code] {
 	display: contents;
+	color: var(--Color);
 	fill: currentColor;
 }
 
