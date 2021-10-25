@@ -1,7 +1,6 @@
 fieldset {
 	border: none;
 	--DivItemGutter: calc(var(--Row) * .5);
-	text-align: center;
 }
 
 * + fieldset {
