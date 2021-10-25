@@ -1,0 +1,2205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="goods.xsl" ?>
+<root>
+  <donnees>
+    <consommation>2235357</consommation>
+    <brasserie>1313209</brasserie>
+    <depanneur>311281</depanneur>
+    <entrepot>95275</entrepot>
+    <transport>13848</transport>
+    <impot>501742</impot>
+  </donnees>
+  <produit>
+    <code>MPG111A10</code>
+    <titre>Fruits et noix frais</titre>
+    <classe>Grains et autres produits de récoltes</classe>
+    <entrepot>1612</entrepot>
+  </produit>
+  <produit>
+    <code>MPG111A11</code>
+    <titre>Autres produits végétaux divers</titre>
+    <classe>Grains et autres produits de récoltes</classe>
+    <transport>3190</transport>
+    <brasserie>11183</brasserie>
+  </produit>
+  <produit>
+    <code>ENE211102</code>
+    <titre>Gaz naturel</titre>
+    <classe>Combustibles minéraux</classe>
+    <depanneur>10237</depanneur>
+    <entrepot>4307</entrepot>
+    <transport>4455</transport>
+    <brasserie>5732</brasserie>
+  </produit>
+  <produit>
+    <code>ENE211103</code>
+    <titre>Liquides de gaz naturel et produits connexes</titre>
+    <classe>Combustibles minéraux</classe>
+    <depanneur>1174</depanneur>
+    <entrepot>4990</entrepot>
+    <transport>6512</transport>
+    <brasserie>525</brasserie>
+  </produit>
+  <produit>
+    <code>MPG21239C</code>
+    <titre>Minéraux non métalliques (sauf les diamants)</titre>
+    <classe>Minéraux non métalliques</classe>
+    <brasserie>85</brasserie>
+  </produit>
+  <produit>
+    <code>ENE221100</code>
+    <titre>Électricité</titre>
+    <classe>Services publics</classe>
+    <depanneur>73718</depanneur>
+    <entrepot>11804</entrepot>
+    <transport>13404</transport>
+    <brasserie>9379</brasserie>
+  </produit>
+  <produit>
+    <code>MPS221200</code>
+    <titre>Distribution de gaz naturel</titre>
+    <classe>Services publics</classe>
+    <depanneur>7359</depanneur>
+    <entrepot>3095</entrepot>
+    <transport>1804</transport>
+    <brasserie>1129</brasserie>
+  </produit>
+  <produit>
+    <code>MPS221301</code>
+    <titre>Distribution d'eau par des systèmes d'aqueduc et
+    d'irrigation</titre>
+    <classe>Services publics</classe>
+    <depanneur>8381</depanneur>
+    <entrepot>7434</entrepot>
+    <transport>6118</transport>
+    <brasserie>4673</brasserie>
+  </produit>
+  <produit>
+    <code>MPS221302</code>
+    <titre>Services d'évacuation et d'épuration des eaux d'égouts
+    et des eaux usées</titre>
+    <classe>Services publics</classe>
+    <entrepot>16239</entrepot>
+    <transport>1065</transport>
+    <brasserie>19</brasserie>
+  </produit>
+  <produit>
+    <code>ENE221303</code>
+    <titre>Vapeur, et air ou eau refroidis ou chauffés</titre>
+    <classe>Services publics</classe>
+    <transport>4</transport>
+  </produit>
+  <produit>
+    <code>MPS23D000-CON</code>
+    <titre>Services de réparations liés à la construction</titre>
+    <classe>Réparations et construction</classe>
+    <depanneur>156333</depanneur>
+    <entrepot>4905</entrepot>
+    <transport>93661</transport>
+    <brasserie>2398</brasserie>
+  </produit>
+  <produit>
+    <code>MPG311204</code>
+    <titre>Farine et autres produits de mouture des grains</titre>
+    <classe>Aliments et boissons non alcoolisées</classe>
+    <brasserie>13323</brasserie>
+  </produit>
+  <produit>
+    <code>MPG311202</code>
+    <titre>Margarine et huiles de cuisson</titre>
+    <classe>Aliments et boissons non alcoolisées</classe>
+    <brasserie>5</brasserie>
+  </produit>
+  <produit>
+    <code>MPG311208</code>
+    <titre>Produits de céréales et d'oléagineux, n.c.a.</titre>
+    <classe>Aliments et boissons non alcoolisées</classe>
+    <brasserie>49185</brasserie>
+  </produit>
+  <produit>
+    <code>MPG311301</code>
+    <titre>Sucre et sous-produits de raffinerie du sucre</titre>
+    <classe>Aliments et boissons non alcoolisées</classe>
+    <entrepot>6612</entrepot>
+    <brasserie>18210</brasserie>
+  </produit>
+  <produit>
+    <code>MPG311303</code>
+    <titre>Produits de confiseries</titre>
+    <classe>Aliments et boissons non alcoolisées</classe>
+    <transport>30</transport>
+  </produit>
+  <produit>
+    <code>MPG311401</code>
+    <titre>Jus de fruits et de légumes, frais, congelés et en
+    conserve</titre>
+    <classe>Aliments et boissons non alcoolisées</classe>
+    <entrepot>1743</entrepot>
+    <brasserie>247</brasserie>
+  </produit>
+  <produit>
+    <code>MPG311402</code>
+    <titre>Fruits et légumes en conserve, aliments congelés</titre>
+    <classe>Aliments et boissons non alcoolisées</classe>
+    <entrepot>466</entrepot>
+    <transport>12</transport>
+  </produit>
+  <produit>
+    <code>MPG311501</code>
+    <titre>Lait de consommation et produits de lait
+    transformés</titre>
+    <classe>Aliments et boissons non alcoolisées</classe>
+    <transport>74</transport>
+  </produit>
+  <produit>
+    <code>MPG311502</code>
+    <titre>Fromage et produits du fromage</titre>
+    <classe>Aliments et boissons non alcoolisées</classe>
+    <entrepot>812</entrepot>
+    <transport>47</transport>
+  </produit>
+  <produit>
+    <code>MPG311503</code>
+    <titre>Beurre et produits laitiers secs et en conserve</titre>
+    <classe>Aliments et boissons non alcoolisées</classe>
+    <transport>41</transport>
+  </produit>
+  <produit>
+    <code>MPG311601</code>
+    <titre>Boeuf et veau frais et congelés</titre>
+    <classe>Aliments et boissons non alcoolisées</classe>
+    <entrepot>2690</entrepot>
+  </produit>
+  <produit>
+    <code>MPG311602</code>
+    <titre>Porc frais et congelé</titre>
+    <classe>Aliments et boissons non alcoolisées</classe>
+    <entrepot>1066</entrepot>
+  </produit>
+  <produit>
+    <code>MPG311605</code>
+    <titre>Produits de viandes transformées, autres viandes divers,
+    et sous-produits d'origine animale</titre>
+    <classe>Aliments et boissons non alcoolisées</classe>
+    <transport>34</transport>
+  </produit>
+  <produit>
+    <code>MPG311700</code>
+    <titre>Poissons et fruits de mer préparés et emballés</titre>
+    <classe>Aliments et boissons non alcoolisées</classe>
+    <transport>83</transport>
+  </produit>
+  <produit>
+    <code>MPG311801</code>
+    <titre>Pain, pains mollets et pains plats</titre>
+    <classe>Aliments et boissons non alcoolisées</classe>
+    <transport>14</transport>
+    <brasserie>4</brasserie>
+  </produit>
+  <produit>
+    <code>MPG311802</code>
+    <titre>Biscuits, craquelins et pâtisseries sucrées cuites au
+    four</titre>
+    <classe>Aliments et boissons non alcoolisées</classe>
+    <transport>36</transport>
+    <brasserie>5</brasserie>
+  </produit>
+  <produit>
+    <code>MPG311901</code>
+    <titre>Aliments à grignoter</titre>
+    <classe>Aliments et boissons non alcoolisées</classe>
+    <entrepot>6</entrepot>
+    <transport>54</transport>
+    <brasserie>6</brasserie>
+  </produit>
+  <produit>
+    <code>MPG311902</code>
+    <titre>Café et thé</titre>
+    <classe>Aliments et boissons non alcoolisées</classe>
+    <transport>13</transport>
+  </produit>
+  <produit>
+    <code>MPG311903</code>
+    <titre>Sirops aromatisants, assaisonnements et
+    vinaigrettes</titre>
+    <classe>Aliments et boissons non alcoolisées</classe>
+    <transport>9</transport>
+    <brasserie>123</brasserie>
+  </produit>
+  <produit>
+    <code>MPG311909</code>
+    <titre>Autres produits alimentaires, n.c.a.</titre>
+    <classe>Aliments et boissons non alcoolisées</classe>
+    <entrepot>2071</entrepot>
+    <transport>24</transport>
+  </produit>
+  <produit>
+    <code>MPG312110</code>
+    <titre>Boissons gazeuses et non gazeuses, eau embouteillée et
+    glace</titre>
+    <classe>Aliments et boissons non alcoolisées</classe>
+    <depanneur>13018</depanneur>
+    <entrepot>3870</entrepot>
+    <transport>1117</transport>
+    <brasserie>5851</brasserie>
+  </produit>
+  <produit>
+    <code>MPG312120</code>
+    <titre>Bière</titre>
+    <classe>Boissons alcoolisées et produits du tabac</classe>
+    <depanneur>8857</depanneur>
+    <entrepot>2724</entrepot>
+    <transport>1306</transport>
+    <brasserie>13581</brasserie>
+  </produit>
+  <produit>
+    <code>MPG3121A1</code>
+    <titre>Vin et brandy</titre>
+    <classe>Boissons alcoolisées et produits du tabac</classe>
+    <depanneur>827</depanneur>
+    <entrepot>261</entrepot>
+    <transport>160</transport>
+    <brasserie>383</brasserie>
+  </produit>
+  <produit>
+    <code>MPG3121A2</code>
+    <titre>Boissons alcoolisées de distillerie</titre>
+    <classe>Boissons alcoolisées et produits du tabac</classe>
+    <depanneur>253</depanneur>
+    <entrepot>82</entrepot>
+    <transport>73</transport>
+    <brasserie>117</brasserie>
+  </produit>
+  <produit>
+    <code>MPS31A006</code>
+    <titre>Services de tissage et services d'apprêtage de
+    tissus</titre>
+    <classe>Produits textiles, vêtements et produits en cuir et
+    matériel similaire</classe>
+    <depanneur>337</depanneur>
+    <entrepot>99</entrepot>
+    <transport>17</transport>
+    <brasserie>149</brasserie>
+  </produit>
+  <produit>
+    <code>MPG31B001</code>
+    <titre>Vêtements pour hommes, femmes, garçons et filles</titre>
+    <classe>Produits textiles, vêtements et produits en cuir et
+    matériel similaire</classe>
+    <transport>134</transport>
+  </produit>
+  <produit>
+    <code>MPG31B005</code>
+    <titre>Chaussures</titre>
+    <classe>Produits textiles, vêtements et produits en cuir et
+    matériel similaire</classe>
+    <transport>45</transport>
+    <brasserie>10</brasserie>
+  </produit>
+  <produit>
+    <code>MPG31B006</code>
+    <titre>Valises, sacs à main, et autres produits de cuir et
+    produits analogues</titre>
+    <classe>Produits textiles, vêtements et produits en cuir et
+    matériel similaire</classe>
+    <depanneur>1179</depanneur>
+    <entrepot>364</entrepot>
+    <transport>282</transport>
+    <brasserie>535</brasserie>
+  </produit>
+  <produit>
+    <code>MPG321104</code>
+    <titre>Autres produits de sciage et produits de bois
+    traité</titre>
+    <classe>Produits du bois</classe>
+    <depanneur>11</depanneur>
+    <entrepot>15</entrepot>
+    <transport>17</transport>
+    <brasserie>50</brasserie>
+  </produit>
+  <produit>
+    <code>MPG321201</code>
+    <titre>Placages et contreplaqués</titre>
+    <classe>Produits du bois</classe>
+    <depanneur>9</depanneur>
+    <entrepot>11</entrepot>
+    <transport>14</transport>
+    <brasserie>43</brasserie>
+  </produit>
+  <produit>
+    <code>MPG321901</code>
+    <titre>Portes et fenêtres, en bois</titre>
+    <classe>Produits du bois</classe>
+    <depanneur>10</depanneur>
+    <entrepot>11</entrepot>
+    <transport>14</transport>
+    <brasserie>43</brasserie>
+  </produit>
+  <produit>
+    <code>MPG321903</code>
+    <titre>Contenants et palettes en bois</titre>
+    <classe>Produits du bois</classe>
+    <entrepot>3684</entrepot>
+    <transport>2451</transport>
+    <brasserie>2392</brasserie>
+  </produit>
+  <produit>
+    <code>MPG322102</code>
+    <titre>Papier (sauf le papier journal)</titre>
+    <classe>Pâte de bois, papier et produits en papier</classe>
+    <depanneur>62</depanneur>
+    <entrepot>74</entrepot>
+    <transport>28</transport>
+    <brasserie>8</brasserie>
+  </produit>
+  <produit>
+    <code>MPG322201</code>
+    <titre>Contenants en carton</titre>
+    <classe>Pâte de bois, papier et produits en papier</classe>
+    <depanneur>276</depanneur>
+    <entrepot>22153</entrepot>
+    <transport>250</transport>
+    <brasserie>75890</brasserie>
+  </produit>
+  <produit>
+    <code>MPG322202</code>
+    <titre>Produits de papeterie</titre>
+    <classe>Pâte de bois, papier et produits en papier</classe>
+    <depanneur>952</depanneur>
+    <entrepot>1122</entrepot>
+    <transport>421</transport>
+    <brasserie>128</brasserie>
+  </produit>
+  <produit>
+    <code>MPG322204</code>
+    <titre>Produits hygiéniques en papier</titre>
+    <classe>Pâte de bois, papier et produits en papier</classe>
+    <depanneur>47</depanneur>
+    <entrepot>55</entrepot>
+    <transport>51</transport>
+    <brasserie>14</brasserie>
+  </produit>
+  <produit>
+    <code>MPG322209</code>
+    <titre>Autres produits de papier transformé</titre>
+    <classe>Pâte de bois, papier et produits en papier</classe>
+    <depanneur>2770</depanneur>
+    <entrepot>5167</entrepot>
+    <transport>1456</transport>
+    <brasserie>8747</brasserie>
+  </produit>
+  <produit>
+    <code>MPG323001</code>
+    <titre>Produits imprimés</titre>
+    <classe>Produits imprimés et services connexes</classe>
+    <depanneur>29486</depanneur>
+    <entrepot>15469</entrepot>
+    <transport>4715</transport>
+    <brasserie>9666</brasserie>
+  </produit>
+  <produit>
+    <code>MPS323003</code>
+    <titre>Services à contrat d'impression pour les
+    éditeurs</titre>
+    <classe>Produits imprimés et services connexes</classe>
+    <depanneur>48959</depanneur>
+  </produit>
+  <produit>
+    <code>ENE324111</code>
+    <titre>Essence à moteur</titre>
+    <classe>Produits raffinés du pétrole (sauf
+    pétrochimiques)</classe>
+    <depanneur>19971</depanneur>
+    <entrepot>22608</entrepot>
+    <transport>25358</transport>
+    <brasserie>2837</brasserie>
+  </produit>
+  <produit>
+    <code>ENE324112</code>
+    <titre>Carburants diesel et biodiesel</titre>
+    <classe>Produits raffinés du pétrole (sauf
+    pétrochimiques)</classe>
+    <depanneur>20080</depanneur>
+    <entrepot>19695</entrepot>
+    <transport>1306524</transport>
+    <brasserie>2244</brasserie>
+  </produit>
+  <produit>
+    <code>ENE324113</code>
+    <titre>Mazout léger</titre>
+    <classe>Produits raffinés du pétrole (sauf
+    pétrochimiques)</classe>
+    <depanneur>625</depanneur>
+    <entrepot>2868</entrepot>
+    <transport>897</transport>
+    <brasserie>490</brasserie>
+  </produit>
+  <produit>
+    <code>ENE324115</code>
+    <titre>Mazout lourd</titre>
+    <classe>Produits raffinés du pétrole (sauf
+    pétrochimiques)</classe>
+    <depanneur>132</depanneur>
+    <entrepot>1805</entrepot>
+    <brasserie>10</brasserie>
+  </produit>
+  <produit>
+    <code>MPG3241A8</code>
+    <titre>Lubrifiants et autres produits pétroliers de
+    raffinerie</titre>
+    <classe>Produits raffinés du pétrole (sauf
+    pétrochimiques)</classe>
+    <depanneur>120</depanneur>
+    <entrepot>164</entrepot>
+    <transport>37118</transport>
+    <brasserie>564</brasserie>
+  </produit>
+  <produit>
+    <code>MPG325102</code>
+    <titre>Gaz industriels</titre>
+    <classe>Produits chimiques</classe>
+    <brasserie>7983</brasserie>
+  </produit>
+  <produit>
+    <code>MPG325105</code>
+    <titre>Produits chimiques organiques de base, n.c.a.</titre>
+    <classe>Produits chimiques</classe>
+    <brasserie>1743</brasserie>
+  </produit>
+  <produit>
+    <code>MPG325301</code>
+    <titre>Ammoniac et engrais chimiques</titre>
+    <classe>Produits chimiques</classe>
+    <transport>11</transport>
+  </produit>
+  <produit>
+    <code>MPG325302</code>
+    <titre>Pesticides et autres produits chimiques
+    agricoles</titre>
+    <classe>Produits chimiques</classe>
+    <transport>11</transport>
+  </produit>
+  <produit>
+    <code>MPG325500</code>
+    <titre>Peintures, revêtements et produits adhésifs</titre>
+    <classe>Produits chimiques</classe>
+    <depanneur>1020</depanneur>
+    <entrepot>1208</entrepot>
+    <transport>479</transport>
+    <brasserie>8855</brasserie>
+  </produit>
+  <produit>
+    <code>MPG325601</code>
+    <titre>Savons et détachants</titre>
+    <classe>Produits chimiques</classe>
+    <depanneur>100</depanneur>
+    <entrepot>121</entrepot>
+    <transport>100</transport>
+    <brasserie>171</brasserie>
+  </produit>
+  <produit>
+    <code>MPG325900</code>
+    <titre>Produits chimiques, n.c.a.</titre>
+    <classe>Produits chimiques</classe>
+    <depanneur>4693</depanneur>
+    <entrepot>5580</entrepot>
+    <transport>29211</transport>
+    <brasserie>660</brasserie>
+  </produit>
+  <produit>
+    <code>MPG326101</code>
+    <titre>Sacs en plastique</titre>
+    <classe>Produits en plastique et en caoutchouc</classe>
+    <depanneur>343</depanneur>
+    <entrepot>868</entrepot>
+  </produit>
+  <produit>
+    <code>MPG326102</code>
+    <titre>Pellicules et feuilles en plastique souples</titre>
+    <classe>Produits en plastique et en caoutchouc</classe>
+    <depanneur>6049</depanneur>
+    <entrepot>85990</entrepot>
+    <transport>110</transport>
+    <brasserie>34</brasserie>
+  </produit>
+  <produit>
+    <code>MPG326103</code>
+    <titre>Matériaux en plastique et en mousse pour les bâtiments
+    et la construction</titre>
+    <classe>Produits en plastique et en caoutchouc</classe>
+    <depanneur>938</depanneur>
+    <entrepot>1343</entrepot>
+    <transport>1509</transport>
+    <brasserie>4794</brasserie>
+  </produit>
+  <produit>
+    <code>MPG326105</code>
+    <titre>Produits en mousse (sauf pour la construction)</titre>
+    <classe>Produits en plastique et en caoutchouc</classe>
+    <transport>7</transport>
+  </produit>
+  <produit>
+    <code>MPG326106</code>
+    <titre>Bouteilles en plastique</titre>
+    <classe>Produits en plastique et en caoutchouc</classe>
+    <depanneur>70</depanneur>
+    <entrepot>20176</entrepot>
+    <transport>31</transport>
+    <brasserie>1257</brasserie>
+  </produit>
+  <produit>
+    <code>MPG326107</code>
+    <titre>Pièces en plastique pour les véhicules
+    automobiles</titre>
+    <classe>Produits en plastique et en caoutchouc</classe>
+    <depanneur>254</depanneur>
+    <entrepot>371</entrepot>
+    <transport>5543</transport>
+    <brasserie>1305</brasserie>
+  </produit>
+  <produit>
+    <code>MPG326109</code>
+    <titre>Produits en plastique, n.c.a.</titre>
+    <classe>Produits en plastique et en caoutchouc</classe>
+    <depanneur>737</depanneur>
+    <entrepot>1007</entrepot>
+    <transport>2916</transport>
+    <brasserie>1708</brasserie>
+  </produit>
+  <produit>
+    <code>MPG326201</code>
+    <titre>Pneus</titre>
+    <classe>Produits en plastique et en caoutchouc</classe>
+    <depanneur>384</depanneur>
+    <entrepot>559</entrepot>
+    <transport>101293</transport>
+    <brasserie>1908</brasserie>
+  </produit>
+  <produit>
+    <code>MPG326202</code>
+    <titre>Tuyaux et courroies en caoutchouc et en
+    plastique</titre>
+    <classe>Produits en plastique et en caoutchouc</classe>
+    <depanneur>285</depanneur>
+    <entrepot>400</entrepot>
+    <transport>24098</transport>
+    <brasserie>1337</brasserie>
+  </produit>
+  <produit>
+    <code>MPG326209</code>
+    <titre>Produits en caoutchouc, n.c.a.</titre>
+    <classe>Produits en plastique et en caoutchouc</classe>
+    <depanneur>37</depanneur>
+    <entrepot>52</entrepot>
+    <transport>56</transport>
+    <brasserie>176</brasserie>
+  </produit>
+  <produit>
+    <code>MPG327A02</code>
+    <titre>Verre (incluant pour les automobiles), produits en verre
+    et contenants en verre</titre>
+    <classe>Produits minéraux non métalliques</classe>
+    <depanneur>8</depanneur>
+    <entrepot>9</entrepot>
+    <transport>26</transport>
+    <brasserie>19797</brasserie>
+  </produit>
+  <produit>
+    <code>MPG332101</code>
+    <titre>Produits métalliques forgés et estampés</titre>
+    <classe>Produits métalliques usinés</classe>
+    <transport>633</transport>
+  </produit>
+  <produit>
+    <code>MPG332303</code>
+    <titre>Portes et fenêtres en métal</titre>
+    <classe>Produits métalliques usinés</classe>
+    <depanneur>73</depanneur>
+    <entrepot>103</entrepot>
+    <transport>120</transport>
+    <brasserie>376</brasserie>
+  </produit>
+  <produit>
+    <code>MPG332A05</code>
+    <titre>Autres produits architecturaux en métal</titre>
+    <classe>Produits métalliques usinés</classe>
+    <depanneur>33</depanneur>
+    <entrepot>47</entrepot>
+    <transport>54</transport>
+    <brasserie>178</brasserie>
+  </produit>
+  <produit>
+    <code>MPG332401</code>
+    <titre>Bouchons-couronnes, fermetures et contenants en métal
+    mince</titre>
+    <classe>Produits métalliques usinés</classe>
+    <entrepot>6036</entrepot>
+    <brasserie>69262</brasserie>
+  </produit>
+  <produit>
+    <code>MPG332402</code>
+    <titre>Chaudières, réservoirs et contenants en métal
+    épais</titre>
+    <classe>Produits métalliques usinés</classe>
+    <depanneur>57</depanneur>
+    <entrepot>80</entrepot>
+    <transport>89</transport>
+    <brasserie>283</brasserie>
+  </produit>
+  <produit>
+    <code>MPG332500</code>
+    <titre>Quincaillerie pour le bâtiment, les véhicules
+    automobiles et autres articles de quincaillerie</titre>
+    <classe>Produits métalliques usinés</classe>
+    <brasserie>378</brasserie>
+  </produit>
+  <produit>
+    <code>MPG332600</code>
+    <titre>Ressorts et produits en fil métallique</titre>
+    <classe>Produits métalliques usinés</classe>
+    <depanneur>336</depanneur>
+    <entrepot>409</entrepot>
+    <transport>198</transport>
+    <brasserie>279</brasserie>
+  </produit>
+  <produit>
+    <code>MPG332700</code>
+    <titre>Attaches en métal fileté et autres produits en métal
+    tourné incluant pour les automobiles</titre>
+    <classe>Produits métalliques usinés</classe>
+    <depanneur>62</depanneur>
+    <entrepot>87</entrepot>
+    <transport>97</transport>
+    <brasserie>305</brasserie>
+  </produit>
+  <produit>
+    <code>MPG332A01</code>
+    <titre>Outils à main, ustensiles de cuisine et coutellerie
+    (sauf en métal précieux)</titre>
+    <classe>Produits métalliques usinés</classe>
+    <depanneur>327</depanneur>
+    <entrepot>396</entrepot>
+    <transport>212</transport>
+    <brasserie>290</brasserie>
+  </produit>
+  <produit>
+    <code>MPG332A02</code>
+    <titre>Valves et raccords métalliques pour tuyauterie</titre>
+    <classe>Produits métalliques usinés</classe>
+    <depanneur>80</depanneur>
+    <entrepot>111</entrepot>
+    <transport>124</transport>
+    <brasserie>400</brasserie>
+  </produit>
+  <produit>
+    <code>MPG332A08</code>
+    <titre>Produits en métal ouvrés, n.c.a.</titre>
+    <classe>Produits métalliques usinés</classe>
+    <depanneur>99</depanneur>
+    <entrepot>135</entrepot>
+    <transport>4882</transport>
+    <brasserie>489</brasserie>
+  </produit>
+  <produit>
+    <code>MPG333101</code>
+    <titre>Machines et matériel pour l'agriculture, entretien de
+    pelouses et de jardins</titre>
+    <classe>Machinerie industrielle</classe>
+    <depanneur>79</depanneur>
+    <entrepot>111</entrepot>
+    <transport>128</transport>
+    <brasserie>402</brasserie>
+  </produit>
+  <produit>
+    <code>MPG333200</code>
+    <titre>Autres machines propres à une industrie</titre>
+    <classe>Machinerie industrielle</classe>
+    <depanneur>275</depanneur>
+    <entrepot>389</entrepot>
+    <transport>440</transport>
+    <brasserie>2490</brasserie>
+  </produit>
+  <produit>
+    <code>MPG333300</code>
+    <titre>Machines pour le commerce et les industries de
+    services</titre>
+    <classe>Machinerie industrielle</classe>
+    <depanneur>1591</depanneur>
+    <entrepot>2256</entrepot>
+    <transport>2552</transport>
+  </produit>
+  <produit>
+    <code>MPG333401</code>
+    <titre>Ventilateurs, souffleurs d'air et purificateurs d'air
+    industriels et commerciaux</titre>
+    <classe>Machinerie industrielle</classe>
+    <depanneur>57</depanneur>
+    <entrepot>79</entrepot>
+    <transport>88</transport>
+    <brasserie>277</brasserie>
+  </produit>
+  <produit>
+    <code>MPG333402</code>
+    <titre>Appareils de chauffage et de refroidissement (sauf les
+    réfrigérateurs et les congélateurs domestiques)</titre>
+    <classe>Machinerie industrielle</classe>
+    <depanneur>61</depanneur>
+    <entrepot>88</entrepot>
+    <transport>98</transport>
+    <brasserie>306</brasserie>
+  </produit>
+  <produit>
+    <code>MPG333500</code>
+    <titre>Machines à travailler les métaux et moules d'usage
+    industriel</titre>
+    <classe>Machinerie industrielle</classe>
+    <brasserie>2617</brasserie>
+  </produit>
+  <produit>
+    <code>MPG333601</code>
+    <titre>Turbines, turbogénérateurs et ensembles
+    turbines-générateurs (sauf les turbines d'aéronefs)</titre>
+    <classe>Machinerie industrielle</classe>
+    <brasserie>1041</brasserie>
+  </produit>
+  <produit>
+    <code>MPG333609</code>
+    <titre>Autres moteurs et matériel de transmission de
+    puissance</titre>
+    <classe>Machinerie industrielle</classe>
+    <transport>3012</transport>
+    <brasserie>801</brasserie>
+  </produit>
+  <produit>
+    <code>MPG333901</code>
+    <titre>Pompes et compresseurs (sauf hydrauliques)</titre>
+    <classe>Machinerie industrielle</classe>
+    <brasserie>2712</brasserie>
+  </produit>
+  <produit>
+    <code>MPG333909</code>
+    <titre>Autres machines diverses d'usage général</titre>
+    <classe>Machinerie industrielle</classe>
+    <depanneur>32</depanneur>
+    <entrepot>47</entrepot>
+    <transport>50</transport>
+    <brasserie>159</brasserie>
+  </produit>
+  <produit>
+    <code>MPG334100</code>
+    <titre>Ordinateurs, périphériques et pièces</titre>
+    <classe>Ordinateurs et produits électroniques</classe>
+    <depanneur>1022</depanneur>
+    <entrepot>1207</entrepot>
+    <transport>3289</transport>
+    <brasserie>150</brasserie>
+  </produit>
+  <produit>
+    <code>MPG334201</code>
+    <titre>Matériel téléphonique</titre>
+    <classe>Ordinateurs et produits électroniques</classe>
+    <depanneur>1118</depanneur>
+    <entrepot>1315</entrepot>
+    <transport>3693</transport>
+    <brasserie>152</brasserie>
+  </produit>
+  <produit>
+    <code>MPG334A01</code>
+    <titre>Matériel audio et vidéo et supports non
+    enregistrés</titre>
+    <classe>Ordinateurs et produits électroniques</classe>
+    <transport>390</transport>
+  </produit>
+  <produit>
+    <code>MPG334A02</code>
+    <titre>Instruments de navigation et de guidage</titre>
+    <classe>Ordinateurs et produits électroniques</classe>
+    <transport>632</transport>
+  </produit>
+  <produit>
+    <code>MPG334A06</code>
+    <titre>Instruments de mesure, de commande et
+    scientifiques</titre>
+    <classe>Ordinateurs et produits électroniques</classe>
+    <brasserie>69</brasserie>
+  </produit>
+  <produit>
+    <code>MPG334409</code>
+    <titre>Autres composants électroniques</titre>
+    <classe>Ordinateurs et produits électroniques</classe>
+    <brasserie>33</brasserie>
+  </produit>
+  <produit>
+    <code>MPG335101</code>
+    <titre>Ampoules électriques et tubes fluorescents</titre>
+    <classe>Matériel, appareils, et composants électriques</classe>
+    <brasserie>4</brasserie>
+  </produit>
+  <produit>
+    <code>MPG335102</code>
+    <titre>Appareils d'éclairage</titre>
+    <classe>Matériel, appareils, et composants électriques</classe>
+    <depanneur>15</depanneur>
+    <entrepot>20</entrepot>
+    <transport>33</transport>
+    <brasserie>71</brasserie>
+  </produit>
+  <produit>
+    <code>MPG335203</code>
+    <titre>Petits appareils électriques</titre>
+    <classe>Matériel, appareils, et composants électriques</classe>
+    <depanneur>94</depanneur>
+    <entrepot>108</entrepot>
+    <transport>70</transport>
+    <brasserie>69</brasserie>
+  </produit>
+  <produit>
+    <code>MPG335204</code>
+    <titre>Gros appareils électroménagers</titre>
+    <classe>Matériel, appareils, et composants électriques</classe>
+    <depanneur>15</depanneur>
+    <entrepot>21</entrepot>
+    <transport>22</transport>
+    <brasserie>67</brasserie>
+  </produit>
+  <produit>
+    <code>MPG335301</code>
+    <titre>Transformateurs de puissance, de distribution et autres
+    transformateurs</titre>
+    <classe>Matériel, appareils, et composants électriques</classe>
+    <depanneur>168</depanneur>
+    <entrepot>237</entrepot>
+    <transport>267</transport>
+    <brasserie>855</brasserie>
+  </produit>
+  <produit>
+    <code>MPG335302</code>
+    <titre>Moteurs et génératrices électriques</titre>
+    <classe>Matériel, appareils, et composants électriques</classe>
+    <depanneur>84</depanneur>
+    <entrepot>120</entrepot>
+    <transport>135</transport>
+    <brasserie>430</brasserie>
+  </produit>
+  <produit>
+    <code>MPG335303</code>
+    <titre>Appareillage de connexion, de commutation, de relais et
+    de commandes d'usage industriel</titre>
+    <classe>Matériel, appareils, et composants électriques</classe>
+    <depanneur>384</depanneur>
+    <entrepot>541</entrepot>
+    <transport>617</transport>
+    <brasserie>1966</brasserie>
+  </produit>
+  <produit>
+    <code>MPG335901</code>
+    <titre>Batteries (piles) et chargeurs de batteries</titre>
+    <classe>Matériel, appareils, et composants électriques</classe>
+    <depanneur>126</depanneur>
+    <entrepot>159</entrepot>
+    <transport>15863</transport>
+    <brasserie>201</brasserie>
+  </produit>
+  <produit>
+    <code>MPG335902</code>
+    <titre>Fils et câbles électriques et de communication</titre>
+    <classe>Matériel, appareils, et composants électriques</classe>
+    <depanneur>9</depanneur>
+    <entrepot>11</entrepot>
+    <transport>15</transport>
+    <brasserie>37</brasserie>
+  </produit>
+  <produit>
+    <code>MPG335903</code>
+    <titre>Dispositifs de câblage</titre>
+    <classe>Matériel, appareils, et composants électriques</classe>
+    <depanneur>44</depanneur>
+    <entrepot>62</entrepot>
+    <transport>68</transport>
+    <brasserie>216</brasserie>
+  </produit>
+  <produit>
+    <code>MPG335909</code>
+    <titre>Autres matériel et composants électriques</titre>
+    <classe>Matériel, appareils, et composants électriques</classe>
+    <depanneur>74</depanneur>
+    <entrepot>105</entrepot>
+    <transport>120</transport>
+    <brasserie>359</brasserie>
+  </produit>
+  <produit>
+    <code>MPG336310</code>
+    <titre>Moteurs à essence et pièces de moteurs à essence de
+    véhicules automobiles</titre>
+    <classe>Pièces de véhicules à moteur</classe>
+    <depanneur>673</depanneur>
+    <entrepot>1028</entrepot>
+    <transport>96186</transport>
+  </produit>
+  <produit>
+    <code>MPG336320</code>
+    <titre>Matériel électrique et électronique pour les véhicules
+    automobiles</titre>
+    <classe>Pièces de véhicules à moteur</classe>
+    <depanneur>223</depanneur>
+    <entrepot>327</entrepot>
+    <transport>85993</transport>
+  </produit>
+  <produit>
+    <code>MPG336330</code>
+    <titre>Composants de direction et de suspension pour les
+    véhicules automobiles</titre>
+    <classe>Pièces de véhicules à moteur</classe>
+    <depanneur>206</depanneur>
+    <entrepot>306</entrepot>
+    <transport>24044</transport>
+  </produit>
+  <produit>
+    <code>MPG336340</code>
+    <titre>Freins et systèmes de freinage pour les véhicules
+    automobiles</titre>
+    <classe>Pièces de véhicules à moteur</classe>
+    <depanneur>362</depanneur>
+    <entrepot>419</entrepot>
+    <transport>17475</transport>
+  </produit>
+  <produit>
+    <code>MPG336350</code>
+    <titre>Composants de transmission et de groupes motopropulseurs
+    pour les véhicules automobiles</titre>
+    <classe>Pièces de véhicules à moteur</classe>
+    <depanneur>5471</depanneur>
+    <entrepot>8068</entrepot>
+    <transport>40780</transport>
+  </produit>
+  <produit>
+    <code>MPG336360</code>
+    <titre>Garnitures intérieures, sièges et pièces de siège pour
+    les véhicules automobiles</titre>
+    <classe>Pièces de véhicules à moteur</classe>
+    <depanneur>1971</depanneur>
+    <entrepot>2957</entrepot>
+    <transport>17711</transport>
+  </produit>
+  <produit>
+    <code>MPG336370</code>
+    <titre>Pièces en métal embouti pour les véhicules
+    automobiles</titre>
+    <classe>Pièces de véhicules à moteur</classe>
+    <transport>71223</transport>
+  </produit>
+  <produit>
+    <code>MPG336390</code>
+    <titre>Autres divers pièces pour les véhicules
+    automobiles</titre>
+    <classe>Pièces de véhicules à moteur</classe>
+    <depanneur>3092</depanneur>
+    <entrepot>4349</entrepot>
+    <transport>26274</transport>
+  </produit>
+  <produit>
+    <code>MPG336602</code>
+    <titre>Bateaux et motomarines</titre>
+    <classe>Matériel de transport</classe>
+    <depanneur>222</depanneur>
+    <entrepot>306</entrepot>
+    <transport>368</transport>
+  </produit>
+  <produit>
+    <code>MPG336900</code>
+    <titre>Autre matériel de transport et pièces connexes</titre>
+    <classe>Matériel de transport</classe>
+    <depanneur>4517</depanneur>
+    <entrepot>6426</entrepot>
+    <transport>7272</transport>
+  </produit>
+  <produit>
+    <code>MPG339100</code>
+    <titre>Fournitures et matériel médicaux, dentaires et de
+    protection personnelle</titre>
+    <classe>Autres produits fabriqués et travail à forfait</classe>
+    <transport>9</transport>
+  </produit>
+  <produit>
+    <code>MPG339904</code>
+    <titre>Fournitures de bureau (sauf le papier)</titre>
+    <classe>Autres produits fabriqués et travail à forfait</classe>
+    <depanneur>702</depanneur>
+    <entrepot>822</entrepot>
+    <transport>306</transport>
+    <brasserie>97</brasserie>
+  </produit>
+  <produit>
+    <code>MPG339905</code>
+    <titre>Enseignes</titre>
+    <classe>Autres produits fabriqués et travail à forfait</classe>
+    <depanneur>7123</depanneur>
+    <entrepot>2109</entrepot>
+    <transport>368</transport>
+    <brasserie>3189</brasserie>
+  </produit>
+  <produit>
+    <code>MPG339909</code>
+    <titre>Autres divers produits fabriqués</titre>
+    <classe>Autres produits fabriqués et travail à forfait</classe>
+    <depanneur>452</depanneur>
+    <entrepot>537</entrepot>
+    <transport>823</transport>
+    <brasserie>194</brasserie>
+  </produit>
+  <produit>
+    <code>MPS3X0000</code>
+    <titre>Services de fabrication et de confection sur mesure
+    (sauf l'impression, l'apprêt de textiles et de métaux)</titre>
+    <classe>Autres produits fabriqués et travail à forfait</classe>
+    <brasserie>4005</brasserie>
+  </produit>
+  <produit>
+    <code>MPS411000</code>
+    <titre>Marges de gros - produits agricoles</titre>
+    <classe>Marges de gros et commissions</classe>
+    <transport>98</transport>
+    <brasserie>364</brasserie>
+  </produit>
+  <produit>
+    <code>MPS412000</code>
+    <titre>Marges de gros - pétrole et produits pétroliers</titre>
+    <classe>Marges de gros et commissions</classe>
+    <depanneur>4337</depanneur>
+    <entrepot>5443</entrepot>
+    <transport>127930</transport>
+    <brasserie>601</brasserie>
+  </produit>
+  <produit>
+    <code>MPS413000</code>
+    <titre>Marges de gros - produits alimentaires, de boissons et
+    de tabac</titre>
+    <classe>Marges de gros et commissions</classe>
+    <depanneur>3177</depanneur>
+    <entrepot>2534</entrepot>
+    <transport>345</transport>
+    <brasserie>15757</brasserie>
+  </produit>
+  <produit>
+    <code>MPS414000</code>
+    <titre>Marges de gros - articles personnels et ménagers</titre>
+    <classe>Marges de gros et commissions</classe>
+    <depanneur>1179</depanneur>
+    <entrepot>1432</entrepot>
+    <transport>1650</transport>
+    <brasserie>2663</brasserie>
+  </produit>
+  <produit>
+    <code>MPS415000</code>
+    <titre>Marges de gros - véhicules automobiles et pièces et
+    accessoires de véhicules automobiles</titre>
+    <classe>Marges de gros et commissions</classe>
+    <depanneur>1497</depanneur>
+    <entrepot>2130</entrepot>
+    <transport>45531</transport>
+    <brasserie>954</brasserie>
+  </produit>
+  <produit>
+    <code>MPS416000</code>
+    <titre>Marges de gros - matériaux et fournitures de
+    construction</titre>
+    <classe>Marges de gros et commissions</classe>
+    <depanneur>884</depanneur>
+    <entrepot>4740</entrepot>
+    <transport>981</transport>
+    <brasserie>2885</brasserie>
+  </produit>
+  <produit>
+    <code>MPS417000</code>
+    <titre>Marges de gros - machines, matériel et
+    fournitures</titre>
+    <classe>Marges de gros et commissions</classe>
+    <depanneur>1831</depanneur>
+    <entrepot>1249</entrepot>
+    <transport>2946</transport>
+    <brasserie>5577</brasserie>
+  </produit>
+  <produit>
+    <code>MPS418000</code>
+    <titre>Marges de gros - produits divers</titre>
+    <classe>Marges de gros et commissions</classe>
+    <depanneur>3852</depanneur>
+    <entrepot>5171</entrepot>
+    <transport>5204</transport>
+    <brasserie>4293</brasserie>
+  </produit>
+  <produit>
+    <code>MPS410002</code>
+    <titre>Commissions sur le commerce de gros</titre>
+    <classe>Marges de gros et commissions</classe>
+    <depanneur>19252</depanneur>
+    <entrepot>16795</entrepot>
+    <brasserie>202</brasserie>
+  </produit>
+  <produit>
+    <code>MPS441000</code>
+    <titre>Marges de détail - véhicules automobiles et de leurs
+    pièces</titre>
+    <classe>Marges de détail, biens d'occasion et
+    commissions</classe>
+    <depanneur>3245</depanneur>
+    <entrepot>4196</entrepot>
+    <transport>5984</transport>
+    <brasserie>1601</brasserie>
+  </produit>
+  <produit>
+    <code>MPS442000</code>
+    <titre>Marges de détail - meubles et d'accessoires de
+    maison</titre>
+    <classe>Marges de détail, biens d'occasion et
+    commissions</classe>
+    <depanneur>20</depanneur>
+    <entrepot>26</entrepot>
+    <transport>1992</transport>
+    <brasserie>38</brasserie>
+  </produit>
+  <produit>
+    <code>MPS443000</code>
+    <titre>Marges de détail - appareils électroniques et
+    ménagers</titre>
+    <classe>Marges de détail, biens d'occasion et
+    commissions</classe>
+    <depanneur>411</depanneur>
+    <entrepot>470</entrepot>
+    <transport>1004</transport>
+    <brasserie>48</brasserie>
+  </produit>
+  <produit>
+    <code>MPS444000</code>
+    <titre>Marges de détail - matériaux de construction, et
+    matériel et fournitures de jardinage</titre>
+    <classe>Marges de détail, biens d'occasion et
+    commissions</classe>
+    <depanneur>502</depanneur>
+    <entrepot>934</entrepot>
+    <transport>356</transport>
+    <brasserie>3573</brasserie>
+  </produit>
+  <produit>
+    <code>MPS445000</code>
+    <titre>Marges de détail - alimentation</titre>
+    <classe>Marges de détail, biens d'occasion et
+    commissions</classe>
+    <depanneur>1207</depanneur>
+    <entrepot>1443</entrepot>
+    <transport>302</transport>
+    <brasserie>3931</brasserie>
+  </produit>
+  <produit>
+    <code>MPS446000</code>
+    <titre>Marges de détail - produits de santé et de soins
+    personnels</titre>
+    <classe>Marges de détail, biens d'occasion et
+    commissions</classe>
+    <depanneur>63</depanneur>
+    <entrepot>1298</entrepot>
+    <transport>17</transport>
+    <brasserie>2663</brasserie>
+  </produit>
+  <produit>
+    <code>MPS447000</code>
+    <titre>Marges de détail - carburants pour les véhicules
+    automobiles</titre>
+    <classe>Marges de détail, biens d'occasion et
+    commissions</classe>
+    <depanneur>1739</depanneur>
+    <entrepot>1953</entrepot>
+    <transport>23250</transport>
+    <brasserie>207</brasserie>
+  </produit>
+  <produit>
+    <code>MPS448000</code>
+    <titre>Marges de détail - vêtements et d'accessoires
+    vestimentaires</titre>
+    <classe>Marges de détail, biens d'occasion et
+    commissions</classe>
+    <depanneur>99</depanneur>
+    <entrepot>31</entrepot>
+    <transport>39</transport>
+    <brasserie>47</brasserie>
+  </produit>
+  <produit>
+    <code>MPS451000</code>
+    <titre>Marges de détail - articles de sport et de
+    loisirs</titre>
+    <classe>Marges de détail, biens d'occasion et
+    commissions</classe>
+    <depanneur>64</depanneur>
+    <entrepot>65</entrepot>
+    <transport>27</transport>
+    <brasserie>30</brasserie>
+  </produit>
+  <produit>
+    <code>MPS453A00</code>
+    <titre>Marges de détail - produits divers (sauf le
+    cannabis)</titre>
+    <classe>Marges de détail, biens d'occasion et
+    commissions</classe>
+    <depanneur>4064</depanneur>
+    <entrepot>2229</entrepot>
+    <transport>900</transport>
+    <brasserie>1695</brasserie>
+  </produit>
+  <produit>
+    <code>MPS454310</code>
+    <titre>Marges de détail - combustibles résidentiels</titre>
+    <classe>Marges de détail, biens d'occasion et
+    commissions</classe>
+    <depanneur>36</depanneur>
+    <entrepot>166</entrepot>
+    <transport>125</transport>
+    <brasserie>26</brasserie>
+  </produit>
+  <produit>
+    <code>MPS4A0004</code>
+    <titre>Commissions sur le commerce de détail</titre>
+    <classe>Marges de détail, biens d'occasion et
+    commissions</classe>
+    <depanneur>11204</depanneur>
+  </produit>
+  <produit>
+    <code>MPS481001</code>
+    <titre>Services de transport aérien de voyageurs</titre>
+    <classe>transport et services connexes</classe>
+    <depanneur>327</depanneur>
+    <entrepot>2770</entrepot>
+    <transport>20646</transport>
+    <brasserie>1443</brasserie>
+  </produit>
+  <produit>
+    <code>MPS481002</code>
+    <titre>Services de transport aérien de marchandises</titre>
+    <classe>transport et services connexes</classe>
+    <depanneur>1</depanneur>
+    <entrepot>5842</entrepot>
+    <transport>318</transport>
+    <brasserie>1</brasserie>
+  </produit>
+  <produit>
+    <code>MPS482001</code>
+    <titre>Services de transport de voyageurs par rail</titre>
+    <classe>transport et services connexes</classe>
+    <entrepot>30</entrepot>
+    <transport>217</transport>
+    <brasserie>9</brasserie>
+  </produit>
+  <produit>
+    <code>MPS482002</code>
+    <titre>Services de transport ferroviaire de
+    marchandises</titre>
+    <classe>transport et services connexes</classe>
+    <depanneur>285</depanneur>
+    <entrepot>18579</entrepot>
+    <transport>10530</transport>
+    <brasserie>2396</brasserie>
+  </produit>
+  <produit>
+    <code>MPS483001</code>
+    <titre>Services de transport maritime de voyageurs</titre>
+    <classe>transport et services connexes</classe>
+    <depanneur>7</depanneur>
+    <entrepot>48</entrepot>
+    <transport>506</transport>
+    <brasserie>36</brasserie>
+  </produit>
+  <produit>
+    <code>MPS483002</code>
+    <titre>Services de transport maritime de marchandises</titre>
+    <classe>transport et services connexes</classe>
+    <depanneur>14</depanneur>
+    <entrepot>15978</entrepot>
+    <transport>1464</transport>
+    <brasserie>26</brasserie>
+  </produit>
+  <produit>
+    <code>MPS484001</code>
+    <titre>Services de déménagement</titre>
+    <classe>transport et services connexes</classe>
+    <entrepot>47</entrepot>
+    <transport>1176</transport>
+    <brasserie>6</brasserie>
+  </produit>
+  <produit>
+    <code>MPS484004</code>
+    <titre>Services de transport routier de marchandises
+    générales</titre>
+    <classe>transport et services connexes</classe>
+    <depanneur>6462</depanneur>
+    <entrepot>14332</entrepot>
+    <transport>575719</transport>
+    <brasserie>8831</brasserie>
+  </produit>
+  <produit>
+    <code>MPS484005</code>
+    <titre>Services de transport routier de marchandises
+    spéciales</titre>
+    <classe>transport et services connexes</classe>
+    <depanneur>13530</depanneur>
+    <entrepot>27435</entrepot>
+    <transport>1058928</transport>
+    <brasserie>5193</brasserie>
+  </produit>
+  <produit>
+    <code>MPS48A001</code>
+    <titre>Services de transport interurbain et rural de voyageurs
+    par autobus</titre>
+    <classe>transport et services connexes</classe>
+    <entrepot>12</entrepot>
+    <transport>101</transport>
+    <brasserie>7</brasserie>
+  </produit>
+  <produit>
+    <code>MPS48A003</code>
+    <titre>Autres services de transport en commun et de voyageurs
+    par route</titre>
+    <classe>transport et services connexes</classe>
+    <depanneur>5</depanneur>
+    <entrepot>41</entrepot>
+    <transport>319</transport>
+    <brasserie>24</brasserie>
+  </produit>
+  <produit>
+    <code>MPS485300</code>
+    <titre>Services de taxi et de limousine</titre>
+    <classe>transport et services connexes</classe>
+    <depanneur>348</depanneur>
+    <entrepot>554</entrepot>
+    <transport>3554</transport>
+    <brasserie>323</brasserie>
+  </produit>
+  <produit>
+    <code>MPS486200</code>
+    <titre>transport de gaz naturel par gazoduc</titre>
+    <classe>transport et services connexes</classe>
+    <depanneur>3744</depanneur>
+    <entrepot>1611</entrepot>
+    <transport>1280</transport>
+    <brasserie>1279</brasserie>
+  </produit>
+  <produit>
+    <code>MPS486A00</code>
+    <titre>transport de pétrole brut et d'autres produits par
+    pipeline</titre>
+    <classe>transport et services connexes</classe>
+    <depanneur>96</depanneur>
+    <entrepot>204</entrepot>
+    <transport>2130</transport>
+    <brasserie>43</brasserie>
+  </produit>
+  <produit>
+    <code>MPS488004</code>
+    <titre>Services de soutien, d'entretien et de réparation liés au transport par voie d'eau</titre>
+    <classe>transport et services connexes</classe>
+    <depanneur>3</depanneur>
+    <entrepot>10473</entrepot>
+    <transport>281</transport>
+    <brasserie>19</brasserie>
+  </produit>
+  <produit>
+    <code>MPS488005</code>
+    <titre>Services de soutien au transport routier</titre>
+    <classe>transport et services connexes</classe>
+    <depanneur>968</depanneur>
+    <entrepot>2938</entrepot>
+    <transport>145427</transport>
+    <brasserie>139</brasserie>
+  </produit>
+  <produit>
+    <code>MPS488006</code>
+    <titre>Services d'intermédiaire en transport de marchandises et
+    de courtage en douanes</titre>
+    <classe>transport et services connexes</classe>
+    <depanneur>57492</depanneur>
+    <entrepot>96824</entrepot>
+    <transport>531818</transport>
+    <brasserie>16938</brasserie>
+  </produit>
+  <produit>
+    <code>MPS488009</code>
+    <titre>Autres services de soutien au transport</titre>
+    <classe>transport et services connexes</classe>
+    <depanneur>63</depanneur>
+    <entrepot>147</entrepot>
+    <transport>71717</transport>
+    <brasserie>252</brasserie>
+  </produit>
+  <produit>
+    <code>MPS491000</code>
+    <titre>Services postaux</titre>
+    <classe>transport et services connexes</classe>
+    <depanneur>16038</depanneur>
+    <entrepot>12832</entrepot>
+    <transport>755</transport>
+    <brasserie>359</brasserie>
+  </produit>
+  <produit>
+    <code>MPS492000</code>
+    <titre>Services de messageries et de messagers, de livraison de
+    colis et de livraison locale</titre>
+    <classe>transport et services connexes</classe>
+    <depanneur>36303</depanneur>
+    <entrepot>38634</entrepot>
+    <transport>3044</transport>
+    <brasserie>2351</brasserie>
+  </produit>
+  <produit>
+    <code>MPS493002</code>
+    <titre>Services d'entreposage (sauf l'entreposage de
+    grains)</titre>
+    <classe>transport et services connexes</classe>
+    <depanneur>19310</depanneur>
+    <entrepot>46263</entrepot>
+    <transport>41157</transport>
+    <brasserie>8579</brasserie>
+  </produit>
+  <produit>
+    <code>MPS511112</code>
+    <titre>Espace publicitaire dans les journaux imprimés</titre>
+    <classe>Services liés à l'information et la culture</classe>
+    <depanneur>14229</depanneur>
+    <entrepot>4285</entrepot>
+    <transport>779</transport>
+    <brasserie>4448</brasserie>
+  </produit>
+  <produit>
+    <code>MPG5111A2</code>
+    <titre>Livres</titre>
+    <classe>Produits publiés et supports enregistrés (sauf les
+    logiciels)</classe>
+    <brasserie>238</brasserie>
+  </produit>
+  <produit>
+    <code>MPG5111A3</code>
+    <titre>Autres produits publiés</titre>
+    <classe>Produits publiés et supports enregistrés (sauf les
+    logiciels)</classe>
+    <depanneur>792</depanneur>
+    <entrepot>981</entrepot>
+    <transport>347</transport>
+    <brasserie>79</brasserie>
+  </produit>
+  <produit>
+    <code>MPS5111A4</code>
+    <titre>Espace publicitaire dans les périodiques imprimés et
+    dans les autres publications imprimées</titre>
+    <classe>Services liés à l'information et la culture</classe>
+    <depanneur>8648</depanneur>
+    <entrepot>2524</entrepot>
+    <transport>460</transport>
+    <brasserie>3586</brasserie>
+  </produit>
+  <produit>
+    <code>MPS511200</code>
+    <titre>Logiciels d'usage général</titre>
+    <classe>Logiciels</classe>
+    <depanneur>3450</depanneur>
+    <entrepot>6993</entrepot>
+    <transport>5202</transport>
+    <brasserie>314</brasserie>
+  </produit>
+  <produit>
+    <code>MPS5121A1</code>
+    <titre>Films, émissions de télévision et vidéos,
+    enregistrés</titre>
+    <classe>Produits publiés et supports enregistrés (sauf les
+    logiciels)</classe>
+    <depanneur>963</depanneur>
+    <entrepot>43</entrepot>
+    <transport>8</transport>
+    <brasserie>69</brasserie>
+  </produit>
+  <produit>
+    <code>MPS5121A2</code>
+    <titre>Services de production, de montage et de postproduction
+    de films, d'émissions de télévision et de vidéos</titre>
+    <classe>Services liés à l'information et la culture</classe>
+    <depanneur>21558</depanneur>
+    <entrepot>6278</entrepot>
+    <transport>1143</transport>
+  </produit>
+  <produit>
+    <code>MPS512201</code>
+    <titre>Musique enregistrée et autres enregistrements
+    sonores</titre>
+    <classe>Produits publiés et supports enregistrés (sauf les
+    logiciels)</classe>
+    <depanneur>199</depanneur>
+    <entrepot>60</entrepot>
+    <transport>11</transport>
+    <brasserie>119</brasserie>
+  </produit>
+  <produit>
+    <code>MPS512202</code>
+    <titre>Services d'enregistrement audio et d'administration du
+    droit d'auteur</titre>
+    <classe>Services liés à l'information et la culture</classe>
+    <depanneur>1505</depanneur>
+    <entrepot>445</entrepot>
+    <transport>89</transport>
+  </produit>
+  <produit>
+    <code>MPS512203</code>
+    <titre>Octroi sous licence de droits d'utilisation commerciale
+    d'oeuvres musicales et d'enregistrements sonores</titre>
+    <classe>Services liés à l'information et la culture</classe>
+    <depanneur>262</depanneur>
+    <entrepot>77</entrepot>
+    <transport>14</transport>
+    <brasserie>42</brasserie>
+  </produit>
+  <produit>
+    <code>MPS515100</code>
+    <titre>Temps d'antenne publicitaire à la radio</titre>
+    <classe>Services liés à l'information et la culture</classe>
+    <depanneur>19987</depanneur>
+    <entrepot>5830</entrepot>
+    <transport>1059</transport>
+  </produit>
+  <produit>
+    <code>MPS515A01</code>
+    <titre>Temps d'antenne publicitaire à la télévision</titre>
+    <classe>Services liés à l'information et la culture</classe>
+    <depanneur>40508</depanneur>
+    <entrepot>11820</entrepot>
+    <transport>2149</transport>
+  </produit>
+  <produit>
+    <code>MPS517001</code>
+    <titre>Services de télécommunications fixes (sauf l'accès à
+    Internet)</titre>
+    <classe>Services de télécommunications, de distribution de
+    radiodiffusion, et services connexes</classe>
+    <depanneur>2750</depanneur>
+    <entrepot>15509</entrepot>
+    <transport>11519</transport>
+    <brasserie>356</brasserie>
+  </produit>
+  <produit>
+    <code>MPS517002</code>
+    <titre>Services de télécommunications mobiles</titre>
+    <classe>Services de télécommunications, de distribution de
+    radiodiffusion, et services connexes</classe>
+    <depanneur>7931</depanneur>
+    <entrepot>40253</entrepot>
+    <transport>28886</transport>
+    <brasserie>609</brasserie>
+  </produit>
+  <produit>
+    <code>MPS517004</code>
+    <titre>Services d'accès à Internet fixes</titre>
+    <classe>Services de télécommunications, de distribution de
+    radiodiffusion, et services connexes</classe>
+    <depanneur>231</depanneur>
+    <entrepot>2873</entrepot>
+    <transport>4914</transport>
+    <brasserie>114</brasserie>
+  </produit>
+  <produit>
+    <code>MPS518000</code>
+    <titre>Traitement de données, hébergement de données et
+    services connexes (sauf le logiciel en tant que service, en
+    nuage)</titre>
+    <classe>Services liés à l'information et la culture</classe>
+    <depanneur>27165</depanneur>
+    <entrepot>14273</entrepot>
+    <transport>11817</transport>
+    <brasserie>100</brasserie>
+  </produit>
+  <produit>
+    <code>MPS519002</code>
+    <titre>Publicité sur Internet</titre>
+    <classe>Services liés à l'information et la culture</classe>
+    <depanneur>42510</depanneur>
+    <entrepot>11830</entrepot>
+    <transport>2101</transport>
+    <brasserie>13317</brasserie>
+  </produit>
+  <produit>
+    <code>MPS522130</code>
+    <titre>Services de coopératives de crédit et caisses populaires
+    locales - frais explicites</titre>
+    <classe>Intermédiation financière par le biais de
+    dépôts</classe>
+    <depanneur>6661</depanneur>
+    <entrepot>4341</entrepot>
+    <transport>10776</transport>
+  </produit>
+  <produit>
+    <code>MPS5221A0</code>
+    <titre>Services bancaires et services d'autres activités
+    d'intermédiation financière par le biais de dépôt - frais
+    explicites</titre>
+    <classe>Intermédiation financière par le biais de
+    dépôts</classe>
+    <depanneur>38980</depanneur>
+    <entrepot>13205</entrepot>
+    <transport>43155</transport>
+    <brasserie>2944</brasserie>
+  </produit>
+  <produit>
+    <code>MPS522200</code>
+    <titre>Services d'intermédiation financière non faite par le
+    biais de dépôts - frais explicites</titre>
+    <classe>Autres finances et assurances</classe>
+    <depanneur>64180</depanneur>
+    <entrepot>30212</entrepot>
+    <brasserie>1638</brasserie>
+  </produit>
+  <produit>
+    <code>MPS522300</code>
+    <titre>Autres services liés à l'intermédiation
+    financière</titre>
+    <classe>Autres finances et assurances</classe>
+    <depanneur>6978</depanneur>
+    <entrepot>2076</entrepot>
+  </produit>
+  <produit>
+    <code>MPS523001</code>
+    <titre>Services bancaires d'investissement</titre>
+    <classe>Autres finances et assurances</classe>
+    <depanneur>1775</depanneur>
+    <entrepot>1323</entrepot>
+    <transport>2590</transport>
+    <brasserie>395</brasserie>
+  </produit>
+  <produit>
+    <code>MPS523002</code>
+    <titre>Services de courtage et de commerce de valeurs
+    mobilières</titre>
+    <classe>Autres finances et assurances</classe>
+    <depanneur>7404</depanneur>
+    <entrepot>5560</entrepot>
+    <transport>11085</transport>
+    <brasserie>1344</brasserie>
+  </produit>
+  <produit>
+    <code>MPS523003</code>
+    <titre>Services de gestion de portefeuille</titre>
+    <classe>Autres finances et assurances</classe>
+    <transport>5962</transport>
+    <brasserie>190</brasserie>
+  </produit>
+  <produit>
+    <code>MPS523009</code>
+    <titre>Services des sociétés de portefeuille et autres services
+    d'investissement financier et services connexes</titre>
+    <classe>Autres finances et assurances</classe>
+    <entrepot>12687</entrepot>
+    <transport>42617</transport>
+    <brasserie>12204</brasserie>
+  </produit>
+  <produit>
+    <code>MPS524101</code>
+    <titre>Services d'assurance-vie</titre>
+    <classe>Autres finances et assurances</classe>
+    <depanneur>1940</depanneur>
+    <entrepot>993</entrepot>
+    <transport>3606</transport>
+  </produit>
+  <produit>
+    <code>MPS524102</code>
+    <titre>Services d'assurance-santé et
+    d'assurance-accident</titre>
+    <classe>Autres finances et assurances</classe>
+    <depanneur>5241</depanneur>
+    <entrepot>1534</entrepot>
+    <transport>13607</transport>
+    <brasserie>57</brasserie>
+  </produit>
+  <produit>
+    <code>MPS524103</code>
+    <titre>Services d'assurance de véhicules</titre>
+    <classe>Autres finances et assurances</classe>
+    <depanneur>75858</depanneur>
+    <entrepot>8301</entrepot>
+    <transport>70441</transport>
+    <brasserie>870</brasserie>
+  </produit>
+  <produit>
+    <code>MPS524104</code>
+    <titre>Services d'assurance-habitation</titre>
+    <classe>Autres finances et assurances</classe>
+    <depanneur>20902</depanneur>
+    <entrepot>3541</entrepot>
+    <transport>13076</transport>
+    <brasserie>380</brasserie>
+  </produit>
+  <produit>
+    <code>MPS524105</code>
+    <titre>Services d'assurance-responsabilité et d'autres
+    assurances de biens et de risques divers</titre>
+    <classe>Autres finances et assurances</classe>
+    <depanneur>49711</depanneur>
+    <entrepot>40274</entrepot>
+    <transport>66913</transport>
+    <brasserie>593</brasserie>
+  </produit>
+  <produit>
+    <code>MPS52X001</code>
+    <titre>Services d'intermédiation financière sur les dépôts
+    indirectement mesurés (SIFIM)</titre>
+    <classe>Intermédiation financière par le biais de
+    dépôts</classe>
+    <depanneur>27282</depanneur>
+    <entrepot>21659</entrepot>
+    <transport>47654</transport>
+    <brasserie>6827</brasserie>
+  </produit>
+  <produit>
+    <code>MPS52X003</code>
+    <titre>Services d'intermédiation financière sur d'autres prêts
+    indirectement mesurés (SIFIM)</titre>
+    <classe>Intermédiation financière par le biais de
+    dépôts</classe>
+    <depanneur>85098</depanneur>
+    <entrepot>26915</entrepot>
+    <transport>16950</transport>
+    <brasserie>1807</brasserie>
+  </produit>
+  <produit>
+    <code>MPS531102-IMM</code>
+    <titre>Location de biens immobiliers à usage non
+    résidentiel</titre>
+    <classe>Immobilier et location</classe>
+    <depanneur>486856</depanneur>
+    <entrepot>81721</entrepot>
+    <transport>54216</transport>
+    <brasserie>6562</brasserie>
+  </produit>
+  <produit>
+    <code>MPS531A00-IMM</code>
+    <titre>Courtage immobilier et autres services connexes à
+    l'immobilier</titre>
+    <classe>Immobilier et location</classe>
+    <transport>2303</transport>
+    <brasserie>10</brasserie>
+  </produit>
+  <produit>
+    <code>MPS532100-IMM</code>
+    <titre>Services de location et de location-exploitation de
+    véhicules automobiles</titre>
+    <classe>Immobilier et location</classe>
+    <depanneur>7506</depanneur>
+    <entrepot>2997</entrepot>
+    <transport>234512</transport>
+    <brasserie>2636</brasserie>
+  </produit>
+  <produit>
+    <code>MPS532A03-IMM</code>
+    <titre>Services de location et de location-exploitation de
+    machines et matériel d'usage commercial et industriel</titre>
+    <classe>Immobilier et location</classe>
+    <depanneur>75964</depanneur>
+    <entrepot>15105</entrepot>
+    <transport>15562</transport>
+    <brasserie>1023</brasserie>
+  </produit>
+  <produit>
+    <code>MPS532A09-IMM</code>
+    <titre>Services de location et de location-exploitation
+    d'autres biens</titre>
+    <classe>Immobilier et location</classe>
+    <depanneur>99</depanneur>
+    <entrepot>29</entrepot>
+    <transport>4</transport>
+  </produit>
+  <produit>
+    <code>MPS533000-IMM</code>
+    <titre>Octroi sous licence de droits d'utilisation commerciale
+    d'actifs non financiers incorporels (sauf les droits sur les
+    logiciels et les autres droits d'auteur)</titre>
+    <classe>Immobilier et location</classe>
+    <depanneur>3245</depanneur>
+    <transport>27873</transport>
+    <brasserie>81296</brasserie>
+  </produit>
+  <produit>
+    <code>MPS541100</code>
+    <titre>Services juridiques</titre>
+    <classe>Services professionnels (sauf logiciels et recherche et
+    développement)</classe>
+    <depanneur>36996</depanneur>
+    <entrepot>51948</entrepot>
+    <transport>1235</transport>
+    <brasserie>300</brasserie>
+  </produit>
+  <produit>
+    <code>MPS541200</code>
+    <titre>Services de comptabilité, de préparation des
+    déclarations de revenus, de tenue de livres, et de paye</titre>
+    <classe>Services professionnels (sauf logiciels et recherche et
+    développement)</classe>
+    <depanneur>68053</depanneur>
+    <entrepot>36082</entrepot>
+    <transport>52752</transport>
+    <brasserie>98</brasserie>
+  </produit>
+  <produit>
+    <code>MPS541300</code>
+    <titre>Services d'architecture et d'ingénierie et autres
+    services connexes</titre>
+    <classe>Services professionnels (sauf logiciels et recherche et
+    développement)</classe>
+    <depanneur>28</depanneur>
+    <entrepot>16133</entrepot>
+    <transport>14266</transport>
+    <brasserie>469</brasserie>
+  </produit>
+  <produit>
+    <code>MPS541400</code>
+    <titre>Services spécialisés de design</titre>
+    <classe>Services professionnels (sauf logiciels et recherche et
+    développement)</classe>
+    <depanneur>11296</depanneur>
+    <entrepot>22039</entrepot>
+    <transport>124</transport>
+    <brasserie>21</brasserie>
+  </produit>
+  <produit>
+    <code>MPS541503</code>
+    <titre>Conception de systèmes informatiques et services
+    connexes (sauf le développement de logiciels)</titre>
+    <classe>Services professionnels (sauf logiciels et recherche et
+    développement)</classe>
+    <depanneur>22797</depanneur>
+    <entrepot>29754</entrepot>
+    <transport>40233</transport>
+    <brasserie>491</brasserie>
+  </produit>
+  <produit>
+    <code>MPS541600</code>
+    <titre>Services de conseils en gestion et de conseils
+    scientifiques et techniques</titre>
+    <classe>Services professionnels (sauf logiciels et recherche et
+    développement)</classe>
+    <depanneur>38131</depanneur>
+    <entrepot>62501</entrepot>
+    <transport>4929</transport>
+    <brasserie>10</brasserie>
+  </produit>
+  <produit>
+    <code>MPS541800</code>
+    <titre>Publicité, relations publiques et services
+    connexes</titre>
+    <classe>Services professionnels (sauf logiciels et recherche et
+    développement)</classe>
+    <depanneur>97888</depanneur>
+    <entrepot>28539</entrepot>
+    <transport>5193</transport>
+    <brasserie>40558</brasserie>
+  </produit>
+  <produit>
+    <code>MPS541901</code>
+    <titre>Services de photographie</titre>
+    <classe>Services professionnels (sauf logiciels et recherche et
+    développement)</classe>
+    <depanneur>1030</depanneur>
+    <entrepot>333</entrepot>
+    <transport>317</transport>
+    <brasserie>436</brasserie>
+  </produit>
+  <produit>
+    <code>MPS541909</code>
+    <titre>Autres services professionnels, scientifiques et
+    techniques</titre>
+    <classe>Services professionnels (sauf logiciels et recherche et
+    développement)</classe>
+    <depanneur>901</depanneur>
+    <entrepot>19262</entrepot>
+    <transport>1835</transport>
+    <brasserie>6</brasserie>
+  </produit>
+  <produit>
+    <code>IMS551001</code>
+    <titre>Services des sociétés de portefeuille (imputés)</titre>
+    <classe>Autres finances et assurances</classe>
+    <depanneur>6229</depanneur>
+    <entrepot>8839</entrepot>
+    <transport>6243</transport>
+    <brasserie>6758</brasserie>
+  </produit>
+  <produit>
+    <code>IMS551002</code>
+    <titre>Services - sièges sociaux (imputés)</titre>
+    <classe>Services administratifs et de soutien, sièges sociaux
+    et services de gestion des déchets et d'assainissement</classe>
+    <depanneur>17897</depanneur>
+    <entrepot>37955</entrepot>
+    <transport>5488</transport>
+    <brasserie>129193</brasserie>
+  </produit>
+  <produit>
+    <code>MPS561100</code>
+    <titre>Services administratifs de bureau</titre>
+    <classe>Services administratifs et de soutien, sièges sociaux
+    et services de gestion des déchets et d'assainissement</classe>
+    <depanneur>76187</depanneur>
+    <entrepot>147908</entrepot>
+    <transport>44760</transport>
+    <brasserie>137</brasserie>
+  </produit>
+  <produit>
+    <code>MPS561300</code>
+    <titre>Services d'emploi</titre>
+    <classe>Services administratifs et de soutien, sièges sociaux
+    et services de gestion des déchets et d'assainissement</classe>
+    <depanneur>20682</depanneur>
+    <entrepot>62468</entrepot>
+    <transport>198902</transport>
+  </produit>
+  <produit>
+    <code>MPS561400</code>
+    <titre>Services de soutien aux entreprises</titre>
+    <classe>Services administratifs et de soutien, sièges sociaux
+    et services de gestion des déchets et d'assainissement</classe>
+    <depanneur>23495</depanneur>
+    <entrepot>36726</entrepot>
+    <transport>24205</transport>
+    <brasserie>172</brasserie>
+  </produit>
+  <produit>
+    <code>MPS561500</code>
+    <titre>Services de planification, de réservation et
+    d'organisation de voyages</titre>
+    <classe>Services administratifs et de soutien, sièges sociaux
+    et services de gestion des déchets et d'assainissement</classe>
+    <depanneur>9826</depanneur>
+    <entrepot>30402</entrepot>
+    <transport>3853</transport>
+    <brasserie>303</brasserie>
+  </produit>
+  <produit>
+    <code>MPS561600</code>
+    <titre>Services d'enquêtes et de sécurité</titre>
+    <classe>Services administratifs et de soutien, sièges sociaux
+    et services de gestion des déchets et d'assainissement</classe>
+    <depanneur>13277</depanneur>
+    <entrepot>3683</entrepot>
+    <transport>2689</transport>
+  </produit>
+  <produit>
+    <code>MPS561700</code>
+    <titre>Services relatifs aux bâtiments et aux logements</titre>
+    <classe>Services administratifs et de soutien, sièges sociaux
+    et services de gestion des déchets et d'assainissement</classe>
+    <depanneur>8142</depanneur>
+    <entrepot>5409</entrepot>
+    <transport>428</transport>
+    <brasserie>3912</brasserie>
+  </produit>
+  <produit>
+    <code>MPS561A00</code>
+    <titre>Services de soutien d'installations et autres services
+    de soutien</titre>
+    <classe>Services administratifs et de soutien, sièges sociaux
+    et services de gestion des déchets et d'assainissement</classe>
+    <depanneur>8149</depanneur>
+    <entrepot>17724</entrepot>
+    <transport>36270</transport>
+    <brasserie>91</brasserie>
+  </produit>
+  <produit>
+    <code>MPS562000</code>
+    <titre>Services de gestion des déchets et
+    d'assainissement</titre>
+    <classe>Services administratifs et de soutien, sièges sociaux
+    et services de gestion des déchets et d'assainissement</classe>
+    <depanneur>18854</depanneur>
+    <entrepot>46342</entrepot>
+    <transport>12044</transport>
+    <brasserie>317</brasserie>
+  </produit>
+  <produit>
+    <code>MPS610004</code>
+    <titre>Frais de scolarité et autres frais pour la formation
+    techniques, professionnels et dans les métiers</titre>
+    <classe>Services d'enseignement</classe>
+    <depanneur>60</depanneur>
+    <entrepot>15</entrepot>
+    <transport>1048</transport>
+  </produit>
+  <produit>
+    <code>MPS610009</code>
+    <titre>Autres formations et services d'enseignement</titre>
+    <classe>Services d'enseignement</classe>
+    <depanneur>33</depanneur>
+    <entrepot>6454</entrepot>
+    <transport>1215</transport>
+  </produit>
+  <produit>
+    <code>MPS721100</code>
+    <titre>Services d'hébergement pour voyageurs dans une chambre
+    ou une autre unité</titre>
+    <classe>Services d'hébergement et restauration</classe>
+    <depanneur>292</depanneur>
+    <entrepot>2286</entrepot>
+    <transport>14914</transport>
+    <brasserie>1384</brasserie>
+  </produit>
+  <produit>
+    <code>MPS722001</code>
+    <titre>Repas préparés</titre>
+    <classe>Services d'hébergement et restauration</classe>
+    <depanneur>65284</depanneur>
+    <entrepot>21142</entrepot>
+    <transport>19807</transport>
+    <brasserie>25745</brasserie>
+  </produit>
+  <produit>
+    <code>MPS722002</code>
+    <titre>Boissons alcoolisées pour consommation immédiate</titre>
+    <classe>Services d'hébergement et restauration</classe>
+    <depanneur>10542</depanneur>
+    <entrepot>3606</entrepot>
+    <transport>3213</transport>
+    <brasserie>4973</brasserie>
+  </produit>
+  <produit>
+    <code>MPS811100</code>
+    <titre>Services d'entretien et de réparation de véhicules
+    motorisés</titre>
+    <classe>Autres services</classe>
+    <depanneur>73</depanneur>
+    <entrepot>119</entrepot>
+    <transport>115717</transport>
+    <brasserie>443</brasserie>
+  </produit>
+  <produit>
+    <code>MPS811A00</code>
+    <titre>Services de réparation et d'entretien (sauf pour les
+    bâtiments et le matériel de transport)</titre>
+    <classe>Autres services</classe>
+    <depanneur>513</depanneur>
+    <entrepot>689</entrepot>
+    <transport>131411</transport>
+    <brasserie>2703</brasserie>
+  </produit>
+  <produit>
+    <code>MPS812300</code>
+    <titre>Services de blanchisserie, de nettoyage à sec et
+    services connexes</titre>
+    <classe>Autres services</classe>
+    <entrepot>7</entrepot>
+    <transport>75</transport>
+  </produit>
+  <produit>
+    <code>MPS812A02</code>
+    <titre>Services de stationnement</titre>
+    <classe>Autres services</classe>
+    <depanneur>124</depanneur>
+    <entrepot>935</entrepot>
+    <transport>6690</transport>
+    <brasserie>442</brasserie>
+  </produit>
+  <produit>
+    <code>MPS813000</code>
+    <titre>Autres services aux membres</titre>
+    <classe>Autres services</classe>
+    <transport>28845</transport>
+    <brasserie>106</brasserie>
+  </produit>
+  <produit>
+    <code>MPS9B0000</code>
+    <titre>Ventes d'autres services par les administrations
+    publiques</titre>
+    <classe>Ventes d'autres services par les administrations
+    publiques</classe>
+    <depanneur>878</depanneur>
+    <transport>233</transport>
+  </produit>
+  <produit>
+    <code>PRM100000</code>
+    <titre>Impôts sur les produits</titre>
+    <classe>Impôts sur les produits</classe>
+    <depanneur>45716</depanneur>
+    <entrepot>26615</entrepot>
+    <transport>451239</transport>
+    <brasserie>5610</brasserie>
+  </produit>
+  <produit>
+    <code>PRM200000</code>
+    <titre>Subventions sur les produits</titre>
+    <classe>Subventions sur les produits</classe>
+    <depanneur>-18655</depanneur>
+    <entrepot>-14</entrepot>
+    <transport>-16733</transport>
+  </produit>
+  <!-- <produit> -->
+  <!--   <code>GVA</code> -->
+  <!--   <titre>Valeur ajoutée brute aux prix de base</titre> -->
+  <!--   <classe>Valeur ajoutée brute aux prix de base</classe> -->
+  <!--   <depanneur>4078622</depanneur> -->
+  <!--   <entrepot>3168822</entrepot> -->
+  <!--   <transport>4441366</transport> -->
+  <!--   <brasserie>792190</brasserie> -->
+  <!-- </produit> -->
+  <produit type="ajout">
+    <code>PRM300000</code>
+    <titre>Subventions sur la production</titre>
+    <classe>Subventions sur la production</classe>
+    <depanneur>-2825</depanneur>
+    <entrepot>-965</entrepot>
+    <transport>-25674</transport>
+  </produit>
+  <produit type="ajout">
+    <code>PRM400000-IMP</code>
+    <titre>Impôts sur la production</titre>
+    <classe>Impôts sur la production</classe>
+    <depanneur>115440</depanneur>
+    <entrepot>129997</entrepot>
+    <transport>105805</transport>
+    <brasserie>36839</brasserie>
+  </produit>
+  <produit type="ajout">
+    <code>PRM500000-SAL</code>
+    <titre>Salaires et traitements</titre>
+    <classe>Salaires</classe>
+    <depanneur>2804696</depanneur>
+    <entrepot>1344739</entrepot>
+    <transport>2450991</transport>
+    <brasserie>239691</brasserie>
+  </produit>
+  <produit type="ajout">
+    <code>PRM600000-COT</code>
+    <titre>Cotisations sociales à la charge des employeurs</titre>
+    <classe>Cotisations sociales</classe>
+    <depanneur>476010</depanneur>
+    <entrepot>201143</entrepot>
+    <transport>408227</transport>
+    <brasserie>107351</brasserie>
+  </produit>
+  <produit type="ajout">
+    <code>PRM700000-REV</code>
+    <titre>Revenu mixte brut</titre>
+    <classe>Revenu mixte brut</classe>
+    <depanneur>493938</depanneur>
+    <entrepot>75257</entrepot>
+    <transport>238796</transport>
+    <brasserie>394</brasserie>
+  </produit>
+  <produit type="ajout">
+    <code>PRM800000</code>
+    <titre>Excédent d'exploitation brut</titre>
+    <classe>Excédent d'exploitation brut</classe>
+    <depanneur>191363</depanneur>
+    <entrepot>1418651</entrepot>
+    <transport>1263221</transport>
+    <brasserie>407915</brasserie>
+  </produit>
+  <total>
+    <code>TOTAL</code>
+    <titre>Total</titre>
+    <classe>Total</classe>
+	  <depense>1733615</depense>
+    <!-- <depense>2235357</depense> -->
+    <depanneur>6486797</depanneur>
+    <entrepot>4970940</entrepot>
+    <transport>11203330</transport>
+    <brasserie>1643364</brasserie>
+  </total>
+</root>
