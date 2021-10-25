@@ -160,6 +160,7 @@
 		top: 0;
 		overflow-y: auto;
 		overflow-x: hidden;
+		z-index: 4;
 	}
 	
 	body>footer {
