@@ -136,7 +136,7 @@
 		</header>
 			<div class="prose">
 				<p><b>Humhum.</b></p>
-				<p>C'est l'été. Il faut beau, il fait chaud : vous avez soif, Joey Joe Joe. Et rien n’étanche cette soif comme votre bière générique préférée : La Pâpire.</p>
+				<p>C'est l'été. Il faut beau, il fait chaud : vous avez soif, Joey Joe Joe. Et rien n’étanche cette soif comme votre bière générique préférée : La Pâpire.</p>
 				<p>Quand vous achetez une caisse de Pâpire, vous mettez en branle toute une chaîne d’<i data-wiki="Agent_économique">agents économiques</i> nécessaires à votre consommation.</p>
 			</div>
 			<aside class="intervention">
@@ -194,7 +194,7 @@
 				<h4>La brasserie Moyenne</h4>
 				<details>
 					<summary>
-						<p><b>brasse La Pâpire à votre grand plaisir, Joey Joe Joe.</b></p>
+						<p><b>brasse La Pâpire à votre grand plaisir, Joey Joe Joe.</b></p>
 					</summary>
 					<p>Le transformateur est un agent fondamental de la chaîne économique, celui qui se procure les <i data-wiki="Consommation_intermédiaire" data-sections="0">ingrédients</i> et les transforme en Pâpire. Bref, sans brasserie, pas de bonne bière !</p>
 				</details>
@@ -311,7 +311,7 @@
 							<span>Pas sûr...</span>
 						</label>
 					</div>
-					<p>Et encore selon vous, la brasserie Moyenne <strong>devrait-elle</strong> être incitée à brasser La Locale ?</p>
+					<p>Et encore selon vous, la brasserie Moyenne <strong>devrait-elle</strong> être incitée à brasser La Locale ?</p>
 					<div>
 						<label>
 							<input name="devrait-inciter" type="radio" value="oui" required="" />
@@ -364,25 +364,22 @@
 			<div>
 				<p>Si Henri et moi produisions du houblon québécois pour fournir la Locale, Henri ne pourrait plus produire de modèles économiques et je ne pourrais plus produire d'expériences interactives prétentieuses.
 			</p>
-		</div>
-	</aside>
-</section>
+			</div>
+		</aside>
+	</section>
 
 	<section type="observation">
 		<header>
 			<h3>Le coût d'opportunité</h3>
 			<small>Fait économique #04</small>
 		</header>
-			<p>Lorsqu'on alloue une ressource à un usage choisi, on exclut tous les autres usages possibles.</p>
-			<div class="prose">
-				<p>On appelle ce principe économique, le <i data-wiki="Coût_d%27opportunité">coût d'opportunité</i>.</p>
+		<p>Lorsqu'on alloue une ressource à un usage choisi, on exclut tous les autres usages possibles. On appelle ce principe économique, le <i data-wiki="Coût_d%27opportunité">coût d'opportunité</i>.</p>
+		<aside class="intervention">
+			<symbol type="henri" class="cartoon_henri animated" />
+			<div>
+				<p>Le coût d'opportunité d'une ressource devient d'autant plus important que la ressource est rare. Et c'est le cas des travailleurs comme vous et nous Joey Joe Joe.</p>
 			</div>
-			<aside class="intervention">
-				<symbol type="henri" class="cartoon_henri animated" />
-				<div>
-					<p>Le coût d'opportunité d'une ressource devient d'autant plus important que la ressource est rare. Et c'est le cas des travailleurs comme vous et nous Joey Joe Joe.</p>
-				</div>
-			</aside>
+		</aside>
 	</section>
 	<section type="chaine">
 		<header>
