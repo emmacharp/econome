@@ -156,11 +156,8 @@
 		<figure>
 			<diagram type="chain">
 				<agent type="consumer" name="Joey Joe Joe" />
-				<product type="beer" name="Bière" complete="" value="100%" />
 				<agent type="retailer" name="Dépanneur Commun" />
-				<product type="beer" name="Bière" value="86%" />
 				<agent type="manufacturer" name="Entrepôts Correct" />
-				<product type="beer" name="Bière" value="81%" />
 				<agent type="transformer" name="Brasserie Moyenne" />
 			</diagram>
 			<figcaption>Représentation d'une chaîne typique d'achat de bière générique.</figcaption>
@@ -242,11 +239,9 @@
 		<figure>
 			<diagram type="chain">
 				<agent type="consumer" name="Joey Joe Joe" paid="10" />
-				<product type="beer" name="Bière" complete="" value="100%" />
+				<product type="beer" name="La Pâpire" complete="" value="100%" />
 				<agent type="retailer" name="Dépanneur Commun" added="1.80" goods="" />
-				<product type="beer" name="Bière" value="82%" />
 				<agent type="manufacturer" name="Entrepôts Correct" added="0.62" goods="" />
-				<product type="beer" name="Bière" value="74.8%" />
 				<agent type="transformer" name="Brasserie Moyenne" added="7.48" goods="" />
 			</diagram>
 			<figcaption>Répartition de 10 $ de valeur ajoutée à travers la chaîne. Données de StatCan (2016).</figcaption>
@@ -269,11 +264,9 @@
 		<figure>
 			<diagram type="chain">
 				<agent type="consumer" name="Joey Joe Joe" paid="10" />
-				<product type="beer" name="Bière" complete="" value="100%"  />
+				<product type="beer" name="La Pâpire" complete="" value="100%" />
 				<agent type="retailer" name="Dépanneur Commun" bought="0.66" value="1.14" goods="" />
-				<product type="beer" name="Bière" value="82%" />
 				<agent type="manufacturer" name="Entrepôts Correct" value="0.39" bought="0.23" goods="" />
-				<product type="beer" name="Bière" value="74.8%" />
 				<agent type="transformer" name="Brasserie Moyenne" value="4.96" bought="2.52" goods="" />
 			</diagram>
 			<figcaption>Proportions de valeur ajoutée directe et indirecte. Données de StatCan (2016)</figcaption>
@@ -351,11 +344,9 @@
 		<figure>
 			<diagram type="chain">
 				<agent type="consumer" name="Joey Joe Joe" paid="10" />
-				<product type="beer" name="La moins Locale" complete="" local="87%" foreign="13%"  />
+				<product type="beer" name="La Locale ?" complete="" local="87%" foreign="13%"  />
 				<agent type="retailer" name="Dépanneur Commun" bought="0.66" value="1.14" goods="subunits" />
-				<product type="beer" name="Bière" local="73%" foreign="13%" />
 				<agent type="manufacturer" name="Entrepôts Correct" value="0.39" bought="0.23" goods="subunits" />
-				<product type="beer" name="Bière" local="69%" foreign="13%" />
 				<agent type="transformer" name="Brasserie Moyenne" value="4.96" local="1.30" foreign="1.22" goods="subunits" />
 			</diagram>
 			<figcaption>Proportions de la valeur ajoutée étrangère et locale par une brasserie moyenne. Données de StatCan (2016)</figcaption>
