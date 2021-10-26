@@ -100,34 +100,6 @@ h1+span {
 	margin-top: calc(var(--Row) * 1);
 }
 
-@media (orientation: landscape) {
-	main {
-		padding: 0;
-	}
-	main>section>* {
-		padding-left: calc(var(--Row) * 2);
-		padding-right: calc(var(--Row) * 2);
-		/* box-sizing: border-box; */
-	}
-}
-
-@media (orientation: portrait) {
-	main>section {
-		padding-top: clamp(var(--Row), 7vmin, calc(var(--Row) * 2));
-		padding-bottom: clamp(var(--Row), 7vmin, calc(var(--Row) * 2));
-	}
-	main>section>* {
-		padding-left: clamp(var(--Row), 7vmin, calc(var(--Row) * 2));
-		padding-right: clamp(var(--Row), 7vmin, calc(var(--Row) * 2));
-	}
-}
-
-@media (orientation: landscape) {
-	main>section>* {
-		padding-left: clamp(var(--Row), 4vmax, calc(var(--Row) * 4));
-		padding-right: clamp(var(--Row), 4vmax, calc(var(--Row) * 4));
-	}
-}
 main>section>.grille {
 	--DivItemGutter: calc(var(--Row) * 1);
 	justify-self: initial;
