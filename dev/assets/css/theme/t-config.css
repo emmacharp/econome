@@ -52,10 +52,10 @@
 		--ColorControls: var(--lt-brown);
 		--ColorBgComplete: var(--lt-green);
 		--ColorBgIncomplete: var(--lt-red);
-		--ColorBgActive: var(--lt-purple);
+		--ColorBgActive: var(--Color);
 		--ColorComplete: var(--dk-green);
 		--ColorIncomplete: var(--dk-red);
-		--ColorActive: var(--dk-yellow);
+		--ColorActive: var(--lt-purple);
 	}
 
 /* Propriétés supplémentaires configurables */
