@@ -19,6 +19,7 @@
 	align-items: flex-end;
 	width: var(--Row);
 	height: var(--Row);
+	display: block;
 	flex-shrink: 0;
 	position: static;
 	padding: 2px;
