@@ -100,19 +100,6 @@ h1+span {
 	margin-top: calc(var(--Row) * 1);
 }
 
-main>section>.grille {
-	--DivItemGutter: calc(var(--Row) * 1);
-	justify-self: initial;
-	justify-content: space-between;
-}
-main>section>div>article {
-	
-	--DivItemBasis: calc((85ch - 100%) * 999);
-   --DivItemMaxWidth: 30ch;
-	/* --DivItemShrink: 0; */
-	--DivItemGrow: 1;
-}
-
 .amount small {
 	text-shadow: 
 		1px 1px var(--ColorBg), 
