@@ -48,7 +48,6 @@ nav li>a:before {
 	align-items: center;
 	font-size: calc(16px + .5vmin);
 	vertical-align: middle;
-	margin-right: .5ch;
 }
 
 
@@ -159,8 +158,13 @@ nav li:not(.is-active) a:hover {
 		border-top: 2px solid var(--ColorBg);
 	}
 
+	.toggle-internal-nav:checked~nav li {
+		border-color: transparent;
+	}
+
 	nav li>a:before {
 		height: calc(16px + var(--Row) * .75);
+		margin-right: .5ch;
 	}
 
 	nav li>a:before,
