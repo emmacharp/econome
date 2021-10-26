@@ -45,13 +45,17 @@
 		top: calc(var(--Row) * .75);
 		border-radius: 16px;
 		justify-self: center;
+		margin-left: calc(var(--Row) * .5);
+		margin-right: calc(var(--Row) * .5);
 	}
 
 	main>section>aside>div {
-		margin-left: 0;
-		padding: 15px;
-		padding-left: 15px;
 		overflow: hidden;
+	}
+
+	main>section>aside>svg {
+		margin-left: calc(-1 * var(--Row) * .25);
+		margin-top: calc(-1 * var(--Row) * .25);
 	}
 }
 
