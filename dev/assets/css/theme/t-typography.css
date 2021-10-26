@@ -15,7 +15,7 @@
 	h1 { --ScaleLevel: var(--Huger); --FontWeight: 800; }
 	h2 { --ScaleLevel: var(--Huge); }
 	h3 { --ScaleLevel: var(--Huge); --FontWeight: 600; }
-	h4 { --ScaleLevel: var(--Base); --FontWeight: 600; --LineHeightFactor: .75; }
+	h4 { --ScaleLevel: var(--Base); --FontWeight: 500; --LineHeightFactor: .75; }
 	h5 { --ScaleLevel: var(--Base); --LineHeightFactor: .75; }
 	h6 { --ScaleLevel: var(--Short); --LineHeightFactor: .75; }
 
