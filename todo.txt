@@ -35,3 +35,5 @@
 2021-10-24 vérifier la véracité des chiffres... chiffres qui concordent, siouplait. @maitrise +experience
 (A) Nettoyer les svg de navigation remplacés par les emojis. @maitrise +hygiene
 (A) Finir de sélectionner les icônes. @maitrise +recherche
+(B) Réintégrer les q et cite. @maitrise +standard
+(B) Tout changer type pour data-type... pis les autres si y en a. @maitrise +standard
