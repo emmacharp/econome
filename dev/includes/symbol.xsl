@@ -94,7 +94,7 @@
 			<xsl:when test="contains($code, 'MPG332401')">
 				<xsl:text>svg-cap-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains($code, 'AGRI') or contains($code, 'MPG311208')">
+			<xsl:when test="contains($code, 'AGRI') or contains($code, 'MPG311208') or contains($code, 'GRA')">
 				<xsl:text>svg-cereal-symbol</xsl:text>
 			</xsl:when>
 			<xsl:when test="contains($code, 'AUT') or contains($code, 'MPS541800')">
@@ -106,7 +106,7 @@
 			<xsl:when test="contains($code, 'MPS722001')">
 				<xsl:text>svg-meal-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="contains($code, 'MPG327A02')">
+			<xsl:when test="contains($code, 'MPG327A02') or contains($code, 'PLA')">
 				<xsl:text>svg-bottle-symbol</xsl:text>
 			</xsl:when>
 			<xsl:when test="contains($code, 'MPG311301')">
@@ -135,6 +135,45 @@
 			</xsl:when>
 			<xsl:when test="contains($code, 'ENS')">
 				<xsl:text>svg-school-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains($code, 'MED')">
+				<xsl:text>svg-antenna-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains($code, 'ELE')">
+				<xsl:text>svg-transistor-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains($code, 'ORD')">
+				<xsl:text>svg-computer-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains($code, 'PET')">
+				<xsl:text>svg-oil-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains($code, 'WOO')">
+				<xsl:text>svg-lumber-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains($code, 'VET')">
+				<xsl:text>svg-shirt-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains($code, 'ALC')">
+				<xsl:text>svg-alcohol-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains($code, 'MED')">
+				<xsl:text>svg-antenna-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains($code, 'MAC')">
+				<xsl:text>svg-machine-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains($code, 'MET')">
+				<xsl:text>svg-bolt-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains($code, 'CHI')">
+				<xsl:text>svg-chemistry-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains($code, 'PAP')">
+				<xsl:text>svg-paper-symbol</xsl:text>
+			</xsl:when>
+			<xsl:when test="contains($code, 'PRI')">
+				<xsl:text>svg-printer-symbol</xsl:text>
 			</xsl:when>
 			<xsl:otherwise>
 				<xsl:text>svg-unknown-symbol</xsl:text>
