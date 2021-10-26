@@ -5,7 +5,7 @@
 	<section type="introduction">
 		<header>
 			<h1>Pourquoi<wbr /> acheter local ?</h1>
-			<span><small>un exposé Econome</small></span>
+			<small>un exposé Econome</small>
 		</header>
 		<p>Acheter est une action économique.</p>
 		<div class="prose">
@@ -68,7 +68,7 @@
 	<!-- SECTION SUR LES PRÉFÉRENCES DE CONSULTATION -->
 	<section type="question">
 		<header>
-			<h3>Avent de commencer...</h3>
+			<h3>Avant de commencer...</h3>
 			<small>Merci d'être là Joey Joe Joe ! C'est un plaisir.</small>
 		</header>
 			<p>Une p'tite question avant de commencer. Selon vous, les achats suivants constituent-ils des achats locaux ?</p>
@@ -108,12 +108,12 @@
 	<section>
 		<header>
 			<h3>C'est quoi un achat local ?</h3>
-			<p>Commençons maintenant notre exposé par le début : <strong>comment définit-on achat local ?</strong></p>
+			<p>Commençons maintenant notre exposé par le début : comment définit-on achat local ?</p>
 		</header>
 		<div class="prose">
 			<p><b>On parle d’achat local lorsque vous magasinez à la boutique du coin plutôt que sur Amazon. Ou bien lorsque vous choisissez une bière du Québec plutôt qu’un vin de l’Ontario.</b></p>
 			<p>Une augmentation de votre quantité actuelle d'achats locaux est implicite, Joey Joe Joe.</p>
-			<p>Augmenter la part locale de votre consommation modifie l’activité économique, locale et nationale. Pour consommer localement de manière <i data-wiki="Efficacité">efficace</i>, il vous faut comprendre que vos changements de consommation percolent partout dans l'économie. Un scénario vous aidera à comprendre, Joey Joe Joe.</p>
+			<p><strong>Augmenter la part locale de votre consommation modifie l’activité économique, locale et nationale.</strong> Pour consommer localement de manière <i data-wiki="Efficacité">efficace</i>, il vous faut comprendre que vos changements de consommation percolent partout dans l'économie. Un scénario vous aidera à comprendre, Joey Joe Joe.</p>
 		</div>
 
 		<aside class="intervention">
@@ -303,33 +303,33 @@
 		</header>
 			<form>
 				<fieldset>
-					<p>Selon vous, la brasserie Moyenne <strong>pourrait-elle</strong> être <i data-wiki="Incitation_économique">incitée</i> à brasser La locale, bière 100% locale ?</p>
+					<p>Selon vous, la brasserie Moyenne <strong>pourrait-elle</strong> être <i data-wiki="Incitation_économique">incitée</i> à brasser la Locale, bière 100% locale ?</p>
 					<div>
 						<label>
-							<input name="pourrait" type="radio" value="oui" required="" />
+							<input name="pourrait-inciter" type="radio" value="oui" required="" />
 							<span>Oui !</span>
 						</label>
 						<label>
-							<input name="pourrait" type="radio" value="non" required="" />
+							<input name="pourrait-inciter" type="radio" value="non" required="" />
 							<span>Non !</span>
 						</label>
 						<label>
-							<input name="pourrait" type="radio" value="pas-sur" required="" />
+							<input name="pourrait-inciter" type="radio" value="pas-sur" required="" />
 							<span>Pas sûr...</span>
 						</label>
 					</div>
-					<p>Et encore selon vous, la brasserie Moyenne <strong>devrait-elle</strong> être incitée à brasser La locale ?</p>
+					<p>Et encore selon vous, la brasserie Moyenne <strong>devrait-elle</strong> être incitée à brasser La Locale ?</p>
 					<div>
 						<label>
-							<input name="devrait" type="radio" value="oui" required="" />
+							<input name="devrait-inciter" type="radio" value="oui" required="" />
 							<span>Oui !</span>
 						</label>
 						<label>
-							<input name="devrait" type="radio" value="non" required="" />
+							<input name="devrait-inciter" type="radio" value="non" required="" />
 							<span>Non !</span>
 						</label>
 						<label>
-							<input name="devrait" type="radio" value="pas-sur" required="" />
+							<input name="devrait-inciter" type="radio" value="pas-sur" required="" />
 							<span>Pas sûr...</span>
 						</label>
 					</div>
@@ -382,7 +382,10 @@
 			<h3>Le coût d'opportunité</h3>
 			<small>Fait économique #04</small>
 		</header>
-			<p>Lorsqu'on alloue une ressource à un usage choisi, on exclut tous les autres usages possibles. On appelle ce principe économique, le <i data-wiki="Coût_d%27opportunité">coût d'opportunité</i>.</p>
+			<p>Lorsqu'on alloue une ressource à un usage choisi, on exclut tous les autres usages possibles.</p>
+			<div class="prose">
+				<p>On appelle ce principe économique, le <i data-wiki="Coût_d%27opportunité">coût d'opportunité</i>.</p>
+			</div>
 			<aside class="intervention">
 				<symbol type="henri" class="cartoon_henri animated" />
 				<div>
@@ -614,15 +617,15 @@
 				<p>Aimeriez-vous en apprendre plus ?</p>
 				<div>
 					<label>
-						<input type="radio" name="appris" required="" />
+						<input type="radio" name="apprendre-plus" required="" />
 						<span>Oui !</span>
 					</label>
 					<label>
-						<input type="radio" name="appris" />
+						<input type="radio" name="apprendre-plus" />
 						<span>Non !</span>
 					</label>
 					<label>
-						<input type="radio" name="appris" />
+						<input type="radio" name="apprendre-plus" />
 						<span>Pas sûr.</span>
 					</label>
 				</div>
@@ -649,24 +652,24 @@
 				<div>
 
 					<label>
-						<input type="radio" name="interet" required="" />
+						<input type="radio" name="stimuler" required="" />
 						<span>Oui !</span>
 					</label>
 					<label>
-						<input type="radio" name="interet" />
+						<input type="radio" name="stimuler" />
 						<span>Non !</span>
 					</label>
 					<label>
-						<input type="radio" name="interet" />
+						<input type="radio" name="stimuler" />
 						<span>Pas sûr.</span>
 					</label>
 				</div>
 			</fieldset>
 			<fieldset>
 				<p>Laissez-nous une appréciation libre de votre expérience</p>
-				<textarea id="" name="" cols="30" rows="10" placeholder="Marc-André, faut qu'on se parle..."></textarea>
+				<textarea id="" name="appreciation" cols="30" rows="10" placeholder="Marc-André, faut qu'on se parle..."></textarea>
 				<p>Bogues ?</p>
-				<textarea id="" name="" cols="30" rows="10" placeholder="Marc-André, telle affaire était toute croche..."></textarea>
+				<textarea id="" name="bogues" cols="30" rows="10" placeholder="Marc-André, telle affaire était toute croche..."></textarea>
 			</fieldset>
 
 		</form>
