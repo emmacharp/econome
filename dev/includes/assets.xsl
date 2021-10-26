@@ -13,8 +13,10 @@
 
 		<!-- <link rel="stylesheet" href="assets/css/theme/t-dark_scheme.css" media="screen and (prefers-color-scheme: dark)" /> -->
 		<link rel="stylesheet" href="assets/css/components/c-cartoon_characters.css" />
+		<link rel="stylesheet" href="assets/css/components/c-details.css"/>
 
 		<link rel="stylesheet" href="assets/css/patterns/p-provenance.css"/>
+		<link rel="stylesheet" href="assets/css/patterns/p-type-emojis.css"/>
 		<link rel="stylesheet" href="assets/css/patterns/p-auto_line-height.css"/>
 		<link rel="stylesheet" href="assets/css/patterns/p-section_visibility-transitions.css" />
 

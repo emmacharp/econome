@@ -14,7 +14,10 @@
 @import "components/c-goods-list.css";
 @import "components/c-fieldset.css";
 @import "components/c-macro.css";
+@import "components/c-figure.css";
+@import "components/c-details.css";
 @import "patterns/p-provenance.css";
+@import "patterns/p-type-emojis.css";
 @import "patterns/p-auto_line-height.css";
 @import "patterns/p-section_visibility-transitions.css";
 @import "layout/l-master_composition.css";

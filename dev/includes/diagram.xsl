@@ -309,6 +309,7 @@
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
 				<link rel="stylesheet" href="assets/css/components/c-goods-list.css"/>
+				<link rel="stylesheet" href="assets/css/components/c-figure.css"/>
 			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
