@@ -62,13 +62,6 @@ nav li {
 	margin-right: auto;
 }
 
-.prose p:only-of-type {
-	/* text-align: center; */
-	max-width: 45ch;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 :root {
 	/* --ColorBg: #fdfae8; */
 	/* --ColorLtBg: #ffffc5; */

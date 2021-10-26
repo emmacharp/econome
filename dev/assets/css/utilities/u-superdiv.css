@@ -40,7 +40,9 @@
 
 		.prose>*:only-child {
 			column-span: all;
-			--DivItemMaxWidth: 40ch;
+			max-width: 45ch;
+			margin-left: auto;
+			margin-right: auto;
 		}
 
 	/* Échaffaudage : propriétés et valeurs par défaut --------- */
