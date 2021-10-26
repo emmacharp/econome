@@ -42,60 +42,6 @@ mark {
 	background-color: var(--yellow);
 }
 
-main>section>header:before {
-	display: block;
-	font-size: 4em;
-	line-height: 1;
-	margin-bottom: calc(var(--Row) * 2);
-}
-
-main>section[type="observation"]>header:before {
-	filter: drop-shadow(0px 0px 60px yellow);
-}
-
-main>section[type="conclusion"]>header:before {
-	margin-left: -.75ch;
-}
-
-nav li[type="introduction"] a:before {
-	content: "🏁";
-}
-
-nav li[type="observation"] a:before,
-main>section[type="observation"]>header:before {
-	content: "💡";
-}
-
-nav li[type="conclusion"] a:before,
-main>section[type="conclusion"]>header:before {
-	content: "🍾";
-}
-
-nav li:not([type]) a:before,
-nav li[type="lecture"] a:before,
-main>section:not([type])>header:before,
-main>section[type="lecture"]>header:before {
-	content: "📖";
-}
-
-nav li[type="chaine"] a:before,
-main>section[type="chaine"]>header:before {
-	content: "🧮";
-}
-
-nav li[type="question"] a:before,
-main>section[type="question"]>header:before {
-	content: "✋";
-}
-
-nav a:before {
-	content: "";
-	display: inline-block;
-	width: 1.25rem;
-	height: 1.125rem;
-	margin-right: 0.5rem;
-}
-
 nav a svg {
 	display: none;
 }
@@ -319,71 +265,6 @@ main>section>div>article {
 
 .diagram.macro .available:hover svg {
 	color: var(--ColorLocal);
-}
-
-details summary  {
-	display: block;
-}
-
-details summary>:last-child:after {
-	content: "+";
-	margin-left: .5em;
-	font-weight: 800;
-	width: .5em;
-}
-details[open] summary>:last-child:after {
-	content: "-";
-}
-
-details summary *>* {
-	display: inline;
-}
-
-details * {
-	--ScaleLevel: var(--Short);
-	--LineHeightFactor: .75;
-}
-
-*+details {
-	margin-top: calc(var(--Row) * .5);
-}
-
-figcaption {
-	text-align: center;
-	color: var(--Color);
-	--ScaleLevel: var(--Short);
-	--FontWeight: 400;
-	position: relative;
-	transition-delay: 90ms;
-	margin-top: calc(var(--Row)* .5);
-}
-
-figure figcaption:before {
-	content: "i";
-	font-weight: 700;
-	color: var(--Color);
-	display: flex;
-	position: absolute;
-	margin: auto;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	align-items: center;
-	justify-content: center;
-	width: 1.5em;
-	height: 1.5em;
-	border-radius: 50%;
-	background-color: var(--ColorBgAlt);
-	transition-delay: inherit;
-}
-
-figure:hover figcaption:before {
-	opacity: 0;
-}
-
-figure:not(:hover) figcaption {
-	color: transparent;
 }
 
 .amount small {

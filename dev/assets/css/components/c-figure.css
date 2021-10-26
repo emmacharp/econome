@@ -1,0 +1,53 @@
+figure {
+	--Color: var(--ltr-brown);
+	color: var(--Color);
+	max-width: 100%;
+	box-sizing: border-box;
+	overflow: auto;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0;
+}
+
+figure figcaption {
+	text-align: center;
+	color: var(--Color);
+	--ScaleLevel: var(--Short);
+	--FontWeight: 400;
+	position: sticky;
+	transition-delay: 90ms;
+	margin-top: calc(var(--Row)* .5);
+	max-width: 98vw;
+	left: 0;
+	right: 0;
+}
+
+figure figcaption:before {
+	content: "i";
+	font-weight: 700;
+	color: var(--Color);
+	display: flex;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	align-items: center;
+	justify-content: center;
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 50%;
+	background-color: var(--ColorBgAlt);
+	transition-delay: inherit;
+}
+
+figure:hover figcaption:before {
+	opacity: 0;
+}
+
+figure:not(:hover) figcaption {
+	color: transparent;
+}
+
+
