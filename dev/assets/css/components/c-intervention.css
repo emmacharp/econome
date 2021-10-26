@@ -22,4 +22,9 @@
 	shape-outside:circle(70.96% at 45.44% 45.54%) padding-box;
 	padding: calc(var(--Row) * .5);
 	position: relative;
+	z-index: 1;
+}
+
+div .intervention>div {
+	overflow: hidden;
 }
