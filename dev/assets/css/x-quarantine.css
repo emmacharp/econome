@@ -86,23 +86,6 @@ nav li {
 	margin-right: auto;
 }
 
-.diagram>.goods-list {
-	min-width: calc(var(--Row) * 40);
-}
-
-.diagram>.goods-list h4>span {
-	position: sticky;
-	left: var(--Row);
-	right: var(--Row);
-}
-
-.diagram>.goods-list .available>div {
-	grid-row: 4;
-	grid-column: 1 / 99;
-	justify-content: center;
-	margin-top: calc(var(--Row) * 2);
-}
-
 :root {
 	/* --ColorBg: #fdfae8; */
 	/* --ColorLtBg: #ffffc5; */
@@ -156,14 +139,6 @@ main>section>div>article {
    --DivItemMaxWidth: 30ch;
 	/* --DivItemShrink: 0; */
 	--DivItemGrow: 1;
-}
-
-.diagram.macro .available:hover ~ * .worker .foreign svg {
-	color: var(--ColorForeign);
-}
-
-.diagram.macro .available:hover svg {
-	color: var(--ColorLocal);
 }
 
 .amount small {

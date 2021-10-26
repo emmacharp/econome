@@ -1,6 +1,7 @@
 .diagram.macro>div {
 	flex-wrap: nowrap;
 	position: relative;
+	min-width: calc(var(--Row) * 40);
 }
 
 .diagram.macro>div>section {
@@ -22,6 +23,12 @@
 	 pointer-events: none;
 	 margin-top: calc(var(--Row) * .5);
 	 margin-bottom: calc(var(--Row) * .5);
+}
+
+.diagram.macro h4>span {
+	position: sticky;
+	left: var(--Row);
+	right: var(--Row);
 }
 
 .diagram.macro section:not(:hover) span {
@@ -50,6 +57,21 @@
 	grid-row-start: 3;
 	order: 2;
 	grid-column: span var(--column-counter);
+}
+
+.diagram.macro .available>div {
+	grid-row: 4;
+	grid-column: 1 / 99; /* Nombre ridicule pour toujours aller jusqu'au bout. ne peut pas utiliser de GAP ! */
+	justify-content: center;
+	margin-top: calc(var(--Row) * 2);
+}
+
+.diagram.macro .available:hover ~ * .worker .foreign svg {
+	color: var(--ColorForeign);
+}
+
+.diagram.macro .available:hover svg {
+	color: var(--ColorLocal);
 }
 
 .diagram.macro .worker svg {
