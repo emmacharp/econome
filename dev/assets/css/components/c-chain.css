@@ -64,7 +64,7 @@
 	font-size: calc(var(--Row) / 2);
 	background-color: var(--ColorBg);
 	padding-left: calc(var(--Row) / 2);
-	font-weight: 600;
+	font-weight: 500;
 	white-space: nowrap;
 	z-index: 1;
 	position: relative;
