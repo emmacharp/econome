@@ -91,6 +91,7 @@ var getSiblings = function (elem) {
 						if (item.closest('li').classList.contains('is-active')) item.closest('li').classList.remove('is-active');
 						const activeAnchor = [...anchors].filter(anchor => { return anchor.hash == '#'+itemId })[0];
 						activeAnchor.closest('li').classList.add('is-active');
+						activeAnchor.scrollIntoView({block: "nearest", inline: "nearest"});
 						let activeParents = getParents(activeAnchor.closest('li').parentElement, 'li');
 						[...activeParents].forEach((parent)=> {
 							parent.classList.add('has-active');
