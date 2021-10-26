@@ -20,9 +20,9 @@ nav ul {
 	line-height: 1;
 }
 
-nav a,
 nav header {
-	padding: calc(var(--Row) * .25) var(--Row);
+	padding: calc(var(--Row));
+	margin-left: 2px;
 }
 
 nav header>*+* {
@@ -39,11 +39,18 @@ nav a {
 	box-sizing: border-box;
 	color: var(--ColorControls);
 	background-color: var(--ColorBgControls);
+	padding-left: 0;
 }
 
-nav svg {
-	fill: var(--ColorControls);
+nav li>a:before {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-size: calc(16px + .5vmin);
+	vertical-align: middle;
+	margin-right: .5ch;
 }
+
 
 nav header {
 	padding-top: calc(var(--Row) * 3);
@@ -114,6 +121,7 @@ nav li a:hover {
 		background-color: var(--ColorBg);
 		content: "Menu";
 	}
+	left: calc(16px + 2px + var(--Row) * .25);
 }
 
 .toggle-internal-nav::before {
@@ -150,22 +158,17 @@ nav li a:hover {
 		box-sizing: border-box;
 	}
 
-	nav a {
-		padding-left: calc(var(--Row) * .25);
-	}
-
-	nav a>svg {
-		width: 1.25rem;
-		height: 1.125rem;
-		margin-right: .5rem;
-	}
-
 	nav li+li {
 		border-top: 1px solid var(--ColorBg);
 	}
 
+	nav li>a:before {
+		height: calc(16px + var(--Row) * .75);
+	}
+
+	nav li>a:before,
 	.toggle-internal-nav:not(:checked)~nav {
-		width: calc(var(--Row) * 1.125);
+		width: calc(16px + var(--Row) * .75);
 	}
 }
 
@@ -190,10 +193,6 @@ nav li a:hover {
 		font-size: 0;
 		align-items: center;
 		justify-content: center;
-	}
-
-	nav a:before {
-		font-size: 16px;
 	}
 
 	nav li+li {
