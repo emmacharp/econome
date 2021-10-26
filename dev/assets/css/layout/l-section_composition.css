@@ -38,17 +38,20 @@
 	}
 }
 
-@media (max-height: 70ch) and (max-width: 80ch) {
+@media (max-height: 70ch), (max-width: 80ch) {
 	main>section>aside {
 		background-color: var(--ColorLtBg);
 		padding: calc(var(--Row) * .5);
 		top: calc(var(--Row) * .75);
+		border-radius: 16px;
+		justify-self: center;
 	}
 
 	main>section>aside>div {
 		margin-left: 0;
 		padding: 15px;
 		padding-left: 15px;
+		overflow: hidden;
 	}
 }
 
