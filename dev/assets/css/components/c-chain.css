@@ -170,14 +170,12 @@
 	width: max-content;
 }
 
-.chain aside .product>section {
-	padding: calc(var(--Row) / 2);
-}
-
 .chain aside .product>section[style] {
-	min-width: max(8ch, calc(15ch * var(--columns-counter)));
+	min-width: max(6ch, calc(3ch * var(--columns-counter)));
 }
-
+.chain aside .product>section+section {
+	margin-top: calc(var(--Row) * .5);
+}
 
 /* ------ DIAGRAMME HORIZONTAL ---- */
 	.chain>div {
@@ -186,11 +184,6 @@
 
 	.chain aside>.product {
 		flex-direction: column;
-	}
-
-	.chain .goods-list .product>section {
-		margin-right: calc(-1 * var(--Row) * 2);
-		padding-right: calc(var(--Row) * 1.5);
 	}
 
 /* ------ DIAGRAMME VERTICAL ---- */
