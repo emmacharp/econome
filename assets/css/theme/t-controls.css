@@ -61,6 +61,13 @@ input[class*="toggle-"] {
 	content: "✓";
 }
 
+[data-wiki].easter.is-read:not(:hover):after {
+	content: "🎉";
+	background-color: transparent;
+	box-shadow: initial;
+	border-color: transparent;
+}
+
 
 aside>details>*,
 [data-wiki]:after,

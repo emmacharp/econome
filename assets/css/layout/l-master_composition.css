@@ -52,17 +52,16 @@
 		margin: 0;
 	}
 
-	main>section:not(.is-active)>aside {
-		opacity: 0;
-		pointer-events: none;
-	}
-
 	main {
 		flex-grow: 1;
 	}
 }
 
 @media (orientation: portrait) {
+	html {
+		--TargetFontSize: 2.8vmin;
+	}
+
 	html, body, main { 
 		/* Contexte vertical nécessaire
 		pour assurer une hauteur de fenêtre
@@ -160,6 +159,7 @@
 		top: 0;
 		overflow-y: auto;
 		overflow-x: hidden;
+		z-index: 4;
 	}
 	
 	body>footer {

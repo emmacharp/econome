@@ -62,7 +62,7 @@ var getSiblings = function (elem) {
 			const { isIntersecting , target } = entry;
 			const itemId = target.getAttribute('id');
 			const invalidForms = target.querySelectorAll('form :invalid');
-			const anchorRef = target.querySelectorAll('h3');
+			const anchorRef = target.querySelectorAll('h3,h1');
 			const forms = target.querySelectorAll('form');
 			let elapsed;
 			let start;
@@ -81,7 +81,7 @@ var getSiblings = function (elem) {
 					if (item.classList.contains('is-visible')) item.classList.remove('is-visible');
 				});
 				target.classList.add('is-visible', 'is-active');
-				if (anchors.length && target.querySelector('h3') !== null && target.matches('[id]')) {
+				if (anchors.length && target.querySelector('h3,h1') !== null && target.matches('[id]')) {
 					anchors.forEach((item)=> {
 						let parentItems = getParents(item, 'li');
 						parentItems.forEach((parent)=> {
@@ -91,6 +91,7 @@ var getSiblings = function (elem) {
 						if (item.closest('li').classList.contains('is-active')) item.closest('li').classList.remove('is-active');
 						const activeAnchor = [...anchors].filter(anchor => { return anchor.hash == '#'+itemId })[0];
 						activeAnchor.closest('li').classList.add('is-active');
+						activeAnchor.scrollIntoView({block: "nearest", inline: "nearest"});
 						let activeParents = getParents(activeAnchor.closest('li').parentElement, 'li');
 						[...activeParents].forEach((parent)=> {
 							parent.classList.add('has-active');

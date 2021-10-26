@@ -5,15 +5,6 @@
 		row-gap: calc(var(--Row) * 2);
 	}
 
-	main>section>aside {
-		position: sticky;
-		bottom: 0;
-		margin-right: auto;
-		order: 1;
-		z-index: 4;
-		margin-left: 0;
-		justify-self: start;
-	}
 
 	main>section>header>h3,
   	main>section fieldset p {
@@ -22,11 +13,11 @@
 
 	main>section>header>p,
 	main>section>p {
-		max-width: 40ch;
+		max-width: 45ch;
 	}
 
-	main > section>aside {
-		max-width: 50ch;
+	main>section>aside {
+		max-width: 70ch;
 	}
 
 
@@ -36,90 +27,153 @@
 	main>section {
 		display: flex;
 		flex-direction: column;
+		padding-top: clamp(var(--Row), 7vmin, calc(var(--Row) * 2));
+		padding-bottom: clamp(var(--Row), 7vmin, calc(var(--Row) * 2));
 	}
 
 	main>section>* {
 		flex-shrink: 0;
+		padding-left: clamp(var(--Row), 7vmin, calc(var(--Row) * 2));
+		padding-right: clamp(var(--Row), 7vmin, calc(var(--Row) * 2));
 	}
 }
 
-
-@media (max-height: 40em) and (max-width: 50em) {
-	main>section>aside>details {
-		margin: 0;
-		width: 100%;
-		margin-top: var(--Row);
+@media (max-height: 70ch), (max-width: 80ch) {
+	main>section>aside {
+		background-color: var(--ColorLtBg);
+		padding: calc(var(--Row) * .5);
+		top: calc(var(--Row) * .75);
+		border-radius: 16px;
+		justify-self: center;
+		margin-left: calc(var(--Row) * .5);
+		margin-right: calc(var(--Row) * .5);
 	}
 
-	main>section>aside>details>summary~* {
-		position: initial;
-		top: initial;
+	main>section>aside>div {
+		overflow: hidden;
+	}
+
+	main>section>aside>svg {
+		margin-left: calc(-1 * var(--Row) * .25);
+		margin-top: calc(-1 * var(--Row) * .25);
 	}
 }
 
-@media (min-width: 80em) {
+@media (min-height: 70ch) and (min-width: 80ch) {
+	main>section>aside {
+		position: sticky;
+		bottom: 0;
+		margin-right: auto;
+		order: 1;
+		z-index: 2;
+		margin-left: 0;
+		justify-self: start;
+	}
 
-	main>section>*,
+	main>section>aside {
+		pointer-events: none;
+	}
+
+	main>section>aside>* {
+		pointer-events: all;
+	}
+
+	main>section>aside>svg {
+		margin: var(--Row);
+		margin-top: calc(var(--Row) * 1.5);
+		margin-left: calc(-1 * var(--Row) * .5);
+		background-color: var(--ColorLtBg);
+		border-radius: 50%;
+		box-shadow: 0px 2px 2px var(--ltst-primary);
+	}
+
+	main>section>aside:hover>svg {
+		border-right-color: transparent;
+		box-shadow: -1px 2px 1px var(--ltst-primary);
+	}
+
+	main>section>aside>div {
+		display: block;
+		background-color: var(--ColorLtBg);
+		padding: calc(var(--Row) * .5);
+		margin-left: 80px;
+		padding-left: 40px;
+		border-radius: 8px;
+		border-top-left-radius: 30px;
+		box-shadow: 0px 2px 3px var(--ltst-primary);
+	}
+
+	main>section>* aside:not(:only-of-type):first-of-type {
+		--MasterAlignment: right;
+	}
+
+	main>section>aside:not(:hover)>svg+* {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	main>section>aside:hover>svg+* {
+		transition-delay: 0ms;
+	}
+
+	main>section>aside:not(:hover)>svg+* {
+		transition-delay: 100ms;
+	}
+}
+
+@media (orientation: landscape) {
+	main {
+		padding: 0;
+	}
+
+	main>section>* {
+		padding-left: clamp(var(--Row), 4vmax, calc(var(--Row) * 4));
+		padding-right: clamp(var(--Row), 4vmax, calc(var(--Row) * 4));
+	}
+}
+
+@media (min-width: 70ch) {
+
 	main>section>header>*,
-	main>section form p	{
+	main>section form p {
 		margin-left: auto;
 		margin-right: auto;
 	}
 
 	main>section>header,
-	main>section form p,
+	main>section fieldset,
 	main>section>p {
 
 		text-align: center;
 	}
 
+	main>section>div,
 	main>section>header,
 	main>section>form,
 	main>section>p {
 		justify-self: center;
 	}
-	
-	main>section>aside {
-		bottom: calc(var(--Row) * 2);
-	}
 }
 
-@media (min-height: 50em) {
+@media (min-height: 30em) {
 	main>section {
 		align-content: center;
 	}
 }
 
-aside>details>* {
-	padding: calc(var(--Row) * .25) calc(var(--Row) * .5);
-	line-height: 1;
-	position: relative;
-}
 
-aside details summary+* {
-	position: absolute;
-	top: 100%;
-	right: 0;
-	padding: var(--Row);
-	margin-top: -5px; /* Masque le radius */
-	max-width: 100%;
-	min-width: 25ch;
-}
 
-details summary::marker {
-	font-size: .5em;
-	margin-right: 1em;
+main>section>.grille {
+	--DivItemGutter: calc(var(--Row) * 1);
+	justify-self: initial;
+	justify-content: space-between;
 }
-aside details[open] summary:after {
-	content: "";
-	right: -1px;
-	z-index: 1;
-	position: absolute;
-	top: 100%;
-	margin-top: -5px;
-	height: 10px;
-	background-color: inherit;
-	left: -1px;
+main>section>div>article {
+	
+	--DivItemBasis: calc((85ch - 100%) * 999);
+   --DivItemMaxWidth: 30ch;
+	/* --DivItemShrink: 0; */
+	--DivItemGrow: 1;
 }
 
 main>section>section div div {
@@ -130,37 +184,8 @@ main>section>section div>form {
 	flex-grow: 2;
 }
 
-aside details {
-	max-width: 100%;
-	margin-top: calc(-1 * var(--Row) * 2.325);
-}
-
-aside details[open] {
-	filter: drop-shadow(0px 1px 3px rgba(0,0,0,.1));
-}
-
 main>section>p:only-of-type {
 	margin-top: auto;
 	margin-bottom: auto;
 }
 
-main>section aside {
-	max-width: 50ch;
-}
-
-main>section>* aside:not(:only-of-type):first-of-type {
-	--MasterAlignment: right;
-}
-
-main>section>aside.intervention:not(:hover)>svg+* {
-	opacity: 0;
-	pointer-events: none;
-}
-
-main>section>aside.intervention:hover>svg+* {
-	transition-delay: 0ms;
-}
-
-main>section>aside.intervention:not(:hover)>svg+* {
-	transition-delay: 100ms;
-}

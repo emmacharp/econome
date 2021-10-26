@@ -1,0 +1,49 @@
+main>section>header:before {
+	display: block;
+	font-size: 4em;
+	line-height: 1;
+	margin-bottom: calc(var(--Row) * 2);
+}
+
+main>section[type="observation"]>header:before {
+	filter: drop-shadow(0px 0px 60px yellow);
+}
+
+@media (min-width: 70ch) { /* LIÉ À L'ADAPTATION l-section-composition.css */
+	main>section[type="conclusion"]>header:before {
+		margin-left: -.75ch;
+	}
+}
+
+nav li[type="introduction"] a:before {
+	content: "🏁";
+}
+
+nav li[type="observation"] a:before,
+main>section[type="observation"]>header:before {
+	content: "💡";
+}
+
+nav li[type="conclusion"] a:before,
+main>section[type="conclusion"]>header:before {
+	content: "🍾";
+}
+
+nav li:not([type]) a:before,
+nav li[type="lecture"] a:before,
+main>section:not([type])>header:before,
+main>section[type="lecture"]>header:before {
+	content: "📖";
+}
+
+nav li[type="chaine"] a:before,
+main>section[type="chaine"]>header:before {
+	content: "🧮";
+}
+
+nav li[type="question"] a:before,
+main>section[type="question"]>header:before {
+	content: "✋";
+}
+
+

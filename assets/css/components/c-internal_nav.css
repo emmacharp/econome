@@ -20,9 +20,9 @@ nav ul {
 	line-height: 1;
 }
 
-nav a,
 nav header {
-	padding: calc(var(--Row) * .25) var(--Row);
+	padding: calc(var(--Row));
+	margin-left: 2px;
 }
 
 nav header>*+* {
@@ -39,11 +39,17 @@ nav a {
 	box-sizing: border-box;
 	color: var(--ColorControls);
 	background-color: var(--ColorBgControls);
+	padding-left: 0;
 }
 
-nav svg {
-	fill: var(--ColorControls);
+nav li>a:before {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-size: calc(16px + .5vmin);
+	vertical-align: middle;
 }
+
 
 nav header {
 	padding-top: calc(var(--Row) * 3);
@@ -61,19 +67,6 @@ nav header strong {
 	margin-right: .25em;
 }
 
-
-nav li.is-complete>a:before {
-	background-image: none;
-	content: "✓";
-	font-size: calc(var(--Row) * .625);
-	line-height: 120%;
-	position: absolute;
-	color: var(--ColorControls);
-	text-indent: .06125em;
-	font-weight: 700;
-}
-
-
 nav li.is-complete>a {
 	--ColorBgControls: var(--ColorBgComplete);
 	--ColorControls: var(--ColorComplete);
@@ -83,48 +76,32 @@ nav li.is-complete>a>svg {
 	opacity: 0;
 }
 
-nav li li.is-incomplete>a {
+nav li.is-incomplete>a {
 	--ColorBgControls: var(--ColorBgIncomplete);
 	--ColorControls: var(--ColorIncomplete);
 }
 
-nav ul:not(:hover) li li.is-active>a,
-nav li li a:hover {
+nav li.is-active>a {
 	--ColorBgControls: var(--ColorBgActive);
 	--ColorControls: var(--ColorActive);
+	cursor: unset;
+}
+
+nav li:not(.is-active) a:hover {
+	--ColorBgControls: var(--ColorLtBg);
 }
 
 .toggle-internal-nav {
 	position: absolute;
 	-webkit-appearance: none;
 	appearance: none;
-	z-index: 4;
+	z-index: 5;
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
 	visibility: hidden;
 	top: calc(var(--Row) * .875);
-	left: var(--Row);
-}
-
-@media (min-height: 40em) and (min-width: 80em) {
-	.toggle-internal-nav {
-		position: fixed;
-	}
-	
-	.toggle-internal-nav::before {
-		margin-left: -.5rem;
-	} 
-}
-
-@media (min-height: 40em) and (min-width: 100em) {
-	.toggle-internal-nav::after {
-		content: "Menu";
-		font-weight: 900;
-		text-transform: uppercase;
-		font-size: 12px;
-		visibility: visible;
-	}
+	left: calc(16px + 2px + var(--Row) * .25);
 }
 
 .toggle-internal-nav::before {
@@ -151,6 +128,22 @@ nav li li a:hover {
 }
 
 @media (orientation: landscape) {
+	.toggle-internal-nav {
+		position: fixed;
+	}
+	
+	.toggle-internal-nav::after {
+		font-weight: 900;
+		text-transform: uppercase;
+		font-size: 12px;
+		visibility: visible;
+	}
+
+	.toggle-internal-nav:not(:checked):after {
+		background-color: var(--ColorBg);
+		content: "Menu";
+	}
+
 	nav {
 		width: 30ch;
 		flex-direction: column;
@@ -160,19 +153,23 @@ nav li li a:hover {
 		width: 30ch;
 		box-sizing: border-box;
 	}
-	
-	nav a {
-		padding-left: calc(var(--Row) * .25);
+
+	nav li {
+		border-top: 2px solid var(--ColorBg);
 	}
 
-	nav a>svg {
-		width: 1.25rem;
-		height: 1.125rem;
-		margin-right: .5rem;
+	.toggle-internal-nav:checked~nav li {
+		border-color: transparent;
 	}
 
+	nav li>a:before {
+		height: calc(16px + var(--Row) * .75);
+		margin-right: .5ch;
+	}
+
+	nav li>a:before,
 	.toggle-internal-nav:not(:checked)~nav {
-		width: calc(var(--Row) * 1.125);
+		width: calc(16px + var(--Row) * .75);
 	}
 }
 
@@ -195,13 +192,11 @@ nav li li a:hover {
 		height: calc(var(--Row) * 1.75);
 		padding: 0;
 		font-size: 0;
-		color: transparent;
 		align-items: center;
 		justify-content: center;
 	}
 
-	nav a>svg {
-		width: var(--Row);
-		height: var(--Row);
+	nav li+li {
+		border-left: 1px solid var(--ColorBg);
 	}
 }

@@ -5,8 +5,9 @@
 	flex-wrap: wrap-reverse;
 }
 
-.goods-list [data-code] {
+.goods-list div[data-code] {
 	display: contents;
+	color: var(--Color);
 	fill: currentColor;
 }
 
@@ -18,6 +19,7 @@
 	align-items: flex-end;
 	width: var(--Row);
 	height: var(--Row);
+	display: block;
 	flex-shrink: 0;
 	position: static;
 	padding: 2px;

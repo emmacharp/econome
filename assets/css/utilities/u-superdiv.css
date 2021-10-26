@@ -14,6 +14,7 @@
 		div.grille {
 			--DivItemBasis: calc((54ch - 100%) * 999);
 			--DivItemGrow: 1;
+			/* --DivItemShrink: 0; */
 			--DivItemGutter: var(--Row);
 			--DivItemMaxWidth: 100%;
 			width: auto;
@@ -39,7 +40,9 @@
 
 		.prose>*:only-child {
 			column-span: all;
-			--DivItemMaxWidth: 40ch;
+			max-width: 45ch;
+			margin-left: auto;
+			margin-right: auto;
 		}
 
 	/* Échaffaudage : propriétés et valeurs par défaut --------- */
@@ -63,6 +66,7 @@
 		/* Distribuer également l'espace
 			vacant parmis les enfants */
 			flex-grow: var(--DivItemGrow, 0);
+			flex-shrink: var(--DivItemShrink, 1);
 		}
 
 	/* 2. Rythme interne et gouttières ---- */
