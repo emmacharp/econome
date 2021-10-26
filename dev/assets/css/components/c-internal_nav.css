@@ -98,29 +98,6 @@ nav li a:hover {
 	justify-content: flex-start;
 	visibility: hidden;
 	top: calc(var(--Row) * .875);
-	left: var(--Row);
-}
-
-@media (orientation: landscape) {
-	.toggle-internal-nav {
-		position: fixed;
-	}
-	
-	.toggle-internal-nav::before {
-		margin-left: -.5rem;
-	} 
-
-	.toggle-internal-nav::after {
-		font-weight: 900;
-		text-transform: uppercase;
-		font-size: 12px;
-		visibility: visible;
-	}
-
-	.toggle-internal-nav:not(:checked):after {
-		background-color: var(--ColorBg);
-		content: "Menu";
-	}
 	left: calc(16px + 2px + var(--Row) * .25);
 }
 
@@ -148,6 +125,22 @@ nav li a:hover {
 }
 
 @media (orientation: landscape) {
+	.toggle-internal-nav {
+		position: fixed;
+	}
+	
+	.toggle-internal-nav::after {
+		font-weight: 900;
+		text-transform: uppercase;
+		font-size: 12px;
+		visibility: visible;
+	}
+
+	.toggle-internal-nav:not(:checked):after {
+		background-color: var(--ColorBg);
+		content: "Menu";
+	}
+
 	nav {
 		width: 30ch;
 		flex-direction: column;
