@@ -82,10 +82,14 @@ nav li.is-incomplete>a {
 	--ColorControls: var(--ColorIncomplete);
 }
 
-nav ul:not(:hover) li.is-active>a,
-nav li a:hover {
+nav li.is-active>a {
 	--ColorBgControls: var(--ColorBgActive);
 	--ColorControls: var(--ColorActive);
+	cursor: unset;
+}
+
+nav li:not(.is-active) a:hover {
+	--ColorBgControls: var(--ColorLtBg);
 }
 
 .toggle-internal-nav {
@@ -151,8 +155,8 @@ nav li a:hover {
 		box-sizing: border-box;
 	}
 
-	nav li+li {
-		border-top: 1px solid var(--ColorBg);
+	nav li {
+		border-top: 2px solid var(--ColorBg);
 	}
 
 	nav li>a:before {
