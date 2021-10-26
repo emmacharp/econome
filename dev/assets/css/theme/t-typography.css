@@ -58,6 +58,10 @@
 		--FontWeight: 500;
 	}
 
+	main>section aside p {
+		--FontWeight: 400;
+	}
+
 	p {
 		--FontWeight: 300;
 	}
