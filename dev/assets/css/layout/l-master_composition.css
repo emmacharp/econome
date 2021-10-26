@@ -63,6 +63,10 @@
 }
 
 @media (orientation: portrait) {
+	html {
+		--TargetFontSize: 2.8vmin;
+	}
+
 	html, body, main { 
 		/* Contexte vertical nécessaire
 		pour assurer une hauteur de fenêtre
