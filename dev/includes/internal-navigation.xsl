@@ -27,10 +27,6 @@
 			<li>
 				<xsl:apply-templates select="@*"/>
 				<a href="#{$id}">
-					<xsl:variable name="chosen-symbol">
-						<xsl:apply-templates select="." mode="symbol-chooser" />
-					</xsl:variable>
-					<xsl:apply-templates select="ext:node-set($svg-symbols)//svg:symbol[@id = $chosen-symbol]" />
 					<xsl:apply-templates select="header//*[name() = 'h2' or name() = 'h3']//text()" />
 				</a>
 			</li>
@@ -40,31 +36,12 @@
 			<li>
 				<xsl:apply-templates select="@*"/>
 				<a href="#{$id}">
-					<xsl:variable name="chosen-symbol">
-						<xsl:apply-templates select="." mode="symbol-chooser" />
-					</xsl:variable>
-					<xsl:apply-templates select="ext:node-set($svg-symbols)//svg:symbol[@id = $chosen-symbol]" />
 					<xsl:text>Introduction</xsl:text>
 				</a>
 			</li>
 
 		</xsl:if>
 	</xsl:template>
-	<xsl:template match="h2" mode="internal-navigation">
-		<xsl:variable name="id" select="concat('id-', count(preceding-sibling::*))"></xsl:variable>
-		<li>
-			<xsl:apply-templates select="@*"/>
-			<a href="#{$id}">
-					<xsl:variable name="chosen-symbol">
-						<xsl:apply-templates select="." mode="symbol-chooser" />
-					</xsl:variable>
-					<xsl:apply-templates select="ext:node-set($svg-symbols)//svg:symbol[@id = $chosen-symbol]" />
-				<xsl:apply-templates select="text()" />
-			</a>
-			<ul>
-				<xsl:apply-templates select="following-sibling::*[1][name() = 'section']" mode="internal-navigation"/>
-			</ul>
-		</li>
-	</xsl:template>
+
 
 </xsl:stylesheet>
