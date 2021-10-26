@@ -114,6 +114,7 @@ p [data-wiki]:after {
 
 [data-wiki] {
 	white-space: nowrap;
+	font-style: normal;
 }
 
 
