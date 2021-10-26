@@ -142,7 +142,7 @@
 	background-color: var(--ColorBg);
 }
 
-.chain svg+h4 {
+.chain *+h4 {
 	margin-top: calc(var(--Row) / 2);
 }
 
