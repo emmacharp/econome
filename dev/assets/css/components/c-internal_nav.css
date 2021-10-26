@@ -149,7 +149,7 @@ nav li a:hover {
 		width: 30ch;
 		box-sizing: border-box;
 	}
-	
+
 	nav a {
 		padding-left: calc(var(--Row) * .25);
 	}
@@ -158,6 +158,10 @@ nav li a:hover {
 		width: 1.25rem;
 		height: 1.125rem;
 		margin-right: .5rem;
+	}
+
+	nav li+li {
+		border-top: 1px solid var(--ColorBg);
 	}
 
 	.toggle-internal-nav:not(:checked)~nav {
@@ -184,9 +188,16 @@ nav li a:hover {
 		height: calc(var(--Row) * 1.75);
 		padding: 0;
 		font-size: 0;
-		color: transparent;
 		align-items: center;
 		justify-content: center;
+	}
+
+	nav a:before {
+		font-size: 16px;
+	}
+
+	nav li+li {
+		border-left: 1px solid var(--ColorBg);
 	}
 
 	nav a>svg {
