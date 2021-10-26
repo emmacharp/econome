@@ -17,25 +17,8 @@
 	--purple: #7a0098;
 }
 
-.username {
-	white-space: nowrap;
-}
-
-.sitename {
-	font-weight: 900;
-	text-transform: uppercase;
-	font-size: .78125em;
-	display: inline-block;
-	margin-left: .125em;
-}
-
 h1 span {
 	white-space: nowrap;
-}
-
-strong {
-	background-color: var(--ColorBgAlt);
-	font-weight: 500;
 }
 
 mark {

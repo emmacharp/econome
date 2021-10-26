@@ -2,3 +2,19 @@
 	cursor: not-allowed;
 	pointer-events: none;
 }
+
+p strong {
+	background-color: var(--ColorBgAlt);
+}
+
+.username {
+	white-space: nowrap;
+}
+
+.sitename {
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: .78125em;
+	display: inline-block;
+	margin-left: .125em;
+}
