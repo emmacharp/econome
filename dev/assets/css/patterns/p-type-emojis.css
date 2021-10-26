@@ -5,19 +5,14 @@ main>section>header:before {
 	margin-bottom: calc(var(--Row) * 2);
 }
 
-nav li>a:before {
-	display: inline-block;
-	width: 1.25rem;
-	height: 1.125rem;
-	margin-right: 0.5rem;
-}
-
 main>section[type="observation"]>header:before {
 	filter: drop-shadow(0px 0px 60px yellow);
 }
 
-main>section[type="conclusion"]>header:before {
-	margin-left: -.75ch;
+@media (min-width: 70ch) {
+	main>section[type="conclusion"]>header:before {
+		margin-left: -.75ch;
+	}
 }
 
 nav li[type="introduction"] a:before {
