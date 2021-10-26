@@ -10,8 +10,8 @@ figure {
 }
 
 figure figcaption {
+	--Color: var(--dk-primary);
 	text-align: center;
-	color: var(--Color);
 	--ScaleLevel: var(--Short);
 	--FontWeight: 400;
 	position: sticky;
@@ -49,5 +49,3 @@ figure:hover figcaption:before {
 figure:not(:hover) figcaption {
 	color: transparent;
 }
-
-
