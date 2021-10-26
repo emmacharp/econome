@@ -52,11 +52,6 @@
 		margin: 0;
 	}
 
-	main>section:not(.is-active)>aside {
-		opacity: 0;
-		pointer-events: none;
-	}
-
 	main {
 		flex-grow: 1;
 	}
