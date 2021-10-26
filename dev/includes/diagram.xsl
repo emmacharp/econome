@@ -107,7 +107,9 @@
 		<section class="{local-name()}">
 			<xsl:if test="$units">
 				<xsl:attribute name="style">
-					<xsl:value-of select="'--columns-counter: {$column-counter}'" />
+					<xsl:text>--columns-counter: </xsl:text>
+					<xsl:value-of select="$column-counter" />
+					<xsl:text>;</xsl:text>
 				</xsl:attribute>
 				<input type="checkbox" checked="" name="show-units" class="toggle-units" />
 				<xsl:if test="$subunits">
