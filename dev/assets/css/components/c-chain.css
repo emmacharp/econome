@@ -35,10 +35,6 @@
 	order: -1;
 }
 
-.chain .product h4 {
-	display: none;
-}
-
 .chain .amounts {
 	display: grid;
 	grid-template: 1fr / 1fr;
