@@ -198,9 +198,4 @@ nav li a:hover {
 	nav li+li {
 		border-left: 1px solid var(--ColorBg);
 	}
-
-	nav a>svg {
-		width: var(--Row);
-		height: var(--Row);
-	}
 }
