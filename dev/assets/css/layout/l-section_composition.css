@@ -5,15 +5,6 @@
 		row-gap: calc(var(--Row) * 2);
 	}
 
-	main>section>aside {
-		position: sticky;
-		bottom: 0;
-		margin-right: auto;
-		order: 1;
-		z-index: 4;
-		margin-left: 0;
-		justify-self: start;
-	}
 
 	main>section>header>h3,
   	main>section fieldset p {
@@ -26,7 +17,7 @@
 	}
 
 	main > section>aside {
-		max-width: 50ch;
+		max-width: 70ch;
 	}
 
 
@@ -40,6 +31,81 @@
 
 	main>section>* {
 		flex-shrink: 0;
+@media (max-height: 70ch) and (max-width: 80ch) {
+	main>section>aside {
+		background-color: var(--ColorLtBg);
+		padding: calc(var(--Row) * .5);
+		top: calc(var(--Row) * .75);
+	}
+
+	main>section>aside>div {
+		margin-left: 0;
+		padding: 15px;
+		padding-left: 15px;
+	}
+}
+
+@media (min-height: 70ch) and (min-width: 80ch) {
+	main>section>aside {
+		position: sticky;
+		bottom: 0;
+		margin-right: auto;
+		order: 1;
+		z-index: 4;
+		margin-left: 0;
+		justify-self: start;
+	}
+
+	main>section>aside {
+		pointer-events: none;
+	}
+
+	main>section>aside>* {
+		pointer-events: all;
+	}
+
+	main>section>aside>svg {
+		margin: var(--Row);
+		margin-top: calc(var(--Row) * 1.5);
+		margin-left: calc(-1 * var(--Row) * .5);
+		background-color: var(--ColorLtBg);
+		border-radius: 50%;
+		box-shadow: 0px 2px 2px var(--ltst-primary);
+	}
+
+	main>section>aside:hover>svg {
+		border-right-color: transparent;
+		box-shadow: -1px 2px 1px var(--ltst-primary);
+	}
+
+	main>section>aside>div {
+		display: block;
+		background-color: var(--ColorLtBg);
+		padding: calc(var(--Row) * .5);
+		margin-left: 80px;
+		padding-left: 40px;
+		border-radius: 8px;
+		border-top-left-radius: 30px;
+		box-shadow: 0px 2px 3px var(--ltst-primary);
+	}
+
+	main>section>* aside:not(:only-of-type):first-of-type {
+		--MasterAlignment: right;
+	}
+
+	main>section>aside:not(:hover)>svg+* {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	main>section>aside:hover>svg+* {
+		transition-delay: 0ms;
+	}
+
+	main>section>aside:not(:hover)>svg+* {
+		transition-delay: 100ms;
+	}
+}
 	}
 }
 
@@ -63,10 +129,6 @@
 	main>section>form,
 	main>section>p {
 		justify-self: center;
-	}
-	
-	main>section>aside {
-		bottom: calc(var(--Row) * 2);
 	}
 }
 
@@ -130,19 +192,3 @@ main>section>p:only-of-type {
 	margin-bottom: auto;
 }
 
-main>section>* aside:not(:only-of-type):first-of-type {
-	--MasterAlignment: right;
-}
-
-main>section>aside.intervention:not(:hover)>svg+* {
-	opacity: 0;
-	pointer-events: none;
-}
-
-main>section>aside.intervention:hover>svg+* {
-	transition-delay: 0ms;
-}
-
-main>section>aside.intervention:not(:hover)>svg+* {
-	transition-delay: 100ms;
-}
