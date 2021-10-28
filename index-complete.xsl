@@ -625,6 +625,14 @@ exclude-result-prefixes="ext msxsl svg math str">
 		</section>
 	</xsl:template>
 
+	<xsl:template match="h2" mode="main-content">
+		<h2>
+			<span>
+				<xsl:apply-templates />
+			</span>
+		</h2>
+	</xsl:template>
+
 	<xsl:template match="section/div[position() = last()][symbol[@data-parallax][not(preceding::symbol[@data-parallax])]]" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
