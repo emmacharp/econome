@@ -19,6 +19,7 @@
 		--dk-brown: #373409;
 		--blue: #2B46BD;
 		--lt-blue: #A0C5FF;
+		--tr-blue: #80F3FF4F;
 		--red: #FF0003;
 		--lt-red: #ffd9f0;
 		--dk-red: #721E42;
@@ -39,7 +40,7 @@
 		--ColorDk: var(--dk-primary);
 		--ColorBg: var(--lt-yellow);
 		--ColorLtBg: var(--beige);
-		--ColorBgAlt: var(--tr-purple);
+		--ColorBgAlt: var(--tr-blue);
 		--ColorLtBgAlt: var(--dk-beige);
 		--ColorLines: var(--ltst-primary);
 		--ColorLocal: var(--blue);
