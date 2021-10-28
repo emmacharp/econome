@@ -173,7 +173,7 @@ exclude-result-prefixes="ext msxsl">
 			</xsl:apply-templates>
 		</xsl:variable>
 		<xsl:if test="$counted-goods &gt; 0">
-			<span data-code="{code}" class="added amount" debug="{$counted-goods} {$rounded-percent} {$node-name} {/root/total/*[local-name() = $node-name]} {/root/donnees/*[local-name() = $node-name]} {*[local-name() = $node-name]} {$total} {$number} {$total-added} {$coefficient}">
+			<span data-code="{code}" class="added amount">
 				<span>
 					<xsl:value-of select="$final-amount" />
 				</span>
