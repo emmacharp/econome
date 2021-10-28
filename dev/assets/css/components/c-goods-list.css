@@ -25,6 +25,7 @@
 	padding: 2px;
 	margin: 0;
 	box-sizing: border-box;
+	fill: currentColor;
 }
 
 .goods-list .toggle-units:not(:checked)~div,
