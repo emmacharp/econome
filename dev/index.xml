@@ -9,7 +9,7 @@
 		<p>Acheter est une action économique.</p>
 		<div class="prose">
 			<p><b>Et comme toute autre action économique, nous devons aborder l'achat local en termes d'alternatives, de coûts et de bénéfices, de gagnants et de perdants.</b></p>
-			<p>Ni les campagnes publicitaires, slogans ou lignes de presse ne nous aident, nous, public de consommat.eur.rice.s, travailleu.r.se.s et citoyen.ne.s, à aborder l'action d'acheter localement de manière <i data-wiki="Rationalité" data-sections="4">rationnelle.</i> Pourquoi acheter local ? Certainement pas pour « faire rouler l'économie ».</p><p><b>Mais bon... nous nous emportons...</b></p>
+			<p>Ni les campagnes publicitaires, slogans ou lignes de presse ne nous aident, nous, public de consommateur.rices, travailleur.euses et citoyen.nes, à aborder l'action d'acheter localement de manière <i data-wiki="Rationalité" data-sections="4">rationnelle.</i> Pourquoi acheter local ? Certainement pas pour « faire rouler l'économie ».</p><p><b>Mais bon... nous nous emportons...</b></p>
 		</div>
 	</section>
 	<h2>Introduction</h2>
@@ -34,7 +34,7 @@
 			</aside>
 		</div>
 				<div class="prose">
-					<p>Nous sommes deux amis espérant faire de l’analyse économique un moyen d'informer nos décisions communes sans toutefois ne prescrire de marche à suivre. <strong>C'est à vous et nous, le public, de prendre les décisions.</strong></p>
+					<p>Nous sommes deux amis qui désirent utiliser la science économique pour expliquer les comportements et leurs conséquences possibles, sans juger des décision de tout à chacun. Vos et nos décisions nous appartiennent.</p>
 				</div>
 	</section>
 	<section type="question">
@@ -69,7 +69,7 @@
 			<h3>Avant de commencer...</h3>
 			<small>Merci d'être là Joey Joe Joe ! C'est un plaisir.</small>
 		</header>
-			<p>Une p'tite question avant de commencer. Selon vous, les achats suivants constituent-ils des achats locaux ?</p>
+			<p>P'tite question : selon vous, les achats suivants sont-ils locaux ?</p>
 		<form>
 			<fieldset>
 				<p>Une caisse de Heineken au dépanneur du coin ?</p>
@@ -135,7 +135,7 @@
 		</header>
 			<div class="prose">
 				<p><b>Humhum.</b> C'est l'été. Il faut beau, il fait chaud : vous avez soif, Joey Joe Joe. Et rien n’étanche cette soif comme votre bière générique préférée : La Pâpire.</p>
-				<p>Quand vous achetez une caisse de Pâpire, vous mettez en branle toute une chaîne d’<i data-wiki="Agent_économique">agents économiques</i> nécessaires à votre consommation.</p>
+				<p>Quand vous achetez une caisse de Pâpire, vous mettez en branle toute une chaîne d’<i data-wiki="Agent_économique">agents économiques</i> nécessaires à vous servir cette caisse.</p>
 			</div>
 			<aside class="intervention">
 				<symbol type="henri" class="cartoon_henri animated" />
@@ -161,7 +161,7 @@
 		</figure>
 		<div class="grille">
 			<article>
-				<h4>Vous, Joey Joe Joe</h4>
+				<h4>👤 Vous, Joey Joe Joe</h4>
 				<details>
 					<summary>
 						<p><b>... êtes assoiffé. Vous rêvez d’une bonne Pâpire, bien froide.</b></p>
@@ -170,7 +170,7 @@
 				</details>
 			</article>
 			<article>
-				<h4>Le dépanneur Commun</h4>
+				<h4>🏪 Le dépanneur Commun</h4>
 				<details>
 					<summary>
 						<p><b>... au coin de votre rue, détient toujours une quantité suffisante de Pâpire.</b></p>
@@ -179,7 +179,7 @@
 				</details>
 			</article>
 			<article>
-				<h4>Les Entrepôts Correct inc.</h4>
+				<h4>🚚 Les Entrepôts Correct inc.</h4>
 				<details>
 					<summary>
 						<p><b>reçoit, entrepose puis transporte plusieurs palettes de Pâpire.</b></p>
@@ -188,7 +188,7 @@
 				</details>
 			</article>
 			<article>
-				<h4>La brasserie Moyenne</h4>
+				<h4>🏭 La brasserie Moyenne</h4>
 				<details>
 					<summary>
 						<p><b>brasse La Pâpire à votre grand plaisir.</b></p>
@@ -200,7 +200,7 @@
 		<p>La chaîne économique rend votre achat possible.</p>
 		<div class="prose">
 			<p><b>C’est toute la valeur que vous octroyez à votre Pâpire qui y est ajoutée. La <i data-wiki="Valeur_ajoutée" data-sections="1">valeur ajoutée</i> est centrale à notre exposé.</b></p>
-			<p> C'est grâce à elle que vous pourrez aborder <i data-wiki="Rationalité_économique">rationnellement</i> votre action d'acheter localement... ou pas. La valeur ajoutée représente la trace économique de chacun des agents de la chaîne. Nous pouvons évaluer quelle part de votre <i data-wiki="Utilité_(économie)">satisfaction</i> repose sur quelles épaules et beaucoup plus encore.</p>
+			<p> C'est grâce à elle que vous pourrez aborder rationnellement votre action d'acheter localement... ou pas. La valeur ajoutée représente la trace économique de chacun des agents de la chaîne. Nous pouvons évaluer quelle part de votre <i data-wiki="Utilité_(économie)">satisfaction</i> repose sur quelles épaules et beaucoup plus encore.</p>
 		</div>
 		<aside class="intervention">
 			<symbol type="henri" class="cartoon_henri animated" />
@@ -238,7 +238,7 @@
 				<product type="beer" name="La Pâpire" complete="" value="100%" />
 				<agent type="retailer" name="Dépanneur Commun" added="1.80" goods="" />
 				<agent type="manufacturer" name="Entrepôts Correct" added="0.62" goods="" />
-				<agent type="transformer" name="Brasserie Moyenne" added="7.48" goods="" />
+				<agent type="transformer" name="Brasserie Moyenne" added="7.58" goods="" />
 			</diagram>
 			<figcaption>Répartition de 10 $ de valeur ajoutée à travers la chaîne. Données de StatCan (2016).</figcaption>
 		</figure>
@@ -261,7 +261,7 @@
 			<diagram type="chain">
 				<agent type="consumer" name="Joey Joe Joe" paid="10" />
 				<product type="beer" name="La Pâpire" complete="" value="100%" />
-				<agent type="retailer" name="Dépanneur Commun" bought="0.66" value="1.14" goods="" />
+				<agent type="retailer" name="Dépanneur Commun" bought="0.66" value="1.14" goods="subunits" />
 				<agent type="manufacturer" name="Entrepôts Correct" value="0.39" bought="0.23" goods="" />
 				<agent type="transformer" name="Brasserie Moyenne" value="4.96" bought="2.52" goods="" />
 			</diagram>
@@ -339,7 +339,7 @@
 		<figure>
 			<diagram type="chain">
 				<agent type="consumer" name="Joey Joe Joe" paid="10" />
-				<product type="beer" name="La Locale ?" complete="" />
+				<product type="beer" name="La Locale ?" complete="" value="100%" />
 				<agent type="retailer" name="Dépanneur Commun" bought="0.66" value="1.14" goods="subunits" />
 				<agent type="manufacturer" name="Entrepôts Correct" value="0.39" bought="0.23" goods="subunits" />
 				<agent type="transformer" name="Brasserie Moyenne" value="4.96" local="1.30" foreign="1.22" goods="subunits" />
@@ -348,7 +348,7 @@
 		</figure>
 		<div class="prose">
 
-			<p><b>Avons-nous suffisament de travailleu.r.ses locaux, comme vous et nous Joey Joe Joe, pour supporter la chaîne complète de notre Locale ? Voilà une question pertinente à se poser ! </b></p>
+			<p><b>Avons-nous suffisament de travailleur.euses locaux, comme vous et nous Joey Joe Joe, pour supporter la chaîne complète de notre Locale ? Voilà une question pertinente à se poser ! </b></p>
 			<p>Car en économie, tout est question de ressources. Des ressources qui sont rares et peuvent être allouées à différents usages.</p>
 
 			<p>Voilà pourquoi notre chaîne de production de Locale ne peut être analysée de manière isolée. <strong>La main-d'œuvre allouée à sa production ne peut plus dès lors être allouée ailleurs.</strong></p>
@@ -386,16 +386,16 @@
 		</div>
 		<figure>
 			<diagram type="macro"></diagram>
-			<figcaption>Travailleu.r.ses et production macroéconomique. Trop peu de main-d'œuvre locale et disponible pour tout produire. Données StatCan (2019)</figcaption>
+			<figcaption>Travailleur.euses et production macroéconomique. Trop peu de main-d'œuvre locale et disponible pour tout produire. Données StatCan (2019)</figcaption>
 		</figure>
 		<div class="prose">
-			<p><b>La pénurie de main-d’œuvre locale implique qu’on doive la soutirer d’autres entreprises voire d'autres industries qui perpétueront à leur tour le cycle de pénurie.</b></p>
+			<p><b>La rareté de la main-d’œuvre locale implique qu’on doive la soutirer d’autres entreprises voire d'autres industries qui perpétueront à leur tour le cycle de rareté.</b></p>
 			<p>Une hausse substantielle du niveau général des prix en est une conséquence directe. Certains appelleraient cela « <i data-wiki="Inflation">inflation</i> ». </p>
 		</div>
 		<aside class="intervention">
 			<symbol type="henri" class="cartoon_henri animated" />
 			<div>
-				<p>Ce contexte de pénurie rend nos concitoyens travailleurs d'autant plus précieux. Il nous faut bien choisir comment les utiliser pour en profiter pleinement !</p>
+				<p>Ce contexte de rareté permet enfin de faire comprendre à quel point les travailleurs sont une ressource précieuse. Il est dans l’intérêt commun de leur permettre d’exprimer pleinement leur potentiel !</p>
 			</div>
 		</aside>
 	</section>
@@ -431,7 +431,7 @@
 		</header>
 		<div class="grille">
 			<article>
-				<h4>Enrichir les agents locaux</h4>
+				<h4>💰 Enrichir les agents locaux</h4>
 				<details>
 					<summary>
 						<p><b>Les entreprises locales et leurs investisseur.e.s en bénéficieront particulièrement.</b></p>
@@ -440,7 +440,7 @@
 				</details>
 			</article>
 			<article>
-				<h4>Diminuer l’empreinte écologique</h4>
+				<h4>🌱 Diminuer l’empreinte écologique</h4>
 				<details>
 					<summary>
 						<p><b>L’écosystème environnemental et les citoyen.ne.s en bénéficieront particulièrement.</b></p>
@@ -449,21 +449,21 @@
 				</details>
 			</article>
 			<article>
-				<h4>Créer des emplois</h4>
+				<h4>💪🏾 Créer des emplois</h4>
 				<details>
 					<summary>
-						<p><b>L’État et les travailleur.se.s en bénéficieront particulièrement.</b></p>
+						<p><b>L’État et les travailleur.euses en bénéficieront particulièrement.</b></p>
 					</summary>
 					<p>Cet objectif repose aussi sur la production de la valeur ajoutée. Il demande qu’on choisisse les biens locaux étant les plus intensifs en termes de main-d’œuvre. Une usine de voitures Tesla entièrement robotisée s’installant à Pointe-aux-Trembles ne contribuera pas à l’atteinte de votre objectif. Ceci dit, considérant le marché du travail actuel, il serait mal-avisé de maintenir cet objectif en priorité.</p>
 				</details>
 			</article>
 			<article>
-				<h4>Augmenter la productivité</h4>
+				<h4>📈 Augmenter la productivité</h4>
 				<details>
 					<summary>
 						<p><b>L’État et les grandes entreprises en bénéficieront particulièrement.</b></p>
 					</summary>
-					<p>Toujours en termes de production de la valeur ajoutée, mais cette fois-ci, il serait très certainement bénéfique d’implanter une usine Tesla, entièrement automatisée. La quantité de valeur ajoutée par un seul travailleur Tesla n’est sans commune mesure à la valeur ajoutée par un travailleur des champs. Créer des emplois et augmenter la productivité ne font généralement pas bon ménage.</p>
+					<p>Toujours en termes de production de la valeur ajoutée, mais cette fois-ci, il serait très certainement bénéfique d’implanter une usine Tesla, entièrement automatisée. La quantité de valeur ajoutée par une seule travailleuse Tesla n’est sans commune mesure à la valeur ajoutée par un travailleur des champs. Créer des emplois et augmenter la productivité ne font généralement pas bon ménage.</p>
 				</details>
 			</article>
 		</div>
@@ -510,7 +510,7 @@
 		<div class="prose">
 			<p><b>Votre rôle à vous, pour la suite, c’est de poser les bonnes questions et en exiger les bonnes réponses.</b></p>
 			<p>Demandez plus de vos représentants, de vos élus, de vos journalistes ! Nous ne pouvons nous contenter de « faire rouler l'économie » ou « d'encourager les entreprises locales ». Nous devons faire des choix. Si nous ne décidons pas ensemble vers où l'économie roule-t-elle et quel type d'entreprises nous voulons encourager, d'autres intéressés le feront pour nous. </p>
-			<p>Et il n'est pas dit que leurs intérêts seront alignés aux nôtres, le public, en tant que consommat.eu.rices, travailleu.r.ses et citoyen.ne.s.</p>
+			<p>Et il n'est pas dit que leurs intérêts seront alignés aux nôtres, le public, en tant que consommat.eu.rices, travailleur.euses et citoyen.nes.</p>
 		</div>
 		<p>Achetons local pour les bonnes raisons.<br />
 			<b>Soyons économes.</b></p>
