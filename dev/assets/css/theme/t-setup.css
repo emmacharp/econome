@@ -3,7 +3,7 @@
 /* Appliquer les styles typographiques de base */
 	html { 
 		line-height: var(--RowFactor, 1.67125);
-		font-size: var(--FontSize, clamp(var(--MinFontSize, 13px), var(--TargetFontSize, 1.2vw), var(--MaxFontSize, 20px)));
+		font-size: var(--FontSize, clamp(var(--MinFontSize, 15px), var(--TargetFontSize, 1.2vw), var(--MaxFontSize, 20px)));
 		color: var(--Color, initial); }
 
 /* Contexte du corps de la page */
