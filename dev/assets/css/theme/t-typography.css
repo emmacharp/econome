@@ -62,7 +62,7 @@
 		--FontWeight: 400;
 	}
 
-	p {
+	p, ul {
 		--FontWeight: 300;
 	}
 
