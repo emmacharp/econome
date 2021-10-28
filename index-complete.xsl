@@ -116,10 +116,8 @@ exclude-result-prefixes="ext msxsl svg math str">
 		</xsl:template>
 
 		<xsl:template name="scripts">
-			<script src="assets/js/htmx.min.js" defer="defer"></script>
-			<script src="assets/js/purify.min.js" defer="defer"></script>
-			<script src="assets/js/main.js" defer="defer"></script>
-			<link rel="stylesheet" href="assets/css/x-quarantine.css"/>
+			<script src="assets/js/libraries.min.js"></script>
+			<script src="assets/js/main.js"></script>
 		</xsl:template>
 
 	<xsl:template match="root" mode="body" name="body">
