@@ -3,153 +3,80 @@
 
 // Necessary DOM Elements
 
-	const sections = document.querySelectorAll('main>section');
+	const sections = document.querySelectorAll('main>section[id]');
 	const anchors = document.querySelectorAll('nav a');
-	const complementaryLinks = document.querySelectorAll('[data-wiki], .trigger-goods-list');
+	const complementaryLinks = document.querySelectorAll('[data-wiki]');
+	const username = document.querySelector('#nom');
+
 	const wikiViewer = document.querySelector('#wikiViewer');
 	const wikiDump = document.querySelector('#wikiDump');
 	const wikiCanonical = document.querySelector('#wikiCanonical');
 	const wiki = document.createElement('section');
-	const username = document.querySelector('#nom');
 
 	if (wikiDump) wikiDump.appendChild(wiki);
 
-// Get Parents helper function
-	// https://gomakethings.com/how-to-get-all-parent-elements-with-vanilla-javascript/
-var getParents = function (elem, selector) {
-	// Set up a parent array
-	var parents = [];
-
-	// Push each parent element to the array
-	for ( ; elem && elem !== document; elem = elem.parentNode ) {
-		if (selector) {
-			if (elem.matches(selector)) {
-				parents.push(elem);
-			}
-			continue;
-		}
-		parents.push(elem);
-	}
-
-	// Return our parent array
-	return parents;
-
-};
-
-// Get Siblings Helper Function
-var getSiblings = function (elem) {
-
-	// Setup siblings array and get the first sibling
-	var siblings = [];
-	var sibling = elem.parentNode.firstChild;
-
-	// Loop through each sibling and push to the array
-	while (sibling) {
-		if (sibling.nodeType === 1 && sibling !== elem) {
-			siblings.push(sibling);
-		}
-		sibling = sibling.nextSibling
-	}
-
-	return siblings;
-
-};
-
 // Sections Observer with Binding to Internal Navigation Anchors Function
-	let isLeaving = false; //https://www.smashingmagazine.com/2018/01/deferring-lazy-loading-intersection-observer-api/
 	const onSectionObserved = (items, observer) => {
 		items.forEach((entry) => {
 			const { isIntersecting , target } = entry;
 			const itemId = target.getAttribute('id');
 			const invalidForms = target.querySelectorAll('form :invalid');
-			const anchorRef = target.querySelectorAll('h3,h1');
+			const anchor = [...anchors].filter(anchor => anchor.hash === '#'+itemId)[0];
 			const forms = target.querySelectorAll('form');
 			let elapsed;
 			let start;
 			let time = target.getAttribute('data-needed-time');
 			
 			if (isIntersecting) {
-				isLeaving = true;
+				// Activate Section and Anchor
 				target.classList.remove('is-invisible');
-				time = target.getAttribute('data-needed-time');
+				target.classList.add('is-active', 'is-visible');
+
+				anchor?.closest('li').classList.add('is-active');
+				anchor?.scrollIntoView({block: "nearest", inline: "nearest"});
+
+				// Time
 				if (time > 0) {
 					start = new Date().getTime();
 					target.setAttribute('data-start-time', start);
 				}
-				sections.forEach((item)=> {
-					if (item.classList.contains('is-active')) item.classList.remove('is-active');
-					if (item.classList.contains('is-visible')) item.classList.remove('is-visible');
-				});
-				target.classList.add('is-visible', 'is-active');
-				if (anchors.length && target.querySelector('h3,h1') !== null && target.matches('[id]')) {
-					anchors.forEach((item)=> {
-						let parentItems = getParents(item, 'li');
-						parentItems.forEach((parent)=> {
-							if (parent.classList.contains('has-active')) parent.classList.remove('has-active');
-						});
 
-						if (item.closest('li').classList.contains('is-active')) item.closest('li').classList.remove('is-active');
-						const activeAnchor = [...anchors].filter(anchor => { return anchor.hash == '#'+itemId })[0];
-						activeAnchor.closest('li').classList.add('is-active');
-						activeAnchor.scrollIntoView({block: "nearest", inline: "nearest"});
-						let activeParents = getParents(activeAnchor.closest('li').parentElement, 'li');
-						[...activeParents].forEach((parent)=> {
-							parent.classList.add('has-active');
-						});
-					});
-				}
-			} else if (isLeaving) {
-				isLeaving = false;
-				target.classList.remove('is-visible');
+			} else if (target.classList.contains('is-visible')) {
+				// Deactivate Section
+				target.classList.remove('is-active', 'is-visible');
 				target.classList.add('is-invisible');
-				if (time > 0) {
-					start = target.getAttribute('data-start-time') || new Date().getTime();
-					let now = new Date().getTime();
-					elapsed = now - start;
-					time = time - elapsed;
-					target.setAttribute('data-needed-time', time);
-					if (time < 0) {
-						target.classList.add('is-read');
-					} else {
-						target.classList.add('is-incomplete');
-					}
-				}
-				
-				if (forms.length > 0 && invalidForms.length == 0) {
-					target.classList.add('is-answered');
-				} else {
-					target.classList.add('is-incomplete');
-				}
 
-				if (target.matches('.is-incomplete.is-read') && 
-					 (forms.length == 0 || (forms.length > 0 && invalidForms.length == 0))) {
-					target.classList.remove('is-incomplete', 'is-read', 'is-answered');
-					target.classList.add('is-complete');
-				}
-
-				if (anchorRef.length > 0) {
-					const activeAnchor = [...anchors].filter(anchor => { return anchor.hash == '#'+itemId })[0];
-					const activeSectionClassList = target.classList;
-					let activeParents = getParents(activeAnchor.closest('li').parentElement, 'li');
-					activeAnchor.closest('li').className = activeSectionClassList;
-					if (target.tagName !== 'h2') {
-						const activeAnchorSiblings = getSiblings(activeAnchor.closest('li'));
-						const completedSiblings = activeAnchorSiblings.filter(sibling => { return sibling.matches('.is-complete'); });
-						if (target.matches('.is-complete') && completedSiblings.length === activeAnchorSiblings.length) {
-							[...activeParents].forEach((parent)=> {
-								parent.classList.add('is-complete');
-							});
-
+				if(!target.matches('.is-complete')) {
+					if (time > 0) {
+						start = target.getAttribute('data-start-time') || new Date().getTime();
+						let now = new Date().getTime();
+						elapsed = now - start;
+						time = time - elapsed;
+						target.setAttribute('data-needed-time', time);
+						if (time < 0) {
+							target.classList.add('is-read');
 						} else {
-							[...activeParents].forEach((parent)=> {
-								parent.classList.add('is-incomplete');
-							});
+							target.classList.add('is-incomplete');
 						}
 					}
 
+					if (forms.length > 0 && invalidForms.length == 0) {
+						target.classList.add('is-answered');
+					} else {
+						target.classList.add('is-incomplete');
+					}
+
+					if (target.matches('.is-incomplete.is-read') && 
+						(forms.length == 0 || (forms.length > 0 && invalidForms.length == 0))) {
+						target.classList.remove('is-incomplete', 'is-read', 'is-answered');
+						target.classList.add('is-complete');
+					}
 				}
 
-
+				if (anchor !== undefined) {
+					const activeSectionClassList = target.classList;
+					anchor.closest('li').className = activeSectionClassList;
+				}
 			}
 		});
 	}
@@ -209,7 +136,6 @@ const fetchWikiContent = (event) => {
 
 
 // Init All
-
 window.addEventListener('DOMContentLoaded', function() {
 
 	// Sections Observer
@@ -222,15 +148,14 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 	// Activate wiki integration
-	// complementaryLinks.forEach((item) => {
-		document.body.addEventListener('click', function(event) {
-			const clickTarget = event.target;
+	document.body.addEventListener('click', function(event) {
+		const clickTarget = event.target;
 
-			if (clickTarget.matches('[data-wiki]') ||  clickTarget.matches('.trigger-goods-list')) event.target.classList.add('is-read');
-			if (event.target.matches('[data-wiki]')) fetchWikiContent(event);
-		});
-	// });
+		if (clickTarget.matches('[data-wiki]')) event.target.classList.add('is-read');
+		if (event.target.matches('[data-wiki]')) fetchWikiContent(event);
+	});
 
+	// Let users navigate through wiki links.
 	if (wikiDump) {
 		wikiDump.addEventListener('click', function(event) {
 			let wikiLink = event.target.closest('a[href^="/wiki"]');
@@ -244,8 +169,10 @@ window.addEventListener('DOMContentLoaded', function() {
 			wikiViewer.classList.remove('is-visible');
 		});
 	}
+
 	// Customizing username
 	if (username) {
+		// Change all existing usernames
 		document.querySelector('#nom').addEventListener('change', function(event) {
 			const	usernameInstances = document.querySelectorAll('.username');
 			const customUsername = event.target.value || event.target.getAttribute('placeholder');
