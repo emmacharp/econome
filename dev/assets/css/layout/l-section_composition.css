@@ -5,6 +5,9 @@
 		row-gap: calc(var(--Row) * 2);
 	}
 
+	main>section>* {
+		margin-top: 0;
+	}
 
 	main>section>header>h3,
   	main>section fieldset p {
