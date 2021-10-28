@@ -190,7 +190,7 @@ exclude-result-prefixes="ext msxsl">
 		<xsl:param name="code" select="code" />
 		<xsl:if test="$square-total &gt; 0">
 			<div data-code="{$code}">
-				<xsl:if test="$percentage &lt; 0.1">
+				<xsl:if test="$percentage &lt; 1">
 					<xsl:attribute name="class">
 						<xsl:text>subunit</xsl:text>
 					</xsl:attribute>
