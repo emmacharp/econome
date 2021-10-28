@@ -109,6 +109,10 @@
 		padding-right: var(--Row);
 		box-sizing: border-box;
 	}
+
+	main>section>figure {
+		padding: 0;
+	}
 	
 	body>nav {
 		bottom: 0;
