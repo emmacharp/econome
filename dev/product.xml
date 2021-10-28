@@ -2112,7 +2112,7 @@
     <depanneur>878</depanneur>
     <transport>233</transport>
   </produit>
-  <produit>
+  <produit type="ajout">
     <code>PRM100000</code>
     <titre>Impôts sur les produits</titre>
     <classe>Impôts sur les produits</classe>
