@@ -43,4 +43,12 @@
 		</section>
 	</xsl:template>
 
+	<xsl:template match="h2" mode="main-content">
+		<h2>
+			<span>
+				<xsl:apply-templates />
+			</span>
+		</h2>
+	</xsl:template>
+
 </xsl:stylesheet>
