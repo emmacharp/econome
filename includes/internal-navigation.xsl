@@ -22,24 +22,21 @@
 		</nav>
 	</xsl:template>
 	<xsl:template match="section" mode="internal-navigation">
-		<xsl:if test=".//h3">
-			<xsl:variable name="id" select="concat('id-', count(preceding-sibling::*))"></xsl:variable>
+		<xsl:if test=".//h3 or .//h1">
+			<xsl:variable name="id" select="concat('id-', count(preceding-sibling::*[.//h1 or .//h3]))" />
 			<li>
 				<xsl:apply-templates select="@*"/>
 				<a href="#{$id}">
-					<xsl:apply-templates select="header//*[name() = 'h2' or name() = 'h3']//text()" />
+					<xsl:choose>
+						<xsl:when test=".//h1">
+							<xsl:text>Introduction</xsl:text>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:apply-templates select="header//*[name() = 'h2' or name() = 'h3']//text()" />
+						</xsl:otherwise>
+					</xsl:choose>
 				</a>
 			</li>
-		</xsl:if>
-		<xsl:if test=".//h1">
-			<xsl:variable name="id" select="concat('id-', count(preceding-sibling::*))"></xsl:variable>
-			<li>
-				<xsl:apply-templates select="@*"/>
-				<a href="#{$id}">
-					<xsl:text>Introduction</xsl:text>
-				</a>
-			</li>
-
 		</xsl:if>
 	</xsl:template>
 

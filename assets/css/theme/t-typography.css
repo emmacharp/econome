@@ -22,7 +22,7 @@
 
 /* Styles typographiques particuliers -----------------------  */
 
-  	main>section form p	{
+  	main>section form p {
 		--ScaleLevel: var(--Tall);
 	}
 
@@ -58,11 +58,7 @@
 		--FontWeight: 500;
 	}
 
-	main>section aside p {
-		--FontWeight: 400;
-	}
-
-	p {
+	p, ul {
 		--FontWeight: 300;
 	}
 

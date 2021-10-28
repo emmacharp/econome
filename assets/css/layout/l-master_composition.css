@@ -109,6 +109,10 @@
 		padding-right: var(--Row);
 		box-sizing: border-box;
 	}
+
+	main>section>figure {
+		padding: 0;
+	}
 	
 	body>nav {
 		bottom: 0;
@@ -167,5 +171,6 @@
 		padding-left: calc(var(--Row) * 4);
 		flex: 0 0 100%;
 		box-sizing: border-box;
+		text-align: center;
 	}
 }

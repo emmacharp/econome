@@ -14,7 +14,8 @@ fieldset:valid,
 	--ColorControls: var(--ColorComplete);
 }
 
-.is-read fieldset:invalid,
+.is-read fieldset:invalid [type=radio]:not(:checked),
+.is-read fieldset:invalid [type=text]:placeholder-shown,
 .is-read [data-wiki]:not(.is-read) {
 	--ColorBgControls: var(--ColorBgIncomplete);
 }

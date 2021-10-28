@@ -28,7 +28,7 @@
 	<xsl:template match="*" mode="main-content"/>
 	<xsl:template match="section" mode="main-content">
 		<xsl:apply-templates select="." mode="include-once"/>
-		<xsl:variable name="id" select="concat('id-', count(preceding-sibling::*))"></xsl:variable>
+		<xsl:variable name="id" select="concat('id-', count(preceding-sibling::*[.//h3 or .//h1]))" />
 		<xsl:variable name="wordcount" select="string-length(normalize-space(.)) - string-length(translate(normalize-space(.),' ','')) +1"/>
 		<xsl:variable name="needed-time" select="number($wordcount) div 1000 * 60000"/>
 		<section data-wordcount="{$wordcount}" data-needed-time="{$needed-time}" style="--needed-time: {$needed-time};">
@@ -41,21 +41,6 @@
 			<xsl:apply-templates select=".//aside" mode="include-once"/>
 			<xsl:apply-templates/>
 		</section>
-	</xsl:template>
-
-	<xsl:template match="h2" mode="main-content">
-		<xsl:variable name="id" select="concat('id-', count(preceding-sibling::*))"></xsl:variable>
-		<h2 id="{$id}">
-			<span>
-				<xsl:apply-templates />
-			</span>
-		</h2>
-	</xsl:template>
-
-	<xsl:template match="title" mode="main-content">
-		<small>
-			<xsl:apply-templates />
-		</small>
 	</xsl:template>
 
 </xsl:stylesheet>

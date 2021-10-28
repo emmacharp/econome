@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 main>section>header:before {
 	display: block;
 	font-size: 4em;

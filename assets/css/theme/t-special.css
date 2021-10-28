@@ -5,7 +5,10 @@
 
 p strong {
 	background-color: var(--ColorBgAlt);
-}
+	box-shadow: 0 1px 0 2px var(--ColorBgAlt);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+ }
 
 .username {
 	white-space: nowrap;
