@@ -155,8 +155,14 @@
 							</xsl:apply-templates>
 						</xsl:when>
 						<xsl:when test="local-name() = 'added'">
-							<xsl:apply-templates select="ext:node-set($file)//produit[generate-id() = generate-id(key('class-aggregate', classe)) or local-name() = 'depense' or local-name() = 'ajout']" mode="class-item">
+							<xsl:apply-templates select="ext:node-set($file)//produit[generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
 								<xsl:with-param name="node-name" select="$nodes" />
+								<xsl:with-param name="relative" select="not($is-transformer)" />
+								<xsl:with-param name="subunits" select="$subunits" />
+								<xsl:with-param name="total-dollars" select="." />
+							</xsl:apply-templates>
+							<xsl:apply-templates select="ext:node-set($file)//produit[@type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
+								<xsl:with-param name="node-name" select="'ajout'" />
 								<xsl:with-param name="relative" select="not($is-transformer)" />
 								<xsl:with-param name="subunits" select="$subunits" />
 								<xsl:with-param name="total-dollars" select="." />
@@ -335,7 +341,7 @@
 	<xsl:template match="diagram">
 		<xsl:apply-templates select=".|@type" mode="include-once" />
 		<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))"></xsl:variable>
-		<article class="{@type} diagram" hx-get="diagrams.html" hx-select="#{$id}" hx-trigger="intersect"></article>
+		<article class="{@type} diagram" hx-get="diagrams.html" hx-select="#{$id}" hx-trigger="intersect once"></article>
 	</xsl:template>
 
 	<xsl:template match="diagram[@type = 'chain']" mode="ajax-diagrams">
