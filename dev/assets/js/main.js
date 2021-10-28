@@ -253,8 +253,9 @@ window.addEventListener('DOMContentLoaded', function() {
 				item.innerHTML = customUsername;
 			});
 		});
+
 		// Custom username for ajax diagrams (htmx)
-		document.body.addEventListener('htmx:beforeSwap', function(event) {
+		document.body.addEventListener('htmx:afterProcessNode', function(event) {
 			if(document.querySelector('#nom').value.length > 0) {
 				const customUsername = document.querySelector('#nom').value;
 				event.target.querySelectorAll('.username').forEach((item) => {
