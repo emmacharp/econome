@@ -6,7 +6,7 @@
 			<meta charset="UTF-8"/>
 			<meta name="apple-mobile-web-app-capable" content="yes"/>
 			<meta name="apple-mobile-web-app-status-bar-style" content="#ff0000"/>
-			<meta name="description" content="Econome informe le public grâce à l'exposition de faits économiques.">
+			<meta name="description" content="Econome informe le public grâce à l'exposition de faits économiques."/>
 			
 			<link rel="icon" href="data:;base64,iVBORwOKGO=" />
 
