@@ -36,8 +36,8 @@ jobs:
           xsltproc dev/index.xml > build/index.full.html
           xsltproc dev/goods.xml > build/goods.html
           xsltproc dev/diagrams.xsl dev/index.xml > build/diagrams.html
-          xsltproc dev/minified.xsl dev/index.xml > build/index.html
-          xsltproc dev/progressive.xsl dev/index.xml > build/index.progressive.html
+          xsltproc dev/minified.xsl dev/index.xml > build/index.min.html
+          xsltproc dev/progressive.xsl dev/index.xml > build/index.html
           sed '/xsl:include/d' dev/index.xsl > build/index-complete.xsl ; sed '/xsl:stylesheet/d;/\?xml/d' dev/includes/* | sed -i '$e cat /dev/stdin' build/index-complete.xsl
           cp dev/index.xml build/index-complete.xml
           sed -i 's/index\.xsl/index-complete\.xsl/' build/index-complete.xml
