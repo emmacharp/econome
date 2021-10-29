@@ -3,7 +3,6 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:import href="index.xsl"/>
 	
-	<xsl:template name="body-css"></xsl:template>
 	<xsl:template name="head-css">
 		<link rel="stylesheet" href="assets/css/main.min.css"/>
 	</xsl:template>
