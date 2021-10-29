@@ -40,9 +40,11 @@
 		--ScaleLevel: var(--Base); }
 	
 	details>*,
+	figcaption,
 	body>aside>div>header>*,
 	body>aside>div>footer>* {
 		--ScaleLevel: var(--Short);
+		--FontWeight: 400; 
 		--LineHeightFactor: .75; }
 	
 	main>h2 {

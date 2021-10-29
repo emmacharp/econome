@@ -10,8 +10,6 @@ figure {
 
 figure figcaption {
 	text-align: center;
-	--ScaleLevel: var(--Short);
-	--FontWeight: 400;
 	position: sticky;
 	transition-delay: 90ms;
 	margin-top: calc(var(--Row) * .5);
