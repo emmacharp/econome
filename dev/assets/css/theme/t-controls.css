@@ -37,7 +37,7 @@ input[class*="toggle-"] {
 	align-items: center;
 	flex-shrink: 0;
 	justify-content: center;
-	padding: .5ch;
+	padding: .75ch;
 }
 
 [id="wikiViewer"] [id="wikiViewerClose"]:after {
