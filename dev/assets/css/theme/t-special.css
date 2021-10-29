@@ -12,6 +12,7 @@ p strong {
 
 .username {
 	white-space: nowrap;
+	color: inherit;
 }
 
 .sitename {
