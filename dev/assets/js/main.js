@@ -11,7 +11,7 @@
 	const wikiViewer = document.querySelector('#wikiViewer');
 	const wikiDump = document.querySelector('#wikiDump');
 	const wikiCanonical = document.querySelector('#wikiCanonical');
-	const wiki = document.createElement('section');
+	const wiki = document.createElement('div');
 
 	if (wikiDump) wikiDump.appendChild(wiki);
 
