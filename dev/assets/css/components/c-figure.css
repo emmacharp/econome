@@ -1,5 +1,4 @@
 figure {
-	--Color: var(--ltr-brown);
 	color: var(--Color);
 	max-width: 100%;
 	box-sizing: border-box;
