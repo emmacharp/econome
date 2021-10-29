@@ -9,7 +9,6 @@ figure {
 }
 
 figure figcaption {
-	--Color: var(--dk-primary);
 	text-align: center;
 	--ScaleLevel: var(--Short);
 	--FontWeight: 400;
