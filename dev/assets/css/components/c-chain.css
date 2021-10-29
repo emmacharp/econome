@@ -35,7 +35,7 @@
 	justify-content: center;
 }
 
-.chain section.link:first-of-type>article {
+.chain .agent:first-of-type>article {
 	order: -1;
 }
 
@@ -103,7 +103,7 @@
 	transform: scale(1.3);
 }
 
-.chain .goods-list>.product>section:hover>p:not(:hover)>* {
+.chain .goods-list>.product>:hover>p:not(:hover)>* {
 	filter: grayscale(1);
 }
 
@@ -184,10 +184,10 @@
 	width: max-content;
 }
 
-.chain aside .product>section[style] {
+.chain aside .product>[style] {
 	min-width: max(6ch, calc(3ch * var(--columns-counter)));
 }
-.chain aside .product>section+section {
+.chain aside .product>*+* {
 	margin-top: calc(var(--Row) * .5);
 }
 
