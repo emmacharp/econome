@@ -42,7 +42,6 @@
 	body>aside h3 {
 		--ScaleLevel: var(--Base); }
 	
-	details>*,
 	figcaption,
 	body>aside>div>header>*,
 	body>aside>div>footer>* {
