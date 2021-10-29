@@ -17,11 +17,6 @@ details summary *>* {
 	display: inline;
 }
 
-details * {
-	--ScaleLevel: var(--Short);
-	--LineHeightFactor: .75;
-}
-
 *+details {
 	margin-top: calc(var(--Row) * .5);
 }
