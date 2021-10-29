@@ -58,11 +58,11 @@
 	--DivDisplay: block;
 }
 
-[id="wikiViewer"] [id="wikiDump"]>section {
+[id="wikiViewer"] [id="wikiDump"]>* {
 	padding-bottom: var(--Row);
 }
 
-[id="wikiViewer"] [id="wikiDump"]>section>:first-child {
+[id="wikiViewer"] [id="wikiDump"]>*>:first-child {
 	margin-top: var(--Row);
 }
 
