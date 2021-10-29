@@ -2,6 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template name="head-css">
 		<link rel="stylesheet" href="assets/css/utilities/u-superdiv.css"/>
+		<link rel="stylesheet" href="assets/css/utilities/u-visually_hidden.css"/>
 
 		<link rel="stylesheet" href="assets/css/theme/t-library.css"/>
 		<link rel="stylesheet" href="assets/css/theme/t-config.css"/>
