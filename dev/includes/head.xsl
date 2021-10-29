@@ -8,7 +8,7 @@
 			<meta name="apple-mobile-web-app-status-bar-style" content="#ff0000"/>
 			<meta name="description" content="Econome informe le public grâce à l'exposition de faits économiques."/>
 			
-			<link rel="icon" href="data:;base64,iVBORwOKGO=" />
+			<link rel="icon" href="data:," />
 
 			<meta name="viewport" content="width=device-width"/>
 
