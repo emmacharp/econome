@@ -19,6 +19,9 @@
 	h5 { --ScaleLevel: var(--Base); --LineHeightFactor: .75; }
 	h6 { --ScaleLevel: var(--Short); --LineHeightFactor: .75; }
 
+/* Distribution des graisses de base ----------------------- */ 
+	strong, b { --FontWeight: 500; }
+	p, ul { --FontWeight: 300; }
 
 /* Styles typographiques particuliers -----------------------  */
 
@@ -50,13 +53,5 @@
 	main>h2 {
 		--ScaleLevel: var(--Short);
 		--FontWeight: 700;
-	}
-
-	strong, b {
-		--FontWeight: 500;
-	}
-
-	p, ul {
-		--FontWeight: 300;
 	}
 
