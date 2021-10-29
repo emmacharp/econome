@@ -3,7 +3,7 @@
 	<xsl:template name="head">
 		<head>
 			<title>E — Pourquoi acheter local ? </title>
-			<meta charset="UTF-8"/>
+
 			<meta name="apple-mobile-web-app-capable" content="yes"/>
 			<meta name="apple-mobile-web-app-status-bar-style" content="#ff0000"/>
 			<meta name="description" content="Econome informe le public grâce à l'exposition de faits économiques."/>
