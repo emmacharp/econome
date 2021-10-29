@@ -620,9 +620,9 @@
 			</fieldset>
 			<fieldset>
 				<p>Laissez-nous une appréciation libre de votre expérience</p>
-				<textarea id="" name="appreciation" cols="30" rows="10" placeholder="Marc-André, faut qu'on se parle..."></textarea>
+				<textarea aria-label="Laisser une appréciation libre" name="appreciation" cols="30" rows="10" placeholder="Marc-André, faut qu'on se parle..."></textarea>
 				<p>Bogues ?</p>
-				<textarea id="" name="bogues" cols="30" rows="10" placeholder="Marc-André, telle affaire était toute croche..."></textarea>
+				<textarea aria-label="Communiquer les bogues rencontrés" name="bogues" cols="30" rows="10" placeholder="Marc-André, telle affaire était toute croche..."></textarea>
 			</fieldset>
 
 		</form>
