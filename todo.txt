@@ -8,33 +8,16 @@
 (B) Permettre de renverser (miroir) le diagramme (vers le consommateur plutôt qu'en provenance de. Une switch ferait sûrement l'affaire. @maitrise
 (A) 2021-04-17 Intégrer de la gestion de couleur dynamique. +theme @CSS
 (A) 2021-04-24 Donner des contrôles persistants. Recherche par exemple. Avec explication (CMD-f). @experience
-2021-05-25 Intégrer de vrais SVG dans la navigation plutôt que URL css @maitrise +dev
 2021-07-02 Scénario : on achète plus local. La composition de nos achats changent. Plus de boréale, moins de Guinness. Joey Joe Joe achète les deux. @maitrise +contenu
-2021-07-02 On demande que les producteurs locaux achète plus localement. Exemple de ce qui se passe. @maitrise +contenu
-2021-07-02 On pourrait tu trouver une industrie qu'on présente comme exemple pour illustrer les ramifications d'une augmentation des intrants locaux. @maitrise +henri
-2021-07-02 Qu'est-ce qui fait que les brasseurs étrangers ajoutent plus de valeur indirecte que les québécois ? Le transport ? @maitrise +henri
 2021-07-02 Comment pourrait-on reformuler « Excédent d'exploitation brut » pour que ce soit compréhensible ? @maitrise +henri
-2021-07-02 Observation #0x — Le consommateur ne peut que se fier sur ses propres actions quant il est question d'achat local. Toute la chaîne doit être prise en compte @maitrise +contenu
-2021-07-02 pourrait-on distinguer la valeur ajoutée au Québec par les brasseurs étranger ? @maitrise +henri
-2021-07-02 On garde la même chaîne mais on change le producteur de bière. Joey Joe Joe passe de la Boréale à la Guinness. @maitrise +henri
 (A) Régler le problème de franglais dans les produits (type en anglais / balise en francais...) @maitrise +xsl
 (B) Nettoyer les sources de données @maitrise +xsl
-(A) 2021-07-10 Essayer de masquer pour mobile en retranchant la même quantité d'éléments pour chaque point de rupture @maitrise +design
-2021-07-10 Afficher les infos (dollars et nom) des produits par dessus la quantité totale de la section. @maitrise +design
 (A) 2021-07-11 Tenter d'inférer les sommes à mettre dans les attributs du diagramme (value, foreign, etc.) @maitrise +donnees
 (A) Nettoyer ! @maitrise
 (A) Calculer les nombres à partir des produits *si* il n'y a pas de valeur aux attributs (value="" vs. value="776.8") @maitrise
-x (B) 2021-07-18 Mettre un oeuf de paques dans la fiche du « Transporteur » @maitrise +experience
 (B) 2021-07-23 Essayer en séquence hauteur > largeur l'animation d'ouverture de la liste de biens @maitrise +design
 (A) 2021-07-23 Gérer l'apparition des éléments de la chaîne en animation plutôt qu'en transition. Une dimension à la fois. @maitrise +design
-x (A) 2021-07-28 Arranger l'adaptation du diagramme. Défilement horizontal et réarrangement. @maitrise +design
-x (A) 2021-07-28 Remplacer les icônes temporaires. @maitrise +design
-x (B) 2021-08-24 essayer scroll-snap-stop pour éviter de passer outre certaines sections. @maitrise @design
 (B) Enlever les elements vides dans les diagrammes. @maitrise +propre
-x (B) Essayer les émoticones pour tout ce qui est section @maitrise @experience
-x 2021-10-24 vérifier la véracité des chiffres... chiffres qui concordent, siouplait. @maitrise +experience
-x (A) Nettoyer les svg de navigation remplacés par les emojis. @maitrise +hygiene
-x (A) Finir de sélectionner les icônes. @maitrise +recherche
 (B) Réintégrer les q et cite. @maitrise +standard
 (B) Tout changer type pour data-type... pis les autres si y en a. @maitrise +standard
 (A) Problème avec les formules dans le wiki de la rationalité. @maitrise +bug

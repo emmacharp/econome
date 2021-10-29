@@ -31,3 +31,20 @@ x 2021-07-26 2021-07-18 Partager l'espace dans le diagramme en fonction du nombr
 x 2021-07-26 2021-07-18 Donner l'option d'ouvrir au complet, de masquer, etc. à l'aide de valeur @goods @maitrise +experience
 x 2021-07-26 2021-07-19 Essayer de générer les biens avec HTMX si jamais ça s'avère lourd. @maitrise +performance
 x 2021-07-26 Enlever les « --link-position » si on peut finalement faire sans. @maitrise
+x 2021-05-25 Intégrer de vrais SVG dans la navigation plutôt que URL css @maitrise +dev
+x 2021-07-02 On demande que les producteurs locaux achète plus localement. Exemple de ce qui se passe. @maitrise +contenu
+x 2021-07-02 On pourrait tu trouver une industrie qu'on présente comme exemple pour illustrer les ramifications d'une augmentation des intrants locaux. @maitrise +henri
+x 2021-07-02 Qu'est-ce qui fait que les brasseurs étrangers ajoutent plus de valeur indirecte que les québécois ? Le transport ? @maitrise +henri
+x 2021-07-02 Observation #0x — Le consommateur ne peut que se fier sur ses propres actions quant il est question d'achat local. Toute la chaîne doit être prise en compte @maitrise +contenu
+x 2021-07-02 pourrait-on distinguer la valeur ajoutée au Québec par les brasseurs étranger ? @maitrise +henri
+x 2021-07-02 On garde la même chaîne mais on change le producteur de bière. Joey Joe Joe passe de la Boréale à la Guinness. @maitrise +henri
+x 2021-10-29 (A) 2021-07-10 Essayer de masquer pour mobile en retranchant la même quantité d'éléments pour chaque point de rupture @maitrise +design
+x 2021-07-10 Afficher les infos (dollars et nom) des produits par dessus la quantité totale de la section. @maitrise +design
+x 2021-10-29 (B) 2021-07-18 Mettre un oeuf de paques dans la fiche du « Transporteur » @maitrise +experience
+x 2021-10-29 (A) 2021-07-28 Arranger l'adaptation du diagramme. Défilement horizontal et réarrangement. @maitrise +design
+x 2021-10-29 (A) 2021-07-28 Remplacer les icônes temporaires. @maitrise +design
+x 2021-10-29 (B) 2021-08-24 essayer scroll-snap-stop pour éviter de passer outre certaines sections. @maitrise @design
+x 2021-10-29 (B) Essayer les émoticones pour tout ce qui est section @maitrise @experience
+x 2021-10-24 Vérifier la véracité des chiffres... chiffres qui concordent, siouplait. @maitrise +experience
+x 2021-10-29 (A) Nettoyer les svg de navigation remplacés par les emojis. @maitrise +hygiene
+x 2021-10-29 (A) Finir de sélectionner les icônes. @maitrise +recherche
