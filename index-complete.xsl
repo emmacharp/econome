@@ -2,12 +2,8 @@
 <xsl:stylesheet version="1.0"
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 xmlns:svg="http://www.w3.org/2000/svg"
-xmlns:xlink="http://www.w3.org/1999/xlink"
-xmlns:msxsl="urn:schemas-microsoft-com:xslt"
-xmlns:ext="http://exslt.org/common"
 xmlns:str="http://exslt.org/strings"
-xmlns:math="http://exslt.org/math"
-exclude-result-prefixes="ext msxsl svg math str">
+exclude-result-prefixes="str">
 
 
 <xsl:output method="html" doctype-system="about:legacy-compat" />
@@ -21,13 +17,14 @@ exclude-result-prefixes="ext msxsl svg math str">
 
 	<xsl:template match="text()">
 		<xsl:variable name="text">
-			<xsl:for-each select="str:tokenize(., ' ')">
-				<xsl:value-of select="."/> 
-				<xsl:choose>
-					<xsl:when test="position() = last() - 1"><xsl:text> </xsl:text></xsl:when>
-					<xsl:otherwise><xsl:text> </xsl:text></xsl:otherwise>
-				</xsl:choose>
-			</xsl:for-each>
+			<!-- <xsl:for-each select="str:tokenize(., ' ')"> -->
+			<!-- 	<xsl:value-of select="."/> --> 
+			<!-- 	<xsl:choose> -->
+			<!-- 		<xsl:when test="position() = last() - 1"><xsl:text> </xsl:text></xsl:when> -->
+			<!-- 		<xsl:otherwise><xsl:text> </xsl:text></xsl:otherwise> -->
+			<!-- 	</xsl:choose> -->
+			<!-- </xsl:for-each> -->
+			<xsl:value-of select="." />
 		</xsl:variable>
 		<xsl:variable name="text-with-joey">
 			<xsl:choose>
@@ -89,6 +86,7 @@ exclude-result-prefixes="ext msxsl svg math str">
 
 	<xsl:template name="head-css">
 		<link rel="stylesheet" href="assets/css/utilities/u-superdiv.css"/>
+		<link rel="stylesheet" href="assets/css/utilities/u-visually_hidden.css"/>
 
 		<link rel="stylesheet" href="assets/css/theme/t-library.css"/>
 		<link rel="stylesheet" href="assets/css/theme/t-config.css"/>
@@ -100,7 +98,6 @@ exclude-result-prefixes="ext msxsl svg math str">
 
 		<!-- <link rel="stylesheet" href="assets/css/theme/t-dark_scheme.css" media="screen and (prefers-color-scheme: dark)" /> -->
 		<link rel="stylesheet" href="assets/css/components/c-cartoon_characters.css" />
-		<link rel="stylesheet" href="assets/css/components/c-details.css"/>
 
 		<link rel="stylesheet" href="assets/css/patterns/p-provenance.css"/>
 		<link rel="stylesheet" href="assets/css/patterns/p-type-emojis.css"/>
@@ -122,6 +119,7 @@ exclude-result-prefixes="ext msxsl svg math str">
 
 	<xsl:template match="root" mode="body" name="body">
 		<body>
+			<xsl:apply-templates select=".//details" mode="include-once"/>
 			<xsl:call-template name="internal-navigation"/>
 			<xsl:call-template name="main-content"/>
 			<xsl:apply-templates select="footer" />
@@ -133,13 +131,13 @@ exclude-result-prefixes="ext msxsl svg math str">
 
 
 
-	<xsl:key name="agent-type" match="agent" use="@type"/>
+	<xsl:key name="agent-type" match="agent" use="@data-type"/>
 
 	<xsl:variable name="product-file" select="document('product.xml', /)" />
 	<xsl:variable name="goods-file" select="document('goods.xml', /)" />
 	<xsl:variable name="macro-file" select="document('macro.xml', /)" />
 
-	<xsl:template match="@type" mode="data-translator">
+	<xsl:template match="@data-type" mode="data-translator">
 		<xsl:choose>
 			<xsl:when test=". = 'retailer'">
 				<xsl:text>depanneur</xsl:text>
@@ -206,7 +204,7 @@ exclude-result-prefixes="ext msxsl svg math str">
 	</xsl:template>
 
 	<xsl:template match="@added|@value|@bought|@local|@foreign" mode="class-generator">
-		<xsl:variable name="is-transformer" select="boolean(ancestor::agent[@type = 'transformer'])" />
+		<xsl:variable name="is-transformer" select="boolean(ancestor::agent[@data-type = 'transformer'])" />
 
 		<xsl:variable name="nodes">
 			<xsl:choose>
@@ -214,7 +212,7 @@ exclude-result-prefixes="ext msxsl svg math str">
 					<xsl:apply-templates select="." mode="data-translator" />
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:apply-templates select="ancestor::agent/@type" mode="data-translator" />
+					<xsl:apply-templates select="ancestor::agent/@data-type" mode="data-translator" />
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
@@ -243,13 +241,13 @@ exclude-result-prefixes="ext msxsl svg math str">
 					<xsl:value-of select="$column-counter" />
 					<xsl:text>;</xsl:text>
 				</xsl:attribute>
-				<input type="checkbox" checked="" name="show-units" class="toggle-units" />
+				<input aria-label="Afficher ou masquer les unités" type="checkbox" checked="" name="show-units" class="toggle-units" />
 				<xsl:if test="$subunits">
-					<input type="checkbox" name="show-subunits" class="toggle-subunits" />
+					<input aria-label="Afficher ou masquer les sous-unités" type="checkbox" name="show-subunits" class="toggle-subunits" />
 				</xsl:if>
 				<xsl:choose>
 					<xsl:when test="local-name() = 'value'">
-						<xsl:apply-templates select="ext:node-set($file)//produit[@type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes]" mode="product-creator">
+						<xsl:apply-templates select="ext:node-set($file)//produit[@data-type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes]" mode="product-creator">
 							<xsl:with-param name="relative" select="not($is-transformer)" />
 							<xsl:with-param name="subunits" select="$subunits" />
 						</xsl:apply-templates>
@@ -261,13 +259,13 @@ exclude-result-prefixes="ext msxsl svg math str">
 						</xsl:apply-templates>
 					</xsl:when>
 					<xsl:when test="local-name() = 'bought'">
-						<xsl:apply-templates select="ext:node-set($file)//produit[not(@type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes or local-name() = 'depense']" mode="product-creator">
+						<xsl:apply-templates select="ext:node-set($file)//produit[not(@data-type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes or local-name() = 'depense']" mode="product-creator">
 							<xsl:with-param name="relative" select="not($is-transformer)" />
 							<xsl:with-param name="subunits" select="$subunits" />
 						</xsl:apply-templates>
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:apply-templates select="ext:node-set($file)//produit[not(@type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes]" mode="product-creator">
+						<xsl:apply-templates select="ext:node-set($file)//produit[not(@data-type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes]" mode="product-creator">
 							<xsl:with-param name="relative" select="not($is-transformer)" />
 							<xsl:with-param name="subunits" select="$subunits" />
 						</xsl:apply-templates>
@@ -279,7 +277,7 @@ exclude-result-prefixes="ext msxsl svg math str">
 				<xsl:if test="ancestor::agent[@goods]">
 					<xsl:choose>
 						<xsl:when test="local-name() = 'value'">
-							<xsl:apply-templates select="ext:node-set($file)//produit[@type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
+							<xsl:apply-templates select="ext:node-set($file)//produit[@data-type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
 								<xsl:with-param name="node-name" select="$nodes" />
 								<xsl:with-param name="relative" select="not($is-transformer)" />
 								<xsl:with-param name="subunits" select="$subunits" />
@@ -293,7 +291,7 @@ exclude-result-prefixes="ext msxsl svg math str">
 								<xsl:with-param name="subunits" select="$subunits" />
 								<xsl:with-param name="total-dollars" select="." />
 							</xsl:apply-templates>
-							<xsl:apply-templates select="ext:node-set($file)//produit[@type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
+							<xsl:apply-templates select="ext:node-set($file)//produit[@data-type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
 								<xsl:with-param name="node-name" select="'ajout'" />
 								<xsl:with-param name="relative" select="not($is-transformer)" />
 								<xsl:with-param name="subunits" select="$subunits" />
@@ -301,7 +299,7 @@ exclude-result-prefixes="ext msxsl svg math str">
 							</xsl:apply-templates>
 						</xsl:when>
 						<xsl:otherwise>
-							<xsl:apply-templates select="ext:node-set($file)//produit[not(@type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
+							<xsl:apply-templates select="ext:node-set($file)//produit[not(@data-type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
 								<xsl:with-param name="node-name" select="$nodes" />
 								<xsl:with-param name="relative" select="not($is-transformer)" />
 								<xsl:with-param name="subunits" select="$subunits" />
@@ -315,7 +313,7 @@ exclude-result-prefixes="ext msxsl svg math str">
 	</xsl:template>
 
 	<xsl:template match="diagram/agent">
-		<section class="link agent {@type} {@class}">	
+		<div class="link agent {@data-type} {@class}">	
 			<xsl:if test="@goods|@paid|@value|@foreign|@local|@total|@bought|@added">
 				<aside>
 					<xsl:if test="@goods">
@@ -323,7 +321,7 @@ exclude-result-prefixes="ext msxsl svg math str">
 							<xsl:text disable-output-escaping="yes">goods-list</xsl:text>
 						</xsl:attribute>
 					</xsl:if>
-					<section class="product {@type}">
+					<section class="product {@data-type}">
 						<xsl:apply-templates select="@added" mode="class-generator" />
 						<xsl:apply-templates select="@foreign" mode="class-generator" />
 						<xsl:apply-templates select="@value" mode="class-generator" />
@@ -335,12 +333,12 @@ exclude-result-prefixes="ext msxsl svg math str">
 			</xsl:if>
 			<article>
 
-				<xsl:apply-templates select="ext:node-set($svg-symbols)//svg:symbol[generate-id() = generate-id(key('symbol-type', current()/@type)[1])]">
+				<xsl:apply-templates select="ext:node-set($svg-symbols)//svg:symbol[generate-id() = generate-id(key('symbol-type', current()/@data-type)[1])]">
 					<xsl:with-param name="class" select="'icon'" />
 				</xsl:apply-templates>
 				<h4><xsl:apply-templates select="@name" /></h4>
 			</article>
-		</section>
+		</div>
 	</xsl:template>
 
 	<xsl:template match="diagram/product" name="diagram-product">
@@ -375,13 +373,13 @@ exclude-result-prefixes="ext msxsl svg math str">
 				</xsl:if>
 			</xsl:attribute>
 			<article>
-				<i class="icon {@type}"></i>
+				<i class="icon {@data-type}"></i>
 				<h4><xsl:value-of select="@name" /></h4>
 			</article>
 		</section>
 	</xsl:template>
 
-	<xsl:template match="diagram[@type = 'macro']" mode="ajax-diagrams">
+	<xsl:template match="diagram[@data-type = 'macro']" mode="ajax-diagrams">
 		<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))" />
 
 		<div id="{$id}" class="goods-list">
@@ -454,7 +452,7 @@ exclude-result-prefixes="ext msxsl svg math str">
 		</xsl:call-template>
 	</xsl:template>
 
-	<xsl:template match="diagram[not(preceding::diagram[@type = 'chain'])]/@type[. = 'chain']" mode="include-once">
+	<xsl:template match="diagram[not(preceding::diagram[@data-type = 'chain'])]/@data-type[. = 'chain']" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
 				<link rel="stylesheet" href="assets/css/components/c-chain.css"/>
@@ -462,7 +460,7 @@ exclude-result-prefixes="ext msxsl svg math str">
 		</xsl:call-template>
 		</xsl:template>
 
-		<xsl:template match="diagram[not(preceding::diagram[@type = 'macro'])]/@type[. = 'macro']" mode="include-once">
+		<xsl:template match="diagram[not(preceding::diagram[@data-type = 'macro'])]/@data-type[. = 'macro']" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
 				<link rel="stylesheet" href="assets/css/components/c-macro.css"/>
@@ -471,12 +469,14 @@ exclude-result-prefixes="ext msxsl svg math str">
 	</xsl:template>
 
 	<xsl:template match="diagram">
-		<xsl:apply-templates select=".|@type" mode="include-once" />
+		<xsl:apply-templates select=".|@data-type" mode="include-once" />
 		<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))"></xsl:variable>
-		<article class="{@type} diagram" hx-get="diagrams.html" hx-select="#{$id}" hx-trigger="intersect once"></article>
+		<article class="{@data-type} diagram" data-hx-get="diagrams.html" data-hx-swap="beforeend" data-hx-select="#{$id}" data-hx-trigger="intersect once">
+			<h4 class="visually-hidden"><xsl:value-of select="@heading" /></h4>
+		</article>
 	</xsl:template>
 
-	<xsl:template match="diagram[@type = 'chain']" mode="ajax-diagrams">
+	<xsl:template match="diagram[@data-type = 'chain']" mode="ajax-diagrams">
 		<xsl:variable name="total-chain-links" select="@links" />
 		<xsl:variable name="actual-chain-links" select="count(agent)" />
 		<xsl:variable name="missing-links" select="$total-chain-links - $actual-chain-links" />
@@ -527,13 +527,13 @@ exclude-result-prefixes="ext msxsl svg math str">
 	</xsl:template>
 	<xsl:template name="head">
 		<head>
-			<title>E — Pourquoi acheter local ? </title>
-			<meta charset="UTF-8"/>
+			<title>E : Pourquoi acheter local ? </title>
+
 			<meta name="apple-mobile-web-app-capable" content="yes"/>
 			<meta name="apple-mobile-web-app-status-bar-style" content="#ff0000"/>
 			<meta name="description" content="Econome informe le public grâce à l'exposition de faits économiques."/>
 			
-			<link rel="icon" href="data:;base64,iVBORwOKGO=" />
+			<link rel="icon" href="data:," />
 
 			<meta name="viewport" content="width=device-width"/>
 
@@ -541,7 +541,7 @@ exclude-result-prefixes="ext msxsl svg math str">
 		</head>
 	</xsl:template>
 	<xsl:template name="internal-navigation">
-		<input type="checkbox" class="toggle-internal-nav" />
+		<input aria-label="Ouvrir ou fermer la navigation" type="checkbox" class="toggle-internal-nav" />
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
 				<link rel="stylesheet" href="assets/css/components/c-internal_nav.css"/>
@@ -602,6 +602,14 @@ exclude-result-prefixes="ext msxsl svg math str">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
 				<link rel="stylesheet" href="assets/css/components/c-intervention.css"/>
+			</xsl:with-param>
+		</xsl:call-template>
+	</xsl:template>
+
+	<xsl:template match="details[not(preceding::details)]" mode="include-once">
+		<xsl:call-template name="body-css">
+			<xsl:with-param name="content">
+				<link rel="stylesheet" href="assets/css/components/c-details.css"/>
 			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
@@ -668,7 +676,7 @@ exclude-result-prefixes="ext msxsl svg math str">
 	</xsl:template>
 
 	<xsl:template match="symbol">
-		<xsl:apply-templates select="ext:node-set($svg-symbols)//svg:symbol[generate-id() = generate-id(key('symbol-type', current()/@type)[1])]">
+		<xsl:apply-templates select="ext:node-set($svg-symbols)//svg:symbol[generate-id() = generate-id(key('symbol-type', current()/@data-type)[1])]">
 			<xsl:with-param name="attr" select="@*[not(name() = 'type')]" />
 		</xsl:apply-templates>
 	</xsl:template>
@@ -677,13 +685,13 @@ exclude-result-prefixes="ext msxsl svg math str">
 	</xsl:template>
 	<xsl:template match="section" mode="symbol-chooser">
 		<xsl:choose>
-			<xsl:when test="@type = 'observation'">
+			<xsl:when test="@data-type = 'observation'">
 				<xsl:text>svg-lightbulb-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="@type ='question'">
+			<xsl:when test="@data-type ='question'">
 				<xsl:text>svg-question-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="@type ='chaine'">
+			<xsl:when test="@data-type ='chaine'">
 				<xsl:text>svg-chainlink-symbol</xsl:text>
 			</xsl:when>
 			<xsl:otherwise>

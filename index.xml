@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="index.xsl"?>
 <root>
-	<section type="introduction">
+	<section data-type="introduction">
 		<header>
-			<h1>Pourquoi<wbr /> acheter local ?</h1>
+			<h1>Pourquoi acheter local ?</h1>
 			<small>un exposé Econome</small>
 		</header>
 		<p>Acheter est une action économique.</p>
@@ -19,14 +19,14 @@
 		</header>
 		<div class="grille">
 			<aside class="intervention">
-				<symbol type="emma" class="cartoon_emma animated" />
+				<symbol data-type="emma" class="cartoon_emma animated" />
 				<div>
 					<p><b>Hello !</b></p>
 					<p>Je m’appelle Marc-André et je suis le concepteur de Econome. J’interviendrai ici et là pour illustrer certains aspects de l'exposé.</p>
 				</div>
 			</aside>
 			<aside class="intervention">
-				<symbol type="henri" class="cartoon_henri animated" />
+				<symbol data-type="henri" class="cartoon_henri animated" />
 				<div>
 					<p><b>Bonjour !</b></p>
 					<p>Alors moi, c’est Henri. Je suis l’économiste de l’équipe. Je serai là pour résumer ou expliquer les concepts importants.</p>
@@ -37,7 +37,7 @@
 					<p>Nous sommes deux amis qui désirent utiliser la science économique pour expliquer les comportements et leurs conséquences possibles, sans juger des décision de tout à chacun. Vos et nos décisions nous appartiennent.</p>
 				</div>
 	</section>
-	<section type="question">
+	<section data-type="question">
 		<header>
 			<h3>À vous maintenant !</h3>
 			<p>Pouvons-nous nous permettre de vous demander quelques informations personnelles..?</p>
@@ -57,14 +57,14 @@
 			</fieldset>
 		</form>
 		<aside class="intervention">
-			<symbol type="emma" class="cartoon_emma animated" />
+			<symbol data-type="emma" class="cartoon_emma animated" />
 			<div>
 				<p>Faites-vous en pas, là. Vous n’êtes pas tenu de répondre la vérité... ni même de répondre du tout. Les données sont anonymes et seront ouvertement publiées bientôt.</p>
 			</div>
 		</aside>
 	</section>
 	<!-- SECTION SUR LES PRÉFÉRENCES DE CONSULTATION -->
-	<section type="question">
+	<section data-type="question">
 		<header>
 			<h3>Avant de commencer...</h3>
 			<small>Merci d'être là Joey Joe Joe ! C'est un plaisir.</small>
@@ -88,7 +88,7 @@
 				</div>
 			</fieldset>
 			<fieldset>
-				<p>Une caisse de Boréale chez <nobr>Wal-Mart</nobr> ?</p>
+				<p>Une caisse de Boréale chez Wal-Mart ?</p>
 				<div>
 					<label><input type="radio" name="boreale" required="" /><span class="local">Oui !</span></label>
 					<label><input type="radio" name="boreale" required="" /><span class="foreign">Non !</span></label>
@@ -97,7 +97,7 @@
 			</fieldset>
 		</form>
 		<aside class="intervention">
-			<symbol type="emma" class="cartoon_emma animated" />
+			<symbol data-type="emma" class="cartoon_emma animated" />
 			<div>
 				<p>C'est pas si simple, non ? Il me semble qu'il y a toujours un peu de « local » dans ces achats...</p>
 			</div>
@@ -115,7 +115,7 @@
 		</div>
 
 		<aside class="intervention">
-			<symbol type="emma" class="cartoon_emma animated" />
+			<symbol data-type="emma" class="cartoon_emma animated" />
 			<div>
 				<p>Pour vous donner une idée de ce qu’on entend par <em>achat local</em> dans le discours public, voici quelques articles traitant du sujet.</p>
 				<ul>
@@ -138,33 +138,33 @@
 				<p>Quand vous achetez une caisse de Pâpire, vous mettez en branle toute une chaîne d’<i data-wiki="Agent_économique">agents économiques</i> nécessaires à vous servir cette caisse.</p>
 			</div>
 			<aside class="intervention">
-				<symbol type="henri" class="cartoon_henri animated" />
+				<symbol data-type="henri" class="cartoon_henri animated" />
 				<div>
 					<p>Pour comprendre les implications d’un achat il nous faut envisager son parcours complet, de sa fabrication à sa consommation. C'est ce à quoi servent les scénarios comme celui-ci !</p>
 				</div>
 			</aside>
 	</section>
-	<section type="chaine">
+	<section data-type="chaine">
 		<header>
 			<h3>Joey Joe Joe et sa Pâpire</h3>
 			<small>Une histoire... locale ?</small>
 			<p>Voici les acteurs de votre chaîne économique.</p>
 		</header>
 		<figure>
-			<diagram type="chain">
-				<agent type="consumer" name="Joey Joe Joe" />
-				<agent type="retailer" name="Dépanneur Commun" />
-				<agent type="manufacturer" name="Entrepôts Correct" />
-				<agent type="transformer" name="Brasserie Moyenne" />
+			<diagram data-type="chain" heading="Chaîne économique typique d'un achat de bière générique">
+				<agent data-type="consumer" name="Joey Joe Joe" />
+				<agent data-type="retailer" name="Dépanneur Commun" />
+				<agent data-type="manufacturer" name="Entrepôts Correct" />
+				<agent data-type="transformer" name="Brasserie Moyenne" />
 			</diagram>
-			<figcaption>Représentation d'une chaîne typique d'achat de bière générique.</figcaption>
+			<figcaption>Représentation d'une chaîne typique d'un achat de bière générique.</figcaption>
 		</figure>
 		<div class="grille">
 			<article>
 				<h4>👤 Vous, Joey Joe Joe</h4>
 				<details>
 					<summary>
-						<p><b>... êtes assoiffé. Vous rêvez d’une bonne Pâpire, bien froide.</b></p>
+						<span><b>... êtes assoiffé. Vous rêvez d’une bonne Pâpire, bien froide.</b></span>
 					</summary>
 					<p>En tant que <i data-wiki="Consommateur" data-sections="2">consommateur</i> votre action d'acheter détermine la constitution complète de la chaîne économique mise en branle. Cette fois-ci, le dépanneur Commun est l'heureux vendeur.</p>
 				</details>
@@ -173,7 +173,7 @@
 				<h4>🏪 Le dépanneur Commun</h4>
 				<details>
 					<summary>
-						<p><b>... au coin de votre rue, détient toujours une quantité suffisante de Pâpire.</b></p>
+						<span><b>... au coin de votre rue, détient toujours une quantité suffisante de Pâpire.</b></span>
 					</summary>
 					<p>En tant que <i data-wiki="Commerce_de_détail">détaillant</i>, il stocke une certaine quantité de Pâpire pour la vendre à de fins <em>connoisseurs</em> comme vous. La bière n’apparaît toutefois pas d’elle-même dans les réfrigérateurs de votre dépanneur Commun. Les Entrepôts Correct inc. s'en charge.</p>
 				</details>
@@ -182,7 +182,7 @@
 				<h4>🚚 Les Entrepôts Correct inc.</h4>
 				<details>
 					<summary>
-						<p><b>reçoit, entrepose puis transporte plusieurs palettes de Pâpire.</b></p>
+						<span><b>reçoit, entrepose puis transporte plusieurs palettes de Pâpire.</b></span>
 					</summary>
 					<p>En tant que <i data-wiki="Commerce_de_gros">grossiste</i> et <i data-wiki="Le_Transporteur" class="easter">transporteur</i>, il s’assure que votre Pâpire soit distribuée d'un point A à un point B. Un peu comme le dépanneur Commun au final. Le grossiste cependant entrepose de vastes quantités de Pâpire. Ce faisant, il permet à la brasserie Moyenne de produire de manière élargie.</p>
 				</details>
@@ -191,7 +191,7 @@
 				<h4>🏭 La brasserie Moyenne</h4>
 				<details>
 					<summary>
-						<p><b>brasse La Pâpire à votre grand plaisir.</b></p>
+						<span><b>brasse La Pâpire à votre grand plaisir.</b></span>
 					</summary>
 					<p>Le transformateur est un agent fondamental de la chaîne économique, celui qui se procure les <i data-wiki="Consommation_intermédiaire" data-sections="0">ingrédients</i> et les transforme en Pâpire. Bref, sans brasserie, pas de bonne bière !</p>
 				</details>
@@ -203,20 +203,20 @@
 			<p> C'est grâce à elle que vous pourrez aborder rationnellement votre action d'acheter localement... ou pas. La valeur ajoutée représente la trace économique de chacun des agents de la chaîne. Nous pouvons évaluer quelle part de votre <i data-wiki="Utilité_(économie)">satisfaction</i> repose sur quelles épaules et beaucoup plus encore.</p>
 		</div>
 		<aside class="intervention">
-			<symbol type="henri" class="cartoon_henri animated" />
+			<symbol data-type="henri" class="cartoon_henri animated" />
 			<div>
 				<p>Dépendant de vos habitudes de consommation, la brasserie Moyenne peut endosser plusieurs rôles de la chaîne. Prendre une bière sur place, à la brasserie, lui fait aussi endosser le rôle de détaillant... écartant complètement de la chaîne le pauvre dépanneur Commun !</p>
 			</div>
 		</aside>
 	</section>
-	<section type="observation">
+	<section data-type="observation">
 		<header>
 			<h3>La valeur ajoutée</h3>
 			<small>Fait économique #01</small>
 		</header>
 		<p>Pour comprendre les répercussions économiques d'un achat, il faut considérer qui et quoi ajoute la valeur.</p>
 		<aside class="intervention">
-			<symbol type="neurath" class="cartoon_neurath animated" />
+			<symbol data-type="neurath" class="cartoon_neurath animated" />
 			<div>
 				<p>En économie, lorsqu’on emploie les termes « bon » et « mauvais », nous ne pouvons le faire qu’en y ajoutant « pour quelqu’un »...</p>
 				<br/>— <i data-wiki="Otto_Neurath">Otto Neurath</i>
@@ -224,7 +224,7 @@
 		</aside>
 	</section>
 	<h2>La valeur ajoutée comme marqueur de localité</h2>
-	<section type="chaine">
+	<section data-type="chaine">
 		<header>
 			<h3>La chaîne de valeur (ajoutée)</h3>
 			<small>Le périple du 10 $ à Joey Joe Joe</small>
@@ -233,12 +233,12 @@
 			<p><b>Imaginons que vous dépensez 10 $ (hors-taxes) pour de la bière Pâpire au dépanneur Commun.</b> Ce 10 $ sera distribué à travers la chaîne. Chaque agent s'en garde une partie. Cette partie, c'est la valeur ajoutée par son activité économique.</p>
 		</div>
 		<figure>
-			<diagram type="chain">
-				<agent type="consumer" name="Joey Joe Joe" paid="10" />
-				<product type="beer" name="La Pâpire" complete="" value="100%" />
-				<agent type="retailer" name="Dépanneur Commun" added="1.80" goods="" />
-				<agent type="manufacturer" name="Entrepôts Correct" added="0.62" goods="" />
-				<agent type="transformer" name="Brasserie Moyenne" added="7.58" goods="" />
+			<diagram data-type="chain" heading="Valeur ajoutée à travers la chaîne">
+				<agent data-type="consumer" name="Joey Joe Joe" paid="10" />
+				<product data-type="beer" name="La Pâpire" complete="" value="100%" />
+				<agent data-type="retailer" name="Dépanneur Commun" added="1.80" goods="" />
+				<agent data-type="manufacturer" name="Entrepôts Correct" added="0.62" goods="" />
+				<agent data-type="transformer" name="Brasserie Moyenne" added="7.58" goods="" />
 			</diagram>
 			<figcaption>Répartition de 10 $ de valeur ajoutée à travers la chaîne. Données de StatCan (2016).</figcaption>
 		</figure>
@@ -246,24 +246,24 @@
 			<p>En achetant 10 $ de Pâpire, vous achetez 10 $ de valeur ajoutée par la chaîne. Et comment cette « valeur » est-elle ajoutée, vous demandez-vous ?<br />Bon point.</p>
 		</div>
 		<aside class="intervention">
-			<symbol type="henri" class="cartoon_henri animated" />
+			<symbol data-type="henri" class="cartoon_henri animated" />
 			<div>
 				<p><b>Humhum. C’est un peu plus compliqué que ça quand même.</b> Mais Marc-André fait dire que c’est suffisant pour l’usage que nous en faisons ici... Je m'en lave les mains !</p>
 			</div>
 		</aside>
 	</section>
-	<section type="chaine">
+	<section data-type="chaine">
 		<header>
 			<h3>Valeur créée ou achetée ?</h3>
 			<p>Chacun des agents ajoute sa part de valeur à la Pâpire de deux façons. D'une part on crée de la valeur et de l'autre, on en achète.</p>
 		</header>
 		<figure>
-			<diagram type="chain">
-				<agent type="consumer" name="Joey Joe Joe" paid="10" />
-				<product type="beer" name="La Pâpire" complete="" value="100%" />
-				<agent type="retailer" name="Dépanneur Commun" bought="0.66" value="1.14" goods="subunits" />
-				<agent type="manufacturer" name="Entrepôts Correct" value="0.39" bought="0.23" goods="" />
-				<agent type="transformer" name="Brasserie Moyenne" value="4.96" bought="2.52" goods="" />
+			<diagram data-type="chain" heading="Achat et création de valeur à travers la chaîne">
+				<agent data-type="consumer" name="Joey Joe Joe" paid="10" />
+				<product data-type="beer" name="La Pâpire" complete="" value="100%" />
+				<agent data-type="retailer" name="Dépanneur Commun" bought="0.66" value="1.14" goods="subunits" />
+				<agent data-type="manufacturer" name="Entrepôts Correct" value="0.39" bought="0.23" goods="" />
+				<agent data-type="transformer" name="Brasserie Moyenne" value="4.96" bought="2.52" goods="" />
 			</diagram>
 			<figcaption>Proportions de valeur ajoutée directe et indirecte. Données de StatCan (2016)</figcaption>
 		</figure>
@@ -276,14 +276,14 @@
 		<p>Bref, pour acheter local, il faut produire local !</p>
 
 		<aside class="intervention">
-			<symbol type="henri" class="cartoon_henri animated" />
+			<symbol data-type="henri" class="cartoon_henri animated" />
 			<div>
 				<p>Pourquoi utiliser la provenance de la valeur ajoutée plutôt que la provenance des agents ? Car des agents locaux peuvent acheter de la valeur produite à l’étranger (les importations !) ou à l'inverse, produire de la valeur localement et la vendre à l'étranger (les exportations !).</p>
 			</div>
 		</aside>
 	</section>
 
-	<section type="question">
+	<section data-type="question">
 
 		<header>
 			<h3>La question à 100 %</h3>
@@ -326,7 +326,7 @@
 	</section>
 
 	<h2>Économiser les ressources locales</h2>
-	<section type="chaine">
+	<section data-type="chaine">
 		<header>
 			<h3>De la Pâpire à la Locale</h3>
 			<p>La valeur ajoutée est toujours ultimement produite par la main-d'œuvre, une ressource économique fondamentale.</p>
@@ -337,12 +337,12 @@
 		</div>
 
 		<figure>
-			<diagram type="chain">
-				<agent type="consumer" name="Joey Joe Joe" paid="10" />
-				<product type="beer" name="La Locale ?" complete="" value="100%" />
-				<agent type="retailer" name="Dépanneur Commun" bought="0.66" value="1.14" goods="subunits" />
-				<agent type="manufacturer" name="Entrepôts Correct" value="0.39" bought="0.23" goods="subunits" />
-				<agent type="transformer" name="Brasserie Moyenne" value="4.96" local="1.30" foreign="1.22" goods="subunits" />
+			<diagram data-type="chain" heading="Proportions de la valeur ajoutée étrangère et locale">
+				<agent data-type="consumer" name="Joey Joe Joe" paid="10" />
+				<product data-type="beer" name="La Locale ?" complete="" value="100%" />
+				<agent data-type="retailer" name="Dépanneur Commun" bought="0.66" value="1.14" goods="subunits" />
+				<agent data-type="manufacturer" name="Entrepôts Correct" value="0.39" bought="0.23" goods="subunits" />
+				<agent data-type="transformer" name="Brasserie Moyenne" value="4.96" local="1.30" foreign="1.22" goods="subunits" />
 			</diagram>
 			<figcaption>Proportions de la valeur ajoutée étrangère et locale par une brasserie moyenne. Données de StatCan (2016)</figcaption>
 		</figure>
@@ -355,7 +355,7 @@
 		</div>
 		<p>Produire une bière 100% locale implique qu'on renonce à produire d'autres biens localement.</p>
 		<aside class="intervention">
-			<symbol type="emma" class="cartoon_henri animated" />
+			<symbol data-type="emma" class="cartoon_henri animated" />
 			<div>
 				<p>Si Henri et moi produisions du houblon québécois pour fournir la Locale, Henri ne pourrait plus produire de modèles économiques et je ne pourrais plus produire d'expériences interactives prétentieuses.
 			</p>
@@ -363,20 +363,20 @@
 		</aside>
 	</section>
 
-	<section type="observation">
+	<section data-type="observation">
 		<header>
 			<h3>Le coût d'opportunité</h3>
 			<small>Fait économique #02</small>
 		</header>
 		<p>Lorsqu'on alloue une ressource à un usage choisi, on exclut tous les autres usages possibles. On appelle ce principe économique, le <i data-wiki="Coût_d%27opportunité">coût d'opportunité</i>.</p>
 		<aside class="intervention">
-			<symbol type="henri" class="cartoon_henri animated" />
+			<symbol data-type="henri" class="cartoon_henri animated" />
 			<div>
 				<p>Le coût d'opportunité d'une ressource devient d'autant plus important que la ressource est rare. Pensez au temps que vous passez présentement à me lire. Qu'auriez-pu faire d'autre avec..?</p>
 			</div>
 		</aside>
 	</section>
-	<section type="chaine">
+	<section data-type="chaine">
 		<header>
 			<h3>La main-d'œuvre est limitée</h3>
 			<small>Comme toute autre ressource... à différents degrés</small>
@@ -385,7 +385,7 @@
 			<p>La main-d'œuvre locale est-elle effectivement rare ? En fait, regardez ci-bas, Joey Joe Joe. La main-d'œuvre disponible est en quantité insuffisante pour pouvoir produire localement tout ce que nous consommons.</p>
 		</div>
 		<figure>
-			<diagram type="macro"></diagram>
+			<diagram data-type="macro" heading="Travailleur.euses et production macroéconomique"></diagram>
 			<figcaption>Travailleur.euses et production macroéconomique. Trop peu de main-d'œuvre locale et disponible pour tout produire. Données StatCan (2019)</figcaption>
 		</figure>
 		<div class="prose">
@@ -393,7 +393,7 @@
 			<p>Une hausse substantielle du niveau général des prix en est une conséquence directe. Certains appelleraient cela « <i data-wiki="Inflation">inflation</i> ». </p>
 		</div>
 		<aside class="intervention">
-			<symbol type="henri" class="cartoon_henri animated" />
+			<symbol data-type="henri" class="cartoon_henri animated" />
 			<div>
 				<p>Ce contexte de rareté permet enfin de faire comprendre à quel point les travailleurs sont une ressource précieuse. Il est dans l’intérêt commun de leur permettre d’exprimer pleinement leur potentiel !</p>
 			</div>
@@ -410,21 +410,21 @@
 			<p><strong>Car acheter localement est seulement un moyen économique d’atteindre nos objectifs.</strong> Aucun moyen économique ne devrait être perçu comme un objectif en soi.</p>
 		</div>
 	</section>
-	<section type="observation">
+	<section data-type="observation">
 		<header>
 			<h3>Les objectifs</h3>
 			<small>Fait économique #03</small>
 		</header>
 		<p>Toute action économique est un moyen d’atteindre un objectif. Même l'action d'acheter local.</p>
 		<aside class="intervention">
-			<symbol type="henri" class="cartoon_henri animated" />
+			<symbol data-type="henri" class="cartoon_henri animated" />
 			<div>
 				<p>Mais encore, vos objectifs, Joey Joe Joe, s’ils sont multiples, pourraient aller à l’encontre les uns des autres. Accueillir une cimenterie enrichira probablement les agents locaux à la hauteur de son empreinte écologique. Il faudra à ce moment prioriser !</p>
 			</div>
 		</aside>
 	</section>
 	<h2>Objectifs &amp; conclusion</h2>
-	<section type="lecture">
+	<section data-type="lecture">
 		<header>
 			<h3>Objectifs et achat local</h3>
 			<p>Voici quelques objectifs pouvant, en certains cas, faire de l’achat local un moyen.</p>
@@ -434,7 +434,7 @@
 				<h4>💰 Enrichir les agents locaux</h4>
 				<details>
 					<summary>
-						<p><b>Les entreprises locales et leurs investisseur.e.s en bénéficieront particulièrement.</b></p>
+						<span><b>Les entreprises locales et leurs investisseur.seuses en bénéficieront particulièrement.</b></span>
 					</summary>
 					<p>Cet objectif repose sur la distribution locale de la valeur ajoutée. Si tel est votre objectif, vous feriez bien de laisser des entreprises à propriété locale produire là où le coût est le plus bas, sachant que la valeur ajoutée à l’étranger sera rapatriée ici, localement.</p>
 				</details>
@@ -443,7 +443,7 @@
 				<h4>🌱 Diminuer l’empreinte écologique</h4>
 				<details>
 					<summary>
-						<p><b>L’écosystème environnemental et les citoyen.ne.s en bénéficieront particulièrement.</b></p>
+						<span><b>L’écosystème environnemental et les citoyen.nes en bénéficieront particulièrement.</b></span>
 					</summary>
 					<p>Cet objectif repose sur la production de la valeur ajoutée et de son transport dans la chaîne. Il implique une analyse complexe de la pollution engendrée par la consommation finale. Il faut inspecter la chaîne économique complète et minimiser les externalités environnementales (les GES en sont un bon exemple). Certains biens pourraient laisser une moindre empreinte tout en étant produits à l’étranger alors que d’autres devraient être simplement rejetés.</p>
 				</details>
@@ -452,7 +452,7 @@
 				<h4>💪🏾 Créer des emplois</h4>
 				<details>
 					<summary>
-						<p><b>L’État et les travailleur.euses en bénéficieront particulièrement.</b></p>
+						<span><b>L’État et les travailleur.euses en bénéficieront particulièrement.</b></span>
 					</summary>
 					<p>Cet objectif repose aussi sur la production de la valeur ajoutée. Il demande qu’on choisisse les biens locaux étant les plus intensifs en termes de main-d’œuvre. Une usine de voitures Tesla entièrement robotisée s’installant à Pointe-aux-Trembles ne contribuera pas à l’atteinte de votre objectif. Ceci dit, considérant le marché du travail actuel, il serait mal-avisé de maintenir cet objectif en priorité.</p>
 				</details>
@@ -461,7 +461,7 @@
 				<h4>📈 Augmenter la productivité</h4>
 				<details>
 					<summary>
-						<p><b>L’État et les grandes entreprises en bénéficieront particulièrement.</b></p>
+						<span><b>L’État et les grandes entreprises en bénéficieront particulièrement.</b></span>
 					</summary>
 					<p>Toujours en termes de production de la valeur ajoutée, mais cette fois-ci, il serait très certainement bénéfique d’implanter une usine Tesla, entièrement automatisée. La quantité de valeur ajoutée par une seule travailleuse Tesla n’est sans commune mesure à la valeur ajoutée par un travailleur des champs. Créer des emplois et augmenter la productivité ne font généralement pas bon ménage.</p>
 				</details>
@@ -481,27 +481,27 @@
 			</ul>
 		</div>
 		<aside class="intervention">
-			<symbol type="emma" class="cartoon_henri animated" />
+			<symbol data-type="emma" class="cartoon_henri animated" />
 			<div>
 				<p>HA ! J'avais hâte d'arriver ici. Poser de bonnes questions est primordial, Joey Joe Joe ! Quand on pose de mauvaises questions, on se ramasse avec « faire rouler l'économie » comme réponse. Pis ça, ça veut juste rien dire tant qu'on sait pas vers où on roule !</p>
 			</div>
 		</aside>
 	</section>
-	<section type="observation">
+	<section data-type="observation">
 		<header>
 			<h3>L'information est clé</h3>
 			<small>Fait économique #finalfinalpromis</small>
 		</header>
 		<p>Pour bien choisir vos moyens économiques, il vous faut être informé.e. Et pour être informé.e, il vous faut poser les bonnes questions... aux bonnes personnes !</p>
 		<aside class="intervention">
-			<symbol type="robinson" class="cartoon_robinson animated" />
+			<symbol data-type="robinson" class="cartoon_robinson animated" />
 			<div>
 				<p>Étudier l’économie ne sert pas à acquérir des réponses toutes faites aux questions économiques mais plutôt à apprendre comment ne pas être trompé par les économistes.</p>
 				<br/>— <i data-wiki="Joan_Robinson">Joan Robinson</i>
 			</div>
 		</aside>
 	</section>
-	<section type="conclusion">
+	<section data-type="conclusion">
 		<header>
 			<h3>En conclusion (enfin)</h3>
 			<small>alors... quelle est la prochaine étape ?</small>
@@ -514,11 +514,10 @@
 		</div>
 		<p>Achetons local pour les bonnes raisons.<br />
 			<b>Soyons économes.</b></p>
-			<p></p>
 			<p><small>❤️<br />Marc-André &amp; Henri</small></p>
 	</section>
 	<h2>Post-mortem</h2>
-	<section type="question">
+	<section data-type="question">
 		<header>
 			<h3>Votre expérience Econome</h3>
 			<p>Merci de vous être rendu jusqu’ici, Joey Joe Joe ! C’est très apprécié.</p>
@@ -620,9 +619,9 @@
 			</fieldset>
 			<fieldset>
 				<p>Laissez-nous une appréciation libre de votre expérience</p>
-				<textarea id="" name="appreciation" cols="30" rows="10" placeholder="Marc-André, faut qu'on se parle..."></textarea>
+				<textarea aria-label="Laisser une appréciation libre" name="appreciation" cols="30" rows="10" placeholder="Marc-André, faut qu'on se parle..."></textarea>
 				<p>Bogues ?</p>
-				<textarea id="" name="bogues" cols="30" rows="10" placeholder="Marc-André, telle affaire était toute croche..."></textarea>
+				<textarea aria-label="Communiquer les bogues rencontrés" name="bogues" cols="30" rows="10" placeholder="Marc-André, telle affaire était toute croche..."></textarea>
 			</fieldset>
 
 		</form>

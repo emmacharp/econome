@@ -2,12 +2,8 @@
 <xsl:stylesheet version="1.0"
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 xmlns:svg="http://www.w3.org/2000/svg"
-xmlns:xlink="http://www.w3.org/1999/xlink"
-xmlns:msxsl="urn:schemas-microsoft-com:xslt"
-xmlns:ext="http://exslt.org/common"
 xmlns:str="http://exslt.org/strings"
-xmlns:math="http://exslt.org/math"
-exclude-result-prefixes="ext msxsl svg math str">
+exclude-result-prefixes="str">
 
 <xsl:include href="includes/diagram.xsl" />
 <xsl:include href="includes/symbol.xsl" />
@@ -33,13 +29,14 @@ exclude-result-prefixes="ext msxsl svg math str">
 
 	<xsl:template match="text()">
 		<xsl:variable name="text">
-			<xsl:for-each select="str:tokenize(., ' ')">
-				<xsl:value-of select="."/> 
-				<xsl:choose>
-					<xsl:when test="position() = last() - 1"><xsl:text> </xsl:text></xsl:when>
-					<xsl:otherwise><xsl:text> </xsl:text></xsl:otherwise>
-				</xsl:choose>
-			</xsl:for-each>
+			<!-- <xsl:for-each select="str:tokenize(., ' ')"> -->
+			<!-- 	<xsl:value-of select="."/> --> 
+			<!-- 	<xsl:choose> -->
+			<!-- 		<xsl:when test="position() = last() - 1"><xsl:text> </xsl:text></xsl:when> -->
+			<!-- 		<xsl:otherwise><xsl:text> </xsl:text></xsl:otherwise> -->
+			<!-- 	</xsl:choose> -->
+			<!-- </xsl:for-each> -->
+			<xsl:value-of select="." />
 		</xsl:variable>
 		<xsl:variable name="text-with-joey">
 			<xsl:choose>

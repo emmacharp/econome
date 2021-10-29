@@ -25,6 +25,14 @@
 		</xsl:call-template>
 	</xsl:template>
 
+	<xsl:template match="details[not(preceding::details)]" mode="include-once">
+		<xsl:call-template name="body-css">
+			<xsl:with-param name="content">
+				<link rel="stylesheet" href="assets/css/components/c-details.css"/>
+			</xsl:with-param>
+		</xsl:call-template>
+	</xsl:template>
+
 	<xsl:template match="*" mode="main-content"/>
 	<xsl:template match="section" mode="main-content">
 		<xsl:apply-templates select="." mode="include-once"/>

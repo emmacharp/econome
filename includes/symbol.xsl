@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ext="http://exslt.org/common" xmlns:serif="http://www.serif.com/" exclude-result-prefixes="ext svg">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ext="http://exslt.org/common" exclude-result-prefixes="ext svg xlink">
 
 	<xsl:variable name="svg-symbols">
 		<xsl:copy-of select="document('../symbols.svg')" />
@@ -17,7 +17,7 @@
 	</xsl:template>
 
 	<xsl:template match="symbol">
-		<xsl:apply-templates select="ext:node-set($svg-symbols)//svg:symbol[generate-id() = generate-id(key('symbol-type', current()/@type)[1])]">
+		<xsl:apply-templates select="ext:node-set($svg-symbols)//svg:symbol[generate-id() = generate-id(key('symbol-type', current()/@data-type)[1])]">
 			<xsl:with-param name="attr" select="@*[not(name() = 'type')]" />
 		</xsl:apply-templates>
 	</xsl:template>
@@ -26,13 +26,13 @@
 	</xsl:template>
 	<xsl:template match="section" mode="symbol-chooser">
 		<xsl:choose>
-			<xsl:when test="@type = 'observation'">
+			<xsl:when test="@data-type = 'observation'">
 				<xsl:text>svg-lightbulb-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="@type ='question'">
+			<xsl:when test="@data-type ='question'">
 				<xsl:text>svg-question-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="@type ='chaine'">
+			<xsl:when test="@data-type ='chaine'">
 				<xsl:text>svg-chainlink-symbol</xsl:text>
 			</xsl:when>
 			<xsl:otherwise>

@@ -163,8 +163,6 @@ main>section>.grille {
 main>section>div>article {
 	
 	--DivItemBasis: calc((85ch - 100%) * 999);
-   --DivItemMaxWidth: 30ch;
-	/* --DivItemShrink: 0; */
 	--DivItemGrow: 1;
 }
 

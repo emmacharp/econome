@@ -13,7 +13,7 @@
 }
 
 [id="wikiViewer"]>div {
-	max-width: 80ch;
+	max-width: 70ch;
 	background-color: var(--ColorLtBg);
 	margin: calc(var(--Row) * 2.5) var(--Row);
 	margin-left: auto;
@@ -58,11 +58,11 @@
 	--DivDisplay: block;
 }
 
-[id="wikiViewer"] [id="wikiDump"]>section {
+[id="wikiViewer"] [id="wikiDump"]>* {
 	padding-bottom: var(--Row);
 }
 
-[id="wikiViewer"] [id="wikiDump"]>section>:first-child {
+[id="wikiViewer"] [id="wikiDump"]>*>:first-child {
 	margin-top: var(--Row);
 }
 
@@ -91,7 +91,7 @@
 }
 
 [id="wikiViewer"] [id="wikiViewerClose"]:after {
-	font-size: 1.25rem;
+	font-size: 1rem;
 }
 
 [data-wiki]:after {
@@ -120,6 +120,10 @@ p [data-wiki]:after {
 
 [id="wikiViewer"] *+.toc {
 	margin-top: var(--Row);
+}
+
+[id="wikiViewer"] *+* {
+	margin-top: calc(var(--Row) * .5);
 }
 
 [id="wikiViewer"] .toc ul ul,
@@ -153,7 +157,7 @@ p [data-wiki]:after {
 [id="wikiViewer"] h2+*,
 [id="wikiViewer"] h3+*,
 [id="wikiViewer"] h4+* {
-	margin-top: calc(var(--Row) * .5);
+	margin-top: calc(var(--Row) * .125);
 }
 
 [id="wikiViewer"] .legend,

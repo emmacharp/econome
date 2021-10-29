@@ -2,6 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template name="head-css">
 		<link rel="stylesheet" href="assets/css/utilities/u-superdiv.css"/>
+		<link rel="stylesheet" href="assets/css/utilities/u-visually_hidden.css"/>
 
 		<link rel="stylesheet" href="assets/css/theme/t-library.css"/>
 		<link rel="stylesheet" href="assets/css/theme/t-config.css"/>
@@ -13,7 +14,6 @@
 
 		<!-- <link rel="stylesheet" href="assets/css/theme/t-dark_scheme.css" media="screen and (prefers-color-scheme: dark)" /> -->
 		<link rel="stylesheet" href="assets/css/components/c-cartoon_characters.css" />
-		<link rel="stylesheet" href="assets/css/components/c-details.css"/>
 
 		<link rel="stylesheet" href="assets/css/patterns/p-provenance.css"/>
 		<link rel="stylesheet" href="assets/css/patterns/p-type-emojis.css"/>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ext="http://exslt.org/common" exclude-result-prefixes="ext svg">
 
-	<xsl:key name="agent-type" match="agent" use="@type"/>
+	<xsl:key name="agent-type" match="agent" use="@data-type"/>
 
 	<xsl:variable name="product-file" select="document('product.xml', /)" />
 	<xsl:variable name="goods-file" select="document('goods.xml', /)" />
 	<xsl:variable name="macro-file" select="document('macro.xml', /)" />
 
-	<xsl:template match="@type" mode="data-translator">
+	<xsl:template match="@data-type" mode="data-translator">
 		<xsl:choose>
 			<xsl:when test=". = 'retailer'">
 				<xsl:text>depanneur</xsl:text>
@@ -74,7 +74,7 @@
 	</xsl:template>
 
 	<xsl:template match="@added|@value|@bought|@local|@foreign" mode="class-generator">
-		<xsl:variable name="is-transformer" select="boolean(ancestor::agent[@type = 'transformer'])" />
+		<xsl:variable name="is-transformer" select="boolean(ancestor::agent[@data-type = 'transformer'])" />
 
 		<xsl:variable name="nodes">
 			<xsl:choose>
@@ -82,7 +82,7 @@
 					<xsl:apply-templates select="." mode="data-translator" />
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:apply-templates select="ancestor::agent/@type" mode="data-translator" />
+					<xsl:apply-templates select="ancestor::agent/@data-type" mode="data-translator" />
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
@@ -111,13 +111,13 @@
 					<xsl:value-of select="$column-counter" />
 					<xsl:text>;</xsl:text>
 				</xsl:attribute>
-				<input type="checkbox" checked="" name="show-units" class="toggle-units" />
+				<input aria-label="Afficher ou masquer les unités" type="checkbox" checked="" name="show-units" class="toggle-units" />
 				<xsl:if test="$subunits">
-					<input type="checkbox" name="show-subunits" class="toggle-subunits" />
+					<input aria-label="Afficher ou masquer les sous-unités" type="checkbox" name="show-subunits" class="toggle-subunits" />
 				</xsl:if>
 				<xsl:choose>
 					<xsl:when test="local-name() = 'value'">
-						<xsl:apply-templates select="ext:node-set($file)//produit[@type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes]" mode="product-creator">
+						<xsl:apply-templates select="ext:node-set($file)//produit[@data-type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes]" mode="product-creator">
 							<xsl:with-param name="relative" select="not($is-transformer)" />
 							<xsl:with-param name="subunits" select="$subunits" />
 						</xsl:apply-templates>
@@ -129,13 +129,13 @@
 						</xsl:apply-templates>
 					</xsl:when>
 					<xsl:when test="local-name() = 'bought'">
-						<xsl:apply-templates select="ext:node-set($file)//produit[not(@type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes or local-name() = 'depense']" mode="product-creator">
+						<xsl:apply-templates select="ext:node-set($file)//produit[not(@data-type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes or local-name() = 'depense']" mode="product-creator">
 							<xsl:with-param name="relative" select="not($is-transformer)" />
 							<xsl:with-param name="subunits" select="$subunits" />
 						</xsl:apply-templates>
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:apply-templates select="ext:node-set($file)//produit[not(@type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes]" mode="product-creator">
+						<xsl:apply-templates select="ext:node-set($file)//produit[not(@data-type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes]" mode="product-creator">
 							<xsl:with-param name="relative" select="not($is-transformer)" />
 							<xsl:with-param name="subunits" select="$subunits" />
 						</xsl:apply-templates>
@@ -147,7 +147,7 @@
 				<xsl:if test="ancestor::agent[@goods]">
 					<xsl:choose>
 						<xsl:when test="local-name() = 'value'">
-							<xsl:apply-templates select="ext:node-set($file)//produit[@type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
+							<xsl:apply-templates select="ext:node-set($file)//produit[@data-type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
 								<xsl:with-param name="node-name" select="$nodes" />
 								<xsl:with-param name="relative" select="not($is-transformer)" />
 								<xsl:with-param name="subunits" select="$subunits" />
@@ -161,7 +161,7 @@
 								<xsl:with-param name="subunits" select="$subunits" />
 								<xsl:with-param name="total-dollars" select="." />
 							</xsl:apply-templates>
-							<xsl:apply-templates select="ext:node-set($file)//produit[@type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
+							<xsl:apply-templates select="ext:node-set($file)//produit[@data-type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
 								<xsl:with-param name="node-name" select="'ajout'" />
 								<xsl:with-param name="relative" select="not($is-transformer)" />
 								<xsl:with-param name="subunits" select="$subunits" />
@@ -169,7 +169,7 @@
 							</xsl:apply-templates>
 						</xsl:when>
 						<xsl:otherwise>
-							<xsl:apply-templates select="ext:node-set($file)//produit[not(@type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
+							<xsl:apply-templates select="ext:node-set($file)//produit[not(@data-type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
 								<xsl:with-param name="node-name" select="$nodes" />
 								<xsl:with-param name="relative" select="not($is-transformer)" />
 								<xsl:with-param name="subunits" select="$subunits" />
@@ -183,7 +183,7 @@
 	</xsl:template>
 
 	<xsl:template match="diagram/agent">
-		<section class="link agent {@type} {@class}">	
+		<div class="link agent {@data-type} {@class}">	
 			<xsl:if test="@goods|@paid|@value|@foreign|@local|@total|@bought|@added">
 				<aside>
 					<xsl:if test="@goods">
@@ -191,7 +191,7 @@
 							<xsl:text disable-output-escaping="yes">goods-list</xsl:text>
 						</xsl:attribute>
 					</xsl:if>
-					<section class="product {@type}">
+					<section class="product {@data-type}">
 						<xsl:apply-templates select="@added" mode="class-generator" />
 						<xsl:apply-templates select="@foreign" mode="class-generator" />
 						<xsl:apply-templates select="@value" mode="class-generator" />
@@ -203,12 +203,12 @@
 			</xsl:if>
 			<article>
 
-				<xsl:apply-templates select="ext:node-set($svg-symbols)//svg:symbol[generate-id() = generate-id(key('symbol-type', current()/@type)[1])]">
+				<xsl:apply-templates select="ext:node-set($svg-symbols)//svg:symbol[generate-id() = generate-id(key('symbol-type', current()/@data-type)[1])]">
 					<xsl:with-param name="class" select="'icon'" />
 				</xsl:apply-templates>
 				<h4><xsl:apply-templates select="@name" /></h4>
 			</article>
-		</section>
+		</div>
 	</xsl:template>
 
 	<xsl:template match="diagram/product" name="diagram-product">
@@ -243,13 +243,13 @@
 				</xsl:if>
 			</xsl:attribute>
 			<article>
-				<i class="icon {@type}"></i>
+				<i class="icon {@data-type}"></i>
 				<h4><xsl:value-of select="@name" /></h4>
 			</article>
 		</section>
 	</xsl:template>
 
-	<xsl:template match="diagram[@type = 'macro']" mode="ajax-diagrams">
+	<xsl:template match="diagram[@data-type = 'macro']" mode="ajax-diagrams">
 		<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))" />
 
 		<div id="{$id}" class="goods-list">
@@ -322,7 +322,7 @@
 		</xsl:call-template>
 	</xsl:template>
 
-	<xsl:template match="diagram[not(preceding::diagram[@type = 'chain'])]/@type[. = 'chain']" mode="include-once">
+	<xsl:template match="diagram[not(preceding::diagram[@data-type = 'chain'])]/@data-type[. = 'chain']" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
 				<link rel="stylesheet" href="assets/css/components/c-chain.css"/>
@@ -330,7 +330,7 @@
 		</xsl:call-template>
 		</xsl:template>
 
-		<xsl:template match="diagram[not(preceding::diagram[@type = 'macro'])]/@type[. = 'macro']" mode="include-once">
+		<xsl:template match="diagram[not(preceding::diagram[@data-type = 'macro'])]/@data-type[. = 'macro']" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
 				<link rel="stylesheet" href="assets/css/components/c-macro.css"/>
@@ -339,12 +339,14 @@
 	</xsl:template>
 
 	<xsl:template match="diagram">
-		<xsl:apply-templates select=".|@type" mode="include-once" />
+		<xsl:apply-templates select=".|@data-type" mode="include-once" />
 		<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))"></xsl:variable>
-		<article class="{@type} diagram" hx-get="diagrams.html" hx-select="#{$id}" hx-trigger="intersect once"></article>
+		<article class="{@data-type} diagram" data-hx-get="diagrams.html" data-hx-swap="beforeend" data-hx-select="#{$id}" data-hx-trigger="intersect once">
+			<h4 class="visually-hidden"><xsl:value-of select="@heading" /></h4>
+		</article>
 	</xsl:template>
 
-	<xsl:template match="diagram[@type = 'chain']" mode="ajax-diagrams">
+	<xsl:template match="diagram[@data-type = 'chain']" mode="ajax-diagrams">
 		<xsl:variable name="total-chain-links" select="@links" />
 		<xsl:variable name="actual-chain-links" select="count(agent)" />
 		<xsl:variable name="missing-links" select="$total-chain-links - $actual-chain-links" />
