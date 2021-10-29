@@ -12,7 +12,7 @@ figure figcaption {
 	text-align: center;
 	position: sticky;
 	transition-delay: 90ms;
-	margin-top: calc(var(--Row) * .5);
+	margin-top: var(--Row);
 	max-width: 98vw;
 	left: 0;
 	right: 0;
