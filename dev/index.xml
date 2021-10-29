@@ -164,7 +164,7 @@
 				<h4>👤 Vous, Joey Joe Joe</h4>
 				<details>
 					<summary>
-						<p><b>... êtes assoiffé. Vous rêvez d’une bonne Pâpire, bien froide.</b></p>
+						<span><b>... êtes assoiffé. Vous rêvez d’une bonne Pâpire, bien froide.</b></span>
 					</summary>
 					<p>En tant que <i data-wiki="Consommateur" data-sections="2">consommateur</i> votre action d'acheter détermine la constitution complète de la chaîne économique mise en branle. Cette fois-ci, le dépanneur Commun est l'heureux vendeur.</p>
 				</details>
@@ -173,7 +173,7 @@
 				<h4>🏪 Le dépanneur Commun</h4>
 				<details>
 					<summary>
-						<p><b>... au coin de votre rue, détient toujours une quantité suffisante de Pâpire.</b></p>
+						<span><b>... au coin de votre rue, détient toujours une quantité suffisante de Pâpire.</b></span>
 					</summary>
 					<p>En tant que <i data-wiki="Commerce_de_détail">détaillant</i>, il stocke une certaine quantité de Pâpire pour la vendre à de fins <em>connoisseurs</em> comme vous. La bière n’apparaît toutefois pas d’elle-même dans les réfrigérateurs de votre dépanneur Commun. Les Entrepôts Correct inc. s'en charge.</p>
 				</details>
@@ -182,7 +182,7 @@
 				<h4>🚚 Les Entrepôts Correct inc.</h4>
 				<details>
 					<summary>
-						<p><b>reçoit, entrepose puis transporte plusieurs palettes de Pâpire.</b></p>
+						<span><b>reçoit, entrepose puis transporte plusieurs palettes de Pâpire.</b></span>
 					</summary>
 					<p>En tant que <i data-wiki="Commerce_de_gros">grossiste</i> et <i data-wiki="Le_Transporteur" class="easter">transporteur</i>, il s’assure que votre Pâpire soit distribuée d'un point A à un point B. Un peu comme le dépanneur Commun au final. Le grossiste cependant entrepose de vastes quantités de Pâpire. Ce faisant, il permet à la brasserie Moyenne de produire de manière élargie.</p>
 				</details>
@@ -191,7 +191,7 @@
 				<h4>🏭 La brasserie Moyenne</h4>
 				<details>
 					<summary>
-						<p><b>brasse La Pâpire à votre grand plaisir.</b></p>
+						<span><b>brasse La Pâpire à votre grand plaisir.</b></span>
 					</summary>
 					<p>Le transformateur est un agent fondamental de la chaîne économique, celui qui se procure les <i data-wiki="Consommation_intermédiaire" data-sections="0">ingrédients</i> et les transforme en Pâpire. Bref, sans brasserie, pas de bonne bière !</p>
 				</details>
@@ -434,7 +434,7 @@
 				<h4>💰 Enrichir les agents locaux</h4>
 				<details>
 					<summary>
-						<p><b>Les entreprises locales et leurs investisseur.e.s en bénéficieront particulièrement.</b></p>
+						<span><b>Les entreprises locales et leurs investisseur.e.s en bénéficieront particulièrement.</b></span>
 					</summary>
 					<p>Cet objectif repose sur la distribution locale de la valeur ajoutée. Si tel est votre objectif, vous feriez bien de laisser des entreprises à propriété locale produire là où le coût est le plus bas, sachant que la valeur ajoutée à l’étranger sera rapatriée ici, localement.</p>
 				</details>
@@ -443,7 +443,7 @@
 				<h4>🌱 Diminuer l’empreinte écologique</h4>
 				<details>
 					<summary>
-						<p><b>L’écosystème environnemental et les citoyen.ne.s en bénéficieront particulièrement.</b></p>
+						<span><b>L’écosystème environnemental et les citoyen.ne.s en bénéficieront particulièrement.</b></span>
 					</summary>
 					<p>Cet objectif repose sur la production de la valeur ajoutée et de son transport dans la chaîne. Il implique une analyse complexe de la pollution engendrée par la consommation finale. Il faut inspecter la chaîne économique complète et minimiser les externalités environnementales (les GES en sont un bon exemple). Certains biens pourraient laisser une moindre empreinte tout en étant produits à l’étranger alors que d’autres devraient être simplement rejetés.</p>
 				</details>
@@ -452,7 +452,7 @@
 				<h4>💪🏾 Créer des emplois</h4>
 				<details>
 					<summary>
-						<p><b>L’État et les travailleur.euses en bénéficieront particulièrement.</b></p>
+						<span><b>L’État et les travailleur.euses en bénéficieront particulièrement.</b></span>
 					</summary>
 					<p>Cet objectif repose aussi sur la production de la valeur ajoutée. Il demande qu’on choisisse les biens locaux étant les plus intensifs en termes de main-d’œuvre. Une usine de voitures Tesla entièrement robotisée s’installant à Pointe-aux-Trembles ne contribuera pas à l’atteinte de votre objectif. Ceci dit, considérant le marché du travail actuel, il serait mal-avisé de maintenir cet objectif en priorité.</p>
 				</details>
@@ -461,7 +461,7 @@
 				<h4>📈 Augmenter la productivité</h4>
 				<details>
 					<summary>
-						<p><b>L’État et les grandes entreprises en bénéficieront particulièrement.</b></p>
+						<span><b>L’État et les grandes entreprises en bénéficieront particulièrement.</b></span>
 					</summary>
 					<p>Toujours en termes de production de la valeur ajoutée, mais cette fois-ci, il serait très certainement bénéfique d’implanter une usine Tesla, entièrement automatisée. La quantité de valeur ajoutée par une seule travailleuse Tesla n’est sans commune mesure à la valeur ajoutée par un travailleur des champs. Créer des emplois et augmenter la productivité ne font généralement pas bon ménage.</p>
 				</details>
