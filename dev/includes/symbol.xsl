@@ -17,7 +17,7 @@
 	</xsl:template>
 
 	<xsl:template match="symbol">
-		<xsl:apply-templates select="ext:node-set($svg-symbols)//svg:symbol[generate-id() = generate-id(key('symbol-type', current()/@type)[1])]">
+		<xsl:apply-templates select="ext:node-set($svg-symbols)//svg:symbol[generate-id() = generate-id(key('symbol-type', current()/@data-type)[1])]">
 			<xsl:with-param name="attr" select="@*[not(name() = 'type')]" />
 		</xsl:apply-templates>
 	</xsl:template>
@@ -26,13 +26,13 @@
 	</xsl:template>
 	<xsl:template match="section" mode="symbol-chooser">
 		<xsl:choose>
-			<xsl:when test="@type = 'observation'">
+			<xsl:when test="@data-type = 'observation'">
 				<xsl:text>svg-lightbulb-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="@type ='question'">
+			<xsl:when test="@data-type ='question'">
 				<xsl:text>svg-question-symbol</xsl:text>
 			</xsl:when>
-			<xsl:when test="@type ='chaine'">
+			<xsl:when test="@data-type ='chaine'">
 				<xsl:text>svg-chainlink-symbol</xsl:text>
 			</xsl:when>
 			<xsl:otherwise>

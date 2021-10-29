@@ -7,44 +7,44 @@ main>section>header:before {
 	margin-bottom: calc(var(--Row) * 2);
 }
 
-main>section[type="observation"]>header:before {
+main>section[data-type="observation"]>header:before {
 	filter: drop-shadow(0px 0px 60px yellow);
 }
 
 @media (min-width: 70ch) { /* LIÉ À L'ADAPTATION l-section-composition.css */
-	main>section[type="conclusion"]>header:before {
+	main>section[data-type="conclusion"]>header:before {
 		margin-left: -.75ch;
 	}
 }
 
-nav li[type="introduction"] a:before {
+nav li[data-type="introduction"] a:before {
 	content: "🏁";
 }
 
-nav li[type="observation"] a:before,
-main>section[type="observation"]>header:before {
+nav li[data-type="observation"] a:before,
+main>section[data-type="observation"]>header:before {
 	content: "💡";
 }
 
-nav li[type="conclusion"] a:before,
-main>section[type="conclusion"]>header:before {
+nav li[data-type="conclusion"] a:before,
+main>section[data-type="conclusion"]>header:before {
 	content: "🍾";
 }
 
-nav li:not([type]) a:before,
-nav li[type="lecture"] a:before,
-main>section:not([type])>header:before,
-main>section[type="lecture"]>header:before {
+nav li:not([data-type]) a:before,
+nav li[data-type="lecture"] a:before,
+main>section:not([data-type])>header:before,
+main>section[data-type="lecture"]>header:before {
 	content: "📖";
 }
 
-nav li[type="chaine"] a:before,
-main>section[type="chaine"]>header:before {
+nav li[data-type="chaine"] a:before,
+main>section[data-type="chaine"]>header:before {
 	content: "🧮";
 }
 
-nav li[type="question"] a:before,
-main>section[type="question"]>header:before {
+nav li[data-type="question"] a:before,
+main>section[data-type="question"]>header:before {
 	content: "✋";
 }
 
