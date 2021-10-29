@@ -33,6 +33,8 @@ jobs:
           cat dev/assets/js/* | uglifyjs -o build/assets/js/main.min.js
           cleancss -o build/assets/css/main.min.css dev/assets/css/build.css
           cleancss -o build/assets/css/theme.min.css dev/assets/css/theme/build.css
+          cleancss -o build/assets/css/utilities.min.css dev/assets/css/utilities/build.css
+          cleancss -o build/assets/css/patterns.min.css dev/assets/css/patterns/build.css
           xsltproc dev/index.xml > build/index.full.html
           xsltproc dev/goods.xml > build/goods.html
           xsltproc dev/diagrams.xsl dev/index.xml > build/diagrams.html
