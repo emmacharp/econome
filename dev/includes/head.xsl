@@ -2,7 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template name="head">
 		<head>
-			<title>E — Pourquoi acheter local ? </title>
+			<title>E : Pourquoi acheter local ? </title>
 
 			<meta name="apple-mobile-web-app-capable" content="yes"/>
 			<meta name="apple-mobile-web-app-status-bar-style" content="#ff0000"/>
