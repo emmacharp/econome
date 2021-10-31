@@ -138,13 +138,12 @@
 	}
 
 	const pushToWorker = (uid, key, value) => {
-		fetch('https://econome.io/worker/add', {
+		fetch('/worker/add', {
 			method: 'POST',
 			headers: {
 				'content-type': 'application/json',
 				'accept': 'application/json',
 			},
-			mode: 'no-cors',
 			body: JSON.stringify({
 				uid: uid, // The previously generated random user id
 				key: key,
