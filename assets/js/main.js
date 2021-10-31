@@ -14,7 +14,6 @@
 	const wiki = document.createElement('div');
 	const sessionUID = (Math.random() + 1).toString(36).substring(2);
 	const formFields = document.querySelectorAll('select, input, textarea');
-	console.log(formFields);
 
 	if (wikiDump) wikiDump.appendChild(wiki);
 
@@ -217,8 +216,10 @@
 		formFields.forEach((item) => {
 
 			item.addEventListener('change', function(event) {
-				const fieldName = event.target.getAttribute('name');
-				const fieldValue = event.target.getAttribute('value');
+				const fieldName = event.target.name;
+				const fieldValue = event.target.value;
+
+				console.log(sessionUID, fieldName, fieldValue);
 				pushToWorker(sessionUID, fieldName, fieldValue);
 			});
 		});
