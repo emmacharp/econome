@@ -55,6 +55,21 @@
 	main {
 		flex-grow: 1;
 	}
+
+	body>details {
+		position: fixed;
+		top: calc(var(--Row) * .75);
+		right: 0;
+		text-align: right;
+		z-index: 3;
+		margin-top: 0;
+	}
+}
+
+@media (max-width: 100ch) {
+	body>details>summary {
+		font-size: 0;
+	}
 }
 
 @media (orientation: portrait) {

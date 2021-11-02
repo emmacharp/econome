@@ -1,0 +1,29 @@
+:root {
+	--Color: black;
+	--ColorDk: black;
+	--ColorLt: black;
+
+	--ColorBg: white;
+	--ColorLtBg: white;
+	--ColorBgAlt: white;
+	/* --ColorLtBgAlt: var(--dk-brown); */
+	
+	--ColorLines: black;
+	
+	/* --ColorSupport: var(--dk-beige); */
+	--ColorLtSupport: lightcyan;
+	--ColorAccent: black;
+	--ColorDkAccent: black;
+	--ColorSupport: black;
+	--ColorForeign: var(--red);
+	--ColorLocal: var(--blue);
+	--ColorControls: black;
+	--ColorComplete: var(--lt-green);
+	--ColorIncomplete: var(--lt-red);
+	--ColorActive: var(--lt-yellow);
+
+	--ColorBgControls: white;
+	--ColorBgComplete: lightgrey;
+	--ColorBgIncomplete: white;
+	--ColorBgActive: white;
+}

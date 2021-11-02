@@ -12,15 +12,21 @@
 		<link rel="stylesheet" href="assets/css/theme/t-special.css"/>
 		<link rel="stylesheet" href="assets/css/theme/t-controls.css"/>
 
-		<!-- <link rel="stylesheet" href="assets/css/theme/t-dark_scheme.css" media="screen and (prefers-color-scheme: dark)" /> -->
+		<link rel="stylesheet" href="assets/css/theme/t-light_scheme.css" media="screen" />
+		<link id="sheetLightScheme" rel="stylesheet" href="assets/css/theme/t-light_scheme.css" media="screen and (prefers-color-scheme: light)" />
+		<link id="sheetDarkScheme" rel="stylesheet" href="assets/css/theme/t-dark_scheme.css" media="screen and (prefers-color-scheme: dark)" />
+		<link id="sheetDarkHighContrast" rel="stylesheet" href="assets/css/theme/t-dark-high_contrast.css" media="screen and (prefers-contrast: high) and (prefers-color-scheme: dark)" />
+		<link id="sheetLightHighContrast" rel="stylesheet" href="assets/css/theme/t-light-high_contrast.css" media="screen and (prefers-contrast: high) and (prefers-color-scheme:light)" />
+		<link id="sheetAnimations" rel="stylesheet" href="assets/css/patterns/p-section_visibility-transitions.css" media="not(prefers-reduced-motion: reduced)" />
+
 		<link rel="stylesheet" href="assets/css/components/c-cartoon_characters.css" />
 
 		<link rel="stylesheet" href="assets/css/patterns/p-provenance.css"/>
 		<link rel="stylesheet" href="assets/css/patterns/p-type-emojis.css"/>
 		<link rel="stylesheet" href="assets/css/patterns/p-auto_line-height.css"/>
-		<!-- <link rel="stylesheet" href="assets/css/patterns/p-section_visibility-transitions.css" /> -->
 
 		<link rel="stylesheet" href="assets/css/layout/l-master_composition.css"/>
+		<link rel="stylesheet" href="assets/css/x-quarantine.css"/>
 		</xsl:template>
 
 		<xsl:template name="body-css">
