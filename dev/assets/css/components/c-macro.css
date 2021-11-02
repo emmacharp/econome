@@ -1,3 +1,7 @@
+.diagram.macro {
+	pointer-events: none;
+}
+
 .diagram.macro>div {
 	flex-wrap: nowrap;
 	position: relative;
