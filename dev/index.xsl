@@ -36,7 +36,6 @@ exclude-result-prefixes="str">
 					<xsl:otherwise><xsl:text> </xsl:text></xsl:otherwise>
 				</xsl:choose>
 			</xsl:for-each>
-			<xsl:value-of select="." />
 		</xsl:variable>
 		<xsl:variable name="text-with-joey">
 			<xsl:choose>
