@@ -34,7 +34,7 @@
 			</aside>
 		</div>
 				<div class="prose">
-					<p>Nous sommes deux amis qui désirent utiliser la science économique pour expliquer les comportements et leurs conséquences possibles, sans juger des décision de tout à chacun. Vos et nos décisions nous appartiennent.</p>
+					<p>Nous sommes deux amis qui désirent utiliser la science économique pour expliquer les comportements et leurs conséquences possibles, sans juger des décisions de tout à chacun. Vos et nos décisions nous appartiennent.</p>
 				</div>
 	</section>
 	<section data-type="question">
@@ -157,11 +157,11 @@
 				<agent data-type="manufacturer" name="Entrepôts Correct" />
 				<agent data-type="transformer" name="Brasserie Moyenne" />
 			</diagram>
-			<figcaption>Représentation d'une chaîne typique d'un achat de bière générique.</figcaption>
+			<figcaption><p>Représentation d'une chaîne typique d'un achat de bière générique.</p></figcaption>
 		</figure>
 		<div class="grille">
 			<article>
-				<h4>👤 Vous, Joey Joe Joe</h4>
+				<h4><i>👤</i> Vous, Joey Joe Joe</h4>
 				<details>
 					<summary>
 						<span><b>... êtes assoiffé. Vous rêvez d’une bonne Pâpire, bien froide.</b></span>
@@ -170,7 +170,7 @@
 				</details>
 			</article>
 			<article>
-				<h4>🏪 Le dépanneur Commun</h4>
+				<h4><i>🏪</i> Le dépanneur Commun</h4>
 				<details>
 					<summary>
 						<span><b>... au coin de votre rue, détient toujours une quantité suffisante de Pâpire.</b></span>
@@ -179,7 +179,7 @@
 				</details>
 			</article>
 			<article>
-				<h4>🚚 Les Entrepôts Correct inc.</h4>
+				<h4><i>🚚</i> Les Entrepôts Correct inc.</h4>
 				<details>
 					<summary>
 						<span><b>reçoit, entrepose puis transporte plusieurs palettes de Pâpire.</b></span>
@@ -188,7 +188,7 @@
 				</details>
 			</article>
 			<article>
-				<h4>🏭 La brasserie Moyenne</h4>
+				<h4><i>🏭</i> La brasserie Moyenne</h4>
 				<details>
 					<summary>
 						<span><b>brasse La Pâpire à votre grand plaisir.</b></span>
@@ -240,7 +240,22 @@
 				<agent data-type="manufacturer" name="Entrepôts Correct" added="0.62" goods="" />
 				<agent data-type="transformer" name="Brasserie Moyenne" added="7.58" goods="" />
 			</diagram>
-			<figcaption>Répartition de 10 $ de valeur ajoutée à travers la chaîne. Données de StatCan (2016).</figcaption>
+			<figcaption>
+				<div>
+					<div>
+						<h5><i>🧮</i> Diagramme #02</h5>
+					<p>Répartition de 10 $ de valeur ajoutée à travers la chaîne. Données de StatCan (2016).</p>
+					</div>
+					<section>
+						<h5><i>✨</i> Légende</h5>
+						<p>Chaque icône représente une activité ajoutant de la valeur. La quantité d'un même icône représente sa proportion estimée dans le total.</p>
+					</section>
+					<section>
+						<h5><i>👉</i> Interactivité</h5>
+						<p><b>Vous pouvez survoler/taper les icônes pour afficher le nom de l'activité et sa valeur ajoutée en dollars.</b></p>
+					</section>
+				</div>
+			</figcaption>
 		</figure>
 		<div class="prose">
 			<p>En achetant 10 $ de Pâpire, vous achetez 10 $ de valeur ajoutée par la chaîne. Et comment cette « valeur » est-elle ajoutée, vous demandez-vous ?<br />Bon point.</p>
@@ -265,7 +280,22 @@
 				<agent data-type="manufacturer" name="Entrepôts Correct" value="0.39" bought="0.23" goods="" />
 				<agent data-type="transformer" name="Brasserie Moyenne" value="4.96" bought="2.52" goods="" />
 			</diagram>
-			<figcaption>Proportions de valeur ajoutée directe et indirecte. Données de StatCan (2016)</figcaption>
+			<figcaption>
+				<div class="grille">
+					<div>
+						<h5><i>🧮</i> Diagramme #03</h5>
+						<p>Proportions de valeur ajoutée achetée et créée dans la chaîne. Données de StatCan (2016)</p>
+					</div>
+					<section>
+						<h5><i>✨</i> Légende</h5>
+						<p>La valeur achetée correspond aux biens et services fournis aux agents (électricité, loyer, houblon, etc.). La valeur créée correspond à la rémunération des facteurs de production engagés (salaires, taxes, bénéfices, dividendes, etc.)</p>
+					</section>
+					<section>
+						<h5><i>👉</i> Interactivité</h5>
+						<p><b>Vous pouvez survoler/taper les icônes pour afficher le nom de l'activité et sa valeur ajoutée en dollars.</b></p>
+					</section>
+				</div>
+			</figcaption>
 		</figure>
 
 		<div class="prose">
@@ -344,7 +374,22 @@
 				<agent data-type="manufacturer" name="Entrepôts Correct" value="0.39" bought="0.23" goods="subunits" />
 				<agent data-type="transformer" name="Brasserie Moyenne" value="4.96" local="1.30" foreign="1.22" goods="subunits" />
 			</diagram>
-			<figcaption>Proportions de la valeur ajoutée étrangère et locale par une brasserie moyenne. Données de StatCan (2016)</figcaption>
+			<figcaption>
+				<div class="grille">
+					<section>
+						<h5><i>🧮</i> Diagramme #04</h5>
+						<p>Proportions de la valeur ajoutée étrangère et locale par une brasserie moyenne. Données de StatCan (2016)</p>
+					</section>
+					<section>
+						<h5><i>✨</i> Légende</h5>
+						<p>La section <span class="foreign">rouge</span> représente la valeur ajoutée <span class="foreign">à l'étranger</span>. La section <span class="local">bleue</span> représente la valeur ajoutée <span class="local">localement</span>. Seule la brasserie est ainsi divisée ici.</p>
+					</section>
+					<section>
+						<h5><i>👉</i> Interactivité</h5>
+						<p><b>Survolez/tapez les icônes pour afficher le nom de l'activité et sa valeur ajoutée en dollars. Accédez à des activités supplémentaires, à faible proportion, en appuyant sur le bouton « + »</b></p>
+					</section>
+				</div>
+			</figcaption>
 		</figure>
 		<div class="prose">
 
@@ -386,7 +431,22 @@
 		</div>
 		<figure>
 			<diagram data-type="macro" heading="Travailleur.euses et production macroéconomique"></diagram>
-			<figcaption>Travailleur.euses et production macroéconomique. Trop peu de main-d'œuvre locale et disponible pour tout produire. Données StatCan (2019)</figcaption>
+			<figcaption>
+				<div class="grille">
+					<section>
+						<h5><i>🧮</i> Diagramme #05</h5>
+						<p>Travailleur.euses et production macroéconomique. Trop peu de main-d'œuvre locale et disponible pour tout produire. Données StatCan (2019)</p>
+					</section>
+					<section>
+						<h5><i>✨</i> Légende</h5>
+						<p>Chaque icône représente une même quantité. Au-dessus, la consommation totale du Québec est représentée ; au-dessous, la main-d'œuvre nécessaire à la production des biens et services consommés. <span class="foreign">En rouge, la consommation importée et la production exportée</span>. <span class="local">En bleu, la consommation et la main-d'œuvre locale au Québec</span>. En gris, la main-d'œuvre disponible localement.</p>
+					</section>
+					<section>
+						<h5><i>👉</i> Interactivité</h5>
+						<p><b>Survolez/tapez les icônes pour afficher le nom du secteur d'activité.</b></p><p><b>Survolez/tapez les icônes au bas du diagramme pour comparer la main-d'œuvre localement disponible à la main-d'œuvre employée à l'étranger.</b></p>
+					</section>
+				</div>
+			</figcaption>
 		</figure>
 		<div class="prose">
 			<p><b>La rareté de la main-d’œuvre locale implique qu’on doive la soutirer d’autres entreprises voire d'autres industries qui perpétueront à leur tour le cycle de rareté.</b></p>
@@ -431,7 +491,7 @@
 		</header>
 		<div class="grille">
 			<article>
-				<h4>💰 Enrichir les agents locaux</h4>
+				<h4><i>💰</i> Enrichir les agents locaux</h4>
 				<details>
 					<summary>
 						<span><b>Les entreprises locales et leurs investisseur.seuses en bénéficieront particulièrement.</b></span>
@@ -440,7 +500,7 @@
 				</details>
 			</article>
 			<article>
-				<h4>🌱 Diminuer l’empreinte écologique</h4>
+				<h4><i>🌱</i> Diminuer l’empreinte écologique</h4>
 				<details>
 					<summary>
 						<span><b>L’écosystème environnemental et les citoyen.nes en bénéficieront particulièrement.</b></span>
@@ -449,7 +509,7 @@
 				</details>
 			</article>
 			<article>
-				<h4>💪🏾 Créer des emplois</h4>
+				<h4><i>💪</i>🏾 Créer des emplois</h4>
 				<details>
 					<summary>
 						<span><b>L’État et les travailleur.euses en bénéficieront particulièrement.</b></span>
@@ -458,7 +518,7 @@
 				</details>
 			</article>
 			<article>
-				<h4>📈 Augmenter la productivité</h4>
+				<h4><i>📈</i> Augmenter la productivité</h4>
 				<details>
 					<summary>
 						<span><b>L’État et les grandes entreprises en bénéficieront particulièrement.</b></span>
@@ -516,6 +576,7 @@
 			<b>Soyons économes.</b></p>
 			<p><small>❤️<br />Marc-André &amp; Henri</small></p>
 	</section>
+	<!-- EVALUTION ! Pourcentage de complétion. Easter Egg -->
 	<h2>Post-mortem</h2>
 	<section data-type="question">
 		<header>
@@ -581,6 +642,10 @@
 						<span>Pas sûr.</span>
 					</label>
 				</div>
+			</fieldset>
+			<fieldset>
+				<p>Aimeriez-vous qu'on vous avise de la sortie de notre prochain exposé ?</p>
+				<input type="email" />
 			</fieldset>
 			<fieldset>
 				<p>Vous intéressez vous à l’économie ?</p>
