@@ -18,30 +18,38 @@ figure figcaption {
 	right: 0;
 }
 
-figure figcaption:before {
-	content: "i";
-	font-weight: 700;
-	color: var(--Color);
-	display: flex;
-	position: absolute;
-	margin: auto;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	align-items: center;
-	justify-content: center;
-	width: 1.5em;
-	height: 1.5em;
-	border-radius: 50%;
-	background-color: var(--ColorBgAlt);
-	transition-delay: inherit;
+figure figcaption>* {
+	text-align: left;
 }
 
-figure:hover figcaption:before {
-	opacity: 0;
+figure figcaption>p {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-figure:not(:hover) figcaption {
-	color: transparent;
+figure figcaption>div {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: max-content;
+	align-items: flex-start;
 }
+
+figure figcaption *+p {
+	margin-top: calc(var(--Row) * .25);
+}
+
+figure figcaption>div>* {
+	max-width: 40ch;
+}
+
+figure figcaption>div>:first-child {
+	max-width: 25ch;
+}
+
+figure figcaption>div>:nth-child(2):last-child {
+	max-width: 75ch;
+}
+
+
+
