@@ -76,12 +76,12 @@
 		margin-left: calc(-1 * var(--Row) * .5);
 		background-color: var(--ColorLtBg);
 		border-radius: 50%;
-		box-shadow: 0px 2px 2px var(--ltst-primary);
+		box-shadow: 0px 2px 2px var(--ColorLtBg);
 	}
 
 	main>section>aside:hover>svg {
 		border-right-color: transparent;
-		box-shadow: -1px 2px 1px var(--ltst-primary);
+		box-shadow: -1px 2px 1px var(--ColorLtBg);
 	}
 
 	main>section>aside>div {
@@ -92,7 +92,7 @@
 		padding-left: 40px;
 		border-radius: 8px;
 		border-top-left-radius: 30px;
-		box-shadow: 0px 2px 3px var(--ltst-primary);
+		box-shadow: 0px 2px 3px var(--ColorLtBg);
 	}
 
 	main>section>* aside:not(:only-of-type):first-of-type {
