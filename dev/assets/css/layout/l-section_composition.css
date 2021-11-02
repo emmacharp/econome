@@ -10,7 +10,7 @@
 	}
 
 	main>section>header>h3,
-  	main>section fieldset p {
+	main>section fieldset p {
 		max-width: 30ch;
 	}
 
@@ -23,7 +23,10 @@
 		max-width: 70ch;
 	}
 
-
+	main>section>figure {
+		margin-top: calc(var(--Row) * 2);
+		margin-bottom: calc(var(--Row) * 2);
+	}
 }
 
 @media (orientation: portrait) {
