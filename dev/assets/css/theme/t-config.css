@@ -21,42 +21,21 @@
 		--lt-blue: #A0C5FF;
 		--tr-blue: #80F3FF4F;
 		--red: #FF0003;
-		--lt-red: #ffd9f0;
+		--lt-red: #ffbdcc;
 		--dk-red: #721E42;
 		--yellow: #FCF0AA;
 		--lt-yellow: #f7f3db;
-		--dk-yellow: #99804D;
+		--dk-yellow: #684806;
 		--purple: #7a0098;
 		--tr-purple: #ED6BFF1F;
 		--lt-purple: #fceaff;
 		--ltr-purple: #C8CBF6;
+		--dk-purple: #543758;
 		--beige: #fffff7;
 		--dk-beige: #fdfff0;
 		--green: #c8ef8e;
 		--lt-green: #dfff5e;
 		--dk-green: #729764;
-
-		--Color: var(--primary);
-		--ColorDk: var(--dk-primary);
-		--ColorBg: var(--lt-yellow);
-		--ColorLtBg: var(--beige);
-		--ColorBgAlt: var(--tr-blue);
-		--ColorLtBgAlt: var(--dk-beige);
-		--ColorLines: var(--ltst-primary);
-		--ColorLocal: var(--blue);
-		--ColorForeign: var(--red);
-		--ColorSupport: var(--purple);
-		--ColorLtSupport: var(--lt-purple);
-		--ColorAccent: var(--lt-purple);
-		--ColorDkAccent: var(--dk-yellow);
-		--ColorBgControls: var(--yellow);
-		--ColorControls: var(--lt-brown);
-		--ColorBgComplete: var(--lt-green);
-		--ColorBgIncomplete: var(--lt-red);
-		--ColorBgActive: var(--Color);
-		--ColorComplete: var(--dk-green);
-		--ColorIncomplete: var(--dk-red);
-		--ColorActive: var(--lt-purple);
 	}
 
 /* Propriétés supplémentaires configurables */
