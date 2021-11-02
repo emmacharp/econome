@@ -117,7 +117,7 @@
 				</xsl:if>
 				<xsl:choose>
 					<xsl:when test="local-name() = 'value'">
-						<xsl:apply-templates select="ext:node-set($file)//produit[@data-type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes]" mode="product-creator">
+						<xsl:apply-templates select="ext:node-set($file)//produit[@type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes]" mode="product-creator">
 							<xsl:with-param name="relative" select="not($is-transformer)" />
 							<xsl:with-param name="subunits" select="$subunits" />
 						</xsl:apply-templates>
@@ -129,13 +129,13 @@
 						</xsl:apply-templates>
 					</xsl:when>
 					<xsl:when test="local-name() = 'bought'">
-						<xsl:apply-templates select="ext:node-set($file)//produit[not(@data-type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes or local-name() = 'depense']" mode="product-creator">
+						<xsl:apply-templates select="ext:node-set($file)//produit[not(@type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes or local-name() = 'depense']" mode="product-creator">
 							<xsl:with-param name="relative" select="not($is-transformer)" />
 							<xsl:with-param name="subunits" select="$subunits" />
 						</xsl:apply-templates>
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:apply-templates select="ext:node-set($file)//produit[not(@data-type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes]" mode="product-creator">
+						<xsl:apply-templates select="ext:node-set($file)//produit[not(@type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes]" mode="product-creator">
 							<xsl:with-param name="relative" select="not($is-transformer)" />
 							<xsl:with-param name="subunits" select="$subunits" />
 						</xsl:apply-templates>
@@ -147,7 +147,7 @@
 				<xsl:if test="ancestor::agent[@goods]">
 					<xsl:choose>
 						<xsl:when test="local-name() = 'value'">
-							<xsl:apply-templates select="ext:node-set($file)//produit[@data-type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
+							<xsl:apply-templates select="ext:node-set($file)//produit[@type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
 								<xsl:with-param name="node-name" select="$nodes" />
 								<xsl:with-param name="relative" select="not($is-transformer)" />
 								<xsl:with-param name="subunits" select="$subunits" />
@@ -161,7 +161,7 @@
 								<xsl:with-param name="subunits" select="$subunits" />
 								<xsl:with-param name="total-dollars" select="." />
 							</xsl:apply-templates>
-							<xsl:apply-templates select="ext:node-set($file)//produit[@data-type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
+							<xsl:apply-templates select="ext:node-set($file)//produit[@type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
 								<xsl:with-param name="node-name" select="'ajout'" />
 								<xsl:with-param name="relative" select="not($is-transformer)" />
 								<xsl:with-param name="subunits" select="$subunits" />
@@ -169,7 +169,7 @@
 							</xsl:apply-templates>
 						</xsl:when>
 						<xsl:otherwise>
-							<xsl:apply-templates select="ext:node-set($file)//produit[not(@data-type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
+							<xsl:apply-templates select="ext:node-set($file)//produit[not(@type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
 								<xsl:with-param name="node-name" select="$nodes" />
 								<xsl:with-param name="relative" select="not($is-transformer)" />
 								<xsl:with-param name="subunits" select="$subunits" />
