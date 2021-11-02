@@ -1,3 +1,7 @@
+.diagram.macro {
+	pointer-events: none;
+}
+
 .diagram.macro>div {
 	flex-wrap: nowrap;
 	position: relative;
@@ -19,7 +23,7 @@
 	text-align: center;
     grid-column: 1 / 99; /* Nombre ridicule pour toujours aller jusqu'au bout. ne peut pas utiliser de GAP ! */
 	 grid-row: 2;
-	 color: var(--dk-primary);
+	 color: var(--ColorDk);
 	 pointer-events: none;
 	 margin-top: calc(var(--Row) * .5);
 	 margin-bottom: calc(var(--Row) * .5);
@@ -90,6 +94,6 @@
 }
 
 .diagram.macro:hover section:not(:hover) svg {
-	color: var(--ltr-primary);
+	color: var(--ColorLt);
 }
 

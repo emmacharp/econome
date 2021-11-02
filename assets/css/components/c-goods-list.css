@@ -44,7 +44,7 @@
 }
 
 .goods-list .subunit>svg {
-	transition: 220ms var(--ease-out-back);	
+	transition: 220ms var(--ease-out);
 	transition-property: height, width, padding, opacity;
 }
 

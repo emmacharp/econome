@@ -29,13 +29,13 @@ exclude-result-prefixes="str">
 
 	<xsl:template match="text()">
 		<xsl:variable name="text">
-			<!-- <xsl:for-each select="str:tokenize(., ' ')"> -->
-			<!-- 	<xsl:value-of select="."/> --> 
-			<!-- 	<xsl:choose> -->
-			<!-- 		<xsl:when test="position() = last() - 1"><xsl:text> </xsl:text></xsl:when> -->
-			<!-- 		<xsl:otherwise><xsl:text> </xsl:text></xsl:otherwise> -->
-			<!-- 	</xsl:choose> -->
-			<!-- </xsl:for-each> -->
+			<xsl:for-each select="str:tokenize(., ' ')">
+				<xsl:value-of select="."/> 
+				<xsl:choose>
+					<xsl:when test="position() = last() - 1"><xsl:text> </xsl:text></xsl:when>
+					<xsl:otherwise><xsl:text> </xsl:text></xsl:otherwise>
+				</xsl:choose>
+			</xsl:for-each>
 			<xsl:value-of select="." />
 		</xsl:variable>
 		<xsl:variable name="text-with-joey">

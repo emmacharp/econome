@@ -17,13 +17,13 @@ exclude-result-prefixes="str">
 
 	<xsl:template match="text()">
 		<xsl:variable name="text">
-			<!-- <xsl:for-each select="str:tokenize(., ' ')"> -->
-			<!-- 	<xsl:value-of select="."/> --> 
-			<!-- 	<xsl:choose> -->
-			<!-- 		<xsl:when test="position() = last() - 1"><xsl:text> </xsl:text></xsl:when> -->
-			<!-- 		<xsl:otherwise><xsl:text> </xsl:text></xsl:otherwise> -->
-			<!-- 	</xsl:choose> -->
-			<!-- </xsl:for-each> -->
+			<xsl:for-each select="str:tokenize(., ' ')">
+				<xsl:value-of select="."/> 
+				<xsl:choose>
+					<xsl:when test="position() = last() - 1"><xsl:text> </xsl:text></xsl:when>
+					<xsl:otherwise><xsl:text> </xsl:text></xsl:otherwise>
+				</xsl:choose>
+			</xsl:for-each>
 			<xsl:value-of select="." />
 		</xsl:variable>
 		<xsl:variable name="text-with-joey">
@@ -96,15 +96,21 @@ exclude-result-prefixes="str">
 		<link rel="stylesheet" href="assets/css/theme/t-special.css"/>
 		<link rel="stylesheet" href="assets/css/theme/t-controls.css"/>
 
-		<!-- <link rel="stylesheet" href="assets/css/theme/t-dark_scheme.css" media="screen and (prefers-color-scheme: dark)" /> -->
+		<link rel="stylesheet" href="assets/css/theme/t-light_scheme.css" media="screen" />
+		<link id="sheetLightScheme" rel="stylesheet" href="assets/css/theme/t-light_scheme.css" media="screen and (prefers-color-scheme: light)" />
+		<link id="sheetDarkScheme" rel="stylesheet" href="assets/css/theme/t-dark_scheme.css" media="screen and (prefers-color-scheme: dark)" />
+		<link id="sheetDarkHighContrast" rel="stylesheet" href="assets/css/theme/t-dark-high_contrast.css" media="screen and (prefers-contrast: high) and (prefers-color-scheme: dark)" />
+		<link id="sheetLightHighContrast" rel="stylesheet" href="assets/css/theme/t-light-high_contrast.css" media="screen and (prefers-contrast: high) and (prefers-color-scheme:light)" />
+		<link id="sheetAnimations" rel="stylesheet" href="assets/css/patterns/p-section_visibility-transitions.css" media="not(prefers-reduced-motion: reduced)" />
+
 		<link rel="stylesheet" href="assets/css/components/c-cartoon_characters.css" />
 
 		<link rel="stylesheet" href="assets/css/patterns/p-provenance.css"/>
 		<link rel="stylesheet" href="assets/css/patterns/p-type-emojis.css"/>
 		<link rel="stylesheet" href="assets/css/patterns/p-auto_line-height.css"/>
-		<!-- <link rel="stylesheet" href="assets/css/patterns/p-section_visibility-transitions.css" /> -->
 
 		<link rel="stylesheet" href="assets/css/layout/l-master_composition.css"/>
+		<link rel="stylesheet" href="assets/css/x-quarantine.css"/>
 		</xsl:template>
 
 		<xsl:template name="body-css">
@@ -122,6 +128,37 @@ exclude-result-prefixes="str">
 			<xsl:apply-templates select=".//details" mode="include-once"/>
 			<xsl:call-template name="internal-navigation"/>
 			<xsl:call-template name="main-content"/>
+			<link rel="stylesheet" href="assets/css/components/c-customizer_menu.css"/>
+			<details id="customizerMenu">
+				<summary><span>Préférences</span></summary>
+				<menu>
+					<li>
+							<div>
+								<small>Zoom</small>
+								<input type="number" name="zoom" value="1" min="0.1" max="2.0" step="0.1" />
+							</div>
+					</li>
+					<li>
+							<div>
+							<small>Thème</small>
+								<label><input type="radio" name="theme" value="light"/><span>clair</span></label>
+								<label><input type="radio" name="theme" value="auto" checked="" /><span>auto</span></label>
+								<label><input type="radio" name="theme" value="dark"/><span>sombre</span></label>
+							</div>
+					</li>
+					<li>
+							<div>
+								<small>Animations</small>
+								<label><input type="radio" name="animations" value="on"/><span>oui</span></label>
+								<label><input type="radio" name="animations" value="auto" checked=""/><span>auto</span></label>
+								<label><input type="radio" name="animations" value="off"/><span>non</span></label>
+							</div>
+					</li>
+					<li>
+						<label><span>Activer le mode de contraste élevé</span><input type="checkbox" name="contrast"/></label>
+					</li>
+				</menu>
+			</details>
 			<xsl:apply-templates select="footer" />
 			<xsl:call-template name="wiki-viewer"/>
 			<xsl:call-template name="svg-elements"/>
@@ -247,7 +284,7 @@ exclude-result-prefixes="str">
 				</xsl:if>
 				<xsl:choose>
 					<xsl:when test="local-name() = 'value'">
-						<xsl:apply-templates select="ext:node-set($file)//produit[@data-type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes]" mode="product-creator">
+						<xsl:apply-templates select="ext:node-set($file)//produit[@type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes]" mode="product-creator">
 							<xsl:with-param name="relative" select="not($is-transformer)" />
 							<xsl:with-param name="subunits" select="$subunits" />
 						</xsl:apply-templates>
@@ -259,13 +296,13 @@ exclude-result-prefixes="str">
 						</xsl:apply-templates>
 					</xsl:when>
 					<xsl:when test="local-name() = 'bought'">
-						<xsl:apply-templates select="ext:node-set($file)//produit[not(@data-type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes or local-name() = 'depense']" mode="product-creator">
+						<xsl:apply-templates select="ext:node-set($file)//produit[not(@type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes or local-name() = 'depense']" mode="product-creator">
 							<xsl:with-param name="relative" select="not($is-transformer)" />
 							<xsl:with-param name="subunits" select="$subunits" />
 						</xsl:apply-templates>
 					</xsl:when>
 					<xsl:otherwise>
-						<xsl:apply-templates select="ext:node-set($file)//produit[not(@data-type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes]" mode="product-creator">
+						<xsl:apply-templates select="ext:node-set($file)//produit[not(@type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes]" mode="product-creator">
 							<xsl:with-param name="relative" select="not($is-transformer)" />
 							<xsl:with-param name="subunits" select="$subunits" />
 						</xsl:apply-templates>
@@ -277,7 +314,7 @@ exclude-result-prefixes="str">
 				<xsl:if test="ancestor::agent[@goods]">
 					<xsl:choose>
 						<xsl:when test="local-name() = 'value'">
-							<xsl:apply-templates select="ext:node-set($file)//produit[@data-type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
+							<xsl:apply-templates select="ext:node-set($file)//produit[@type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
 								<xsl:with-param name="node-name" select="$nodes" />
 								<xsl:with-param name="relative" select="not($is-transformer)" />
 								<xsl:with-param name="subunits" select="$subunits" />
@@ -291,7 +328,7 @@ exclude-result-prefixes="str">
 								<xsl:with-param name="subunits" select="$subunits" />
 								<xsl:with-param name="total-dollars" select="." />
 							</xsl:apply-templates>
-							<xsl:apply-templates select="ext:node-set($file)//produit[@data-type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
+							<xsl:apply-templates select="ext:node-set($file)//produit[@type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
 								<xsl:with-param name="node-name" select="'ajout'" />
 								<xsl:with-param name="relative" select="not($is-transformer)" />
 								<xsl:with-param name="subunits" select="$subunits" />
@@ -299,7 +336,7 @@ exclude-result-prefixes="str">
 							</xsl:apply-templates>
 						</xsl:when>
 						<xsl:otherwise>
-							<xsl:apply-templates select="ext:node-set($file)//produit[not(@data-type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
+							<xsl:apply-templates select="ext:node-set($file)//produit[not(@type = 'ajout')][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
 								<xsl:with-param name="node-name" select="$nodes" />
 								<xsl:with-param name="relative" select="not($is-transformer)" />
 								<xsl:with-param name="subunits" select="$subunits" />

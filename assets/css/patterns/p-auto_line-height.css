@@ -5,7 +5,7 @@
 
 	*::after, *::before, p, ul, ol, a, span, small,
 	h1, h2, h3, h4, h5, h6 {
-		--alh-factor: var(--Size, 1) * var(--ScaleLevel, 1) * var(--FontFactor, 1) * var(--RowUnit, 1rem);
+		--alh-factor: var(--Zoom, 1) * var(--ScaleLevel, 1) * var(--FontFactor, 1) * var(--RowUnit, 1rem);
 		--alh-threshold_1_5: var(--alh-multiplier) * 0.875;
 		--alh-threshold_2: var(--alh-multiplier) * 1.25;
 		--alh-threshold_2_5: var(--alh-multiplier) * 1.5;
@@ -27,7 +27,7 @@
 		--is-1-row: calc(var(--Row) - (var(--switch-1)));
 		--alh-line_height: calc(var(--is-1-row, var(--Row)) + (var(--is-1_5-row, 0px) * 1.5) + (var(--is-2-rows, 0px) * 2) + (var(--is-2_5-rows, 0px) * 2.5) + (var(--is-3-rows, 0px) * 3));
 		
-		--LineHeight: calc(var(--alh-line_height, 1.5625) * var(--LineHeightFactor, 1) * var(--Size, 1)); }
+		--LineHeight: calc(var(--alh-line_height, 1.5625) * var(--LineHeightFactor, 1)); }
 
 	h1, h2, h3, p {
 		--is-3-rows: var(--magic-3);

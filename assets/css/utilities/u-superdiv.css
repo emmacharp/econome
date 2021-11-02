@@ -73,7 +73,7 @@
 		/* Marges universelles permettant
 			l'adaptation fluide. Les divs sans classes
 			sont exclus pour mieux gérer l'inclusion successive */
-		div>*:not(div:where(:not([class]))) {
+		div>:where(*:not(div:not([class]))) {
 			margin-left:  var(--DivItemGutter, 0);
 			margin-top:  var(--DivItemGutter, 0);
 		}

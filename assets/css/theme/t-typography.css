@@ -42,16 +42,20 @@
 	body>aside h3 {
 		--ScaleLevel: var(--Base); }
 	
+	menu,
 	details>summary>*,
+	body>details>menu,
 	figcaption,
 	body>aside>div>header>*,
 	body>aside>div>footer>* {
 		--ScaleLevel: var(--Short);
 		--FontWeight: 400; 
-		--LineHeightFactor: .75; }
+		--LineHeightFactor: .75;
+	}
 	
-	main>h2 {
+	main>h2,
+  .toggle-internal-nav,
+	body>details>summary>* {
 		--ScaleLevel: var(--Short);
 		--FontWeight: 700;
 	}
-

@@ -174,7 +174,7 @@
 }
 
 .chain .icon {
-	--IconHeight: calc(var(--Row) * 2.5 * var(--Size));
+	--IconHeight: calc(var(--Row) * 2.5);
 	height: var(--IconHeight);
 	fill: currentColor;
 }

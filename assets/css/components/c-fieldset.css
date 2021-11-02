@@ -7,17 +7,6 @@ fieldset {
 	margin-top: calc(var(--Row) * 2);
 }
 
-fieldset label {
-	position: relative;
-	display: inline-flex;
-	align-items: baseline;
-	box-sizing: border-box;
-	flex-shrink: 0;
-	text-transform: lowercase;
-	flex-grow: 0;
-	flex-basis: auto;
-}
-
 fieldset span,
 fieldset input {
 	border: 0;
@@ -37,6 +26,7 @@ fieldset input[type="text"] {
 }
 fieldset span {
 	border-radius: 5px 0 0 5px;
+	text-transform: lowercase;
 }
 
 fieldset span~span {
@@ -48,29 +38,12 @@ fieldset input[type=radio]+span {
 	padding: calc(var(--Row) / 4) calc(var(--Row) / 2);
 }
 
-fieldset input[type=radio] {
-	all: initial;
-	appearance: none;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	z-index: -1;
-}
-
 fieldset p~p {
 	margin-top: calc(var(--Row) * 2);
 }
 
 fieldset div {
 	display: inline-flex;
-}
-
-fieldset:valid input[type=radio]:not(:hover):not(:checked)~span {
-	background-color: var(--ltst-primary);
-	color: var(--lt-primary);
 }
 
 fieldset textarea {
