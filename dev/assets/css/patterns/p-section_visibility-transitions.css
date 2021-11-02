@@ -2,12 +2,9 @@
 /* (Opt-in. Valeurs complexes par défaut pour
 * limiter la prolifération des propriétés héritées) */
 
-	main>section>article,
-	main>section>aside.intervention svg,
-	main>section>aside.intervention div,
+	main>section>*,
 	main>section .chain .icon,
-	main>section .chain .icon+*,
-	main>section .chain .arrow {
+	main>section .chain .icon+* {
 		transition-property: var(--TransitionProperties, opacity, transform);
 		transition-duration: var(--TotalDuration, calc(var(--SelfDuration, 120ms) * var(--DurationFactor, 1)));
 		transition-timing-function: var(--TimingFunction, ease-out);
@@ -22,33 +19,26 @@
 /* Application « opt-in »
 	des propriétés transitionnées  ----------------------- */
 
-	main>section>aside.intervention svg,
-	main>section .chain .active .icon,
-	main>section .chain .active .arrow {
+	main>section>aside.intervention,
+	main>section .chain .icon {
 		transform: var(--TransformVisible, scale(1)); }
-	main>section>section,
-	main>section>aside.intervention div,
-	main>section>article,
-	main>section .chain .active .icon+* {
+	main>section>*
+	main>section .chain .icon+* {
 		opacity: var(--OpacityVisible, 1); }
 
-	main>section.is-active~section>aside.intervention svg,
-	main>section.is-active~section .chain .active .icon,
-	main>section.is-active~section .chain .active .arrow,
-	main>section.is-invisible>aside.intervention svg,
-	main>section.is-invisible .chain .active .icon,
-	main>section.is-invisible .chain .active .arrow {
+	main>section.is-active~section>aside.intervention,
+	main>section.is-active~section .chain .icon,
+	main>section.is-invisible>aside.intervention,
+	main>section.is-invisible .chain .icon {
 		transform: var(--TransformInvisible, scale(1)); }
-	main>section.is-active~section>section,
-	main>section.is-active~section>aside.intervention div,
-	main>section.is-active~section [data-parallax],
-	main>section.is-active~section .chain .active .icon,
-	main>section.is-active~section .chain .active .icon+*,
-	main>section.is-invisible>section,
+	main>section.is-active~section>*,
+	main>section.is-active~section>aside.intervention,
+	main>section.is-active~section .chain .icon,
+	main>section.is-active~section .chain .icon+*,
+	main>section.is-invisible>*,
 	main>section.is-invisible>aside.intervention div,
-	main>section.is-invisible [data-parallax],
-	main>section.is-invisible .chain .active .icon,
-	main>section.is-invisible .chain .active .icon+* {
+	main>section.is-invisible .chain .icon,
+	main>section.is-invisible .chain .icon+* {
 		opacity: var(--OpacityInvisible, 0); }
 
 /* Propriétés supplémentaires
@@ -79,49 +69,37 @@
 		--LoadingDelay: 0ms; }
 
 	/* Éléments — Valeurs de base initiales */
-	main>section>aside.intervention svg {
+	main>section>aside.intervention {
 		--TransitionProperties: transform;
 		--SelfDuration: 120ms; }
-	main>section>aside.intervention div {
-		--TransitionProperties: opacity;
-		--SelfDuration: 320ms; }
-	main>section .chain .active .icon {
+	main>section .chain .icon {
 		--TransitionProperties: transform;
 		--TimingFunction: var(--ease-out-back);
 		--SelfDuration: 180ms; }
-	main>section .chain .active .icon+* {
+	main>section .chain .icon+* {
 		--TransitionProperties: opacity;
 		--TimingFunction: var(--ease-out-quad);
 		--SelfDuration: 180ms; }
-	main>section .chain .active .arrow {
-		--TransitionProperties: transform;
-		--TimingFunction: var(--ease-out-quad);
-		--SelfDuration: 200ms; }
-	main>section>article {
+	main>section>figure {
 		--TransitionProperties: opacity;
 		--SelfDuration: 200ms;
 		--SelfDelay: 160ms; }
 
 	/* Éléments — Valeurs spécifiques à l'apparition */
-	main>section.is-visible>aside.intervention svg {
+	main>section.is-visible>aside.intervention {
 		--TimingFunction: var(--ease-bounce-light);
 		--SelfDelay: calc(400ms + 1ms * var(--needed-time) / 5); }
-	main>section.is-visible>aside.intervention div {
-		--TimingFunction: var(--ease-out-quad);
-		--SelfDelay: calc(600ms + 1ms * var(--needed-time) / 5); }
-	main>section.is-visible .chain .active .arrow {
+	main>section.is-visible .chain .arrow {
 		--SelfDelay: 200ms; }
-	main>section.is-visible .chain .active .icon+* {
+	main>section.is-visible .chain .icon+* {
 		--SelfDelay: 100ms; }
 
 	/* Éléments — Valeurs transitionnées à la disparition */
-	main>section>aside.intervention svg {
+	main>section>aside.intervention {
 		--TransformInvisible: scale(0); }
-	main>section>aside.intervention div {
-		--OpacityInvisible: 0; }
-	main>section .chain .active .icon {
+	main>section .chain .icon {
 		--TransformInvisible: scale(0); }
-	main>section .chain .active .arrow {
+	main>section .chain .arrow {
 		--TransformInvisible: scale(0, 1); }
 
 
@@ -141,15 +119,11 @@
 
 /* Choix d'animation au chargement de la page ----------------------- */
 
-		main>section>section,
-		main>section>aside.intervention svg,
-		main>section>aside.intervention div,
-		main>section .chain .icon,
-		main>section .chain .arrow {
+		main>section>*,
+		main>section .chain .icon {
 			animation-name: var(--Keyframes, scale); }
 		main>section,
-		main>section>section,
-		main>section>aside.intervention div>*,
+		main>section>*,
 		main>section .chain .icon+* {
 			animation-name: var(--Keyframes, opacity); }
 
