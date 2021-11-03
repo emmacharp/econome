@@ -111,7 +111,7 @@
 					<xsl:value-of select="$column-counter" />
 					<xsl:text>;</xsl:text>
 				</xsl:attribute>
-				<input aria-label="Afficher ou masquer les unités" type="checkbox" checked="" name="show-units" class="toggle-units" />
+				<!-- <input aria-label="Afficher ou masquer les unités" type="checkbox" checked="" name="show-units" class="toggle-units" /> -->
 				<xsl:if test="$subunits">
 					<input aria-label="Afficher ou masquer les sous-unités" type="checkbox" name="show-subunits" class="toggle-subunits" />
 				</xsl:if>
