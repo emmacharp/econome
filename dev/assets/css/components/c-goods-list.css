@@ -61,8 +61,10 @@
 .goods-list [class*="toggle-"] {
 	font-size: .75em;
 }
-.goods-list section:not(:hover)>[class*="toggle-"] {
-	opacity: 0;
+.goods-list section:not(:hover)>[class*="toggle-"]:before {
+	box-shadow: none;
+	border-color: transparent;
+	background-color: transparent;
 }
 
 .goods-list .toggle-subunits {
