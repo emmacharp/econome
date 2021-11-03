@@ -20,7 +20,7 @@ exclude-result-prefixes="str">
 			<xsl:for-each select="str:tokenize(., ' ')">
 				<xsl:value-of select="."/> 
 				<xsl:choose>
-					<xsl:when test="position() = last() - 1"><xsl:text> </xsl:text></xsl:when>
+					<xsl:when test="position() = last() - 1 and ancestor::*[1][not(h1)]"><xsl:text> </xsl:text></xsl:when>
 					<xsl:otherwise><xsl:text> </xsl:text></xsl:otherwise>
 				</xsl:choose>
 			</xsl:for-each>
@@ -100,7 +100,7 @@ exclude-result-prefixes="str">
 		<link id="sheetDarkScheme" rel="stylesheet" href="assets/css/theme/t-dark_scheme.css" media="screen and (prefers-color-scheme: dark)" />
 		<link id="sheetDarkHighContrast" rel="stylesheet" href="assets/css/theme/t-dark-high_contrast.css" media="screen and (prefers-contrast: high) and (prefers-color-scheme: dark)" />
 		<link id="sheetLightHighContrast" rel="stylesheet" href="assets/css/theme/t-light-high_contrast.css" media="screen and (prefers-contrast: high) and (prefers-color-scheme:light)" />
-		<link id="sheetAnimations" rel="stylesheet" href="assets/css/patterns/p-section_visibility-transitions.css" media="not(prefers-reduced-motion: reduced)" />
+		<link id="sheetAnimations" rel="stylesheet" href="assets/css/patterns/p-section_visibility-transitions.css" media="not screen and (prefers-reduced-motion: reduce)" />
 
 		<link rel="stylesheet" href="assets/css/components/c-cartoon_characters.css" />
 
@@ -277,7 +277,7 @@ exclude-result-prefixes="str">
 					<xsl:value-of select="$column-counter" />
 					<xsl:text>;</xsl:text>
 				</xsl:attribute>
-				<input aria-label="Afficher ou masquer les unités" type="checkbox" checked="" name="show-units" class="toggle-units" />
+				<!-- <input aria-label="Afficher ou masquer les unités" type="checkbox" checked="" name="show-units" class="toggle-units" /> -->
 				<xsl:if test="$subunits">
 					<input aria-label="Afficher ou masquer les sous-unités" type="checkbox" name="show-subunits" class="toggle-subunits" />
 				</xsl:if>

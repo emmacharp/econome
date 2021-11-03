@@ -1,12 +1,9 @@
-
-input,
+label input,
 label span {
 	background-color: var(--ColorBgControls);
-	--Color: var(--ColorControls);
+	color: var(--ColorControls);
 }
 
-input,
-input+span,
 fieldset:valid input[type=radio]:not(:hover):not(:checked)~span {
 	--ColorBgControls: var(--ColorLtBg);
 	--ColorControls: var(--Color);
@@ -16,7 +13,6 @@ fieldset:valid input[type=radio]:not(:hover):not(:checked)~span {
 fieldset input:checked~span,
 fieldset input:not(:placeholder-shown),
 menu input[type=checkbox]:checked,
-.toggle-units.is-read,
 [data-wiki].is-read {
 	--ColorBgControls: var(--ColorBgComplete);
 	--ColorControls: var(--ColorComplete);
@@ -43,62 +39,30 @@ label {
 	flex-basis: auto;
 }
 
-details>summary>:last-child::after,
-[class^="toggle-"]::before,
-[id="wikiViewer"] [id="wikiViewerClose"]:after,
-[data-wiki]:after {
-	content: "";
-	font-weight: 700;
-	width: 1ch;
-	height: 1ch;
-	line-height: 1ch;
-	display: inline-flex;
-	align-items: center;
-	flex-shrink: 0;
-	justify-content: center;
-	padding: .75ch;
-	vertical-align: bottom;
-}
-
-[id="wikiViewer"] [id="wikiViewerClose"]:after {
-	content: "x";
-}
-
-[data-wiki]:after,
-.toggle-units::before {
-	content: '?';
-}
-
-.toggle-subunits::before {
-	content: "+";
-}
-
-.toggle-subunits:checked::before {
-	content: "-";
-}
-
-.toggle-units.is-read:before,
-[data-wiki].is-read:not(:hover):after {
-	content: "✓";
-}
-
-[data-wiki].easter.is-read:not(:hover):after {
-	content: "🎉";
-	background-color: transparent;
-	box-shadow: initial;
-	border-color: transparent;
-}
-
-menu input[type=checkbox] {
+input[type=checkbox] {
 	appearance: none;
+}
+
+label input[type=checkbox] {
+	display: inline-block;
 	width: 2ch;
 	height: 2ch;
-	display: inline-block;
 }
 
 span+input[type="checkbox"] {
 	align-self: center;
 	margin-left: var(--Row);
+}
+
+input[type="checkbox"]:focus,
+details>summary:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+input[type="checkbox"]:focus::before,
+details>summary:focus>:last-child::after {
+	box-shadow: 0px 0px 2px 1px var(--ColorSupport);
 }
 
 input[type=radio] {
@@ -114,28 +78,54 @@ input[type=radio] {
 }
 
 details>summary>:last-child::after,
+[class^="toggle-"]::before,
+[id="wikiViewer"] [id="wikiViewerClose"]:after,
+[data-wiki]:after {
+	content: "";
+	font-weight: 700;
+	width: 1ch;
+	height: 1ch;
+	line-height: 1ch;
+	display: inline-flex;
+	align-items: center;
+	flex-shrink: 0;
+	justify-content: center;
+	padding: .65ch;
+	vertical-align: bottom;
+}
+
+details>summary>:last-child::after,
 [data-wiki]:after,
 [id="wikiViewer"] [id="wikiViewerClose"]:after,
 input[type=radio]+span,
 input[type="number"],
 [class*="toggle-"]:before,
-input[type="checkbox"],
+label input[type="checkbox"],
 .toggle-internal-nav::before {
 	background-color: var(--ColorBgControls);
 	border-radius: 3px;
-	border: 1px solid var(--ColorLines);
+	border: 1px solid var(--ColorLt);
 	border-top-width: 1px;
 	border-bottom-width: 2px;
-	box-shadow: 0 1px 2px  var(--ColorLtBg);
+	box-shadow: 0 1px 2px  var(--dk-primary);
 	color: var(--ColorControls);
 	fill: var(--ColorControls);
 	line-height: 1.1;
 }
 
+label input[type="checkbox"]:not(:checked) {
+	--ColorBgControls: var(--ColorLt);
+}
+
+label input[type="checkbox"]:checked {
+	--ColorBgControls: var(--Color);
+}
+
 [data-wiki]:hover:after,
 [class*="toggle-"]:hover:before,
 [id="wikiViewer"] [id="wikiViewerClose"]:hover:after,
-input[type=radio]:not(:checked)~span:hover
+details>summary:hover>:last-child::after,
+input[type=radio]:not(:checked)~span:hover,
 input[type=number] {
 	background-color: var(--ColorAccent);
 }
@@ -147,6 +137,45 @@ input[type=radio]:checked~span {
 	border-bottom-width: 1px;
 	border-color: rgba(0,0,0,0.2);
 	background-color: var(--ColorLtSupport);
+}
+
+details summary>:last-child:after {
+	margin-left: .5em;
+	font-weight: 800;
+	width: .5em;
+	font-size: .75em;
+	margin-left: .5rem;
+}
+
+[id="wikiViewer"] [id="wikiViewerClose"]:after {
+	content: "x";
+}
+
+[data-wiki]:after {
+	content: '?';
+}
+
+details summary>:last-child:after,
+.toggle-subunits::before,
+.toggle-units::before {
+	content: "+";
+}
+
+details[open] summary>:last-child:after,
+.toggle-subunits:checked::before {
+	content: "-";
+}
+
+.toggle-units.is-read:before,
+[data-wiki].is-read:not(:hover):after {
+	content: "✓";
+}
+
+[data-wiki].easter.is-read:not(:hover):after {
+	content: "🎉";
+	background-color: transparent;
+	box-shadow: initial;
+	border-color: transparent;
 }
 
 

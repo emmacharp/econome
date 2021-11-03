@@ -6,14 +6,11 @@
 	--ColorBg: white;
 	--ColorLtBg: white;
 	--ColorBgAlt: white;
-	/* --ColorLtBgAlt: var(--dk-brown); */
 	
 	--ColorLines: black;
 	
-	/* --ColorSupport: var(--dk-beige); */
 	--ColorLtSupport: lightcyan;
-	--ColorAccent: black;
-	--ColorDkAccent: black;
+	--ColorAccent: white;
 	--ColorSupport: black;
 	--ColorForeign: var(--red);
 	--ColorLocal: var(--blue);

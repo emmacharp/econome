@@ -1,3 +1,21 @@
+/* Animations et transitions générales */
+
+*, ::before, ::after {
+	transition-property: color, background, border-color, box-shadow, transform;
+	transition-delay: 0ms;
+	transition-duration: 120ms;
+}
+
+main>section>aside.intervention>div {
+	transition: 120ms var(--ease-bounce-light);
+	transition-property: opacity, transform;
+	transform-origin: left bottom;
+}
+main>section>aside.intervention:not(:hover)>div {
+	transform: scale(0);
+	transition-delay: 120ms;
+}
+
 /* Application générale des transitions et animations.  ----------------------- */
 /* (Opt-in. Valeurs complexes par défaut pour
 * limiter la prolifération des propriétés héritées) */
@@ -19,24 +37,24 @@
 /* Application « opt-in »
 	des propriétés transitionnées  ----------------------- */
 
-	main>section>aside.intervention,
+	main>section>aside.intervention svg,
 	main>section .chain .icon {
 		transform: var(--TransformVisible, scale(1)); }
 	main>section>*
 	main>section .chain .icon+* {
 		opacity: var(--OpacityVisible, 1); }
 
-	main>section.is-active~section>aside.intervention,
+	main>section.is-active~section>aside.intervention svg,
 	main>section.is-active~section .chain .icon,
-	main>section.is-invisible>aside.intervention,
+	main>section.is-invisible>aside.intervention svg,
 	main>section.is-invisible .chain .icon {
 		transform: var(--TransformInvisible, scale(1)); }
 	main>section.is-active~section>*,
-	main>section.is-active~section>aside.intervention,
+	main>section.is-active~section>aside.intervention svg,
 	main>section.is-active~section .chain .icon,
 	main>section.is-active~section .chain .icon+*,
 	main>section.is-invisible>*,
-	main>section.is-invisible>aside.intervention div,
+	main>section.is-invisible>aside.intervention svg div,
 	main>section.is-invisible .chain .icon,
 	main>section.is-invisible .chain .icon+* {
 		opacity: var(--OpacityInvisible, 0); }
@@ -48,13 +66,6 @@
 		par-dessus dans la transition */
 	main>section>aside.intervention svg {
 		z-index: 1; }
-	/* Origines de transformation particulières */
-	main>section>aside.intervention div {
-		transform-origin: left center; }
-	main>section .chain .arrow {
-		transform-origin: right center; }
-	main>section .chain .arrow.from {
-		transform-origin: left center; }
 
 /* Valeurs de transition spécifiques ----------------------- */
 
@@ -69,7 +80,7 @@
 		--LoadingDelay: 0ms; }
 
 	/* Éléments — Valeurs de base initiales */
-	main>section>aside.intervention {
+	main>section>aside.intervention svg {
 		--TransitionProperties: transform;
 		--SelfDuration: 120ms; }
 	main>section .chain .icon {
@@ -86,21 +97,17 @@
 		--SelfDelay: 160ms; }
 
 	/* Éléments — Valeurs spécifiques à l'apparition */
-	main>section.is-visible>aside.intervention {
+	main>section.is-visible>aside.intervention svg {
 		--TimingFunction: var(--ease-bounce-light);
 		--SelfDelay: calc(400ms + 1ms * var(--needed-time) / 5); }
-	main>section.is-visible .chain .arrow {
-		--SelfDelay: 200ms; }
 	main>section.is-visible .chain .icon+* {
-		--SelfDelay: 100ms; }
+		--SelfDelay: 200ms; }
 
 	/* Éléments — Valeurs transitionnées à la disparition */
-	main>section>aside.intervention {
+	main>section>aside.intervention svg {
 		--TransformInvisible: scale(0); }
 	main>section .chain .icon {
 		--TransformInvisible: scale(0); }
-	main>section .chain .arrow {
-		--TransformInvisible: scale(0, 1); }
 
 
 /* Cascade d'apparition générale ----------------------- */

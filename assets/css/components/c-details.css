@@ -3,18 +3,6 @@ details summary>* {
 	display: block;
 }
 
-details summary>:last-child:after {
-	content: "+";
-	margin-left: .5em;
-	font-weight: 800;
-	width: .5em;
-	font-size: .75em;
-	margin-left: .5rem;
-}
-details[open] summary>:last-child:after {
-	content: "-";
-}
-
 details summary *>* {
 	display: inline;
 }
@@ -28,5 +16,3 @@ details summary::marker {
 	display: none;
 	content: "";
 }
-
-

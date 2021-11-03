@@ -34,7 +34,7 @@
 	}
 
 	main>h2:before,
-	main>h2:after	{
+	main>h2:after {
 		content: '';
 		display: block;
 		flex-basis: 0px;
