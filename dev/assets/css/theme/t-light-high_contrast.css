@@ -15,12 +15,12 @@
 	--ColorForeign: var(--red);
 	--ColorLocal: var(--blue);
 	--ColorControls: black;
-	--ColorComplete: var(--lt-green);
-	--ColorIncomplete: var(--lt-red);
-	--ColorActive: var(--lt-yellow);
+	--ColorComplete: black;
+	--ColorIncomplete: black;
+	--ColorActive: black;
 
 	--ColorBgControls: white;
-	--ColorBgComplete: lightgrey;
-	--ColorBgIncomplete: white;
-	--ColorBgActive: white;
+	--ColorBgComplete: var(--ltst-primary);
+	--ColorBgIncomplete: var(--lt-red);
+	--ColorBgActive: var(--tr-blue);
 }
