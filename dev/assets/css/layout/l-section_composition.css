@@ -133,6 +133,10 @@
 		--MasterAlignment: right;
 	}
 
+	main>section>* aside:not(:only-of-type):first-of-type p {
+		margin-left: auto;
+	}
+
 	main>section>aside:not(:hover)>svg+* {
 		opacity: 0;
 		pointer-events: none;
