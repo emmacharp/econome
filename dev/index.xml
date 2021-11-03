@@ -60,7 +60,7 @@
 		<aside class="intervention">
 			<symbol data-type="emma" class="cartoon_emma animated" />
 			<div>
-				<p>Faites-vous en pas, là. Vous n’êtes pas tenu de répondre la vérité... ni même de répondre du tout. Les données sont anonymes et seront ouvertement publiées bientôt.</p>
+				<p>Ne vous en faites-vous en pas, là. Vous n’êtes pas tenu de répondre la vérité... ni même de répondre du tout. Les données sont anonymes et seront ouvertement publiées bientôt.</p>
 			</div>
 		</aside>
 	</section>
@@ -136,7 +136,7 @@
 		</header>
 			<div class="prose">
 				<p><b>Humhum.</b> C'est l'été. Il faut beau, il fait chaud : vous avez soif, Joey Joe Joe. Et rien n’étanche cette soif comme votre bière générique préférée : La Pâpire.</p>
-				<p>Quand vous achetez une caisse de Pâpire, vous mettez en branle toute une chaîne d’<i data-wiki="Agent_économique">agents économiques</i> nécessaires à vous servir cette caisse.</p>
+				<p>Quand vous achetez une caisse de Pâpire, vous mettez en branle toute une chaîne d’<i data-wiki="Agent_économique">agents</i> économiques nécessaires à vous servir cette caisse.</p>
 			</div>
 			<aside class="intervention">
 				<symbol data-type="henri" class="cartoon_henri animated" />
@@ -243,10 +243,10 @@
 			</diagram>
 			<figcaption>
 				<div>
-					<div>
+					<section>
 						<h5><i>🧮</i> Diagramme #02</h5>
 					<p>Répartition de 10 $ de valeur ajoutée à travers la chaîne. Données de StatCan (2016).</p>
-					</div>
+					</section>
 					<section>
 						<h5><i>✨</i> Légende</h5>
 						<p>Chaque icône représente une activité ajoutant de la valeur. La quantité d'un même icône représente sa proportion estimée dans le total.</p>
@@ -282,7 +282,7 @@
 				<agent data-type="transformer" name="Brasserie Moyenne" value="4.96" bought="2.52" goods="" />
 			</diagram>
 			<figcaption>
-				<div class="grille">
+				<div>
 					<div>
 						<h5><i>🧮</i> Diagramme #03</h5>
 						<p>Proportions de valeur ajoutée achetée et créée dans la chaîne. Données de StatCan (2016)</p>
@@ -376,7 +376,7 @@
 				<agent data-type="transformer" name="Brasserie Moyenne" value="4.96" local="1.30" foreign="1.22" goods="subunits" />
 			</diagram>
 			<figcaption>
-				<div class="grille">
+				<div>
 					<section>
 						<h5><i>🧮</i> Diagramme #04</h5>
 						<p>Proportions de la valeur ajoutée étrangère et locale par une brasserie moyenne. Données de StatCan (2016)</p>
@@ -387,7 +387,7 @@
 					</section>
 					<section>
 						<h5><i>👉</i> Interactivité</h5>
-						<p><b>Survolez/tapez les icônes pour afficher le nom de l'activité et sa valeur ajoutée en dollars. Accédez à des activités supplémentaires, à faible proportion, en appuyant sur le bouton « + »</b></p>
+						<p><b>Survolez/tapez les icônes pour afficher le nom de l'activité et sa valeur ajoutée en dollars. Accédez à des activités supplémentaires, à faible proportion, en appuyant sur le bouton « + ».</b></p>
 					</section>
 				</div>
 			</figcaption>
@@ -433,7 +433,7 @@
 		<figure>
 			<diagram data-type="macro" heading="Travailleur.euses et production macroéconomique"></diagram>
 			<figcaption>
-				<div class="grille">
+				<div>
 					<section>
 						<h5><i>🧮</i> Diagramme #05</h5>
 						<p>Travailleur.euses et production macroéconomique. Trop peu de main-d'œuvre locale et disponible pour tout produire. Données StatCan (2019)</p>
