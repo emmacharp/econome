@@ -63,5 +63,5 @@ p { max-width: 65ch; min-width: 22ch; }
 /* Désactiver le délai sur iOS 
  * lorsqu'on tape sur un élément */
 @media (hover:none) {
-	* { touch-action: manipulation; }
+	html { touch-action: manipulation; }
 }
