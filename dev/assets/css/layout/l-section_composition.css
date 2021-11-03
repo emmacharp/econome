@@ -136,14 +136,6 @@
 		opacity: 0;
 		pointer-events: none;
 	}
-
-	main>section>aside:hover>svg+* {
-		transition-delay: 0ms;
-	}
-
-	main>section>aside:not(:hover)>svg+* {
-		transition-delay: 100ms;
-	}
 }
 
 @media (orientation: landscape) {
