@@ -5,15 +5,17 @@
 	transition-delay: 0ms;
 	transition-duration: 120ms;
 }
+@media (min-height: 70ch) and (min-width: 80ch) { /* lié à l-section_composition.css */
+	main>section>aside.intervention>div {
+		transition: 120ms var(--ease-bounce-light);
+		transition-property: opacity, transform;
+		transform-origin: left bottom;
+	}
 
-main>section>aside.intervention>div {
-	transition: 120ms var(--ease-bounce-light);
-	transition-property: opacity, transform;
-	transform-origin: left bottom;
-}
-main>section>aside.intervention:not(:hover)>div {
-	transform: scale(0);
-	transition-delay: 120ms;
+	main>section>aside.intervention:not(:hover)>div {
+		transform: scale(0);
+		transition-delay: 120ms;
+	}
 }
 
 /* Application générale des transitions et animations.  ----------------------- */
