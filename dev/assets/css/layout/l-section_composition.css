@@ -27,6 +27,30 @@
 		margin-top: calc(var(--Row) * 2);
 		margin-bottom: calc(var(--Row) * 2);
 	}
+
+	main>section>a:last-child {
+		display: flex;
+		width: 5ch;
+		height: 5ch;
+		border-radius: 50%;
+		background-color: var(--ColorLtBg);
+		padding: 0;
+		justify-self: center;
+		align-self: center;
+		text-decoration: none;
+		justify-content: center;
+		align-items: center;
+	}
+
+	main>section>a:last-child span {
+		font-size: 0;
+		line-height: 0;
+	}
+
+	main>section>a:last-child:after {
+		content: "▶";
+		display: block;
+	}
 }
 
 @media (orientation: portrait) {
@@ -130,6 +154,10 @@
 	main>section>* {
 		padding-left: clamp(var(--Row), 4vmax, calc(var(--Row) * 4));
 		padding-right: clamp(var(--Row), 4vmax, calc(var(--Row) * 4));
+	}
+
+	main>section>a:last-child:after {
+		transform: rotate(90deg);
 	}
 }
 
