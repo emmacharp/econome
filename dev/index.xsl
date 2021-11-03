@@ -32,7 +32,7 @@ exclude-result-prefixes="str">
 			<xsl:for-each select="str:tokenize(., ' ')">
 				<xsl:value-of select="."/> 
 				<xsl:choose>
-					<xsl:when test="position() = last() - 1"><xsl:text> </xsl:text></xsl:when>
+					<xsl:when test="position() = last() - 1 and ancestor::*[1][not(h1)]"><xsl:text> </xsl:text></xsl:when>
 					<xsl:otherwise><xsl:text> </xsl:text></xsl:otherwise>
 				</xsl:choose>
 			</xsl:for-each>
