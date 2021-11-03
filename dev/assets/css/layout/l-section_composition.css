@@ -61,7 +61,8 @@
 		padding-bottom: clamp(var(--Row), 7vmin, calc(var(--Row) * 2));
 	}
 
-	main>section>* {
+	main>section>*,
+	main>section>figure>figcaption {
 		flex-shrink: 0;
 		padding-left: clamp(var(--Row), 7vmin, calc(var(--Row) * 2));
 		padding-right: clamp(var(--Row), 7vmin, calc(var(--Row) * 2));
