@@ -51,6 +51,7 @@ fieldset textarea {
 	max-width: 50ch;
 	padding: calc(var(--Row) * .5);
 	border: 1px solid var(--ColorLtSupport);
+	background-color: var(--ColorLtBg);
 	border-radius: 8px;
 	font-weight: 300;
 }
