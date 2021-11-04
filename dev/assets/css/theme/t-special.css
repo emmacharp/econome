@@ -27,3 +27,21 @@ h4 i, h5 i {
 	display: inline-block;
 	margin-left: .125em;
 }
+
+.completion-progress .complete,
+.completion-progress.is-complete .incomplete {
+	display: none;
+}
+.completion-progress.is-complete .complete {
+	display: block
+}
+
+.completion-progress * {
+	color: inherit;
+}
+
+.completion-progress .reading-percent,
+.completion-progress .question-percent {
+	color: var(--ColorIncomplete);
+	font-weight: 600;
+}

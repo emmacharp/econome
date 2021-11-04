@@ -9,6 +9,11 @@
 	const complementaryLinks = document.querySelectorAll('[data-wiki]');
 	const username = document.querySelector('#nom');
 
+	const totalSections = document.querySelectorAll('nav li').length;
+	const completionProgress = document.querySelector('.completion-progress');
+	const questionCompletion = document.querySelector('.question-completion');
+	const readingCompletion = document.querySelector('.reading-completion');
+
 	const wikiViewer = document.querySelector('#wikiViewer');
 	const wikiDump = document.querySelector('#wikiDump');
 	const wikiCanonical = document.querySelector('#wikiCanonical');
@@ -59,6 +64,24 @@
 				if (time > 0) {
 					start = new Date().getTime();
 					target.setAttribute('data-start-time', start);
+				}
+
+				if (target.querySelector('.completion-progress')) {
+					const totalFields = document.querySelectorAll('main fieldset').length;
+					const totalComplete = document.querySelectorAll('nav li.is-complete').length;
+					const totalRead = document.querySelectorAll('nav li.is-incomplete.is-read').length + totalComplete;
+					const totalAnswered = document.querySelectorAll('main fieldset:valid').length;
+
+					const readPercentage = Math.round(totalRead / totalSections * 100);
+					const answeredPercentage = Math.round(totalAnswered / totalFields * 100);
+
+
+					questionCompletion.innerHTML = answeredPercentage;
+					readingCompletion.innerHTML = readPercentage;
+
+					if(totalComplete === totalSections) {
+						completionProgress.classList.add('.is-complete');
+					}
 				}
 
 			} else if (target.classList.contains('is-visible')) {
