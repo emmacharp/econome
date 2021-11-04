@@ -422,7 +422,7 @@ exclude-result-prefixes="str">
 			<xsl:for-each select="ext:node-set($macro-file)//produit[disponible]">
 				<xsl:variable name="column-counter" select="ceiling(disponible div 100000)"></xsl:variable>
 				<section class="worker available" style="--column-counter: {ceiling($column-counter)}">
-					<h4><span><xsl:value-of select="titre" /></span></h4>
+					<h4><span>Main d'œuvre locale et disponible</span></h4>
 					<div>
 						<xsl:apply-templates select="disponible" mode="product-creator">
 							<xsl:with-param name="multiplier" select="3" />

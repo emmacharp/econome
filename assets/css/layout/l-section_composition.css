@@ -27,30 +27,12 @@
 		margin-top: calc(var(--Row) * 2);
 		margin-bottom: calc(var(--Row) * 2);
 	}
-
-	main>section>a:last-child {
-		display: flex;
-		width: 5ch;
-		height: 5ch;
-		border-radius: 50%;
-		background-color: var(--ColorLtBg);
-		padding: 0;
+	
+	main>section>a {
 		justify-self: center;
-		align-self: center;
-		text-decoration: none;
-		justify-content: center;
-		align-items: center;
+		margin-top: var(--Row);
 	}
 
-	main>section>a:last-child span {
-		font-size: 0;
-		line-height: 0;
-	}
-
-	main>section>a:last-child:after {
-		content: "▶";
-		display: block;
-	}
 }
 
 @media (orientation: portrait) {
