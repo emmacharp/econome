@@ -109,7 +109,7 @@
 						target.classList.add('is-incomplete');
 					}
 
-					if (target.matches('.is-incomplete.is-read') && 
+					if (target.matches('.is-read') && 
 						(forms.length == 0 || (forms.length > 0 && invalidForms.length == 0))) {
 						target.classList.remove('is-incomplete', 'is-read', 'is-answered');
 						target.classList.add('is-complete');
