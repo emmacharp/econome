@@ -1,3 +1,4 @@
+main>section>a:last-child,
 label input,
 label span {
 	background-color: var(--ColorBgControls);
@@ -10,7 +11,7 @@ fieldset:valid input[type=radio]:not(:hover):not(:checked)~span {
 }
 
 
-fieldset input:checked~span,
+input:checked~span,
 fieldset input:not(:placeholder-shown),
 menu input[type=checkbox]:checked,
 [data-wiki].is-read {
@@ -86,14 +87,10 @@ details>summary>:last-child::after,
 	width: 1ch;
 	height: 1ch;
 	line-height: 1ch;
-	display: inline-flex;
-	align-items: center;
-	flex-shrink: 0;
-	justify-content: center;
-	padding: .65ch;
-	vertical-align: bottom;
+
 }
 
+main>section>a:last-child,
 details>summary>:last-child::after,
 [data-wiki]:after,
 [id="wikiViewer"] [id="wikiViewerClose"]:after,
@@ -102,6 +99,8 @@ input[type="number"],
 [class*="toggle-"]:before,
 label input[type="checkbox"],
 .toggle-internal-nav::before {
+	text-decoration: none;
+	display: inline-flex;
 	background-color: var(--ColorBgControls);
 	border-radius: 3px;
 	border: 1px solid var(--ColorLt);
@@ -111,6 +110,11 @@ label input[type="checkbox"],
 	color: var(--ColorControls);
 	fill: var(--ColorControls);
 	line-height: 1.1;
+	align-items: center;
+	flex-shrink: 0;
+	justify-content: center;
+	padding: .65ch;
+	vertical-align: bottom;
 }
 
 label input[type="checkbox"]:not(:checked) {
@@ -121,6 +125,7 @@ label input[type="checkbox"]:checked {
 	--ColorBgControls: var(--Color);
 }
 
+main>section>a:last-child:hover,
 [data-wiki]:hover:after,
 [class*="toggle-"]:hover:before,
 [id="wikiViewer"] [id="wikiViewerClose"]:hover:after,
@@ -131,12 +136,12 @@ input[type=number] {
 }
 
 input[type=radio]:checked~span {
-	box-shadow: inset 0 1px 3px  var(--ColorLtSupport);
+	position: relative;
+	box-shadow: inset 0 2px 2px rgba(0,0,0,.2);
+	border-color: var(--ColorControls);
 	top: 2px;
-	border-top-width: 2px;
 	border-bottom-width: 1px;
 	border-color: rgba(0,0,0,0.2);
-	background-color: var(--ColorLtSupport);
 }
 
 details summary>:last-child:after {
@@ -145,6 +150,13 @@ details summary>:last-child:after {
 	width: .5em;
 	font-size: .75em;
 	margin-left: .5rem;
+}
+
+main>section>a:last-child:after {
+	content: "▶";
+	font-size: .875em;
+	margin-left: 1.5ch;
+	vertical-align: text-top;
 }
 
 [id="wikiViewer"] [id="wikiViewerClose"]:after {
