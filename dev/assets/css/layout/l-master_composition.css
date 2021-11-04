@@ -96,6 +96,7 @@
 		overflow-x: auto;
 		flex-basis: 0;
 		flex-direction: row;
+		scroll-behavior: smooth;
 		scroll-snap-type: x mandatory;
 	}
 
@@ -106,7 +107,6 @@
 	main>section {
 		height: 100%;
 		width: 100vw;
-		scroll-behavior: smooth;
 		flex-shrink: 0;
 		scroll-snap-align: start;
 		overflow-x: hidden;
