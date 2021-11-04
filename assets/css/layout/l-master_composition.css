@@ -96,7 +96,6 @@
 		overflow-x: auto;
 		flex-basis: 0;
 		flex-direction: row;
-		scroll-behavior: smooth;
 		scroll-snap-type: x mandatory;
 	}
 
