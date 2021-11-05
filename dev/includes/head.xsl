@@ -9,7 +9,6 @@
 			<meta name="description" content="Econome informe le public grâce à l'exposition de faits économiques."/>
 			
 			<link rel="icon" href="data:," />
-			<base href="{$baseUrl}"/>
 
 			<meta name="viewport" content="width=device-width"/>
 

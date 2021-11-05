@@ -5,7 +5,7 @@
 			<xsl:apply-templates select=".//details" mode="include-once"/>
 			<xsl:call-template name="internal-navigation"/>
 			<xsl:call-template name="main-content"/>
-			<link rel="stylesheet" href="assets/css/components/c-customizer_menu.css"/>
+			<link rel="stylesheet" href="/assets/css/components/c-customizer_menu.css"/>
 			<details id="customizerMenu">
 				<summary><span>Préférences</span></summary>
 				<menu>

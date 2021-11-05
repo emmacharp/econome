@@ -12,7 +12,7 @@
 		<xsl:param name="attr" select="@*[not(name() = 'id')]" />
 		<svg xmlns="http://www.w3.org/2000/svg" class="{$class}" viewBox="{@viewBox}">
 			<xsl:apply-templates select="$attr" />
-			<use xlink:href="symbols.svg#{@id}"></use>
+			<use xlink:href="/symbols.svg#{@id}"></use>
 		</svg>
 	</xsl:template>
 

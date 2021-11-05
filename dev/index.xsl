@@ -19,7 +19,6 @@ exclude-result-prefixes="str">
 <xsl:include href="includes/body.xsl"/>
 
 <xsl:output method="html" doctype-system="about:legacy-compat" />
-	<xsl:variable name="baseUrl" select="'.'"></xsl:variable>
 
 	<!-- Identity transform -->
 	<xsl:template match="@*|node()">

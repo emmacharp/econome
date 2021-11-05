@@ -316,8 +316,8 @@
 	<xsl:template match="diagram[not(preceding::diagram)]" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
-				<link rel="stylesheet" href="assets/css/components/c-goods-list.css"/>
-				<link rel="stylesheet" href="assets/css/components/c-figure.css"/>
+				<link rel="stylesheet" href="/assets/css/components/c-goods-list.css"/>
+				<link rel="stylesheet" href="/assets/css/components/c-figure.css"/>
 			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
@@ -325,7 +325,7 @@
 	<xsl:template match="diagram[not(preceding::diagram[@data-type = 'chain'])]/@data-type[. = 'chain']" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
-				<link rel="stylesheet" href="assets/css/components/c-chain.css"/>
+				<link rel="stylesheet" href="/assets/css/components/c-chain.css"/>
 			</xsl:with-param>
 		</xsl:call-template>
 		</xsl:template>
@@ -333,7 +333,7 @@
 		<xsl:template match="diagram[not(preceding::diagram[@data-type = 'macro'])]/@data-type[. = 'macro']" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
-				<link rel="stylesheet" href="assets/css/components/c-macro.css"/>
+				<link rel="stylesheet" href="/assets/css/components/c-macro.css"/>
 			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>

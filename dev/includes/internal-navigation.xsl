@@ -4,7 +4,7 @@
 		<input aria-label="Ouvrir ou fermer la navigation" type="checkbox" class="toggle-internal-nav" />
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
-				<link rel="stylesheet" href="assets/css/components/c-internal_nav.css"/>
+				<link rel="stylesheet" href="/assets/css/components/c-internal_nav.css"/>
 			</xsl:with-param>
 		</xsl:call-template>
 		<nav>
