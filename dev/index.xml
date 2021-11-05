@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="index.xsl"?>
+<root>
+	<section data-type="introduction">
+		<header>
+			<h1>Econome</h1>
+		</header>
+		<a href="exposes/achat-local/"><span>Pourquoi acheter local ?</span></a>
+	</section>
+</root>
+
