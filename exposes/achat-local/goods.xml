@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='utf-8'?>
+<?xml-stylesheet type="text/xsl" href="goods.xsl" ?>
+<root>
+  <produit>
+    <code>GRA</code>
+    <classe>Grains et autres produits de récoltes</classe>
+    <depense>5955.8481943609</depense>
+    <local>885.3862015467</local>
+    <etranger>5070.4619928143</etranger>
+  </produit>
+  <produit>
+    <code>ENE</code>
+    <classe>Combustibles minéraux</classe>
+    <depense>3332.3564474753</depense>
+    <local>2410.7303842583</local>
+    <etranger>921.626063217</etranger>
+  </produit>
+  <produit>
+    <code>MPG</code>
+    <classe>Minéraux non métalliques</classe>
+    <depense>45.2693460181</depense>
+    <local>45.2693460181</local>
+    <etranger>0</etranger>
+  </produit>
+  <produit>
+    <code>MPS</code>
+    <classe>Services publics</classe>
+    <depense>8095.2242291233</depense>
+    <local>2553.0203380495</local>
+    <etranger>5542.2038910738</etranger>
+  </produit>
+  <produit>
+    <code>CON</code>
+    <classe>Réparations</classe>
+    <depense>1277.1281382525</depense>
+    <local>1277.1281382525</local>
+    <etranger>0</etranger>
+  </produit>
+  <produit>
+    <code>ALI</code>
+    <classe>Aliments et boissons</classe>
+    <depense>46312.6712987063</depense>
+    <local>44094.5918930491</local>
+    <etranger>2218.0794056572</etranger>
+  </produit>
+  <produit>
+    <code>ALC</code>
+    <classe>Alcool et tabac</classe>
+    <depense>7499.2666033083</depense>
+    <local>2141.41793949</local>
+    <etranger>5357.8486638183</etranger>
+  </produit>
+  <produit>
+    <code>VET</code>
+    <classe>Produits textiles, vêtements et produits en cuir et
+    matériel similaire</classe>
+    <depense>369.6108957244</depense>
+    <local>154.5832917322</local>
+    <etranger>215.0276039923</etranger>
+  </produit>
+  <produit>
+    <code>WOO</code>
+    <classe>Produits du bois</classe>
+    <depense>1346.3636086331</depense>
+    <local>1049.582433606</local>
+    <etranger>296.7811750272</etranger>
+  </produit>
+  <produit>
+    <code>PAP</code>
+    <classe>Pâte de bois, papier et produits en papier</classe>
+    <depense>45155.9063628079</depense>
+    <local>2973.4551303934</local>
+    <etranger>42182.4512324145</etranger>
+  </produit>
+  <produit>
+    <code>PRI</code>
+    <classe>Produits imprimés et services connexes</classe>
+    <depense>5147.9235130728</depense>
+    <local>782.7048699236</local>
+    <etranger>4365.2186431492</etranger>
+  </produit>
+  <produit>
+    <code>PET</code>
+    <classe>Produits raffinés du pétrole (sauf
+    pétrochimiques)</classe>
+    <depense>3272.7074268397</depense>
+    <local>1684.7691122333</local>
+    <etranger>1587.9383146063</etranger>
+  </produit>
+  <produit>
+    <code>CHI</code>
+    <classe>Produits chimiques</classe>
+    <depense>10338.4534694567</depense>
+    <local>5104.1083542057</local>
+    <etranger>5234.345115251</etranger>
+  </produit>
+  <produit>
+    <code>PLA</code>
+    <classe>Produits en plastique et en caoutchouc</classe>
+    <depense>6667.3757976576</depense>
+    <local>2162.7311382256</local>
+    <etranger>4504.644659432</etranger>
+  </produit>
+  <produit>
+    <code>MIN</code>
+    <classe>Produits minéraux non métalliques</classe>
+    <depense>10543.4969778917</depense>
+    <local>8293.155959323</local>
+    <etranger>2250.3410185687</etranger>
+  </produit>
+  <produit>
+    <code>MET</code>
+    <classe>Produits métalliques usinés</classe>
+    <depense>38473.6183099914</depense>
+    <local>1291.9636669163</local>
+    <etranger>37181.6546430751</etranger>
+  </produit>
+  <produit>
+    <code>MAC</code>
+    <classe>Machinerie industrielle</classe>
+    <depense>5754.5327497156</depense>
+    <local>3863.4316795031</local>
+    <etranger>1891.1010702126</etranger>
+  </produit>
+  <produit>
+    <code>ORD</code>
+    <classe>Ordinateurs et produits électroniques</classe>
+    <depense>215.1625387214</depense>
+    <local>62.1705378707</local>
+    <etranger>152.9920008508</etranger>
+  </produit>
+  <produit>
+    <code>ELE</code>
+    <classe>Matériel, appareils, et composants électriques</classe>
+    <depense>2276.7818144409</depense>
+    <local>1529.1154645392</local>
+    <etranger>747.6663499017</etranger>
+  </produit>
+  <produit>
+    <code>MPG</code>
+    <classe>Autres produits fabriqués et travail à forfait</classe>
+    <depense>3986.3653523019</depense>
+    <local>1714.876126167</local>
+    <etranger>2271.4892261349</etranger>
+  </produit>
+  <produit>
+    <code>PRM</code>
+    <classe>Marges de gros et commissions</classe>
+    <depense>17732.8017061112</depense>
+    <local>11580.7948618329</local>
+    <etranger>6152.0068442784</etranger>
+  </produit>
+  <produit>
+    <code>PRM</code>
+    <classe>Marges de détail, biens d'occasion et
+    commissions</classe>
+    <depense>7381.0337231198</depense>
+    <local>3351.6363235468</local>
+    <etranger>4029.397399573</etranger>
+  </produit>
+  <produit>
+    <code>MPS</code>
+    <classe>Transport et services connexes</classe>
+    <depense>25699.1414442182</depense>
+    <local>24761.5600157346</local>
+    <etranger>937.5814284836</etranger>
+  </produit>
+  <produit>
+    <code>PRM</code>
+    <classe>Produits publiés et supports enregistrés (sauf les
+    logiciels)</classe>
+    <depense>268.9531734018</depense>
+    <local>145.1803371465</local>
+    <etranger>123.7728362553</etranger>
+  </produit>
+  <produit>
+    <code>CUL</code>
+    <classe>Information et culture</classe>
+    <depense>11446.7535760887</depense>
+    <local>10939.3571997771</local>
+    <etranger>507.3963763116</etranger>
+  </produit>
+  <produit>
+    <code>PRM</code>
+    <classe>Logiciels</classe>
+    <depense>167.2302899964</depense>
+    <local>129.1061299519</local>
+    <etranger>38.1241600445</etranger>
+  </produit>
+  <produit>
+    <code>MED</code>
+    <classe>Services de télécommunications, de distribution de
+    radiodiffusion, et services connexes</classe>
+    <depense>574.6544041595</depense>
+    <local>516.9253001313</local>
+    <etranger>57.7291040282</etranger>
+  </produit>
+  <produit>
+    <code>PRM</code>
+    <classe>Intermédiation financière par le biais de
+    dépôts</classe>
+    <depense>6166.2175082099</depense>
+    <local>3554.615915314</local>
+    <etranger>2611.6015928958</etranger>
+  </produit>
+  <produit>
+    <code>FIN</code>
+    <classe>Finances et assurances</classe>
+    <depense>13010.4100456088</depense>
+    <local>10310.3900850776</local>
+    <etranger>2700.0199605312</etranger>
+  </produit>
+  <produit>
+    <code>IMM</code>
+    <classe>Immobilier et location</classe>
+    <depense>48745.4992117744</depense>
+    <local>47601.2594275661</local>
+    <etranger>1144.2397842084</etranger>
+  </produit>
+  <produit>
+    <code>PRO</code>
+    <classe>Services professionnels</classe>
+    <depense>22575.5565689677</depense>
+    <local>22369.611551233</local>
+    <etranger>205.9450177346</etranger>
+  </produit>
+  <produit>
+    <code>ADM</code>
+    <classe>Administration et sièges sociaux</classe>
+    <depense>71432.3651138926</depense>
+    <local>52484.1980625977</local>
+    <etranger>18948.1670512949</etranger>
+  </produit>
+  <produit>
+    <code>HEB</code>
+    <classe>Hébergement et restauration</classe>
+    <depense>17096.9005396919</depense>
+    <local>16346.6572285138</local>
+    <etranger>750.2433111781</etranger>
+  </produit>
+  <produit>
+    <code>PRM</code>
+    <classe>Autres services</classe>
+    <depense>1967.3525198935</depense>
+    <local>1965.040874412</local>
+    <etranger>2.3116454816</etranger>
+  </produit>
+  <produit>
+    <code>PRM100000</code>
+    <titre>Impôts sur les produits</titre>
+    <classe>Impôts sur les produits</classe>
+    <depense>5610</depense>
+  </produit>
+  <!-- <produit> -->
+  <!--   <code>GVA</code> -->
+  <!--   <titre>Valeur ajoutée brute aux prix de base</titre> -->
+  <!--   <classe>Valeur ajoutée brute aux prix de base</classe> -->
+  <!--   <ajout>421905</ajout> -->
+  <!-- </produit> -->
+  <produit>
+    <code>PRM400000</code>
+    <titre>Impôts sur la production</titre>
+    <classe>Impôts sur la production</classe>
+    <ajout>19620</ajout>
+  </produit>
+  <produit>
+    <code>SAL</code>
+    <titre>Salaires</titre>
+    <classe>Salaires</classe>
+    <ajout>127173</ajout>
+  </produit>
+  <produit>
+    <code>COT</code>
+    <titre>Cotisations sociales</titre>
+    <classe>Cotisations sociales</classe>
+    <ajout>57173</ajout>
+  </produit>
+  <produit>
+    <code>REV</code>
+    <titre>Revenu brut</titre>
+    <classe>Revenu brut</classe>
+    <ajout>210</ajout>
+  </produit>
+  <produit>
+    <code>PRM800000</code>
+    <titre>Excédent d'exploitation brut</titre>
+    <classe>Excédent d'exploitation brut</classe>
+    <ajout>217248</ajout>
+  </produit>
+  
+  <total>
+	  <depense>1733615</depense>
+    <brasserie>875224</brasserie>
+    <!-- <depense>2235357</depense> -->
+    <!-- <depense>875224</depense> -->
+  </total>
+</root>

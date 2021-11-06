@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<produit>
+		<titre>Agriculture, foresterie, pêche et chasse</titre>
+		<code>AGRI</code>
+		<prod-local>15455.692</prod-local>
+		<prod-etranger>5058.631</prod-etranger>
+		<local>72245</local>
+		<emploi-ratio>4.674</emploi-ratio>
+		<etranger>23645.709</etranger>
+	</produit>
+	<produit>
+		<titre>Exploitation minière et pétrolière</titre>
+		<code>MIN</code>
+		<prod-local>8756.571</prod-local>
+		<prod-etranger>4158.962</prod-etranger>
+		<local>20075</local>
+		<emploi-ratio>2.293</emploi-ratio>
+		<etranger>9534.687</etranger>
+	</produit>
+	<produit>
+		<titre>Services publics</titre>
+		<code>TAX</code>
+		<prod-local>13653.579</prod-local>
+		<prod-etranger>854.908</prod-etranger>
+		<local>32185</local>
+		<emploi-ratio>2.357</emploi-ratio>
+		<etranger>2015.238</etranger>
+	</produit>
+	<produit>
+		<titre>Construction</titre>
+		<code>CON</code>
+		<prod-local>55932.446</prod-local>
+		<prod-etranger>105.672</prod-etranger>
+		<local>260200</local>
+		<emploi-ratio>4.652</emploi-ratio>
+		<etranger>491.590</etranger>
+	</produit>
+	<produit>
+		<titre>Fabrication</titre>
+		<code>FAB</code>
+		<prod-local>170313.581</prod-local>
+		<prod-etranger>130292.051</prod-etranger>
+		<local>465100</local>
+		<emploi-ratio>2.731</emploi-ratio>
+		<etranger>355807.402</etranger>
+	</produit>
+	<produit>
+		<titre>Commerce de gros</titre>
+		<code>GRO</code>
+		<prod-local>33005.245</prod-local>
+		<prod-etranger>7542.035</prod-etranger>
+		<local>192000</local>
+		<emploi-ratio>5.817</emploi-ratio>
+		<etranger>43873.960</etranger>
+	</produit>
+	<produit>
+		<titre>Commerce de détail</titre>
+		<code>DET</code>
+		<prod-local>36118.896</prod-local>
+		<prod-etranger>794.760</prod-etranger>
+		<local>485025</local>
+		<emploi-ratio>13.429</emploi-ratio>
+		<etranger>10672.493</etranger>
+	</produit>
+	<produit>
+		<titre>Transport et entreposage</titre>
+		<code>TRA</code>
+		<prod-local>32011.83</prod-local>
+		<prod-etranger>5293.906</prod-etranger>
+		<local>192625</local>
+		<emploi-ratio>6.017</emploi-ratio>
+		<etranger>31855.054</etranger>
+	</produit>
+	<produit>
+		<titre>Industrie de l'information et industrie
+			culturelle</titre>
+		<code>CUL</code>
+		<prod-local>21032.346</prod-local>
+		<prod-etranger>6097.168</prod-etranger>
+		<local>82635</local>
+		<emploi-ratio>3.929</emploi-ratio>
+		<etranger>23955.457</etranger>
+	</produit>
+	<produit>
+		<titre>Finance et immobilier</titre>
+		<code>FIN</code>
+		<prod-local>75565.742</prod-local>
+		<prod-etranger>14174.804</prod-etranger>
+		<local>300410</local>
+		<emploi-ratio>3.975</emploi-ratio>
+		<etranger>56351.631</etranger>
+	</produit>
+	<produit>
+		<titre>Services professionnels, scientifiques et
+			techniques</titre>
+		<code>PRO</code>
+		<prod-local>37752.985</prod-local>
+		<prod-etranger>7510.509</prod-etranger>
+		<local>265170</local>
+		<emploi-ratio>7.024</emploi-ratio>
+		<etranger>52752.426</etranger>
+	</produit>
+	<produit>
+		<titre>Services administratifs, de soutien et de
+			gestion</titre>
+		<code>ADM</code>
+		<prod-local>17736.915</prod-local>
+		<prod-etranger>5461.628</prod-etranger>
+		<local>213080</local>
+		<emploi-ratio>12.013</emploi-ratio>
+		<etranger>65612.526</etranger>
+	</produit>
+	<produit>
+		<titre>Soins de santé et assistance sociale</titre>
+		<code>SAN</code>
+		<prod-local>41966.118</prod-local>
+		<prod-etranger>349.389</prod-etranger>
+		<local>502045</local>
+		<emploi-ratio>11.963</emploi-ratio>
+		<etranger>4179.777</etranger>
+	</produit>
+	<produit>
+		<titre>Arts et spectacles</titre>
+		<code>ART</code>
+		<prod-local>5605.506</prod-local>
+		<prod-etranger>677.609</prod-etranger>
+		<local>80830</local>
+		<emploi-ratio>14.420</emploi-ratio>
+		<etranger>9770.951</etranger>
+	</produit>
+	<produit>
+		<titre>Hébergement et restauration</titre>
+		<code>HEB</code>
+		<prod-local>17978.375</prod-local>
+		<prod-etranger>2170.392</prod-etranger>
+		<local>279005</local>
+		<emploi-ratio>15.519</emploi-ratio>
+		<etranger>33682.146</etranger>
+	</produit>
+	<produit>
+		<titre>Autres services</titre>
+		<code>AUT</code>
+		<prod-local>10224.36</prod-local>
+		<prod-etranger>608.001</prod-etranger>
+		<local>212800</local>
+		<emploi-ratio>20.813</emploi-ratio>
+		<etranger>12654.358</etranger>
+	</produit>
+	<produit>
+		<titre>Services d'enseignement</titre>
+		<code>ENS</code>
+		<prod-local>28827.091</prod-local>
+		<prod-etranger>589.923</prod-etranger>
+		<local>328800</local>
+		<emploi-ratio>11.406</emploi-ratio>
+		<etranger>6728.622</etranger>
+	</produit>
+	<produit>
+		<titre>Administration publique</titre>
+		<code>ETA</code>
+		<prod-local>62212.003</prod-local>
+		<prod-etranger>1336.026</prod-etranger>
+		<local>242035</local>
+		<emploi-ratio>3.890</emploi-ratio>
+		<etranger>5197.793</etranger>
+	</produit>
+	<produit>
+		<code>WORK</code>
+		<disponible>274088</disponible>
+	</produit>
+	<total>
+		<depense>4975047</depense>
+		<local>4226265</local>
+		<etranger>748782</etranger>
+	</total>
+</root>
