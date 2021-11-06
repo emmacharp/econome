@@ -24,7 +24,6 @@ jobs:
           sudo apt-get install xsltproc -y
           rsync dev/index.xml build/
           rsync dev/index.xsl build/
-          rsync dev/diagrams.xsl build/
           rsync --recursive dev/exposes build/
           rsync --recursive dev/assets build/
           npm install clean-css-cli uglify-js -g
@@ -35,11 +34,8 @@ jobs:
           cleancss -o build/assets/css/patterns.min.css dev/assets/css/patterns/build.css
           xsltproc dev/index.xml > build/index.html
           cd dev
-          find exposes -name index.xml | awk '{system("xsltproc progressive.xsl " $1 " > ../build/$(dirname " $1 ")/index.html")}'
+          find exposes -name index.xml | awk '{system("xsltproc assets/templates/progressive.xsl " $1 " > ../../../build/$(dirname " $1 ")/index.html && xsltproc assets/templates/diagrams.xsl " $1 " > ../../../build/$(dirname " $1 ")/diagrams.html")}'
           cd ..
-          xsltproc dev/diagrams.xsl dev/exposes/achat-local/index.xml > build/diagrams.html
-          xsltproc dev/minified.xsl dev/exposes/achat-local/index.xml > build/index.min.html
-          xsltproc dev/progressive.xsl dev/exposes/achat-local/index.xml > build/index.html
           sed '/xsl:include/d' dev/index.xsl > build/index-complete.xsl ; sed '/xsl:stylesheet/d;/\?xml/d' dev/includes/* | sed -i '$e cat /dev/stdin' build/index-complete.xsl
           cp dev/index.xml build/index-complete.xml
           sed -i 's/index\.xsl/index-complete\.xsl/' build/index-complete.xml
