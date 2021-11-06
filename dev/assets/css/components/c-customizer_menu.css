@@ -35,10 +35,13 @@
 
 [id="customizerMenu"] label {
 	display: flex;
+	flex-grow: 1;
 }
 
 [id="customizerMenu"] small {
 	margin-right: auto;
+	flex-grow: 10;
+	text-align: left;
 }
 
 [id="customizerMenu"] div {
