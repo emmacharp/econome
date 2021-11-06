@@ -5,18 +5,18 @@ xmlns:svg="http://www.w3.org/2000/svg"
 xmlns:str="http://exslt.org/strings"
 exclude-result-prefixes="str">
 
-<xsl:include href="includes/diagram.xsl" />
-<xsl:include href="includes/symbol.xsl" />
-<xsl:include href="includes/goods.xsl" />
-<xsl:include href="includes/section-image.xsl" />
-<xsl:include href="includes/grid-paper-pattern.xsl" />
-<xsl:include href="includes/wiki-viewer.xsl" />
-<xsl:include href="includes/assets.xsl"/>
-<xsl:include href="includes/head.xsl"/>
-<xsl:include href="includes/internal-navigation.xsl"/>
-<xsl:include href="includes/main-content.xsl"/>
-<xsl:include href="includes/fieldset.xsl"/>
-<xsl:include href="includes/body.xsl"/>
+<xsl:include href="assets/includes/diagram.xsl" />
+<xsl:include href="assets/includes/symbol.xsl" />
+<xsl:include href="assets/includes/goods.xsl" />
+<xsl:include href="assets/includes/section-image.xsl" />
+<xsl:include href="assets/includes/grid-paper-pattern.xsl" />
+<xsl:include href="assets/includes/wiki-viewer.xsl" />
+<xsl:include href="assets/includes/assets.xsl"/>
+<xsl:include href="assets/includes/head.xsl"/>
+<xsl:include href="assets/includes/internal-navigation.xsl"/>
+<xsl:include href="assets/includes/main-content.xsl"/>
+<xsl:include href="assets/includes/fieldset.xsl"/>
+<xsl:include href="assets/includes/body.xsl"/>
 
 <xsl:output method="html" doctype-system="about:legacy-compat" />
 
