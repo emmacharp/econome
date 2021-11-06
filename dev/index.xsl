@@ -7,7 +7,7 @@ exclude-result-prefixes="str">
 
 <xsl:include href="includes/diagram.xsl" />
 <xsl:include href="includes/symbol.xsl" />
-<xsl:include href="goods.xsl" />
+<xsl:include href="includes/goods.xsl" />
 <xsl:include href="includes/section-image.xsl" />
 <xsl:include href="includes/grid-paper-pattern.xsl" />
 <xsl:include href="includes/wiki-viewer.xsl" />
