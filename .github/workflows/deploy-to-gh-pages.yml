@@ -24,11 +24,8 @@ jobs:
           sudo apt-get install xsltproc -y
           rsync dev/index.xml build/
           rsync dev/index.xsl build/
-          rsync dev/diagram.xml build/
           rsync dev/diagrams.xsl build/
-          rsync dev/symbols.svg build/
           rsync --recursive dev/exposes build/
-          rsync --recursive dev/includes build/
           rsync --recursive dev/assets build/
           npm install clean-css-cli uglify-js -g
           cat dev/assets/js/* | uglifyjs -o build/assets/js/main.min.js
