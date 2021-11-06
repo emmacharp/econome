@@ -11,8 +11,10 @@
 				<menu>
 					<li>
 							<div>
-								<small>Zoom</small>
-								<input type="number" name="zoom" value="1" min="0.1" max="2.0" step="0.1" />
+								<label>
+									<small>Zoom</small>
+									<input type="number" name="zoom" value="1" min="0.1" max="2.0" step="0.1" />
+								</label>
 							</div>
 					</li>
 					<li>
