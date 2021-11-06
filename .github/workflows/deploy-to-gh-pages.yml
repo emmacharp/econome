@@ -27,6 +27,7 @@ jobs:
           rsync dev/diagram.xml build/
           rsync dev/diagrams.xsl build/
           rsync dev/symbols.svg build/
+          rsync --recursive dev/exposes build/
           rsync --recursive dev/includes build/
           rsync --recursive dev/assets build/
           npm install clean-css-cli uglify-js -g
@@ -37,6 +38,7 @@ jobs:
           cleancss -o build/assets/css/patterns.min.css dev/assets/css/patterns/build.css
           xsltproc dev/index.xml > build/index.full.html
           xsltproc dev/goods.xml > build/goods.html
+          find build/exposes -name index.xml | awk '{system("xsltproc " $1 " > $(dirname " $1 ")/index.html")}'
           xsltproc dev/diagrams.xsl dev/index.xml > build/diagrams.html
           xsltproc dev/minified.xsl dev/index.xml > build/index.min.html
           xsltproc dev/progressive.xsl dev/index.xml > build/index.html
