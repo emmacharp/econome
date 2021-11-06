@@ -341,7 +341,7 @@
 	<xsl:template match="diagram">
 		<xsl:apply-templates select=".|@data-type" mode="include-once" />
 		<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))"></xsl:variable>
-		<article class="{@data-type} diagram" data-hx-get="diagrams.html" data-hx-swap="beforeend" data-hx-select="#{$id}" data-hx-trigger="intersect once">
+		<article class="{@data-type} diagram" data-hx-get="/diagrams.html" data-hx-swap="beforeend" data-hx-select="#{$id}" data-hx-trigger="intersect once">
 			<h4 class="visually-hidden"><xsl:value-of select="@heading" /></h4>
 		</article>
 	</xsl:template>
