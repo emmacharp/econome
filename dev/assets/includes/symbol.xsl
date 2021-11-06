@@ -2,7 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ext="http://exslt.org/common" exclude-result-prefixes="ext svg xlink">
 
 	<xsl:variable name="svg-symbols">
-		<xsl:copy-of select="document('../symbols.svg')" />
+		<xsl:copy-of select="document('../img/symbols.svg')" />
 	</xsl:variable>
 
 	<xsl:key name="symbol-type" match="svg:symbol" use="substring-after(@id, 'svg-')"/>
@@ -12,7 +12,7 @@
 		<xsl:param name="attr" select="@*[not(name() = 'id')]" />
 		<svg xmlns="http://www.w3.org/2000/svg" class="{$class}" viewBox="{@viewBox}">
 			<xsl:apply-templates select="$attr" />
-			<use xlink:href="/symbols.svg#{@id}"></use>
+			<use xlink:href="/assets/img/symbols.svg#{@id}"></use>
 		</svg>
 	</xsl:template>
 
