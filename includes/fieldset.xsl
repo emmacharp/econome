@@ -3,7 +3,7 @@
 <xsl:template match="fieldset[not(preceding::fieldset)]" mode="include-once">
 	<xsl:call-template name="body-css">
 		<xsl:with-param name="content">
-			<link rel="stylesheet" href="assets/css/components/c-fieldset.css"/>
+			<link rel="stylesheet" href="/assets/css/components/c-fieldset.css"/>
 		</xsl:with-param>
 	</xsl:call-template>
 </xsl:template>

@@ -316,8 +316,8 @@
 	<xsl:template match="diagram[not(preceding::diagram)]" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
-				<link rel="stylesheet" href="assets/css/components/c-goods-list.css"/>
-				<link rel="stylesheet" href="assets/css/components/c-figure.css"/>
+				<link rel="stylesheet" href="/assets/css/components/c-goods-list.css"/>
+				<link rel="stylesheet" href="/assets/css/components/c-figure.css"/>
 			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
@@ -325,7 +325,7 @@
 	<xsl:template match="diagram[not(preceding::diagram[@data-type = 'chain'])]/@data-type[. = 'chain']" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
-				<link rel="stylesheet" href="assets/css/components/c-chain.css"/>
+				<link rel="stylesheet" href="/assets/css/components/c-chain.css"/>
 			</xsl:with-param>
 		</xsl:call-template>
 		</xsl:template>
@@ -333,7 +333,7 @@
 		<xsl:template match="diagram[not(preceding::diagram[@data-type = 'macro'])]/@data-type[. = 'macro']" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
-				<link rel="stylesheet" href="assets/css/components/c-macro.css"/>
+				<link rel="stylesheet" href="/assets/css/components/c-macro.css"/>
 			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
@@ -341,7 +341,7 @@
 	<xsl:template match="diagram">
 		<xsl:apply-templates select=".|@data-type" mode="include-once" />
 		<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))"></xsl:variable>
-		<article class="{@data-type} diagram" data-hx-get="diagrams.html" data-hx-swap="beforeend" data-hx-select="#{$id}" data-hx-trigger="intersect once">
+		<article class="{@data-type} diagram" data-hx-get="/diagrams.html" data-hx-swap="beforeend" data-hx-select="#{$id}" data-hx-trigger="intersect once">
 			<h4 class="visually-hidden"><xsl:value-of select="@heading" /></h4>
 		</article>
 	</xsl:template>

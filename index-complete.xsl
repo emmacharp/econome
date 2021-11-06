@@ -84,32 +84,32 @@ exclude-result-prefixes="str">
 	</xsl:template>
 
 	<xsl:template name="head-css">
-		<link rel="stylesheet" href="assets/css/utilities/u-superdiv.css"/>
-		<link rel="stylesheet" href="assets/css/utilities/u-visually_hidden.css"/>
+		<link rel="stylesheet" href="/assets/css/utilities/u-superdiv.css"/>
+		<link rel="stylesheet" href="/assets/css/utilities/u-visually_hidden.css"/>
 
-		<link rel="stylesheet" href="assets/css/theme/t-library.css"/>
-		<link rel="stylesheet" href="assets/css/theme/t-config.css"/>
-		<link rel="stylesheet" href="assets/css/theme/t-setup.css"/>
-		<link rel="stylesheet" href="assets/css/theme/t-typography.css"/>
-		<link rel="stylesheet" href="assets/css/theme/t-general.css"/>
-		<link rel="stylesheet" href="assets/css/theme/t-special.css"/>
-		<link rel="stylesheet" href="assets/css/theme/t-controls.css"/>
+		<link rel="stylesheet" href="/assets/css/theme/t-library.css"/>
+		<link rel="stylesheet" href="/assets/css/theme/t-config.css"/>
+		<link rel="stylesheet" href="/assets/css/theme/t-setup.css"/>
+		<link rel="stylesheet" href="/assets/css/theme/t-typography.css"/>
+		<link rel="stylesheet" href="/assets/css/theme/t-general.css"/>
+		<link rel="stylesheet" href="/assets/css/theme/t-special.css"/>
+		<link rel="stylesheet" href="/assets/css/theme/t-controls.css"/>
 
-		<link rel="stylesheet" href="assets/css/theme/t-light_scheme.css" media="screen" />
-		<link id="sheetLightScheme" rel="stylesheet" href="assets/css/theme/t-light_scheme.css" media="screen and (prefers-color-scheme: light)" />
-		<link id="sheetDarkScheme" rel="stylesheet" href="assets/css/theme/t-dark_scheme.css" media="screen and (prefers-color-scheme: dark)" />
-		<link id="sheetDarkHighContrast" rel="stylesheet" href="assets/css/theme/t-dark-high_contrast.css" media="screen and (prefers-contrast: high) and (prefers-color-scheme: dark)" />
-		<link id="sheetLightHighContrast" rel="stylesheet" href="assets/css/theme/t-light-high_contrast.css" media="screen and (prefers-contrast: high) and (prefers-color-scheme:light)" />
-		<link id="sheetAnimations" rel="stylesheet" href="assets/css/patterns/p-section_visibility-transitions.css" media="not screen and (prefers-reduced-motion: reduce)" />
+		<link rel="stylesheet" href="/assets/css/theme/t-light_scheme.css" media="screen" />
+		<link id="sheetLightScheme" rel="stylesheet" href="/assets/css/theme/t-light_scheme.css" media="screen and (prefers-color-scheme: light)" />
+		<link id="sheetDarkScheme" rel="stylesheet" href="/assets/css/theme/t-dark_scheme.css" media="screen and (prefers-color-scheme: dark)" />
+		<link id="sheetDarkHighContrast" rel="stylesheet" href="/assets/css/theme/t-dark-high_contrast.css" media="screen and (prefers-contrast: high) and (prefers-color-scheme: dark)" />
+		<link id="sheetLightHighContrast" rel="stylesheet" href="/assets/css/theme/t-light-high_contrast.css" media="screen and (prefers-contrast: high) and (prefers-color-scheme:light)" />
+		<link id="sheetAnimations" rel="stylesheet" href="/assets/css/patterns/p-section_visibility-transitions.css" media="not screen and (prefers-reduced-motion: reduce)" />
 
-		<link rel="stylesheet" href="assets/css/components/c-cartoon_characters.css" />
+		<link rel="stylesheet" href="/assets/css/components/c-cartoon_characters.css" />
 
-		<link rel="stylesheet" href="assets/css/patterns/p-provenance.css"/>
-		<link rel="stylesheet" href="assets/css/patterns/p-type-emojis.css"/>
-		<link rel="stylesheet" href="assets/css/patterns/p-auto_line-height.css"/>
+		<link rel="stylesheet" href="/assets/css/patterns/p-provenance.css"/>
+		<link rel="stylesheet" href="/assets/css/patterns/p-type-emojis.css"/>
+		<link rel="stylesheet" href="/assets/css/patterns/p-auto_line-height.css"/>
 
-		<link rel="stylesheet" href="assets/css/layout/l-master_composition.css"/>
-		<link rel="stylesheet" href="assets/css/x-quarantine.css"/>
+		<link rel="stylesheet" href="/assets/css/layout/l-master_composition.css"/>
+		<link rel="stylesheet" href="/assets/css/x-quarantine.css"/>
 		</xsl:template>
 
 		<xsl:template name="body-css">
@@ -118,8 +118,8 @@ exclude-result-prefixes="str">
 		</xsl:template>
 
 		<xsl:template name="scripts">
-			<script src="assets/js/libraries.min.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="/assets/js/libraries.min.js"></script>
+			<script src="/assets/js/main.js"></script>
 		</xsl:template>
 
 	<xsl:template match="root" mode="body" name="body">
@@ -127,7 +127,7 @@ exclude-result-prefixes="str">
 			<xsl:apply-templates select=".//details" mode="include-once"/>
 			<xsl:call-template name="internal-navigation"/>
 			<xsl:call-template name="main-content"/>
-			<link rel="stylesheet" href="assets/css/components/c-customizer_menu.css"/>
+			<link rel="stylesheet" href="/assets/css/components/c-customizer_menu.css"/>
 			<details id="customizerMenu">
 				<summary><span>Préférences</span></summary>
 				<menu>
@@ -482,8 +482,8 @@ exclude-result-prefixes="str">
 	<xsl:template match="diagram[not(preceding::diagram)]" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
-				<link rel="stylesheet" href="assets/css/components/c-goods-list.css"/>
-				<link rel="stylesheet" href="assets/css/components/c-figure.css"/>
+				<link rel="stylesheet" href="/assets/css/components/c-goods-list.css"/>
+				<link rel="stylesheet" href="/assets/css/components/c-figure.css"/>
 			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
@@ -491,7 +491,7 @@ exclude-result-prefixes="str">
 	<xsl:template match="diagram[not(preceding::diagram[@data-type = 'chain'])]/@data-type[. = 'chain']" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
-				<link rel="stylesheet" href="assets/css/components/c-chain.css"/>
+				<link rel="stylesheet" href="/assets/css/components/c-chain.css"/>
 			</xsl:with-param>
 		</xsl:call-template>
 		</xsl:template>
@@ -499,7 +499,7 @@ exclude-result-prefixes="str">
 		<xsl:template match="diagram[not(preceding::diagram[@data-type = 'macro'])]/@data-type[. = 'macro']" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
-				<link rel="stylesheet" href="assets/css/components/c-macro.css"/>
+				<link rel="stylesheet" href="/assets/css/components/c-macro.css"/>
 			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
@@ -507,7 +507,7 @@ exclude-result-prefixes="str">
 	<xsl:template match="diagram">
 		<xsl:apply-templates select=".|@data-type" mode="include-once" />
 		<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))"></xsl:variable>
-		<article class="{@data-type} diagram" data-hx-get="diagrams.html" data-hx-swap="beforeend" data-hx-select="#{$id}" data-hx-trigger="intersect once">
+		<article class="{@data-type} diagram" data-hx-get="/diagrams.html" data-hx-swap="beforeend" data-hx-select="#{$id}" data-hx-trigger="intersect once">
 			<h4 class="visually-hidden"><xsl:value-of select="@heading" /></h4>
 		</article>
 	</xsl:template>
@@ -526,7 +526,7 @@ exclude-result-prefixes="str">
 <xsl:template match="fieldset[not(preceding::fieldset)]" mode="include-once">
 	<xsl:call-template name="body-css">
 		<xsl:with-param name="content">
-			<link rel="stylesheet" href="assets/css/components/c-fieldset.css"/>
+			<link rel="stylesheet" href="/assets/css/components/c-fieldset.css"/>
 		</xsl:with-param>
 	</xsl:call-template>
 </xsl:template>
@@ -559,7 +559,7 @@ exclude-result-prefixes="str">
 			setPaperGrid();
 			window.addEventListener('resize', setPaperGrid);
 		</script>
-		<link rel="stylesheet" href="assets/css/patterns/p-grid_paper.css"/>
+		<link rel="stylesheet" href="/assets/css/patterns/p-grid_paper.css"/>
 	</xsl:template>
 	<xsl:template name="head">
 		<head>
@@ -580,7 +580,7 @@ exclude-result-prefixes="str">
 		<input aria-label="Ouvrir ou fermer la navigation" type="checkbox" class="toggle-internal-nav" />
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
-				<link rel="stylesheet" href="assets/css/components/c-internal_nav.css"/>
+				<link rel="stylesheet" href="/assets/css/components/c-internal_nav.css"/>
 			</xsl:with-param>
 		</xsl:call-template>
 		<nav>
@@ -629,7 +629,7 @@ exclude-result-prefixes="str">
 	<xsl:template match="section[not(preceding::section)]" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
-				<link rel="stylesheet" href="assets/css/layout/l-section_composition.css"/>
+				<link rel="stylesheet" href="/assets/css/layout/l-section_composition.css"/>
 			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
@@ -637,7 +637,7 @@ exclude-result-prefixes="str">
 	<xsl:template match="aside[@class='intervention'][not(preceding::aside[@class='intervention'])]" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
-				<link rel="stylesheet" href="assets/css/components/c-intervention.css"/>
+				<link rel="stylesheet" href="/assets/css/components/c-intervention.css"/>
 			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
@@ -645,7 +645,7 @@ exclude-result-prefixes="str">
 	<xsl:template match="details[not(preceding::details)]" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
-				<link rel="stylesheet" href="assets/css/components/c-details.css"/>
+				<link rel="stylesheet" href="/assets/css/components/c-details.css"/>
 			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
@@ -707,7 +707,7 @@ exclude-result-prefixes="str">
 		<xsl:param name="attr" select="@*[not(name() = 'id')]" />
 		<svg xmlns="http://www.w3.org/2000/svg" class="{$class}" viewBox="{@viewBox}">
 			<xsl:apply-templates select="$attr" />
-			<use xlink:href="symbols.svg#{@id}"></use>
+			<use xlink:href="/symbols.svg#{@id}"></use>
 		</svg>
 	</xsl:template>
 
@@ -910,7 +910,7 @@ exclude-result-prefixes="str">
 <xsl:template name="wiki-viewer">
 	<xsl:call-template name="body-css">
 		<xsl:with-param name="content">
-			<link rel="stylesheet" href="assets/css/components/c-wiki_viewer.css"/>
+			<link rel="stylesheet" href="/assets/css/components/c-wiki_viewer.css"/>
 		</xsl:with-param>
 	</xsl:call-template>
 

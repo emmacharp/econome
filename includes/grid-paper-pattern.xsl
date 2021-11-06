@@ -22,6 +22,6 @@
 			setPaperGrid();
 			window.addEventListener('resize', setPaperGrid);
 		</script>
-		<link rel="stylesheet" href="assets/css/patterns/p-grid_paper.css"/>
+		<link rel="stylesheet" href="/assets/css/patterns/p-grid_paper.css"/>
 	</xsl:template>
 </xsl:stylesheet>

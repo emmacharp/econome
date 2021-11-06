@@ -12,7 +12,7 @@
 	<xsl:template match="section[not(preceding::section)]" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
-				<link rel="stylesheet" href="assets/css/layout/l-section_composition.css"/>
+				<link rel="stylesheet" href="/assets/css/layout/l-section_composition.css"/>
 			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
@@ -20,7 +20,7 @@
 	<xsl:template match="aside[@class='intervention'][not(preceding::aside[@class='intervention'])]" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
-				<link rel="stylesheet" href="assets/css/components/c-intervention.css"/>
+				<link rel="stylesheet" href="/assets/css/components/c-intervention.css"/>
 			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
@@ -28,7 +28,7 @@
 	<xsl:template match="details[not(preceding::details)]" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
-				<link rel="stylesheet" href="assets/css/components/c-details.css"/>
+				<link rel="stylesheet" href="/assets/css/components/c-details.css"/>
 			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
