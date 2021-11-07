@@ -2,11 +2,13 @@
 	Toute propriété relevant de la composition
 	se retrouve dans « l-master_composition.css » */
 
+
+/* Styles de base */
+
 nav {
 	background-color: var(--ColorBgControls);
 	display: flex;
 	scrollbar-width: none;
-
 }
 
 nav::-webkit-scrollbar {
@@ -42,15 +44,6 @@ nav a {
 	padding-left: 0;
 }
 
-nav li>a:before {
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	font-size: calc(16px + .5vmin);
-	vertical-align: middle;
-}
-
-
 nav header {
 	padding-top: calc(var(--Row) * 3);
 	padding-bottom: var(--Row);
@@ -67,29 +60,19 @@ nav header strong {
 	margin-right: .25em;
 }
 
-nav li.is-complete>a {
-	--ColorBgControls: var(--ColorBgComplete);
-	--ColorControls: var(--ColorComplete);
+
+/* Préparer un pseudo contexte pour les emojis. Voir p-type-emojis.css */
+
+nav li>a:before {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-size: calc(16px + .5vmin);
+	vertical-align: middle;
 }
 
-nav li.is-complete>a>svg {
-	opacity: 0;
-}
 
-nav li.is-incomplete>a {
-	--ColorBgControls: var(--ColorBgIncomplete);
-	--ColorControls: var(--ColorIncomplete);
-}
-
-nav li.is-active>a {
-	--ColorBgControls: var(--ColorBgActive);
-	--ColorControls: var(--ColorActive);
-	cursor: unset;
-}
-
-nav li:not(.is-active) a:hover {
-	--ColorBgControls: var(--ColorLtBg);
-}
+/* Gâchette d'affichage de la navigation. */
 
 .toggle-internal-nav {
 	position: absolute;
@@ -124,77 +107,4 @@ nav li:not(.is-active) a:hover {
 
 .toggle-internal-nav:not(:checked)~nav header * {
 	opacity: 0;
-}
-
-@media (orientation: landscape) {
-	.toggle-internal-nav {
-		position: fixed;
-	}
-	
-	.toggle-internal-nav::after {
-		visibility: visible;
-		padding-right: .5rem;
-		padding-left: .5rem;
-	}
-
-	.toggle-internal-nav:not(:checked):after {
-		background-color: var(--ColorBg);
-		content: "Infos & navigation";
-	}
-
-	nav {
-		width: 30ch;
-		flex-direction: column;
-	}
-
-	nav>* {
-		width: 30ch;
-		box-sizing: border-box;
-	}
-
-	nav li {
-		border-top: 2px solid var(--ColorBg);
-	}
-
-	.toggle-internal-nav:checked~nav li {
-		border-color: transparent;
-	}
-
-	nav li>a:before {
-		height: calc(16px + var(--Row) * .75);
-		margin-right: .5ch;
-	}
-
-	nav li>a:before,
-	.toggle-internal-nav:not(:checked)~nav {
-		width: calc(16px + var(--Row) * .75);
-	}
-}
-
-@media (orientation: portrait) {
-	body>.toggle-internal-nav,
-	nav header {
-		display: none;
-	}
-
-	nav {
-		order: 1;
-	}
-
-	nav * {
-		display: flex;
-	}
-
-	nav a {
-		width: calc(var(--Row) * 1.75);
-		height: calc(var(--Row) * 1.75);
-		padding: 0;
-		font-size: 0;
-		align-items: center;
-		justify-content: center;
-	}
-
-	nav li+li {
-		border-left: 1px solid var(--ColorBg);
-	}
 }
