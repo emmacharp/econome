@@ -12,6 +12,8 @@
 
 			<meta name="viewport" content="width=device-width"/>
 
+			<script defer="" data-domain="econome.io" src="https://plausible.io/js/plausible.js"></script>
+
 			<xsl:call-template name="head-css"></xsl:call-template>
 		</head>
 	</xsl:template>
