@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-	<xsl:template name="main-content">
-		<main>
-			<xsl:apply-templates mode="main-content" />
-		</main>
-	</xsl:template>
-
+	<!-- Feuilles de styles à n'insérer qu'une seule fois -->
 	<xsl:template match="*|@*" mode="include-once"></xsl:template>
-
 	<xsl:template match="section[not(preceding::section)]" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
@@ -16,7 +10,6 @@
 			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
-
 	<xsl:template match="aside[@class='intervention'][not(preceding::aside[@class='intervention'])]" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
@@ -24,7 +17,6 @@
 			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
-
 	<xsl:template match="details[not(preceding::details)]" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
@@ -33,6 +25,7 @@
 		</xsl:call-template>
 	</xsl:template>
 
+	<!-- Construire les sections principales -->
 	<xsl:template match="*" mode="main-content"/>
 	<xsl:template match="section" mode="main-content">
 		<xsl:apply-templates select="." mode="include-once"/>
@@ -51,12 +44,20 @@
 		</section>
 	</xsl:template>
 
+	<!-- Marqueurs de partie -->
 	<xsl:template match="h2" mode="main-content">
 		<h2>
 			<span>
 				<xsl:apply-templates />
 			</span>
 		</h2>
+	</xsl:template>
+
+	<!-- Générer le contenu principal -->
+	<xsl:template name="main-content">
+		<main>
+			<xsl:apply-templates mode="main-content" />
+		</main>
 	</xsl:template>
 
 </xsl:stylesheet>

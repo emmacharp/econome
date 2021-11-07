@@ -261,20 +261,20 @@
 				const contrastValue = html.getAttribute('data-contrast');
 
 				if (themeValue === 'light') {
-					sheetLightScheme.setAttribute('media', 'all');
-					sheetDarkScheme.disabled = true;
 					sheetLightScheme.disabled = false;
+					sheetLightScheme.setAttribute('media', 'all');
 					html.setAttribute('data-theme', 'light');
+					sheetDarkScheme.disabled = true;
 					if (contrastValue) {
+						sheetLightHighContrast.disabled = false;
 						sheetLightHighContrast.setAttribute('media', 'all');
 						sheetDarkHighContrast.disabled = true;
-						sheetLightHighContrast.disabled = false;
 					}
 				} else if (themeValue === 'dark') {
-					sheetDarkScheme.setAttribute('media', 'all');
 					sheetDarkScheme.disabled = false;
-					sheetLightScheme.disabled = true;
+					sheetDarkScheme.setAttribute('media', 'all');
 					html.setAttribute('data-theme', 'dark');
+					sheetLightScheme.disabled = true;
 					if (contrastValue) {
 						sheetDarkHighContrast.disabled = false;
 						sheetDarkHighContrast.setAttribute('media', 'all');
@@ -283,9 +283,9 @@
 				} else {
 					sheetDarkScheme.setAttribute('media', darkThemeMedia);
 					sheetLightScheme.setAttribute('media', lightThemeMedia);
+					html.removeAttribute('data-theme');
 					sheetDarkScheme.disabled = false;
 					sheetLightScheme.disabled = false;
-					html.removeAttribute('data-theme');
 					if (contrastValue) {
 						sheetLightHighContrast.disabled = false;
 						sheetDarkHighContrast.disabled = false;
