@@ -16,8 +16,8 @@
 			<div id="wikiDump"></div>
 			<footer>
 				<span>Contenu de Wikipedia.</span>
-				<a id="wikiCanonical" rel="canonical" target="_blank" href="#">Visiter la page</a
-				></footer>
+				<a id="wikiCanonical" rel="canonical" target="_blank" href="#">Visiter la page</a>
+			</footer>
 		</div>
 	</aside>
 </xsl:template>
