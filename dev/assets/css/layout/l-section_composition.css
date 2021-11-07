@@ -1,10 +1,4 @@
 @media all {
-	main>section {
-		display: grid;
-		grid-template: repeat(auto-fit, minmax(0,max-content)) / auto;
-		row-gap: calc(var(--Row) * 2);
-	}
-
 	main>section>* {
 		margin-top: 0;
 	}
@@ -35,30 +29,8 @@
 
 }
 
-@media (orientation: portrait) {
-	:root {
-		--security-spacing: clamp(var(--Row), 7vmin, calc(var(--Row) * 2));
-	}
 
-	main>section {
-		display: flex;
-		flex-direction: column;
-		padding-top: var(--security-spacing);
-		padding-bottom: var(--security-spacing);
-	}
-
-	main>section>a {
-		margin-left: var(--security-spacing);
-		margin-right: var(--security-spacing);
-	}
-
-	main>section>*,
-	main>section>figure>figcaption {
-		flex-shrink: 0;
-		padding-left: var(--security-spacing);
-		padding-right: var(--security-spacing);
-	}
-}
+/* Adaptation des interventions. Vers le modèle collé à la gauche. */
 
 @media (max-height: 70ch), (max-width: 80ch) {
 	main>section>aside {
@@ -134,20 +106,8 @@
 	}
 }
 
-@media (orientation: landscape) {
-	main {
-		padding: 0;
-	}
 
-	main>section>* {
-		padding-left: clamp(var(--Row), 4vmax, calc(var(--Row) * 4));
-		padding-right: clamp(var(--Row), 4vmax, calc(var(--Row) * 4));
-	}
-
-	main>section>a:last-child:after {
-		transform: rotate(90deg);
-	}
-}
+/* Modèle centré dès que l'espace le permet. */
 
 @media (min-width: 70ch) {
 

@@ -1,7 +1,6 @@
 [id="customizerMenu"]>summary {
 	padding-left: .5rem;
 	padding-right: var(--Row);
-	background-color: var(--ColorBg);
 	position: relative;
 	z-index: 1;
 }

@@ -1,3 +1,5 @@
+/* Styles de la modale et de son interface. */
+
 [id="wikiViewer"] {
 	top: 0;
 	right: 0;
@@ -39,10 +41,12 @@
 	border-top: 1px solid var(--ColorLines);
 	--ScaleLevel: var(--Short);
 }
+
 [id="wikiViewer"]>div>header>*,
 [id="wikiViewer"]>div>footer>* {
 	margin-top: 0;
 }
+
 [id="wikiViewer"]>div>header,
 [id="wikiViewer"]>div>footer {
 	flex-shrink: 0;
@@ -75,15 +79,6 @@
 	overflow: hidden;
 }
 
-[id="wikiViewer"] a {
-	color: var(--ColorDk);
-	text-decoration: none;
-}
-
-[id="wikiViewer"] a:hover {
-	text-decoration: underline;
-}
-
 [id=wikiViewer] [id="wikiViewerClose"] {
 	border: 0;
 	background: none;
@@ -93,6 +88,9 @@
 [id="wikiViewer"] [id="wikiViewerClose"]:after {
 	font-size: 1rem;
 }
+
+
+/* Styles des pseudo-boutons/contrôles permettant d'accéder au contenu. */
 
 [data-wiki]:after {
 	font-size: clamp(8px, .76125em, 20px);
@@ -117,6 +115,17 @@ p [data-wiki]:after {
 	font-style: normal;
 }
 
+
+/* Gérer les contenus html provenant de l'API de Wikipedia */
+
+[id="wikiViewer"] a {
+	color: var(--ColorDk);
+	text-decoration: none;
+}
+
+[id="wikiViewer"] a:hover {
+	text-decoration: underline;
+}
 
 [id="wikiViewer"] *+.toc {
 	margin-top: var(--Row);
@@ -180,9 +189,6 @@ p [data-wiki]:after {
 	margin-right: auto;
 }
 
-[id="wikiViewer"] [class*="infobox"] {
-}
-
 [id="wikiViewer"] .infobox img {
 	width: 100%;
 	object-position: top;
@@ -210,6 +216,9 @@ p [data-wiki]:after {
 	font-size: 12px;
 	line-height: 0;
 }
+
+
+/* Adaptation pleine fenêtre pour fenêtres étroites. */
 
 @media (max-width: 60em) {
 	[id="wikiViewer"]>div {
