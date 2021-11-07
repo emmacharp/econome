@@ -48,3 +48,11 @@ x 2021-10-29 (B) Essayer les émoticones pour tout ce qui est section @maitrise 
 x 2021-10-24 Vérifier la véracité des chiffres... chiffres qui concordent, siouplait. @maitrise +experience
 x 2021-10-29 (A) Nettoyer les svg de navigation remplacés par les emojis. @maitrise +hygiene
 x 2021-10-29 (A) Finir de sélectionner les icônes. @maitrise +recherche
+x 2021-11-06 Mettre la légende da visualisation (p. ex. chaque bonhomme égale 400000 travailleurs). @experience
+x 2021-11-06 Nettoyer le répertoire et déplacer les esquisses et autres fichiers de texte. https://medium.com/@ayushya/move-directory-from-one-repository-to-another-preserving-git-history-d210fa049d4b @maitrise
+x 2021-11-06 2021-04-24 Donner des contrôles persistants. Recherche par exemple. Avec explication (CMD-f). @experience
+x 2021-11-06 Nettoyer les sources de données @maitrise +xsl
+x 2021-11-06 Nettoyer ! @maitrise
+x 2021-11-06 Enlever les elements vides dans les diagrammes. @maitrise +propre
+x 2021-11-06 Tout changer type pour data-type... pis les autres si y en a. @maitrise +standard
+x 2021-11-06 Problème avec les formules dans le wiki de la rationalité. @maitrise +bug

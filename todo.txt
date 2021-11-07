@@ -1,24 +1,11 @@
-(A) Message à propos des fenêtes plus larges sur mobile @experience
-(A) Mettre la légende da visualisation (p. ex. chaque bonhomme égale 400000 travailleurs). @experience
 (A) Styles conditionnels à la charge de la batterie (Battery API) +performance @js @maitrise
 (B) Assurer le fonctionnement de la navigation clavier et des tabulations. @maitrise
 (C) Intégrer « Plausible » comme analytics. @maitrise
-(C) Nettoyer le répertoire et déplacer les esquisses et autres fichiers de texte. https://medium.com/@ayushya/move-directory-from-one-repository-to-another-preserving-git-history-d210fa049d4b @maitrise
-(B) Ajouter des icônes/signaux de navigation au clavier (tab, space, enter, etc.) +ux @css @js @maitrise
 (B) Permettre de renverser (miroir) le diagramme (vers le consommateur plutôt qu'en provenance de. Une switch ferait sûrement l'affaire. @maitrise
-(A) 2021-04-17 Intégrer de la gestion de couleur dynamique. +theme @CSS
-(A) 2021-04-24 Donner des contrôles persistants. Recherche par exemple. Avec explication (CMD-f). @experience
-2021-07-02 Scénario : on achète plus local. La composition de nos achats changent. Plus de boréale, moins de Guinness. Joey Joe Joe achète les deux. @maitrise +contenu
 2021-07-02 Comment pourrait-on reformuler « Excédent d'exploitation brut » pour que ce soit compréhensible ? @maitrise +henri
 (A) Régler le problème de franglais dans les produits (type en anglais / balise en francais...) @maitrise +xsl
-(B) Nettoyer les sources de données @maitrise +xsl
-(A) 2021-07-11 Tenter d'inférer les sommes à mettre dans les attributs du diagramme (value, foreign, etc.) @maitrise +donnees
-(A) Nettoyer ! @maitrise
 (A) Calculer les nombres à partir des produits *si* il n'y a pas de valeur aux attributs (value="" vs. value="776.8") @maitrise
 (B) 2021-07-23 Essayer en séquence hauteur > largeur l'animation d'ouverture de la liste de biens @maitrise +design
 (A) 2021-07-23 Gérer l'apparition des éléments de la chaîne en animation plutôt qu'en transition. Une dimension à la fois. @maitrise +design
-(B) Enlever les elements vides dans les diagrammes. @maitrise +propre
 (B) Réintégrer les q et cite. @maitrise +standard
-(B) Tout changer type pour data-type... pis les autres si y en a. @maitrise +standard
-(A) Problème avec les formules dans le wiki de la rationalité. @maitrise +bug
-(B) Ne choisir qu'un seul entre is-active ou is-visible. @maitrise +optimisation
+(A) Donner la clefs de la progression au survol de la navigation.. jouer avec le défiement pour donner l'Espace.
