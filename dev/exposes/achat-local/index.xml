@@ -132,18 +132,9 @@
 	<section data-type="chaine">
 		<header>
 			<h3>Joey Joe Joe et sa Pâpire</h3>
-			<small>Une histoire... locale ?</small>
-			<p>Voici les acteurs de votre chaîne économique.</p>
+			<small>Une histoire aux multiples acteurs</small>
+			<p>La chaîne économique rend votre achat possible. Son histoire va comme suit :</p>
 		</header>
-		<figure>
-			<diagram data-type="chain" heading="Chaîne économique typique d'un achat de bière générique">
-				<agent data-type="consumer" name="Joey Joe Joe" />
-				<agent data-type="retailer" name="Dépanneur Commun" />
-				<agent data-type="manufacturer" name="Entrepôts Correct" />
-				<agent data-type="transformer" name="Brasserie Moyenne" />
-			</diagram>
-			<figcaption><p>Représentation d'une chaîne typique d'un achat de bière générique.</p></figcaption>
-		</figure>
 		<div class="grille">
 			<article>
 				<h4><i>👤</i> Vous, Joey Joe Joe</h4>
@@ -151,41 +142,62 @@
 					<summary>
 						<span><b>... êtes assoiffé. Vous rêvez d’une bonne Pâpire, bien froide.</b></span>
 					</summary>
-					<p>En tant que <i data-wiki="Consommateur" data-sections="2">consommateur</i> votre action d'acheter détermine la constitution complète de la chaîne économique mise en branle. Cette fois-ci, le dépanneur Commun est l'heureux vendeur.</p>
+					<p>En tant que <i data-wiki="Consommateur" data-sections="2">consommateur</i> votre action d'acheter détermine la constitution complète de la chaîne économique mise en branle. Cette fois-ci, le dépanneur Commun est l'heureux vendeur. Vous lui donnez 10 $.</p>
 				</details>
 			</article>
 			<article>
 				<h4><i>🏪</i> Le dépanneur Commun</h4>
 				<details>
 					<summary>
-						<span><b>... au coin de votre rue, détient toujours une quantité suffisante de Pâpire.</b></span>
+						<span><b>... au coin de votre rue, détient toujours une quantité suffisante de Pâpire qu'il vend 10 $.</b></span>
 					</summary>
-					<p>En tant que <i data-wiki="Commerce_de_détail">détaillant</i>, il stocke une certaine quantité de Pâpire pour la vendre à de fins <em>connoisseurs</em> comme vous. La bière n’apparaît toutefois pas d’elle-même dans les réfrigérateurs de votre dépanneur Commun. Les Entrepôts Correct inc. s'en charge.</p>
+					<p>En tant que <i data-wiki="Commerce_de_détail">détaillant</i>, il stocke une certaine quantité de Pâpire pour la vendre à de fins <em>connoisseurs</em> comme vous. La bière n’apparaît toutefois pas d’elle-même dans les réfrigérateurs de votre dépanneur Commun. Pour 8.20 $, Les Entrepôts Correct inc. s'en charge.</p>
 				</details>
 			</article>
 			<article>
 				<h4><i>🚚</i> Les Entrepôts Correct inc.</h4>
 				<details>
 					<summary>
-						<span><b>reçoit, entrepose puis transporte plusieurs palettes de Pâpire.</b></span>
+						<span><b>reçoit, entrepose puis transporte plusieurs palettes de Pâpire qu'il vend 8.20 $.</b></span>
 					</summary>
-					<p>En tant que <i data-wiki="Commerce_de_gros">grossiste</i> et <i data-wiki="Le_Transporteur" class="easter">transporteur</i>, il s’assure que votre Pâpire soit distribuée d'un point A à un point B. Un peu comme le dépanneur Commun au final. Le grossiste cependant entrepose de vastes quantités de Pâpire. Ce faisant, il permet à la brasserie Moyenne de produire de manière élargie.</p>
+					<p>En tant que <i data-wiki="Commerce_de_gros">grossiste</i> et <i data-wiki="Le_Transporteur" class="easter">transporteur</i>, il s’assure que votre Pâpire soit distribuée d'un point A à un point B. Un peu comme le dépanneur Commun au final. Le grossiste cependant entrepose de vastes quantités de Pâpire. Ce faisant, il permet à la brasserie Moyenne de produire de manière élargie. Il paie 7.58 $ la brasserie Moyenne pour sa Pâpire.</p>
 				</details>
 			</article>
 			<article>
 				<h4><i>🏭</i> La brasserie Moyenne</h4>
 				<details>
 					<summary>
-						<span><b>brasse La Pâpire à votre grand plaisir.</b></span>
+						<span><b>pour 7.58 $, brasse La Pâpire à votre grand plaisir.</b></span>
 					</summary>
-					<p>Le transformateur est un agent fondamental de la chaîne économique, celui qui se procure les <i data-wiki="Consommation_intermédiaire" data-sections="0">ingrédients</i> et les transforme en Pâpire. Bref, sans brasserie, pas de bonne bière !</p>
+					<p>Le transformateur est un agent fondamental de la chaîne économique, celui qui se procure les <i data-wiki="Consommation_intermédiaire" data-sections="0">ingrédients</i> et les transforme en Pâpire. Bref, sans brasserie, pas de bonne bière ! Et pour ce beau travail, La brasserie Moyenne est payée 7.58 $</p>
 				</details>
 			</article>
 		</div>
-		<p>La chaîne économique rend votre achat possible.</p>
+		<figure>
+			<diagram data-type="chain" heading="Chaîne économique typique d'un achat de bière générique">
+				<agent data-type="consumer" name="Joey Joe Joe" />
+				<product data-type="beer" name="La Pâpire" complete="" value="100%" />
+				<agent data-type="retailer" name="Dépanneur Commun" added="10" />
+				<agent data-type="manufacturer" name="Entrepôts Correct" added="8.20" />
+				<agent data-type="transformer" name="Brasserie Moyenne" added="7.58" />
+			</diagram>
+			<figcaption>
+				<div>
+					<section>
+						<h5><i>🧮</i> Diagramme #01</h5>
+					<p>Chaîne économique typique d'un achat de bière moyen. Données de StatCan (2016).</p>
+					</section>
+					<section>
+						<h5><i>✨</i> Légende</h5>
+						<p>Chaque agent achète le bien à l'agent précédent pour un prix inférieur à celui qu'il reçoit.</p>
+					</section>
+				</div>
+			</figcaption>
+		</figure>
 		<div class="prose">
-			<p><b>C’est toute la valeur que vous octroyez à votre Pâpire qui y est ajoutée. La <i data-wiki="Valeur_ajoutée" data-sections="1">valeur ajoutée</i> est centrale à notre exposé.</b></p>
-			<p> C'est grâce à elle que vous pourrez aborder rationnellement votre action d'acheter localement... ou pas. La valeur ajoutée représente la rémunération économique de chacun des agents de la chaîne. Nous pouvons évaluer quelle part de votre <i data-wiki="Utilité_(économie)">satisfaction</i> repose sur quelles épaules et beaucoup plus encore.</p>
+			<p>Autrement dit, la brasserie Moyenne a transformé de l'eau et du houblon en Pâpire, pour la vendre ensuite aux Entrepôts Correct qui l'a transporté puis entreposé en attendant que le dépanneur Commun leur achète pour la placer et la réfrigérer en attente que vous vous présentiez pour finalement la lui acheter. Ouf.</p>
+			<p><b>Ça, transformer le houblon et l'eau pour ensuite, transporter et réfrigérer la Pâpire, c'est ce qu'on appelle la <i data-wiki="Valeur_ajoutée" data-sections="1">valeur ajoutée</i>. Et elle est centrale à notre exposé.</b></p>
+			<p>La valeur ajoutée, c'est la somme de toutes les activités de la chaîne. Nous pouvons évaluer quelle part de votre <i data-wiki="Utilité_(économie)">satisfaction</i> repose sur quelles épaules et beaucoup plus encore. C'est grâce à elle que vous pourrez aborder rationnellement votre action d'acheter localement... ou pas.</p>
 		</div>
 		<aside class="intervention">
 			<symbol data-type="henri" class="cartoon_henri animated" />
@@ -199,7 +211,7 @@
 			<h3>La valeur ajoutée</h3>
 			<small>Fait économique #01</small>
 		</header>
-		<p>Pour comprendre les répercussions économiques d'un achat, il faut considérer qui et quoi ajoute la valeur.</p>
+		<p>Pour comprendre les répercussions économiques d'un achat, il faut considérer qui ajoute la valeur et où elle est ajoutée.</p>
 		<aside class="intervention">
 			<symbol data-type="neurath" class="cartoon_neurath animated" />
 			<div>
@@ -212,21 +224,19 @@
 	<section data-type="chaine">
 		<header>
 			<h3>La chaîne de valeur (ajoutée)</h3>
-			<small>Le périple du 10 $ à Joey Joe Joe</small>
+			<small>Derrière un 10 $ se cache beaucoup d'activité !</small>
 		</header>
 		<div class="prose">
-			<p><b>Imaginons que vous dépensez 10 $ (hors-taxes) pour de la bière Pâpire au dépanneur Commun.</b> Ce 10 $ sera réparti travers la chaîne</p>
-			<p><strong>La partie qui est gardée par chacun des agent, c'est la valeur qu'il ajoute à la Pâpire.</strong></p>
+			<p>Lorsqu'on met nos lunettes de valeur ajoutée, on perçoit que la brasserie Moyenne a produit un bien, la Pâpire, dont la valeur est de 7.58 $ À ce bien, les Entrepôts Correct ont ajouté une valeur de 0.62 $ en services puis finalement, le dépanneur Commun ajoute le dernier 1.80 $ dans le 10 $ de valeur que vous, Joey Joe Joe, achetez.</p>
+			<p><b>La partie qui est gardée par chacun des agent, c'est la valeur qu'il ajoute à la Pâpire.</b></p>
 		</div>
 		<figure>
 			<diagram data-type="chain" heading="Valeur ajoutée à travers la chaîne">
 				<agent data-type="consumer" name="Joey Joe Joe" paid="10" />
 				<product data-type="beer" name="La Pâpire" complete="" value="100%" />
-				<agent data-type="retailer" name="Dépanneur Commun" added="1.80" />
-				<product data-type="beer" name="" complete="" value="92%" />
-				<agent data-type="manufacturer" name="Entrepôts Correct" added="0.62" />
-				<product data-type="beer" name="La Pâpire" complete="" value="75%" />
-				<agent data-type="transformer" name="Brasserie Moyenne" added="7.58" />
+				<agent data-type="retailer" name="Dépanneur Commun" added="1.80" goods="" />
+				<agent data-type="manufacturer" name="Entrepôts Correct" added="0.62" goods="" />
+				<agent data-type="transformer" name="Brasserie Moyenne" added="7.58" goods="" />
 			</diagram>
 			<figcaption>
 				<div>
@@ -236,12 +246,16 @@
 					</section>
 					<section>
 						<h5><i>✨</i> Légende</h5>
-						<p>Chaque agent introduit sa part de valeur ajoutée dans la Pâpire pour un total de 10 $.</p>
+						<p>Chaque agent introduit sa part de valeur ajoutée dans la Pâpire achetée pour un total de 10 $ par Joey Joe Joe.</p>
+					</section>
+					<section>
+						<h5><i>👉</i> Interactivité</h5>
+						<p><b>Vous pouvez survoler/taper les icônes pour afficher le nom de l'activité et sa valeur ajoutée en dollars.</b></p>
 					</section>
 				</div>
 			</figcaption>
 		</figure>
-		<p>En achetant 10 $ de Pâpire, vous achetez 10 $ de valeur ajoutée. Et c'est ainsi pour tout bien consommé !</p>
+		<p>Quand vous achetez 10 $ de Pâpire, cela signifie que l'activité économique des agents a créé 10 $ de valeur. Et c'est ainsi pour tout bien consommé !</p>
 		<div class="prose">
 		</div>
 		<aside class="intervention">
@@ -261,8 +275,8 @@
 				<agent data-type="consumer" name="Joey Joe Joe" paid="10" />
 				<product data-type="beer" name="La Pâpire" complete="" value="100%" />
 				<agent data-type="retailer" name="Dépanneur Commun" bought="0.66" value="1.14" goods="subunits" />
-				<agent data-type="manufacturer" name="Entrepôts Correct" value="0.39" bought="0.23" goods="" />
-				<agent data-type="transformer" name="Brasserie Moyenne" value="4.96" bought="2.52" goods="" />
+				<agent data-type="manufacturer" name="Entrepôts Correct" value="0.39" bought="0.23" goods="subunits" />
+				<agent data-type="transformer" name="Brasserie Moyenne" value="4.96" bought="2.52" goods="subunits" />
 			</diagram>
 			<figcaption>
 				<div>
@@ -276,7 +290,7 @@
 					</section>
 					<section>
 						<h5><i>👉</i> Interactivité</h5>
-						<p><b>Vous pouvez survoler/taper les icônes pour afficher le nom de l'activité et sa valeur ajoutée en dollars.</b></p>
+						<p><b>Vous pouvez survoler/taper les icônes pour afficher le nom de l'activité et sa valeur ajoutée en dollars. Accédez à des activités supplémentaires, à faible proportion, en appuyant sur le bouton « + ».</b></p>
 					</section>
 				</div>
 			</figcaption>
@@ -284,15 +298,15 @@
 
 		<div class="prose">
 			<p><b>Les agents de la chaîne achètent de la valeur créée par d'autres, les fournisseurs, exactement comme vous, quand vous achetez votre Pâpire.</b></p>
-			<p><strong>Votre achat est constitué de tous les autres achats faits dans sa chaîne économique.</strong> Pour que la valeur que vous achetez soit locale, il faut que les biens et services fournis à la brasserie Moyenne soient eux aussi, locaux.</p>
-			<p>Plus il y aura de valeur ajoutée produite localement, le plus haut sera le degré de localité de votre achat.</p>
+			<p>Le dépanneur Commun achète la Pâpire à Entrepôts Correct pour ensuite la réfrigérer dans son loyer à l'aide d'électricité. En passant par le dépanneur Commun, la valeur de la Pâpire est augmentée de 1.80 $ dont .66 ¢ provient des fournisseurs et 1.14 $ provient de son activité économique directe. Pour que votre Pâpire soit locale, il faut non seulement que l'activité économique directe soit locale, il faut aussi que les fournisseurs produisent localement.</p>
+			<p><strong>Plus il y aura de valeur ajoutée produite localement, le plus haut sera le degré de localité de votre achat.</strong></p>
 		</div>
 		<p>Bref, pour acheter local, il faut produire local !</p>
 
 		<aside class="intervention">
 			<symbol data-type="henri" class="cartoon_henri animated" />
 			<div>
-				<p>Pourquoi utiliser la provenance de la valeur ajoutée plutôt que la provenance des agents ? Car des agents locaux peuvent acheter de la valeur produite à l’étranger (les importations !) ou à l'inverse, produire de la valeur localement et la vendre à l'étranger (les exportations !).</p>
+				<p>Si le dépanneur Commun fonctionnait à l'aide de gaz naturel plutôt qu'à l'aide d'hydro-électricité, une partie de la valeur ajoutée ne serait pas produite localement. C'est là que nous voyons que le concept d'achat local est beaucoup plus subtil qu'un simple slogan !</p>
 			</div>
 		</aside>
 	</section>
