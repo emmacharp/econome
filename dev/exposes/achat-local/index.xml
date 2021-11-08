@@ -70,30 +70,14 @@
 			<h3>Avant de commencer...</h3>
 			<small>Merci d'être là Joey Joe Joe ! C'est un plaisir.</small>
 		</header>
-			<p>P'tite question : selon vous, les achats suivants sont-ils locaux ?</p>
+		<p>P'tite question d'introduction pour vous :</p>
 		<form>
 			<fieldset>
-				<p>Une caisse de Heineken au dépanneur du coin ?</p>
+				<p>À votre avis, pourrait-il vous être possible d'acheter tout ce que vous consommez localement ?</p>
 				<div>
-					<label><input type="radio" name="heineken"  required="" value="oui" /><span class="local">Oui !</span></label>
-					<label><input type="radio" name="heineken" required="" value="non" /><span class="foreign">Non !</span></label>
-					<label><input type="radio" name="heineken" required="" value="pas sur" /><span>Pas sûr...</span></label>
-				</div>
-			</fieldset>
-			<fieldset>
-				<p>Une pinte de Guinness à votre bar préféré ?</p>
-				<div>
-					<label><input type="radio" name="guinness" required="" value="oui" /><span class="local">Oui !</span></label>
-					<label><input type="radio" name="guinness" required="" value="non" /><span class="foreign">Non !</span></label>
-					<label><input type="radio" name="guinness" required="" value="pas sur" /><span>Pas sûr...</span></label>
-				</div>
-			</fieldset>
-			<fieldset>
-				<p>Une caisse de Boréale chez Wal-Mart ?</p>
-				<div>
-					<label><input type="radio" name="boreale" required="" value="oui" /><span class="local">Oui !</span></label>
-					<label><input type="radio" name="boreale" required="" value="non" /><span class="foreign">Non !</span></label>
-					<label><input type="radio" name="boreale" required="" value="pas sur" /><span>Pas sûr...</span></label>
+					<label><input type="radio" name="acheter-tout-local"  required="" value="oui" /><span class="local">Oui !</span></label>
+					<label><input type="radio" name="acheter-tout-local" required="" value="non" /><span class="foreign">Non !</span></label>
+					<label><input type="radio" name="acheter-tout-local" required="" value="pas sur" /><span>Pas sûr...</span></label>
 				</div>
 			</fieldset>
 		</form>
@@ -111,7 +95,7 @@
 		</header>
 		<div class="prose">
 			<p><b>On parle d’achat local lorsque vous magasinez à la boutique du coin plutôt que sur Amazon. Ou bien lorsque vous choisissez une bière du Québec plutôt qu’un vin de l’Ontario.</b></p>
-			<p>Une augmentation de votre quantité actuelle d'achats locaux est implicite, Joey Joe Joe.</p>
+			<p>Quand on parle d'achat local, Joey Joe Joe, on parle d'une action économique visant à augmenter la quantité actuelle de biens et services locaux que vous consommez.</p>
 			<p><strong>Augmenter la part locale de votre consommation modifie l’activité économique, locale et nationale.</strong> Pour consommer localement de manière <i data-wiki="Efficacité">efficace</i>, il vous faut comprendre que vos changements de consommation percolent partout dans l'économie. Un scénario vous aidera à comprendre.</p>
 		</div>
 
@@ -201,7 +185,7 @@
 		<p>La chaîne économique rend votre achat possible.</p>
 		<div class="prose">
 			<p><b>C’est toute la valeur que vous octroyez à votre Pâpire qui y est ajoutée. La <i data-wiki="Valeur_ajoutée" data-sections="1">valeur ajoutée</i> est centrale à notre exposé.</b></p>
-			<p> C'est grâce à elle que vous pourrez aborder rationnellement votre action d'acheter localement... ou pas. La valeur ajoutée représente la trace économique de chacun des agents de la chaîne. Nous pouvons évaluer quelle part de votre <i data-wiki="Utilité_(économie)">satisfaction</i> repose sur quelles épaules et beaucoup plus encore.</p>
+			<p> C'est grâce à elle que vous pourrez aborder rationnellement votre action d'acheter localement... ou pas. La valeur ajoutée représente la rémunération économique de chacun des agents de la chaîne. Nous pouvons évaluer quelle part de votre <i data-wiki="Utilité_(économie)">satisfaction</i> repose sur quelles épaules et beaucoup plus encore.</p>
 		</div>
 		<aside class="intervention">
 			<symbol data-type="henri" class="cartoon_henri animated" />
@@ -231,15 +215,18 @@
 			<small>Le périple du 10 $ à Joey Joe Joe</small>
 		</header>
 		<div class="prose">
-			<p><b>Imaginons que vous dépensez 10 $ (hors-taxes) pour de la bière Pâpire au dépanneur Commun.</b> Ce 10 $ sera distribué à travers la chaîne. Chaque agent s'en garde une partie. Cette partie, c'est la valeur ajoutée par son activité économique.</p>
+			<p><b>Imaginons que vous dépensez 10 $ (hors-taxes) pour de la bière Pâpire au dépanneur Commun.</b> Ce 10 $ sera réparti travers la chaîne</p>
+			<p><strong>La partie qui est gardée par chacun des agent, c'est la valeur qu'il ajoute à la Pâpire.</strong></p>
 		</div>
 		<figure>
 			<diagram data-type="chain" heading="Valeur ajoutée à travers la chaîne">
 				<agent data-type="consumer" name="Joey Joe Joe" paid="10" />
 				<product data-type="beer" name="La Pâpire" complete="" value="100%" />
-				<agent data-type="retailer" name="Dépanneur Commun" added="1.80" goods="" />
-				<agent data-type="manufacturer" name="Entrepôts Correct" added="0.62" goods="" />
-				<agent data-type="transformer" name="Brasserie Moyenne" added="7.58" goods="" />
+				<agent data-type="retailer" name="Dépanneur Commun" added="1.80" />
+				<product data-type="beer" name="" complete="" value="92%" />
+				<agent data-type="manufacturer" name="Entrepôts Correct" added="0.62" />
+				<product data-type="beer" name="La Pâpire" complete="" value="75%" />
+				<agent data-type="transformer" name="Brasserie Moyenne" added="7.58" />
 			</diagram>
 			<figcaption>
 				<div>
@@ -249,17 +236,13 @@
 					</section>
 					<section>
 						<h5><i>✨</i> Légende</h5>
-						<p>Chaque icône représente une activité ajoutant de la valeur. La quantité d'un même icône représente sa proportion estimée dans le total.</p>
-					</section>
-					<section>
-						<h5><i>👉</i> Interactivité</h5>
-						<p><b>Vous pouvez survoler/taper les icônes pour afficher le nom de l'activité et sa valeur ajoutée en dollars.</b></p>
+						<p>Chaque agent introduit sa part de valeur ajoutée dans la Pâpire pour un total de 10 $.</p>
 					</section>
 				</div>
 			</figcaption>
 		</figure>
+		<p>En achetant 10 $ de Pâpire, vous achetez 10 $ de valeur ajoutée. Et c'est ainsi pour tout bien consommé !</p>
 		<div class="prose">
-			<p>En achetant 10 $ de Pâpire, vous achetez 10 $ de valeur ajoutée par la chaîne. Et comment cette « valeur » est-elle ajoutée, vous demandez-vous ?<br />Bon point.</p>
 		</div>
 		<aside class="intervention">
 			<symbol data-type="henri" class="cartoon_henri animated" />
@@ -271,7 +254,7 @@
 	<section data-type="chaine">
 		<header>
 			<h3>Valeur créée ou achetée ?</h3>
-			<p>Chacun des agents ajoute sa part de valeur à la Pâpire de deux façons. D'une part on crée de la valeur et de l'autre, on en achète.</p>
+			<p>Chacun des agents ajoute sa part de valeur à la Pâpire de deux façons. Soit il la crée directement de par son activité ou il l'achète à des fournisseurs.</p>
 		</header>
 		<figure>
 			<diagram data-type="chain" heading="Achat et création de valeur à travers la chaîne">
@@ -285,11 +268,11 @@
 				<div>
 					<div>
 						<h5><i>🧮</i> Diagramme #03</h5>
-						<p>Proportions de valeur ajoutée achetée et créée dans la chaîne. Données de StatCan (2016)</p>
+						<p>Proportions de valeur ajoutée achetée des fournisseurs et créée par l'activité économique de la chaîne. Données de StatCan (2016)</p>
 					</div>
 					<section>
 						<h5><i>✨</i> Légende</h5>
-						<p>La valeur achetée correspond aux biens et services fournis aux agents (électricité, loyer, houblon, etc.). La valeur créée correspond à la rémunération des facteurs de production engagés (salaires, taxes, bénéfices, dividendes, etc.)</p>
+						<p>Les fournisseurs ajoutent leur propre valeur en procurant biens et services (électricité, loyer, houblon, etc.) aux agents qui à leur tour ajoutent de la valeur de par l'activité des facteurs de production engagés (salaires, taxes, bénéfices, dividendes, etc.)</p>
 					</section>
 					<section>
 						<h5><i>👉</i> Interactivité</h5>
@@ -300,8 +283,8 @@
 		</figure>
 
 		<div class="prose">
-			<p><b>Les agents de la chaîne achètent de la valeur créée par d'autres, exactement comme vous, quand vous achetez votre Pâpire.</b></p>
-			<p><strong>Votre achat est constitué de tous les autres achats faits dans sa chaîne économique.</strong> Pour que la valeur que vous achetez soit locale, il faut que la valeur que le dépanneur Commun et la brasserie Moyenne achètent soit locale, elle aussi.</p>
+			<p><b>Les agents de la chaîne achètent de la valeur créée par d'autres, les fournisseurs, exactement comme vous, quand vous achetez votre Pâpire.</b></p>
+			<p><strong>Votre achat est constitué de tous les autres achats faits dans sa chaîne économique.</strong> Pour que la valeur que vous achetez soit locale, il faut que les biens et services fournis à la brasserie Moyenne soient eux aussi, locaux.</p>
 			<p>Plus il y aura de valeur ajoutée produite localement, le plus haut sera le degré de localité de votre achat.</p>
 		</div>
 		<p>Bref, pour acheter local, il faut produire local !</p>
@@ -317,7 +300,7 @@
 	<section data-type="question">
 
 		<header>
-			<h3>La question à 100 %</h3>
+			<h3>La question à 100 %</h3>
 			<small>Désolé, le jeu de mots était trop tentant.</small>
 		</header>
 			<form>
@@ -360,11 +343,13 @@
 	<section data-type="chaine">
 		<header>
 			<h3>De la Pâpire à la Locale</h3>
-			<p>La valeur ajoutée est toujours ultimement produite par la main-d'œuvre, une ressource économique fondamentale.</p>
+			<p>La valeur ajoutée est toujours ultimement produite par le travail, entre autres, de la main d'œuvre, du capital et de l'État.</p>
 		</header>
 		<div class="prose">
-			<p><b>Pour simplifier l'exposé donc, focalisons exclusivement sur cette main-d'œuvre</b> et écartons de notre démonstration toute autre ressource (houblon, métaux, eau, etc.).</p>
-			<p>Pour produire la Locale, 100% travaillée ici, il nous faut donc ajouter de la main-d’œuvre locale aux maillons de notre chaîne économique. Tout ce qui est rouge ci-bas doit devenir bleu.</p>
+			<p><b>Cette valeur ajoutée prend la forme, respectivement, de salaires, dividendes et taxes.</b></p>
+			<p>Pour simplifier l'exposé, focalisons exclusivement sur la main-d'œuvre et écartons de notre démonstration toute autre ressource (houblon, métaux, eau, etc.).</p>
+			<p>Pour produire la Locale, 100% travaillée ici, il nous faut donc ajouter de la main-d’œuvre locale aux maillons de notre chaîne économique.</p>
+			<p><b>Tout ce qui est rouge ci-bas doit devenir bleu.</b></p>
 		</div>
 
 		<figure>
