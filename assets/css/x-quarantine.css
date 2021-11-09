@@ -1,0 +1,62 @@
+.chain .agent .paid::after,
+.chain .agent .value::after {
+	content: "◁";
+	align-self: center;
+	font-size: 1.5rem;
+	display: inline-block;
+	position: absolute;
+}
+
+.chain aside {
+	display: contents;
+}
+
+.chain .paid,
+.chain .value {
+	position: relative;
+}
+
+.chain .value {
+	padding-left: 1rem;
+}
+
+.chain .paid {
+	padding-right: 1rem;
+}
+
+.chain .agent .value::after {
+	left: 0;
+	margin-left: -.75rem;
+}
+
+.chain .agent .paid::after {
+	margin-right: -.75rem;
+	transform: scaleX(-1);
+	right: 0;
+}
+
+.paid, .value {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.paid span {
+	background-color: var(--ColorBg);
+	position: relative;
+	padding: calc(var(--Row) * .25);
+}
+
+.chain article:not(:last-child) {
+	margin-right: 0;
+}
+
+.paid:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: .25rem;
+	border-top: 3px solid currentColor;
+}

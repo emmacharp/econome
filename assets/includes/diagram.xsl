@@ -26,7 +26,7 @@
 	<xsl:template match="@foreign" mode="data-translator">
 		<xsl:text>etranger</xsl:text>
 	</xsl:template>
-	<xsl:template match="@value" mode="data-translator">
+	<xsl:template match="@created" mode="data-translator">
 		<xsl:text>ajout</xsl:text>
 	</xsl:template>
 	<xsl:template match="@bought|@added" mode="data-translator">
@@ -36,30 +36,36 @@
 		<xsl:text>local</xsl:text>
 	</xsl:template>
 
-	<xsl:template match="agent/@local|agent/@foreign|agent/@value|agent/@bought|agent/@paid|agent/@total|agent/@added">
+	<xsl:template match="agent/@local|agent/@foreign|agent/@created|agent/@bought|agent/@paid|agent/@total|agent/@added">
 		<xsl:param name="number" select="." />
 		<xsl:param name="name" select="name()" />
 		<span class="added amount">
 			<span>
-				<xsl:choose>
-					<xsl:when test="$name = 'paid'">
-						<xsl:text>-</xsl:text>
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:text>+</xsl:text>
-					</xsl:otherwise>
-				</xsl:choose>
+				<!-- <xsl:choose> -->
+				<!-- 	<xsl:when test="$name = 'paid'"> -->
+				<!-- 		<xsl:text>-</xsl:text> -->
+				<!-- 	</xsl:when> -->
+				<!-- 	<xsl:otherwise> -->
+				<!-- 		<xsl:text>+</xsl:text> -->
+				<!-- 	</xsl:otherwise> -->
+				<!-- </xsl:choose> -->
 				<xsl:value-of select="concat($number, ' $')" />
 			</span>
 			<small>
 				<xsl:choose>
-					<xsl:when test="$name = 'local' or $name = 'foreign' or $name = 'bought'">
-						<xsl:text>Valeur achetée</xsl:text>
+					<xsl:when test="$name = 'bought'">
+						<xsl:text>Fournisseurs</xsl:text>
 					</xsl:when>
-					<xsl:when test="$name = 'value' and (ancestor::agent/@local or ancestor::agent/@foreign or ancestor::agent/@bought)">
-						<xsl:text>Valeur créée</xsl:text>
+					<xsl:when test="$name = 'local'">
+						<xsl:text>Fournisseurs locaux</xsl:text>
+					</xsl:when>
+					<xsl:when test="$name = 'foreign'">
+						<xsl:text>Fournisseurs étrangers</xsl:text>
+					</xsl:when>
+					<xsl:when test="$name = 'created' and (ancestor::agent/@local or ancestor::agent/@foreign or ancestor::agent/@bought)">
+						<xsl:text>Activité directe</xsl:text>
 					</xsl:when>	
-					<xsl:when test="$name = 'value' or $name = 'added'">
+					<xsl:when test="$name = 'created' or $name = 'added'">
 						<xsl:text>Valeur ajoutée</xsl:text>
 					</xsl:when>
 				</xsl:choose>
@@ -73,7 +79,7 @@
 		</section>
 	</xsl:template>
 
-	<xsl:template match="@added|@value|@bought|@local|@foreign" mode="class-generator">
+	<xsl:template match="@added|@created|@bought|@local|@foreign" mode="class-generator">
 		<xsl:variable name="is-transformer" select="boolean(ancestor::agent[@data-type = 'transformer'])" />
 
 		<xsl:variable name="nodes">
@@ -116,7 +122,7 @@
 					<input aria-label="Afficher ou masquer les sous-unités" type="checkbox" name="show-subunits" class="toggle-subunits" />
 				</xsl:if>
 				<xsl:choose>
-					<xsl:when test="local-name() = 'value'">
+					<xsl:when test="local-name() = 'created'">
 						<xsl:apply-templates select="ext:node-set($file)//produit[@type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]/*[local-name() = $nodes]" mode="product-creator">
 							<xsl:with-param name="relative" select="not($is-transformer)" />
 							<xsl:with-param name="subunits" select="$subunits" />
@@ -146,7 +152,7 @@
 				<xsl:apply-templates select="." />
 				<xsl:if test="ancestor::agent[@goods]">
 					<xsl:choose>
-						<xsl:when test="local-name() = 'value'">
+						<xsl:when test="local-name() = 'created'">
 							<xsl:apply-templates select="ext:node-set($file)//produit[@type = 'ajout' or ajout][generate-id() = generate-id(key('class-aggregate', classe))]" mode="class-item">
 								<xsl:with-param name="node-name" select="$nodes" />
 								<xsl:with-param name="relative" select="not($is-transformer)" />
@@ -183,21 +189,20 @@
 	</xsl:template>
 
 	<xsl:template match="diagram/agent">
-		<div class="link agent {@data-type} {@class}">	
-			<xsl:if test="@goods|@paid|@value|@foreign|@local|@total|@bought|@added">
+		<div class="agent {@data-type} {@class}">	
+			<xsl:if test="@goods|@created|@foreign|@local|@total|@bought|@added">
 				<aside>
 					<xsl:if test="@goods">
 						<xsl:attribute name="class">
 							<xsl:text disable-output-escaping="yes">goods-list</xsl:text>
 						</xsl:attribute>
 					</xsl:if>
-					<section class="product {@data-type}">
+					<section class="value {@data-type}">
 						<xsl:apply-templates select="@added" mode="class-generator" />
 						<xsl:apply-templates select="@foreign" mode="class-generator" />
-						<xsl:apply-templates select="@value" mode="class-generator" />
+						<xsl:apply-templates select="@created" mode="class-generator" />
 						<xsl:apply-templates select="@bought" mode="class-generator" />
 						<xsl:apply-templates select="@local" mode="class-generator" />
-						<xsl:apply-templates select="@paid|@total" mode="class-generator" />
 					</section>
 				</aside>
 			</xsl:if>
@@ -208,6 +213,11 @@
 				</xsl:apply-templates>
 				<h4><xsl:apply-templates select="@name" /></h4>
 			</article>
+			<xsl:if test="@paid">
+				<aside>
+					<xsl:apply-templates select="@paid|@total" mode="class-generator" />
+				</aside>
+			</xsl:if>
 		</div>
 	</xsl:template>
 
