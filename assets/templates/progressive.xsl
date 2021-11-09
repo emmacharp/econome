@@ -14,6 +14,7 @@
 		<link id="sheetLightHighContrast" rel="stylesheet" href="/assets/css/theme/t-light-high_contrast.css" media="screen and (prefers-contrast: high) and (prefers-color-scheme:light)" />
 		<link id="sheetAnimations" rel="stylesheet" href="/assets/css/patterns/p-section_visibility-transitions.css" media="not screen and (prefers-reduced-motion: reduce)" />
 		<link rel="stylesheet" href="/assets/css/layout/l-master_composition.css"/>
+		<link rel="stylesheet" href="/assets/css/x-quarantine.css"/>
 	</xsl:template>
 
 </xsl:stylesheet>
