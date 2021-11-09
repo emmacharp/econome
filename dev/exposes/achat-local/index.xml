@@ -175,11 +175,11 @@
 		</div>
 		<figure>
 			<diagram data-type="chain" heading="Chaîne économique typique d'un achat de bière générique">
-				<agent data-type="consumer" name="Joey Joe Joe" />
 				<product data-type="beer" name="La Pâpire" complete="" value="100%" />
-				<agent data-type="retailer" name="Dépanneur Commun" added="10" />
-				<agent data-type="manufacturer" name="Entrepôts Correct" added="8.20" />
-				<agent data-type="transformer" name="Brasserie Moyenne" added="7.58" />
+				<agent data-type="consumer" name="Joey Joe Joe" paid="10" />
+				<agent data-type="retailer" name="Dépanneur Commun" paid="8.20" />
+				<agent data-type="manufacturer" name="Entrepôts Correct" paid="7.58" />
+				<agent data-type="transformer" name="Brasserie Moyenne" />
 			</diagram>
 			<figcaption>
 				<div>
@@ -232,7 +232,7 @@
 		</div>
 		<figure>
 			<diagram data-type="chain" heading="Valeur ajoutée à travers la chaîne">
-				<agent data-type="consumer" name="Joey Joe Joe" paid="10" />
+				<agent data-type="consumer" name="Joey Joe Joe" />
 				<product data-type="beer" name="La Pâpire" complete="" value="100%" />
 				<agent data-type="retailer" name="Dépanneur Commun" added="1.80" goods="" />
 				<agent data-type="manufacturer" name="Entrepôts Correct" added="0.62" goods="" />
@@ -272,11 +272,11 @@
 		</header>
 		<figure>
 			<diagram data-type="chain" heading="Achat et création de valeur à travers la chaîne">
-				<agent data-type="consumer" name="Joey Joe Joe" paid="10" />
+				<agent data-type="consumer" name="Joey Joe Joe" />
 				<product data-type="beer" name="La Pâpire" complete="" value="100%" />
-				<agent data-type="retailer" name="Dépanneur Commun" bought="0.66" value="1.14" goods="subunits" />
-				<agent data-type="manufacturer" name="Entrepôts Correct" value="0.39" bought="0.23" goods="subunits" />
-				<agent data-type="transformer" name="Brasserie Moyenne" value="4.96" bought="2.52" goods="subunits" />
+				<agent data-type="retailer" name="Dépanneur Commun" bought="0.66" created="1.14" goods="subunits" />
+				<agent data-type="manufacturer" name="Entrepôts Correct" created="0.39" bought="0.23" goods="subunits" />
+				<agent data-type="transformer" name="Brasserie Moyenne" created="4.96" bought="2.52" goods="subunits" />
 			</diagram>
 			<figcaption>
 				<div>
@@ -368,11 +368,11 @@
 
 		<figure>
 			<diagram data-type="chain" heading="Proportions de la valeur ajoutée étrangère et locale">
-				<agent data-type="consumer" name="Joey Joe Joe" paid="10" />
+				<agent data-type="consumer" name="Joey Joe Joe" />
 				<product data-type="beer" name="La Locale ?" complete="" value="100%" />
-				<agent data-type="retailer" name="Dépanneur Commun" bought="0.66" value="1.14" goods="subunits" />
-				<agent data-type="manufacturer" name="Entrepôts Correct" value="0.39" bought="0.23" goods="subunits" />
-				<agent data-type="transformer" name="Brasserie Moyenne" value="4.96" local="1.30" foreign="1.22" goods="subunits" />
+				<agent data-type="retailer" name="Dépanneur Commun" bought="0.66" created="1.14" goods="subunits" />
+				<agent data-type="manufacturer" name="Entrepôts Correct" created="0.39" bought="0.23" goods="subunits" />
+				<agent data-type="transformer" name="Brasserie Moyenne" created="4.96" local="1.30" foreign="1.22" goods="subunits" />
 			</diagram>
 			<figcaption>
 				<div>
