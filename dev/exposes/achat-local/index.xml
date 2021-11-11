@@ -681,6 +681,8 @@
 				</div>
 			</fieldset>
 			<fieldset>
+				<p>Pouvez-vous résumer en quelques phrases ce que l'exposé pourrait vous avoir appris ?</p>
+				<textarea aria-label="Résumer ce qui a été appris" name="resume" cols="30" rows="10" placeholder="Marc-André, j'ai appris que..."></textarea>
 				<p>Laissez-nous une appréciation libre de votre expérience</p>
 				<textarea aria-label="Laisser une appréciation libre" name="appreciation" cols="30" rows="10" placeholder="Marc-André, faut qu'on se parle..."></textarea>
 				<p>Bogues ?</p>
