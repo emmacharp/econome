@@ -75,7 +75,6 @@ nav li>a:before {
 /* Gâchette d'affichage de la navigation. */
 
 .toggle-internal-nav {
-	position: absolute;
 	-webkit-appearance: none;
 	appearance: none;
 	z-index: 5;

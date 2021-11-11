@@ -52,6 +52,7 @@ fieldset div {
 fieldset textarea {
 	width: 100%;
 	max-width: 50ch;
+	box-sizing: border-box;
 	padding: calc(var(--Row) * .5);
 	border: 1px solid var(--ColorLtSupport);
 	background-color: var(--ColorLtBg);
