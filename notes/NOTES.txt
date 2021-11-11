@@ -238,7 +238,7 @@ Si tout tout tout a été produit au Québec, c'est 1000$ de valeur ajoutée.
 
 Même truc, mais avec un partenaire ontarien. On fait l'hypothèse que l'argent qui part en Ontario ne reviendra pas. Le 1000$ de chiffre d'affaires se décompose en 400$ de valeur ajoutée extérieure, _qu'on a importée_ et en 600$ de valeur ajoutée (un paiement fait) au Québec.
 
-Quand tu mets 1000$ dans la chaîne, c'est 1000$ de valeur ajoutée qui se créee. Concept fondamental à faire comprendre.
+**Quand tu mets 1000$ dans la chaîne, c'est 1000$ de valeur ajoutée qui se créee.** Concept fondamental à faire comprendre.
 
 Donc, cette valeur ajoutée peut être locale ou extérieure.
 
@@ -263,8 +263,7 @@ Producteurs de marge.
     Représente la valeur de rendre disponible le bien. Ex : pourquoi acheter une bouteille de d'eau versus boire de l'eau du robinet..?
 Producteurs (de biens et services).
     Il y a transformation.
-Rémunération des facteurs de production = valeur ajoutée.
-
+**Rémunération des facteurs de production = valeur ajoutée.**
 Bière Shelton
     Soit tu l'achètes au dépanneur. Soit tu l'achètes directement à la microbrasserie. Ou alors tu l'achètes en ligne (Détaillant & Grossiste remplacés par un transporteur... alors les microbrasseries peuvent s'accaparer la valeur ajoutée).
     Si la bière est achetée sur Amazon, il y a bien des chances qu'il n'y ait pas le deux dollars de détaillant... Ils te font pas payer la marge de détail et / ou le transport. Et c'est pas nécessairement moins local... Tu as juste changé ta manière de consommer. Si tu achètes direct au transformateur, tu libères les ressources qui travail chez le détaillant... LE transformateur, va déjà avoir un grosseur qui lui permettrait de consommer moins de ressources pour vendre le même nombre de bières. Les PME... c'est bien si on manque pas de travailleurs.
@@ -502,9 +501,9 @@ Comment aborder l'achat local ?
 			3. À la lumière de ce scénario, est-il réellement possible de produire La Locale, de manière efficace ?
 				Les limites de la production locale (et donc de la consommation locale) se font ici bien sentir...
 6. Les limites de l'achat local.
-	0. Selon vous, pourrait-on produire localement toute la valeur ajoutée d'une bière ?
-	1. Pourrait-on produire localement l'entièreté de la valeur ajoutée de l'économie québécoise ?
-	1. Coût d'opportunité.
+	0. **Selon vous, pourrait-on produire localement toute la valeur ajoutée d'une bière ?**
+	1. **Pourrait-on produire localement l'entièreté de la valeur ajoutée de l'économie québécoise ?**	
+1. Coût d'opportunité.
 		- Quand on parle d'achat local, on doit parler d'approvisionnement et de valeur ajoutée. Quelle valeur est produite par notre achat ? Pourrait-on générer une plus grande valeur ajoutée en produisant autre chose ? Quelle est la plus grande valeur ajoutée à laquelle nous renonçons en produisant une plus grande quantité d'un certain produit ?
 	2. Ressources disponibles.
 		- Niveau de prix qui augmente avec les salaires à cause de l'inflation (manque de travailleurs = ).
