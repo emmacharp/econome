@@ -657,10 +657,10 @@
 			</fieldset>
 			<fieldset>
 				<p>Quel énoncé ci-bas se rapproche le plus de *votre* perception de ce qu’est « l’économie » ?</p>
-					<label><input type="radio" name="perception" required="" /><span>Les marchés boursiers et les taux d’intérêt</span></label>
-					<label><input type="radio" name="perception" /><span>Le chômage, les emplois et le PIB.</span></label>
+					<label><input type="radio" name="perception" required="" /><span>Marchés, finance et taux d’intérêt</span></label>
+					<label><input type="radio" name="perception" /><span>Chômage, emplois et PIB.</span></label>
 					<label><input type="radio" name="perception" /><span>Rationalisation, productivité et efficacité</span></label>
-					<label><input type="radio" name="perception" /><span>Des objectifs alternatifs et des ressources limitées</span></label>
+					<label><input type="radio" name="perception" /><span>Objectifs alternatifs et ressources limitées</span></label>
 			</fieldset>
 			<fieldset>
 				<p>Avons-nous, Henri et Marc-André, stimulé votre intérêt pour l’économique ?</p>
