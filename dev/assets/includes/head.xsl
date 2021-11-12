@@ -10,7 +10,7 @@
 
 			<meta property="og:title" content="Pourquoi acheter local ?" />
 			<meta property="og:type" content="website" />
-			<meta property="og:url" content="https://econome.io/achat-local" />
+			<meta property="og:url" content="https://econome.io/exposes/achat-local" />
 			<meta property="og:image" content="https://econome.io/assets/img/share.png" />
 
 			<link rel="icon" href="data:," />
