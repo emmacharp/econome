@@ -12,7 +12,7 @@
 			<meta property="og:description" content="Econome informe le public grâce à l'exposition de faits économiques."/>
 			<meta property="og:type" content="website" />
 			<meta property="og:url" content="https://econome.io/exposes/achat-local" />
-			<meta property="og:image" content="https://econome.io/assets/img/sharing.png" />
+			<meta property="og:image" content="https://econome.io/assets/img/facebook-share.png" />
 
 			<link rel="icon" href="data:," />
 
