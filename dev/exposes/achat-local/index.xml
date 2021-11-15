@@ -684,6 +684,10 @@
 			</fieldset>
 
 		</form>
+		<p>Merci !</p>
+		<div class="prose">
+			<p>Vos réponses sont automatiquement envoyées. Pas besoin de bouton !</p>
+		</div>
 		<aside class="intervention completion-progress">
 			<symbol data-type="emma" class="cartoon_emma animated" />
 			<div class="incomplete">
