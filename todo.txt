@@ -1,6 +1,5 @@
 (A) Styles conditionnels à la charge de la batterie (Battery API) +performance @js @maitrise
 (B) Assurer le fonctionnement de la navigation clavier et des tabulations. @maitrise
-(C) Intégrer « Plausible » comme analytics. @maitrise
 (B) Permettre de renverser (miroir) le diagramme (vers le consommateur plutôt qu'en provenance de. Une switch ferait sûrement l'affaire. @maitrise
 2021-07-02 Comment pourrait-on reformuler « Excédent d'exploitation brut » pour que ce soit compréhensible ? @maitrise +henri
 (A) Régler le problème de franglais dans les produits (type en anglais / balise en francais...) @maitrise +xsl
@@ -8,4 +7,3 @@
 (B) 2021-07-23 Essayer en séquence hauteur > largeur l'animation d'ouverture de la liste de biens @maitrise +design
 (A) 2021-07-23 Gérer l'apparition des éléments de la chaîne en animation plutôt qu'en transition. Une dimension à la fois. @maitrise +design
 (B) Réintégrer les q et cite. @maitrise +standard
-(A) Donner la clefs de la progression au survol de la navigation.. jouer avec le défiement pour donner l'Espace.
