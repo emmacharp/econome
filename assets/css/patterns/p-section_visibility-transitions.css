@@ -6,13 +6,13 @@
 	transition-duration: 120ms;
 }
 @media (min-height: 70ch) and (min-width: 80ch) { /* lié à l-section_composition.css */
-	main>section>aside.intervention>div {
+	.intervention>div {
 		transition: 120ms var(--ease-bounce-light);
 		transition-property: opacity, transform;
 		transform-origin: left bottom;
 	}
 
-	main>section>aside.intervention:not(:hover)>div {
+	.intervention:not(:hover)>div {
 		transform: scale(0);
 		transition-delay: 120ms;
 	}
@@ -23,42 +23,42 @@
 * limiter la prolifération des propriétés héritées) */
 
 	main>section>*,
-	main>section .chain .icon,
-	main>section .chain .icon+* {
+	.chain .icon,
+	.chain .icon+* {
 		transition-property: var(--TransitionProperties, opacity, transform);
 		transition-duration: var(--TotalDuration, calc(var(--SelfDuration, 120ms) * var(--DurationFactor, 1)));
 		transition-timing-function: var(--TimingFunction, ease-out);
-		transition-delay: var(--TotalDelay, calc(var(--LoadingDelay, 200ms) + var(--StructuralDelay, 0ms) + var(--ChainLinkDelay, 0ms) + var(--AfterChainDelay, 0ms) + var(--ScrollDelay, 0ms)  + var(--SelfDelay, 0ms)));
+		transition-delay: var(--TotalDelay, calc(var(--LoadingDelay, 200ms) + var(--StructuralDelay, 0ms) + var(--ChainLinkDelay, 0ms) + var(--AfterChainDelay, 0ms) + var(--ScrollDelay, 0ms) + var(--SelfDelay, 0ms)));
 		animation-name: var(--Keyframes);
 		animation-fill-mode: backwards;
 		animation-timing-function: var(--TimingFunction, opacity);
 		animation-duration: var(--TotalDuration, calc(var(--SelfDuration, 120ms) * var(--DurationFactor, 1)));
-		animation-delay: var(--TotalDelay, calc(var(--LoadingDelay, 200ms) + var(--StructuralDelay, 0ms) + var(--ChainLinkDelay, 0ms) + var(--AfterChainDelay, 0ms) + var(--ScrollDelay, 0ms)  + var(--SelfDelay, 0ms)));  }
+		animation-delay: var(--TotalDelay, calc(var(--LoadingDelay, 200ms) + var(--StructuralDelay, 0ms) + var(--ChainLinkDelay, 0ms) + var(--AfterChainDelay, 0ms) + var(--ScrollDelay, 0ms) + var(--SelfDelay, 0ms)));  }
 
 
 /* Application « opt-in »
 	des propriétés transitionnées  ----------------------- */
 
-	main>section>aside.intervention svg,
-	main>section .chain .icon {
+	.intervention svg,
+	.chain .icon {
 		transform: var(--TransformVisible, scale(1)); }
-	main>section>*
-	main>section .chain .icon+* {
+	main>section>*,
+	.chain .icon+* {
 		opacity: var(--OpacityVisible, 1); }
 
-	main>section.is-active~section>aside.intervention svg,
-	main>section.is-active~section .chain .icon,
-	main>section.is-invisible>aside.intervention svg,
-	main>section.is-invisible .chain .icon {
+	main>section.is-active~*>.intervention svg,
+	main>section.is-active~* .icon,
+	main>section.is-invisible>.intervention svg,
+	main>section.is-invisible .icon {
 		transform: var(--TransformInvisible, scale(1)); }
-	main>section.is-active~section>*,
-	main>section.is-active~section>aside.intervention svg,
-	main>section.is-active~section .chain .icon,
-	main>section.is-active~section .chain .icon+*,
+	main>section.is-active~*>*,
+	main>section.is-active~*>.intervention svg,
+	main>section.is-active~* .icon,
+	main>section.is-active~* .icon+*,
 	main>section.is-invisible>*,
-	main>section.is-invisible>aside.intervention svg div,
-	main>section.is-invisible .chain .icon,
-	main>section.is-invisible .chain .icon+* {
+	main>section.is-invisible>.intervention svg,
+	main>section.is-invisible .icon,
+	main>section.is-invisible .icon+* {
 		opacity: var(--OpacityInvisible, 0); }
 
 /* Propriétés supplémentaires
@@ -66,7 +66,7 @@
 
 	/* Empêche le contenu de passer
 		par-dessus dans la transition */
-	main>section>aside.intervention svg {
+	.intervention svg {
 		z-index: 1; }
 
 /* Valeurs de transition spécifiques ----------------------- */
@@ -82,14 +82,14 @@
 		--LoadingDelay: 0ms; }
 
 	/* Éléments — Valeurs de base initiales */
-	main>section>aside.intervention svg {
+	.intervention svg {
 		--TransitionProperties: transform;
 		--SelfDuration: 120ms; }
-	main>section .chain .icon {
+	.chain .icon {
 		--TransitionProperties: transform;
 		--TimingFunction: var(--ease-out-back);
 		--SelfDuration: 180ms; }
-	main>section .chain .icon+* {
+	.chain .icon+* {
 		--TransitionProperties: opacity;
 		--TimingFunction: var(--ease-out-quad);
 		--SelfDuration: 180ms; }
@@ -99,16 +99,16 @@
 		--SelfDelay: 160ms; }
 
 	/* Éléments — Valeurs spécifiques à l'apparition */
-	main>section.is-visible>aside.intervention svg {
+	.is-visible>.intervention svg {
 		--TimingFunction: var(--ease-bounce-light);
 		--SelfDelay: calc(400ms + 1ms * var(--needed-time) / 5); }
-	main>section.is-visible .chain .icon+* {
+	.is-visible .chain .icon+* {
 		--SelfDelay: 200ms; }
 
 	/* Éléments — Valeurs transitionnées à la disparition */
-	main>section>aside.intervention svg {
+	.intervention svg {
 		--TransformInvisible: scale(0); }
-	main>section .chain .icon {
+	.chain .icon {
 		--TransformInvisible: scale(0); }
 
 
@@ -129,11 +129,11 @@
 /* Choix d'animation au chargement de la page ----------------------- */
 
 		main>section>*,
-		main>section .chain .icon {
+		.chain .icon {
 			animation-name: var(--Keyframes, scale); }
 		main>section,
 		main>section>*,
-		main>section .chain .icon+* {
+		.chain .icon+* {
 			animation-name: var(--Keyframes, opacity); }
 
 

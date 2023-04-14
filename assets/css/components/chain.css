@@ -1,0 +1,277 @@
+.chain {
+	position: relative;
+}
+.chain * {
+	display: flex;
+}
+
+.chain section, .chain span {
+	margin: 0;
+}
+
+.chain>div {
+	align-items: center;
+	flex-wrap: nowrap;
+	min-width: min-content;
+	padding-left: var(--Row);
+	padding-right: var(--Row);
+}
+
+.chain>div>*,
+.chain>div>*>div {
+	display: contents;
+}
+
+.chain article {
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	background-color: var(--ColorBg);
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	z-index: 1;
+}
+
+.chain *+h4 {
+	margin-top: calc(var(--Row) / 2);
+}
+
+.chain h4 span {
+	width: min-content;
+	justify-content: center;
+}
+
+/* .chain .agent:first-of-type>article { */
+/* 	order: -1; */
+/* } */
+
+.chain .amounts {
+	display: grid;
+	grid-template: 1fr / 1fr;
+	order: -1;
+	pointer-events: none;
+}
+
+.chain .amounts>* {
+	grid-column-start: 1;
+	grid-row-start: 1;
+}
+
+.chain .amount {
+	font-weight: 700;
+	font-size: var(--Row); /* Devrait être lié aux dimensions des icônes de bien */
+	align-items: flex-end;
+	flex-direction: column;
+	line-height: 1;
+	white-space: nowrap;
+}
+
+.chain .amount small {
+	font-size: calc(var(--Row) / 2);
+	background-color: var(--ColorBg);
+	padding-left: calc(var(--Row) / 2);
+	font-weight: 500;
+	white-space: nowrap;
+	z-index: 1;
+	position: relative;
+	width: 0;
+	text-align: right;
+	align-items: flex-end;
+	justify-content: flex-end;
+	margin-top: calc(var(--Row) / 5);
+}
+
+/* .chain .consumer .amount { */
+/* 	position: absolute; */
+/* 	z-index: 2; */
+/* 	margin-left: calc(-1 * var(--Row) * 5); */
+/* 	margin-top: calc(-1 * var(--Row)); */
+/* } */
+
+
+/* stylelint-disable */
+.chain .amount:not(:first-child),
+.chain .goods-list div:hover~.amounts>:first-child {
+	opacity:0;
+}
+.chain .goods-list div:hover>* {
+	transform: scale(1.3);
+}
+
+.chain .goods-list>.product>:hover>p:not(:hover)>* {
+	filter: grayscale(1);
+}
+
+.chain .goods-list div:nth-of-type(1):hover~.amounts>:nth-of-type(2),
+.chain .goods-list div:nth-of-type(2):hover~.amounts>:nth-of-type(3),
+.chain .goods-list div:nth-of-type(3):hover~.amounts>:nth-of-type(4),
+.chain .goods-list div:nth-of-type(4):hover~.amounts>:nth-of-type(5),
+.chain .goods-list div:nth-of-type(5):hover~.amounts>:nth-of-type(6),
+.chain .goods-list div:nth-of-type(6):hover~.amounts>:nth-of-type(7),
+.chain .goods-list div:nth-of-type(7):hover~.amounts>:nth-of-type(8),
+.chain .goods-list div:nth-of-type(8):hover~.amounts>:nth-of-type(9),
+.chain .goods-list div:nth-of-type(9):hover~.amounts>:nth-of-type(10),
+.chain .goods-list div:nth-of-type(10):hover~.amounts>:nth-of-type(11),
+.chain .goods-list div:nth-of-type(11):hover~.amounts>:nth-of-type(12),
+.chain .goods-list div:nth-of-type(12):hover~.amounts>:nth-of-type(13),
+.chain .goods-list div:nth-of-type(13):hover~.amounts>:nth-of-type(14),
+.chain .goods-list div:nth-of-type(14):hover~.amounts>:nth-of-type(15),
+.chain .goods-list div:nth-of-type(15):hover~.amounts>:nth-of-type(16),
+.chain .goods-list div:nth-of-type(16):hover~.amounts>:nth-of-type(17),
+.chain .goods-list div:nth-of-type(17):hover~.amounts>:nth-of-type(18),
+.chain .goods-list div:nth-of-type(18):hover~.amounts>:nth-of-type(19),
+.chain .goods-list div:nth-of-type(19):hover~.amounts>:nth-of-type(20),
+.chain .goods-list div:nth-of-type(20):hover~.amounts>:nth-of-type(21),
+.chain .goods-list div:nth-of-type(21):hover~.amounts>:nth-of-type(22),
+.chain .goods-list div:nth-of-type(22):hover~.amounts>:nth-of-type(23),
+.chain .goods-list div:nth-of-type(23):hover~.amounts>:nth-of-type(24),
+.chain .goods-list div:nth-of-type(24):hover~.amounts>:nth-of-type(25),
+.chain .goods-list div:nth-of-type(25):hover~.amounts>:nth-of-type(26),
+.chain .goods-list div:nth-of-type(26):hover~.amounts>:nth-of-type(27),
+.chain .goods-list div:nth-of-type(27):hover~.amounts>:nth-of-type(28),
+.chain .goods-list div:nth-of-type(28):hover~.amounts>:nth-of-type(29),
+.chain .goods-list div:nth-of-type(29):hover~.amounts>:nth-of-type(30),
+.chain .goods-list div:nth-of-type(30):hover~.amounts>:nth-of-type(31),
+.chain .goods-list div:nth-of-type(31):hover~.amounts>:nth-of-type(32),
+.chain .goods-list div:nth-of-type(32):hover~.amounts>:nth-of-type(33),
+.chain .goods-list div:nth-of-type(33):hover~.amounts>:nth-of-type(34),
+.chain .goods-list div:nth-of-type(34):hover~.amounts>:nth-of-type(35),
+.chain .goods-list div:nth-of-type(35):hover~.amounts>:nth-of-type(36),
+.chain .goods-list div:nth-of-type(36):hover~.amounts>:nth-of-type(37),
+.chain .goods-list div:nth-of-type(37):hover~.amounts>:nth-of-type(38),
+.chain .goods-list div:nth-of-type(38):hover~.amounts>:nth-of-type(39)
+{
+	opacity: 1;
+}
+
+.chain h4 span {
+	background-color: var(--ColorBg);
+}
+
+.chain .product i {
+	--TotalAddedValue: calc(var(--NeutralAddedValue, 0%) + var(--LocalAddedValue, 0%) + var(--ForeignAddedValue, 0%));
+	width: calc(var(--IconHeight) * .5);
+	background-color: var(--ColorBgAlt);
+	background-image:
+		linear-gradient(to top,
+			currentColor 0,
+			currentColor var(--NeutralAddedValue, 0%),
+			var(--ColorLocal) var(--NeutralAddedValue, 0%),
+			var(--ColorLocal) calc(var(--LocalAddedValue, 0%) + var(--NeutralAddedValue, 0%)),
+			var(--ColorForeign)  calc(var(--LocalAddedValue, 0%) + var(--NeutralAddedValue, 0%)),
+			var(--ColorForeign) var(--TotalAddedValue, 0%),
+			transparent var(--TotalAddedValue, 0%), transparent 100%);
+	clip-path: url(#beer-clip-path);
+}
+
+.chain .icon {
+	--IconHeight: calc(var(--Row) * 2.5);
+	height: var(--IconHeight);
+	fill: currentColor;
+}
+
+
+.chain .username {
+	width: max-content;
+}
+
+.chain aside .value>* {
+	min-width: max(6ch, calc(3ch * var(--columns-counter)));
+}
+.chain aside .value>*+* {
+	margin-top: calc(var(--Row) * .5);
+}
+
+/* ------ DIAGRAMME HORIZONTAL ---- */
+	.chain>div {
+		column-gap: var(--Row);
+	}
+
+	.chain aside>.value {
+		flex-direction: column;
+	}
+
+/* ------ DIAGRAMME VERTICAL ---- */
+/* @media (max-width: 100ch) { */
+/* .chain>div { */
+/* 	row-gap: var(--Row); */
+/* 	flex-direction: column; */
+/* 	justify-content: center; */
+/* 	margin: auto; */
+/* } */
+/* .chain .goods-list { */
+/* 	align-items: flex-end; */
+/* } */
+
+/* .chain .goods-list .product>section { */
+/* 	margin-bottom: calc(-1 * var(--Row) * 1.5); */
+/* 	padding-bottom: calc(var(--Row) * 1); */
+/* 	border-bottom: 1px solid currentColor; */
+/* } */
+
+/* .chain .goods-list .product>section:first-of-type { */
+/* 	border-left: 1px solid currentColor; */
+/* 	border-bottom-left-radius: 5px; */
+/* } */
+
+/* .chain .goods-list .product>section:last-of-type { */
+/* 	border-right: 1px solid currentColor; */
+/* 	border-bottom-right-radius: 5px; */
+/* } */
+/* } */
+
+/* ------ DIAGRAMME SILOS ---- */
+/* .chain { */
+/* 	overflow-x: auto; */
+/* } */
+
+/* .chain>div { */
+/* 	display: grid; */
+/* 	grid-auto-flow: column; */
+/* 	grid-gap: var(--Row); */
+/* 	align-content: center; */
+/* 	align-items: start; */
+/* } */
+
+/* .chain .agent article { */
+/* 	justify-self: center; */
+/* 	text-align: right; */
+/* 	align-items: end; */
+/* } */
+
+/* .chain .goods-list { */
+/* } */
+
+/* .chain .agent>aside { */
+/* 	grid-row-start: 2; */
+/* 	grid-column-end: span 2; */
+/* 	width: calc(100% + var(--Row) * 1.75); */
+/* 	justify-self: end; */
+/* } */
+
+/* .chain .agent .value { */
+/* 	flex-direction: column; */
+/* } */
+
+/* .chain>div>div>.product { */
+/* 	grid-row-end: span 2; */ 
+/* } */
+
+/* .chain .agent .value>section { */
+/* 	border-left: 1px solid currentColor; */
+/* 	padding-right: 0; */
+/* } */
+
+/* .chain .agent .value>section:nth-of-type(2) { */
+/* 	margin-top: -7em; */
+/* 	padding-top: 7em; */
+/* } */
+
+/* .chain .agent .value>section:first-of-type { */
+/* 	order: 1; */
+/* 	border-bottom: 1px solid currentColor; */
+/* 	border-bottom-left-radius: 5px; */
+/* } */
+
+

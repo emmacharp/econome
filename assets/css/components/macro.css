@@ -1,0 +1,100 @@
+.macro {
+	pointer-events: none;
+}
+
+.macro>div {
+	flex-wrap: nowrap;
+	position: relative;
+	min-width: calc(var(--Row) * 40);
+}
+
+.macro>div>section {
+	display: inline-flex;
+	flex-wrap: wrap;
+	pointer-events: all;
+
+}
+.macro>div>section,
+.macro>div>section>div>div {
+	display: contents;
+}
+
+.macro h4 {
+	text-align: center;
+    grid-column: 1 / 99; /* Nombre ridicule pour toujours aller jusqu'au bout. ne peut pas utiliser de GAP ! */
+	 grid-row: 2;
+	 color: var(--ColorDk);
+	 pointer-events: none;
+	 margin-top: calc(var(--Row) * .5);
+	 margin-bottom: calc(var(--Row) * .5);
+}
+
+.macro h4>span {
+	position: sticky;
+	left: var(--Row);
+	right: var(--Row);
+}
+
+.macro section:not(:hover) span {
+	color: transparent;
+}
+
+.macro>div {
+	/* Ne peut pas utiliser de gap à cause du placement du h4 */
+	display: grid;
+}
+
+.macro .product {
+	order: -1;
+	grid-row-start: 1;
+	align-self: end;
+	flex-wrap: wrap-reverse;
+	grid-column: span var(--column-counter);
+}
+.macro .worker {
+	order: 1;
+	grid-row-start: 3;
+	grid-column: span var(--column-counter);
+}
+
+.macro .available {
+	grid-row-start: 3;
+	order: 2;
+	grid-column: span var(--column-counter);
+}
+
+.macro .available>div {
+	grid-row: 4;
+	grid-column: 1 / 99; /* Nombre ridicule pour toujours aller jusqu'au bout. ne peut pas utiliser de GAP ! */
+	justify-content: center;
+	margin-top: calc(var(--Row) * 2);
+}
+
+/* stylelint-disable */
+.macro .available:hover ~ * .worker .foreign svg {
+	color: var(--ColorForeign);
+}
+
+.macro .available:hover svg {
+	color: var(--ColorLocal);
+}
+
+.macro .worker svg {
+	align-items: flex-end;
+	width: calc(var(--Row) / 2);
+	height: auto;
+	flex-shrink: 0;
+	position: static;
+	padding: 2px;
+	margin: 0;
+}
+
+.macro section>div {
+	justify-content: space-around;
+	align-content: baseline;
+}
+
+.macro:hover section:not(:hover) svg {
+	color: var(--ColorLt);
+}
+

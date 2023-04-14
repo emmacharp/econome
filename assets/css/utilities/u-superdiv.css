@@ -11,17 +11,16 @@
 	/* Grille fluide / Albatross ---------- */
 	/* Holy Albatross. Voir Heydon Pickering :
 		(https://heydonworks.com/article/the-flexbox-holy-albatross/) */
-		div.grille {
+		.grille {
 			--DivItemBasis: calc((54ch - 100%) * 999);
 			--DivItemGrow: 1;
 			/* --DivItemShrink: 0; */
 			--DivItemGutter: var(--Row);
 			--DivItemMaxWidth: 100%;
-			width: auto;
 		}
 
 	/* Conteneur de prose ------------- */
-		div.prose {
+		.prose {
 			--DivDisplay: block;
 			max-width: 70ch;
 			column-width: 30ch;
@@ -29,12 +28,12 @@
 			column-gap: var(--Row);
 		}
 
-		div.prose>* {
+		.prose>* {
 			--DivItemGutter: 0;
 			--DivItemMaxWidth: 22ch;
 		}
 
-		div.prose>*+* {
+		.prose>*+* {
 			margin-top: calc(var(--Row) / 2);
 		}
 

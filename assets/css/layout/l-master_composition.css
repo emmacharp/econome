@@ -44,8 +44,8 @@
 	}
 
 	main>h2>span:before {
-		content: "Partie " counter(numero-partie) " — ";
-	} 
+		content: "Partie " counter(numero-partie) " — ";
+	}
 
 	main>section {
 		box-sizing: border-box;
@@ -162,7 +162,7 @@
 		display: flex;
 	}
 
-	body>.toggle-internal-nav,
+	.toggle-internal-nav,
 	nav header {
 		display: none;
 	}
@@ -205,7 +205,6 @@
 		display: flex;
 		flex-direction: column;
 		flex: 1 1 0%;
-		padding: calc(var(--Row) * 2);
 		padding: 0;
 	}
 
@@ -222,7 +221,7 @@
 		padding-right: clamp(var(--Row), 4vmax, calc(var(--Row) * 4));
 	}
 
-	main>section>a:last-child:after {
+	main>section>a::after {
 		transform: rotate(90deg);
 	}
 	
@@ -233,8 +232,7 @@
 		box-sizing: border-box;
 		position: sticky;
 		flex-shrink: 0;
-		height: 100vh;
-		position: sticky;
+		max-height: 100vh;
 		top: 0;
 		overflow-y: auto;
 		overflow-x: hidden;

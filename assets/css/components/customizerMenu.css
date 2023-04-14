@@ -1,0 +1,58 @@
+[id="customizerMenu"]>summary {
+	padding-left: .5rem;
+	padding-right: var(--Row);
+	position: relative;
+	z-index: 1;
+}
+
+[id="customizerMenu"]>summary>*::after {
+	font-size: .75rem;
+	padding: .5em;
+}
+
+[id="customizerMenu"]:not([open])>summary>*::after {
+	content: "⚙️";
+	text-indent: -1px;
+}
+
+[id="customizerMenu"] menu {
+	position: absolute;
+	margin: calc(var(--Row) * .5);
+	padding: calc(var(--Row) * .5);
+	right: calc(var(--Row) * .5);
+	width: max-content;
+	background-color: var(--ColorBgControls);
+	border-radius: 8px;
+	box-shadow: 0px 0px 10px 20px var(--ColorBg);
+	border: 1px solid var(--ColorLines);
+	list-style: none;
+}
+
+[id="customizerMenu"] menu>*+* {
+	margin-top: calc(var(--Row) * .5);
+}
+
+[id="customizerMenu"] label {
+	display: flex;
+	flex-grow: 1;
+}
+
+[id="customizerMenu"] small {
+	margin-right: auto;
+	flex-grow: 10;
+	text-align: left;
+}
+
+[id="customizerMenu"] div {
+	align-items: baseline;
+	display: flex;
+	--DivItemGutter: calc(var(--Row) *.25);
+}
+
+[id="customizerMenu"] input[type=checkbox],
+[id="customizerMenu"] input[type=number],
+[id="customizerMenu"] input[type]~span {
+	padding: calc(var(--Row) * .1625) calc(var(--Row) * .25);
+}
+
+

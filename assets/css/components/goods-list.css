@@ -1,0 +1,42 @@
+.goods-list section {
+	flex-direction: row-reverse;
+	align-content: flex-start;
+	align-items: baseline;
+	flex-wrap: wrap-reverse;
+}
+
+.goods-list div[data-code] {
+	display: contents;
+	color: var(--Color);
+	fill: currentColor;
+}
+
+.goods-list div:not(:hover)>svg {
+	transition-delay: 20ms;
+}
+
+.goods-list svg {
+	align-items: flex-end;
+	width: var(--Row);
+	height: var(--Row);
+	display: block;
+	flex-shrink: 0;
+	position: static;
+	padding: 2px;
+	margin: 0;
+	box-sizing: border-box;
+	fill: currentColor;
+}
+
+.goods-list .subunit>svg {
+	order: 2;
+}
+
+.goods-list .subunit>svg {
+	transition: 220ms var(--ease-out);
+	transition-property: height, width, padding, opacity;
+}
+
+.goods-list .product>section {
+	position: relative;
+}

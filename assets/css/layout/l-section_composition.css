@@ -138,25 +138,10 @@
 	}
 }
 
-
-
-main>section>.grille {
-	--DivItemGutter: calc(var(--Row) * 1);
-	justify-self: initial;
-	justify-content: space-between;
-}
 main>section>div>article {
 	
 	--DivItemBasis: calc((85ch - 100%) * 999);
 	--DivItemGrow: 1;
-}
-
-main>section>section div div {
-	flex-grow: 1;
-}
-
-main>section>section div>form {
-	flex-grow: 2;
 }
 
 main>section>p:only-of-type {

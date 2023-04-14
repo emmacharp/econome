@@ -8,7 +8,7 @@
 /* Configuration maîtresse ----------------------- */
 
 	:root {
-		--dk-primary: #20233C;
+		--dk-primary: #101226;
 		--primary: #2D3044;
 		--lt-primary: #7c7c6e;
 		--ltr-primary: #D5D5D2;
@@ -25,7 +25,7 @@
 		--dk-red: #721E42;
 		--yellow: #FCF0AA;
 		--tr-yellow: #FCFf001F;
-		--lt-yellow: #f7f3db;
+		--lt-yellow: #fbfaf4;
 		--dk-yellow: #684806;
 		--purple: #7a0098;
 		--tr-purple: #ED6BFF1F;

@@ -1,0 +1,74 @@
+/* Composante de navigation. 
+	Toute propriété relevant de la composition
+	se retrouve dans « l-master_composition.css » */
+
+
+/* Styles de base */
+
+nav {
+	background-color: var(--ColorBgControls);
+	display: flex;
+	scrollbar-width: none;
+}
+
+nav::-webkit-scrollbar {
+	display: none;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	line-height: 1;
+}
+
+nav header {
+	padding: calc(var(--Row));
+	margin-left: 2px;
+}
+
+nav header>*+* {
+	margin-top: calc(var(--Row) * .125);
+}
+
+nav a {
+	display: block;
+	text-decoration: none;
+	position: relative;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	box-sizing: border-box;
+	color: var(--ColorControls);
+	background-color: var(--ColorBgControls);
+	padding-left: 0;
+}
+
+nav header {
+	padding-top: calc(var(--Row) * 3);
+	padding-bottom: var(--Row);
+}
+
+nav header span {
+	font-size: .75em;
+	font-weight: 600;
+}
+
+nav header strong {
+	text-transform: uppercase;
+	font-weight:800;
+	margin-right: .25em;
+}
+
+
+/* Préparer un pseudo contexte pour les emojis. Voir p-type-emojis.css */
+
+nav li>a:before {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-size: calc(16px + .5vmin);
+	vertical-align: middle;
+}
+
+
