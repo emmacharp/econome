@@ -1,25 +1,25 @@
-.diagram.macro {
+.macro {
 	pointer-events: none;
 }
 
-.diagram.macro>div {
+.macro>div {
 	flex-wrap: nowrap;
 	position: relative;
 	min-width: calc(var(--Row) * 40);
 }
 
-.diagram.macro>div>section {
+.macro>div>section {
 	display: inline-flex;
 	flex-wrap: wrap;
 	pointer-events: all;
 
 }
-.diagram.macro>div>section,
-.diagram.macro>div>section>div>div {
+.macro>div>section,
+.macro>div>section>div>div {
 	display: contents;
 }
 
-.diagram.macro h4 {
+.macro h4 {
 	text-align: center;
     grid-column: 1 / 99; /* Nombre ridicule pour toujours aller jusqu'au bout. ne peut pas utiliser de GAP ! */
 	 grid-row: 2;
@@ -29,56 +29,57 @@
 	 margin-bottom: calc(var(--Row) * .5);
 }
 
-.diagram.macro h4>span {
+.macro h4>span {
 	position: sticky;
 	left: var(--Row);
 	right: var(--Row);
 }
 
-.diagram.macro section:not(:hover) span {
+.macro section:not(:hover) span {
 	color: transparent;
 }
 
-.diagram.macro>div {
+.macro>div {
 	/* Ne peut pas utiliser de gap à cause du placement du h4 */
 	display: grid;
 }
 
-.diagram.macro .product {
+.macro .product {
 	order: -1;
 	grid-row-start: 1;
 	align-self: end;
 	flex-wrap: wrap-reverse;
 	grid-column: span var(--column-counter);
 }
-.diagram.macro .worker {
+.macro .worker {
 	order: 1;
 	grid-row-start: 3;
 	grid-column: span var(--column-counter);
 }
 
-.diagram.macro .available {
+.macro .available {
 	grid-row-start: 3;
 	order: 2;
 	grid-column: span var(--column-counter);
 }
 
-.diagram.macro .available>div {
+.macro .available>div {
 	grid-row: 4;
 	grid-column: 1 / 99; /* Nombre ridicule pour toujours aller jusqu'au bout. ne peut pas utiliser de GAP ! */
 	justify-content: center;
 	margin-top: calc(var(--Row) * 2);
 }
 
-.diagram.macro .available:hover ~ * .worker .foreign svg {
+/* stylelint-disable */
+.macro .available:hover ~ * .worker .foreign svg {
 	color: var(--ColorForeign);
 }
 
-.diagram.macro .available:hover svg {
+.macro .available:hover svg {
 	color: var(--ColorLocal);
 }
 
-.diagram.macro .worker svg {
+.macro .worker svg {
 	align-items: flex-end;
 	width: calc(var(--Row) / 2);
 	height: auto;
@@ -88,12 +89,12 @@
 	margin: 0;
 }
 
-.diagram.macro section>div {
+.macro section>div {
 	justify-content: space-around;
 	align-content: baseline;
 }
 
-.diagram.macro:hover section:not(:hover) svg {
+.macro:hover section:not(:hover) svg {
 	color: var(--ColorLt);
 }
 

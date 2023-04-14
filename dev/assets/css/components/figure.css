@@ -46,14 +46,3 @@ figure figcaption>div>* {
 	flex-grow: 1;
 	max-width: 60ch;
 }
-
-figure figcaption>div>:first-child {
-	flex-basis: 25ch;
-}
-
-figure figcaption>div>:nth-child(2):last-child {
-	flex-basis: 75ch;
-}
-
-
-

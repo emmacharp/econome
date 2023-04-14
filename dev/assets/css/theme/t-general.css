@@ -9,12 +9,16 @@
 
 /* Assurer qu'elles ne soient pas présentées 
  * lorsqu'intégrées au contenu */
-link { display: none !important; }
+link { display: none; }
 
 /* Rythme des contenus ----------------------- */
 
 :not(:where(html, body, label, ul, ol, p, a, span))>:not(:where(link))+* {
-	margin-top: calc(var(--Row)); }
+	margin-top: var(--Row); }
+
+:not(:where(link))+details {
+	margin-top: calc(var(--Row) / 2);
+}
 
 
 /* Restreindre les images aux dimensions

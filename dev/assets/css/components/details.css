@@ -7,10 +7,6 @@ details summary *>* {
 	display: inline;
 }
 
-*+details {
-	margin-top: calc(var(--Row) * .5);
-}
-
 details summary::-webkit-details-marker,
 details summary::marker {
 	display: none;

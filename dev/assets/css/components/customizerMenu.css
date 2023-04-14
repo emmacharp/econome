@@ -5,12 +5,12 @@
 	z-index: 1;
 }
 
-[id="customizerMenu"]>summary>:last-child::after {
+[id="customizerMenu"]>summary>*::after {
 	font-size: .75rem;
 	padding: .5em;
 }
 
-[id="customizerMenu"]:not([open])>summary>:last-child::after {
+[id="customizerMenu"]:not([open])>summary>*::after {
 	content: "⚙️";
 	text-indent: -1px;
 }

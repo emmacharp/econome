@@ -2,8 +2,11 @@
 	position: relative;
 }
 .chain * {
-	margin: 0;
 	display: flex;
+}
+
+.chain section, .chain span {
+	margin: 0;
 }
 
 .chain>div {
@@ -28,6 +31,10 @@
 	margin-right: auto;
 	position: relative;
 	z-index: 1;
+}
+
+.chain *+h4 {
+	margin-top: calc(var(--Row) / 2);
 }
 
 .chain h4 span {
@@ -75,19 +82,6 @@
 	margin-top: calc(var(--Row) / 5);
 }
 
-.chain .amount small,
-.chain .consumer .amount {
-	text-shadow: 
-		1px 1px var(--ColorBg), 
-		-1px 1px var(--ColorBg), 
-		1px -1px var(--ColorBg), 
-		-1px -1px var(--ColorBg), 
-		2px 2px var(--ColorBg), 
-		-2px 2px var(--ColorBg), 
-		2px -2px var(--ColorBg), 
-		-2px -2px var(--ColorBg);
-}
-
 /* .chain .consumer .amount { */
 /* 	position: absolute; */
 /* 	z-index: 2; */
@@ -95,6 +89,8 @@
 /* 	margin-top: calc(-1 * var(--Row)); */
 /* } */
 
+
+/* stylelint-disable */
 .chain .amount:not(:first-child),
 .chain .goods-list div:hover~.amounts>:first-child {
 	opacity:0;
@@ -149,15 +145,11 @@
 	opacity: 1;
 }
 
-.chain h4>span {
+.chain h4 span {
 	background-color: var(--ColorBg);
 }
 
-.chain *+h4 {
-	margin-top: calc(var(--Row) / 2);
-}
-
-.chain .product .icon {
+.chain .product i {
 	--TotalAddedValue: calc(var(--NeutralAddedValue, 0%) + var(--LocalAddedValue, 0%) + var(--ForeignAddedValue, 0%));
 	width: calc(var(--IconHeight) * .5);
 	background-color: var(--ColorBgAlt);
@@ -184,7 +176,7 @@
 	width: max-content;
 }
 
-.chain aside .value>[style] {
+.chain aside .value>* {
 	min-width: max(6ch, calc(3ch * var(--columns-counter)));
 }
 .chain aside .value>*+* {

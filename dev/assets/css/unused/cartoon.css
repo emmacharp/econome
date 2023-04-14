@@ -28,11 +28,6 @@
   animation-timing-function: ease-in-out; }
 
 
-[id=svg-emma] [id=background] {
-  display: none;
-}
-
-
 @keyframes clignement {
  0% {
    opacity: 1; }

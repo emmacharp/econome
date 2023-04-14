@@ -3,10 +3,6 @@ fieldset {
 	--DivItemGutter: calc(var(--Row) * .5);
 }
 
-* + fieldset {
-	margin-top: calc(var(--Row) * 2);
-}
-
 fieldset span,
 fieldset input {
 	border: 0;
@@ -18,7 +14,7 @@ fieldset input {
 }
 
 fieldset input:-webkit-autofill {
-	background-color: var(--ColorBgControls) !important;
+	background-color: var(--ColorBgControls);
 	box-shadow: inset 0 0 0 100px var(--ColorBgControls);
 }
 

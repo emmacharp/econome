@@ -8,7 +8,6 @@
 
 /* Contexte du corps de la page */
 	body {
-		width: var(--BodyWidth, auto);
 		max-width: var(--MaxBodyWidth, initial); }
 
 /* Tailles typographiques et interlignage de base */

@@ -63,11 +63,8 @@
 }
 
 [id="wikiViewer"] [id="wikiDump"]>* {
+	padding-top: var(--Row);
 	padding-bottom: var(--Row);
-}
-
-[id="wikiViewer"] [id="wikiDump"]>*>:first-child {
-	margin-top: var(--Row);
 }
 
 [id="wikiViewer"] [id="wikiDump"]:not(:hover)::-webkit-scrollbar {
@@ -87,32 +84,6 @@
 
 [id="wikiViewer"] [id="wikiViewerClose"]:after {
 	font-size: 1rem;
-}
-
-
-/* Styles des pseudo-boutons/contrôles permettant d'accéder au contenu. */
-
-[data-wiki]:after {
-	font-size: clamp(8px, .76125em, 20px);
-	vertical-align: middle;
-}
-
-:not(p):not(b)>[data-wiki]:after {
-	margin-left: .75em;
-	margin-right: .75em;
-	
-}
-
-p [data-wiki]:after {
-	margin-left: .75ch;
-	margin-right: .5em;
-	margin-top: -.125em;
-	
-}
-
-[data-wiki] {
-	white-space: nowrap;
-	font-style: normal;
 }
 
 
@@ -223,7 +194,6 @@ p [data-wiki]:after {
 @media (max-width: 60em) {
 	[id="wikiViewer"]>div {
 		max-width: 100%;
-		height: 100%;
 		top: 0;
 		margin: 0;
 		border-radius: 0;
