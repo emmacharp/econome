@@ -7,7 +7,7 @@
 
 /* Typographie basée sur les polices système ----------------------- */
 
-	:root { font-family: var(--BaseFontStack, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"); }
+	:root { font-family: var(--BaseFontStack, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"); }
 
 
 /* Distribution aux titres de l'échelle typographique ----------------------- */
