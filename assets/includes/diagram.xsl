@@ -263,6 +263,7 @@
 		<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))" />
 
 		<div id="{$id}" class="goods-list">
+			<link rel="stylesheet" href="/assets/css/components/goods-list.css" />
 			<xsl:for-each select="ext:node-set($macro-file)//produit[disponible]">
 				<xsl:variable name="column-counter" select="ceiling(disponible div 100000)"></xsl:variable>
 				<section class="worker available" style="--column-counter: {ceiling($column-counter)}">
@@ -326,7 +327,7 @@
 	<xsl:template match="diagram[not(preceding::diagram)]" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
-				<link rel="stylesheet" href="/assets/css/components/goods-list.css"/>
+				<!-- <link rel="stylesheet" href="/assets/css/components/goods-list.css"/> -->
 				<link rel="stylesheet" href="/assets/css/components/figure.css"/>
 			</xsl:with-param>
 		</xsl:call-template>
@@ -335,7 +336,7 @@
 	<xsl:template match="diagram[not(preceding::diagram[@data-type = 'chain'])]/@data-type[. = 'chain']" mode="include-once">
 		<xsl:call-template name="body-css">
 			<xsl:with-param name="content">
-				<link rel="stylesheet" href="/assets/css/components/chain.css"/>
+				<!-- <link rel="stylesheet" href="/assets/css/components/chain.css"/> -->
 			</xsl:with-param>
 		</xsl:call-template>
 		</xsl:template>
@@ -363,6 +364,7 @@
 		<xsl:variable name="id" select="concat('diagram-', count(preceding::diagram))" />
 
 		<div id="{$id}">
+			<link rel="stylesheet" href="/assets/css/components/chain.css" />
 			<xsl:apply-templates />
 		</div>
 	</xsl:template>
