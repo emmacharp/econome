@@ -1,4 +1,3 @@
-
 /* Adaptation de la typographie ----------------------- */
 
 	@media (max-width: 60em) { :root { --Scale: var(--MinorThird); } }

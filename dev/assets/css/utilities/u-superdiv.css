@@ -103,30 +103,3 @@
 		div {
 			margin: initial;
 		}
-
-		/* 4. Dimensions des enfants & contenus ---- */
-		/* Dimension minimale de tout enfant.
-			Permet l'adaptation. Peut être ajusté */
-		/* div>* { */
-		/* 	min-width: var(--DivItemMinWidth, initial); */
-		/* } */
-
-		/* Largeur minimale de tout contenu texte.
-			Force l'adaptation. Peut être ajusté */
-		/* div h1, */
-		/* div h2, */
-		/* div h3, */
-		/* div h4, */
-		/* div h5, */
-		/* div h6, */
-		/* div p { */
-		/* 	min-width: 10ch; */
-		/* } */
-
-		/* Largeur minimale des images en tout genre
-			Force l'adaptation. Peut être ajusté */
-		/* div img, */
-		/* div picture { */
-		/* 	min-width: 8ch; */
-		/* } */
-
