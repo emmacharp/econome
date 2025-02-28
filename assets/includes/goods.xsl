@@ -171,7 +171,7 @@ exclude-result-prefixes="ext svg">
 			</xsl:apply-templates>
 		</xsl:variable>
 		<xsl:if test="$counted-goods &gt; 0">
-			<span data-code="{code}" class="added amount">
+			<span data-code="{code}" class="__added __amount">
 				<span>
 					<xsl:value-of select="$final-amount" />
 				</span>
@@ -190,7 +190,7 @@ exclude-result-prefixes="ext svg">
 			<div data-code="{$code}">
 				<xsl:if test="$percentage &lt; 1">
 					<xsl:attribute name="class">
-						<xsl:text>subunit</xsl:text>
+						<xsl:text>__subunit</xsl:text>
 					</xsl:attribute>
 				</xsl:if>
 				<xsl:call-template name="span-generator">

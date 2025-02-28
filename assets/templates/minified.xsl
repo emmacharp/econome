@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="/assets/css/main.min.css"/>
 	</xsl:template>
 	<xsl:template name="scripts">
-		<script src="/assets/js/main.min.js" defer="defer"></script>
+		<script src="/assets/js/main.min.js"></script>
 	</xsl:template>
 
 </xsl:stylesheet>

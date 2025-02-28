@@ -60,7 +60,7 @@ i>svg {
 /* Styles d'emphase */
 p>em { font-style: italic; }
 
-/* Largeur maximale générique 
+/* Largeurs minimale & maximale génériques 
  * pour quelconque paragraphe */
 p { max-width: 65ch; min-width: 22ch; }
 

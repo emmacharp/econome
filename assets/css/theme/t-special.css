@@ -15,7 +15,7 @@ h4 i, h5 i {
 	display: inline-block;
 }
 
-.username {
+[data-username] {
 	white-space: nowrap;
 	color: inherit;
 }

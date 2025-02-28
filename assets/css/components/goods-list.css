@@ -28,15 +28,15 @@
 	fill: currentColor;
 }
 
-.goods-list .subunit>svg {
+.goods-list .__subunit>svg {
 	order: 2;
 }
 
-.goods-list .subunit>svg {
+.goods-list .__subunit>svg {
 	transition: 220ms var(--ease-out);
 	transition-property: height, width, padding, opacity;
 }
 
-.goods-list .product>section {
+.goods-list .__product>section {
 	position: relative;
 }

@@ -237,7 +237,7 @@
 		if (username) {
 			// Change all existing usernames
 			document.querySelector('#nom').addEventListener('change', function(event) {
-				const	usernameInstances = document.querySelectorAll('.username');
+				const	usernameInstances = document.querySelectorAll('[data-username]');
 				const customUsername = event.target.value || event.target.getAttribute('placeholder');
 				usernameInstances.forEach((item) => {
 					item.innerHTML = customUsername;
@@ -248,7 +248,7 @@
 			document.body.addEventListener('htmx:afterProcessNode', function(event) {
 				if(document.querySelector('#nom').value.length > 0) {
 					const customUsername = document.querySelector('#nom').value;
-					event.target.querySelectorAll('.username').forEach((item) => {
+					event.target.querySelectorAll('[data-username]').forEach((item) => {
 						item.innerHTML = customUsername;
 					});
 				}

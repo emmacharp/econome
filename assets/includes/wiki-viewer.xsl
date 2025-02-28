@@ -3,7 +3,7 @@
 <xsl:template name="wiki-viewer">
 	<xsl:call-template name="body-css">
 		<xsl:with-param name="content">
-			<link rel="stylesheet" href="/assets/css/components/wikiViewer.css"/>
+			<link rel="stylesheet" href="/assets/css/components/x-wikiViewer.css"/>
 		</xsl:with-param>
 	</xsl:call-template>
 
