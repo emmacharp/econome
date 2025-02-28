@@ -1,6 +1,5 @@
 @import "intervention.css";
 @import "nav.css";
-@import "wikiViewer.css";
 @import "chain.css";
 @import "goods-list.css";
 @import "fieldset.css";
@@ -8,4 +7,4 @@
 @import "figure.css";
 @import "details.css";
 @import "customizerMenu.css";
-
+@import "x-wikiViewer.css";
