@@ -39,7 +39,7 @@
 	<xsl:template match="agent/@local|agent/@foreign|agent/@created|agent/@bought|agent/@paid|agent/@total|agent/@added">
 		<xsl:param name="number" select="." />
 		<xsl:param name="name" select="name()" />
-		<span class="added amount">
+		<span class="added __amount">
 			<span>
 				<!-- <xsl:choose> -->
 				<!-- 	<xsl:when test="$name = 'paid'"> -->
@@ -74,7 +74,7 @@
 	</xsl:template>
 
 	<xsl:template match="@paid|@total" mode="class-generator">
-		<section class="{local-name()}">
+		<section class="__{local-name()}">
 			<xsl:apply-templates select="." />
 		</section>
 	</xsl:template>
@@ -110,7 +110,7 @@
 		</xsl:variable>
 
 		<!-- TODO : nettoyer les données du Choose au complet -->
-		<section class="{local-name()}">
+		<section class="__{local-name()}">
 			<xsl:if test="$units">
 				<xsl:attribute name="style">
 					<xsl:text>--columns-counter: </xsl:text>
@@ -148,7 +148,7 @@
 					</xsl:otherwise>
 				</xsl:choose>
 			</xsl:if>
-			<section class="amounts">
+			<section class="__amounts">
 				<xsl:apply-templates select="." />
 				<xsl:if test="ancestor::agent[@goods]">
 					<xsl:choose>
@@ -189,15 +189,15 @@
 	</xsl:template>
 
 	<xsl:template match="diagram/agent">
-		<div class="agent {@data-type} {@class}">	
+		<div class="__agent {@data-type} {@class}">	
 			<xsl:if test="@goods|@created|@foreign|@local|@total|@bought|@added">
 				<aside>
 					<xsl:if test="@goods">
 						<xsl:attribute name="class">
-							<xsl:text disable-output-escaping="yes">goods-list</xsl:text>
+							<xsl:text disable-output-escaping="yes">__goods-list</xsl:text>
 						</xsl:attribute>
 					</xsl:if>
-					<section class="value {@data-type}">
+					<section class="__value {@data-type}">
 						<xsl:apply-templates select="@added" mode="class-generator" />
 						<xsl:apply-templates select="@foreign" mode="class-generator" />
 						<xsl:apply-templates select="@created" mode="class-generator" />
@@ -209,7 +209,7 @@
 			<article>
 
 				<xsl:apply-templates select="ext:node-set($svg-symbols)//svg:symbol[generate-id() = generate-id(key('symbol-type', current()/@data-type)[1])]">
-					<xsl:with-param name="class" select="'icon'" />
+					<xsl:with-param name="class" select="'__icon'" />
 				</xsl:apply-templates>
 				<h4><xsl:apply-templates select="@name" /></h4>
 			</article>
@@ -234,7 +234,7 @@
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-		<section class="{$state} product">
+		<section class="{$state} __product">
 			<xsl:attribute name="style">
 				<xsl:if test="@local">
 					<xsl:value-of select="'--LocalAddedValue: '" />
@@ -253,7 +253,7 @@
 				</xsl:if>
 			</xsl:attribute>
 			<article>
-				<i class="icon {@data-type}"></i>
+				<i class="__icon {@data-type}"></i>
 				<h4><xsl:value-of select="@name" /></h4>
 			</article>
 		</section>
@@ -266,7 +266,7 @@
 			<link rel="stylesheet" href="/assets/css/components/goods-list.css" />
 			<xsl:for-each select="ext:node-set($macro-file)//produit[disponible]">
 				<xsl:variable name="column-counter" select="ceiling(disponible div 100000)"></xsl:variable>
-				<section class="worker available" style="--column-counter: {ceiling($column-counter)}">
+				<section class="__worker __available" style="--column-counter: {ceiling($column-counter)}">
 					<h4><span>Main d'œuvre locale et disponible</span></h4>
 					<div>
 						<xsl:apply-templates select="disponible" mode="product-creator">
@@ -292,26 +292,26 @@
 				<section style="--column-counter: {ceiling($column-counter)}">
 					<h4><span><xsl:value-of select="titre" /></span></h4>
 
-					<div class="product">
-						<div class="local">
+					<div class="__product">
+						<div class="__local">
 							<xsl:apply-templates select="local" mode="product-creator">
 								<xsl:with-param name="multiplier" select="10 div emploi-ratio" />
 							</xsl:apply-templates>
 						</div>
-						<div class="foreign">
+						<div class="__foreign">
 							<xsl:apply-templates select="etranger" mode="product-creator">
 								<xsl:with-param name="multiplier" select="10 div emploi-ratio" />
 							</xsl:apply-templates>
 						</div>
 					</div>
-					<div class="worker">
-						<div class="local">
+					<div class="__worker">
+						<div class="__local">
 							<xsl:apply-templates select="local" mode="product-creator">
 								<xsl:with-param name="multiplier" select="3" />
 								<xsl:with-param name="code" select="'WOR'" />
 							</xsl:apply-templates>
 						</div>
-						<div class="foreign">
+						<div class="__foreign">
 							<xsl:apply-templates select="etranger" mode="product-creator">
 								<xsl:with-param name="multiplier" select="3" />
 								<xsl:with-param name="code" select="'WOR'" />

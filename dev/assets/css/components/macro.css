@@ -44,26 +44,26 @@
 	display: grid;
 }
 
-.macro .product {
+.macro .__product {
 	order: -1;
 	grid-row-start: 1;
 	align-self: end;
 	flex-wrap: wrap-reverse;
 	grid-column: span var(--column-counter);
 }
-.macro .worker {
+.macro .__worker {
 	order: 1;
 	grid-row-start: 3;
 	grid-column: span var(--column-counter);
 }
 
-.macro .available {
+.macro .__available {
 	grid-row-start: 3;
 	order: 2;
 	grid-column: span var(--column-counter);
 }
 
-.macro .available>div {
+.macro .__available>div {
 	grid-row: 4;
 	grid-column: 1 / 99; /* Nombre ridicule pour toujours aller jusqu'au bout. ne peut pas utiliser de GAP ! */
 	justify-content: center;
@@ -71,15 +71,15 @@
 }
 
 /* stylelint-disable */
-.macro .available:hover ~ * .worker .foreign svg {
+.macro .__available:hover ~ * .__worker .__foreign svg {
 	color: var(--ColorForeign);
 }
 
-.macro .available:hover svg {
+.macro .__available:hover svg {
 	color: var(--ColorLocal);
 }
 
-.macro .worker svg {
+.macro .__worker svg {
 	align-items: flex-end;
 	width: calc(var(--Row) / 2);
 	height: auto;

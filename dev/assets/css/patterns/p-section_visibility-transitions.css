@@ -22,9 +22,9 @@
 /* (Opt-in. Valeurs complexes par défaut pour
 * limiter la prolifération des propriétés héritées) */
 
-	main>section>*,
-	.chain .icon,
-	.chain .icon+* {
+	:where(main>section)>*,
+	.chain .__icon,
+	.chain .__icon+* {
 		transition-property: var(--TransitionProperties, opacity, transform);
 		transition-duration: var(--TotalDuration, calc(var(--SelfDuration, 120ms) * var(--DurationFactor, 1)));
 		transition-timing-function: var(--TimingFunction, ease-out);
@@ -40,25 +40,25 @@
 	des propriétés transitionnées  ----------------------- */
 
 	.intervention svg,
-	.chain .icon {
+	.chain .__icon {
 		transform: var(--TransformVisible, scale(1)); }
-	main>section>*,
-	.chain .icon+* {
+	:where(main>section)>*,
+	.chain .__icon+* {
 		opacity: var(--OpacityVisible, 1); }
 
-	main>section.is-active~*>.intervention svg,
-	main>section.is-active~* .icon,
-	main>section.is-invisible>.intervention svg,
-	main>section.is-invisible .icon {
+	:where(main>section).is-active~*>.intervention svg,
+	:where(main>section).is-active~* .__icon,
+	:where(main>section).is-invisible>.intervention svg,
+	:where(main>section).is-invisible .__icon {
 		transform: var(--TransformInvisible, scale(1)); }
-	main>section.is-active~*>*,
-	main>section.is-active~*>.intervention svg,
-	main>section.is-active~* .icon,
-	main>section.is-active~* .icon+*,
-	main>section.is-invisible>*,
-	main>section.is-invisible>.intervention svg,
-	main>section.is-invisible .icon,
-	main>section.is-invisible .icon+* {
+	:where(main>section).is-active~*>*,
+	:where(main>section).is-active~*>.intervention svg,
+	:where(main>section).is-active~* .__icon,
+	:where(main>section).is-active~* .__icon+*,
+	:where(main>section).is-invisible>*,
+	:where(main>section).is-invisible>.intervention svg,
+	:where(main>section).is-invisible .__icon,
+	:where(main>section).is-invisible .__icon+* {
 		opacity: var(--OpacityInvisible, 0); }
 
 /* Propriétés supplémentaires
@@ -67,33 +67,34 @@
 	/* Empêche le contenu de passer
 		par-dessus dans la transition */
 	.intervention svg {
+		position: relative;
 		z-index: 1; }
 
 /* Valeurs de transition spécifiques ----------------------- */
 
 	/* Sections — Valeurs d'apparition & disparition */
-	main>section.is-invisible {
+	:where(main>section).is-invisible {
 		--SelfDuration: 600ms;
 		--TransitionProperties: opacity;
 		--TimingFunction: ease-out;
 		--ScrollDelay: 0ms;
 		--LoadingDelay: 0ms; }
-	main>section.is-visible {
+	:where(main>section).is-visible {
 		--LoadingDelay: 0ms; }
 
 	/* Éléments — Valeurs de base initiales */
 	.intervention svg {
 		--TransitionProperties: transform;
 		--SelfDuration: 120ms; }
-	.chain .icon {
+	.chain .__icon {
 		--TransitionProperties: transform;
 		--TimingFunction: var(--ease-out-back);
 		--SelfDuration: 180ms; }
-	.chain .icon+* {
+	.chain .__icon+* {
 		--TransitionProperties: opacity;
 		--TimingFunction: var(--ease-out-quad);
 		--SelfDuration: 180ms; }
-	main>section>figure {
+	:where(main>section)>figure {
 		--TransitionProperties: opacity;
 		--SelfDuration: 200ms;
 		--SelfDelay: 160ms; }
@@ -102,38 +103,38 @@
 	.is-visible>.intervention svg {
 		--TimingFunction: var(--ease-bounce-light);
 		--SelfDelay: calc(400ms + 1ms * var(--needed-time) / 5); }
-	.is-visible .chain .icon+* {
+	.is-visible .chain .__icon+* {
 		--SelfDelay: 200ms; }
 
 	/* Éléments — Valeurs transitionnées à la disparition */
 	.intervention svg {
 		--TransformInvisible: scale(0); }
-	.chain .icon {
+	.chain .__icon {
 		--TransformInvisible: scale(0); }
 
 
 /* Cascade d'apparition générale ----------------------- */
 
-	main>section>:nth-child(1) {
+	:where(main>section)>:nth-child(1) {
 		--StructuralDelay: 0ms; }
-	main>section>:nth-child(2) {
+	:where(main>section)>:nth-child(2) {
 		--StructuralDelay: 200ms; }
-	main>section>:nth-child(3) {
+	:where(main>section)>:nth-child(3) {
 		--StructuralDelay: 400ms; }
-	main>section>:nth-child(4) {
+	:where(main>section)>:nth-child(4) {
 		--StructuralDelay: 600ms; }
-	main>section>:nth-child(5) {
+	:where(main>section)>:nth-child(5) {
 		--StructuralDelay: 800ms; }
 
 
 /* Choix d'animation au chargement de la page ----------------------- */
 
-		main>section>*,
-		.chain .icon {
+		:where(main>section)>*,
+		.chain .__icon {
 			animation-name: var(--Keyframes, scale); }
-		main>section,
-		main>section>*,
-		.chain .icon+* {
+		:where(main>section),
+		:where(main>section)>*,
+		.chain .__icon+* {
 			animation-name: var(--Keyframes, opacity); }
 
 
